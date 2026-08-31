@@ -16,13 +16,23 @@ These clients wrap HTTP. They do not manage resource lifecycle or idempotency.
 
 ## Authentication
 
-Protected endpoints expect a Knox or credential token:
+Protected endpoints expect a token:
 
 ```
 Authorization: Bearer <token>
 ```
 
-Obtain a user token:
+Create lasting keys in the Polycrate UI (the secret is shown once at creation):
+
+| Key | Where in the UI |
+|---|---|
+| User | Account menu → **API Keys** (`/ui/accounts/api-keys/`) |
+| Organization | Organization → **API Keys** tab |
+| System | Administration → **System API Keys** (`/ui/administration/system-api-keys/`, staff only) |
+
+All three use the same `Bearer` header. HTTP Basic on `/api/v1/…` is not sufficient.
+
+Alternatively, a short-lived user token:
 
 ```
 POST /api/login/
@@ -31,7 +41,7 @@ Content-Type: application/json
 {"username":"<email>","password":"<password>"}
 ```
 
-The response includes `token`. Agent and organization API keys use the same `Bearer` header. HTTP Basic on `/api/v1/…` is not sufficient.
+The response includes `token`.
 
 Use the base URL of your Polycrate instance (no trailing path). Example: `https://app.ayedo.cloud`.
 
