@@ -1,0 +1,4 @@
+package_name_override: polycrate
+project_name_override: polycrate
+field_prefix: field
+literal_enums: true

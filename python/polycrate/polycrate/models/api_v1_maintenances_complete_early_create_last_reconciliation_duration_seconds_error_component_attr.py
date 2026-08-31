@@ -1,0 +1,24 @@
+from typing import Literal
+
+ApiV1MaintenancesCompleteEarlyCreateLastReconciliationDurationSecondsErrorComponentAttr = Literal[
+    "last_reconciliation_duration_seconds"
+]
+
+API_V1_MAINTENANCES_COMPLETE_EARLY_CREATE_LAST_RECONCILIATION_DURATION_SECONDS_ERROR_COMPONENT_ATTR_VALUES: set[
+    ApiV1MaintenancesCompleteEarlyCreateLastReconciliationDurationSecondsErrorComponentAttr
+] = {
+    "last_reconciliation_duration_seconds",
+}
+
+
+def check_api_v1_maintenances_complete_early_create_last_reconciliation_duration_seconds_error_component_attr(
+    value: str,
+) -> ApiV1MaintenancesCompleteEarlyCreateLastReconciliationDurationSecondsErrorComponentAttr:
+    if (
+        value
+        in API_V1_MAINTENANCES_COMPLETE_EARLY_CREATE_LAST_RECONCILIATION_DURATION_SECONDS_ERROR_COMPONENT_ATTR_VALUES
+    ):
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_MAINTENANCES_COMPLETE_EARLY_CREATE_LAST_RECONCILIATION_DURATION_SECONDS_ERROR_COMPONENT_ATTR_VALUES!r}"
+    )

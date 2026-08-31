@@ -1,0 +1,19 @@
+from typing import Literal
+
+ApiV1HostsPartialUpdateTargetAvailabilityErrorComponentAttr = Literal["target_availability"]
+
+API_V1_HOSTS_PARTIAL_UPDATE_TARGET_AVAILABILITY_ERROR_COMPONENT_ATTR_VALUES: set[
+    ApiV1HostsPartialUpdateTargetAvailabilityErrorComponentAttr
+] = {
+    "target_availability",
+}
+
+
+def check_api_v1_hosts_partial_update_target_availability_error_component_attr(
+    value: str,
+) -> ApiV1HostsPartialUpdateTargetAvailabilityErrorComponentAttr:
+    if value in API_V1_HOSTS_PARTIAL_UPDATE_TARGET_AVAILABILITY_ERROR_COMPONENT_ATTR_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_HOSTS_PARTIAL_UPDATE_TARGET_AVAILABILITY_ERROR_COMPONENT_ATTR_VALUES!r}"
+    )

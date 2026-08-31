@@ -1,0 +1,19 @@
+from typing import Literal
+
+ApiV1ContactgroupsCreateDynamicRulesErrorComponentCode = Literal["invalid"]
+
+API_V1_CONTACTGROUPS_CREATE_DYNAMIC_RULES_ERROR_COMPONENT_CODE_VALUES: set[
+    ApiV1ContactgroupsCreateDynamicRulesErrorComponentCode
+] = {
+    "invalid",
+}
+
+
+def check_api_v1_contactgroups_create_dynamic_rules_error_component_code(
+    value: str,
+) -> ApiV1ContactgroupsCreateDynamicRulesErrorComponentCode:
+    if value in API_V1_CONTACTGROUPS_CREATE_DYNAMIC_RULES_ERROR_COMPONENT_CODE_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_CONTACTGROUPS_CREATE_DYNAMIC_RULES_ERROR_COMPONENT_CODE_VALUES!r}"
+    )

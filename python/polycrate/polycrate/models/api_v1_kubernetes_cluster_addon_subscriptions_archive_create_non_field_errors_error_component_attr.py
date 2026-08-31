@@ -1,0 +1,22 @@
+from typing import Literal
+
+ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNonFieldErrorsErrorComponentAttr = Literal["non_field_errors"]
+
+API_V1_KUBERNETES_CLUSTER_ADDON_SUBSCRIPTIONS_ARCHIVE_CREATE_NON_FIELD_ERRORS_ERROR_COMPONENT_ATTR_VALUES: set[
+    ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNonFieldErrorsErrorComponentAttr
+] = {
+    "non_field_errors",
+}
+
+
+def check_api_v1_kubernetes_cluster_addon_subscriptions_archive_create_non_field_errors_error_component_attr(
+    value: str,
+) -> ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNonFieldErrorsErrorComponentAttr:
+    if (
+        value
+        in API_V1_KUBERNETES_CLUSTER_ADDON_SUBSCRIPTIONS_ARCHIVE_CREATE_NON_FIELD_ERRORS_ERROR_COMPONENT_ATTR_VALUES
+    ):
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_KUBERNETES_CLUSTER_ADDON_SUBSCRIPTIONS_ARCHIVE_CREATE_NON_FIELD_ERRORS_ERROR_COMPONENT_ATTR_VALUES!r}"
+    )

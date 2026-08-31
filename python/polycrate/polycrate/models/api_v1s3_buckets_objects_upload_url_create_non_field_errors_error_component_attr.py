@@ -1,0 +1,19 @@
+from typing import Literal
+
+ApiV1S3BucketsObjectsUploadUrlCreateNonFieldErrorsErrorComponentAttr = Literal["non_field_errors"]
+
+API_V1S3_BUCKETS_OBJECTS_UPLOAD_URL_CREATE_NON_FIELD_ERRORS_ERROR_COMPONENT_ATTR_VALUES: set[
+    ApiV1S3BucketsObjectsUploadUrlCreateNonFieldErrorsErrorComponentAttr
+] = {
+    "non_field_errors",
+}
+
+
+def check_api_v1s3_buckets_objects_upload_url_create_non_field_errors_error_component_attr(
+    value: str,
+) -> ApiV1S3BucketsObjectsUploadUrlCreateNonFieldErrorsErrorComponentAttr:
+    if value in API_V1S3_BUCKETS_OBJECTS_UPLOAD_URL_CREATE_NON_FIELD_ERRORS_ERROR_COMPONENT_ATTR_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1S3_BUCKETS_OBJECTS_UPLOAD_URL_CREATE_NON_FIELD_ERRORS_ERROR_COMPONENT_ATTR_VALUES!r}"
+    )

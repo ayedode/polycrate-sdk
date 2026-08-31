@@ -1,0 +1,17 @@
+from typing import Literal
+
+ApiV1HostsUpdateProviderImageErrorComponentAttr = Literal["provider_image"]
+
+API_V1_HOSTS_UPDATE_PROVIDER_IMAGE_ERROR_COMPONENT_ATTR_VALUES: set[ApiV1HostsUpdateProviderImageErrorComponentAttr] = {
+    "provider_image",
+}
+
+
+def check_api_v1_hosts_update_provider_image_error_component_attr(
+    value: str,
+) -> ApiV1HostsUpdateProviderImageErrorComponentAttr:
+    if value in API_V1_HOSTS_UPDATE_PROVIDER_IMAGE_ERROR_COMPONENT_ATTR_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_HOSTS_UPDATE_PROVIDER_IMAGE_ERROR_COMPONENT_ATTR_VALUES!r}"
+    )

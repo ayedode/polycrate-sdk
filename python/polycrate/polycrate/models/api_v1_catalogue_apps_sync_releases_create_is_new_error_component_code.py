@@ -1,0 +1,20 @@
+from typing import Literal
+
+ApiV1CatalogueAppsSyncReleasesCreateIsNewErrorComponentCode = Literal["invalid", "null"]
+
+API_V1_CATALOGUE_APPS_SYNC_RELEASES_CREATE_IS_NEW_ERROR_COMPONENT_CODE_VALUES: set[
+    ApiV1CatalogueAppsSyncReleasesCreateIsNewErrorComponentCode
+] = {
+    "invalid",
+    "null",
+}
+
+
+def check_api_v1_catalogue_apps_sync_releases_create_is_new_error_component_code(
+    value: str,
+) -> ApiV1CatalogueAppsSyncReleasesCreateIsNewErrorComponentCode:
+    if value in API_V1_CATALOGUE_APPS_SYNC_RELEASES_CREATE_IS_NEW_ERROR_COMPONENT_CODE_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_CATALOGUE_APPS_SYNC_RELEASES_CREATE_IS_NEW_ERROR_COMPONENT_CODE_VALUES!r}"
+    )

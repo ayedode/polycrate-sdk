@@ -1,0 +1,17 @@
+from typing import Literal
+
+UiK8SAppsInstallCreateLabelsErrorComponentAttr = Literal["labels"]
+
+UI_K8S_APPS_INSTALL_CREATE_LABELS_ERROR_COMPONENT_ATTR_VALUES: set[UiK8SAppsInstallCreateLabelsErrorComponentAttr] = {
+    "labels",
+}
+
+
+def check_ui_k8s_apps_install_create_labels_error_component_attr(
+    value: str,
+) -> UiK8SAppsInstallCreateLabelsErrorComponentAttr:
+    if value in UI_K8S_APPS_INSTALL_CREATE_LABELS_ERROR_COMPONENT_ATTR_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {UI_K8S_APPS_INSTALL_CREATE_LABELS_ERROR_COMPONENT_ATTR_VALUES!r}"
+    )

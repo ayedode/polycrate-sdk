@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.venv/
+venv/
+.python-version
+
+# Node
+node_modules/
+npm-debug.log*
+.npm/
+
+# Go
+*.test
+*.out
+
+# Env / local
+.env
+.env.*
+!.env.example
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~

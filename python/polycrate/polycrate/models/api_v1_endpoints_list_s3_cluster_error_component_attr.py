@@ -1,0 +1,17 @@
+from typing import Literal
+
+ApiV1EndpointsListS3ClusterErrorComponentAttr = Literal["s3_cluster"]
+
+API_V1_ENDPOINTS_LIST_S3_CLUSTER_ERROR_COMPONENT_ATTR_VALUES: set[ApiV1EndpointsListS3ClusterErrorComponentAttr] = {
+    "s3_cluster",
+}
+
+
+def check_api_v1_endpoints_list_s3_cluster_error_component_attr(
+    value: str,
+) -> ApiV1EndpointsListS3ClusterErrorComponentAttr:
+    if value in API_V1_ENDPOINTS_LIST_S3_CLUSTER_ERROR_COMPONENT_ATTR_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_ENDPOINTS_LIST_S3_CLUSTER_ERROR_COMPONENT_ATTR_VALUES!r}"
+    )

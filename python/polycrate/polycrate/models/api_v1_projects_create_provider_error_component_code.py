@@ -1,0 +1,18 @@
+from typing import Literal
+
+ApiV1ProjectsCreateProviderErrorComponentCode = Literal["invalid_choice", "null"]
+
+API_V1_PROJECTS_CREATE_PROVIDER_ERROR_COMPONENT_CODE_VALUES: set[ApiV1ProjectsCreateProviderErrorComponentCode] = {
+    "invalid_choice",
+    "null",
+}
+
+
+def check_api_v1_projects_create_provider_error_component_code(
+    value: str,
+) -> ApiV1ProjectsCreateProviderErrorComponentCode:
+    if value in API_V1_PROJECTS_CREATE_PROVIDER_ERROR_COMPONENT_CODE_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_PROJECTS_CREATE_PROVIDER_ERROR_COMPONENT_CODE_VALUES!r}"
+    )

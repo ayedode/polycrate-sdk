@@ -1,0 +1,18 @@
+from typing import Literal
+
+ApiV1ProjectsUpdateArchivedErrorComponentCode = Literal["invalid", "null"]
+
+API_V1_PROJECTS_UPDATE_ARCHIVED_ERROR_COMPONENT_CODE_VALUES: set[ApiV1ProjectsUpdateArchivedErrorComponentCode] = {
+    "invalid",
+    "null",
+}
+
+
+def check_api_v1_projects_update_archived_error_component_code(
+    value: str,
+) -> ApiV1ProjectsUpdateArchivedErrorComponentCode:
+    if value in API_V1_PROJECTS_UPDATE_ARCHIVED_ERROR_COMPONENT_CODE_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_PROJECTS_UPDATE_ARCHIVED_ERROR_COMPONENT_CODE_VALUES!r}"
+    )

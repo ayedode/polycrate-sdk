@@ -1,0 +1,5 @@
+# Generated clients — do not treat as hand-written for linguist stats
+go/client.gen.go linguist-generated=true
+js/src/*.gen.ts linguist-generated=true
+js/src/core/** linguist-generated=true
+python/polycrate/** linguist-generated=true

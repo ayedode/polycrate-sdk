@@ -1,0 +1,19 @@
+from typing import Literal
+
+ApiV1MaintenancesUpdateWorkspaceIdErrorComponentAttr = Literal["workspace_id"]
+
+API_V1_MAINTENANCES_UPDATE_WORKSPACE_ID_ERROR_COMPONENT_ATTR_VALUES: set[
+    ApiV1MaintenancesUpdateWorkspaceIdErrorComponentAttr
+] = {
+    "workspace_id",
+}
+
+
+def check_api_v1_maintenances_update_workspace_id_error_component_attr(
+    value: str,
+) -> ApiV1MaintenancesUpdateWorkspaceIdErrorComponentAttr:
+    if value in API_V1_MAINTENANCES_UPDATE_WORKSPACE_ID_ERROR_COMPONENT_ATTR_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_MAINTENANCES_UPDATE_WORKSPACE_ID_ERROR_COMPONENT_ATTR_VALUES!r}"
+    )

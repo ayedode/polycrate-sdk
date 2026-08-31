@@ -1,0 +1,427 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar, cast
+from uuid import UUID
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
+from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+
+if TYPE_CHECKING:
+    from ..models.k8s_worker_pool_list_active_condition_instances_item import (
+        K8SWorkerPoolListActiveConditionInstancesItem,
+    )
+    from ..models.k8s_worker_pool_list_controlplane_type_0 import K8SWorkerPoolListControlplaneType0
+    from ..models.k8s_worker_pool_list_created import K8SWorkerPoolListCreated
+    from ..models.k8s_worker_pool_list_organization_type_0 import K8SWorkerPoolListOrganizationType0
+    from ..models.k8s_worker_pool_list_product_type_0 import K8SWorkerPoolListProductType0
+    from ..models.k8s_worker_pool_list_provider_account_type_0 import K8SWorkerPoolListProviderAccountType0
+    from ..models.k8s_worker_pool_list_workspace_type_0 import K8SWorkerPoolListWorkspaceType0
+
+
+T = TypeVar("T", bound="K8SWorkerPoolList")
+
+
+@_attrs_define
+class K8SWorkerPoolList:
+    """Basis-Serializer für alle ManagedObject List-Endpoints.
+
+    Liefert die generischen Felder die alle ManagedObjects teilen:
+    - id: UUID
+    - name: String-Repräsentation des Objects (__str__)
+    - state: Object State
+    - organization: Organization (id, slug, name)
+    - workspace: Workspace (id, name) oder None
+    - created: Kombifeld (created_at, created_at_humanized, created_at_display, created_by)
+
+    Subclasses müssen:
+    - model in Meta definieren
+    - Zusätzliche model-spezifische Felder in Meta.fields hinzufügen
+
+    Usage:
+        class K8sClusterListSerializer(ManagedObjectListSerializer):
+            class Meta(ManagedObjectListSerializer.Meta):
+                model = K8sCluster
+                fields = ManagedObjectListSerializer.Meta.fields + ['kubernetes_version', 'kind']
+
+        Attributes:
+            id (UUID):
+            name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
+            state (LastStateEnum): * `OK` - Ok
+                * `WARNING` - Warning
+                * `CRITICAL` - Critical
+                * `READY` - Ready
+                * `DEGRADED` - Degraded
+                * `DOWN` - Down
+            labels (Any):
+            conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
+                conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
+            condition_instance_count (int): Number of active ConditionInstances linked to this object (Spec 419).
+                Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1.
+            active_condition_instances (list[K8SWorkerPoolListActiveConditionInstancesItem]):
+            organization (K8SWorkerPoolListOrganizationType0 | None):
+            organization_priority (bool): True when the object's organization has priority=True.
+            workspace (K8SWorkerPoolListWorkspaceType0 | None):
+            created (K8SWorkerPoolListCreated):
+            archived (bool): Archived objects are not shown in the UI and are not managed by the API.
+            reconciliation_running (bool):
+            effective_criticality (EffectiveCriticalityEnum | None):
+            url (str): Gibt die absolute URL zum Object zurück.
+            controlplane (K8SWorkerPoolListControlplaneType0 | None):
+            provider_account (K8SWorkerPoolListProviderAccountType0 | None):
+            product (K8SWorkerPoolListProductType0 | None):
+            desired_count (int):
+            image (str): Provider image ID/name for new Hosts.
+            location (str): Optional provider location/region for new Hosts.
+            hardening_enabled (bool):
+            deployment_checksum (None | str):
+            last_deployed_checksum (None | str):
+    """
+
+    id: UUID
+    name: str
+    state: LastStateEnum
+    labels: Any
+    conditions: Any
+    condition_instance_count: int
+    active_condition_instances: list[K8SWorkerPoolListActiveConditionInstancesItem]
+    organization: K8SWorkerPoolListOrganizationType0 | None
+    organization_priority: bool
+    workspace: K8SWorkerPoolListWorkspaceType0 | None
+    created: K8SWorkerPoolListCreated
+    archived: bool
+    reconciliation_running: bool
+    effective_criticality: EffectiveCriticalityEnum | None
+    url: str
+    controlplane: K8SWorkerPoolListControlplaneType0 | None
+    provider_account: K8SWorkerPoolListProviderAccountType0 | None
+    product: K8SWorkerPoolListProductType0 | None
+    desired_count: int
+    image: str
+    location: str
+    hardening_enabled: bool
+    deployment_checksum: None | str
+    last_deployed_checksum: None | str
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.k8s_worker_pool_list_controlplane_type_0 import K8SWorkerPoolListControlplaneType0
+        from ..models.k8s_worker_pool_list_organization_type_0 import K8SWorkerPoolListOrganizationType0
+        from ..models.k8s_worker_pool_list_product_type_0 import K8SWorkerPoolListProductType0
+        from ..models.k8s_worker_pool_list_provider_account_type_0 import K8SWorkerPoolListProviderAccountType0
+        from ..models.k8s_worker_pool_list_workspace_type_0 import K8SWorkerPoolListWorkspaceType0
+
+        id = str(self.id)
+
+        name = self.name
+
+        state: str = self.state
+
+        labels = self.labels
+
+        conditions = self.conditions
+
+        condition_instance_count = self.condition_instance_count
+
+        active_condition_instances = []
+        for active_condition_instances_item_data in self.active_condition_instances:
+            active_condition_instances_item = active_condition_instances_item_data.to_dict()
+            active_condition_instances.append(active_condition_instances_item)
+
+        organization: dict[str, Any] | None
+        if isinstance(self.organization, K8SWorkerPoolListOrganizationType0):
+            organization = self.organization.to_dict()
+        else:
+            organization = self.organization
+
+        organization_priority = self.organization_priority
+
+        workspace: dict[str, Any] | None
+        if isinstance(self.workspace, K8SWorkerPoolListWorkspaceType0):
+            workspace = self.workspace.to_dict()
+        else:
+            workspace = self.workspace
+
+        created = self.created.to_dict()
+
+        archived = self.archived
+
+        reconciliation_running = self.reconciliation_running
+
+        effective_criticality: None | str
+        if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        else:
+            effective_criticality = self.effective_criticality
+
+        url = self.url
+
+        controlplane: dict[str, Any] | None
+        if isinstance(self.controlplane, K8SWorkerPoolListControlplaneType0):
+            controlplane = self.controlplane.to_dict()
+        else:
+            controlplane = self.controlplane
+
+        provider_account: dict[str, Any] | None
+        if isinstance(self.provider_account, K8SWorkerPoolListProviderAccountType0):
+            provider_account = self.provider_account.to_dict()
+        else:
+            provider_account = self.provider_account
+
+        product: dict[str, Any] | None
+        if isinstance(self.product, K8SWorkerPoolListProductType0):
+            product = self.product.to_dict()
+        else:
+            product = self.product
+
+        desired_count = self.desired_count
+
+        image = self.image
+
+        location = self.location
+
+        hardening_enabled = self.hardening_enabled
+
+        deployment_checksum: None | str
+        deployment_checksum = self.deployment_checksum
+
+        last_deployed_checksum: None | str
+        last_deployed_checksum = self.last_deployed_checksum
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "id": id,
+                "name": name,
+                "state": state,
+                "labels": labels,
+                "conditions": conditions,
+                "condition_instance_count": condition_instance_count,
+                "active_condition_instances": active_condition_instances,
+                "organization": organization,
+                "organization_priority": organization_priority,
+                "workspace": workspace,
+                "created": created,
+                "archived": archived,
+                "reconciliation_running": reconciliation_running,
+                "effective_criticality": effective_criticality,
+                "url": url,
+                "controlplane": controlplane,
+                "provider_account": provider_account,
+                "product": product,
+                "desired_count": desired_count,
+                "image": image,
+                "location": location,
+                "hardening_enabled": hardening_enabled,
+                "deployment_checksum": deployment_checksum,
+                "last_deployed_checksum": last_deployed_checksum,
+            }
+        )
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.k8s_worker_pool_list_active_condition_instances_item import (
+            K8SWorkerPoolListActiveConditionInstancesItem,
+        )
+        from ..models.k8s_worker_pool_list_controlplane_type_0 import K8SWorkerPoolListControlplaneType0
+        from ..models.k8s_worker_pool_list_created import K8SWorkerPoolListCreated
+        from ..models.k8s_worker_pool_list_organization_type_0 import K8SWorkerPoolListOrganizationType0
+        from ..models.k8s_worker_pool_list_product_type_0 import K8SWorkerPoolListProductType0
+        from ..models.k8s_worker_pool_list_provider_account_type_0 import K8SWorkerPoolListProviderAccountType0
+        from ..models.k8s_worker_pool_list_workspace_type_0 import K8SWorkerPoolListWorkspaceType0
+
+        d = dict(src_dict)
+        id = UUID(d.pop("id"))
+
+        name = d.pop("name")
+
+        state = check_last_state_enum(d.pop("state"))
+
+        labels = d.pop("labels")
+
+        conditions = d.pop("conditions")
+
+        condition_instance_count = d.pop("condition_instance_count")
+
+        active_condition_instances = []
+        _active_condition_instances = d.pop("active_condition_instances")
+        for active_condition_instances_item_data in _active_condition_instances:
+            active_condition_instances_item = K8SWorkerPoolListActiveConditionInstancesItem.from_dict(
+                active_condition_instances_item_data
+            )
+
+            active_condition_instances.append(active_condition_instances_item)
+
+        def _parse_organization(data: object) -> K8SWorkerPoolListOrganizationType0 | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                organization_type_0 = K8SWorkerPoolListOrganizationType0.from_dict(data)
+
+                return organization_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(K8SWorkerPoolListOrganizationType0 | None, data)
+
+        organization = _parse_organization(d.pop("organization"))
+
+        organization_priority = d.pop("organization_priority")
+
+        def _parse_workspace(data: object) -> K8SWorkerPoolListWorkspaceType0 | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                workspace_type_0 = K8SWorkerPoolListWorkspaceType0.from_dict(data)
+
+                return workspace_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(K8SWorkerPoolListWorkspaceType0 | None, data)
+
+        workspace = _parse_workspace(d.pop("workspace"))
+
+        created = K8SWorkerPoolListCreated.from_dict(d.pop("created"))
+
+        archived = d.pop("archived")
+
+        reconciliation_running = d.pop("reconciliation_running")
+
+        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_0 = check_effective_criticality_enum(data)
+
+                return effective_criticality_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(EffectiveCriticalityEnum | None, data)
+
+        effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
+
+        url = d.pop("url")
+
+        def _parse_controlplane(data: object) -> K8SWorkerPoolListControlplaneType0 | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                controlplane_type_0 = K8SWorkerPoolListControlplaneType0.from_dict(data)
+
+                return controlplane_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(K8SWorkerPoolListControlplaneType0 | None, data)
+
+        controlplane = _parse_controlplane(d.pop("controlplane"))
+
+        def _parse_provider_account(data: object) -> K8SWorkerPoolListProviderAccountType0 | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                provider_account_type_0 = K8SWorkerPoolListProviderAccountType0.from_dict(data)
+
+                return provider_account_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(K8SWorkerPoolListProviderAccountType0 | None, data)
+
+        provider_account = _parse_provider_account(d.pop("provider_account"))
+
+        def _parse_product(data: object) -> K8SWorkerPoolListProductType0 | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                product_type_0 = K8SWorkerPoolListProductType0.from_dict(data)
+
+                return product_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(K8SWorkerPoolListProductType0 | None, data)
+
+        product = _parse_product(d.pop("product"))
+
+        desired_count = d.pop("desired_count")
+
+        image = d.pop("image")
+
+        location = d.pop("location")
+
+        hardening_enabled = d.pop("hardening_enabled")
+
+        def _parse_deployment_checksum(data: object) -> None | str:
+            if data is None:
+                return data
+            return cast(None | str, data)
+
+        deployment_checksum = _parse_deployment_checksum(d.pop("deployment_checksum"))
+
+        def _parse_last_deployed_checksum(data: object) -> None | str:
+            if data is None:
+                return data
+            return cast(None | str, data)
+
+        last_deployed_checksum = _parse_last_deployed_checksum(d.pop("last_deployed_checksum"))
+
+        k8s_worker_pool_list = cls(
+            id=id,
+            name=name,
+            state=state,
+            labels=labels,
+            conditions=conditions,
+            condition_instance_count=condition_instance_count,
+            active_condition_instances=active_condition_instances,
+            organization=organization,
+            organization_priority=organization_priority,
+            workspace=workspace,
+            created=created,
+            archived=archived,
+            reconciliation_running=reconciliation_running,
+            effective_criticality=effective_criticality,
+            url=url,
+            controlplane=controlplane,
+            provider_account=provider_account,
+            product=product,
+            desired_count=desired_count,
+            image=image,
+            location=location,
+            hardening_enabled=hardening_enabled,
+            deployment_checksum=deployment_checksum,
+            last_deployed_checksum=last_deployed_checksum,
+        )
+
+        k8s_worker_pool_list.additional_properties = d
+        return k8s_worker_pool_list
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties
