@@ -92,41 +92,69 @@ class ApiV1EndpointsListValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_endpoints_list_created_at_error_component import ApiV1EndpointsListCreatedAtErrorComponent
+        from ..models.api_v1_endpoints_list_created_at_error_component import (
+            ApiV1EndpointsListCreatedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_list_created_by_component_error_component import (
-            ApiV1EndpointsListCreatedByComponentErrorComponent,
+            ApiV1EndpointsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_list_created_by_users_error_component import (
-            ApiV1EndpointsListCreatedByUsersErrorComponent,
+            ApiV1EndpointsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_list_k8s_app_error_component import ApiV1EndpointsListK8SAppErrorComponent
+        from ..models.api_v1_endpoints_list_k8s_app_error_component import (
+            ApiV1EndpointsListK8SAppErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_list_k8s_cluster_error_component import (
-            ApiV1EndpointsListK8SClusterErrorComponent,
+            ApiV1EndpointsListK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_list_kind_error_component import ApiV1EndpointsListKindErrorComponent
-        from ..models.api_v1_endpoints_list_name_error_component import ApiV1EndpointsListNameErrorComponent
-        from ..models.api_v1_endpoints_list_name_exact_error_component import ApiV1EndpointsListNameExactErrorComponent
+        from ..models.api_v1_endpoints_list_kind_error_component import (
+            ApiV1EndpointsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_name_error_component import (
+            ApiV1EndpointsListNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_name_exact_error_component import (
+            ApiV1EndpointsListNameExactErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_list_organizations_error_component import (
-            ApiV1EndpointsListOrganizationsErrorComponent,
+            ApiV1EndpointsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_list_region_error_component import ApiV1EndpointsListRegionErrorComponent
+        from ..models.api_v1_endpoints_list_region_error_component import (
+            ApiV1EndpointsListRegionErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_list_remote_address_error_component import (
-            ApiV1EndpointsListRemoteAddressErrorComponent,
+            ApiV1EndpointsListRemoteAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_list_remote_port_error_component import (
-            ApiV1EndpointsListRemotePortErrorComponent,
+            ApiV1EndpointsListRemotePortErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_list_resolved_ip_error_component import (
-            ApiV1EndpointsListResolvedIpErrorComponent,
+            ApiV1EndpointsListResolvedIpErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_list_s3_cluster_error_component import ApiV1EndpointsListS3ClusterErrorComponent
-        from ..models.api_v1_endpoints_list_scope_error_component import ApiV1EndpointsListScopeErrorComponent
-        from ..models.api_v1_endpoints_list_search_error_component import ApiV1EndpointsListSearchErrorComponent
-        from ..models.api_v1_endpoints_list_state_error_component import ApiV1EndpointsListStateErrorComponent
-        from ..models.api_v1_endpoints_list_state_not_error_component import ApiV1EndpointsListStateNotErrorComponent
-        from ..models.api_v1_endpoints_list_time_range_error_component import ApiV1EndpointsListTimeRangeErrorComponent
-        from ..models.api_v1_endpoints_list_updated_at_error_component import ApiV1EndpointsListUpdatedAtErrorComponent
-        from ..models.api_v1_endpoints_list_workspaces_error_component import ApiV1EndpointsListWorkspacesErrorComponent
+        from ..models.api_v1_endpoints_list_s3_cluster_error_component import (
+            ApiV1EndpointsListS3ClusterErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_scope_error_component import (
+            ApiV1EndpointsListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_search_error_component import (
+            ApiV1EndpointsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_state_error_component import (
+            ApiV1EndpointsListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_state_not_error_component import (
+            ApiV1EndpointsListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_time_range_error_component import (
+            ApiV1EndpointsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_updated_at_error_component import (
+            ApiV1EndpointsListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_workspaces_error_component import (
+            ApiV1EndpointsListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -193,44 +221,72 @@ class ApiV1EndpointsListValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_endpoints_list_created_at_error_component import ApiV1EndpointsListCreatedAtErrorComponent
+        from ..models.api_v1_endpoints_list_created_at_error_component import (
+            ApiV1EndpointsListCreatedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_list_created_by_component_error_component import (
-            ApiV1EndpointsListCreatedByComponentErrorComponent,
+            ApiV1EndpointsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_list_created_by_users_error_component import (
-            ApiV1EndpointsListCreatedByUsersErrorComponent,
+            ApiV1EndpointsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_list_k8s_app_error_component import ApiV1EndpointsListK8SAppErrorComponent
+        from ..models.api_v1_endpoints_list_k8s_app_error_component import (
+            ApiV1EndpointsListK8SAppErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_list_k8s_cluster_error_component import (
-            ApiV1EndpointsListK8SClusterErrorComponent,
+            ApiV1EndpointsListK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_list_kind_error_component import ApiV1EndpointsListKindErrorComponent
+        from ..models.api_v1_endpoints_list_kind_error_component import (
+            ApiV1EndpointsListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_list_loadbalancer_instance_error_component import (
-            ApiV1EndpointsListLoadbalancerInstanceErrorComponent,
+            ApiV1EndpointsListLoadbalancerInstanceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_list_name_error_component import ApiV1EndpointsListNameErrorComponent
-        from ..models.api_v1_endpoints_list_name_exact_error_component import ApiV1EndpointsListNameExactErrorComponent
+        from ..models.api_v1_endpoints_list_name_error_component import (
+            ApiV1EndpointsListNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_name_exact_error_component import (
+            ApiV1EndpointsListNameExactErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_list_organizations_error_component import (
-            ApiV1EndpointsListOrganizationsErrorComponent,
+            ApiV1EndpointsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_list_region_error_component import ApiV1EndpointsListRegionErrorComponent
+        from ..models.api_v1_endpoints_list_region_error_component import (
+            ApiV1EndpointsListRegionErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_list_remote_address_error_component import (
-            ApiV1EndpointsListRemoteAddressErrorComponent,
+            ApiV1EndpointsListRemoteAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_list_remote_port_error_component import (
-            ApiV1EndpointsListRemotePortErrorComponent,
+            ApiV1EndpointsListRemotePortErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_list_resolved_ip_error_component import (
-            ApiV1EndpointsListResolvedIpErrorComponent,
+            ApiV1EndpointsListResolvedIpErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_list_s3_cluster_error_component import ApiV1EndpointsListS3ClusterErrorComponent
-        from ..models.api_v1_endpoints_list_scope_error_component import ApiV1EndpointsListScopeErrorComponent
-        from ..models.api_v1_endpoints_list_search_error_component import ApiV1EndpointsListSearchErrorComponent
-        from ..models.api_v1_endpoints_list_state_error_component import ApiV1EndpointsListStateErrorComponent
-        from ..models.api_v1_endpoints_list_state_not_error_component import ApiV1EndpointsListStateNotErrorComponent
-        from ..models.api_v1_endpoints_list_time_range_error_component import ApiV1EndpointsListTimeRangeErrorComponent
-        from ..models.api_v1_endpoints_list_updated_at_error_component import ApiV1EndpointsListUpdatedAtErrorComponent
-        from ..models.api_v1_endpoints_list_workspaces_error_component import ApiV1EndpointsListWorkspacesErrorComponent
+        from ..models.api_v1_endpoints_list_s3_cluster_error_component import (
+            ApiV1EndpointsListS3ClusterErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_scope_error_component import (
+            ApiV1EndpointsListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_search_error_component import (
+            ApiV1EndpointsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_state_error_component import (
+            ApiV1EndpointsListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_state_not_error_component import (
+            ApiV1EndpointsListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_time_range_error_component import (
+            ApiV1EndpointsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_updated_at_error_component import (
+            ApiV1EndpointsListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_list_workspaces_error_component import (
+            ApiV1EndpointsListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

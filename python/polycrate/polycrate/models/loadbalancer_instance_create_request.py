@@ -34,6 +34,9 @@ class LoadbalancerInstanceCreateRequest:
             consumer_meta (Any | Unset): Arbitrary metadata from the consumer of this LoadBalancer instance
             labels (Any | Unset):
             annotations (Any | Unset):
+            resource_limits (Any | Unset): Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.
+            haproxy_defaults (Any | Unset): Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin,
+                option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.
     """
 
     workspace: UUID
@@ -45,6 +48,8 @@ class LoadbalancerInstanceCreateRequest:
     consumer_meta: Any | Unset = UNSET
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
+    resource_limits: Any | Unset = UNSET
+    haproxy_defaults: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -70,6 +75,10 @@ class LoadbalancerInstanceCreateRequest:
 
         annotations = self.annotations
 
+        resource_limits = self.resource_limits
+
+        haproxy_defaults = self.haproxy_defaults
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -92,6 +101,10 @@ class LoadbalancerInstanceCreateRequest:
             field_dict["labels"] = labels
         if annotations is not UNSET:
             field_dict["annotations"] = annotations
+        if resource_limits is not UNSET:
+            field_dict["resource_limits"] = resource_limits
+        if haproxy_defaults is not UNSET:
+            field_dict["haproxy_defaults"] = haproxy_defaults
 
         return field_dict
 
@@ -126,6 +139,12 @@ class LoadbalancerInstanceCreateRequest:
         if not isinstance(self.annotations, Unset):
             files.append(("annotations", (None, str(self.annotations).encode(), "text/plain")))
 
+        if not isinstance(self.resource_limits, Unset):
+            files.append(("resource_limits", (None, str(self.resource_limits).encode(), "text/plain")))
+
+        if not isinstance(self.haproxy_defaults, Unset):
+            files.append(("haproxy_defaults", (None, str(self.haproxy_defaults).encode(), "text/plain")))
+
         for prop_name, prop in self.additional_properties.items():
             files.append((prop_name, (None, str(prop).encode(), "text/plain")))
 
@@ -159,6 +178,10 @@ class LoadbalancerInstanceCreateRequest:
 
         annotations = d.pop("annotations", UNSET)
 
+        resource_limits = d.pop("resource_limits", UNSET)
+
+        haproxy_defaults = d.pop("haproxy_defaults", UNSET)
+
         loadbalancer_instance_create_request = cls(
             workspace=workspace,
             organization=organization,
@@ -169,6 +192,8 @@ class LoadbalancerInstanceCreateRequest:
             consumer_meta=consumer_meta,
             labels=labels,
             annotations=annotations,
+            resource_limits=resource_limits,
+            haproxy_defaults=haproxy_defaults,
         )
 
         loadbalancer_instance_create_request.additional_properties = d

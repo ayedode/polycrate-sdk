@@ -38,7 +38,7 @@ class ApiV1S3BucketsSettingsEncryptionCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1s3_buckets_settings_encryption_create_non_field_errors_error_component import (
-            ApiV1S3BucketsSettingsEncryptionCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsSettingsEncryptionCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -67,10 +67,10 @@ class ApiV1S3BucketsSettingsEncryptionCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1s3_buckets_settings_encryption_create_enabled_error_component import (
-            ApiV1S3BucketsSettingsEncryptionCreateEnabledErrorComponent,
+            ApiV1S3BucketsSettingsEncryptionCreateEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_settings_encryption_create_non_field_errors_error_component import (
-            ApiV1S3BucketsSettingsEncryptionCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsSettingsEncryptionCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

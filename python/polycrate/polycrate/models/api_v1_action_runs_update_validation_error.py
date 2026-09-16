@@ -32,7 +32,7 @@ class ApiV1ActionRunsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_action_runs_update_non_field_errors_error_component import (
-            ApiV1ActionRunsUpdateNonFieldErrorsErrorComponent,
+            ApiV1ActionRunsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -60,9 +60,11 @@ class ApiV1ActionRunsUpdateValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_action_runs_update_name_error_component import ApiV1ActionRunsUpdateNameErrorComponent
+        from ..models.api_v1_action_runs_update_name_error_component import (
+            ApiV1ActionRunsUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_action_runs_update_non_field_errors_error_component import (
-            ApiV1ActionRunsUpdateNonFieldErrorsErrorComponent,
+            ApiV1ActionRunsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

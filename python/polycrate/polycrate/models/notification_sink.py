@@ -203,10 +203,14 @@ class NotificationSink:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.notification_sink_deleted_by_user_type_0 import NotificationSinkDeletedByUserType0
-        from ..models.notification_sink_last_action_run_type_0 import NotificationSinkLastActionRunType0
-        from ..models.notification_sink_organization_type_0 import NotificationSinkOrganizationType0
-        from ..models.notification_sink_workspace_type_0 import NotificationSinkWorkspaceType0
+        from ..models.notification_sink_deleted_by_user_type_0 import (
+            NotificationSinkDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.notification_sink_last_action_run_type_0 import (
+            NotificationSinkLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.notification_sink_organization_type_0 import NotificationSinkOrganizationType0  # noqa: PLC0415
+        from ..models.notification_sink_workspace_type_0 import NotificationSinkWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -527,11 +531,15 @@ class NotificationSink:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.notification_sink_created import NotificationSinkCreated
-        from ..models.notification_sink_deleted_by_user_type_0 import NotificationSinkDeletedByUserType0
-        from ..models.notification_sink_last_action_run_type_0 import NotificationSinkLastActionRunType0
-        from ..models.notification_sink_organization_type_0 import NotificationSinkOrganizationType0
-        from ..models.notification_sink_workspace_type_0 import NotificationSinkWorkspaceType0
+        from ..models.notification_sink_created import NotificationSinkCreated  # noqa: PLC0415
+        from ..models.notification_sink_deleted_by_user_type_0 import (
+            NotificationSinkDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.notification_sink_last_action_run_type_0 import (
+            NotificationSinkLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.notification_sink_organization_type_0 import NotificationSinkOrganizationType0  # noqa: PLC0415
+        from ..models.notification_sink_workspace_type_0 import NotificationSinkWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

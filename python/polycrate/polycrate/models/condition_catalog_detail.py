@@ -196,10 +196,18 @@ class ConditionCatalogDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.condition_catalog_detail_deleted_by_user_type_0 import ConditionCatalogDetailDeletedByUserType0
-        from ..models.condition_catalog_detail_last_action_run_type_0 import ConditionCatalogDetailLastActionRunType0
-        from ..models.condition_catalog_detail_organization_type_0 import ConditionCatalogDetailOrganizationType0
-        from ..models.condition_catalog_detail_workspace_type_0 import ConditionCatalogDetailWorkspaceType0
+        from ..models.condition_catalog_detail_deleted_by_user_type_0 import (
+            ConditionCatalogDetailDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.condition_catalog_detail_last_action_run_type_0 import (
+            ConditionCatalogDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.condition_catalog_detail_organization_type_0 import (
+            ConditionCatalogDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.condition_catalog_detail_workspace_type_0 import (
+            ConditionCatalogDetailWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -510,11 +518,19 @@ class ConditionCatalogDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.condition_catalog_detail_created import ConditionCatalogDetailCreated
-        from ..models.condition_catalog_detail_deleted_by_user_type_0 import ConditionCatalogDetailDeletedByUserType0
-        from ..models.condition_catalog_detail_last_action_run_type_0 import ConditionCatalogDetailLastActionRunType0
-        from ..models.condition_catalog_detail_organization_type_0 import ConditionCatalogDetailOrganizationType0
-        from ..models.condition_catalog_detail_workspace_type_0 import ConditionCatalogDetailWorkspaceType0
+        from ..models.condition_catalog_detail_created import ConditionCatalogDetailCreated  # noqa: PLC0415
+        from ..models.condition_catalog_detail_deleted_by_user_type_0 import (
+            ConditionCatalogDetailDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.condition_catalog_detail_last_action_run_type_0 import (
+            ConditionCatalogDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.condition_catalog_detail_organization_type_0 import (
+            ConditionCatalogDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.condition_catalog_detail_workspace_type_0 import (
+            ConditionCatalogDetailWorkspaceType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

@@ -18,6 +18,7 @@ if TYPE_CHECKING:
     from ..models.catalogue_app_list_created import CatalogueAppListCreated
     from ..models.catalogue_app_list_latest_block_type_0 import CatalogueAppListLatestBlockType0
     from ..models.product_simple import ProductSimple
+    from ..models.user import User
 
 
 T = TypeVar("T", bound="CatalogueAppList")
@@ -68,6 +69,7 @@ class CatalogueAppList:
             product_regular (ProductSimple): Compact serializer for embedding Product as FK reference.
             product_ha (ProductSimple): Compact serializer for embedding Product as FK reference.
             latest_block (CatalogueAppListLatestBlockType0 | None):
+            maintainer (None | User):
             claim (str | Unset): Short marketing claim (mapped from Baserow 'info')
             short_description (None | str | Unset): What is this app? (mapped from Baserow 'what_is')
             draft (bool | Unset): Draft apps are not visible in the public catalogue
@@ -108,6 +110,7 @@ class CatalogueAppList:
     product_regular: ProductSimple
     product_ha: ProductSimple
     latest_block: CatalogueAppListLatestBlockType0 | None
+    maintainer: None | User
     claim: str | Unset = UNSET
     short_description: None | str | Unset = UNSET
     draft: bool | Unset = UNSET
@@ -122,7 +125,8 @@ class CatalogueAppList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.catalogue_app_list_latest_block_type_0 import CatalogueAppListLatestBlockType0
+        from ..models.catalogue_app_list_latest_block_type_0 import CatalogueAppListLatestBlockType0  # noqa: PLC0415
+        from ..models.user import User  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -184,6 +188,12 @@ class CatalogueAppList:
             latest_block = self.latest_block.to_dict()
         else:
             latest_block = self.latest_block
+
+        maintainer: dict[str, Any] | None
+        if isinstance(self.maintainer, User):
+            maintainer = self.maintainer.to_dict()
+        else:
+            maintainer = self.maintainer
 
         claim = self.claim
 
@@ -261,6 +271,7 @@ class CatalogueAppList:
                 "product_regular": product_regular,
                 "product_ha": product_ha,
                 "latest_block": latest_block,
+                "maintainer": maintainer,
             }
         )
         if claim is not UNSET:
@@ -290,13 +301,14 @@ class CatalogueAppList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.artifact_package_catalogue import ArtifactPackageCatalogue
+        from ..models.artifact_package_catalogue import ArtifactPackageCatalogue  # noqa: PLC0415
         from ..models.catalogue_app_list_active_condition_instances_item import (
-            CatalogueAppListActiveConditionInstancesItem,
+            CatalogueAppListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.catalogue_app_list_created import CatalogueAppListCreated
-        from ..models.catalogue_app_list_latest_block_type_0 import CatalogueAppListLatestBlockType0
-        from ..models.product_simple import ProductSimple
+        from ..models.catalogue_app_list_created import CatalogueAppListCreated  # noqa: PLC0415
+        from ..models.catalogue_app_list_latest_block_type_0 import CatalogueAppListLatestBlockType0  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
+        from ..models.user import User  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -389,6 +401,21 @@ class CatalogueAppList:
             return cast(CatalogueAppListLatestBlockType0 | None, data)
 
         latest_block = _parse_latest_block(d.pop("latest_block"))
+
+        def _parse_maintainer(data: object) -> None | User:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                maintainer_type_1 = User.from_dict(data)
+
+                return maintainer_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | User, data)
+
+        maintainer = _parse_maintainer(d.pop("maintainer"))
 
         claim = d.pop("claim", UNSET)
 
@@ -487,6 +514,7 @@ class CatalogueAppList:
             product_regular=product_regular,
             product_ha=product_ha,
             latest_block=latest_block,
+            maintainer=maintainer,
             claim=claim,
             short_description=short_description,
             draft=draft,

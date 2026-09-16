@@ -195,103 +195,103 @@ class ApiV1SecretmanagerManagersUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_secretmanager_managers_update_annotations_error_component import (
-            ApiV1SecretmanagerManagersUpdateAnnotationsErrorComponent,
+            ApiV1SecretmanagerManagersUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_archived_at_error_component import (
-            ApiV1SecretmanagerManagersUpdateArchivedAtErrorComponent,
+            ApiV1SecretmanagerManagersUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_archived_error_component import (
-            ApiV1SecretmanagerManagersUpdateArchivedErrorComponent,
+            ApiV1SecretmanagerManagersUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_archived_reason_error_component import (
-            ApiV1SecretmanagerManagersUpdateArchivedReasonErrorComponent,
+            ApiV1SecretmanagerManagersUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_auth_methods_count_error_component import (
-            ApiV1SecretmanagerManagersUpdateAuthMethodsCountErrorComponent,
+            ApiV1SecretmanagerManagersUpdateAuthMethodsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_credential_error_component import (
-            ApiV1SecretmanagerManagersUpdateCredentialErrorComponent,
+            ApiV1SecretmanagerManagersUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_criticality_error_component import (
-            ApiV1SecretmanagerManagersUpdateCriticalityErrorComponent,
+            ApiV1SecretmanagerManagersUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_debug_mode_error_component import (
-            ApiV1SecretmanagerManagersUpdateDebugModeErrorComponent,
+            ApiV1SecretmanagerManagersUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_display_name_error_component import (
-            ApiV1SecretmanagerManagersUpdateDisplayNameErrorComponent,
+            ApiV1SecretmanagerManagersUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_hostname_error_component import (
-            ApiV1SecretmanagerManagersUpdateHostnameErrorComponent,
+            ApiV1SecretmanagerManagersUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_is_initialized_error_component import (
-            ApiV1SecretmanagerManagersUpdateIsInitializedErrorComponent,
+            ApiV1SecretmanagerManagersUpdateIsInitializedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_is_sealed_error_component import (
-            ApiV1SecretmanagerManagersUpdateIsSealedErrorComponent,
+            ApiV1SecretmanagerManagersUpdateIsSealedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_k8s_app_error_component import (
-            ApiV1SecretmanagerManagersUpdateK8SAppErrorComponent,
+            ApiV1SecretmanagerManagersUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_k8s_cluster_error_component import (
-            ApiV1SecretmanagerManagersUpdateK8SClusterErrorComponent,
+            ApiV1SecretmanagerManagersUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_kind_error_component import (
-            ApiV1SecretmanagerManagersUpdateKindErrorComponent,
+            ApiV1SecretmanagerManagersUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_labels_error_component import (
-            ApiV1SecretmanagerManagersUpdateLabelsErrorComponent,
+            ApiV1SecretmanagerManagersUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_name_error_component import (
-            ApiV1SecretmanagerManagersUpdateNameErrorComponent,
+            ApiV1SecretmanagerManagersUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_non_field_errors_error_component import (
-            ApiV1SecretmanagerManagersUpdateNonFieldErrorsErrorComponent,
+            ApiV1SecretmanagerManagersUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_platform_service_error_component import (
-            ApiV1SecretmanagerManagersUpdatePlatformServiceErrorComponent,
+            ApiV1SecretmanagerManagersUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_policies_count_error_component import (
-            ApiV1SecretmanagerManagersUpdatePoliciesCountErrorComponent,
+            ApiV1SecretmanagerManagersUpdatePoliciesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_provider_error_component import (
-            ApiV1SecretmanagerManagersUpdateProviderErrorComponent,
+            ApiV1SecretmanagerManagersUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_provider_id_error_component import (
-            ApiV1SecretmanagerManagersUpdateProviderIdErrorComponent,
+            ApiV1SecretmanagerManagersUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_provider_reference_error_component import (
-            ApiV1SecretmanagerManagersUpdateProviderReferenceErrorComponent,
+            ApiV1SecretmanagerManagersUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_reconciliation_enabled_error_component import (
-            ApiV1SecretmanagerManagersUpdateReconciliationEnabledErrorComponent,
+            ApiV1SecretmanagerManagersUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_secrets_engines_count_error_component import (
-            ApiV1SecretmanagerManagersUpdateSecretsEnginesCountErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSecretsEnginesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_sla_availability_error_component import (
-            ApiV1SecretmanagerManagersUpdateSlaAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_sla_target_error_component import (
-            ApiV1SecretmanagerManagersUpdateSlaTargetErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_slo_availability_error_component import (
-            ApiV1SecretmanagerManagersUpdateSloAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_slo_target_error_component import (
-            ApiV1SecretmanagerManagersUpdateSloTargetErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_target_availability_error_component import (
-            ApiV1SecretmanagerManagersUpdateTargetAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_tolerations_error_component import (
-            ApiV1SecretmanagerManagersUpdateTolerationsErrorComponent,
+            ApiV1SecretmanagerManagersUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_vault_mode_error_component import (
-            ApiV1SecretmanagerManagersUpdateVaultModeErrorComponent,
+            ApiV1SecretmanagerManagersUpdateVaultModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_vault_version_error_component import (
-            ApiV1SecretmanagerManagersUpdateVaultVersionErrorComponent,
+            ApiV1SecretmanagerManagersUpdateVaultVersionErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -384,106 +384,106 @@ class ApiV1SecretmanagerManagersUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_secretmanager_managers_update_annotations_error_component import (
-            ApiV1SecretmanagerManagersUpdateAnnotationsErrorComponent,
+            ApiV1SecretmanagerManagersUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_archived_at_error_component import (
-            ApiV1SecretmanagerManagersUpdateArchivedAtErrorComponent,
+            ApiV1SecretmanagerManagersUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_archived_error_component import (
-            ApiV1SecretmanagerManagersUpdateArchivedErrorComponent,
+            ApiV1SecretmanagerManagersUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_archived_reason_error_component import (
-            ApiV1SecretmanagerManagersUpdateArchivedReasonErrorComponent,
+            ApiV1SecretmanagerManagersUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_auth_methods_count_error_component import (
-            ApiV1SecretmanagerManagersUpdateAuthMethodsCountErrorComponent,
+            ApiV1SecretmanagerManagersUpdateAuthMethodsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_credential_error_component import (
-            ApiV1SecretmanagerManagersUpdateCredentialErrorComponent,
+            ApiV1SecretmanagerManagersUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_criticality_error_component import (
-            ApiV1SecretmanagerManagersUpdateCriticalityErrorComponent,
+            ApiV1SecretmanagerManagersUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_debug_mode_error_component import (
-            ApiV1SecretmanagerManagersUpdateDebugModeErrorComponent,
+            ApiV1SecretmanagerManagersUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_display_name_error_component import (
-            ApiV1SecretmanagerManagersUpdateDisplayNameErrorComponent,
+            ApiV1SecretmanagerManagersUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_hostname_error_component import (
-            ApiV1SecretmanagerManagersUpdateHostnameErrorComponent,
+            ApiV1SecretmanagerManagersUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_is_initialized_error_component import (
-            ApiV1SecretmanagerManagersUpdateIsInitializedErrorComponent,
+            ApiV1SecretmanagerManagersUpdateIsInitializedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_is_sealed_error_component import (
-            ApiV1SecretmanagerManagersUpdateIsSealedErrorComponent,
+            ApiV1SecretmanagerManagersUpdateIsSealedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_k8s_app_error_component import (
-            ApiV1SecretmanagerManagersUpdateK8SAppErrorComponent,
+            ApiV1SecretmanagerManagersUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_k8s_cluster_error_component import (
-            ApiV1SecretmanagerManagersUpdateK8SClusterErrorComponent,
+            ApiV1SecretmanagerManagersUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_kind_error_component import (
-            ApiV1SecretmanagerManagersUpdateKindErrorComponent,
+            ApiV1SecretmanagerManagersUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_labels_error_component import (
-            ApiV1SecretmanagerManagersUpdateLabelsErrorComponent,
+            ApiV1SecretmanagerManagersUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_metadata_error_component import (
-            ApiV1SecretmanagerManagersUpdateMetadataErrorComponent,
+            ApiV1SecretmanagerManagersUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_name_error_component import (
-            ApiV1SecretmanagerManagersUpdateNameErrorComponent,
+            ApiV1SecretmanagerManagersUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_non_field_errors_error_component import (
-            ApiV1SecretmanagerManagersUpdateNonFieldErrorsErrorComponent,
+            ApiV1SecretmanagerManagersUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_platform_service_error_component import (
-            ApiV1SecretmanagerManagersUpdatePlatformServiceErrorComponent,
+            ApiV1SecretmanagerManagersUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_policies_count_error_component import (
-            ApiV1SecretmanagerManagersUpdatePoliciesCountErrorComponent,
+            ApiV1SecretmanagerManagersUpdatePoliciesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_provider_error_component import (
-            ApiV1SecretmanagerManagersUpdateProviderErrorComponent,
+            ApiV1SecretmanagerManagersUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_provider_id_error_component import (
-            ApiV1SecretmanagerManagersUpdateProviderIdErrorComponent,
+            ApiV1SecretmanagerManagersUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_provider_reference_error_component import (
-            ApiV1SecretmanagerManagersUpdateProviderReferenceErrorComponent,
+            ApiV1SecretmanagerManagersUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_reconciliation_enabled_error_component import (
-            ApiV1SecretmanagerManagersUpdateReconciliationEnabledErrorComponent,
+            ApiV1SecretmanagerManagersUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_secrets_engines_count_error_component import (
-            ApiV1SecretmanagerManagersUpdateSecretsEnginesCountErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSecretsEnginesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_sla_availability_error_component import (
-            ApiV1SecretmanagerManagersUpdateSlaAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_sla_target_error_component import (
-            ApiV1SecretmanagerManagersUpdateSlaTargetErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_slo_availability_error_component import (
-            ApiV1SecretmanagerManagersUpdateSloAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_slo_target_error_component import (
-            ApiV1SecretmanagerManagersUpdateSloTargetErrorComponent,
+            ApiV1SecretmanagerManagersUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_target_availability_error_component import (
-            ApiV1SecretmanagerManagersUpdateTargetAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_tolerations_error_component import (
-            ApiV1SecretmanagerManagersUpdateTolerationsErrorComponent,
+            ApiV1SecretmanagerManagersUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_vault_mode_error_component import (
-            ApiV1SecretmanagerManagersUpdateVaultModeErrorComponent,
+            ApiV1SecretmanagerManagersUpdateVaultModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_update_vault_version_error_component import (
-            ApiV1SecretmanagerManagersUpdateVaultVersionErrorComponent,
+            ApiV1SecretmanagerManagersUpdateVaultVersionErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

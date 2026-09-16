@@ -61,22 +61,22 @@ class ApiV1PricingCalculatorStatesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_calculator_states_list_created_at_error_component import (
-            ApiV1PricingCalculatorStatesListCreatedAtErrorComponent,
+            ApiV1PricingCalculatorStatesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_kind_error_component import (
-            ApiV1PricingCalculatorStatesListKindErrorComponent,
+            ApiV1PricingCalculatorStatesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_name_error_component import (
-            ApiV1PricingCalculatorStatesListNameErrorComponent,
+            ApiV1PricingCalculatorStatesListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_scope_error_component import (
-            ApiV1PricingCalculatorStatesListScopeErrorComponent,
+            ApiV1PricingCalculatorStatesListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_state_error_component import (
-            ApiV1PricingCalculatorStatesListStateErrorComponent,
+            ApiV1PricingCalculatorStatesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_updated_at_error_component import (
-            ApiV1PricingCalculatorStatesListUpdatedAtErrorComponent,
+            ApiV1PricingCalculatorStatesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -115,25 +115,25 @@ class ApiV1PricingCalculatorStatesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_calculator_states_list_created_at_error_component import (
-            ApiV1PricingCalculatorStatesListCreatedAtErrorComponent,
+            ApiV1PricingCalculatorStatesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_created_by_component_error_component import (
-            ApiV1PricingCalculatorStatesListCreatedByComponentErrorComponent,
+            ApiV1PricingCalculatorStatesListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_kind_error_component import (
-            ApiV1PricingCalculatorStatesListKindErrorComponent,
+            ApiV1PricingCalculatorStatesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_name_error_component import (
-            ApiV1PricingCalculatorStatesListNameErrorComponent,
+            ApiV1PricingCalculatorStatesListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_scope_error_component import (
-            ApiV1PricingCalculatorStatesListScopeErrorComponent,
+            ApiV1PricingCalculatorStatesListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_state_error_component import (
-            ApiV1PricingCalculatorStatesListStateErrorComponent,
+            ApiV1PricingCalculatorStatesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_list_updated_at_error_component import (
-            ApiV1PricingCalculatorStatesListUpdatedAtErrorComponent,
+            ApiV1PricingCalculatorStatesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -50,7 +50,9 @@ class DNSProviderCatalogItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.dns_provider_catalog_item_credential_schema import DNSProviderCatalogItemCredentialSchema
+        from ..models.dns_provider_catalog_item_credential_schema import (
+            DNSProviderCatalogItemCredentialSchema,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         slug = d.pop("slug")

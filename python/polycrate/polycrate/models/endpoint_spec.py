@@ -41,11 +41,11 @@ class EndpointSpec:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.endpoint_dns_spec import EndpointDNSSpec
-        from ..models.endpoint_http_spec import EndpointHTTPSpec
-        from ..models.endpoint_icmp_spec import EndpointICMPSpec
-        from ..models.endpoint_retry_spec import EndpointRetrySpec
-        from ..models.endpoint_tcp_spec import EndpointTCPSpec
+        from ..models.endpoint_dns_spec import EndpointDNSSpec  # noqa: PLC0415
+        from ..models.endpoint_http_spec import EndpointHTTPSpec  # noqa: PLC0415
+        from ..models.endpoint_icmp_spec import EndpointICMPSpec  # noqa: PLC0415
+        from ..models.endpoint_retry_spec import EndpointRetrySpec  # noqa: PLC0415
+        from ..models.endpoint_tcp_spec import EndpointTCPSpec  # noqa: PLC0415
 
         retry: dict[str, Any] | None | Unset
         if isinstance(self.retry, Unset):
@@ -105,11 +105,11 @@ class EndpointSpec:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.endpoint_dns_spec import EndpointDNSSpec
-        from ..models.endpoint_http_spec import EndpointHTTPSpec
-        from ..models.endpoint_icmp_spec import EndpointICMPSpec
-        from ..models.endpoint_retry_spec import EndpointRetrySpec
-        from ..models.endpoint_tcp_spec import EndpointTCPSpec
+        from ..models.endpoint_dns_spec import EndpointDNSSpec  # noqa: PLC0415
+        from ..models.endpoint_http_spec import EndpointHTTPSpec  # noqa: PLC0415
+        from ..models.endpoint_icmp_spec import EndpointICMPSpec  # noqa: PLC0415
+        from ..models.endpoint_retry_spec import EndpointRetrySpec  # noqa: PLC0415
+        from ..models.endpoint_tcp_spec import EndpointTCPSpec  # noqa: PLC0415
 
         d = dict(src_dict)
 

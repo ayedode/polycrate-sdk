@@ -48,13 +48,13 @@ class ApiV1ConversationsProvidersArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conversations_providers_archive_create_kind_error_component import (
-            ApiV1ConversationsProvidersArchiveCreateKindErrorComponent,
+            ApiV1ConversationsProvidersArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_archive_create_meta_error_component import (
-            ApiV1ConversationsProvidersArchiveCreateMetaErrorComponent,
+            ApiV1ConversationsProvidersArchiveCreateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_archive_create_non_field_errors_error_component import (
-            ApiV1ConversationsProvidersArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsProvidersArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -87,16 +87,16 @@ class ApiV1ConversationsProvidersArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conversations_providers_archive_create_config_error_component import (
-            ApiV1ConversationsProvidersArchiveCreateConfigErrorComponent,
+            ApiV1ConversationsProvidersArchiveCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_archive_create_kind_error_component import (
-            ApiV1ConversationsProvidersArchiveCreateKindErrorComponent,
+            ApiV1ConversationsProvidersArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_archive_create_meta_error_component import (
-            ApiV1ConversationsProvidersArchiveCreateMetaErrorComponent,
+            ApiV1ConversationsProvidersArchiveCreateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_archive_create_non_field_errors_error_component import (
-            ApiV1ConversationsProvidersArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsProvidersArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

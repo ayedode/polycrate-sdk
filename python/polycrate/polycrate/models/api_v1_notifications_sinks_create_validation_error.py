@@ -152,79 +152,79 @@ class ApiV1NotificationsSinksCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_notifications_sinks_create_annotations_error_component import (
-            ApiV1NotificationsSinksCreateAnnotationsErrorComponent,
+            ApiV1NotificationsSinksCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_archived_at_error_component import (
-            ApiV1NotificationsSinksCreateArchivedAtErrorComponent,
+            ApiV1NotificationsSinksCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_archived_error_component import (
-            ApiV1NotificationsSinksCreateArchivedErrorComponent,
+            ApiV1NotificationsSinksCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_archived_reason_error_component import (
-            ApiV1NotificationsSinksCreateArchivedReasonErrorComponent,
+            ApiV1NotificationsSinksCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_config_error_component import (
-            ApiV1NotificationsSinksCreateConfigErrorComponent,
+            ApiV1NotificationsSinksCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_criticality_error_component import (
-            ApiV1NotificationsSinksCreateCriticalityErrorComponent,
+            ApiV1NotificationsSinksCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_debug_mode_error_component import (
-            ApiV1NotificationsSinksCreateDebugModeErrorComponent,
+            ApiV1NotificationsSinksCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_display_name_error_component import (
-            ApiV1NotificationsSinksCreateDisplayNameErrorComponent,
+            ApiV1NotificationsSinksCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_is_enabled_error_component import (
-            ApiV1NotificationsSinksCreateIsEnabledErrorComponent,
+            ApiV1NotificationsSinksCreateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_is_system_default_error_component import (
-            ApiV1NotificationsSinksCreateIsSystemDefaultErrorComponent,
+            ApiV1NotificationsSinksCreateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_kind_error_component import (
-            ApiV1NotificationsSinksCreateKindErrorComponent,
+            ApiV1NotificationsSinksCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_labels_error_component import (
-            ApiV1NotificationsSinksCreateLabelsErrorComponent,
+            ApiV1NotificationsSinksCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_name_error_component import (
-            ApiV1NotificationsSinksCreateNameErrorComponent,
+            ApiV1NotificationsSinksCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_non_field_errors_error_component import (
-            ApiV1NotificationsSinksCreateNonFieldErrorsErrorComponent,
+            ApiV1NotificationsSinksCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_platform_service_error_component import (
-            ApiV1NotificationsSinksCreatePlatformServiceErrorComponent,
+            ApiV1NotificationsSinksCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_provider_error_component import (
-            ApiV1NotificationsSinksCreateProviderErrorComponent,
+            ApiV1NotificationsSinksCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_provider_id_error_component import (
-            ApiV1NotificationsSinksCreateProviderIdErrorComponent,
+            ApiV1NotificationsSinksCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_provider_reference_error_component import (
-            ApiV1NotificationsSinksCreateProviderReferenceErrorComponent,
+            ApiV1NotificationsSinksCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_reconciliation_enabled_error_component import (
-            ApiV1NotificationsSinksCreateReconciliationEnabledErrorComponent,
+            ApiV1NotificationsSinksCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_sla_availability_error_component import (
-            ApiV1NotificationsSinksCreateSlaAvailabilityErrorComponent,
+            ApiV1NotificationsSinksCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_sla_target_error_component import (
-            ApiV1NotificationsSinksCreateSlaTargetErrorComponent,
+            ApiV1NotificationsSinksCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_slo_availability_error_component import (
-            ApiV1NotificationsSinksCreateSloAvailabilityErrorComponent,
+            ApiV1NotificationsSinksCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_slo_target_error_component import (
-            ApiV1NotificationsSinksCreateSloTargetErrorComponent,
+            ApiV1NotificationsSinksCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_target_availability_error_component import (
-            ApiV1NotificationsSinksCreateTargetAvailabilityErrorComponent,
+            ApiV1NotificationsSinksCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_tolerations_error_component import (
-            ApiV1NotificationsSinksCreateTolerationsErrorComponent,
+            ApiV1NotificationsSinksCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -301,82 +301,82 @@ class ApiV1NotificationsSinksCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_notifications_sinks_create_annotations_error_component import (
-            ApiV1NotificationsSinksCreateAnnotationsErrorComponent,
+            ApiV1NotificationsSinksCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_archived_at_error_component import (
-            ApiV1NotificationsSinksCreateArchivedAtErrorComponent,
+            ApiV1NotificationsSinksCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_archived_error_component import (
-            ApiV1NotificationsSinksCreateArchivedErrorComponent,
+            ApiV1NotificationsSinksCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_archived_reason_error_component import (
-            ApiV1NotificationsSinksCreateArchivedReasonErrorComponent,
+            ApiV1NotificationsSinksCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_config_error_component import (
-            ApiV1NotificationsSinksCreateConfigErrorComponent,
+            ApiV1NotificationsSinksCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_criticality_error_component import (
-            ApiV1NotificationsSinksCreateCriticalityErrorComponent,
+            ApiV1NotificationsSinksCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_debug_mode_error_component import (
-            ApiV1NotificationsSinksCreateDebugModeErrorComponent,
+            ApiV1NotificationsSinksCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_display_name_error_component import (
-            ApiV1NotificationsSinksCreateDisplayNameErrorComponent,
+            ApiV1NotificationsSinksCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_enabled_model_types_error_component import (
-            ApiV1NotificationsSinksCreateEnabledModelTypesErrorComponent,
+            ApiV1NotificationsSinksCreateEnabledModelTypesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_is_enabled_error_component import (
-            ApiV1NotificationsSinksCreateIsEnabledErrorComponent,
+            ApiV1NotificationsSinksCreateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_is_system_default_error_component import (
-            ApiV1NotificationsSinksCreateIsSystemDefaultErrorComponent,
+            ApiV1NotificationsSinksCreateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_kind_error_component import (
-            ApiV1NotificationsSinksCreateKindErrorComponent,
+            ApiV1NotificationsSinksCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_labels_error_component import (
-            ApiV1NotificationsSinksCreateLabelsErrorComponent,
+            ApiV1NotificationsSinksCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_name_error_component import (
-            ApiV1NotificationsSinksCreateNameErrorComponent,
+            ApiV1NotificationsSinksCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_non_field_errors_error_component import (
-            ApiV1NotificationsSinksCreateNonFieldErrorsErrorComponent,
+            ApiV1NotificationsSinksCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_platform_service_error_component import (
-            ApiV1NotificationsSinksCreatePlatformServiceErrorComponent,
+            ApiV1NotificationsSinksCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_provider_error_component import (
-            ApiV1NotificationsSinksCreateProviderErrorComponent,
+            ApiV1NotificationsSinksCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_provider_id_error_component import (
-            ApiV1NotificationsSinksCreateProviderIdErrorComponent,
+            ApiV1NotificationsSinksCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_provider_reference_error_component import (
-            ApiV1NotificationsSinksCreateProviderReferenceErrorComponent,
+            ApiV1NotificationsSinksCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_reconciliation_enabled_error_component import (
-            ApiV1NotificationsSinksCreateReconciliationEnabledErrorComponent,
+            ApiV1NotificationsSinksCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_sla_availability_error_component import (
-            ApiV1NotificationsSinksCreateSlaAvailabilityErrorComponent,
+            ApiV1NotificationsSinksCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_sla_target_error_component import (
-            ApiV1NotificationsSinksCreateSlaTargetErrorComponent,
+            ApiV1NotificationsSinksCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_slo_availability_error_component import (
-            ApiV1NotificationsSinksCreateSloAvailabilityErrorComponent,
+            ApiV1NotificationsSinksCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_slo_target_error_component import (
-            ApiV1NotificationsSinksCreateSloTargetErrorComponent,
+            ApiV1NotificationsSinksCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_target_availability_error_component import (
-            ApiV1NotificationsSinksCreateTargetAvailabilityErrorComponent,
+            ApiV1NotificationsSinksCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_create_tolerations_error_component import (
-            ApiV1NotificationsSinksCreateTolerationsErrorComponent,
+            ApiV1NotificationsSinksCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

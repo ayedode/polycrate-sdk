@@ -65,28 +65,28 @@ class ApiV1ScmRepositoriesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_scm_repositories_list_created_by_users_error_component import (
-            ApiV1ScmRepositoriesListCreatedByUsersErrorComponent,
+            ApiV1ScmRepositoriesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_kind_error_component import (
-            ApiV1ScmRepositoriesListKindErrorComponent,
+            ApiV1ScmRepositoriesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_organizations_error_component import (
-            ApiV1ScmRepositoriesListOrganizationsErrorComponent,
+            ApiV1ScmRepositoriesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_search_error_component import (
-            ApiV1ScmRepositoriesListSearchErrorComponent,
+            ApiV1ScmRepositoriesListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_state_error_component import (
-            ApiV1ScmRepositoriesListStateErrorComponent,
+            ApiV1ScmRepositoriesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_state_not_error_component import (
-            ApiV1ScmRepositoriesListStateNotErrorComponent,
+            ApiV1ScmRepositoriesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_time_range_error_component import (
-            ApiV1ScmRepositoriesListTimeRangeErrorComponent,
+            ApiV1ScmRepositoriesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_workspaces_error_component import (
-            ApiV1ScmRepositoriesListWorkspacesErrorComponent,
+            ApiV1ScmRepositoriesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -129,31 +129,31 @@ class ApiV1ScmRepositoriesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_scm_repositories_list_created_by_users_error_component import (
-            ApiV1ScmRepositoriesListCreatedByUsersErrorComponent,
+            ApiV1ScmRepositoriesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_kind_error_component import (
-            ApiV1ScmRepositoriesListKindErrorComponent,
+            ApiV1ScmRepositoriesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_name_exact_error_component import (
-            ApiV1ScmRepositoriesListNameExactErrorComponent,
+            ApiV1ScmRepositoriesListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_organizations_error_component import (
-            ApiV1ScmRepositoriesListOrganizationsErrorComponent,
+            ApiV1ScmRepositoriesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_search_error_component import (
-            ApiV1ScmRepositoriesListSearchErrorComponent,
+            ApiV1ScmRepositoriesListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_state_error_component import (
-            ApiV1ScmRepositoriesListStateErrorComponent,
+            ApiV1ScmRepositoriesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_state_not_error_component import (
-            ApiV1ScmRepositoriesListStateNotErrorComponent,
+            ApiV1ScmRepositoriesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_time_range_error_component import (
-            ApiV1ScmRepositoriesListTimeRangeErrorComponent,
+            ApiV1ScmRepositoriesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_list_workspaces_error_component import (
-            ApiV1ScmRepositoriesListWorkspacesErrorComponent,
+            ApiV1ScmRepositoriesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -218,127 +218,127 @@ class ApiV1RegionsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_regions_partial_update_actual_availability_error_component import (
-            ApiV1RegionsPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1RegionsPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_annotations_error_component import (
-            ApiV1RegionsPartialUpdateAnnotationsErrorComponent,
+            ApiV1RegionsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_archived_at_error_component import (
-            ApiV1RegionsPartialUpdateArchivedAtErrorComponent,
+            ApiV1RegionsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_archived_error_component import (
-            ApiV1RegionsPartialUpdateArchivedErrorComponent,
+            ApiV1RegionsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_archived_reason_error_component import (
-            ApiV1RegionsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1RegionsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_conditions_error_component import (
-            ApiV1RegionsPartialUpdateConditionsErrorComponent,
+            ApiV1RegionsPartialUpdateConditionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_criticality_error_component import (
-            ApiV1RegionsPartialUpdateCriticalityErrorComponent,
+            ApiV1RegionsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_debug_mode_error_component import (
-            ApiV1RegionsPartialUpdateDebugModeErrorComponent,
+            ApiV1RegionsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_discovery_enabled_error_component import (
-            ApiV1RegionsPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1RegionsPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_discovery_running_error_component import (
-            ApiV1RegionsPartialUpdateDiscoveryRunningErrorComponent,
+            ApiV1RegionsPartialUpdateDiscoveryRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_discovery_task_id_error_component import (
-            ApiV1RegionsPartialUpdateDiscoveryTaskIdErrorComponent,
+            ApiV1RegionsPartialUpdateDiscoveryTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_discovery_task_meta_error_component import (
-            ApiV1RegionsPartialUpdateDiscoveryTaskMetaErrorComponent,
+            ApiV1RegionsPartialUpdateDiscoveryTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_display_name_error_component import (
-            ApiV1RegionsPartialUpdateDisplayNameErrorComponent,
+            ApiV1RegionsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_kind_error_component import (
-            ApiV1RegionsPartialUpdateKindErrorComponent,
+            ApiV1RegionsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_labels_error_component import (
-            ApiV1RegionsPartialUpdateLabelsErrorComponent,
+            ApiV1RegionsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_last_state_change_error_component import (
-            ApiV1RegionsPartialUpdateLastStateChangeErrorComponent,
+            ApiV1RegionsPartialUpdateLastStateChangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_last_state_error_component import (
-            ApiV1RegionsPartialUpdateLastStateErrorComponent,
+            ApiV1RegionsPartialUpdateLastStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_name_error_component import (
-            ApiV1RegionsPartialUpdateNameErrorComponent,
+            ApiV1RegionsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_non_field_errors_error_component import (
-            ApiV1RegionsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1RegionsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_platform_features_error_component import (
-            ApiV1RegionsPartialUpdatePlatformFeaturesErrorComponent,
+            ApiV1RegionsPartialUpdatePlatformFeaturesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_platform_features_index_error_component import (
-            ApiV1RegionsPartialUpdatePlatformFeaturesINDEXErrorComponent,
+            ApiV1RegionsPartialUpdatePlatformFeaturesINDEXErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_platform_service_error_component import (
-            ApiV1RegionsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1RegionsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_provider_error_component import (
-            ApiV1RegionsPartialUpdateProviderErrorComponent,
+            ApiV1RegionsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_provider_id_error_component import (
-            ApiV1RegionsPartialUpdateProviderIdErrorComponent,
+            ApiV1RegionsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_provider_reference_error_component import (
-            ApiV1RegionsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1RegionsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_reconciliation_enabled_error_component import (
-            ApiV1RegionsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1RegionsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_reconciliation_running_error_component import (
-            ApiV1RegionsPartialUpdateReconciliationRunningErrorComponent,
+            ApiV1RegionsPartialUpdateReconciliationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_reconciliation_task_id_error_component import (
-            ApiV1RegionsPartialUpdateReconciliationTaskIdErrorComponent,
+            ApiV1RegionsPartialUpdateReconciliationTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_reconciliation_task_meta_error_component import (
-            ApiV1RegionsPartialUpdateReconciliationTaskMetaErrorComponent,
+            ApiV1RegionsPartialUpdateReconciliationTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_repair_running_error_component import (
-            ApiV1RegionsPartialUpdateRepairRunningErrorComponent,
+            ApiV1RegionsPartialUpdateRepairRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_repair_task_id_error_component import (
-            ApiV1RegionsPartialUpdateRepairTaskIdErrorComponent,
+            ApiV1RegionsPartialUpdateRepairTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_repair_task_meta_error_component import (
-            ApiV1RegionsPartialUpdateRepairTaskMetaErrorComponent,
+            ApiV1RegionsPartialUpdateRepairTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_scope_error_component import (
-            ApiV1RegionsPartialUpdateScopeErrorComponent,
+            ApiV1RegionsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_sla_availability_error_component import (
-            ApiV1RegionsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1RegionsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_sla_target_error_component import (
-            ApiV1RegionsPartialUpdateSlaTargetErrorComponent,
+            ApiV1RegionsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_slo_availability_error_component import (
-            ApiV1RegionsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1RegionsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_slo_target_error_component import (
-            ApiV1RegionsPartialUpdateSloTargetErrorComponent,
+            ApiV1RegionsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_state_error_component import (
-            ApiV1RegionsPartialUpdateStateErrorComponent,
+            ApiV1RegionsPartialUpdateStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_state_reason_error_component import (
-            ApiV1RegionsPartialUpdateStateReasonErrorComponent,
+            ApiV1RegionsPartialUpdateStateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_target_availability_error_component import (
-            ApiV1RegionsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1RegionsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_tolerations_error_component import (
-            ApiV1RegionsPartialUpdateTolerationsErrorComponent,
+            ApiV1RegionsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -447,130 +447,130 @@ class ApiV1RegionsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_regions_partial_update_actual_availability_error_component import (
-            ApiV1RegionsPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1RegionsPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_annotations_error_component import (
-            ApiV1RegionsPartialUpdateAnnotationsErrorComponent,
+            ApiV1RegionsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_archived_at_error_component import (
-            ApiV1RegionsPartialUpdateArchivedAtErrorComponent,
+            ApiV1RegionsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_archived_error_component import (
-            ApiV1RegionsPartialUpdateArchivedErrorComponent,
+            ApiV1RegionsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_archived_reason_error_component import (
-            ApiV1RegionsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1RegionsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_conditions_error_component import (
-            ApiV1RegionsPartialUpdateConditionsErrorComponent,
+            ApiV1RegionsPartialUpdateConditionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_config_error_component import (
-            ApiV1RegionsPartialUpdateConfigErrorComponent,
+            ApiV1RegionsPartialUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_criticality_error_component import (
-            ApiV1RegionsPartialUpdateCriticalityErrorComponent,
+            ApiV1RegionsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_debug_mode_error_component import (
-            ApiV1RegionsPartialUpdateDebugModeErrorComponent,
+            ApiV1RegionsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_discovery_enabled_error_component import (
-            ApiV1RegionsPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1RegionsPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_discovery_running_error_component import (
-            ApiV1RegionsPartialUpdateDiscoveryRunningErrorComponent,
+            ApiV1RegionsPartialUpdateDiscoveryRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_discovery_task_id_error_component import (
-            ApiV1RegionsPartialUpdateDiscoveryTaskIdErrorComponent,
+            ApiV1RegionsPartialUpdateDiscoveryTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_discovery_task_meta_error_component import (
-            ApiV1RegionsPartialUpdateDiscoveryTaskMetaErrorComponent,
+            ApiV1RegionsPartialUpdateDiscoveryTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_display_name_error_component import (
-            ApiV1RegionsPartialUpdateDisplayNameErrorComponent,
+            ApiV1RegionsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_kind_error_component import (
-            ApiV1RegionsPartialUpdateKindErrorComponent,
+            ApiV1RegionsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_labels_error_component import (
-            ApiV1RegionsPartialUpdateLabelsErrorComponent,
+            ApiV1RegionsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_last_state_change_error_component import (
-            ApiV1RegionsPartialUpdateLastStateChangeErrorComponent,
+            ApiV1RegionsPartialUpdateLastStateChangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_last_state_error_component import (
-            ApiV1RegionsPartialUpdateLastStateErrorComponent,
+            ApiV1RegionsPartialUpdateLastStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_name_error_component import (
-            ApiV1RegionsPartialUpdateNameErrorComponent,
+            ApiV1RegionsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_non_field_errors_error_component import (
-            ApiV1RegionsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1RegionsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_platform_features_error_component import (
-            ApiV1RegionsPartialUpdatePlatformFeaturesErrorComponent,
+            ApiV1RegionsPartialUpdatePlatformFeaturesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_platform_features_index_error_component import (
-            ApiV1RegionsPartialUpdatePlatformFeaturesINDEXErrorComponent,
+            ApiV1RegionsPartialUpdatePlatformFeaturesINDEXErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_platform_service_error_component import (
-            ApiV1RegionsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1RegionsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_provider_error_component import (
-            ApiV1RegionsPartialUpdateProviderErrorComponent,
+            ApiV1RegionsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_provider_id_error_component import (
-            ApiV1RegionsPartialUpdateProviderIdErrorComponent,
+            ApiV1RegionsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_provider_reference_error_component import (
-            ApiV1RegionsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1RegionsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_reconciliation_enabled_error_component import (
-            ApiV1RegionsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1RegionsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_reconciliation_running_error_component import (
-            ApiV1RegionsPartialUpdateReconciliationRunningErrorComponent,
+            ApiV1RegionsPartialUpdateReconciliationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_reconciliation_task_id_error_component import (
-            ApiV1RegionsPartialUpdateReconciliationTaskIdErrorComponent,
+            ApiV1RegionsPartialUpdateReconciliationTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_reconciliation_task_meta_error_component import (
-            ApiV1RegionsPartialUpdateReconciliationTaskMetaErrorComponent,
+            ApiV1RegionsPartialUpdateReconciliationTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_repair_running_error_component import (
-            ApiV1RegionsPartialUpdateRepairRunningErrorComponent,
+            ApiV1RegionsPartialUpdateRepairRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_repair_task_id_error_component import (
-            ApiV1RegionsPartialUpdateRepairTaskIdErrorComponent,
+            ApiV1RegionsPartialUpdateRepairTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_repair_task_meta_error_component import (
-            ApiV1RegionsPartialUpdateRepairTaskMetaErrorComponent,
+            ApiV1RegionsPartialUpdateRepairTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_scope_error_component import (
-            ApiV1RegionsPartialUpdateScopeErrorComponent,
+            ApiV1RegionsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_sla_availability_error_component import (
-            ApiV1RegionsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1RegionsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_sla_target_error_component import (
-            ApiV1RegionsPartialUpdateSlaTargetErrorComponent,
+            ApiV1RegionsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_slo_availability_error_component import (
-            ApiV1RegionsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1RegionsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_slo_target_error_component import (
-            ApiV1RegionsPartialUpdateSloTargetErrorComponent,
+            ApiV1RegionsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_state_error_component import (
-            ApiV1RegionsPartialUpdateStateErrorComponent,
+            ApiV1RegionsPartialUpdateStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_state_reason_error_component import (
-            ApiV1RegionsPartialUpdateStateReasonErrorComponent,
+            ApiV1RegionsPartialUpdateStateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_target_availability_error_component import (
-            ApiV1RegionsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1RegionsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_regions_partial_update_tolerations_error_component import (
-            ApiV1RegionsPartialUpdateTolerationsErrorComponent,
+            ApiV1RegionsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

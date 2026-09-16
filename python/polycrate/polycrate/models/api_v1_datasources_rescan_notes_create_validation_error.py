@@ -201,106 +201,106 @@ class ApiV1DatasourcesRescanNotesCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_datasources_rescan_notes_create_annotations_error_component import (
-            ApiV1DatasourcesRescanNotesCreateAnnotationsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_archived_at_error_component import (
-            ApiV1DatasourcesRescanNotesCreateArchivedAtErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_archived_error_component import (
-            ApiV1DatasourcesRescanNotesCreateArchivedErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_archived_reason_error_component import (
-            ApiV1DatasourcesRescanNotesCreateArchivedReasonErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_create_incidents_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCreateIncidentsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCreateIncidentsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_create_incidents_without_resources_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCreateIncidentsWithoutResourcesErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCreateIncidentsWithoutResourcesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_create_maintenance_as_draft_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCreateMaintenanceAsDraftErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCreateMaintenanceAsDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_create_notes_resolved_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCreateNotesResolvedErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCreateNotesResolvedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_criticality_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCriticalityErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_datasource_url_error_component import (
-            ApiV1DatasourcesRescanNotesCreateDatasourceUrlErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateDatasourceUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_debug_mode_error_component import (
-            ApiV1DatasourcesRescanNotesCreateDebugModeErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_display_name_error_component import (
-            ApiV1DatasourcesRescanNotesCreateDisplayNameErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_is_enabled_error_component import (
-            ApiV1DatasourcesRescanNotesCreateIsEnabledErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_kind_error_component import (
-            ApiV1DatasourcesRescanNotesCreateKindErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_labels_error_component import (
-            ApiV1DatasourcesRescanNotesCreateLabelsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_last_sync_error_component import (
-            ApiV1DatasourcesRescanNotesCreateLastSyncErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateLastSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_last_sync_error_error_component import (
-            ApiV1DatasourcesRescanNotesCreateLastSyncErrorErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateLastSyncErrorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_name_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNameErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_non_field_errors_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNonFieldErrorsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_note_kind_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNoteKindErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNoteKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_note_organization_id_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNoteOrganizationIdErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNoteOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_note_workspace_id_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNoteWorkspaceIdErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNoteWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_platform_service_error_component import (
-            ApiV1DatasourcesRescanNotesCreatePlatformServiceErrorComponent,
+            ApiV1DatasourcesRescanNotesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_provider_error_component import (
-            ApiV1DatasourcesRescanNotesCreateProviderErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_provider_id_error_component import (
-            ApiV1DatasourcesRescanNotesCreateProviderIdErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_provider_reference_error_component import (
-            ApiV1DatasourcesRescanNotesCreateProviderReferenceErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_reconciliation_enabled_error_component import (
-            ApiV1DatasourcesRescanNotesCreateReconciliationEnabledErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_sla_availability_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSlaAvailabilityErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_sla_target_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSlaTargetErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_slo_availability_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSloAvailabilityErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_slo_target_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSloTargetErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_sync_interval_minutes_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSyncIntervalMinutesErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSyncIntervalMinutesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_target_availability_error_component import (
-            ApiV1DatasourcesRescanNotesCreateTargetAvailabilityErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_tolerations_error_component import (
-            ApiV1DatasourcesRescanNotesCreateTolerationsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -397,109 +397,109 @@ class ApiV1DatasourcesRescanNotesCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_datasources_rescan_notes_create_annotations_error_component import (
-            ApiV1DatasourcesRescanNotesCreateAnnotationsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_archived_at_error_component import (
-            ApiV1DatasourcesRescanNotesCreateArchivedAtErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_archived_error_component import (
-            ApiV1DatasourcesRescanNotesCreateArchivedErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_archived_reason_error_component import (
-            ApiV1DatasourcesRescanNotesCreateArchivedReasonErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_create_incidents_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCreateIncidentsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCreateIncidentsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_create_incidents_without_resources_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCreateIncidentsWithoutResourcesErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCreateIncidentsWithoutResourcesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_create_maintenance_as_draft_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCreateMaintenanceAsDraftErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCreateMaintenanceAsDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_create_notes_resolved_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCreateNotesResolvedErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCreateNotesResolvedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_criticality_error_component import (
-            ApiV1DatasourcesRescanNotesCreateCriticalityErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_datasource_url_error_component import (
-            ApiV1DatasourcesRescanNotesCreateDatasourceUrlErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateDatasourceUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_debug_mode_error_component import (
-            ApiV1DatasourcesRescanNotesCreateDebugModeErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_display_name_error_component import (
-            ApiV1DatasourcesRescanNotesCreateDisplayNameErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_is_enabled_error_component import (
-            ApiV1DatasourcesRescanNotesCreateIsEnabledErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_kind_error_component import (
-            ApiV1DatasourcesRescanNotesCreateKindErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_labels_error_component import (
-            ApiV1DatasourcesRescanNotesCreateLabelsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_last_sync_error_component import (
-            ApiV1DatasourcesRescanNotesCreateLastSyncErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateLastSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_last_sync_error_error_component import (
-            ApiV1DatasourcesRescanNotesCreateLastSyncErrorErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateLastSyncErrorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_name_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNameErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_non_field_errors_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNonFieldErrorsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_note_kind_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNoteKindErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNoteKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_note_organization_id_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNoteOrganizationIdErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNoteOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_note_workspace_id_error_component import (
-            ApiV1DatasourcesRescanNotesCreateNoteWorkspaceIdErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateNoteWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_platform_service_error_component import (
-            ApiV1DatasourcesRescanNotesCreatePlatformServiceErrorComponent,
+            ApiV1DatasourcesRescanNotesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_provider_entity_id_error_component import (
-            ApiV1DatasourcesRescanNotesCreateProviderEntityIdErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateProviderEntityIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_provider_error_component import (
-            ApiV1DatasourcesRescanNotesCreateProviderErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_provider_id_error_component import (
-            ApiV1DatasourcesRescanNotesCreateProviderIdErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_provider_reference_error_component import (
-            ApiV1DatasourcesRescanNotesCreateProviderReferenceErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_reconciliation_enabled_error_component import (
-            ApiV1DatasourcesRescanNotesCreateReconciliationEnabledErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_sla_availability_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSlaAvailabilityErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_sla_target_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSlaTargetErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_slo_availability_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSloAvailabilityErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_slo_target_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSloTargetErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_sync_interval_minutes_error_component import (
-            ApiV1DatasourcesRescanNotesCreateSyncIntervalMinutesErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateSyncIntervalMinutesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_target_availability_error_component import (
-            ApiV1DatasourcesRescanNotesCreateTargetAvailabilityErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_rescan_notes_create_tolerations_error_component import (
-            ApiV1DatasourcesRescanNotesCreateTolerationsErrorComponent,
+            ApiV1DatasourcesRescanNotesCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -127,74 +127,88 @@ class ApiV1PrefixesUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_prefixes_update_annotations_error_component import (
-            ApiV1PrefixesUpdateAnnotationsErrorComponent,
+            ApiV1PrefixesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_archived_at_error_component import (
-            ApiV1PrefixesUpdateArchivedAtErrorComponent,
+            ApiV1PrefixesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_archived_error_component import ApiV1PrefixesUpdateArchivedErrorComponent
+        from ..models.api_v1_prefixes_update_archived_error_component import (
+            ApiV1PrefixesUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_archived_reason_error_component import (
-            ApiV1PrefixesUpdateArchivedReasonErrorComponent,
+            ApiV1PrefixesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_credential_id_error_component import (
-            ApiV1PrefixesUpdateCredentialIdErrorComponent,
+            ApiV1PrefixesUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_criticality_error_component import (
-            ApiV1PrefixesUpdateCriticalityErrorComponent,
+            ApiV1PrefixesUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_debug_mode_error_component import (
-            ApiV1PrefixesUpdateDebugModeErrorComponent,
+            ApiV1PrefixesUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_display_name_error_component import (
-            ApiV1PrefixesUpdateDisplayNameErrorComponent,
+            ApiV1PrefixesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_kind_error_component import ApiV1PrefixesUpdateKindErrorComponent
-        from ..models.api_v1_prefixes_update_labels_error_component import ApiV1PrefixesUpdateLabelsErrorComponent
-        from ..models.api_v1_prefixes_update_name_error_component import ApiV1PrefixesUpdateNameErrorComponent
+        from ..models.api_v1_prefixes_update_kind_error_component import (
+            ApiV1PrefixesUpdateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_prefixes_update_labels_error_component import (
+            ApiV1PrefixesUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_prefixes_update_name_error_component import (
+            ApiV1PrefixesUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_non_field_errors_error_component import (
-            ApiV1PrefixesUpdateNonFieldErrorsErrorComponent,
+            ApiV1PrefixesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_organization_id_error_component import (
-            ApiV1PrefixesUpdateOrganizationIdErrorComponent,
+            ApiV1PrefixesUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_platform_service_error_component import (
-            ApiV1PrefixesUpdatePlatformServiceErrorComponent,
+            ApiV1PrefixesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_provider_entity_id_error_component import (
-            ApiV1PrefixesUpdateProviderEntityIdErrorComponent,
+            ApiV1PrefixesUpdateProviderEntityIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_provider_error_component import ApiV1PrefixesUpdateProviderErrorComponent
+        from ..models.api_v1_prefixes_update_provider_error_component import (
+            ApiV1PrefixesUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_provider_id_error_component import (
-            ApiV1PrefixesUpdateProviderIdErrorComponent,
+            ApiV1PrefixesUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_provider_reference_error_component import (
-            ApiV1PrefixesUpdateProviderReferenceErrorComponent,
+            ApiV1PrefixesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_purpose_error_component import ApiV1PrefixesUpdatePurposeErrorComponent
+        from ..models.api_v1_prefixes_update_purpose_error_component import (
+            ApiV1PrefixesUpdatePurposeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_reconciliation_enabled_error_component import (
-            ApiV1PrefixesUpdateReconciliationEnabledErrorComponent,
+            ApiV1PrefixesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_region_id_error_component import ApiV1PrefixesUpdateRegionIdErrorComponent
+        from ..models.api_v1_prefixes_update_region_id_error_component import (
+            ApiV1PrefixesUpdateRegionIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_sla_availability_error_component import (
-            ApiV1PrefixesUpdateSlaAvailabilityErrorComponent,
+            ApiV1PrefixesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_sla_target_error_component import (
-            ApiV1PrefixesUpdateSlaTargetErrorComponent,
+            ApiV1PrefixesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_slo_availability_error_component import (
-            ApiV1PrefixesUpdateSloAvailabilityErrorComponent,
+            ApiV1PrefixesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_slo_target_error_component import (
-            ApiV1PrefixesUpdateSloTargetErrorComponent,
+            ApiV1PrefixesUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_target_availability_error_component import (
-            ApiV1PrefixesUpdateTargetAvailabilityErrorComponent,
+            ApiV1PrefixesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_tolerations_error_component import (
-            ApiV1PrefixesUpdateTolerationsErrorComponent,
+            ApiV1PrefixesUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_workspace_id_error_component import (
-            ApiV1PrefixesUpdateWorkspaceIdErrorComponent,
+            ApiV1PrefixesUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -277,77 +291,91 @@ class ApiV1PrefixesUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_prefixes_update_annotations_error_component import (
-            ApiV1PrefixesUpdateAnnotationsErrorComponent,
+            ApiV1PrefixesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_archived_at_error_component import (
-            ApiV1PrefixesUpdateArchivedAtErrorComponent,
+            ApiV1PrefixesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_archived_error_component import ApiV1PrefixesUpdateArchivedErrorComponent
+        from ..models.api_v1_prefixes_update_archived_error_component import (
+            ApiV1PrefixesUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_archived_reason_error_component import (
-            ApiV1PrefixesUpdateArchivedReasonErrorComponent,
+            ApiV1PrefixesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_credential_id_error_component import (
-            ApiV1PrefixesUpdateCredentialIdErrorComponent,
+            ApiV1PrefixesUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_criticality_error_component import (
-            ApiV1PrefixesUpdateCriticalityErrorComponent,
+            ApiV1PrefixesUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_debug_mode_error_component import (
-            ApiV1PrefixesUpdateDebugModeErrorComponent,
+            ApiV1PrefixesUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_description_error_component import (
-            ApiV1PrefixesUpdateDescriptionErrorComponent,
+            ApiV1PrefixesUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_display_name_error_component import (
-            ApiV1PrefixesUpdateDisplayNameErrorComponent,
+            ApiV1PrefixesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_kind_error_component import ApiV1PrefixesUpdateKindErrorComponent
-        from ..models.api_v1_prefixes_update_labels_error_component import ApiV1PrefixesUpdateLabelsErrorComponent
-        from ..models.api_v1_prefixes_update_name_error_component import ApiV1PrefixesUpdateNameErrorComponent
+        from ..models.api_v1_prefixes_update_kind_error_component import (
+            ApiV1PrefixesUpdateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_prefixes_update_labels_error_component import (
+            ApiV1PrefixesUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_prefixes_update_name_error_component import (
+            ApiV1PrefixesUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_non_field_errors_error_component import (
-            ApiV1PrefixesUpdateNonFieldErrorsErrorComponent,
+            ApiV1PrefixesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_organization_id_error_component import (
-            ApiV1PrefixesUpdateOrganizationIdErrorComponent,
+            ApiV1PrefixesUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_platform_service_error_component import (
-            ApiV1PrefixesUpdatePlatformServiceErrorComponent,
+            ApiV1PrefixesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_provider_entity_id_error_component import (
-            ApiV1PrefixesUpdateProviderEntityIdErrorComponent,
+            ApiV1PrefixesUpdateProviderEntityIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_provider_error_component import ApiV1PrefixesUpdateProviderErrorComponent
+        from ..models.api_v1_prefixes_update_provider_error_component import (
+            ApiV1PrefixesUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_provider_id_error_component import (
-            ApiV1PrefixesUpdateProviderIdErrorComponent,
+            ApiV1PrefixesUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_provider_reference_error_component import (
-            ApiV1PrefixesUpdateProviderReferenceErrorComponent,
+            ApiV1PrefixesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_purpose_error_component import ApiV1PrefixesUpdatePurposeErrorComponent
+        from ..models.api_v1_prefixes_update_purpose_error_component import (
+            ApiV1PrefixesUpdatePurposeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_reconciliation_enabled_error_component import (
-            ApiV1PrefixesUpdateReconciliationEnabledErrorComponent,
+            ApiV1PrefixesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_prefixes_update_region_id_error_component import ApiV1PrefixesUpdateRegionIdErrorComponent
+        from ..models.api_v1_prefixes_update_region_id_error_component import (
+            ApiV1PrefixesUpdateRegionIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_prefixes_update_sla_availability_error_component import (
-            ApiV1PrefixesUpdateSlaAvailabilityErrorComponent,
+            ApiV1PrefixesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_sla_target_error_component import (
-            ApiV1PrefixesUpdateSlaTargetErrorComponent,
+            ApiV1PrefixesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_slo_availability_error_component import (
-            ApiV1PrefixesUpdateSloAvailabilityErrorComponent,
+            ApiV1PrefixesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_slo_target_error_component import (
-            ApiV1PrefixesUpdateSloTargetErrorComponent,
+            ApiV1PrefixesUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_target_availability_error_component import (
-            ApiV1PrefixesUpdateTargetAvailabilityErrorComponent,
+            ApiV1PrefixesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_tolerations_error_component import (
-            ApiV1PrefixesUpdateTolerationsErrorComponent,
+            ApiV1PrefixesUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_update_workspace_id_error_component import (
-            ApiV1PrefixesUpdateWorkspaceIdErrorComponent,
+            ApiV1PrefixesUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

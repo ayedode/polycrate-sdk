@@ -67,25 +67,37 @@ class ApiV1WorkspacesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_workspaces_list_created_by_users_error_component import (
-            ApiV1WorkspacesListCreatedByUsersErrorComponent,
+            ApiV1WorkspacesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_list_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesListEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesListEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_list_kind_error_component import ApiV1WorkspacesListKindErrorComponent
-        from ..models.api_v1_workspaces_list_name_error_component import ApiV1WorkspacesListNameErrorComponent
+        from ..models.api_v1_workspaces_list_kind_error_component import (
+            ApiV1WorkspacesListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_list_name_error_component import (
+            ApiV1WorkspacesListNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_list_organization_name_error_component import (
-            ApiV1WorkspacesListOrganizationNameErrorComponent,
+            ApiV1WorkspacesListOrganizationNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_list_organizations_error_component import (
-            ApiV1WorkspacesListOrganizationsErrorComponent,
+            ApiV1WorkspacesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_list_pop_error_component import ApiV1WorkspacesListPopErrorComponent
-        from ..models.api_v1_workspaces_list_search_error_component import ApiV1WorkspacesListSearchErrorComponent
-        from ..models.api_v1_workspaces_list_state_error_component import ApiV1WorkspacesListStateErrorComponent
-        from ..models.api_v1_workspaces_list_state_not_error_component import ApiV1WorkspacesListStateNotErrorComponent
+        from ..models.api_v1_workspaces_list_pop_error_component import (
+            ApiV1WorkspacesListPopErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_list_search_error_component import (
+            ApiV1WorkspacesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_list_state_error_component import (
+            ApiV1WorkspacesListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_list_state_not_error_component import (
+            ApiV1WorkspacesListStateNotErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_list_time_range_error_component import (
-            ApiV1WorkspacesListTimeRangeErrorComponent,
+            ApiV1WorkspacesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -134,28 +146,40 @@ class ApiV1WorkspacesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_workspaces_list_created_by_users_error_component import (
-            ApiV1WorkspacesListCreatedByUsersErrorComponent,
+            ApiV1WorkspacesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_list_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesListEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesListEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_list_kind_error_component import ApiV1WorkspacesListKindErrorComponent
-        from ..models.api_v1_workspaces_list_name_error_component import ApiV1WorkspacesListNameErrorComponent
+        from ..models.api_v1_workspaces_list_kind_error_component import (
+            ApiV1WorkspacesListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_list_name_error_component import (
+            ApiV1WorkspacesListNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_list_name_exact_error_component import (
-            ApiV1WorkspacesListNameExactErrorComponent,
+            ApiV1WorkspacesListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_list_organization_name_error_component import (
-            ApiV1WorkspacesListOrganizationNameErrorComponent,
+            ApiV1WorkspacesListOrganizationNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_list_organizations_error_component import (
-            ApiV1WorkspacesListOrganizationsErrorComponent,
+            ApiV1WorkspacesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_list_pop_error_component import ApiV1WorkspacesListPopErrorComponent
-        from ..models.api_v1_workspaces_list_search_error_component import ApiV1WorkspacesListSearchErrorComponent
-        from ..models.api_v1_workspaces_list_state_error_component import ApiV1WorkspacesListStateErrorComponent
-        from ..models.api_v1_workspaces_list_state_not_error_component import ApiV1WorkspacesListStateNotErrorComponent
+        from ..models.api_v1_workspaces_list_pop_error_component import (
+            ApiV1WorkspacesListPopErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_list_search_error_component import (
+            ApiV1WorkspacesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_list_state_error_component import (
+            ApiV1WorkspacesListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_list_state_not_error_component import (
+            ApiV1WorkspacesListStateNotErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_list_time_range_error_component import (
-            ApiV1WorkspacesListTimeRangeErrorComponent,
+            ApiV1WorkspacesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

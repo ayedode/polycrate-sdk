@@ -50,16 +50,26 @@ class ApiV1ContactsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_contacts_list_created_by_users_error_component import (
-            ApiV1ContactsListCreatedByUsersErrorComponent,
+            ApiV1ContactsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_list_kind_error_component import ApiV1ContactsListKindErrorComponent
+        from ..models.api_v1_contacts_list_kind_error_component import (
+            ApiV1ContactsListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_list_organizations_error_component import (
-            ApiV1ContactsListOrganizationsErrorComponent,
+            ApiV1ContactsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_list_search_error_component import ApiV1ContactsListSearchErrorComponent
-        from ..models.api_v1_contacts_list_state_error_component import ApiV1ContactsListStateErrorComponent
-        from ..models.api_v1_contacts_list_state_not_error_component import ApiV1ContactsListStateNotErrorComponent
-        from ..models.api_v1_contacts_list_time_range_error_component import ApiV1ContactsListTimeRangeErrorComponent
+        from ..models.api_v1_contacts_list_search_error_component import (
+            ApiV1ContactsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_list_state_error_component import (
+            ApiV1ContactsListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_list_state_not_error_component import (
+            ApiV1ContactsListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_list_time_range_error_component import (
+            ApiV1ContactsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -99,17 +109,29 @@ class ApiV1ContactsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_contacts_list_created_by_users_error_component import (
-            ApiV1ContactsListCreatedByUsersErrorComponent,
+            ApiV1ContactsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_list_kind_error_component import ApiV1ContactsListKindErrorComponent
-        from ..models.api_v1_contacts_list_name_exact_error_component import ApiV1ContactsListNameExactErrorComponent
+        from ..models.api_v1_contacts_list_kind_error_component import (
+            ApiV1ContactsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_list_name_exact_error_component import (
+            ApiV1ContactsListNameExactErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_list_organizations_error_component import (
-            ApiV1ContactsListOrganizationsErrorComponent,
+            ApiV1ContactsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_list_search_error_component import ApiV1ContactsListSearchErrorComponent
-        from ..models.api_v1_contacts_list_state_error_component import ApiV1ContactsListStateErrorComponent
-        from ..models.api_v1_contacts_list_state_not_error_component import ApiV1ContactsListStateNotErrorComponent
-        from ..models.api_v1_contacts_list_time_range_error_component import ApiV1ContactsListTimeRangeErrorComponent
+        from ..models.api_v1_contacts_list_search_error_component import (
+            ApiV1ContactsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_list_state_error_component import (
+            ApiV1ContactsListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_list_state_not_error_component import (
+            ApiV1ContactsListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_list_time_range_error_component import (
+            ApiV1ContactsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

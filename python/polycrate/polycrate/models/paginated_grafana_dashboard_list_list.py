@@ -68,7 +68,7 @@ class PaginatedGrafanaDashboardListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.grafana_dashboard_list import GrafanaDashboardList
+        from ..models.grafana_dashboard_list import GrafanaDashboardList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

@@ -53,6 +53,7 @@ if TYPE_CHECKING:
     from ..models.api_v1_hosts_list_state_not_error_component import ApiV1HostsListStateNotErrorComponent
     from ..models.api_v1_hosts_list_time_range_error_component import ApiV1HostsListTimeRangeErrorComponent
     from ..models.api_v1_hosts_list_updated_at_error_component import ApiV1HostsListUpdatedAtErrorComponent
+    from ..models.api_v1_hosts_list_worker_pool_error_component import ApiV1HostsListWorkerPoolErrorComponent
     from ..models.api_v1_hosts_list_workspaces_error_component import ApiV1HostsListWorkspacesErrorComponent
 
 
@@ -77,7 +78,8 @@ class ApiV1HostsListValidationError:
             ApiV1HostsListResourceDiskErrorComponent | ApiV1HostsListResourceMemoryErrorComponent |
             ApiV1HostsListRoleErrorComponent | ApiV1HostsListScopeErrorComponent | ApiV1HostsListSearchErrorComponent |
             ApiV1HostsListStateErrorComponent | ApiV1HostsListStateNotErrorComponent | ApiV1HostsListTimeRangeErrorComponent
-            | ApiV1HostsListUpdatedAtErrorComponent | ApiV1HostsListWorkspacesErrorComponent]):
+            | ApiV1HostsListUpdatedAtErrorComponent | ApiV1HostsListWorkerPoolErrorComponent |
+            ApiV1HostsListWorkspacesErrorComponent]):
     """
 
     type_: ValidationErrorEnum
@@ -112,65 +114,95 @@ class ApiV1HostsListValidationError:
         | ApiV1HostsListStateNotErrorComponent
         | ApiV1HostsListTimeRangeErrorComponent
         | ApiV1HostsListUpdatedAtErrorComponent
+        | ApiV1HostsListWorkerPoolErrorComponent
         | ApiV1HostsListWorkspacesErrorComponent
     ]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_hosts_list_bootstrap_status_error_component import (
-            ApiV1HostsListBootstrapStatusErrorComponent,
+            ApiV1HostsListBootstrapStatusErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_created_at_error_component import ApiV1HostsListCreatedAtErrorComponent
+        from ..models.api_v1_hosts_list_created_at_error_component import (
+            ApiV1HostsListCreatedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_created_by_component_error_component import (
-            ApiV1HostsListCreatedByComponentErrorComponent,
+            ApiV1HostsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_created_by_users_error_component import (
-            ApiV1HostsListCreatedByUsersErrorComponent,
+            ApiV1HostsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_hostname_error_component import ApiV1HostsListHostnameErrorComponent
-        from ..models.api_v1_hosts_list_incidents_error_component import ApiV1HostsListIncidentsErrorComponent
-        from ..models.api_v1_hosts_list_kind_error_component import ApiV1HostsListKindErrorComponent
-        from ..models.api_v1_hosts_list_maintenances_error_component import ApiV1HostsListMaintenancesErrorComponent
-        from ..models.api_v1_hosts_list_name_error_component import ApiV1HostsListNameErrorComponent
-        from ..models.api_v1_hosts_list_organizations_error_component import ApiV1HostsListOrganizationsErrorComponent
+        from ..models.api_v1_hosts_list_hostname_error_component import (
+            ApiV1HostsListHostnameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_incidents_error_component import (
+            ApiV1HostsListIncidentsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_kind_error_component import ApiV1HostsListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_maintenances_error_component import (
+            ApiV1HostsListMaintenancesErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_name_error_component import ApiV1HostsListNameErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_organizations_error_component import (
+            ApiV1HostsListOrganizationsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_provider_account_error_component import (
-            ApiV1HostsListProviderAccountErrorComponent,
+            ApiV1HostsListProviderAccountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_provider_datacenter_error_component import (
-            ApiV1HostsListProviderDatacenterErrorComponent,
+            ApiV1HostsListProviderDatacenterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_provider_error_component import ApiV1HostsListProviderErrorComponent
+        from ..models.api_v1_hosts_list_provider_error_component import (
+            ApiV1HostsListProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_provider_image_os_architecture_error_component import (
-            ApiV1HostsListProviderImageOsArchitectureErrorComponent,
+            ApiV1HostsListProviderImageOsArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_provider_image_os_flavor_error_component import (
-            ApiV1HostsListProviderImageOsFlavorErrorComponent,
+            ApiV1HostsListProviderImageOsFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_provider_image_os_version_error_component import (
-            ApiV1HostsListProviderImageOsVersionErrorComponent,
+            ApiV1HostsListProviderImageOsVersionErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_provider_type_error_component import ApiV1HostsListProviderTypeErrorComponent
+        from ..models.api_v1_hosts_list_provider_type_error_component import (
+            ApiV1HostsListProviderTypeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_resource_cpu_architecture_error_component import (
-            ApiV1HostsListResourceCpuArchitectureErrorComponent,
+            ApiV1HostsListResourceCpuArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_resource_cpu_cores_error_component import (
-            ApiV1HostsListResourceCpuCoresErrorComponent,
+            ApiV1HostsListResourceCpuCoresErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_resource_cpu_type_error_component import (
-            ApiV1HostsListResourceCpuTypeErrorComponent,
+            ApiV1HostsListResourceCpuTypeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_resource_disk_error_component import ApiV1HostsListResourceDiskErrorComponent
+        from ..models.api_v1_hosts_list_resource_disk_error_component import (
+            ApiV1HostsListResourceDiskErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_resource_memory_error_component import (
-            ApiV1HostsListResourceMemoryErrorComponent,
+            ApiV1HostsListResourceMemoryErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_role_error_component import ApiV1HostsListRoleErrorComponent
-        from ..models.api_v1_hosts_list_scope_error_component import ApiV1HostsListScopeErrorComponent
-        from ..models.api_v1_hosts_list_search_error_component import ApiV1HostsListSearchErrorComponent
-        from ..models.api_v1_hosts_list_state_error_component import ApiV1HostsListStateErrorComponent
-        from ..models.api_v1_hosts_list_state_not_error_component import ApiV1HostsListStateNotErrorComponent
-        from ..models.api_v1_hosts_list_time_range_error_component import ApiV1HostsListTimeRangeErrorComponent
-        from ..models.api_v1_hosts_list_updated_at_error_component import ApiV1HostsListUpdatedAtErrorComponent
-        from ..models.api_v1_hosts_list_workspaces_error_component import ApiV1HostsListWorkspacesErrorComponent
+        from ..models.api_v1_hosts_list_role_error_component import ApiV1HostsListRoleErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_scope_error_component import ApiV1HostsListScopeErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_search_error_component import (
+            ApiV1HostsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_state_error_component import ApiV1HostsListStateErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_state_not_error_component import (
+            ApiV1HostsListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_time_range_error_component import (
+            ApiV1HostsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_updated_at_error_component import (
+            ApiV1HostsListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_worker_pool_error_component import (
+            ApiV1HostsListWorkerPoolErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_workspaces_error_component import (
+            ApiV1HostsListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -235,6 +267,8 @@ class ApiV1HostsListValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1HostsListProviderAccountErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1HostsListWorkerPoolErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1HostsListStateNotErrorComponent):
                 errors_item = errors_item_data.to_dict()
             else:
@@ -256,60 +290,91 @@ class ApiV1HostsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_hosts_list_bootstrap_status_error_component import (
-            ApiV1HostsListBootstrapStatusErrorComponent,
+            ApiV1HostsListBootstrapStatusErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_created_at_error_component import ApiV1HostsListCreatedAtErrorComponent
+        from ..models.api_v1_hosts_list_created_at_error_component import (
+            ApiV1HostsListCreatedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_created_by_component_error_component import (
-            ApiV1HostsListCreatedByComponentErrorComponent,
+            ApiV1HostsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_created_by_users_error_component import (
-            ApiV1HostsListCreatedByUsersErrorComponent,
+            ApiV1HostsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_hostname_error_component import ApiV1HostsListHostnameErrorComponent
-        from ..models.api_v1_hosts_list_incidents_error_component import ApiV1HostsListIncidentsErrorComponent
-        from ..models.api_v1_hosts_list_kind_error_component import ApiV1HostsListKindErrorComponent
-        from ..models.api_v1_hosts_list_maintenances_error_component import ApiV1HostsListMaintenancesErrorComponent
-        from ..models.api_v1_hosts_list_name_error_component import ApiV1HostsListNameErrorComponent
-        from ..models.api_v1_hosts_list_name_exact_error_component import ApiV1HostsListNameExactErrorComponent
-        from ..models.api_v1_hosts_list_organizations_error_component import ApiV1HostsListOrganizationsErrorComponent
+        from ..models.api_v1_hosts_list_hostname_error_component import (
+            ApiV1HostsListHostnameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_incidents_error_component import (
+            ApiV1HostsListIncidentsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_kind_error_component import ApiV1HostsListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_maintenances_error_component import (
+            ApiV1HostsListMaintenancesErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_name_error_component import ApiV1HostsListNameErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_name_exact_error_component import (
+            ApiV1HostsListNameExactErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_organizations_error_component import (
+            ApiV1HostsListOrganizationsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_provider_account_error_component import (
-            ApiV1HostsListProviderAccountErrorComponent,
+            ApiV1HostsListProviderAccountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_provider_datacenter_error_component import (
-            ApiV1HostsListProviderDatacenterErrorComponent,
+            ApiV1HostsListProviderDatacenterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_provider_error_component import ApiV1HostsListProviderErrorComponent
+        from ..models.api_v1_hosts_list_provider_error_component import (
+            ApiV1HostsListProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_provider_image_os_architecture_error_component import (
-            ApiV1HostsListProviderImageOsArchitectureErrorComponent,
+            ApiV1HostsListProviderImageOsArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_provider_image_os_flavor_error_component import (
-            ApiV1HostsListProviderImageOsFlavorErrorComponent,
+            ApiV1HostsListProviderImageOsFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_provider_image_os_version_error_component import (
-            ApiV1HostsListProviderImageOsVersionErrorComponent,
+            ApiV1HostsListProviderImageOsVersionErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_provider_type_error_component import ApiV1HostsListProviderTypeErrorComponent
+        from ..models.api_v1_hosts_list_provider_type_error_component import (
+            ApiV1HostsListProviderTypeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_resource_cpu_architecture_error_component import (
-            ApiV1HostsListResourceCpuArchitectureErrorComponent,
+            ApiV1HostsListResourceCpuArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_resource_cpu_cores_error_component import (
-            ApiV1HostsListResourceCpuCoresErrorComponent,
+            ApiV1HostsListResourceCpuCoresErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_list_resource_cpu_type_error_component import (
-            ApiV1HostsListResourceCpuTypeErrorComponent,
+            ApiV1HostsListResourceCpuTypeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_resource_disk_error_component import ApiV1HostsListResourceDiskErrorComponent
+        from ..models.api_v1_hosts_list_resource_disk_error_component import (
+            ApiV1HostsListResourceDiskErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_list_resource_memory_error_component import (
-            ApiV1HostsListResourceMemoryErrorComponent,
+            ApiV1HostsListResourceMemoryErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_list_role_error_component import ApiV1HostsListRoleErrorComponent
-        from ..models.api_v1_hosts_list_scope_error_component import ApiV1HostsListScopeErrorComponent
-        from ..models.api_v1_hosts_list_search_error_component import ApiV1HostsListSearchErrorComponent
-        from ..models.api_v1_hosts_list_state_error_component import ApiV1HostsListStateErrorComponent
-        from ..models.api_v1_hosts_list_state_not_error_component import ApiV1HostsListStateNotErrorComponent
-        from ..models.api_v1_hosts_list_time_range_error_component import ApiV1HostsListTimeRangeErrorComponent
-        from ..models.api_v1_hosts_list_updated_at_error_component import ApiV1HostsListUpdatedAtErrorComponent
-        from ..models.api_v1_hosts_list_workspaces_error_component import ApiV1HostsListWorkspacesErrorComponent
+        from ..models.api_v1_hosts_list_role_error_component import ApiV1HostsListRoleErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_scope_error_component import ApiV1HostsListScopeErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_search_error_component import (
+            ApiV1HostsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_state_error_component import ApiV1HostsListStateErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_hosts_list_state_not_error_component import (
+            ApiV1HostsListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_time_range_error_component import (
+            ApiV1HostsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_updated_at_error_component import (
+            ApiV1HostsListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_worker_pool_error_component import (
+            ApiV1HostsListWorkerPoolErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_list_workspaces_error_component import (
+            ApiV1HostsListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))
@@ -351,6 +416,7 @@ class ApiV1HostsListValidationError:
                 | ApiV1HostsListStateNotErrorComponent
                 | ApiV1HostsListTimeRangeErrorComponent
                 | ApiV1HostsListUpdatedAtErrorComponent
+                | ApiV1HostsListWorkerPoolErrorComponent
                 | ApiV1HostsListWorkspacesErrorComponent
             ):
                 try:
@@ -638,20 +704,30 @@ class ApiV1HostsListValidationError:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    componentsschemas_api_v1_hosts_list_error_type_29 = ApiV1HostsListStateNotErrorComponent.from_dict(
-                        data
+                    componentsschemas_api_v1_hosts_list_error_type_29 = (
+                        ApiV1HostsListWorkerPoolErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_hosts_list_error_type_29
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_hosts_list_error_type_30 = ApiV1HostsListStateNotErrorComponent.from_dict(
+                        data
+                    )
+
+                    return componentsschemas_api_v1_hosts_list_error_type_30
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_hosts_list_error_type_30 = ApiV1HostsListNameExactErrorComponent.from_dict(
+                componentsschemas_api_v1_hosts_list_error_type_31 = ApiV1HostsListNameExactErrorComponent.from_dict(
                     data
                 )
 
-                return componentsschemas_api_v1_hosts_list_error_type_30
+                return componentsschemas_api_v1_hosts_list_error_type_31
 
             errors_item = _parse_errors_item(errors_item_data)
 

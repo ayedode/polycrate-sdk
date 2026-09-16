@@ -78,8 +78,10 @@ class NotificationSinkList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.notification_sink_list_organization_type_0 import NotificationSinkListOrganizationType0
-        from ..models.notification_sink_list_workspace_type_0 import NotificationSinkListWorkspaceType0
+        from ..models.notification_sink_list_organization_type_0 import (
+            NotificationSinkListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.notification_sink_list_workspace_type_0 import NotificationSinkListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -165,11 +167,13 @@ class NotificationSinkList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.notification_sink_list_active_condition_instances_item import (
-            NotificationSinkListActiveConditionInstancesItem,
+            NotificationSinkListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.notification_sink_list_created import NotificationSinkListCreated
-        from ..models.notification_sink_list_organization_type_0 import NotificationSinkListOrganizationType0
-        from ..models.notification_sink_list_workspace_type_0 import NotificationSinkListWorkspaceType0
+        from ..models.notification_sink_list_created import NotificationSinkListCreated  # noqa: PLC0415
+        from ..models.notification_sink_list_organization_type_0 import (
+            NotificationSinkListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.notification_sink_list_workspace_type_0 import NotificationSinkListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

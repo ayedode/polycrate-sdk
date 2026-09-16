@@ -68,7 +68,7 @@ class PaginatedDNSRecordListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.dns_record_list import DNSRecordList
+        from ..models.dns_record_list import DNSRecordList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

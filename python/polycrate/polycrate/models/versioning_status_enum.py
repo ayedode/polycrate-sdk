@@ -1,10 +1,10 @@
 from typing import Literal
 
-VersioningStatusEnum = Literal["Enabled", "enabled", "off", "Suspended", "suspended"]
+VersioningStatusEnum = Literal["enabled", "Enabled", "off", "Suspended", "suspended"]
 
 VERSIONING_STATUS_ENUM_VALUES: set[VersioningStatusEnum] = {
-    "Enabled",
     "enabled",
+    "Enabled",
     "off",
     "Suspended",
     "suspended",

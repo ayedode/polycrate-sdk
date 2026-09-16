@@ -42,6 +42,8 @@ class UserAdmin:
                 * `owner` - Owner
             keycloak_user_id (None | str): Keycloak user ID, migrated from Contact or resolved via Keycloak API
             grafana_user_id (int | None): Platform Grafana user ID (global, not org-specific). Set during org user sync.
+            forgejo_user_id (int | None): Forgejo user ID (numeric instance id). Set during org member sync. Login is
+                User.uuid.
             migrated_from_contact (None | UUID): Reference to the Contact this user was migrated from
             is_maintenance_contact (bool): Receive maintenance notifications for organizations this user belongs to
             is_billing_contact (bool): Receive billing notifications for organizations this user belongs to
@@ -66,6 +68,7 @@ class UserAdmin:
     role: None | UserRoleEnum
     keycloak_user_id: None | str
     grafana_user_id: int | None
+    forgejo_user_id: int | None
     migrated_from_contact: None | UUID
     is_maintenance_contact: bool
     is_billing_contact: bool
@@ -107,6 +110,9 @@ class UserAdmin:
 
         grafana_user_id: int | None
         grafana_user_id = self.grafana_user_id
+
+        forgejo_user_id: int | None
+        forgejo_user_id = self.forgejo_user_id
 
         migrated_from_contact: None | str
         if isinstance(self.migrated_from_contact, UUID):
@@ -150,6 +156,7 @@ class UserAdmin:
                 "role": role,
                 "keycloak_user_id": keycloak_user_id,
                 "grafana_user_id": grafana_user_id,
+                "forgejo_user_id": forgejo_user_id,
                 "migrated_from_contact": migrated_from_contact,
                 "is_maintenance_contact": is_maintenance_contact,
                 "is_billing_contact": is_billing_contact,
@@ -166,7 +173,7 @@ class UserAdmin:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.user_admin_organizations import UserAdminOrganizations
+        from ..models.user_admin_organizations import UserAdminOrganizations  # noqa: PLC0415
 
         d = dict(src_dict)
         id = d.pop("id")
@@ -215,6 +222,13 @@ class UserAdmin:
             return cast(int | None, data)
 
         grafana_user_id = _parse_grafana_user_id(d.pop("grafana_user_id"))
+
+        def _parse_forgejo_user_id(data: object) -> int | None:
+            if data is None:
+                return data
+            return cast(int | None, data)
+
+        forgejo_user_id = _parse_forgejo_user_id(d.pop("forgejo_user_id"))
 
         def _parse_migrated_from_contact(data: object) -> None | UUID:
             if data is None:
@@ -273,6 +287,7 @@ class UserAdmin:
             role=role,
             keycloak_user_id=keycloak_user_id,
             grafana_user_id=grafana_user_id,
+            forgejo_user_id=forgejo_user_id,
             migrated_from_contact=migrated_from_contact,
             is_maintenance_contact=is_maintenance_contact,
             is_billing_contact=is_billing_contact,

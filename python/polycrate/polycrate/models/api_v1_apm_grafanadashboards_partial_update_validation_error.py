@@ -48,13 +48,13 @@ class ApiV1ApmGrafanadashboardsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_apm_grafanadashboards_partial_update_display_name_error_component import (
-            ApiV1ApmGrafanadashboardsPartialUpdateDisplayNameErrorComponent,
+            ApiV1ApmGrafanadashboardsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_partial_update_name_error_component import (
-            ApiV1ApmGrafanadashboardsPartialUpdateNameErrorComponent,
+            ApiV1ApmGrafanadashboardsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_partial_update_non_field_errors_error_component import (
-            ApiV1ApmGrafanadashboardsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ApmGrafanadashboardsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -87,16 +87,16 @@ class ApiV1ApmGrafanadashboardsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_apm_grafanadashboards_partial_update_display_name_error_component import (
-            ApiV1ApmGrafanadashboardsPartialUpdateDisplayNameErrorComponent,
+            ApiV1ApmGrafanadashboardsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_partial_update_is_default_error_component import (
-            ApiV1ApmGrafanadashboardsPartialUpdateIsDefaultErrorComponent,
+            ApiV1ApmGrafanadashboardsPartialUpdateIsDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_partial_update_name_error_component import (
-            ApiV1ApmGrafanadashboardsPartialUpdateNameErrorComponent,
+            ApiV1ApmGrafanadashboardsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_partial_update_non_field_errors_error_component import (
-            ApiV1ApmGrafanadashboardsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ApmGrafanadashboardsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

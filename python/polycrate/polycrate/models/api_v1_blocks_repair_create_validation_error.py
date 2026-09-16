@@ -262,160 +262,166 @@ class ApiV1BlocksRepairCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_blocks_repair_create_actions_error_component import (
-            ApiV1BlocksRepairCreateActionsErrorComponent,
+            ApiV1BlocksRepairCreateActionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_actual_availability_error_component import (
-            ApiV1BlocksRepairCreateActualAvailabilityErrorComponent,
+            ApiV1BlocksRepairCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_annotations_error_component import (
-            ApiV1BlocksRepairCreateAnnotationsErrorComponent,
+            ApiV1BlocksRepairCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_app_version_error_component import (
-            ApiV1BlocksRepairCreateAppVersionErrorComponent,
+            ApiV1BlocksRepairCreateAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_archived_at_error_component import (
-            ApiV1BlocksRepairCreateArchivedAtErrorComponent,
+            ApiV1BlocksRepairCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_archived_error_component import (
-            ApiV1BlocksRepairCreateArchivedErrorComponent,
+            ApiV1BlocksRepairCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_archived_reason_error_component import (
-            ApiV1BlocksRepairCreateArchivedReasonErrorComponent,
+            ApiV1BlocksRepairCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_auto_rollout_error_component import (
-            ApiV1BlocksRepairCreateAutoRolloutErrorComponent,
+            ApiV1BlocksRepairCreateAutoRolloutErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_block_poly_raw_error_component import (
-            ApiV1BlocksRepairCreateBlockPolyRawErrorComponent,
+            ApiV1BlocksRepairCreateBlockPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_changelog_poly_raw_error_component import (
-            ApiV1BlocksRepairCreateChangelogPolyRawErrorComponent,
+            ApiV1BlocksRepairCreateChangelogPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_checksum_error_component import (
-            ApiV1BlocksRepairCreateChecksumErrorComponent,
+            ApiV1BlocksRepairCreateChecksumErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_config_error_component import (
-            ApiV1BlocksRepairCreateConfigErrorComponent,
+            ApiV1BlocksRepairCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_created_by_brc_error_component import (
-            ApiV1BlocksRepairCreateCreatedByBrcErrorComponent,
+            ApiV1BlocksRepairCreateCreatedByBrcErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_criticality_error_component import (
-            ApiV1BlocksRepairCreateCriticalityErrorComponent,
+            ApiV1BlocksRepairCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_debug_mode_error_component import (
-            ApiV1BlocksRepairCreateDebugModeErrorComponent,
+            ApiV1BlocksRepairCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_description_error_component import (
-            ApiV1BlocksRepairCreateDescriptionErrorComponent,
+            ApiV1BlocksRepairCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_discovery_enabled_error_component import (
-            ApiV1BlocksRepairCreateDiscoveryEnabledErrorComponent,
+            ApiV1BlocksRepairCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_display_name_error_component import (
-            ApiV1BlocksRepairCreateDisplayNameErrorComponent,
+            ApiV1BlocksRepairCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_documentation_url_error_component import (
-            ApiV1BlocksRepairCreateDocumentationUrlErrorComponent,
+            ApiV1BlocksRepairCreateDocumentationUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_examples_poly_raw_error_component import (
-            ApiV1BlocksRepairCreateExamplesPolyRawErrorComponent,
+            ApiV1BlocksRepairCreateExamplesPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_flavor_error_component import (
-            ApiV1BlocksRepairCreateFlavorErrorComponent,
+            ApiV1BlocksRepairCreateFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_from_block_error_component import (
-            ApiV1BlocksRepairCreateFromBlockErrorComponent,
+            ApiV1BlocksRepairCreateFromBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_full_spec_error_component import (
-            ApiV1BlocksRepairCreateFullSpecErrorComponent,
+            ApiV1BlocksRepairCreateFullSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_git_repository_url_error_component import (
-            ApiV1BlocksRepairCreateGitRepositoryUrlErrorComponent,
+            ApiV1BlocksRepairCreateGitRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_icon_url_error_component import (
-            ApiV1BlocksRepairCreateIconUrlErrorComponent,
+            ApiV1BlocksRepairCreateIconUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_is_behind_stable_error_component import (
-            ApiV1BlocksRepairCreateIsBehindStableErrorComponent,
+            ApiV1BlocksRepairCreateIsBehindStableErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_repair_create_kind_error_component import ApiV1BlocksRepairCreateKindErrorComponent
+        from ..models.api_v1_blocks_repair_create_kind_error_component import (
+            ApiV1BlocksRepairCreateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_repair_create_labels_error_component import (
-            ApiV1BlocksRepairCreateLabelsErrorComponent,
+            ApiV1BlocksRepairCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_latest_stable_error_component import (
-            ApiV1BlocksRepairCreateLatestStableErrorComponent,
+            ApiV1BlocksRepairCreateLatestStableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_license_error_component import (
-            ApiV1BlocksRepairCreateLicenseErrorComponent,
+            ApiV1BlocksRepairCreateLicenseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_license_url_error_component import (
-            ApiV1BlocksRepairCreateLicenseUrlErrorComponent,
+            ApiV1BlocksRepairCreateLicenseUrlErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_repair_create_name_error_component import ApiV1BlocksRepairCreateNameErrorComponent
+        from ..models.api_v1_blocks_repair_create_name_error_component import (
+            ApiV1BlocksRepairCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_repair_create_non_field_errors_error_component import (
-            ApiV1BlocksRepairCreateNonFieldErrorsErrorComponent,
+            ApiV1BlocksRepairCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_platform_service_error_component import (
-            ApiV1BlocksRepairCreatePlatformServiceErrorComponent,
+            ApiV1BlocksRepairCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_provider_error_component import (
-            ApiV1BlocksRepairCreateProviderErrorComponent,
+            ApiV1BlocksRepairCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_provider_id_error_component import (
-            ApiV1BlocksRepairCreateProviderIdErrorComponent,
+            ApiV1BlocksRepairCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_provider_reference_error_component import (
-            ApiV1BlocksRepairCreateProviderReferenceErrorComponent,
+            ApiV1BlocksRepairCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_readme_md_raw_error_component import (
-            ApiV1BlocksRepairCreateReadmeMdRawErrorComponent,
+            ApiV1BlocksRepairCreateReadmeMdRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_reconciliation_enabled_error_component import (
-            ApiV1BlocksRepairCreateReconciliationEnabledErrorComponent,
+            ApiV1BlocksRepairCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_registry_url_error_component import (
-            ApiV1BlocksRepairCreateRegistryUrlErrorComponent,
+            ApiV1BlocksRepairCreateRegistryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_releases_url_error_component import (
-            ApiV1BlocksRepairCreateReleasesUrlErrorComponent,
+            ApiV1BlocksRepairCreateReleasesUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_scope_error_component import (
-            ApiV1BlocksRepairCreateScopeErrorComponent,
+            ApiV1BlocksRepairCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_sla_availability_error_component import (
-            ApiV1BlocksRepairCreateSlaAvailabilityErrorComponent,
+            ApiV1BlocksRepairCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_sla_target_error_component import (
-            ApiV1BlocksRepairCreateSlaTargetErrorComponent,
+            ApiV1BlocksRepairCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_slo_availability_error_component import (
-            ApiV1BlocksRepairCreateSloAvailabilityErrorComponent,
+            ApiV1BlocksRepairCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_slo_target_error_component import (
-            ApiV1BlocksRepairCreateSloTargetErrorComponent,
+            ApiV1BlocksRepairCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_supports_ha_error_component import (
-            ApiV1BlocksRepairCreateSupportsHaErrorComponent,
+            ApiV1BlocksRepairCreateSupportsHaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_target_availability_error_component import (
-            ApiV1BlocksRepairCreateTargetAvailabilityErrorComponent,
+            ApiV1BlocksRepairCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_template_block_error_component import (
-            ApiV1BlocksRepairCreateTemplateBlockErrorComponent,
+            ApiV1BlocksRepairCreateTemplateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_template_error_component import (
-            ApiV1BlocksRepairCreateTemplateErrorComponent,
+            ApiV1BlocksRepairCreateTemplateErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_repair_create_type_error_component import ApiV1BlocksRepairCreateTypeErrorComponent
+        from ..models.api_v1_blocks_repair_create_type_error_component import (
+            ApiV1BlocksRepairCreateTypeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_repair_create_user_spec_error_component import (
-            ApiV1BlocksRepairCreateUserSpecErrorComponent,
+            ApiV1BlocksRepairCreateUserSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_version_error_component import (
-            ApiV1BlocksRepairCreateVersionErrorComponent,
+            ApiV1BlocksRepairCreateVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_website_url_error_component import (
-            ApiV1BlocksRepairCreateWebsiteUrlErrorComponent,
+            ApiV1BlocksRepairCreateWebsiteUrlErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -550,163 +556,169 @@ class ApiV1BlocksRepairCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_blocks_repair_create_actions_error_component import (
-            ApiV1BlocksRepairCreateActionsErrorComponent,
+            ApiV1BlocksRepairCreateActionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_actual_availability_error_component import (
-            ApiV1BlocksRepairCreateActualAvailabilityErrorComponent,
+            ApiV1BlocksRepairCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_annotations_error_component import (
-            ApiV1BlocksRepairCreateAnnotationsErrorComponent,
+            ApiV1BlocksRepairCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_app_version_error_component import (
-            ApiV1BlocksRepairCreateAppVersionErrorComponent,
+            ApiV1BlocksRepairCreateAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_archived_at_error_component import (
-            ApiV1BlocksRepairCreateArchivedAtErrorComponent,
+            ApiV1BlocksRepairCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_archived_error_component import (
-            ApiV1BlocksRepairCreateArchivedErrorComponent,
+            ApiV1BlocksRepairCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_archived_reason_error_component import (
-            ApiV1BlocksRepairCreateArchivedReasonErrorComponent,
+            ApiV1BlocksRepairCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_auto_rollout_error_component import (
-            ApiV1BlocksRepairCreateAutoRolloutErrorComponent,
+            ApiV1BlocksRepairCreateAutoRolloutErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_block_poly_raw_error_component import (
-            ApiV1BlocksRepairCreateBlockPolyRawErrorComponent,
+            ApiV1BlocksRepairCreateBlockPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_changelog_poly_raw_error_component import (
-            ApiV1BlocksRepairCreateChangelogPolyRawErrorComponent,
+            ApiV1BlocksRepairCreateChangelogPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_checksum_error_component import (
-            ApiV1BlocksRepairCreateChecksumErrorComponent,
+            ApiV1BlocksRepairCreateChecksumErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_config_error_component import (
-            ApiV1BlocksRepairCreateConfigErrorComponent,
+            ApiV1BlocksRepairCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_created_by_brc_error_component import (
-            ApiV1BlocksRepairCreateCreatedByBrcErrorComponent,
+            ApiV1BlocksRepairCreateCreatedByBrcErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_created_by_component_error_component import (
-            ApiV1BlocksRepairCreateCreatedByComponentErrorComponent,
+            ApiV1BlocksRepairCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_criticality_error_component import (
-            ApiV1BlocksRepairCreateCriticalityErrorComponent,
+            ApiV1BlocksRepairCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_debug_mode_error_component import (
-            ApiV1BlocksRepairCreateDebugModeErrorComponent,
+            ApiV1BlocksRepairCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_description_error_component import (
-            ApiV1BlocksRepairCreateDescriptionErrorComponent,
+            ApiV1BlocksRepairCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_discovery_enabled_error_component import (
-            ApiV1BlocksRepairCreateDiscoveryEnabledErrorComponent,
+            ApiV1BlocksRepairCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_display_name_error_component import (
-            ApiV1BlocksRepairCreateDisplayNameErrorComponent,
+            ApiV1BlocksRepairCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_documentation_url_error_component import (
-            ApiV1BlocksRepairCreateDocumentationUrlErrorComponent,
+            ApiV1BlocksRepairCreateDocumentationUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_examples_poly_raw_error_component import (
-            ApiV1BlocksRepairCreateExamplesPolyRawErrorComponent,
+            ApiV1BlocksRepairCreateExamplesPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_flavor_error_component import (
-            ApiV1BlocksRepairCreateFlavorErrorComponent,
+            ApiV1BlocksRepairCreateFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_from_block_error_component import (
-            ApiV1BlocksRepairCreateFromBlockErrorComponent,
+            ApiV1BlocksRepairCreateFromBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_full_spec_error_component import (
-            ApiV1BlocksRepairCreateFullSpecErrorComponent,
+            ApiV1BlocksRepairCreateFullSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_git_repository_url_error_component import (
-            ApiV1BlocksRepairCreateGitRepositoryUrlErrorComponent,
+            ApiV1BlocksRepairCreateGitRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_icon_url_error_component import (
-            ApiV1BlocksRepairCreateIconUrlErrorComponent,
+            ApiV1BlocksRepairCreateIconUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_is_behind_stable_error_component import (
-            ApiV1BlocksRepairCreateIsBehindStableErrorComponent,
+            ApiV1BlocksRepairCreateIsBehindStableErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_repair_create_kind_error_component import ApiV1BlocksRepairCreateKindErrorComponent
+        from ..models.api_v1_blocks_repair_create_kind_error_component import (
+            ApiV1BlocksRepairCreateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_repair_create_labels_error_component import (
-            ApiV1BlocksRepairCreateLabelsErrorComponent,
+            ApiV1BlocksRepairCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_latest_stable_error_component import (
-            ApiV1BlocksRepairCreateLatestStableErrorComponent,
+            ApiV1BlocksRepairCreateLatestStableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_license_error_component import (
-            ApiV1BlocksRepairCreateLicenseErrorComponent,
+            ApiV1BlocksRepairCreateLicenseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_license_url_error_component import (
-            ApiV1BlocksRepairCreateLicenseUrlErrorComponent,
+            ApiV1BlocksRepairCreateLicenseUrlErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_repair_create_name_error_component import ApiV1BlocksRepairCreateNameErrorComponent
+        from ..models.api_v1_blocks_repair_create_name_error_component import (
+            ApiV1BlocksRepairCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_repair_create_non_field_errors_error_component import (
-            ApiV1BlocksRepairCreateNonFieldErrorsErrorComponent,
+            ApiV1BlocksRepairCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_platform_service_error_component import (
-            ApiV1BlocksRepairCreatePlatformServiceErrorComponent,
+            ApiV1BlocksRepairCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_provider_error_component import (
-            ApiV1BlocksRepairCreateProviderErrorComponent,
+            ApiV1BlocksRepairCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_provider_id_error_component import (
-            ApiV1BlocksRepairCreateProviderIdErrorComponent,
+            ApiV1BlocksRepairCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_provider_reference_error_component import (
-            ApiV1BlocksRepairCreateProviderReferenceErrorComponent,
+            ApiV1BlocksRepairCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_readme_md_raw_error_component import (
-            ApiV1BlocksRepairCreateReadmeMdRawErrorComponent,
+            ApiV1BlocksRepairCreateReadmeMdRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_reconciliation_enabled_error_component import (
-            ApiV1BlocksRepairCreateReconciliationEnabledErrorComponent,
+            ApiV1BlocksRepairCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_registry_url_error_component import (
-            ApiV1BlocksRepairCreateRegistryUrlErrorComponent,
+            ApiV1BlocksRepairCreateRegistryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_releases_url_error_component import (
-            ApiV1BlocksRepairCreateReleasesUrlErrorComponent,
+            ApiV1BlocksRepairCreateReleasesUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_scope_error_component import (
-            ApiV1BlocksRepairCreateScopeErrorComponent,
+            ApiV1BlocksRepairCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_sla_availability_error_component import (
-            ApiV1BlocksRepairCreateSlaAvailabilityErrorComponent,
+            ApiV1BlocksRepairCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_sla_target_error_component import (
-            ApiV1BlocksRepairCreateSlaTargetErrorComponent,
+            ApiV1BlocksRepairCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_slo_availability_error_component import (
-            ApiV1BlocksRepairCreateSloAvailabilityErrorComponent,
+            ApiV1BlocksRepairCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_slo_target_error_component import (
-            ApiV1BlocksRepairCreateSloTargetErrorComponent,
+            ApiV1BlocksRepairCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_supports_ha_error_component import (
-            ApiV1BlocksRepairCreateSupportsHaErrorComponent,
+            ApiV1BlocksRepairCreateSupportsHaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_target_availability_error_component import (
-            ApiV1BlocksRepairCreateTargetAvailabilityErrorComponent,
+            ApiV1BlocksRepairCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_template_block_error_component import (
-            ApiV1BlocksRepairCreateTemplateBlockErrorComponent,
+            ApiV1BlocksRepairCreateTemplateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_template_error_component import (
-            ApiV1BlocksRepairCreateTemplateErrorComponent,
+            ApiV1BlocksRepairCreateTemplateErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_repair_create_type_error_component import ApiV1BlocksRepairCreateTypeErrorComponent
+        from ..models.api_v1_blocks_repair_create_type_error_component import (
+            ApiV1BlocksRepairCreateTypeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_repair_create_user_spec_error_component import (
-            ApiV1BlocksRepairCreateUserSpecErrorComponent,
+            ApiV1BlocksRepairCreateUserSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_version_error_component import (
-            ApiV1BlocksRepairCreateVersionErrorComponent,
+            ApiV1BlocksRepairCreateVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_repair_create_website_url_error_component import (
-            ApiV1BlocksRepairCreateWebsiteUrlErrorComponent,
+            ApiV1BlocksRepairCreateWebsiteUrlErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -88,40 +88,40 @@ class ApiV1DowntimesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_downtimes_partial_update_annotations_error_component import (
-            ApiV1DowntimesPartialUpdateAnnotationsErrorComponent,
+            ApiV1DowntimesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_counts_towards_sla_error_component import (
-            ApiV1DowntimesPartialUpdateCountsTowardsSlaErrorComponent,
+            ApiV1DowntimesPartialUpdateCountsTowardsSlaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_display_name_error_component import (
-            ApiV1DowntimesPartialUpdateDisplayNameErrorComponent,
+            ApiV1DowntimesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_excluded_reason_error_component import (
-            ApiV1DowntimesPartialUpdateExcludedReasonErrorComponent,
+            ApiV1DowntimesPartialUpdateExcludedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_is_active_error_component import (
-            ApiV1DowntimesPartialUpdateIsActiveErrorComponent,
+            ApiV1DowntimesPartialUpdateIsActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_kind_error_component import (
-            ApiV1DowntimesPartialUpdateKindErrorComponent,
+            ApiV1DowntimesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_labels_error_component import (
-            ApiV1DowntimesPartialUpdateLabelsErrorComponent,
+            ApiV1DowntimesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_name_error_component import (
-            ApiV1DowntimesPartialUpdateNameErrorComponent,
+            ApiV1DowntimesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_non_field_errors_error_component import (
-            ApiV1DowntimesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1DowntimesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_post_mortem_content_error_component import (
-            ApiV1DowntimesPartialUpdatePostMortemContentErrorComponent,
+            ApiV1DowntimesPartialUpdatePostMortemContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_severity_error_component import (
-            ApiV1DowntimesPartialUpdateSeverityErrorComponent,
+            ApiV1DowntimesPartialUpdateSeverityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_tolerations_error_component import (
-            ApiV1DowntimesPartialUpdateTolerationsErrorComponent,
+            ApiV1DowntimesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -172,43 +172,43 @@ class ApiV1DowntimesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_downtimes_partial_update_annotations_error_component import (
-            ApiV1DowntimesPartialUpdateAnnotationsErrorComponent,
+            ApiV1DowntimesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_counts_towards_sla_error_component import (
-            ApiV1DowntimesPartialUpdateCountsTowardsSlaErrorComponent,
+            ApiV1DowntimesPartialUpdateCountsTowardsSlaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_display_name_error_component import (
-            ApiV1DowntimesPartialUpdateDisplayNameErrorComponent,
+            ApiV1DowntimesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_excluded_reason_error_component import (
-            ApiV1DowntimesPartialUpdateExcludedReasonErrorComponent,
+            ApiV1DowntimesPartialUpdateExcludedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_is_active_error_component import (
-            ApiV1DowntimesPartialUpdateIsActiveErrorComponent,
+            ApiV1DowntimesPartialUpdateIsActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_kind_error_component import (
-            ApiV1DowntimesPartialUpdateKindErrorComponent,
+            ApiV1DowntimesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_labels_error_component import (
-            ApiV1DowntimesPartialUpdateLabelsErrorComponent,
+            ApiV1DowntimesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_name_error_component import (
-            ApiV1DowntimesPartialUpdateNameErrorComponent,
+            ApiV1DowntimesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_non_field_errors_error_component import (
-            ApiV1DowntimesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1DowntimesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_post_mortem_content_error_component import (
-            ApiV1DowntimesPartialUpdatePostMortemContentErrorComponent,
+            ApiV1DowntimesPartialUpdatePostMortemContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_post_mortem_note_id_error_component import (
-            ApiV1DowntimesPartialUpdatePostMortemNoteIdErrorComponent,
+            ApiV1DowntimesPartialUpdatePostMortemNoteIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_severity_error_component import (
-            ApiV1DowntimesPartialUpdateSeverityErrorComponent,
+            ApiV1DowntimesPartialUpdateSeverityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_partial_update_tolerations_error_component import (
-            ApiV1DowntimesPartialUpdateTolerationsErrorComponent,
+            ApiV1DowntimesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

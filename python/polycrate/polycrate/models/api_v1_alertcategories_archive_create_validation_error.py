@@ -151,76 +151,76 @@ class ApiV1AlertcategoriesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alertcategories_archive_create_annotations_error_component import (
-            ApiV1AlertcategoriesArchiveCreateAnnotationsErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_archived_at_error_component import (
-            ApiV1AlertcategoriesArchiveCreateArchivedAtErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_archived_error_component import (
-            ApiV1AlertcategoriesArchiveCreateArchivedErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_archived_reason_error_component import (
-            ApiV1AlertcategoriesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_criticality_error_component import (
-            ApiV1AlertcategoriesArchiveCreateCriticalityErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_debug_mode_error_component import (
-            ApiV1AlertcategoriesArchiveCreateDebugModeErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_description_error_component import (
-            ApiV1AlertcategoriesArchiveCreateDescriptionErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_display_name_error_component import (
-            ApiV1AlertcategoriesArchiveCreateDisplayNameErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_kind_error_component import (
-            ApiV1AlertcategoriesArchiveCreateKindErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_labels_error_component import (
-            ApiV1AlertcategoriesArchiveCreateLabelsErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_name_error_component import (
-            ApiV1AlertcategoriesArchiveCreateNameErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_non_field_errors_error_component import (
-            ApiV1AlertcategoriesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_platform_service_error_component import (
-            ApiV1AlertcategoriesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1AlertcategoriesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_provider_error_component import (
-            ApiV1AlertcategoriesArchiveCreateProviderErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_provider_id_error_component import (
-            ApiV1AlertcategoriesArchiveCreateProviderIdErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_provider_reference_error_component import (
-            ApiV1AlertcategoriesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_reconciliation_enabled_error_component import (
-            ApiV1AlertcategoriesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_sla_availability_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_sla_target_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSlaTargetErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_slo_availability_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_slo_target_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSloTargetErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_sort_order_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSortOrderErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSortOrderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_target_availability_error_component import (
-            ApiV1AlertcategoriesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_tolerations_error_component import (
-            ApiV1AlertcategoriesArchiveCreateTolerationsErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -295,79 +295,79 @@ class ApiV1AlertcategoriesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alertcategories_archive_create_active_error_component import (
-            ApiV1AlertcategoriesArchiveCreateActiveErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_annotations_error_component import (
-            ApiV1AlertcategoriesArchiveCreateAnnotationsErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_archived_at_error_component import (
-            ApiV1AlertcategoriesArchiveCreateArchivedAtErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_archived_error_component import (
-            ApiV1AlertcategoriesArchiveCreateArchivedErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_archived_reason_error_component import (
-            ApiV1AlertcategoriesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_criticality_error_component import (
-            ApiV1AlertcategoriesArchiveCreateCriticalityErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_debug_mode_error_component import (
-            ApiV1AlertcategoriesArchiveCreateDebugModeErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_description_error_component import (
-            ApiV1AlertcategoriesArchiveCreateDescriptionErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_display_name_error_component import (
-            ApiV1AlertcategoriesArchiveCreateDisplayNameErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_kind_error_component import (
-            ApiV1AlertcategoriesArchiveCreateKindErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_labels_error_component import (
-            ApiV1AlertcategoriesArchiveCreateLabelsErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_name_error_component import (
-            ApiV1AlertcategoriesArchiveCreateNameErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_non_field_errors_error_component import (
-            ApiV1AlertcategoriesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_platform_service_error_component import (
-            ApiV1AlertcategoriesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1AlertcategoriesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_provider_error_component import (
-            ApiV1AlertcategoriesArchiveCreateProviderErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_provider_id_error_component import (
-            ApiV1AlertcategoriesArchiveCreateProviderIdErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_provider_reference_error_component import (
-            ApiV1AlertcategoriesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_reconciliation_enabled_error_component import (
-            ApiV1AlertcategoriesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_sla_availability_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_sla_target_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSlaTargetErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_slo_availability_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_slo_target_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSloTargetErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_sort_order_error_component import (
-            ApiV1AlertcategoriesArchiveCreateSortOrderErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateSortOrderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_target_availability_error_component import (
-            ApiV1AlertcategoriesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_archive_create_tolerations_error_component import (
-            ApiV1AlertcategoriesArchiveCreateTolerationsErrorComponent,
+            ApiV1AlertcategoriesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

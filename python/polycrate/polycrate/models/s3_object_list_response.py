@@ -68,7 +68,7 @@ class S3ObjectListResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_object_item import S3ObjectItem
+        from ..models.s3_object_item import S3ObjectItem  # noqa: PLC0415
 
         d = dict(src_dict)
         objects = []

@@ -227,10 +227,10 @@ class ProviderDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.provider_detail_deleted_by_user_type_0 import ProviderDetailDeletedByUserType0
-        from ..models.provider_detail_last_action_run_type_0 import ProviderDetailLastActionRunType0
-        from ..models.provider_detail_organization_type_0 import ProviderDetailOrganizationType0
-        from ..models.provider_detail_workspace_type_0 import ProviderDetailWorkspaceType0
+        from ..models.provider_detail_deleted_by_user_type_0 import ProviderDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.provider_detail_last_action_run_type_0 import ProviderDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.provider_detail_organization_type_0 import ProviderDetailOrganizationType0  # noqa: PLC0415
+        from ..models.provider_detail_workspace_type_0 import ProviderDetailWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -618,11 +618,11 @@ class ProviderDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.provider_detail_created import ProviderDetailCreated
-        from ..models.provider_detail_deleted_by_user_type_0 import ProviderDetailDeletedByUserType0
-        from ..models.provider_detail_last_action_run_type_0 import ProviderDetailLastActionRunType0
-        from ..models.provider_detail_organization_type_0 import ProviderDetailOrganizationType0
-        from ..models.provider_detail_workspace_type_0 import ProviderDetailWorkspaceType0
+        from ..models.provider_detail_created import ProviderDetailCreated  # noqa: PLC0415
+        from ..models.provider_detail_deleted_by_user_type_0 import ProviderDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.provider_detail_last_action_run_type_0 import ProviderDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.provider_detail_organization_type_0 import ProviderDetailOrganizationType0  # noqa: PLC0415
+        from ..models.provider_detail_workspace_type_0 import ProviderDetailWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

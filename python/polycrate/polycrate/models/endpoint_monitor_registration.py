@@ -55,8 +55,8 @@ class EndpointMonitorRegistration:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.endpoint_monitor_simple import EndpointMonitorSimple
-        from ..models.endpoint_simple import EndpointSimple
+        from ..models.endpoint_monitor_simple import EndpointMonitorSimple  # noqa: PLC0415
+        from ..models.endpoint_simple import EndpointSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         endpoint = EndpointSimple.from_dict(d.pop("endpoint"))

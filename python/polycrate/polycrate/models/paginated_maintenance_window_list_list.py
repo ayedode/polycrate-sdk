@@ -68,7 +68,7 @@ class PaginatedMaintenanceWindowListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.maintenance_window_list import MaintenanceWindowList
+        from ..models.maintenance_window_list import MaintenanceWindowList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

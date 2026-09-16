@@ -32,7 +32,7 @@ class ApiV1ActionRunsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_action_runs_create_non_field_errors_error_component import (
-            ApiV1ActionRunsCreateNonFieldErrorsErrorComponent,
+            ApiV1ActionRunsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -60,9 +60,11 @@ class ApiV1ActionRunsCreateValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_action_runs_create_name_error_component import ApiV1ActionRunsCreateNameErrorComponent
+        from ..models.api_v1_action_runs_create_name_error_component import (
+            ApiV1ActionRunsCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_action_runs_create_non_field_errors_error_component import (
-            ApiV1ActionRunsCreateNonFieldErrorsErrorComponent,
+            ApiV1ActionRunsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

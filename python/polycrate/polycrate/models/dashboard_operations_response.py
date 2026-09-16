@@ -102,24 +102,36 @@ class DashboardOperationsResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.dashboard_operations_response_blocked_rollouts import DashboardOperationsResponseBlockedRollouts
-        from ..models.dashboard_operations_response_endpoints_not_ok import DashboardOperationsResponseEndpointsNotOk
+        from ..models.dashboard_operations_response_blocked_rollouts import (
+            DashboardOperationsResponseBlockedRollouts,  # noqa: PLC0415
+        )
+        from ..models.dashboard_operations_response_endpoints_not_ok import (
+            DashboardOperationsResponseEndpointsNotOk,  # noqa: PLC0415
+        )
         from ..models.dashboard_operations_response_expired_certificates import (
-            DashboardOperationsResponseExpiredCertificates,
+            DashboardOperationsResponseExpiredCertificates,  # noqa: PLC0415
         )
         from ..models.dashboard_operations_response_k8s_clusters_not_ok import (
-            DashboardOperationsResponseK8SClustersNotOk,
+            DashboardOperationsResponseK8SClustersNotOk,  # noqa: PLC0415
         )
-        from ..models.dashboard_operations_response_last_ssh_sessions import DashboardOperationsResponseLastSshSessions
+        from ..models.dashboard_operations_response_last_ssh_sessions import (
+            DashboardOperationsResponseLastSshSessions,  # noqa: PLC0415
+        )
         from ..models.dashboard_operations_response_overdue_backup_schedules import (
-            DashboardOperationsResponseOverdueBackupSchedules,
+            DashboardOperationsResponseOverdueBackupSchedules,  # noqa: PLC0415
         )
-        from ..models.dashboard_operations_response_recent_alerts import DashboardOperationsResponseRecentAlerts
-        from ..models.dashboard_operations_response_recent_downtimes import DashboardOperationsResponseRecentDowntimes
+        from ..models.dashboard_operations_response_recent_alerts import (
+            DashboardOperationsResponseRecentAlerts,  # noqa: PLC0415
+        )
+        from ..models.dashboard_operations_response_recent_downtimes import (
+            DashboardOperationsResponseRecentDowntimes,  # noqa: PLC0415
+        )
         from ..models.dashboard_operations_response_recent_maintenances import (
-            DashboardOperationsResponseRecentMaintenances,
+            DashboardOperationsResponseRecentMaintenances,  # noqa: PLC0415
         )
-        from ..models.dashboard_operations_response_workspaces_not_ok import DashboardOperationsResponseWorkspacesNotOk
+        from ..models.dashboard_operations_response_workspaces_not_ok import (
+            DashboardOperationsResponseWorkspacesNotOk,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         updated_at = datetime.datetime.fromisoformat(d.pop("updated_at"))

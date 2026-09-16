@@ -65,25 +65,31 @@ class ApiV1ContactgroupsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_contactgroups_list_contacts_error_component import (
-            ApiV1ContactgroupsListContactsErrorComponent,
+            ApiV1ContactgroupsListContactsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_list_created_by_users_error_component import (
-            ApiV1ContactgroupsListCreatedByUsersErrorComponent,
+            ApiV1ContactgroupsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_list_identity_providers_error_component import (
-            ApiV1ContactgroupsListIdentityProvidersErrorComponent,
+            ApiV1ContactgroupsListIdentityProvidersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contactgroups_list_kind_error_component import ApiV1ContactgroupsListKindErrorComponent
+        from ..models.api_v1_contactgroups_list_kind_error_component import (
+            ApiV1ContactgroupsListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contactgroups_list_organizations_error_component import (
-            ApiV1ContactgroupsListOrganizationsErrorComponent,
+            ApiV1ContactgroupsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contactgroups_list_search_error_component import ApiV1ContactgroupsListSearchErrorComponent
-        from ..models.api_v1_contactgroups_list_state_error_component import ApiV1ContactgroupsListStateErrorComponent
+        from ..models.api_v1_contactgroups_list_search_error_component import (
+            ApiV1ContactgroupsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contactgroups_list_state_error_component import (
+            ApiV1ContactgroupsListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contactgroups_list_state_not_error_component import (
-            ApiV1ContactgroupsListStateNotErrorComponent,
+            ApiV1ContactgroupsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_list_time_range_error_component import (
-            ApiV1ContactgroupsListTimeRangeErrorComponent,
+            ApiV1ContactgroupsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -128,28 +134,34 @@ class ApiV1ContactgroupsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_contactgroups_list_contacts_error_component import (
-            ApiV1ContactgroupsListContactsErrorComponent,
+            ApiV1ContactgroupsListContactsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_list_created_by_users_error_component import (
-            ApiV1ContactgroupsListCreatedByUsersErrorComponent,
+            ApiV1ContactgroupsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_list_identity_providers_error_component import (
-            ApiV1ContactgroupsListIdentityProvidersErrorComponent,
+            ApiV1ContactgroupsListIdentityProvidersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contactgroups_list_kind_error_component import ApiV1ContactgroupsListKindErrorComponent
+        from ..models.api_v1_contactgroups_list_kind_error_component import (
+            ApiV1ContactgroupsListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contactgroups_list_name_exact_error_component import (
-            ApiV1ContactgroupsListNameExactErrorComponent,
+            ApiV1ContactgroupsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_list_organizations_error_component import (
-            ApiV1ContactgroupsListOrganizationsErrorComponent,
+            ApiV1ContactgroupsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contactgroups_list_search_error_component import ApiV1ContactgroupsListSearchErrorComponent
-        from ..models.api_v1_contactgroups_list_state_error_component import ApiV1ContactgroupsListStateErrorComponent
+        from ..models.api_v1_contactgroups_list_search_error_component import (
+            ApiV1ContactgroupsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contactgroups_list_state_error_component import (
+            ApiV1ContactgroupsListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contactgroups_list_state_not_error_component import (
-            ApiV1ContactgroupsListStateNotErrorComponent,
+            ApiV1ContactgroupsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_list_time_range_error_component import (
-            ApiV1ContactgroupsListTimeRangeErrorComponent,
+            ApiV1ContactgroupsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

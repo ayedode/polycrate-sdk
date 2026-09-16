@@ -192,100 +192,100 @@ class ApiV1ArtifactPackagesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_artifact_packages_partial_update_annotations_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateAnnotationsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_archived_at_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateArchivedAtErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_archived_by_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateArchivedByErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_archived_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateArchivedErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_archived_reason_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_created_by_component_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_criticality_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateCriticalityErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_debug_mode_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateDebugModeErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_display_name_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateDisplayNameErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_kind_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateKindErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_labels_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateLabelsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_managed_by_content_type_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_managed_by_object_id_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_modified_by_user_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateModifiedByUserErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_name_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateNameErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_non_field_errors_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_platform_dns_record_created_error_component import (
-            ApiV1ArtifactPackagesPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_platform_service_error_component import (
-            ApiV1ArtifactPackagesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_provider_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateProviderErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_provider_id_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateProviderIdErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_provider_reference_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_raw_data_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateRawDataErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateRawDataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_reconciliation_enabled_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_sla_availability_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_sla_target_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSlaTargetErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_sla_window_days_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_slo_availability_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_slo_target_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSloTargetErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_slo_window_days_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_target_availability_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_tolerations_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateTolerationsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -378,103 +378,103 @@ class ApiV1ArtifactPackagesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_artifact_packages_partial_update_annotations_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateAnnotationsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_archived_at_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateArchivedAtErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_archived_by_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateArchivedByErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_archived_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateArchivedErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_archived_reason_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_created_by_component_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_created_by_user_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateCreatedByUserErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_criticality_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateCriticalityErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_debug_mode_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateDebugModeErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_display_name_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateDisplayNameErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_kind_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateKindErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_labels_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateLabelsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_managed_by_content_type_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_managed_by_object_id_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_modified_by_user_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateModifiedByUserErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_name_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateNameErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_non_field_errors_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_platform_dns_record_created_error_component import (
-            ApiV1ArtifactPackagesPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_platform_service_error_component import (
-            ApiV1ArtifactPackagesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_provider_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateProviderErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_provider_id_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateProviderIdErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_provider_reference_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_raw_data_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateRawDataErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateRawDataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_reconciliation_enabled_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_sla_availability_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_sla_target_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSlaTargetErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_sla_window_days_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_slo_availability_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_slo_target_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSloTargetErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_slo_window_days_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_target_availability_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_partial_update_tolerations_error_component import (
-            ApiV1ArtifactPackagesPartialUpdateTolerationsErrorComponent,
+            ApiV1ArtifactPackagesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

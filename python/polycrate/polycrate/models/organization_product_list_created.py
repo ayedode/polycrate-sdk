@@ -36,7 +36,7 @@ class OrganizationProductListCreated:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.organization_product_list_created_created_by_type_0 import (
-            OrganizationProductListCreatedCreatedByType0,
+            OrganizationProductListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         created_at: None | str | Unset
@@ -84,7 +84,7 @@ class OrganizationProductListCreated:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.organization_product_list_created_created_by_type_0 import (
-            OrganizationProductListCreatedCreatedByType0,
+            OrganizationProductListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

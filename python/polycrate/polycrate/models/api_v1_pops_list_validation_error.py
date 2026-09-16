@@ -58,20 +58,24 @@ class ApiV1PopsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pops_list_affected_incidents_error_component import (
-            ApiV1PopsListAffectedIncidentsErrorComponent,
+            ApiV1PopsListAffectedIncidentsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_list_affected_maintenances_error_component import (
-            ApiV1PopsListAffectedMaintenancesErrorComponent,
+            ApiV1PopsListAffectedMaintenancesErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_list_created_at_error_component import ApiV1PopsListCreatedAtErrorComponent
+        from ..models.api_v1_pops_list_created_at_error_component import (
+            ApiV1PopsListCreatedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pops_list_created_by_component_error_component import (
-            ApiV1PopsListCreatedByComponentErrorComponent,
+            ApiV1PopsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_list_kind_error_component import ApiV1PopsListKindErrorComponent
-        from ..models.api_v1_pops_list_name_error_component import ApiV1PopsListNameErrorComponent
-        from ..models.api_v1_pops_list_scope_error_component import ApiV1PopsListScopeErrorComponent
-        from ..models.api_v1_pops_list_state_error_component import ApiV1PopsListStateErrorComponent
-        from ..models.api_v1_pops_list_updated_at_error_component import ApiV1PopsListUpdatedAtErrorComponent
+        from ..models.api_v1_pops_list_kind_error_component import ApiV1PopsListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_pops_list_name_error_component import ApiV1PopsListNameErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_pops_list_scope_error_component import ApiV1PopsListScopeErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_pops_list_state_error_component import ApiV1PopsListStateErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_pops_list_updated_at_error_component import (
+            ApiV1PopsListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -115,21 +119,27 @@ class ApiV1PopsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pops_list_affected_incidents_error_component import (
-            ApiV1PopsListAffectedIncidentsErrorComponent,
+            ApiV1PopsListAffectedIncidentsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_list_affected_maintenances_error_component import (
-            ApiV1PopsListAffectedMaintenancesErrorComponent,
+            ApiV1PopsListAffectedMaintenancesErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_list_created_at_error_component import ApiV1PopsListCreatedAtErrorComponent
+        from ..models.api_v1_pops_list_created_at_error_component import (
+            ApiV1PopsListCreatedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pops_list_created_by_component_error_component import (
-            ApiV1PopsListCreatedByComponentErrorComponent,
+            ApiV1PopsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_list_kind_error_component import ApiV1PopsListKindErrorComponent
-        from ..models.api_v1_pops_list_name_error_component import ApiV1PopsListNameErrorComponent
-        from ..models.api_v1_pops_list_provider_entity_error_component import ApiV1PopsListProviderEntityErrorComponent
-        from ..models.api_v1_pops_list_scope_error_component import ApiV1PopsListScopeErrorComponent
-        from ..models.api_v1_pops_list_state_error_component import ApiV1PopsListStateErrorComponent
-        from ..models.api_v1_pops_list_updated_at_error_component import ApiV1PopsListUpdatedAtErrorComponent
+        from ..models.api_v1_pops_list_kind_error_component import ApiV1PopsListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_pops_list_name_error_component import ApiV1PopsListNameErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_pops_list_provider_entity_error_component import (
+            ApiV1PopsListProviderEntityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_pops_list_scope_error_component import ApiV1PopsListScopeErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_pops_list_state_error_component import ApiV1PopsListStateErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_pops_list_updated_at_error_component import (
+            ApiV1PopsListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

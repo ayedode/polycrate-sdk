@@ -175,92 +175,138 @@ class ApiV1HostsUpdateValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_hosts_update_active_error_component import ApiV1HostsUpdateActiveErrorComponent
-        from ..models.api_v1_hosts_update_alias_error_component import ApiV1HostsUpdateAliasErrorComponent
-        from ..models.api_v1_hosts_update_annotations_error_component import ApiV1HostsUpdateAnnotationsErrorComponent
-        from ..models.api_v1_hosts_update_archived_at_error_component import ApiV1HostsUpdateArchivedAtErrorComponent
-        from ..models.api_v1_hosts_update_archived_error_component import ApiV1HostsUpdateArchivedErrorComponent
+        from ..models.api_v1_hosts_update_active_error_component import (
+            ApiV1HostsUpdateActiveErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_alias_error_component import (
+            ApiV1HostsUpdateAliasErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_annotations_error_component import (
+            ApiV1HostsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_archived_at_error_component import (
+            ApiV1HostsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_archived_error_component import (
+            ApiV1HostsUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_archived_reason_error_component import (
-            ApiV1HostsUpdateArchivedReasonErrorComponent,
+            ApiV1HostsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_created_by_component_error_component import (
-            ApiV1HostsUpdateCreatedByComponentErrorComponent,
+            ApiV1HostsUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_credential_error_component import ApiV1HostsUpdateCredentialErrorComponent
-        from ..models.api_v1_hosts_update_criticality_error_component import ApiV1HostsUpdateCriticalityErrorComponent
-        from ..models.api_v1_hosts_update_debug_mode_error_component import ApiV1HostsUpdateDebugModeErrorComponent
-        from ..models.api_v1_hosts_update_default_ipv_4_error_component import ApiV1HostsUpdateDefaultIpv4ErrorComponent
-        from ..models.api_v1_hosts_update_default_ipv_6_error_component import ApiV1HostsUpdateDefaultIpv6ErrorComponent
-        from ..models.api_v1_hosts_update_description_error_component import ApiV1HostsUpdateDescriptionErrorComponent
-        from ..models.api_v1_hosts_update_display_name_error_component import ApiV1HostsUpdateDisplayNameErrorComponent
-        from ..models.api_v1_hosts_update_hostname_error_component import ApiV1HostsUpdateHostnameErrorComponent
-        from ..models.api_v1_hosts_update_k8s_cluster_error_component import ApiV1HostsUpdateK8SClusterErrorComponent
-        from ..models.api_v1_hosts_update_kind_error_component import ApiV1HostsUpdateKindErrorComponent
-        from ..models.api_v1_hosts_update_labels_error_component import ApiV1HostsUpdateLabelsErrorComponent
-        from ..models.api_v1_hosts_update_name_error_component import ApiV1HostsUpdateNameErrorComponent
+        from ..models.api_v1_hosts_update_credential_error_component import (
+            ApiV1HostsUpdateCredentialErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_criticality_error_component import (
+            ApiV1HostsUpdateCriticalityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_debug_mode_error_component import (
+            ApiV1HostsUpdateDebugModeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_default_ipv_4_error_component import (
+            ApiV1HostsUpdateDefaultIpv4ErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_default_ipv_6_error_component import (
+            ApiV1HostsUpdateDefaultIpv6ErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_description_error_component import (
+            ApiV1HostsUpdateDescriptionErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_display_name_error_component import (
+            ApiV1HostsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_hostname_error_component import (
+            ApiV1HostsUpdateHostnameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_k8s_cluster_error_component import (
+            ApiV1HostsUpdateK8SClusterErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_kind_error_component import (
+            ApiV1HostsUpdateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_labels_error_component import (
+            ApiV1HostsUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_name_error_component import (
+            ApiV1HostsUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_non_field_errors_error_component import (
-            ApiV1HostsUpdateNonFieldErrorsErrorComponent,
+            ApiV1HostsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_platform_service_error_component import (
-            ApiV1HostsUpdatePlatformServiceErrorComponent,
+            ApiV1HostsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_account_id_error_component import (
-            ApiV1HostsUpdateProviderAccountIdErrorComponent,
+            ApiV1HostsUpdateProviderAccountIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_provider_error_component import ApiV1HostsUpdateProviderErrorComponent
+        from ..models.api_v1_hosts_update_provider_error_component import (
+            ApiV1HostsUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_provider_image_error_component import (
-            ApiV1HostsUpdateProviderImageErrorComponent,
+            ApiV1HostsUpdateProviderImageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_image_os_architecture_error_component import (
-            ApiV1HostsUpdateProviderImageOsArchitectureErrorComponent,
+            ApiV1HostsUpdateProviderImageOsArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_image_os_flavor_error_component import (
-            ApiV1HostsUpdateProviderImageOsFlavorErrorComponent,
+            ApiV1HostsUpdateProviderImageOsFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_image_os_version_error_component import (
-            ApiV1HostsUpdateProviderImageOsVersionErrorComponent,
+            ApiV1HostsUpdateProviderImageOsVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_location_error_component import (
-            ApiV1HostsUpdateProviderLocationErrorComponent,
+            ApiV1HostsUpdateProviderLocationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_reference_error_component import (
-            ApiV1HostsUpdateProviderReferenceErrorComponent,
+            ApiV1HostsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_type_error_component import (
-            ApiV1HostsUpdateProviderTypeErrorComponent,
+            ApiV1HostsUpdateProviderTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_reconciliation_enabled_error_component import (
-            ApiV1HostsUpdateReconciliationEnabledErrorComponent,
+            ApiV1HostsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_cpu_architecture_error_component import (
-            ApiV1HostsUpdateResourceCpuArchitectureErrorComponent,
+            ApiV1HostsUpdateResourceCpuArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_cpu_cores_error_component import (
-            ApiV1HostsUpdateResourceCpuCoresErrorComponent,
+            ApiV1HostsUpdateResourceCpuCoresErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_cpu_type_error_component import (
-            ApiV1HostsUpdateResourceCpuTypeErrorComponent,
+            ApiV1HostsUpdateResourceCpuTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_disk_error_component import (
-            ApiV1HostsUpdateResourceDiskErrorComponent,
+            ApiV1HostsUpdateResourceDiskErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_memory_error_component import (
-            ApiV1HostsUpdateResourceMemoryErrorComponent,
+            ApiV1HostsUpdateResourceMemoryErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_role_error_component import ApiV1HostsUpdateRoleErrorComponent
+        from ..models.api_v1_hosts_update_role_error_component import (
+            ApiV1HostsUpdateRoleErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_sla_availability_error_component import (
-            ApiV1HostsUpdateSlaAvailabilityErrorComponent,
+            ApiV1HostsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_sla_target_error_component import ApiV1HostsUpdateSlaTargetErrorComponent
+        from ..models.api_v1_hosts_update_sla_target_error_component import (
+            ApiV1HostsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_slo_availability_error_component import (
-            ApiV1HostsUpdateSloAvailabilityErrorComponent,
+            ApiV1HostsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_slo_target_error_component import ApiV1HostsUpdateSloTargetErrorComponent
-        from ..models.api_v1_hosts_update_ssh_keys_id_error_component import ApiV1HostsUpdateSshKeysIdErrorComponent
+        from ..models.api_v1_hosts_update_slo_target_error_component import (
+            ApiV1HostsUpdateSloTargetErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_ssh_keys_id_error_component import (
+            ApiV1HostsUpdateSshKeysIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_target_availability_error_component import (
-            ApiV1HostsUpdateTargetAvailabilityErrorComponent,
+            ApiV1HostsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_tolerations_error_component import ApiV1HostsUpdateTolerationsErrorComponent
+        from ..models.api_v1_hosts_update_tolerations_error_component import (
+            ApiV1HostsUpdateTolerationsErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -373,93 +419,141 @@ class ApiV1HostsUpdateValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_hosts_update_active_error_component import ApiV1HostsUpdateActiveErrorComponent
-        from ..models.api_v1_hosts_update_alias_error_component import ApiV1HostsUpdateAliasErrorComponent
-        from ..models.api_v1_hosts_update_annotations_error_component import ApiV1HostsUpdateAnnotationsErrorComponent
-        from ..models.api_v1_hosts_update_archived_at_error_component import ApiV1HostsUpdateArchivedAtErrorComponent
-        from ..models.api_v1_hosts_update_archived_error_component import ApiV1HostsUpdateArchivedErrorComponent
+        from ..models.api_v1_hosts_update_active_error_component import (
+            ApiV1HostsUpdateActiveErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_alias_error_component import (
+            ApiV1HostsUpdateAliasErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_annotations_error_component import (
+            ApiV1HostsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_archived_at_error_component import (
+            ApiV1HostsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_archived_error_component import (
+            ApiV1HostsUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_archived_reason_error_component import (
-            ApiV1HostsUpdateArchivedReasonErrorComponent,
+            ApiV1HostsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_created_by_component_error_component import (
-            ApiV1HostsUpdateCreatedByComponentErrorComponent,
+            ApiV1HostsUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_credential_error_component import ApiV1HostsUpdateCredentialErrorComponent
-        from ..models.api_v1_hosts_update_criticality_error_component import ApiV1HostsUpdateCriticalityErrorComponent
-        from ..models.api_v1_hosts_update_debug_mode_error_component import ApiV1HostsUpdateDebugModeErrorComponent
-        from ..models.api_v1_hosts_update_default_ipv_4_error_component import ApiV1HostsUpdateDefaultIpv4ErrorComponent
-        from ..models.api_v1_hosts_update_default_ipv_6_error_component import ApiV1HostsUpdateDefaultIpv6ErrorComponent
-        from ..models.api_v1_hosts_update_description_error_component import ApiV1HostsUpdateDescriptionErrorComponent
-        from ..models.api_v1_hosts_update_display_name_error_component import ApiV1HostsUpdateDisplayNameErrorComponent
-        from ..models.api_v1_hosts_update_hostname_error_component import ApiV1HostsUpdateHostnameErrorComponent
-        from ..models.api_v1_hosts_update_k8s_cluster_error_component import ApiV1HostsUpdateK8SClusterErrorComponent
-        from ..models.api_v1_hosts_update_kind_error_component import ApiV1HostsUpdateKindErrorComponent
-        from ..models.api_v1_hosts_update_labels_error_component import ApiV1HostsUpdateLabelsErrorComponent
-        from ..models.api_v1_hosts_update_name_error_component import ApiV1HostsUpdateNameErrorComponent
+        from ..models.api_v1_hosts_update_credential_error_component import (
+            ApiV1HostsUpdateCredentialErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_criticality_error_component import (
+            ApiV1HostsUpdateCriticalityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_debug_mode_error_component import (
+            ApiV1HostsUpdateDebugModeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_default_ipv_4_error_component import (
+            ApiV1HostsUpdateDefaultIpv4ErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_default_ipv_6_error_component import (
+            ApiV1HostsUpdateDefaultIpv6ErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_description_error_component import (
+            ApiV1HostsUpdateDescriptionErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_display_name_error_component import (
+            ApiV1HostsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_hostname_error_component import (
+            ApiV1HostsUpdateHostnameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_k8s_cluster_error_component import (
+            ApiV1HostsUpdateK8SClusterErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_kind_error_component import (
+            ApiV1HostsUpdateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_labels_error_component import (
+            ApiV1HostsUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_name_error_component import (
+            ApiV1HostsUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_non_field_errors_error_component import (
-            ApiV1HostsUpdateNonFieldErrorsErrorComponent,
+            ApiV1HostsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_platform_service_error_component import (
-            ApiV1HostsUpdatePlatformServiceErrorComponent,
+            ApiV1HostsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_product_id_error_component import ApiV1HostsUpdateProductIdErrorComponent
+        from ..models.api_v1_hosts_update_product_id_error_component import (
+            ApiV1HostsUpdateProductIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_provider_account_id_error_component import (
-            ApiV1HostsUpdateProviderAccountIdErrorComponent,
+            ApiV1HostsUpdateProviderAccountIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_provider_error_component import ApiV1HostsUpdateProviderErrorComponent
+        from ..models.api_v1_hosts_update_provider_error_component import (
+            ApiV1HostsUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_provider_image_error_component import (
-            ApiV1HostsUpdateProviderImageErrorComponent,
+            ApiV1HostsUpdateProviderImageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_image_os_architecture_error_component import (
-            ApiV1HostsUpdateProviderImageOsArchitectureErrorComponent,
+            ApiV1HostsUpdateProviderImageOsArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_image_os_flavor_error_component import (
-            ApiV1HostsUpdateProviderImageOsFlavorErrorComponent,
+            ApiV1HostsUpdateProviderImageOsFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_image_os_version_error_component import (
-            ApiV1HostsUpdateProviderImageOsVersionErrorComponent,
+            ApiV1HostsUpdateProviderImageOsVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_location_error_component import (
-            ApiV1HostsUpdateProviderLocationErrorComponent,
+            ApiV1HostsUpdateProviderLocationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_reference_error_component import (
-            ApiV1HostsUpdateProviderReferenceErrorComponent,
+            ApiV1HostsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_provider_type_error_component import (
-            ApiV1HostsUpdateProviderTypeErrorComponent,
+            ApiV1HostsUpdateProviderTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_reconciliation_enabled_error_component import (
-            ApiV1HostsUpdateReconciliationEnabledErrorComponent,
+            ApiV1HostsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_cpu_architecture_error_component import (
-            ApiV1HostsUpdateResourceCpuArchitectureErrorComponent,
+            ApiV1HostsUpdateResourceCpuArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_cpu_cores_error_component import (
-            ApiV1HostsUpdateResourceCpuCoresErrorComponent,
+            ApiV1HostsUpdateResourceCpuCoresErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_cpu_type_error_component import (
-            ApiV1HostsUpdateResourceCpuTypeErrorComponent,
+            ApiV1HostsUpdateResourceCpuTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_disk_error_component import (
-            ApiV1HostsUpdateResourceDiskErrorComponent,
+            ApiV1HostsUpdateResourceDiskErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_update_resource_memory_error_component import (
-            ApiV1HostsUpdateResourceMemoryErrorComponent,
+            ApiV1HostsUpdateResourceMemoryErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_role_error_component import ApiV1HostsUpdateRoleErrorComponent
+        from ..models.api_v1_hosts_update_role_error_component import (
+            ApiV1HostsUpdateRoleErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_sla_availability_error_component import (
-            ApiV1HostsUpdateSlaAvailabilityErrorComponent,
+            ApiV1HostsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_sla_target_error_component import ApiV1HostsUpdateSlaTargetErrorComponent
+        from ..models.api_v1_hosts_update_sla_target_error_component import (
+            ApiV1HostsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_slo_availability_error_component import (
-            ApiV1HostsUpdateSloAvailabilityErrorComponent,
+            ApiV1HostsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_slo_target_error_component import ApiV1HostsUpdateSloTargetErrorComponent
-        from ..models.api_v1_hosts_update_ssh_keys_id_error_component import ApiV1HostsUpdateSshKeysIdErrorComponent
+        from ..models.api_v1_hosts_update_slo_target_error_component import (
+            ApiV1HostsUpdateSloTargetErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_hosts_update_ssh_keys_id_error_component import (
+            ApiV1HostsUpdateSshKeysIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_update_target_availability_error_component import (
-            ApiV1HostsUpdateTargetAvailabilityErrorComponent,
+            ApiV1HostsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_update_tolerations_error_component import ApiV1HostsUpdateTolerationsErrorComponent
+        from ..models.api_v1_hosts_update_tolerations_error_component import (
+            ApiV1HostsUpdateTolerationsErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

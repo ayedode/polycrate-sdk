@@ -163,82 +163,82 @@ class ApiV1PricingCalculatorStatesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_calculator_states_partial_update_access_count_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateAccessCountErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateAccessCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_annotations_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateAnnotationsErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_archived_at_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateArchivedAtErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_archived_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateArchivedErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_archived_reason_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_configuration_json_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateConfigurationJsonErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateConfigurationJsonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_criticality_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateCriticalityErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_debug_mode_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateDebugModeErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_display_name_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateDisplayNameErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_kind_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateKindErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_labels_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateLabelsErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_last_access_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateLastAccessErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateLastAccessErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_name_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateNameErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_non_field_errors_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_platform_service_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_provider_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateProviderErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_provider_id_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateProviderIdErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_provider_reference_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_sla_availability_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_sla_target_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateSlaTargetErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_slo_availability_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_slo_target_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateSloTargetErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_target_availability_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_tolerations_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateTolerationsErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_total_price_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateTotalPriceErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateTotalPriceErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -321,85 +321,85 @@ class ApiV1PricingCalculatorStatesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_calculator_states_partial_update_access_count_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateAccessCountErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateAccessCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_annotations_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateAnnotationsErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_archived_at_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateArchivedAtErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_archived_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateArchivedErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_archived_reason_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_booking_id_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateBookingIdErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateBookingIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_configuration_json_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateConfigurationJsonErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateConfigurationJsonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_criticality_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateCriticalityErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_debug_mode_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateDebugModeErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_display_name_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateDisplayNameErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_kind_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateKindErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_labels_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateLabelsErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_last_access_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateLastAccessErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateLastAccessErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_name_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateNameErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_non_field_errors_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_platform_service_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_provider_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateProviderErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_provider_id_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateProviderIdErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_provider_reference_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_sla_availability_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_sla_target_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateSlaTargetErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_slo_availability_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_slo_target_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateSloTargetErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_target_availability_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_tolerations_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateTolerationsErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_partial_update_total_price_error_component import (
-            ApiV1PricingCalculatorStatesPartialUpdateTotalPriceErrorComponent,
+            ApiV1PricingCalculatorStatesPartialUpdateTotalPriceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

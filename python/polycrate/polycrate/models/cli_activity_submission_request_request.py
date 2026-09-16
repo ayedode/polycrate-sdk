@@ -126,7 +126,7 @@ class CLIActivitySubmissionRequestRequest:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.cli_activity_submission_request_request_metadata import (
-            CLIActivitySubmissionRequestRequestMetadata,
+            CLIActivitySubmissionRequestRequestMetadata,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

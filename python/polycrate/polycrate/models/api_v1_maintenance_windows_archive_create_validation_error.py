@@ -168,85 +168,85 @@ class ApiV1MaintenanceWindowsArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_maintenance_windows_archive_create_annotations_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateAnnotationsErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_archived_at_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateArchivedAtErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_archived_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateArchivedErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_archived_reason_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_criticality_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateCriticalityErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_debug_mode_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateDebugModeErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_description_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateDescriptionErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_display_name_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateDisplayNameErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_is_system_default_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateIsSystemDefaultErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_kind_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateKindErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_labels_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateLabelsErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_lead_time_days_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateLeadTimeDaysErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateLeadTimeDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_name_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateNameErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_non_field_errors_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_note_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateNoteErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateNoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_notice_required_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateNoticeRequiredErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateNoticeRequiredErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_platform_service_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_provider_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateProviderErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_provider_id_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateProviderIdErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_provider_reference_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_reconciliation_enabled_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_sla_availability_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_sla_target_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateSlaTargetErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_slo_availability_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_slo_target_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateSloTargetErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_target_availability_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_tolerations_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateTolerationsErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -327,88 +327,88 @@ class ApiV1MaintenanceWindowsArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_maintenance_windows_archive_create_annotations_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateAnnotationsErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_archived_at_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateArchivedAtErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_archived_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateArchivedErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_archived_reason_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_criticality_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateCriticalityErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_debug_mode_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateDebugModeErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_description_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateDescriptionErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_display_name_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateDisplayNameErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_is_system_default_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateIsSystemDefaultErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_kind_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateKindErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_labels_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateLabelsErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_lead_time_days_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateLeadTimeDaysErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateLeadTimeDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_name_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateNameErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_non_field_errors_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_note_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateNoteErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateNoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_notice_required_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateNoticeRequiredErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateNoticeRequiredErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_platform_service_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_provider_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateProviderErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_provider_id_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateProviderIdErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_provider_reference_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_reconciliation_enabled_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_sla_availability_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_sla_target_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateSlaTargetErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_slo_availability_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_slo_target_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateSloTargetErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_target_availability_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_time_slots_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateTimeSlotsErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateTimeSlotsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_archive_create_tolerations_error_component import (
-            ApiV1MaintenanceWindowsArchiveCreateTolerationsErrorComponent,
+            ApiV1MaintenanceWindowsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

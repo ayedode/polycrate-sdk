@@ -43,10 +43,10 @@ class ApiV1UsersMembershipsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_users_memberships_partial_update_non_field_errors_error_component import (
-            ApiV1UsersMembershipsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1UsersMembershipsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_memberships_partial_update_organization_id_error_component import (
-            ApiV1UsersMembershipsPartialUpdateOrganizationIdErrorComponent,
+            ApiV1UsersMembershipsPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -77,13 +77,13 @@ class ApiV1UsersMembershipsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_users_memberships_partial_update_non_field_errors_error_component import (
-            ApiV1UsersMembershipsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1UsersMembershipsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_memberships_partial_update_organization_id_error_component import (
-            ApiV1UsersMembershipsPartialUpdateOrganizationIdErrorComponent,
+            ApiV1UsersMembershipsPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_memberships_partial_update_role_error_component import (
-            ApiV1UsersMembershipsPartialUpdateRoleErrorComponent,
+            ApiV1UsersMembershipsPartialUpdateRoleErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

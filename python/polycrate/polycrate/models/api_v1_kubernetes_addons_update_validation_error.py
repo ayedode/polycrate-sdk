@@ -185,103 +185,103 @@ class ApiV1KubernetesAddonsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_addons_update_actual_availability_error_component import (
-            ApiV1KubernetesAddonsUpdateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAddonsUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_allow_multiple_error_component import (
-            ApiV1KubernetesAddonsUpdateAllowMultipleErrorComponent,
+            ApiV1KubernetesAddonsUpdateAllowMultipleErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_annotations_error_component import (
-            ApiV1KubernetesAddonsUpdateAnnotationsErrorComponent,
+            ApiV1KubernetesAddonsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_archived_at_error_component import (
-            ApiV1KubernetesAddonsUpdateArchivedAtErrorComponent,
+            ApiV1KubernetesAddonsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_archived_error_component import (
-            ApiV1KubernetesAddonsUpdateArchivedErrorComponent,
+            ApiV1KubernetesAddonsUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_archived_reason_error_component import (
-            ApiV1KubernetesAddonsUpdateArchivedReasonErrorComponent,
+            ApiV1KubernetesAddonsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_block_name_error_component import (
-            ApiV1KubernetesAddonsUpdateBlockNameErrorComponent,
+            ApiV1KubernetesAddonsUpdateBlockNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_catalogue_app_error_component import (
-            ApiV1KubernetesAddonsUpdateCatalogueAppErrorComponent,
+            ApiV1KubernetesAddonsUpdateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_criticality_error_component import (
-            ApiV1KubernetesAddonsUpdateCriticalityErrorComponent,
+            ApiV1KubernetesAddonsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_debug_mode_error_component import (
-            ApiV1KubernetesAddonsUpdateDebugModeErrorComponent,
+            ApiV1KubernetesAddonsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_default_block_config_template_error_component import (
-            ApiV1KubernetesAddonsUpdateDefaultBlockConfigTemplateErrorComponent,
+            ApiV1KubernetesAddonsUpdateDefaultBlockConfigTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_default_version_error_component import (
-            ApiV1KubernetesAddonsUpdateDefaultVersionErrorComponent,
+            ApiV1KubernetesAddonsUpdateDefaultVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_discovery_enabled_error_component import (
-            ApiV1KubernetesAddonsUpdateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAddonsUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_display_name_error_component import (
-            ApiV1KubernetesAddonsUpdateDisplayNameErrorComponent,
+            ApiV1KubernetesAddonsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_is_default_error_component import (
-            ApiV1KubernetesAddonsUpdateIsDefaultErrorComponent,
+            ApiV1KubernetesAddonsUpdateIsDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_kind_error_component import (
-            ApiV1KubernetesAddonsUpdateKindErrorComponent,
+            ApiV1KubernetesAddonsUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_labels_error_component import (
-            ApiV1KubernetesAddonsUpdateLabelsErrorComponent,
+            ApiV1KubernetesAddonsUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_name_error_component import (
-            ApiV1KubernetesAddonsUpdateNameErrorComponent,
+            ApiV1KubernetesAddonsUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_non_field_errors_error_component import (
-            ApiV1KubernetesAddonsUpdateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAddonsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_order_error_component import (
-            ApiV1KubernetesAddonsUpdateOrderErrorComponent,
+            ApiV1KubernetesAddonsUpdateOrderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_platform_service_error_component import (
-            ApiV1KubernetesAddonsUpdatePlatformServiceErrorComponent,
+            ApiV1KubernetesAddonsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_provider_error_component import (
-            ApiV1KubernetesAddonsUpdateProviderErrorComponent,
+            ApiV1KubernetesAddonsUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_provider_id_error_component import (
-            ApiV1KubernetesAddonsUpdateProviderIdErrorComponent,
+            ApiV1KubernetesAddonsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_provider_reference_error_component import (
-            ApiV1KubernetesAddonsUpdateProviderReferenceErrorComponent,
+            ApiV1KubernetesAddonsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAddonsUpdateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAddonsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_scope_error_component import (
-            ApiV1KubernetesAddonsUpdateScopeErrorComponent,
+            ApiV1KubernetesAddonsUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_scope_expressions_error_component import (
-            ApiV1KubernetesAddonsUpdateScopeExpressionsErrorComponent,
+            ApiV1KubernetesAddonsUpdateScopeExpressionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_sla_availability_error_component import (
-            ApiV1KubernetesAddonsUpdateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAddonsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_sla_target_error_component import (
-            ApiV1KubernetesAddonsUpdateSlaTargetErrorComponent,
+            ApiV1KubernetesAddonsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_slo_availability_error_component import (
-            ApiV1KubernetesAddonsUpdateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAddonsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_slo_target_error_component import (
-            ApiV1KubernetesAddonsUpdateSloTargetErrorComponent,
+            ApiV1KubernetesAddonsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_target_availability_error_component import (
-            ApiV1KubernetesAddonsUpdateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAddonsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_template_block_error_component import (
-            ApiV1KubernetesAddonsUpdateTemplateBlockErrorComponent,
+            ApiV1KubernetesAddonsUpdateTemplateBlockErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -374,106 +374,106 @@ class ApiV1KubernetesAddonsUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_addons_update_actual_availability_error_component import (
-            ApiV1KubernetesAddonsUpdateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAddonsUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_allow_multiple_error_component import (
-            ApiV1KubernetesAddonsUpdateAllowMultipleErrorComponent,
+            ApiV1KubernetesAddonsUpdateAllowMultipleErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_annotations_error_component import (
-            ApiV1KubernetesAddonsUpdateAnnotationsErrorComponent,
+            ApiV1KubernetesAddonsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_archived_at_error_component import (
-            ApiV1KubernetesAddonsUpdateArchivedAtErrorComponent,
+            ApiV1KubernetesAddonsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_archived_error_component import (
-            ApiV1KubernetesAddonsUpdateArchivedErrorComponent,
+            ApiV1KubernetesAddonsUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_archived_reason_error_component import (
-            ApiV1KubernetesAddonsUpdateArchivedReasonErrorComponent,
+            ApiV1KubernetesAddonsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_block_name_error_component import (
-            ApiV1KubernetesAddonsUpdateBlockNameErrorComponent,
+            ApiV1KubernetesAddonsUpdateBlockNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_catalogue_app_error_component import (
-            ApiV1KubernetesAddonsUpdateCatalogueAppErrorComponent,
+            ApiV1KubernetesAddonsUpdateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_criticality_error_component import (
-            ApiV1KubernetesAddonsUpdateCriticalityErrorComponent,
+            ApiV1KubernetesAddonsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_debug_mode_error_component import (
-            ApiV1KubernetesAddonsUpdateDebugModeErrorComponent,
+            ApiV1KubernetesAddonsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_default_block_config_template_error_component import (
-            ApiV1KubernetesAddonsUpdateDefaultBlockConfigTemplateErrorComponent,
+            ApiV1KubernetesAddonsUpdateDefaultBlockConfigTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_default_version_error_component import (
-            ApiV1KubernetesAddonsUpdateDefaultVersionErrorComponent,
+            ApiV1KubernetesAddonsUpdateDefaultVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_discovery_enabled_error_component import (
-            ApiV1KubernetesAddonsUpdateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAddonsUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_display_name_error_component import (
-            ApiV1KubernetesAddonsUpdateDisplayNameErrorComponent,
+            ApiV1KubernetesAddonsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_enforcement_error_component import (
-            ApiV1KubernetesAddonsUpdateEnforcementErrorComponent,
+            ApiV1KubernetesAddonsUpdateEnforcementErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_is_default_error_component import (
-            ApiV1KubernetesAddonsUpdateIsDefaultErrorComponent,
+            ApiV1KubernetesAddonsUpdateIsDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_kind_error_component import (
-            ApiV1KubernetesAddonsUpdateKindErrorComponent,
+            ApiV1KubernetesAddonsUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_labels_error_component import (
-            ApiV1KubernetesAddonsUpdateLabelsErrorComponent,
+            ApiV1KubernetesAddonsUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_name_error_component import (
-            ApiV1KubernetesAddonsUpdateNameErrorComponent,
+            ApiV1KubernetesAddonsUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_non_field_errors_error_component import (
-            ApiV1KubernetesAddonsUpdateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAddonsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_order_error_component import (
-            ApiV1KubernetesAddonsUpdateOrderErrorComponent,
+            ApiV1KubernetesAddonsUpdateOrderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_platform_service_error_component import (
-            ApiV1KubernetesAddonsUpdatePlatformServiceErrorComponent,
+            ApiV1KubernetesAddonsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_provider_error_component import (
-            ApiV1KubernetesAddonsUpdateProviderErrorComponent,
+            ApiV1KubernetesAddonsUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_provider_id_error_component import (
-            ApiV1KubernetesAddonsUpdateProviderIdErrorComponent,
+            ApiV1KubernetesAddonsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_provider_reference_error_component import (
-            ApiV1KubernetesAddonsUpdateProviderReferenceErrorComponent,
+            ApiV1KubernetesAddonsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAddonsUpdateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAddonsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_scope_error_component import (
-            ApiV1KubernetesAddonsUpdateScopeErrorComponent,
+            ApiV1KubernetesAddonsUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_scope_expressions_error_component import (
-            ApiV1KubernetesAddonsUpdateScopeExpressionsErrorComponent,
+            ApiV1KubernetesAddonsUpdateScopeExpressionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_sla_availability_error_component import (
-            ApiV1KubernetesAddonsUpdateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAddonsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_sla_target_error_component import (
-            ApiV1KubernetesAddonsUpdateSlaTargetErrorComponent,
+            ApiV1KubernetesAddonsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_slo_availability_error_component import (
-            ApiV1KubernetesAddonsUpdateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAddonsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_slo_target_error_component import (
-            ApiV1KubernetesAddonsUpdateSloTargetErrorComponent,
+            ApiV1KubernetesAddonsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_target_availability_error_component import (
-            ApiV1KubernetesAddonsUpdateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAddonsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addons_update_template_block_error_component import (
-            ApiV1KubernetesAddonsUpdateTemplateBlockErrorComponent,
+            ApiV1KubernetesAddonsUpdateTemplateBlockErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

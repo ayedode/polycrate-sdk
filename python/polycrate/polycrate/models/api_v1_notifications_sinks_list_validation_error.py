@@ -60,22 +60,22 @@ class ApiV1NotificationsSinksListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_notifications_sinks_list_created_at_error_component import (
-            ApiV1NotificationsSinksListCreatedAtErrorComponent,
+            ApiV1NotificationsSinksListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_kind_error_component import (
-            ApiV1NotificationsSinksListKindErrorComponent,
+            ApiV1NotificationsSinksListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_name_error_component import (
-            ApiV1NotificationsSinksListNameErrorComponent,
+            ApiV1NotificationsSinksListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_scope_error_component import (
-            ApiV1NotificationsSinksListScopeErrorComponent,
+            ApiV1NotificationsSinksListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_state_error_component import (
-            ApiV1NotificationsSinksListStateErrorComponent,
+            ApiV1NotificationsSinksListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_updated_at_error_component import (
-            ApiV1NotificationsSinksListUpdatedAtErrorComponent,
+            ApiV1NotificationsSinksListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -114,25 +114,25 @@ class ApiV1NotificationsSinksListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_notifications_sinks_list_created_at_error_component import (
-            ApiV1NotificationsSinksListCreatedAtErrorComponent,
+            ApiV1NotificationsSinksListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_created_by_component_error_component import (
-            ApiV1NotificationsSinksListCreatedByComponentErrorComponent,
+            ApiV1NotificationsSinksListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_kind_error_component import (
-            ApiV1NotificationsSinksListKindErrorComponent,
+            ApiV1NotificationsSinksListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_name_error_component import (
-            ApiV1NotificationsSinksListNameErrorComponent,
+            ApiV1NotificationsSinksListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_scope_error_component import (
-            ApiV1NotificationsSinksListScopeErrorComponent,
+            ApiV1NotificationsSinksListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_state_error_component import (
-            ApiV1NotificationsSinksListStateErrorComponent,
+            ApiV1NotificationsSinksListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_list_updated_at_error_component import (
-            ApiV1NotificationsSinksListUpdatedAtErrorComponent,
+            ApiV1NotificationsSinksListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

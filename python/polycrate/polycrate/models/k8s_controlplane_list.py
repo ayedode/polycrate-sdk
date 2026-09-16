@@ -75,6 +75,7 @@ class K8SControlplaneList:
             k8s_cluster (K8SControlplaneListK8SClusterType0 | None):
             ip_address (None | str):
             loadbalancer_mode (str):
+            exposure_type (str):
             storage_class (str):
             cluster_domain (str):
             hostname (None | str):
@@ -102,6 +103,7 @@ class K8SControlplaneList:
     k8s_cluster: K8SControlplaneListK8SClusterType0 | None
     ip_address: None | str
     loadbalancer_mode: str
+    exposure_type: str
     storage_class: str
     cluster_domain: str
     hostname: None | str
@@ -110,11 +112,15 @@ class K8SControlplaneList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_controlplane_list_block_type_0 import K8SControlplaneListBlockType0
-        from ..models.k8s_controlplane_list_k8s_cluster_type_0 import K8SControlplaneListK8SClusterType0
-        from ..models.k8s_controlplane_list_organization_type_0 import K8SControlplaneListOrganizationType0
-        from ..models.k8s_controlplane_list_region_type_0 import K8SControlplaneListRegionType0
-        from ..models.k8s_controlplane_list_workspace_type_0 import K8SControlplaneListWorkspaceType0
+        from ..models.k8s_controlplane_list_block_type_0 import K8SControlplaneListBlockType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_list_k8s_cluster_type_0 import (
+            K8SControlplaneListK8SClusterType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_controlplane_list_organization_type_0 import (
+            K8SControlplaneListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_controlplane_list_region_type_0 import K8SControlplaneListRegionType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_list_workspace_type_0 import K8SControlplaneListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -184,6 +190,8 @@ class K8SControlplaneList:
 
         loadbalancer_mode = self.loadbalancer_mode
 
+        exposure_type = self.exposure_type
+
         storage_class = self.storage_class
 
         cluster_domain = self.cluster_domain
@@ -221,6 +229,7 @@ class K8SControlplaneList:
                 "k8s_cluster": k8s_cluster,
                 "ip_address": ip_address,
                 "loadbalancer_mode": loadbalancer_mode,
+                "exposure_type": exposure_type,
                 "storage_class": storage_class,
                 "cluster_domain": cluster_domain,
                 "hostname": hostname,
@@ -234,14 +243,18 @@ class K8SControlplaneList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.k8s_controlplane_list_active_condition_instances_item import (
-            K8SControlplaneListActiveConditionInstancesItem,
+            K8SControlplaneListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.k8s_controlplane_list_block_type_0 import K8SControlplaneListBlockType0
-        from ..models.k8s_controlplane_list_created import K8SControlplaneListCreated
-        from ..models.k8s_controlplane_list_k8s_cluster_type_0 import K8SControlplaneListK8SClusterType0
-        from ..models.k8s_controlplane_list_organization_type_0 import K8SControlplaneListOrganizationType0
-        from ..models.k8s_controlplane_list_region_type_0 import K8SControlplaneListRegionType0
-        from ..models.k8s_controlplane_list_workspace_type_0 import K8SControlplaneListWorkspaceType0
+        from ..models.k8s_controlplane_list_block_type_0 import K8SControlplaneListBlockType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_list_created import K8SControlplaneListCreated  # noqa: PLC0415
+        from ..models.k8s_controlplane_list_k8s_cluster_type_0 import (
+            K8SControlplaneListK8SClusterType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_controlplane_list_organization_type_0 import (
+            K8SControlplaneListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_controlplane_list_region_type_0 import K8SControlplaneListRegionType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_list_workspace_type_0 import K8SControlplaneListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -374,6 +387,8 @@ class K8SControlplaneList:
 
         loadbalancer_mode = d.pop("loadbalancer_mode")
 
+        exposure_type = d.pop("exposure_type")
+
         storage_class = d.pop("storage_class")
 
         cluster_domain = d.pop("cluster_domain")
@@ -420,6 +435,7 @@ class K8SControlplaneList:
             k8s_cluster=k8s_cluster,
             ip_address=ip_address,
             loadbalancer_mode=loadbalancer_mode,
+            exposure_type=exposure_type,
             storage_class=storage_class,
             cluster_domain=cluster_domain,
             hostname=hostname,

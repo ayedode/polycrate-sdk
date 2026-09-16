@@ -47,13 +47,13 @@ class ApiV1ConversationsProvidersListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conversations_providers_list_kind_error_component import (
-            ApiV1ConversationsProvidersListKindErrorComponent,
+            ApiV1ConversationsProvidersListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_list_organization_error_component import (
-            ApiV1ConversationsProvidersListOrganizationErrorComponent,
+            ApiV1ConversationsProvidersListOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_list_state_error_component import (
-            ApiV1ConversationsProvidersListStateErrorComponent,
+            ApiV1ConversationsProvidersListStateErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -86,16 +86,16 @@ class ApiV1ConversationsProvidersListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conversations_providers_list_kind_error_component import (
-            ApiV1ConversationsProvidersListKindErrorComponent,
+            ApiV1ConversationsProvidersListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_list_organization_error_component import (
-            ApiV1ConversationsProvidersListOrganizationErrorComponent,
+            ApiV1ConversationsProvidersListOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_list_search_error_component import (
-            ApiV1ConversationsProvidersListSearchErrorComponent,
+            ApiV1ConversationsProvidersListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_list_state_error_component import (
-            ApiV1ConversationsProvidersListStateErrorComponent,
+            ApiV1ConversationsProvidersListStateErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

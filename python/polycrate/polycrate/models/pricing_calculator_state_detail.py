@@ -223,15 +223,17 @@ class PricingCalculatorStateDetail:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.pricing_calculator_state_detail_deleted_by_user_type_0 import (
-            PricingCalculatorStateDetailDeletedByUserType0,
+            PricingCalculatorStateDetailDeletedByUserType0,  # noqa: PLC0415
         )
         from ..models.pricing_calculator_state_detail_last_action_run_type_0 import (
-            PricingCalculatorStateDetailLastActionRunType0,
+            PricingCalculatorStateDetailLastActionRunType0,  # noqa: PLC0415
         )
         from ..models.pricing_calculator_state_detail_organization_type_0 import (
-            PricingCalculatorStateDetailOrganizationType0,
+            PricingCalculatorStateDetailOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.pricing_calculator_state_detail_workspace_type_0 import PricingCalculatorStateDetailWorkspaceType0
+        from ..models.pricing_calculator_state_detail_workspace_type_0 import (
+            PricingCalculatorStateDetailWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -561,18 +563,22 @@ class PricingCalculatorStateDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pricing_calculator_state_detail_created import PricingCalculatorStateDetailCreated
+        from ..models.pricing_calculator_state_detail_created import (
+            PricingCalculatorStateDetailCreated,  # noqa: PLC0415
+        )
         from ..models.pricing_calculator_state_detail_deleted_by_user_type_0 import (
-            PricingCalculatorStateDetailDeletedByUserType0,
+            PricingCalculatorStateDetailDeletedByUserType0,  # noqa: PLC0415
         )
         from ..models.pricing_calculator_state_detail_last_action_run_type_0 import (
-            PricingCalculatorStateDetailLastActionRunType0,
+            PricingCalculatorStateDetailLastActionRunType0,  # noqa: PLC0415
         )
         from ..models.pricing_calculator_state_detail_organization_type_0 import (
-            PricingCalculatorStateDetailOrganizationType0,
+            PricingCalculatorStateDetailOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.pricing_calculator_state_detail_workspace_type_0 import PricingCalculatorStateDetailWorkspaceType0
-        from ..models.pricing_quote_simple import PricingQuoteSimple
+        from ..models.pricing_calculator_state_detail_workspace_type_0 import (
+            PricingCalculatorStateDetailWorkspaceType0,  # noqa: PLC0415
+        )
+        from ..models.pricing_quote_simple import PricingQuoteSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

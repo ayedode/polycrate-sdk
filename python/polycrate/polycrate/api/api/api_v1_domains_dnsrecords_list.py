@@ -367,15 +367,15 @@ def sync_detailed(
     | ErrorResponse502
     | PaginatedDNSRecordListList
 ]:
-    r"""CRUD endpoint for DNS Records.
+    """CRUD endpoint for DNS Records.
 
     Supports both internal (PowerDNS-backed, DB-persisted) and external
     (Lexicon-backed, provider-only) zones. The dispatch is driven by the
     zone's `kind` attribute:
 
-    - `kind=\"internal\"`: records are DB rows and mutations are synchronised
+    - `kind="internal"`: records are DB rows and mutations are synchronised
       to PowerDNS within a transaction.
-    - `kind=\"external\"`: records live only at the provider; the API passes
+    - `kind="external"`: records live only at the provider; the API passes
       operations straight through to python-lexicon.
 
     For external zones, `?dns_zone=<uuid>` is REQUIRED on list, and
@@ -495,15 +495,15 @@ def sync(
     | PaginatedDNSRecordListList
     | None
 ):
-    r"""CRUD endpoint for DNS Records.
+    """CRUD endpoint for DNS Records.
 
     Supports both internal (PowerDNS-backed, DB-persisted) and external
     (Lexicon-backed, provider-only) zones. The dispatch is driven by the
     zone's `kind` attribute:
 
-    - `kind=\"internal\"`: records are DB rows and mutations are synchronised
+    - `kind="internal"`: records are DB rows and mutations are synchronised
       to PowerDNS within a transaction.
-    - `kind=\"external\"`: records live only at the provider; the API passes
+    - `kind="external"`: records live only at the provider; the API passes
       operations straight through to python-lexicon.
 
     For external zones, `?dns_zone=<uuid>` is REQUIRED on list, and
@@ -617,15 +617,15 @@ async def asyncio_detailed(
     | ErrorResponse502
     | PaginatedDNSRecordListList
 ]:
-    r"""CRUD endpoint for DNS Records.
+    """CRUD endpoint for DNS Records.
 
     Supports both internal (PowerDNS-backed, DB-persisted) and external
     (Lexicon-backed, provider-only) zones. The dispatch is driven by the
     zone's `kind` attribute:
 
-    - `kind=\"internal\"`: records are DB rows and mutations are synchronised
+    - `kind="internal"`: records are DB rows and mutations are synchronised
       to PowerDNS within a transaction.
-    - `kind=\"external\"`: records live only at the provider; the API passes
+    - `kind="external"`: records live only at the provider; the API passes
       operations straight through to python-lexicon.
 
     For external zones, `?dns_zone=<uuid>` is REQUIRED on list, and
@@ -743,15 +743,15 @@ async def asyncio(
     | PaginatedDNSRecordListList
     | None
 ):
-    r"""CRUD endpoint for DNS Records.
+    """CRUD endpoint for DNS Records.
 
     Supports both internal (PowerDNS-backed, DB-persisted) and external
     (Lexicon-backed, provider-only) zones. The dispatch is driven by the
     zone's `kind` attribute:
 
-    - `kind=\"internal\"`: records are DB rows and mutations are synchronised
+    - `kind="internal"`: records are DB rows and mutations are synchronised
       to PowerDNS within a transaction.
-    - `kind=\"external\"`: records live only at the provider; the API passes
+    - `kind="external"`: records live only at the provider; the API passes
       operations straight through to python-lexicon.
 
     For external zones, `?dns_zone=<uuid>` is REQUIRED on list, and

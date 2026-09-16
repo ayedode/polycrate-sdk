@@ -1,12 +1,13 @@
 from typing import Literal
 
-ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponentCode = Literal["invalid", "null"]
+ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponentCode = Literal["invalid", "null", "unique"]
 
 API_V1_KUBERNETES_CONTROLPLANES_PARTIAL_UPDATE_NON_FIELD_ERRORS_ERROR_COMPONENT_CODE_VALUES: set[
     ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponentCode
 ] = {
     "invalid",
     "null",
+    "unique",
 }
 
 

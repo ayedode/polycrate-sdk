@@ -158,82 +158,82 @@ class ApiV1PricingRulesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_rules_archive_create_active_from_error_component import (
-            ApiV1PricingRulesArchiveCreateActiveFromErrorComponent,
+            ApiV1PricingRulesArchiveCreateActiveFromErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_annotations_error_component import (
-            ApiV1PricingRulesArchiveCreateAnnotationsErrorComponent,
+            ApiV1PricingRulesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_archived_at_error_component import (
-            ApiV1PricingRulesArchiveCreateArchivedAtErrorComponent,
+            ApiV1PricingRulesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_archived_error_component import (
-            ApiV1PricingRulesArchiveCreateArchivedErrorComponent,
+            ApiV1PricingRulesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_archived_reason_error_component import (
-            ApiV1PricingRulesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1PricingRulesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_criticality_error_component import (
-            ApiV1PricingRulesArchiveCreateCriticalityErrorComponent,
+            ApiV1PricingRulesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_debug_mode_error_component import (
-            ApiV1PricingRulesArchiveCreateDebugModeErrorComponent,
+            ApiV1PricingRulesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_discount_type_error_component import (
-            ApiV1PricingRulesArchiveCreateDiscountTypeErrorComponent,
+            ApiV1PricingRulesArchiveCreateDiscountTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_discount_value_error_component import (
-            ApiV1PricingRulesArchiveCreateDiscountValueErrorComponent,
+            ApiV1PricingRulesArchiveCreateDiscountValueErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_display_name_error_component import (
-            ApiV1PricingRulesArchiveCreateDisplayNameErrorComponent,
+            ApiV1PricingRulesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_kind_error_component import (
-            ApiV1PricingRulesArchiveCreateKindErrorComponent,
+            ApiV1PricingRulesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_labels_error_component import (
-            ApiV1PricingRulesArchiveCreateLabelsErrorComponent,
+            ApiV1PricingRulesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_name_error_component import (
-            ApiV1PricingRulesArchiveCreateNameErrorComponent,
+            ApiV1PricingRulesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_non_field_errors_error_component import (
-            ApiV1PricingRulesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingRulesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_platform_service_error_component import (
-            ApiV1PricingRulesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1PricingRulesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_product_kind_error_component import (
-            ApiV1PricingRulesArchiveCreateProductKindErrorComponent,
+            ApiV1PricingRulesArchiveCreateProductKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_provider_error_component import (
-            ApiV1PricingRulesArchiveCreateProviderErrorComponent,
+            ApiV1PricingRulesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_provider_id_error_component import (
-            ApiV1PricingRulesArchiveCreateProviderIdErrorComponent,
+            ApiV1PricingRulesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_provider_reference_error_component import (
-            ApiV1PricingRulesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1PricingRulesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_reconciliation_enabled_error_component import (
-            ApiV1PricingRulesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingRulesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_sla_availability_error_component import (
-            ApiV1PricingRulesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingRulesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_sla_target_error_component import (
-            ApiV1PricingRulesArchiveCreateSlaTargetErrorComponent,
+            ApiV1PricingRulesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_slo_availability_error_component import (
-            ApiV1PricingRulesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1PricingRulesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_slo_target_error_component import (
-            ApiV1PricingRulesArchiveCreateSloTargetErrorComponent,
+            ApiV1PricingRulesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_target_availability_error_component import (
-            ApiV1PricingRulesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingRulesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_tolerations_error_component import (
-            ApiV1PricingRulesArchiveCreateTolerationsErrorComponent,
+            ApiV1PricingRulesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -312,85 +312,85 @@ class ApiV1PricingRulesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_rules_archive_create_active_from_error_component import (
-            ApiV1PricingRulesArchiveCreateActiveFromErrorComponent,
+            ApiV1PricingRulesArchiveCreateActiveFromErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_active_until_error_component import (
-            ApiV1PricingRulesArchiveCreateActiveUntilErrorComponent,
+            ApiV1PricingRulesArchiveCreateActiveUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_annotations_error_component import (
-            ApiV1PricingRulesArchiveCreateAnnotationsErrorComponent,
+            ApiV1PricingRulesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_archived_at_error_component import (
-            ApiV1PricingRulesArchiveCreateArchivedAtErrorComponent,
+            ApiV1PricingRulesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_archived_error_component import (
-            ApiV1PricingRulesArchiveCreateArchivedErrorComponent,
+            ApiV1PricingRulesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_archived_reason_error_component import (
-            ApiV1PricingRulesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1PricingRulesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_criticality_error_component import (
-            ApiV1PricingRulesArchiveCreateCriticalityErrorComponent,
+            ApiV1PricingRulesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_debug_mode_error_component import (
-            ApiV1PricingRulesArchiveCreateDebugModeErrorComponent,
+            ApiV1PricingRulesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_discount_type_error_component import (
-            ApiV1PricingRulesArchiveCreateDiscountTypeErrorComponent,
+            ApiV1PricingRulesArchiveCreateDiscountTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_discount_value_error_component import (
-            ApiV1PricingRulesArchiveCreateDiscountValueErrorComponent,
+            ApiV1PricingRulesArchiveCreateDiscountValueErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_display_name_error_component import (
-            ApiV1PricingRulesArchiveCreateDisplayNameErrorComponent,
+            ApiV1PricingRulesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_kind_error_component import (
-            ApiV1PricingRulesArchiveCreateKindErrorComponent,
+            ApiV1PricingRulesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_labels_error_component import (
-            ApiV1PricingRulesArchiveCreateLabelsErrorComponent,
+            ApiV1PricingRulesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_name_error_component import (
-            ApiV1PricingRulesArchiveCreateNameErrorComponent,
+            ApiV1PricingRulesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_non_field_errors_error_component import (
-            ApiV1PricingRulesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingRulesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_platform_service_error_component import (
-            ApiV1PricingRulesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1PricingRulesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_product_kind_error_component import (
-            ApiV1PricingRulesArchiveCreateProductKindErrorComponent,
+            ApiV1PricingRulesArchiveCreateProductKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_provider_error_component import (
-            ApiV1PricingRulesArchiveCreateProviderErrorComponent,
+            ApiV1PricingRulesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_provider_id_error_component import (
-            ApiV1PricingRulesArchiveCreateProviderIdErrorComponent,
+            ApiV1PricingRulesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_provider_reference_error_component import (
-            ApiV1PricingRulesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1PricingRulesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_reconciliation_enabled_error_component import (
-            ApiV1PricingRulesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingRulesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_sla_availability_error_component import (
-            ApiV1PricingRulesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingRulesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_sla_target_error_component import (
-            ApiV1PricingRulesArchiveCreateSlaTargetErrorComponent,
+            ApiV1PricingRulesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_slo_availability_error_component import (
-            ApiV1PricingRulesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1PricingRulesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_slo_target_error_component import (
-            ApiV1PricingRulesArchiveCreateSloTargetErrorComponent,
+            ApiV1PricingRulesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_target_availability_error_component import (
-            ApiV1PricingRulesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingRulesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_archive_create_tolerations_error_component import (
-            ApiV1PricingRulesArchiveCreateTolerationsErrorComponent,
+            ApiV1PricingRulesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

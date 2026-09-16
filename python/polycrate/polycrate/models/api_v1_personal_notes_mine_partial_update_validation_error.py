@@ -38,7 +38,7 @@ class ApiV1PersonalNotesMinePartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_personal_notes_mine_partial_update_non_field_errors_error_component import (
-            ApiV1PersonalNotesMinePartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PersonalNotesMinePartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -67,10 +67,10 @@ class ApiV1PersonalNotesMinePartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_personal_notes_mine_partial_update_content_error_component import (
-            ApiV1PersonalNotesMinePartialUpdateContentErrorComponent,
+            ApiV1PersonalNotesMinePartialUpdateContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_personal_notes_mine_partial_update_non_field_errors_error_component import (
-            ApiV1PersonalNotesMinePartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PersonalNotesMinePartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -43,10 +43,10 @@ class ApiV1WorkspaceTemplatesRenderCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_workspace_templates_render_create_non_field_errors_error_component import (
-            ApiV1WorkspaceTemplatesRenderCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspaceTemplatesRenderCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_render_create_workspace_name_error_component import (
-            ApiV1WorkspaceTemplatesRenderCreateWorkspaceNameErrorComponent,
+            ApiV1WorkspaceTemplatesRenderCreateWorkspaceNameErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -77,13 +77,13 @@ class ApiV1WorkspaceTemplatesRenderCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_workspace_templates_render_create_extra_context_error_component import (
-            ApiV1WorkspaceTemplatesRenderCreateExtraContextErrorComponent,
+            ApiV1WorkspaceTemplatesRenderCreateExtraContextErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_render_create_non_field_errors_error_component import (
-            ApiV1WorkspaceTemplatesRenderCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspaceTemplatesRenderCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_render_create_workspace_name_error_component import (
-            ApiV1WorkspaceTemplatesRenderCreateWorkspaceNameErrorComponent,
+            ApiV1WorkspaceTemplatesRenderCreateWorkspaceNameErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

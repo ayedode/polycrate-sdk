@@ -144,6 +144,7 @@ class ProductDetail:
         price_per_unit (None | str | Unset):
         cost_per_unit (None | str | Unset):
         provider_entity (None | Unset | UUID):
+        pop (None | Unset | UUID): Concrete IaaS location (e.g. hetzner-fsn1). Location slug is the PoP name suffix.
         provider_type_id (None | str | Unset):
         config (Any | Unset):
     """
@@ -209,15 +210,16 @@ class ProductDetail:
     price_per_unit: None | str | Unset = UNSET
     cost_per_unit: None | str | Unset = UNSET
     provider_entity: None | Unset | UUID = UNSET
+    pop: None | Unset | UUID = UNSET
     provider_type_id: None | str | Unset = UNSET
     config: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.product_detail_deleted_by_user_type_0 import ProductDetailDeletedByUserType0
-        from ..models.product_detail_last_action_run_type_0 import ProductDetailLastActionRunType0
-        from ..models.product_detail_organization_type_0 import ProductDetailOrganizationType0
-        from ..models.product_detail_workspace_type_0 import ProductDetailWorkspaceType0
+        from ..models.product_detail_deleted_by_user_type_0 import ProductDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.product_detail_last_action_run_type_0 import ProductDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.product_detail_organization_type_0 import ProductDetailOrganizationType0  # noqa: PLC0415
+        from ..models.product_detail_workspace_type_0 import ProductDetailWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -447,6 +449,14 @@ class ProductDetail:
         else:
             provider_entity = self.provider_entity
 
+        pop: None | str | Unset
+        if isinstance(self.pop, Unset):
+            pop = UNSET
+        elif isinstance(self.pop, UUID):
+            pop = str(self.pop)
+        else:
+            pop = self.pop
+
         provider_type_id: None | str | Unset
         if isinstance(self.provider_type_id, Unset):
             provider_type_id = UNSET
@@ -546,6 +556,8 @@ class ProductDetail:
             field_dict["cost_per_unit"] = cost_per_unit
         if provider_entity is not UNSET:
             field_dict["provider_entity"] = provider_entity
+        if pop is not UNSET:
+            field_dict["pop"] = pop
         if provider_type_id is not UNSET:
             field_dict["provider_type_id"] = provider_type_id
         if config is not UNSET:
@@ -555,11 +567,11 @@ class ProductDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.product_detail_created import ProductDetailCreated
-        from ..models.product_detail_deleted_by_user_type_0 import ProductDetailDeletedByUserType0
-        from ..models.product_detail_last_action_run_type_0 import ProductDetailLastActionRunType0
-        from ..models.product_detail_organization_type_0 import ProductDetailOrganizationType0
-        from ..models.product_detail_workspace_type_0 import ProductDetailWorkspaceType0
+        from ..models.product_detail_created import ProductDetailCreated  # noqa: PLC0415
+        from ..models.product_detail_deleted_by_user_type_0 import ProductDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.product_detail_last_action_run_type_0 import ProductDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.product_detail_organization_type_0 import ProductDetailOrganizationType0  # noqa: PLC0415
+        from ..models.product_detail_workspace_type_0 import ProductDetailWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -970,6 +982,23 @@ class ProductDetail:
 
         provider_entity = _parse_provider_entity(d.pop("provider_entity", UNSET))
 
+        def _parse_pop(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                pop_type_0 = UUID(data)
+
+                return pop_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        pop = _parse_pop(d.pop("pop", UNSET))
+
         def _parse_provider_type_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -1043,6 +1072,7 @@ class ProductDetail:
             price_per_unit=price_per_unit,
             cost_per_unit=cost_per_unit,
             provider_entity=provider_entity,
+            pop=pop,
             provider_type_id=provider_type_id,
             config=config,
         )

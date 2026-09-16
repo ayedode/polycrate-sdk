@@ -242,11 +242,11 @@ class DataSource:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.data_source_deleted_by_user_type_0 import DataSourceDeletedByUserType0
-        from ..models.data_source_last_action_run_type_0 import DataSourceLastActionRunType0
-        from ..models.data_source_organization_type_0 import DataSourceOrganizationType0
-        from ..models.data_source_provider_entity_type_0 import DataSourceProviderEntityType0
-        from ..models.data_source_workspace_type_0 import DataSourceWorkspaceType0
+        from ..models.data_source_deleted_by_user_type_0 import DataSourceDeletedByUserType0  # noqa: PLC0415
+        from ..models.data_source_last_action_run_type_0 import DataSourceLastActionRunType0  # noqa: PLC0415
+        from ..models.data_source_organization_type_0 import DataSourceOrganizationType0  # noqa: PLC0415
+        from ..models.data_source_provider_entity_type_0 import DataSourceProviderEntityType0  # noqa: PLC0415
+        from ..models.data_source_workspace_type_0 import DataSourceWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -631,15 +631,15 @@ class DataSource:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential_simple import CredentialSimple
-        from ..models.data_source_created import DataSourceCreated
-        from ..models.data_source_deleted_by_user_type_0 import DataSourceDeletedByUserType0
-        from ..models.data_source_last_action_run_type_0 import DataSourceLastActionRunType0
-        from ..models.data_source_organization_type_0 import DataSourceOrganizationType0
-        from ..models.data_source_provider_entity_type_0 import DataSourceProviderEntityType0
-        from ..models.data_source_workspace_type_0 import DataSourceWorkspaceType0
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.credential_simple import CredentialSimple  # noqa: PLC0415
+        from ..models.data_source_created import DataSourceCreated  # noqa: PLC0415
+        from ..models.data_source_deleted_by_user_type_0 import DataSourceDeletedByUserType0  # noqa: PLC0415
+        from ..models.data_source_last_action_run_type_0 import DataSourceLastActionRunType0  # noqa: PLC0415
+        from ..models.data_source_organization_type_0 import DataSourceOrganizationType0  # noqa: PLC0415
+        from ..models.data_source_provider_entity_type_0 import DataSourceProviderEntityType0  # noqa: PLC0415
+        from ..models.data_source_workspace_type_0 import DataSourceWorkspaceType0  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

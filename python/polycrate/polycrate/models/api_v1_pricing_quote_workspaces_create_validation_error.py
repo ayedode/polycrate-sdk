@@ -231,124 +231,124 @@ class ApiV1PricingQuoteWorkspacesCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_quote_workspaces_create_annotations_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateAnnotationsErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_archived_at_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateArchivedAtErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_archived_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateArchivedErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_archived_reason_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateArchivedReasonErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_block_storage_gb_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateBlockStorageGbErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateBlockStorageGbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_block_storage_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateBlockStorageProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateBlockStorageProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_block_storage_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateBlockStorageQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateBlockStorageQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_cluster_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateClusterProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateClusterProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_cluster_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateClusterQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateClusterQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_criticality_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateCriticalityErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_debug_mode_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateDebugModeErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_display_name_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateDisplayNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_host_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateHostProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateHostProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_host_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateHostQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateHostQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_hosts_count_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateHostsCountErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateHostsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_kind_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateKindErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_label_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLabelErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLabelErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_labels_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLabelsErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_loadbalancer_count_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLoadbalancerCountErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLoadbalancerCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_loadbalancer_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLoadbalancerProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLoadbalancerProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_loadbalancer_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLoadbalancerQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLoadbalancerQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_name_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_non_field_errors_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_object_storage_gb_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateObjectStorageGbErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateObjectStorageGbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_object_storage_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateObjectStorageProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateObjectStorageProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_object_storage_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateObjectStorageQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateObjectStorageQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_platform_service_error_component import (
-            ApiV1PricingQuoteWorkspacesCreatePlatformServiceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_provider_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateProviderErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_provider_id_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateProviderIdErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_provider_reference_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateProviderReferenceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_quote_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateQuoteErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateQuoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_reconciliation_enabled_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_sla_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_sla_target_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSlaTargetErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_slo_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSloAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_slo_target_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSloTargetErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_support_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSupportProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSupportProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_support_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSupportQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSupportQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_target_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_tolerations_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateTolerationsErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -455,127 +455,127 @@ class ApiV1PricingQuoteWorkspacesCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_quote_workspaces_create_annotations_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateAnnotationsErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_archived_at_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateArchivedAtErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_archived_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateArchivedErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_archived_reason_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateArchivedReasonErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_block_storage_gb_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateBlockStorageGbErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateBlockStorageGbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_block_storage_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateBlockStorageProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateBlockStorageProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_block_storage_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateBlockStorageQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateBlockStorageQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_cluster_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateClusterProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateClusterProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_cluster_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateClusterQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateClusterQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_criticality_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateCriticalityErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_debug_mode_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateDebugModeErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_display_name_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateDisplayNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_host_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateHostProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateHostProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_host_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateHostQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateHostQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_hosts_count_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateHostsCountErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateHostsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_kind_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateKindErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_label_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLabelErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLabelErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_labels_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLabelsErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_loadbalancer_count_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLoadbalancerCountErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLoadbalancerCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_loadbalancer_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLoadbalancerProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLoadbalancerProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_loadbalancer_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateLoadbalancerQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateLoadbalancerQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_name_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_non_field_errors_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_object_storage_gb_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateObjectStorageGbErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateObjectStorageGbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_object_storage_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateObjectStorageProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateObjectStorageProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_object_storage_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateObjectStorageQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateObjectStorageQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_platform_service_error_component import (
-            ApiV1PricingQuoteWorkspacesCreatePlatformServiceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_provider_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateProviderErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_provider_id_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateProviderIdErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_provider_reference_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateProviderReferenceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_quote_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateQuoteErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateQuoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_reconciliation_enabled_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_sla_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_sla_target_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSlaTargetErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_slo_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSloAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_slo_target_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSloTargetErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_support_product_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSupportProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSupportProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_support_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateSupportQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateSupportQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_target_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_tolerations_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateTolerationsErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_create_total_price_error_component import (
-            ApiV1PricingQuoteWorkspacesCreateTotalPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesCreateTotalPriceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

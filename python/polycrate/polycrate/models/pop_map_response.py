@@ -41,7 +41,7 @@ class PopMapResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pop_map_entry import PopMapEntry
+        from ..models.pop_map_entry import PopMapEntry  # noqa: PLC0415
 
         d = dict(src_dict)
         pops = []

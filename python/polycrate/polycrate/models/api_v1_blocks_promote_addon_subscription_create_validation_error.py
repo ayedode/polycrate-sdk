@@ -43,10 +43,10 @@ class ApiV1BlocksPromoteAddonSubscriptionCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_blocks_promote_addon_subscription_create_addon_error_component import (
-            ApiV1BlocksPromoteAddonSubscriptionCreateAddonErrorComponent,
+            ApiV1BlocksPromoteAddonSubscriptionCreateAddonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_promote_addon_subscription_create_non_field_errors_error_component import (
-            ApiV1BlocksPromoteAddonSubscriptionCreateNonFieldErrorsErrorComponent,
+            ApiV1BlocksPromoteAddonSubscriptionCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -77,13 +77,13 @@ class ApiV1BlocksPromoteAddonSubscriptionCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_blocks_promote_addon_subscription_create_addon_error_component import (
-            ApiV1BlocksPromoteAddonSubscriptionCreateAddonErrorComponent,
+            ApiV1BlocksPromoteAddonSubscriptionCreateAddonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_promote_addon_subscription_create_k8s_cluster_error_component import (
-            ApiV1BlocksPromoteAddonSubscriptionCreateK8SClusterErrorComponent,
+            ApiV1BlocksPromoteAddonSubscriptionCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_promote_addon_subscription_create_non_field_errors_error_component import (
-            ApiV1BlocksPromoteAddonSubscriptionCreateNonFieldErrorsErrorComponent,
+            ApiV1BlocksPromoteAddonSubscriptionCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

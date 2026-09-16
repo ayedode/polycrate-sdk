@@ -37,7 +37,7 @@ class ApiV1AlertcategoryMappingsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alertcategory_mappings_list_category_error_component import (
-            ApiV1AlertcategoryMappingsListCategoryErrorComponent,
+            ApiV1AlertcategoryMappingsListCategoryErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -66,10 +66,10 @@ class ApiV1AlertcategoryMappingsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alertcategory_mappings_list_category_error_component import (
-            ApiV1AlertcategoryMappingsListCategoryErrorComponent,
+            ApiV1AlertcategoryMappingsListCategoryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_list_match_type_error_component import (
-            ApiV1AlertcategoryMappingsListMatchTypeErrorComponent,
+            ApiV1AlertcategoryMappingsListMatchTypeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

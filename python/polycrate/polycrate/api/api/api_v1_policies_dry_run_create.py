@@ -206,12 +206,12 @@ def sync_detailed(
     | ErrorResponse502
     | Policy
 ]:
-    r"""Execute policy in dry-run mode (no modifications).
+    """Execute policy in dry-run mode (no modifications).
 
     POST /api/v1/policies/{policy_id}/dry-run/
     {
-        \"object_id\": \"uuid\",
-        \"object_type\": \"k8s.K8sApp\"
+        "object_id": "uuid",
+        "object_type": "k8s.K8sApp"
     }
 
     UNCHANGED from v3.0.
@@ -272,12 +272,12 @@ def sync(
     | Policy
     | None
 ):
-    r"""Execute policy in dry-run mode (no modifications).
+    """Execute policy in dry-run mode (no modifications).
 
     POST /api/v1/policies/{policy_id}/dry-run/
     {
-        \"object_id\": \"uuid\",
-        \"object_type\": \"k8s.K8sApp\"
+        "object_id": "uuid",
+        "object_type": "k8s.K8sApp"
     }
 
     UNCHANGED from v3.0.
@@ -332,12 +332,12 @@ async def asyncio_detailed(
     | ErrorResponse502
     | Policy
 ]:
-    r"""Execute policy in dry-run mode (no modifications).
+    """Execute policy in dry-run mode (no modifications).
 
     POST /api/v1/policies/{policy_id}/dry-run/
     {
-        \"object_id\": \"uuid\",
-        \"object_type\": \"k8s.K8sApp\"
+        "object_id": "uuid",
+        "object_type": "k8s.K8sApp"
     }
 
     UNCHANGED from v3.0.
@@ -396,12 +396,12 @@ async def asyncio(
     | Policy
     | None
 ):
-    r"""Execute policy in dry-run mode (no modifications).
+    """Execute policy in dry-run mode (no modifications).
 
     POST /api/v1/policies/{policy_id}/dry-run/
     {
-        \"object_id\": \"uuid\",
-        \"object_type\": \"k8s.K8sApp\"
+        "object_id": "uuid",
+        "object_type": "k8s.K8sApp"
     }
 
     UNCHANGED from v3.0.

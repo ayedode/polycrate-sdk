@@ -48,7 +48,7 @@ class ErrorResponse500:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.error_500 import Error500
+        from ..models.error_500 import Error500  # noqa: PLC0415
 
         d = dict(src_dict)
         type_ = check_server_error_enum(d.pop("type"))

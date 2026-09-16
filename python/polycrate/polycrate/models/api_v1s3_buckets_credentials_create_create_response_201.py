@@ -59,7 +59,7 @@ class ApiV1S3BucketsCredentialsCreateCreateResponse201:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_credential_with_secrets import S3CredentialWithSecrets
+        from ..models.s3_credential_with_secrets import S3CredentialWithSecrets  # noqa: PLC0415
 
         d = dict(src_dict)
         success = d.pop("success", UNSET)

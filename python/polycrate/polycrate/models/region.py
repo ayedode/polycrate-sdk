@@ -202,9 +202,9 @@ class Region:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.region_deleted_by_user_type_0 import RegionDeletedByUserType0
-        from ..models.region_last_action_run_type_0 import RegionLastActionRunType0
-        from ..models.region_organization_type_0 import RegionOrganizationType0
+        from ..models.region_deleted_by_user_type_0 import RegionDeletedByUserType0  # noqa: PLC0415
+        from ..models.region_last_action_run_type_0 import RegionLastActionRunType0  # noqa: PLC0415
+        from ..models.region_organization_type_0 import RegionOrganizationType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -560,12 +560,12 @@ class Region:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.region_config import RegionConfig
-        from ..models.region_created import RegionCreated
-        from ..models.region_deleted_by_user_type_0 import RegionDeletedByUserType0
-        from ..models.region_last_action_run_type_0 import RegionLastActionRunType0
-        from ..models.region_organization_type_0 import RegionOrganizationType0
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.region_config import RegionConfig  # noqa: PLC0415
+        from ..models.region_created import RegionCreated  # noqa: PLC0415
+        from ..models.region_deleted_by_user_type_0 import RegionDeletedByUserType0  # noqa: PLC0415
+        from ..models.region_last_action_run_type_0 import RegionLastActionRunType0  # noqa: PLC0415
+        from ..models.region_organization_type_0 import RegionOrganizationType0  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

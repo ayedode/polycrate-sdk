@@ -24,6 +24,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_kubernetes_controlplanes_partial_update_archived_reason_error_component import (
         ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponent,
     )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_audit_logging_enabled_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent,
+    )
     from ..models.api_v1_kubernetes_controlplanes_partial_update_cluster_domain_error_component import (
         ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent,
     )
@@ -38,6 +41,12 @@ if TYPE_CHECKING:
     )
     from ..models.api_v1_kubernetes_controlplanes_partial_update_display_name_error_component import (
         ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_exposure_type_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_gateway_class_name_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent,
     )
     from ..models.api_v1_kubernetes_controlplanes_partial_update_kind_error_component import (
         ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent,
@@ -57,6 +66,18 @@ if TYPE_CHECKING:
     from ..models.api_v1_kubernetes_controlplanes_partial_update_non_field_errors_error_component import (
         ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent,
     )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_organization_id_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_parent_gateway_name_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_parent_gateway_namespace_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_parent_gateway_section_name_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent,
+    )
     from ..models.api_v1_kubernetes_controlplanes_partial_update_persistence_size_error_component import (
         ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent,
     )
@@ -75,8 +96,14 @@ if TYPE_CHECKING:
     from ..models.api_v1_kubernetes_controlplanes_partial_update_reconciliation_enabled_error_component import (
         ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponent,
     )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_region_id_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent,
+    )
     from ..models.api_v1_kubernetes_controlplanes_partial_update_scope_error_component import (
         ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_secrets_encryption_enabled_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent,
     )
     from ..models.api_v1_kubernetes_controlplanes_partial_update_sla_availability_error_component import (
         ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent,
@@ -96,6 +123,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_kubernetes_controlplanes_partial_update_target_availability_error_component import (
         ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponent,
     )
+    from ..models.api_v1_kubernetes_controlplanes_partial_update_workspace_id_error_component import (
+        ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent,
+    )
 
 
 T = TypeVar("T", bound="ApiV1KubernetesControlplanesPartialUpdateValidationError")
@@ -111,30 +141,40 @@ class ApiV1KubernetesControlplanesPartialUpdateValidationError:
             ApiV1KubernetesControlplanesPartialUpdateArchivedAtErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateArchivedErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateCriticalityErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateDebugModeErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateDiscoveryEnabledErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateLabelsErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateNameErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdatePlatformServiceErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateProviderErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateProviderIdErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateProviderReferenceErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateSlaTargetErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateSloAvailabilityErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateSloTargetErrorComponent |
             ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent |
-            ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponent]):
+            ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponent |
+            ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent]):
     """
 
     type_: ValidationErrorEnum
@@ -144,117 +184,157 @@ class ApiV1KubernetesControlplanesPartialUpdateValidationError:
         | ApiV1KubernetesControlplanesPartialUpdateArchivedAtErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateArchivedErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateCriticalityErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateDebugModeErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateDiscoveryEnabledErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateLabelsErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateNameErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdatePlatformServiceErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateProviderErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateProviderIdErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateProviderReferenceErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateSlaTargetErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateSloAvailabilityErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateSloTargetErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent
         | ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponent
+        | ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent
     ]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_controlplanes_partial_update_actual_availability_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_annotations_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateAnnotationsErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_archived_at_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateArchivedAtErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_archived_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateArchivedErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_archived_reason_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_audit_logging_enabled_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_criticality_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateCriticalityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_debug_mode_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateDebugModeErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_discovery_enabled_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_display_name_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_exposure_type_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_gateway_class_name_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_kind_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_labels_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateLabelsErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_loadbalancer_mode_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_loadbalancer_provider_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_name_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateNameErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_non_field_errors_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_organization_id_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_parent_gateway_name_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_parent_gateway_namespace_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_parent_gateway_section_name_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_persistence_size_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_platform_service_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_provider_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateProviderErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_provider_id_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateProviderIdErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_provider_reference_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_reconciliation_enabled_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_region_id_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_scope_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_secrets_encryption_enabled_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_sla_availability_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_sla_target_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateSlaTargetErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_slo_availability_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_slo_target_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateSloTargetErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_storage_class_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_target_availability_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_workspace_id_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -316,10 +396,38 @@ class ApiV1KubernetesControlplanesPartialUpdateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(
                 errors_item_data, ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent
+            ):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(
+                errors_item_data, ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent
+            ):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(
+                errors_item_data, ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent
+            ):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(
+                errors_item_data, ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent
+            ):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(
+                errors_item_data, ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent
             ):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent):
@@ -345,91 +453,121 @@ class ApiV1KubernetesControlplanesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_controlplanes_partial_update_actual_availability_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_annotations_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateAnnotationsErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_archived_at_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateArchivedAtErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_archived_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateArchivedErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_archived_reason_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_audit_logging_enabled_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_cluster_domain_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_criticality_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateCriticalityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_debug_mode_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateDebugModeErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_discovery_enabled_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_display_name_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_exposure_type_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_gateway_class_name_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_kind_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_labels_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateLabelsErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_loadbalancer_mode_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_loadbalancer_provider_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_name_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateNameErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_non_field_errors_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_organization_id_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_parent_gateway_name_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_parent_gateway_namespace_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_parent_gateway_section_name_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_persistence_size_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_platform_service_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_provider_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateProviderErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_provider_id_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateProviderIdErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_provider_reference_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_reconciliation_enabled_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_region_id_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_scope_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_secrets_encryption_enabled_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_sla_availability_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_sla_target_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateSlaTargetErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_slo_availability_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_slo_target_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateSloTargetErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_storage_class_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_partial_update_target_availability_error_component import (
-            ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_partial_update_workspace_id_error_component import (
+            ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -447,30 +585,40 @@ class ApiV1KubernetesControlplanesPartialUpdateValidationError:
                 | ApiV1KubernetesControlplanesPartialUpdateArchivedAtErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateArchivedErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateCriticalityErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateDebugModeErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateDiscoveryEnabledErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateLabelsErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateNameErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdatePlatformServiceErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateProviderErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateProviderIdErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateProviderReferenceErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateSlaTargetErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateSloAvailabilityErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateSloTargetErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent
                 | ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponent
+                | ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent
             ):
                 try:
                     if not isinstance(data, dict):
@@ -716,7 +864,7 @@ class ApiV1KubernetesControlplanesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_24 = (
-                        ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent.from_dict(data)
+                        ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_24
@@ -726,7 +874,7 @@ class ApiV1KubernetesControlplanesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_25 = (
-                        ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent.from_dict(data)
+                        ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_25
@@ -736,7 +884,7 @@ class ApiV1KubernetesControlplanesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_26 = (
-                        ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent.from_dict(data)
+                        ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_26
@@ -746,19 +894,119 @@ class ApiV1KubernetesControlplanesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_27 = (
-                        ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent.from_dict(data)
+                        ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_27
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_28 = (
+                        ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_28
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_29 = (
+                        ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_29
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_30 = (
+                        ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_30
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_31 = (
+                        ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_31
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_32 = (
+                        ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_32
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_33 = (
+                        ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_33
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_34 = (
+                        ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_34
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_35 = (
+                        ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_35
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_36 = (
+                        ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_36
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_37 = (
+                        ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_37
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_28 = (
+                componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_38 = (
                     ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_28
+                return componentsschemas_api_v1_kubernetes_controlplanes_partial_update_error_type_38
 
             errors_item = _parse_errors_item(errors_item_data)
 

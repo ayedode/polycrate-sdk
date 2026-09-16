@@ -217,10 +217,16 @@ class LoadbalancerRegion:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.loadbalancer_region_deleted_by_user_type_0 import LoadbalancerRegionDeletedByUserType0
-        from ..models.loadbalancer_region_last_action_run_type_0 import LoadbalancerRegionLastActionRunType0
-        from ..models.loadbalancer_region_organization_type_0 import LoadbalancerRegionOrganizationType0
-        from ..models.loadbalancer_region_workspace_type_0 import LoadbalancerRegionWorkspaceType0
+        from ..models.loadbalancer_region_deleted_by_user_type_0 import (
+            LoadbalancerRegionDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_region_last_action_run_type_0 import (
+            LoadbalancerRegionLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_region_organization_type_0 import (
+            LoadbalancerRegionOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_region_workspace_type_0 import LoadbalancerRegionWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -567,15 +573,25 @@ class LoadbalancerRegion:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_cluster_simple import K8SClusterSimple
-        from ..models.loadbalancer_region_created import LoadbalancerRegionCreated
-        from ..models.loadbalancer_region_deleted_by_user_type_0 import LoadbalancerRegionDeletedByUserType0
-        from ..models.loadbalancer_region_deployed_instances_item import LoadbalancerRegionDeployedInstancesItem
-        from ..models.loadbalancer_region_haproxy import LoadbalancerRegionHaproxy
-        from ..models.loadbalancer_region_instance_deployments_item import LoadbalancerRegionInstanceDeploymentsItem
-        from ..models.loadbalancer_region_last_action_run_type_0 import LoadbalancerRegionLastActionRunType0
-        from ..models.loadbalancer_region_organization_type_0 import LoadbalancerRegionOrganizationType0
-        from ..models.loadbalancer_region_workspace_type_0 import LoadbalancerRegionWorkspaceType0
+        from ..models.k8s_cluster_simple import K8SClusterSimple  # noqa: PLC0415
+        from ..models.loadbalancer_region_created import LoadbalancerRegionCreated  # noqa: PLC0415
+        from ..models.loadbalancer_region_deleted_by_user_type_0 import (
+            LoadbalancerRegionDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_region_deployed_instances_item import (
+            LoadbalancerRegionDeployedInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_region_haproxy import LoadbalancerRegionHaproxy  # noqa: PLC0415
+        from ..models.loadbalancer_region_instance_deployments_item import (
+            LoadbalancerRegionInstanceDeploymentsItem,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_region_last_action_run_type_0 import (
+            LoadbalancerRegionLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_region_organization_type_0 import (
+            LoadbalancerRegionOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_region_workspace_type_0 import LoadbalancerRegionWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

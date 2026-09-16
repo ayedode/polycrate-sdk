@@ -198,103 +198,103 @@ class ApiV1SecretmanagerManagersPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_secretmanager_managers_partial_update_annotations_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateAnnotationsErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_archived_at_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateArchivedAtErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_archived_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateArchivedErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_archived_reason_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateArchivedReasonErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_auth_methods_count_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateAuthMethodsCountErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateAuthMethodsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_credential_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateCredentialErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_criticality_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateCriticalityErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_debug_mode_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateDebugModeErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_display_name_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateDisplayNameErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_hostname_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateHostnameErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_is_initialized_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateIsInitializedErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateIsInitializedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_is_sealed_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateIsSealedErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateIsSealedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_k8s_app_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateK8SAppErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_k8s_cluster_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateK8SClusterErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_kind_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateKindErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_labels_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateLabelsErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_name_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateNameErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_non_field_errors_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_platform_service_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdatePlatformServiceErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_policies_count_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdatePoliciesCountErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdatePoliciesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_provider_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateProviderErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_provider_id_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateProviderIdErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_provider_reference_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateProviderReferenceErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_reconciliation_enabled_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_secrets_engines_count_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSecretsEnginesCountErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSecretsEnginesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_sla_availability_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_sla_target_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSlaTargetErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_slo_availability_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_slo_target_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSloTargetErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_target_availability_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_tolerations_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateTolerationsErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_vault_mode_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateVaultModeErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateVaultModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_vault_version_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateVaultVersionErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateVaultVersionErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -389,106 +389,106 @@ class ApiV1SecretmanagerManagersPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_secretmanager_managers_partial_update_annotations_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateAnnotationsErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_archived_at_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateArchivedAtErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_archived_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateArchivedErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_archived_reason_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateArchivedReasonErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_auth_methods_count_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateAuthMethodsCountErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateAuthMethodsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_credential_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateCredentialErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_criticality_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateCriticalityErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_debug_mode_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateDebugModeErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_display_name_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateDisplayNameErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_hostname_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateHostnameErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_is_initialized_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateIsInitializedErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateIsInitializedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_is_sealed_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateIsSealedErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateIsSealedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_k8s_app_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateK8SAppErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_k8s_cluster_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateK8SClusterErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_kind_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateKindErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_labels_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateLabelsErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_metadata_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateMetadataErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_name_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateNameErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_non_field_errors_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_platform_service_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdatePlatformServiceErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_policies_count_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdatePoliciesCountErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdatePoliciesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_provider_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateProviderErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_provider_id_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateProviderIdErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_provider_reference_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateProviderReferenceErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_reconciliation_enabled_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_secrets_engines_count_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSecretsEnginesCountErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSecretsEnginesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_sla_availability_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_sla_target_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSlaTargetErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_slo_availability_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_slo_target_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateSloTargetErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_target_availability_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_tolerations_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateTolerationsErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_vault_mode_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateVaultModeErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateVaultModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_partial_update_vault_version_error_component import (
-            ApiV1SecretmanagerManagersPartialUpdateVaultVersionErrorComponent,
+            ApiV1SecretmanagerManagersPartialUpdateVaultVersionErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

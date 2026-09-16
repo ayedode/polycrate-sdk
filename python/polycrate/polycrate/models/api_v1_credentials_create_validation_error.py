@@ -77,36 +77,40 @@ class ApiV1CredentialsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_credentials_create_api_endpoint_error_component import (
-            ApiV1CredentialsCreateApiEndpointErrorComponent,
+            ApiV1CredentialsCreateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_api_key_error_component import (
-            ApiV1CredentialsCreateApiKeyErrorComponent,
+            ApiV1CredentialsCreateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_api_user_error_component import (
-            ApiV1CredentialsCreateApiUserErrorComponent,
+            ApiV1CredentialsCreateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_description_error_component import (
-            ApiV1CredentialsCreateDescriptionErrorComponent,
+            ApiV1CredentialsCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_credentials_create_kind_error_component import ApiV1CredentialsCreateKindErrorComponent
+        from ..models.api_v1_credentials_create_kind_error_component import (
+            ApiV1CredentialsCreateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_create_kubeconfig_error_component import (
-            ApiV1CredentialsCreateKubeconfigErrorComponent,
+            ApiV1CredentialsCreateKubeconfigErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_credentials_create_name_error_component import ApiV1CredentialsCreateNameErrorComponent
+        from ..models.api_v1_credentials_create_name_error_component import (
+            ApiV1CredentialsCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_create_non_field_errors_error_component import (
-            ApiV1CredentialsCreateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_organization_error_component import (
-            ApiV1CredentialsCreateOrganizationErrorComponent,
+            ApiV1CredentialsCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_ssh_private_key_error_component import (
-            ApiV1CredentialsCreateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsCreateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_ssh_public_key_error_component import (
-            ApiV1CredentialsCreateSshPublicKeyErrorComponent,
+            ApiV1CredentialsCreateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_workspace_error_component import (
-            ApiV1CredentialsCreateWorkspaceErrorComponent,
+            ApiV1CredentialsCreateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -157,39 +161,43 @@ class ApiV1CredentialsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_credentials_create_api_endpoint_error_component import (
-            ApiV1CredentialsCreateApiEndpointErrorComponent,
+            ApiV1CredentialsCreateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_api_key_error_component import (
-            ApiV1CredentialsCreateApiKeyErrorComponent,
+            ApiV1CredentialsCreateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_api_user_error_component import (
-            ApiV1CredentialsCreateApiUserErrorComponent,
+            ApiV1CredentialsCreateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_description_error_component import (
-            ApiV1CredentialsCreateDescriptionErrorComponent,
+            ApiV1CredentialsCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_credentials_create_kind_error_component import ApiV1CredentialsCreateKindErrorComponent
+        from ..models.api_v1_credentials_create_kind_error_component import (
+            ApiV1CredentialsCreateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_create_kubeconfig_error_component import (
-            ApiV1CredentialsCreateKubeconfigErrorComponent,
+            ApiV1CredentialsCreateKubeconfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_metadata_error_component import (
-            ApiV1CredentialsCreateMetadataErrorComponent,
+            ApiV1CredentialsCreateMetadataErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_credentials_create_name_error_component import ApiV1CredentialsCreateNameErrorComponent
+        from ..models.api_v1_credentials_create_name_error_component import (
+            ApiV1CredentialsCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_create_non_field_errors_error_component import (
-            ApiV1CredentialsCreateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_organization_error_component import (
-            ApiV1CredentialsCreateOrganizationErrorComponent,
+            ApiV1CredentialsCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_ssh_private_key_error_component import (
-            ApiV1CredentialsCreateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsCreateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_ssh_public_key_error_component import (
-            ApiV1CredentialsCreateSshPublicKeyErrorComponent,
+            ApiV1CredentialsCreateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_create_workspace_error_component import (
-            ApiV1CredentialsCreateWorkspaceErrorComponent,
+            ApiV1CredentialsCreateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

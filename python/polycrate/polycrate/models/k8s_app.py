@@ -289,8 +289,8 @@ class K8SApp:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_app_deleted_by_user_type_0 import K8SAppDeletedByUserType0
-        from ..models.k8s_app_last_action_run_type_0 import K8SAppLastActionRunType0
+        from ..models.k8s_app_deleted_by_user_type_0 import K8SAppDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_app_last_action_run_type_0 import K8SAppLastActionRunType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -877,12 +877,12 @@ class K8SApp:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_app_created import K8SAppCreated
-        from ..models.k8s_app_deleted_by_user_type_0 import K8SAppDeletedByUserType0
-        from ..models.k8s_app_last_action_run_type_0 import K8SAppLastActionRunType0
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.product_simple import ProductSimple
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.k8s_app_created import K8SAppCreated  # noqa: PLC0415
+        from ..models.k8s_app_deleted_by_user_type_0 import K8SAppDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_app_last_action_run_type_0 import K8SAppLastActionRunType0  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

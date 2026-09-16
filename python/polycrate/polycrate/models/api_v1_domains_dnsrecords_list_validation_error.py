@@ -92,43 +92,43 @@ class ApiV1DomainsDnsrecordsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_dnsrecords_list_created_at_error_component import (
-            ApiV1DomainsDnsrecordsListCreatedAtErrorComponent,
+            ApiV1DomainsDnsrecordsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_created_by_component_error_component import (
-            ApiV1DomainsDnsrecordsListCreatedByComponentErrorComponent,
+            ApiV1DomainsDnsrecordsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_created_by_users_error_component import (
-            ApiV1DomainsDnsrecordsListCreatedByUsersErrorComponent,
+            ApiV1DomainsDnsrecordsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_dns_zone_error_component import (
-            ApiV1DomainsDnsrecordsListDnsZoneErrorComponent,
+            ApiV1DomainsDnsrecordsListDnsZoneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_kind_error_component import (
-            ApiV1DomainsDnsrecordsListKindErrorComponent,
+            ApiV1DomainsDnsrecordsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_name_error_component import (
-            ApiV1DomainsDnsrecordsListNameErrorComponent,
+            ApiV1DomainsDnsrecordsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_scope_error_component import (
-            ApiV1DomainsDnsrecordsListScopeErrorComponent,
+            ApiV1DomainsDnsrecordsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_search_error_component import (
-            ApiV1DomainsDnsrecordsListSearchErrorComponent,
+            ApiV1DomainsDnsrecordsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_state_error_component import (
-            ApiV1DomainsDnsrecordsListStateErrorComponent,
+            ApiV1DomainsDnsrecordsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_state_not_error_component import (
-            ApiV1DomainsDnsrecordsListStateNotErrorComponent,
+            ApiV1DomainsDnsrecordsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_time_range_error_component import (
-            ApiV1DomainsDnsrecordsListTimeRangeErrorComponent,
+            ApiV1DomainsDnsrecordsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_type_error_component import (
-            ApiV1DomainsDnsrecordsListTypeErrorComponent,
+            ApiV1DomainsDnsrecordsListTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_updated_at_error_component import (
-            ApiV1DomainsDnsrecordsListUpdatedAtErrorComponent,
+            ApiV1DomainsDnsrecordsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -181,46 +181,46 @@ class ApiV1DomainsDnsrecordsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_dnsrecords_list_created_at_error_component import (
-            ApiV1DomainsDnsrecordsListCreatedAtErrorComponent,
+            ApiV1DomainsDnsrecordsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_created_by_component_error_component import (
-            ApiV1DomainsDnsrecordsListCreatedByComponentErrorComponent,
+            ApiV1DomainsDnsrecordsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_created_by_users_error_component import (
-            ApiV1DomainsDnsrecordsListCreatedByUsersErrorComponent,
+            ApiV1DomainsDnsrecordsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_dns_zone_error_component import (
-            ApiV1DomainsDnsrecordsListDnsZoneErrorComponent,
+            ApiV1DomainsDnsrecordsListDnsZoneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_kind_error_component import (
-            ApiV1DomainsDnsrecordsListKindErrorComponent,
+            ApiV1DomainsDnsrecordsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_name_error_component import (
-            ApiV1DomainsDnsrecordsListNameErrorComponent,
+            ApiV1DomainsDnsrecordsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_name_exact_error_component import (
-            ApiV1DomainsDnsrecordsListNameExactErrorComponent,
+            ApiV1DomainsDnsrecordsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_scope_error_component import (
-            ApiV1DomainsDnsrecordsListScopeErrorComponent,
+            ApiV1DomainsDnsrecordsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_search_error_component import (
-            ApiV1DomainsDnsrecordsListSearchErrorComponent,
+            ApiV1DomainsDnsrecordsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_state_error_component import (
-            ApiV1DomainsDnsrecordsListStateErrorComponent,
+            ApiV1DomainsDnsrecordsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_state_not_error_component import (
-            ApiV1DomainsDnsrecordsListStateNotErrorComponent,
+            ApiV1DomainsDnsrecordsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_time_range_error_component import (
-            ApiV1DomainsDnsrecordsListTimeRangeErrorComponent,
+            ApiV1DomainsDnsrecordsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_type_error_component import (
-            ApiV1DomainsDnsrecordsListTypeErrorComponent,
+            ApiV1DomainsDnsrecordsListTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnsrecords_list_updated_at_error_component import (
-            ApiV1DomainsDnsrecordsListUpdatedAtErrorComponent,
+            ApiV1DomainsDnsrecordsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

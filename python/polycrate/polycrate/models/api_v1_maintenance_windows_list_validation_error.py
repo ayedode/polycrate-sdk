@@ -69,28 +69,28 @@ class ApiV1MaintenanceWindowsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_maintenance_windows_list_created_by_users_error_component import (
-            ApiV1MaintenanceWindowsListCreatedByUsersErrorComponent,
+            ApiV1MaintenanceWindowsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_kind_error_component import (
-            ApiV1MaintenanceWindowsListKindErrorComponent,
+            ApiV1MaintenanceWindowsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_organizations_error_component import (
-            ApiV1MaintenanceWindowsListOrganizationsErrorComponent,
+            ApiV1MaintenanceWindowsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_search_error_component import (
-            ApiV1MaintenanceWindowsListSearchErrorComponent,
+            ApiV1MaintenanceWindowsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_state_error_component import (
-            ApiV1MaintenanceWindowsListStateErrorComponent,
+            ApiV1MaintenanceWindowsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_state_not_error_component import (
-            ApiV1MaintenanceWindowsListStateNotErrorComponent,
+            ApiV1MaintenanceWindowsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_time_range_error_component import (
-            ApiV1MaintenanceWindowsListTimeRangeErrorComponent,
+            ApiV1MaintenanceWindowsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_workspaces_error_component import (
-            ApiV1MaintenanceWindowsListWorkspacesErrorComponent,
+            ApiV1MaintenanceWindowsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -133,31 +133,31 @@ class ApiV1MaintenanceWindowsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_maintenance_windows_list_created_by_users_error_component import (
-            ApiV1MaintenanceWindowsListCreatedByUsersErrorComponent,
+            ApiV1MaintenanceWindowsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_kind_error_component import (
-            ApiV1MaintenanceWindowsListKindErrorComponent,
+            ApiV1MaintenanceWindowsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_name_exact_error_component import (
-            ApiV1MaintenanceWindowsListNameExactErrorComponent,
+            ApiV1MaintenanceWindowsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_organizations_error_component import (
-            ApiV1MaintenanceWindowsListOrganizationsErrorComponent,
+            ApiV1MaintenanceWindowsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_search_error_component import (
-            ApiV1MaintenanceWindowsListSearchErrorComponent,
+            ApiV1MaintenanceWindowsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_state_error_component import (
-            ApiV1MaintenanceWindowsListStateErrorComponent,
+            ApiV1MaintenanceWindowsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_state_not_error_component import (
-            ApiV1MaintenanceWindowsListStateNotErrorComponent,
+            ApiV1MaintenanceWindowsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_time_range_error_component import (
-            ApiV1MaintenanceWindowsListTimeRangeErrorComponent,
+            ApiV1MaintenanceWindowsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_list_workspaces_error_component import (
-            ApiV1MaintenanceWindowsListWorkspacesErrorComponent,
+            ApiV1MaintenanceWindowsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

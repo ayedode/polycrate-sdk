@@ -262,142 +262,142 @@ class ApiV1BlockRolloutItemsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_block_rollout_items_partial_update_action_name_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateActionNameErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateActionNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_action_run_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateActionRunErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateActionRunErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_actual_availability_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_annotations_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateAnnotationsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_archived_at_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateArchivedAtErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_archived_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateArchivedErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_archived_reason_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_block_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateBlockErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_conditions_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateConditionsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateConditionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_criticality_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateCriticalityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_debug_mode_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDebugModeErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_discovery_enabled_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_discovery_running_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDiscoveryRunningErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDiscoveryRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_discovery_task_id_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDiscoveryTaskIdErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDiscoveryTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_discovery_task_meta_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDiscoveryTaskMetaErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDiscoveryTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_display_name_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDisplayNameErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_kind_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateKindErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_labels_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateLabelsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_last_state_change_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateLastStateChangeErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateLastStateChangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_last_state_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateLastStateErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateLastStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_name_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateNameErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_non_field_errors_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_platform_service_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_provider_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateProviderErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_provider_id_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateProviderIdErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_provider_reference_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_reconciliation_enabled_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_reconciliation_running_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateReconciliationRunningErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateReconciliationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_reconciliation_task_id_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateReconciliationTaskIdErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateReconciliationTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_reconciliation_task_meta_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateReconciliationTaskMetaErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateReconciliationTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_repair_running_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateRepairRunningErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateRepairRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_repair_task_id_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateRepairTaskIdErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateRepairTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_repair_task_meta_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateRepairTaskMetaErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateRepairTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_rollout_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateRolloutErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateRolloutErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_scope_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateScopeErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_sla_availability_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_sla_target_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSlaTargetErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_slo_availability_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_slo_target_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSloTargetErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_source_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSourceErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_source_user_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSourceUserErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSourceUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_state_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateStateErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_state_reason_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateStateReasonErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateStateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_status_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateStatusErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_target_availability_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_tolerations_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateTolerationsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -516,145 +516,145 @@ class ApiV1BlockRolloutItemsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_block_rollout_items_partial_update_action_name_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateActionNameErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateActionNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_action_run_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateActionRunErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateActionRunErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_actual_availability_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_annotations_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateAnnotationsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_archived_at_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateArchivedAtErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_archived_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateArchivedErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_archived_reason_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_block_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateBlockErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_conditions_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateConditionsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateConditionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_criticality_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateCriticalityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_debug_mode_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDebugModeErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_discovery_enabled_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_discovery_running_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDiscoveryRunningErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDiscoveryRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_discovery_task_id_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDiscoveryTaskIdErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDiscoveryTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_discovery_task_meta_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDiscoveryTaskMetaErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDiscoveryTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_display_name_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateDisplayNameErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_kind_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateKindErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_labels_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateLabelsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_last_state_change_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateLastStateChangeErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateLastStateChangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_last_state_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateLastStateErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateLastStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_name_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateNameErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_non_field_errors_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_platform_service_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_provider_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateProviderErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_provider_id_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateProviderIdErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_provider_reference_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_reason_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateReasonErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_reconciliation_enabled_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_reconciliation_running_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateReconciliationRunningErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateReconciliationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_reconciliation_task_id_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateReconciliationTaskIdErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateReconciliationTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_reconciliation_task_meta_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateReconciliationTaskMetaErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateReconciliationTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_repair_running_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateRepairRunningErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateRepairRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_repair_task_id_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateRepairTaskIdErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateRepairTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_repair_task_meta_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateRepairTaskMetaErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateRepairTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_rollout_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateRolloutErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateRolloutErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_scope_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateScopeErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_sla_availability_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_sla_target_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSlaTargetErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_slo_availability_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_slo_target_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSloTargetErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_source_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSourceErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_source_user_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateSourceUserErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateSourceUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_state_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateStateErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_state_reason_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateStateReasonErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateStateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_status_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateStatusErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_target_availability_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_partial_update_tolerations_error_component import (
-            ApiV1BlockRolloutItemsPartialUpdateTolerationsErrorComponent,
+            ApiV1BlockRolloutItemsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

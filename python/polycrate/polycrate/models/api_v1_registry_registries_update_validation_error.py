@@ -175,94 +175,94 @@ class ApiV1RegistryRegistriesUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_registry_registries_update_annotations_error_component import (
-            ApiV1RegistryRegistriesUpdateAnnotationsErrorComponent,
+            ApiV1RegistryRegistriesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_archived_at_error_component import (
-            ApiV1RegistryRegistriesUpdateArchivedAtErrorComponent,
+            ApiV1RegistryRegistriesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_archived_error_component import (
-            ApiV1RegistryRegistriesUpdateArchivedErrorComponent,
+            ApiV1RegistryRegistriesUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_archived_reason_error_component import (
-            ApiV1RegistryRegistriesUpdateArchivedReasonErrorComponent,
+            ApiV1RegistryRegistriesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_credential_error_component import (
-            ApiV1RegistryRegistriesUpdateCredentialErrorComponent,
+            ApiV1RegistryRegistriesUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_criticality_error_component import (
-            ApiV1RegistryRegistriesUpdateCriticalityErrorComponent,
+            ApiV1RegistryRegistriesUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_debug_mode_error_component import (
-            ApiV1RegistryRegistriesUpdateDebugModeErrorComponent,
+            ApiV1RegistryRegistriesUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_display_name_error_component import (
-            ApiV1RegistryRegistriesUpdateDisplayNameErrorComponent,
+            ApiV1RegistryRegistriesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_hostname_error_component import (
-            ApiV1RegistryRegistriesUpdateHostnameErrorComponent,
+            ApiV1RegistryRegistriesUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_k8s_app_error_component import (
-            ApiV1RegistryRegistriesUpdateK8SAppErrorComponent,
+            ApiV1RegistryRegistriesUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_k8s_cluster_error_component import (
-            ApiV1RegistryRegistriesUpdateK8SClusterErrorComponent,
+            ApiV1RegistryRegistriesUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_kind_error_component import (
-            ApiV1RegistryRegistriesUpdateKindErrorComponent,
+            ApiV1RegistryRegistriesUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_labels_error_component import (
-            ApiV1RegistryRegistriesUpdateLabelsErrorComponent,
+            ApiV1RegistryRegistriesUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_name_error_component import (
-            ApiV1RegistryRegistriesUpdateNameErrorComponent,
+            ApiV1RegistryRegistriesUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_non_field_errors_error_component import (
-            ApiV1RegistryRegistriesUpdateNonFieldErrorsErrorComponent,
+            ApiV1RegistryRegistriesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_platform_service_error_component import (
-            ApiV1RegistryRegistriesUpdatePlatformServiceErrorComponent,
+            ApiV1RegistryRegistriesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_projects_count_error_component import (
-            ApiV1RegistryRegistriesUpdateProjectsCountErrorComponent,
+            ApiV1RegistryRegistriesUpdateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_provider_error_component import (
-            ApiV1RegistryRegistriesUpdateProviderErrorComponent,
+            ApiV1RegistryRegistriesUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_provider_id_error_component import (
-            ApiV1RegistryRegistriesUpdateProviderIdErrorComponent,
+            ApiV1RegistryRegistriesUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_provider_reference_error_component import (
-            ApiV1RegistryRegistriesUpdateProviderReferenceErrorComponent,
+            ApiV1RegistryRegistriesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_reconciliation_enabled_error_component import (
-            ApiV1RegistryRegistriesUpdateReconciliationEnabledErrorComponent,
+            ApiV1RegistryRegistriesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_registry_version_error_component import (
-            ApiV1RegistryRegistriesUpdateRegistryVersionErrorComponent,
+            ApiV1RegistryRegistriesUpdateRegistryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_repositories_count_error_component import (
-            ApiV1RegistryRegistriesUpdateRepositoriesCountErrorComponent,
+            ApiV1RegistryRegistriesUpdateRepositoriesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_sla_availability_error_component import (
-            ApiV1RegistryRegistriesUpdateSlaAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_sla_target_error_component import (
-            ApiV1RegistryRegistriesUpdateSlaTargetErrorComponent,
+            ApiV1RegistryRegistriesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_slo_availability_error_component import (
-            ApiV1RegistryRegistriesUpdateSloAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_slo_target_error_component import (
-            ApiV1RegistryRegistriesUpdateSloTargetErrorComponent,
+            ApiV1RegistryRegistriesUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_storage_used_bytes_error_component import (
-            ApiV1RegistryRegistriesUpdateStorageUsedBytesErrorComponent,
+            ApiV1RegistryRegistriesUpdateStorageUsedBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_target_availability_error_component import (
-            ApiV1RegistryRegistriesUpdateTargetAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_tolerations_error_component import (
-            ApiV1RegistryRegistriesUpdateTolerationsErrorComponent,
+            ApiV1RegistryRegistriesUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -349,97 +349,97 @@ class ApiV1RegistryRegistriesUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_registry_registries_update_annotations_error_component import (
-            ApiV1RegistryRegistriesUpdateAnnotationsErrorComponent,
+            ApiV1RegistryRegistriesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_archived_at_error_component import (
-            ApiV1RegistryRegistriesUpdateArchivedAtErrorComponent,
+            ApiV1RegistryRegistriesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_archived_error_component import (
-            ApiV1RegistryRegistriesUpdateArchivedErrorComponent,
+            ApiV1RegistryRegistriesUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_archived_reason_error_component import (
-            ApiV1RegistryRegistriesUpdateArchivedReasonErrorComponent,
+            ApiV1RegistryRegistriesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_credential_error_component import (
-            ApiV1RegistryRegistriesUpdateCredentialErrorComponent,
+            ApiV1RegistryRegistriesUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_criticality_error_component import (
-            ApiV1RegistryRegistriesUpdateCriticalityErrorComponent,
+            ApiV1RegistryRegistriesUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_debug_mode_error_component import (
-            ApiV1RegistryRegistriesUpdateDebugModeErrorComponent,
+            ApiV1RegistryRegistriesUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_display_name_error_component import (
-            ApiV1RegistryRegistriesUpdateDisplayNameErrorComponent,
+            ApiV1RegistryRegistriesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_hostname_error_component import (
-            ApiV1RegistryRegistriesUpdateHostnameErrorComponent,
+            ApiV1RegistryRegistriesUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_k8s_app_error_component import (
-            ApiV1RegistryRegistriesUpdateK8SAppErrorComponent,
+            ApiV1RegistryRegistriesUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_k8s_cluster_error_component import (
-            ApiV1RegistryRegistriesUpdateK8SClusterErrorComponent,
+            ApiV1RegistryRegistriesUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_kind_error_component import (
-            ApiV1RegistryRegistriesUpdateKindErrorComponent,
+            ApiV1RegistryRegistriesUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_labels_error_component import (
-            ApiV1RegistryRegistriesUpdateLabelsErrorComponent,
+            ApiV1RegistryRegistriesUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_metadata_error_component import (
-            ApiV1RegistryRegistriesUpdateMetadataErrorComponent,
+            ApiV1RegistryRegistriesUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_name_error_component import (
-            ApiV1RegistryRegistriesUpdateNameErrorComponent,
+            ApiV1RegistryRegistriesUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_non_field_errors_error_component import (
-            ApiV1RegistryRegistriesUpdateNonFieldErrorsErrorComponent,
+            ApiV1RegistryRegistriesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_platform_service_error_component import (
-            ApiV1RegistryRegistriesUpdatePlatformServiceErrorComponent,
+            ApiV1RegistryRegistriesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_projects_count_error_component import (
-            ApiV1RegistryRegistriesUpdateProjectsCountErrorComponent,
+            ApiV1RegistryRegistriesUpdateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_provider_error_component import (
-            ApiV1RegistryRegistriesUpdateProviderErrorComponent,
+            ApiV1RegistryRegistriesUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_provider_id_error_component import (
-            ApiV1RegistryRegistriesUpdateProviderIdErrorComponent,
+            ApiV1RegistryRegistriesUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_provider_reference_error_component import (
-            ApiV1RegistryRegistriesUpdateProviderReferenceErrorComponent,
+            ApiV1RegistryRegistriesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_reconciliation_enabled_error_component import (
-            ApiV1RegistryRegistriesUpdateReconciliationEnabledErrorComponent,
+            ApiV1RegistryRegistriesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_registry_version_error_component import (
-            ApiV1RegistryRegistriesUpdateRegistryVersionErrorComponent,
+            ApiV1RegistryRegistriesUpdateRegistryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_repositories_count_error_component import (
-            ApiV1RegistryRegistriesUpdateRepositoriesCountErrorComponent,
+            ApiV1RegistryRegistriesUpdateRepositoriesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_sla_availability_error_component import (
-            ApiV1RegistryRegistriesUpdateSlaAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_sla_target_error_component import (
-            ApiV1RegistryRegistriesUpdateSlaTargetErrorComponent,
+            ApiV1RegistryRegistriesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_slo_availability_error_component import (
-            ApiV1RegistryRegistriesUpdateSloAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_slo_target_error_component import (
-            ApiV1RegistryRegistriesUpdateSloTargetErrorComponent,
+            ApiV1RegistryRegistriesUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_storage_used_bytes_error_component import (
-            ApiV1RegistryRegistriesUpdateStorageUsedBytesErrorComponent,
+            ApiV1RegistryRegistriesUpdateStorageUsedBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_target_availability_error_component import (
-            ApiV1RegistryRegistriesUpdateTargetAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_update_tolerations_error_component import (
-            ApiV1RegistryRegistriesUpdateTolerationsErrorComponent,
+            ApiV1RegistryRegistriesUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

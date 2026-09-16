@@ -71,7 +71,8 @@ class PatchedK8SAddonRequest:
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
             catalogue_app (UUID | Unset): Non-draft CatalogueApp that maps this addon to a block registry_url.
             block_name (str | Unset): Workspace Block name created for subscriptions of this addon.
-            default_version (str | Unset): Empty = resolve latest matching template block version.
+            default_version (str | Unset): Concrete catalog pin. Empty or "latest" resolves to the highest template-block
+                version (Spec 819).
             default_block_config_template (str | Unset): Jinja2→YAML block config template (same context as BRC).
             template_block (str | Unset): Optional Jinja registry_url. Empty = catalogue_app.registry_url.
             scope_expressions (Any | Unset): List of Jinja boolean expressions; all must be True (like BRC).

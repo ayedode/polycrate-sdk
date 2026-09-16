@@ -68,7 +68,7 @@ class PaginatedOrgAPIKeyList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.org_api_key import OrgAPIKey
+        from ..models.org_api_key import OrgAPIKey  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

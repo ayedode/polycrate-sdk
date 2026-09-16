@@ -65,25 +65,25 @@ class ApiV1ApmGrafanadashboardsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_apm_grafanadashboards_list_created_by_users_error_component import (
-            ApiV1ApmGrafanadashboardsListCreatedByUsersErrorComponent,
+            ApiV1ApmGrafanadashboardsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_kind_error_component import (
-            ApiV1ApmGrafanadashboardsListKindErrorComponent,
+            ApiV1ApmGrafanadashboardsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_name_exact_error_component import (
-            ApiV1ApmGrafanadashboardsListNameExactErrorComponent,
+            ApiV1ApmGrafanadashboardsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_search_error_component import (
-            ApiV1ApmGrafanadashboardsListSearchErrorComponent,
+            ApiV1ApmGrafanadashboardsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_state_error_component import (
-            ApiV1ApmGrafanadashboardsListStateErrorComponent,
+            ApiV1ApmGrafanadashboardsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_state_not_error_component import (
-            ApiV1ApmGrafanadashboardsListStateNotErrorComponent,
+            ApiV1ApmGrafanadashboardsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_time_range_error_component import (
-            ApiV1ApmGrafanadashboardsListTimeRangeErrorComponent,
+            ApiV1ApmGrafanadashboardsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -124,28 +124,28 @@ class ApiV1ApmGrafanadashboardsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_apm_grafanadashboards_list_created_by_users_error_component import (
-            ApiV1ApmGrafanadashboardsListCreatedByUsersErrorComponent,
+            ApiV1ApmGrafanadashboardsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_kind_error_component import (
-            ApiV1ApmGrafanadashboardsListKindErrorComponent,
+            ApiV1ApmGrafanadashboardsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_name_exact_error_component import (
-            ApiV1ApmGrafanadashboardsListNameExactErrorComponent,
+            ApiV1ApmGrafanadashboardsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_search_error_component import (
-            ApiV1ApmGrafanadashboardsListSearchErrorComponent,
+            ApiV1ApmGrafanadashboardsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_source_uid_error_component import (
-            ApiV1ApmGrafanadashboardsListSourceUidErrorComponent,
+            ApiV1ApmGrafanadashboardsListSourceUidErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_state_error_component import (
-            ApiV1ApmGrafanadashboardsListStateErrorComponent,
+            ApiV1ApmGrafanadashboardsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_state_not_error_component import (
-            ApiV1ApmGrafanadashboardsListStateNotErrorComponent,
+            ApiV1ApmGrafanadashboardsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_grafanadashboards_list_time_range_error_component import (
-            ApiV1ApmGrafanadashboardsListTimeRangeErrorComponent,
+            ApiV1ApmGrafanadashboardsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

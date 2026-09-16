@@ -68,7 +68,7 @@ class PaginatedArtifactRegistryListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.artifact_registry_list import ArtifactRegistryList
+        from ..models.artifact_registry_list import ArtifactRegistryList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

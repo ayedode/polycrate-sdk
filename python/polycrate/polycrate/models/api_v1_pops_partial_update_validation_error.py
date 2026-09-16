@@ -152,85 +152,91 @@ class ApiV1PopsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pops_partial_update_annotations_error_component import (
-            ApiV1PopsPartialUpdateAnnotationsErrorComponent,
+            ApiV1PopsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_archived_at_error_component import (
-            ApiV1PopsPartialUpdateArchivedAtErrorComponent,
+            ApiV1PopsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_archived_error_component import (
-            ApiV1PopsPartialUpdateArchivedErrorComponent,
+            ApiV1PopsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_archived_reason_error_component import (
-            ApiV1PopsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1PopsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_partial_update_city_error_component import ApiV1PopsPartialUpdateCityErrorComponent
+        from ..models.api_v1_pops_partial_update_city_error_component import (
+            ApiV1PopsPartialUpdateCityErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pops_partial_update_country_error_component import (
-            ApiV1PopsPartialUpdateCountryErrorComponent,
+            ApiV1PopsPartialUpdateCountryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_criticality_error_component import (
-            ApiV1PopsPartialUpdateCriticalityErrorComponent,
+            ApiV1PopsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_debug_mode_error_component import (
-            ApiV1PopsPartialUpdateDebugModeErrorComponent,
+            ApiV1PopsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_description_error_component import (
-            ApiV1PopsPartialUpdateDescriptionErrorComponent,
+            ApiV1PopsPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_display_name_error_component import (
-            ApiV1PopsPartialUpdateDisplayNameErrorComponent,
+            ApiV1PopsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_partial_update_kind_error_component import ApiV1PopsPartialUpdateKindErrorComponent
+        from ..models.api_v1_pops_partial_update_kind_error_component import (
+            ApiV1PopsPartialUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pops_partial_update_labels_error_component import (
-            ApiV1PopsPartialUpdateLabelsErrorComponent,
+            ApiV1PopsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_latitude_error_component import (
-            ApiV1PopsPartialUpdateLatitudeErrorComponent,
+            ApiV1PopsPartialUpdateLatitudeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_longitude_error_component import (
-            ApiV1PopsPartialUpdateLongitudeErrorComponent,
+            ApiV1PopsPartialUpdateLongitudeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_partial_update_name_error_component import ApiV1PopsPartialUpdateNameErrorComponent
+        from ..models.api_v1_pops_partial_update_name_error_component import (
+            ApiV1PopsPartialUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pops_partial_update_non_field_errors_error_component import (
-            ApiV1PopsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PopsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_platform_service_error_component import (
-            ApiV1PopsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1PopsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_provider_entity_id_error_component import (
-            ApiV1PopsPartialUpdateProviderEntityIdErrorComponent,
+            ApiV1PopsPartialUpdateProviderEntityIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_provider_error_component import (
-            ApiV1PopsPartialUpdateProviderErrorComponent,
+            ApiV1PopsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_provider_id_error_component import (
-            ApiV1PopsPartialUpdateProviderIdErrorComponent,
+            ApiV1PopsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_provider_reference_error_component import (
-            ApiV1PopsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1PopsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PopsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PopsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_region_error_component import (
-            ApiV1PopsPartialUpdateRegionErrorComponent,
+            ApiV1PopsPartialUpdateRegionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_sla_availability_error_component import (
-            ApiV1PopsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PopsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_sla_target_error_component import (
-            ApiV1PopsPartialUpdateSlaTargetErrorComponent,
+            ApiV1PopsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_slo_availability_error_component import (
-            ApiV1PopsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PopsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_slo_target_error_component import (
-            ApiV1PopsPartialUpdateSloTargetErrorComponent,
+            ApiV1PopsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_target_availability_error_component import (
-            ApiV1PopsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PopsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_tolerations_error_component import (
-            ApiV1PopsPartialUpdateTolerationsErrorComponent,
+            ApiV1PopsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -315,88 +321,94 @@ class ApiV1PopsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pops_partial_update_annotations_error_component import (
-            ApiV1PopsPartialUpdateAnnotationsErrorComponent,
+            ApiV1PopsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_archived_at_error_component import (
-            ApiV1PopsPartialUpdateArchivedAtErrorComponent,
+            ApiV1PopsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_archived_error_component import (
-            ApiV1PopsPartialUpdateArchivedErrorComponent,
+            ApiV1PopsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_archived_reason_error_component import (
-            ApiV1PopsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1PopsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_partial_update_city_error_component import ApiV1PopsPartialUpdateCityErrorComponent
+        from ..models.api_v1_pops_partial_update_city_error_component import (
+            ApiV1PopsPartialUpdateCityErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pops_partial_update_country_error_component import (
-            ApiV1PopsPartialUpdateCountryErrorComponent,
+            ApiV1PopsPartialUpdateCountryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_criticality_error_component import (
-            ApiV1PopsPartialUpdateCriticalityErrorComponent,
+            ApiV1PopsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_debug_mode_error_component import (
-            ApiV1PopsPartialUpdateDebugModeErrorComponent,
+            ApiV1PopsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_description_error_component import (
-            ApiV1PopsPartialUpdateDescriptionErrorComponent,
+            ApiV1PopsPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_display_name_error_component import (
-            ApiV1PopsPartialUpdateDisplayNameErrorComponent,
+            ApiV1PopsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_partial_update_kind_error_component import ApiV1PopsPartialUpdateKindErrorComponent
+        from ..models.api_v1_pops_partial_update_kind_error_component import (
+            ApiV1PopsPartialUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pops_partial_update_labels_error_component import (
-            ApiV1PopsPartialUpdateLabelsErrorComponent,
+            ApiV1PopsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_latitude_error_component import (
-            ApiV1PopsPartialUpdateLatitudeErrorComponent,
+            ApiV1PopsPartialUpdateLatitudeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_longitude_error_component import (
-            ApiV1PopsPartialUpdateLongitudeErrorComponent,
+            ApiV1PopsPartialUpdateLongitudeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pops_partial_update_name_error_component import ApiV1PopsPartialUpdateNameErrorComponent
+        from ..models.api_v1_pops_partial_update_name_error_component import (
+            ApiV1PopsPartialUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pops_partial_update_non_field_errors_error_component import (
-            ApiV1PopsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PopsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_platform_service_error_component import (
-            ApiV1PopsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1PopsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_pop_endpoint_remote_address_error_component import (
-            ApiV1PopsPartialUpdatePopEndpointRemoteAddressErrorComponent,
+            ApiV1PopsPartialUpdatePopEndpointRemoteAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_provider_entity_id_error_component import (
-            ApiV1PopsPartialUpdateProviderEntityIdErrorComponent,
+            ApiV1PopsPartialUpdateProviderEntityIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_provider_error_component import (
-            ApiV1PopsPartialUpdateProviderErrorComponent,
+            ApiV1PopsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_provider_id_error_component import (
-            ApiV1PopsPartialUpdateProviderIdErrorComponent,
+            ApiV1PopsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_provider_reference_error_component import (
-            ApiV1PopsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1PopsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PopsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PopsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_region_error_component import (
-            ApiV1PopsPartialUpdateRegionErrorComponent,
+            ApiV1PopsPartialUpdateRegionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_sla_availability_error_component import (
-            ApiV1PopsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PopsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_sla_target_error_component import (
-            ApiV1PopsPartialUpdateSlaTargetErrorComponent,
+            ApiV1PopsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_slo_availability_error_component import (
-            ApiV1PopsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PopsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_slo_target_error_component import (
-            ApiV1PopsPartialUpdateSloTargetErrorComponent,
+            ApiV1PopsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_target_availability_error_component import (
-            ApiV1PopsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PopsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pops_partial_update_tolerations_error_component import (
-            ApiV1PopsPartialUpdateTolerationsErrorComponent,
+            ApiV1PopsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

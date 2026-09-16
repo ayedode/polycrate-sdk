@@ -297,10 +297,10 @@ class Host:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.host_deleted_by_user_type_0 import HostDeletedByUserType0
-        from ..models.host_last_action_run_type_0 import HostLastActionRunType0
-        from ..models.host_organization_type_0 import HostOrganizationType0
-        from ..models.host_workspace_type_0 import HostWorkspaceType0
+        from ..models.host_deleted_by_user_type_0 import HostDeletedByUserType0  # noqa: PLC0415
+        from ..models.host_last_action_run_type_0 import HostLastActionRunType0  # noqa: PLC0415
+        from ..models.host_organization_type_0 import HostOrganizationType0  # noqa: PLC0415
+        from ..models.host_workspace_type_0 import HostWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -803,14 +803,14 @@ class Host:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential_simple import CredentialSimple
-        from ..models.host_created import HostCreated
-        from ..models.host_deleted_by_user_type_0 import HostDeletedByUserType0
-        from ..models.host_last_action_run_type_0 import HostLastActionRunType0
-        from ..models.host_organization_type_0 import HostOrganizationType0
-        from ..models.host_workspace_type_0 import HostWorkspaceType0
-        from ..models.product_simple import ProductSimple
-        from ..models.provider_account_simple import ProviderAccountSimple
+        from ..models.credential_simple import CredentialSimple  # noqa: PLC0415
+        from ..models.host_created import HostCreated  # noqa: PLC0415
+        from ..models.host_deleted_by_user_type_0 import HostDeletedByUserType0  # noqa: PLC0415
+        from ..models.host_last_action_run_type_0 import HostLastActionRunType0  # noqa: PLC0415
+        from ..models.host_organization_type_0 import HostOrganizationType0  # noqa: PLC0415
+        from ..models.host_workspace_type_0 import HostWorkspaceType0  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
+        from ..models.provider_account_simple import ProviderAccountSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

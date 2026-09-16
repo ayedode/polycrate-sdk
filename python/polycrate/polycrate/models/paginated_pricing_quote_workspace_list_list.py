@@ -68,7 +68,7 @@ class PaginatedPricingQuoteWorkspaceListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pricing_quote_workspace_list import PricingQuoteWorkspaceList
+        from ..models.pricing_quote_workspace_list import PricingQuoteWorkspaceList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

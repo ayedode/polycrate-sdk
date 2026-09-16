@@ -15,6 +15,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_loadbalancers_instances_partial_update_config_error_component import (
         ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponent,
     )
+    from ..models.api_v1_loadbalancers_instances_partial_update_haproxy_defaults_error_component import (
+        ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent,
+    )
     from ..models.api_v1_loadbalancers_instances_partial_update_labels_error_component import (
         ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent,
     )
@@ -23,6 +26,9 @@ if TYPE_CHECKING:
     )
     from ..models.api_v1_loadbalancers_instances_partial_update_ports_error_component import (
         ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent,
+    )
+    from ..models.api_v1_loadbalancers_instances_partial_update_resource_limits_error_component import (
+        ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent,
     )
     from ..models.api_v1_loadbalancers_instances_partial_update_wizard_ports_error_component import (
         ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent,
@@ -39,9 +45,11 @@ class ApiV1LoadbalancersInstancesPartialUpdateValidationError:
         type_ (ValidationErrorEnum): * `validation_error` - Validation Error
         errors (list[ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent |
             ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponent |
+            ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent |
             ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent |
             ApiV1LoadbalancersInstancesPartialUpdateNonFieldErrorsErrorComponent |
             ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent |
+            ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent |
             ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent]):
     """
 
@@ -49,28 +57,36 @@ class ApiV1LoadbalancersInstancesPartialUpdateValidationError:
     errors: list[
         ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent
         | ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponent
+        | ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent
         | ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent
         | ApiV1LoadbalancersInstancesPartialUpdateNonFieldErrorsErrorComponent
         | ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent
+        | ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent
         | ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent
     ]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.api_v1_loadbalancers_instances_partial_update_annotations_error_component import (
+            ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_loadbalancers_instances_partial_update_config_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_partial_update_labels_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_partial_update_non_field_errors_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_partial_update_ports_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_loadbalancers_instances_partial_update_resource_limits_error_component import (
+            ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_partial_update_wizard_ports_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -87,6 +103,10 @@ class ApiV1LoadbalancersInstancesPartialUpdateValidationError:
             elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent):
                 errors_item = errors_item_data.to_dict()
             else:
                 errors_item = errors_item_data.to_dict()
@@ -107,22 +127,28 @@ class ApiV1LoadbalancersInstancesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_loadbalancers_instances_partial_update_annotations_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_partial_update_config_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_loadbalancers_instances_partial_update_haproxy_defaults_error_component import (
+            ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_partial_update_labels_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_partial_update_non_field_errors_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_partial_update_ports_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_loadbalancers_instances_partial_update_resource_limits_error_component import (
+            ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_partial_update_wizard_ports_error_component import (
-            ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent,
+            ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -137,9 +163,11 @@ class ApiV1LoadbalancersInstancesPartialUpdateValidationError:
             ) -> (
                 ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent
                 | ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponent
+                | ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent
                 | ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent
                 | ApiV1LoadbalancersInstancesPartialUpdateNonFieldErrorsErrorComponent
                 | ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent
+                | ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent
                 | ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent
             ):
                 try:
@@ -192,13 +220,33 @@ class ApiV1LoadbalancersInstancesPartialUpdateValidationError:
                     return componentsschemas_api_v1_loadbalancers_instances_partial_update_error_type_4
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_loadbalancers_instances_partial_update_error_type_5 = (
+                        ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_loadbalancers_instances_partial_update_error_type_5
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_loadbalancers_instances_partial_update_error_type_6 = (
+                        ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_loadbalancers_instances_partial_update_error_type_6
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_loadbalancers_instances_partial_update_error_type_5 = (
-                    ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent.from_dict(data)
+                componentsschemas_api_v1_loadbalancers_instances_partial_update_error_type_7 = (
+                    ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_loadbalancers_instances_partial_update_error_type_5
+                return componentsschemas_api_v1_loadbalancers_instances_partial_update_error_type_7
 
             errors_item = _parse_errors_item(errors_item_data)
 

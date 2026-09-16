@@ -49,8 +49,8 @@ class RegionConfig:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.region_loadbalancer_config import RegionLoadbalancerConfig
-        from ..models.region_s3_config import RegionS3Config
+        from ..models.region_loadbalancer_config import RegionLoadbalancerConfig  # noqa: PLC0415
+        from ..models.region_s3_config import RegionS3Config  # noqa: PLC0415
 
         d = dict(src_dict)
         _s3 = d.pop("s3", UNSET)

@@ -233,10 +233,10 @@ class Downtime:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.downtime_affected_object import DowntimeAffectedObject
-        from ..models.downtime_affected_workspaces_item import DowntimeAffectedWorkspacesItem
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.post_mortem_note import PostMortemNote
+        from ..models.downtime_affected_object import DowntimeAffectedObject  # noqa: PLC0415
+        from ..models.downtime_affected_workspaces_item import DowntimeAffectedWorkspacesItem  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.post_mortem_note import PostMortemNote  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

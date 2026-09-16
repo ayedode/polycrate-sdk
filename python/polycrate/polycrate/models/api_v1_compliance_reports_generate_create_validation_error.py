@@ -53,16 +53,16 @@ class ApiV1ComplianceReportsGenerateCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_compliance_reports_generate_create_non_field_errors_error_component import (
-            ApiV1ComplianceReportsGenerateCreateNonFieldErrorsErrorComponent,
+            ApiV1ComplianceReportsGenerateCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_generate_create_organization_error_component import (
-            ApiV1ComplianceReportsGenerateCreateOrganizationErrorComponent,
+            ApiV1ComplianceReportsGenerateCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_generate_create_period_end_error_component import (
-            ApiV1ComplianceReportsGenerateCreatePeriodEndErrorComponent,
+            ApiV1ComplianceReportsGenerateCreatePeriodEndErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_generate_create_period_start_error_component import (
-            ApiV1ComplianceReportsGenerateCreatePeriodStartErrorComponent,
+            ApiV1ComplianceReportsGenerateCreatePeriodStartErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -97,19 +97,19 @@ class ApiV1ComplianceReportsGenerateCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_compliance_reports_generate_create_force_error_component import (
-            ApiV1ComplianceReportsGenerateCreateForceErrorComponent,
+            ApiV1ComplianceReportsGenerateCreateForceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_generate_create_non_field_errors_error_component import (
-            ApiV1ComplianceReportsGenerateCreateNonFieldErrorsErrorComponent,
+            ApiV1ComplianceReportsGenerateCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_generate_create_organization_error_component import (
-            ApiV1ComplianceReportsGenerateCreateOrganizationErrorComponent,
+            ApiV1ComplianceReportsGenerateCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_generate_create_period_end_error_component import (
-            ApiV1ComplianceReportsGenerateCreatePeriodEndErrorComponent,
+            ApiV1ComplianceReportsGenerateCreatePeriodEndErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_generate_create_period_start_error_component import (
-            ApiV1ComplianceReportsGenerateCreatePeriodStartErrorComponent,
+            ApiV1ComplianceReportsGenerateCreatePeriodStartErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

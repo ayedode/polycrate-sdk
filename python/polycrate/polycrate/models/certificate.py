@@ -248,10 +248,10 @@ class Certificate:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.certificate_deleted_by_user_type_0 import CertificateDeletedByUserType0
-        from ..models.certificate_last_action_run_type_0 import CertificateLastActionRunType0
-        from ..models.certificate_organization_type_0 import CertificateOrganizationType0
-        from ..models.certificate_workspace_type_0 import CertificateWorkspaceType0
+        from ..models.certificate_deleted_by_user_type_0 import CertificateDeletedByUserType0  # noqa: PLC0415
+        from ..models.certificate_last_action_run_type_0 import CertificateLastActionRunType0  # noqa: PLC0415
+        from ..models.certificate_organization_type_0 import CertificateOrganizationType0  # noqa: PLC0415
+        from ..models.certificate_workspace_type_0 import CertificateWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -697,11 +697,11 @@ class Certificate:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.certificate_created import CertificateCreated
-        from ..models.certificate_deleted_by_user_type_0 import CertificateDeletedByUserType0
-        from ..models.certificate_last_action_run_type_0 import CertificateLastActionRunType0
-        from ..models.certificate_organization_type_0 import CertificateOrganizationType0
-        from ..models.certificate_workspace_type_0 import CertificateWorkspaceType0
+        from ..models.certificate_created import CertificateCreated  # noqa: PLC0415
+        from ..models.certificate_deleted_by_user_type_0 import CertificateDeletedByUserType0  # noqa: PLC0415
+        from ..models.certificate_last_action_run_type_0 import CertificateLastActionRunType0  # noqa: PLC0415
+        from ..models.certificate_organization_type_0 import CertificateOrganizationType0  # noqa: PLC0415
+        from ..models.certificate_workspace_type_0 import CertificateWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

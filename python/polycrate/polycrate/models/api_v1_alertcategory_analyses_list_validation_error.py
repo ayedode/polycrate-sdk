@@ -43,10 +43,10 @@ class ApiV1AlertcategoryAnalysesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alertcategory_analyses_list_category_error_component import (
-            ApiV1AlertcategoryAnalysesListCategoryErrorComponent,
+            ApiV1AlertcategoryAnalysesListCategoryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_analyses_list_signal_class_error_component import (
-            ApiV1AlertcategoryAnalysesListSignalClassErrorComponent,
+            ApiV1AlertcategoryAnalysesListSignalClassErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -77,13 +77,13 @@ class ApiV1AlertcategoryAnalysesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alertcategory_analyses_list_alertname_error_component import (
-            ApiV1AlertcategoryAnalysesListAlertnameErrorComponent,
+            ApiV1AlertcategoryAnalysesListAlertnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_analyses_list_category_error_component import (
-            ApiV1AlertcategoryAnalysesListCategoryErrorComponent,
+            ApiV1AlertcategoryAnalysesListCategoryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_analyses_list_signal_class_error_component import (
-            ApiV1AlertcategoryAnalysesListSignalClassErrorComponent,
+            ApiV1AlertcategoryAnalysesListSignalClassErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

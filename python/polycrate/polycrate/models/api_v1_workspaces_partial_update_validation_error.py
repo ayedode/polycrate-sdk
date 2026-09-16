@@ -66,11 +66,20 @@ if TYPE_CHECKING:
     from ..models.api_v1_workspaces_partial_update_has_incompatible_kubeconfig_error_component import (
         ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent,
     )
+    from ..models.api_v1_workspaces_partial_update_k8s_addons_enabled_error_component import (
+        ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent,
+    )
     from ..models.api_v1_workspaces_partial_update_kind_error_component import (
         ApiV1WorkspacesPartialUpdateKindErrorComponent,
     )
     from ..models.api_v1_workspaces_partial_update_labels_error_component import (
         ApiV1WorkspacesPartialUpdateLabelsErrorComponent,
+    )
+    from ..models.api_v1_workspaces_partial_update_logs_enabled_error_component import (
+        ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent,
+    )
+    from ..models.api_v1_workspaces_partial_update_metrics_enabled_error_component import (
+        ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent,
     )
     from ..models.api_v1_workspaces_partial_update_monitoring_workspace_allowlist_ids_error_component import (
         ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -171,7 +180,9 @@ class ApiV1WorkspacesPartialUpdateValidationError:
             ApiV1WorkspacesPartialUpdateGitlabProjectUrlErrorComponent |
             ApiV1WorkspacesPartialUpdateGlobalEndpointMonitorErrorComponent |
             ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent |
-            ApiV1WorkspacesPartialUpdateKindErrorComponent | ApiV1WorkspacesPartialUpdateLabelsErrorComponent |
+            ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent | ApiV1WorkspacesPartialUpdateKindErrorComponent |
+            ApiV1WorkspacesPartialUpdateLabelsErrorComponent | ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent |
+            ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent |
             ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent |
             ApiV1WorkspacesPartialUpdateNameErrorComponent | ApiV1WorkspacesPartialUpdateNonFieldErrorsErrorComponent |
             ApiV1WorkspacesPartialUpdateNotificationsEnabledErrorComponent |
@@ -212,8 +223,11 @@ class ApiV1WorkspacesPartialUpdateValidationError:
         | ApiV1WorkspacesPartialUpdateGitlabProjectUrlErrorComponent
         | ApiV1WorkspacesPartialUpdateGlobalEndpointMonitorErrorComponent
         | ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent
+        | ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent
         | ApiV1WorkspacesPartialUpdateKindErrorComponent
         | ApiV1WorkspacesPartialUpdateLabelsErrorComponent
+        | ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent
+        | ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent
         | ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent
         | ApiV1WorkspacesPartialUpdateNameErrorComponent
         | ApiV1WorkspacesPartialUpdateNonFieldErrorsErrorComponent
@@ -244,139 +258,148 @@ class ApiV1WorkspacesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_workspaces_partial_update_actual_availability_error_component import (
-            ApiV1WorkspacesPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1WorkspacesPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_annotations_error_component import (
-            ApiV1WorkspacesPartialUpdateAnnotationsErrorComponent,
+            ApiV1WorkspacesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_archived_at_error_component import (
-            ApiV1WorkspacesPartialUpdateArchivedAtErrorComponent,
+            ApiV1WorkspacesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_archived_error_component import (
-            ApiV1WorkspacesPartialUpdateArchivedErrorComponent,
+            ApiV1WorkspacesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_archived_reason_error_component import (
-            ApiV1WorkspacesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1WorkspacesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_backup_enabled_error_component import (
-            ApiV1WorkspacesPartialUpdateBackupEnabledErrorComponent,
+            ApiV1WorkspacesPartialUpdateBackupEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_criticality_error_component import (
-            ApiV1WorkspacesPartialUpdateCriticalityErrorComponent,
+            ApiV1WorkspacesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_debug_mode_error_component import (
-            ApiV1WorkspacesPartialUpdateDebugModeErrorComponent,
+            ApiV1WorkspacesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_description_error_component import (
-            ApiV1WorkspacesPartialUpdateDescriptionErrorComponent,
+            ApiV1WorkspacesPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_discovery_enabled_error_component import (
-            ApiV1WorkspacesPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1WorkspacesPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_display_name_error_component import (
-            ApiV1WorkspacesPartialUpdateDisplayNameErrorComponent,
+            ApiV1WorkspacesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_encrypted_error_component import (
-            ApiV1WorkspacesPartialUpdateEncryptedErrorComponent,
+            ApiV1WorkspacesPartialUpdateEncryptedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesPartialUpdateEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesPartialUpdateEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_endpoint_monitors_error_component import (
-            ApiV1WorkspacesPartialUpdateEndpointMonitorsErrorComponent,
+            ApiV1WorkspacesPartialUpdateEndpointMonitorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_gitlab_project_id_error_component import (
-            ApiV1WorkspacesPartialUpdateGitlabProjectIdErrorComponent,
+            ApiV1WorkspacesPartialUpdateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_gitlab_project_url_error_component import (
-            ApiV1WorkspacesPartialUpdateGitlabProjectUrlErrorComponent,
+            ApiV1WorkspacesPartialUpdateGitlabProjectUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_global_endpoint_monitor_error_component import (
-            ApiV1WorkspacesPartialUpdateGlobalEndpointMonitorErrorComponent,
+            ApiV1WorkspacesPartialUpdateGlobalEndpointMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_has_incompatible_kubeconfig_error_component import (
-            ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent,
+            ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_partial_update_k8s_addons_enabled_error_component import (
+            ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_kind_error_component import (
-            ApiV1WorkspacesPartialUpdateKindErrorComponent,
+            ApiV1WorkspacesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_labels_error_component import (
-            ApiV1WorkspacesPartialUpdateLabelsErrorComponent,
+            ApiV1WorkspacesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_partial_update_logs_enabled_error_component import (
+            ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_partial_update_metrics_enabled_error_component import (
+            ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_monitoring_workspace_allowlist_ids_error_component import (
-            ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent,
+            ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_name_error_component import (
-            ApiV1WorkspacesPartialUpdateNameErrorComponent,
+            ApiV1WorkspacesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_non_field_errors_error_component import (
-            ApiV1WorkspacesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1WorkspacesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_notifications_enabled_error_component import (
-            ApiV1WorkspacesPartialUpdateNotificationsEnabledErrorComponent,
+            ApiV1WorkspacesPartialUpdateNotificationsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_on_premise_error_component import (
-            ApiV1WorkspacesPartialUpdateOnPremiseErrorComponent,
+            ApiV1WorkspacesPartialUpdateOnPremiseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_organization_id_error_component import (
-            ApiV1WorkspacesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1WorkspacesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_owner_id_error_component import (
-            ApiV1WorkspacesPartialUpdateOwnerIdErrorComponent,
+            ApiV1WorkspacesPartialUpdateOwnerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_platform_service_error_component import (
-            ApiV1WorkspacesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1WorkspacesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_pop_id_error_component import (
-            ApiV1WorkspacesPartialUpdatePopIdErrorComponent,
+            ApiV1WorkspacesPartialUpdatePopIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_provider_error_component import (
-            ApiV1WorkspacesPartialUpdateProviderErrorComponent,
+            ApiV1WorkspacesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_provider_id_error_component import (
-            ApiV1WorkspacesPartialUpdateProviderIdErrorComponent,
+            ApiV1WorkspacesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_provider_reference_error_component import (
-            ApiV1WorkspacesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1WorkspacesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_purpose_error_component import (
-            ApiV1WorkspacesPartialUpdatePurposeErrorComponent,
+            ApiV1WorkspacesPartialUpdatePurposeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_readme_md_error_component import (
-            ApiV1WorkspacesPartialUpdateReadmeMdErrorComponent,
+            ApiV1WorkspacesPartialUpdateReadmeMdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_reconciliation_enabled_error_component import (
-            ApiV1WorkspacesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1WorkspacesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_scope_error_component import (
-            ApiV1WorkspacesPartialUpdateScopeErrorComponent,
+            ApiV1WorkspacesPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_secrets_poly_raw_error_component import (
-            ApiV1WorkspacesPartialUpdateSecretsPolyRawErrorComponent,
+            ApiV1WorkspacesPartialUpdateSecretsPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_sla_availability_error_component import (
-            ApiV1WorkspacesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1WorkspacesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_sla_target_error_component import (
-            ApiV1WorkspacesPartialUpdateSlaTargetErrorComponent,
+            ApiV1WorkspacesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_slo_availability_error_component import (
-            ApiV1WorkspacesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1WorkspacesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_slo_target_error_component import (
-            ApiV1WorkspacesPartialUpdateSloTargetErrorComponent,
+            ApiV1WorkspacesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_target_availability_error_component import (
-            ApiV1WorkspacesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1WorkspacesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_template_error_component import (
-            ApiV1WorkspacesPartialUpdateTemplateErrorComponent,
+            ApiV1WorkspacesPartialUpdateTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_urls_error_component import (
-            ApiV1WorkspacesPartialUpdateUrlsErrorComponent,
+            ApiV1WorkspacesPartialUpdateUrlsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_workspace_inventory_raw_error_component import (
-            ApiV1WorkspacesPartialUpdateWorkspaceInventoryRawErrorComponent,
+            ApiV1WorkspacesPartialUpdateWorkspaceInventoryRawErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -450,6 +473,12 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesPartialUpdateBackupEnabledErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesPartialUpdateEndpointMonitorsErrorComponent):
@@ -495,142 +524,151 @@ class ApiV1WorkspacesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_workspaces_partial_update_actual_availability_error_component import (
-            ApiV1WorkspacesPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1WorkspacesPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_alternative_name_error_component import (
-            ApiV1WorkspacesPartialUpdateAlternativeNameErrorComponent,
+            ApiV1WorkspacesPartialUpdateAlternativeNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_annotations_error_component import (
-            ApiV1WorkspacesPartialUpdateAnnotationsErrorComponent,
+            ApiV1WorkspacesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_archived_at_error_component import (
-            ApiV1WorkspacesPartialUpdateArchivedAtErrorComponent,
+            ApiV1WorkspacesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_archived_error_component import (
-            ApiV1WorkspacesPartialUpdateArchivedErrorComponent,
+            ApiV1WorkspacesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_archived_reason_error_component import (
-            ApiV1WorkspacesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1WorkspacesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_backup_enabled_error_component import (
-            ApiV1WorkspacesPartialUpdateBackupEnabledErrorComponent,
+            ApiV1WorkspacesPartialUpdateBackupEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_criticality_error_component import (
-            ApiV1WorkspacesPartialUpdateCriticalityErrorComponent,
+            ApiV1WorkspacesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_debug_mode_error_component import (
-            ApiV1WorkspacesPartialUpdateDebugModeErrorComponent,
+            ApiV1WorkspacesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_description_error_component import (
-            ApiV1WorkspacesPartialUpdateDescriptionErrorComponent,
+            ApiV1WorkspacesPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_discovery_enabled_error_component import (
-            ApiV1WorkspacesPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1WorkspacesPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_display_name_error_component import (
-            ApiV1WorkspacesPartialUpdateDisplayNameErrorComponent,
+            ApiV1WorkspacesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_encrypted_error_component import (
-            ApiV1WorkspacesPartialUpdateEncryptedErrorComponent,
+            ApiV1WorkspacesPartialUpdateEncryptedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesPartialUpdateEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesPartialUpdateEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_endpoint_monitors_error_component import (
-            ApiV1WorkspacesPartialUpdateEndpointMonitorsErrorComponent,
+            ApiV1WorkspacesPartialUpdateEndpointMonitorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_gitlab_project_id_error_component import (
-            ApiV1WorkspacesPartialUpdateGitlabProjectIdErrorComponent,
+            ApiV1WorkspacesPartialUpdateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_gitlab_project_url_error_component import (
-            ApiV1WorkspacesPartialUpdateGitlabProjectUrlErrorComponent,
+            ApiV1WorkspacesPartialUpdateGitlabProjectUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_global_endpoint_monitor_error_component import (
-            ApiV1WorkspacesPartialUpdateGlobalEndpointMonitorErrorComponent,
+            ApiV1WorkspacesPartialUpdateGlobalEndpointMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_has_incompatible_kubeconfig_error_component import (
-            ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent,
+            ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_partial_update_k8s_addons_enabled_error_component import (
+            ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_kind_error_component import (
-            ApiV1WorkspacesPartialUpdateKindErrorComponent,
+            ApiV1WorkspacesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_labels_error_component import (
-            ApiV1WorkspacesPartialUpdateLabelsErrorComponent,
+            ApiV1WorkspacesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_partial_update_logs_enabled_error_component import (
+            ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_partial_update_metrics_enabled_error_component import (
+            ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_monitoring_workspace_allowlist_ids_error_component import (
-            ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent,
+            ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_name_error_component import (
-            ApiV1WorkspacesPartialUpdateNameErrorComponent,
+            ApiV1WorkspacesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_non_field_errors_error_component import (
-            ApiV1WorkspacesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1WorkspacesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_notifications_enabled_error_component import (
-            ApiV1WorkspacesPartialUpdateNotificationsEnabledErrorComponent,
+            ApiV1WorkspacesPartialUpdateNotificationsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_on_premise_error_component import (
-            ApiV1WorkspacesPartialUpdateOnPremiseErrorComponent,
+            ApiV1WorkspacesPartialUpdateOnPremiseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_organization_id_error_component import (
-            ApiV1WorkspacesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1WorkspacesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_owner_id_error_component import (
-            ApiV1WorkspacesPartialUpdateOwnerIdErrorComponent,
+            ApiV1WorkspacesPartialUpdateOwnerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_platform_service_error_component import (
-            ApiV1WorkspacesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1WorkspacesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_pop_id_error_component import (
-            ApiV1WorkspacesPartialUpdatePopIdErrorComponent,
+            ApiV1WorkspacesPartialUpdatePopIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_provider_error_component import (
-            ApiV1WorkspacesPartialUpdateProviderErrorComponent,
+            ApiV1WorkspacesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_provider_id_error_component import (
-            ApiV1WorkspacesPartialUpdateProviderIdErrorComponent,
+            ApiV1WorkspacesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_provider_reference_error_component import (
-            ApiV1WorkspacesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1WorkspacesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_purpose_error_component import (
-            ApiV1WorkspacesPartialUpdatePurposeErrorComponent,
+            ApiV1WorkspacesPartialUpdatePurposeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_readme_md_error_component import (
-            ApiV1WorkspacesPartialUpdateReadmeMdErrorComponent,
+            ApiV1WorkspacesPartialUpdateReadmeMdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_reconciliation_enabled_error_component import (
-            ApiV1WorkspacesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1WorkspacesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_scope_error_component import (
-            ApiV1WorkspacesPartialUpdateScopeErrorComponent,
+            ApiV1WorkspacesPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_secrets_poly_raw_error_component import (
-            ApiV1WorkspacesPartialUpdateSecretsPolyRawErrorComponent,
+            ApiV1WorkspacesPartialUpdateSecretsPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_sla_availability_error_component import (
-            ApiV1WorkspacesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1WorkspacesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_sla_target_error_component import (
-            ApiV1WorkspacesPartialUpdateSlaTargetErrorComponent,
+            ApiV1WorkspacesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_slo_availability_error_component import (
-            ApiV1WorkspacesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1WorkspacesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_slo_target_error_component import (
-            ApiV1WorkspacesPartialUpdateSloTargetErrorComponent,
+            ApiV1WorkspacesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_target_availability_error_component import (
-            ApiV1WorkspacesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1WorkspacesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_template_error_component import (
-            ApiV1WorkspacesPartialUpdateTemplateErrorComponent,
+            ApiV1WorkspacesPartialUpdateTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_urls_error_component import (
-            ApiV1WorkspacesPartialUpdateUrlsErrorComponent,
+            ApiV1WorkspacesPartialUpdateUrlsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_partial_update_workspace_inventory_raw_error_component import (
-            ApiV1WorkspacesPartialUpdateWorkspaceInventoryRawErrorComponent,
+            ApiV1WorkspacesPartialUpdateWorkspaceInventoryRawErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -662,8 +700,11 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                 | ApiV1WorkspacesPartialUpdateGitlabProjectUrlErrorComponent
                 | ApiV1WorkspacesPartialUpdateGlobalEndpointMonitorErrorComponent
                 | ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent
+                | ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent
                 | ApiV1WorkspacesPartialUpdateKindErrorComponent
                 | ApiV1WorkspacesPartialUpdateLabelsErrorComponent
+                | ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent
+                | ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent
                 | ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent
                 | ApiV1WorkspacesPartialUpdateNameErrorComponent
                 | ApiV1WorkspacesPartialUpdateNonFieldErrorsErrorComponent
@@ -1014,7 +1055,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_32 = (
-                        ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_32
@@ -1024,7 +1065,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_33 = (
-                        ApiV1WorkspacesPartialUpdateEndpointMonitorsErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_33
@@ -1034,7 +1075,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_34 = (
-                        ApiV1WorkspacesPartialUpdateSecretsPolyRawErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_34
@@ -1044,7 +1085,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_35 = (
-                        ApiV1WorkspacesPartialUpdateWorkspaceInventoryRawErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_35
@@ -1054,7 +1095,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_36 = (
-                        ApiV1WorkspacesPartialUpdateOrganizationIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateEndpointMonitorsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_36
@@ -1064,7 +1105,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_37 = (
-                        ApiV1WorkspacesPartialUpdateEncryptedErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateSecretsPolyRawErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_37
@@ -1074,7 +1115,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_38 = (
-                        ApiV1WorkspacesPartialUpdatePopIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateWorkspaceInventoryRawErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_38
@@ -1084,7 +1125,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_39 = (
-                        ApiV1WorkspacesPartialUpdateTemplateErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateOrganizationIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_39
@@ -1094,7 +1135,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_40 = (
-                        ApiV1WorkspacesPartialUpdateDescriptionErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateEncryptedErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_40
@@ -1104,7 +1145,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_41 = (
-                        ApiV1WorkspacesPartialUpdatePurposeErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdatePopIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_41
@@ -1114,7 +1155,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_42 = (
-                        ApiV1WorkspacesPartialUpdateUrlsErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateTemplateErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_42
@@ -1124,7 +1165,7 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_43 = (
-                        ApiV1WorkspacesPartialUpdateOwnerIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdateDescriptionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_43
@@ -1134,19 +1175,49 @@ class ApiV1WorkspacesPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_partial_update_error_type_44 = (
-                        ApiV1WorkspacesPartialUpdateReadmeMdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesPartialUpdatePurposeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_partial_update_error_type_44
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_partial_update_error_type_45 = (
+                        ApiV1WorkspacesPartialUpdateUrlsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_partial_update_error_type_45
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_partial_update_error_type_46 = (
+                        ApiV1WorkspacesPartialUpdateOwnerIdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_partial_update_error_type_46
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_partial_update_error_type_47 = (
+                        ApiV1WorkspacesPartialUpdateReadmeMdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_partial_update_error_type_47
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_workspaces_partial_update_error_type_45 = (
+                componentsschemas_api_v1_workspaces_partial_update_error_type_48 = (
                     ApiV1WorkspacesPartialUpdateAlternativeNameErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_workspaces_partial_update_error_type_45
+                return componentsschemas_api_v1_workspaces_partial_update_error_type_48
 
             errors_item = _parse_errors_item(errors_item_data)
 

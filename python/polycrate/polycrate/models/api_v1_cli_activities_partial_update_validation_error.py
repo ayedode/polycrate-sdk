@@ -52,16 +52,16 @@ class ApiV1CliActivitiesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_cli_activities_partial_update_duration_seconds_error_component import (
-            ApiV1CliActivitiesPartialUpdateDurationSecondsErrorComponent,
+            ApiV1CliActivitiesPartialUpdateDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cli_activities_partial_update_exit_code_error_component import (
-            ApiV1CliActivitiesPartialUpdateExitCodeErrorComponent,
+            ApiV1CliActivitiesPartialUpdateExitCodeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cli_activities_partial_update_finished_at_error_component import (
-            ApiV1CliActivitiesPartialUpdateFinishedAtErrorComponent,
+            ApiV1CliActivitiesPartialUpdateFinishedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cli_activities_partial_update_non_field_errors_error_component import (
-            ApiV1CliActivitiesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1CliActivitiesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -96,19 +96,19 @@ class ApiV1CliActivitiesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_cli_activities_partial_update_duration_seconds_error_component import (
-            ApiV1CliActivitiesPartialUpdateDurationSecondsErrorComponent,
+            ApiV1CliActivitiesPartialUpdateDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cli_activities_partial_update_exit_code_error_component import (
-            ApiV1CliActivitiesPartialUpdateExitCodeErrorComponent,
+            ApiV1CliActivitiesPartialUpdateExitCodeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cli_activities_partial_update_finished_at_error_component import (
-            ApiV1CliActivitiesPartialUpdateFinishedAtErrorComponent,
+            ApiV1CliActivitiesPartialUpdateFinishedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cli_activities_partial_update_non_field_errors_error_component import (
-            ApiV1CliActivitiesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1CliActivitiesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cli_activities_partial_update_status_error_component import (
-            ApiV1CliActivitiesPartialUpdateStatusErrorComponent,
+            ApiV1CliActivitiesPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

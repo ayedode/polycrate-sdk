@@ -60,22 +60,22 @@ class ApiV1BlockRolloutConfigsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_block_rollout_configs_list_created_by_users_error_component import (
-            ApiV1BlockRolloutConfigsListCreatedByUsersErrorComponent,
+            ApiV1BlockRolloutConfigsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_kind_error_component import (
-            ApiV1BlockRolloutConfigsListKindErrorComponent,
+            ApiV1BlockRolloutConfigsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_search_error_component import (
-            ApiV1BlockRolloutConfigsListSearchErrorComponent,
+            ApiV1BlockRolloutConfigsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_state_error_component import (
-            ApiV1BlockRolloutConfigsListStateErrorComponent,
+            ApiV1BlockRolloutConfigsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_state_not_error_component import (
-            ApiV1BlockRolloutConfigsListStateNotErrorComponent,
+            ApiV1BlockRolloutConfigsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_time_range_error_component import (
-            ApiV1BlockRolloutConfigsListTimeRangeErrorComponent,
+            ApiV1BlockRolloutConfigsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -114,25 +114,25 @@ class ApiV1BlockRolloutConfigsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_block_rollout_configs_list_created_by_users_error_component import (
-            ApiV1BlockRolloutConfigsListCreatedByUsersErrorComponent,
+            ApiV1BlockRolloutConfigsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_kind_error_component import (
-            ApiV1BlockRolloutConfigsListKindErrorComponent,
+            ApiV1BlockRolloutConfigsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_name_exact_error_component import (
-            ApiV1BlockRolloutConfigsListNameExactErrorComponent,
+            ApiV1BlockRolloutConfigsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_search_error_component import (
-            ApiV1BlockRolloutConfigsListSearchErrorComponent,
+            ApiV1BlockRolloutConfigsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_state_error_component import (
-            ApiV1BlockRolloutConfigsListStateErrorComponent,
+            ApiV1BlockRolloutConfigsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_state_not_error_component import (
-            ApiV1BlockRolloutConfigsListStateNotErrorComponent,
+            ApiV1BlockRolloutConfigsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_list_time_range_error_component import (
-            ApiV1BlockRolloutConfigsListTimeRangeErrorComponent,
+            ApiV1BlockRolloutConfigsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

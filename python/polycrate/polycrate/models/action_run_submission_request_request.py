@@ -57,7 +57,7 @@ class ActionRunSubmissionRequestRequest:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.action_run_submission_request_request_block_config_type_0 import (
-            ActionRunSubmissionRequestRequestBlockConfigType0,
+            ActionRunSubmissionRequestRequestBlockConfigType0,  # noqa: PLC0415
         )
 
         organization = self.organization
@@ -128,7 +128,7 @@ class ActionRunSubmissionRequestRequest:
 
     def to_multipart(self) -> types.RequestFiles:
         from ..models.action_run_submission_request_request_block_config_type_0 import (
-            ActionRunSubmissionRequestRequestBlockConfigType0,
+            ActionRunSubmissionRequestRequestBlockConfigType0,  # noqa: PLC0415
         )
 
         files: types.RequestFiles = []
@@ -181,9 +181,11 @@ class ActionRunSubmissionRequestRequest:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.action_run_submission_request_request_block_config_type_0 import (
-            ActionRunSubmissionRequestRequestBlockConfigType0,
+            ActionRunSubmissionRequestRequestBlockConfigType0,  # noqa: PLC0415
         )
-        from ..models.action_run_submission_request_request_metadata import ActionRunSubmissionRequestRequestMetadata
+        from ..models.action_run_submission_request_request_metadata import (
+            ActionRunSubmissionRequestRequestMetadata,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         organization = d.pop("organization")

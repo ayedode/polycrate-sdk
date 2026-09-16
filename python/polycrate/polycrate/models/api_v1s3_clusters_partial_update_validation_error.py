@@ -297,172 +297,172 @@ class ApiV1S3ClustersPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1s3_clusters_partial_update_active_error_component import (
-            ApiV1S3ClustersPartialUpdateActiveErrorComponent,
+            ApiV1S3ClustersPartialUpdateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_actual_availability_error_component import (
-            ApiV1S3ClustersPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1S3ClustersPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_admin_endpoint_error_component import (
-            ApiV1S3ClustersPartialUpdateAdminEndpointErrorComponent,
+            ApiV1S3ClustersPartialUpdateAdminEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_admin_endpoint_secure_error_component import (
-            ApiV1S3ClustersPartialUpdateAdminEndpointSecureErrorComponent,
+            ApiV1S3ClustersPartialUpdateAdminEndpointSecureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_alias_error_component import (
-            ApiV1S3ClustersPartialUpdateAliasErrorComponent,
+            ApiV1S3ClustersPartialUpdateAliasErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_allow_new_buckets_error_component import (
-            ApiV1S3ClustersPartialUpdateAllowNewBucketsErrorComponent,
+            ApiV1S3ClustersPartialUpdateAllowNewBucketsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_annotations_error_component import (
-            ApiV1S3ClustersPartialUpdateAnnotationsErrorComponent,
+            ApiV1S3ClustersPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_archived_at_error_component import (
-            ApiV1S3ClustersPartialUpdateArchivedAtErrorComponent,
+            ApiV1S3ClustersPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_archived_by_error_component import (
-            ApiV1S3ClustersPartialUpdateArchivedByErrorComponent,
+            ApiV1S3ClustersPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_archived_error_component import (
-            ApiV1S3ClustersPartialUpdateArchivedErrorComponent,
+            ApiV1S3ClustersPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_archived_reason_error_component import (
-            ApiV1S3ClustersPartialUpdateArchivedReasonErrorComponent,
+            ApiV1S3ClustersPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_ceph_osd_cluster_total_bytes_error_component import (
-            ApiV1S3ClustersPartialUpdateCephOsdClusterTotalBytesErrorComponent,
+            ApiV1S3ClustersPartialUpdateCephOsdClusterTotalBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_cluster_config_error_component import (
-            ApiV1S3ClustersPartialUpdateClusterConfigErrorComponent,
+            ApiV1S3ClustersPartialUpdateClusterConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_cluster_info_error_component import (
-            ApiV1S3ClustersPartialUpdateClusterInfoErrorComponent,
+            ApiV1S3ClustersPartialUpdateClusterInfoErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_created_by_component_error_component import (
-            ApiV1S3ClustersPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1S3ClustersPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_created_by_user_error_component import (
-            ApiV1S3ClustersPartialUpdateCreatedByUserErrorComponent,
+            ApiV1S3ClustersPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_credential_error_component import (
-            ApiV1S3ClustersPartialUpdateCredentialErrorComponent,
+            ApiV1S3ClustersPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_criticality_error_component import (
-            ApiV1S3ClustersPartialUpdateCriticalityErrorComponent,
+            ApiV1S3ClustersPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_debug_mode_error_component import (
-            ApiV1S3ClustersPartialUpdateDebugModeErrorComponent,
+            ApiV1S3ClustersPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_description_error_component import (
-            ApiV1S3ClustersPartialUpdateDescriptionErrorComponent,
+            ApiV1S3ClustersPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_discovery_enabled_error_component import (
-            ApiV1S3ClustersPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1S3ClustersPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_display_name_error_component import (
-            ApiV1S3ClustersPartialUpdateDisplayNameErrorComponent,
+            ApiV1S3ClustersPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_endpoint_error_component import (
-            ApiV1S3ClustersPartialUpdateEndpointErrorComponent,
+            ApiV1S3ClustersPartialUpdateEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_endpoint_secure_error_component import (
-            ApiV1S3ClustersPartialUpdateEndpointSecureErrorComponent,
+            ApiV1S3ClustersPartialUpdateEndpointSecureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_include_in_cost_statement_error_component import (
-            ApiV1S3ClustersPartialUpdateIncludeInCostStatementErrorComponent,
+            ApiV1S3ClustersPartialUpdateIncludeInCostStatementErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_k8s_cluster_error_component import (
-            ApiV1S3ClustersPartialUpdateK8SClusterErrorComponent,
+            ApiV1S3ClustersPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_kind_error_component import (
-            ApiV1S3ClustersPartialUpdateKindErrorComponent,
+            ApiV1S3ClustersPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_labels_error_component import (
-            ApiV1S3ClustersPartialUpdateLabelsErrorComponent,
+            ApiV1S3ClustersPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1S3ClustersPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1S3ClustersPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_managed_buckets_object_count_error_component import (
-            ApiV1S3ClustersPartialUpdateManagedBucketsObjectCountErrorComponent,
+            ApiV1S3ClustersPartialUpdateManagedBucketsObjectCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_managed_buckets_usage_kb_error_component import (
-            ApiV1S3ClustersPartialUpdateManagedBucketsUsageKbErrorComponent,
+            ApiV1S3ClustersPartialUpdateManagedBucketsUsageKbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_managed_by_content_type_error_component import (
-            ApiV1S3ClustersPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1S3ClustersPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_managed_by_object_id_error_component import (
-            ApiV1S3ClustersPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1S3ClustersPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_minio_cluster_capacity_usable_bytes_error_component import (
-            ApiV1S3ClustersPartialUpdateMinioClusterCapacityUsableBytesErrorComponent,
+            ApiV1S3ClustersPartialUpdateMinioClusterCapacityUsableBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_minio_cluster_usage_bytes_error_component import (
-            ApiV1S3ClustersPartialUpdateMinioClusterUsageBytesErrorComponent,
+            ApiV1S3ClustersPartialUpdateMinioClusterUsageBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_modified_by_user_error_component import (
-            ApiV1S3ClustersPartialUpdateModifiedByUserErrorComponent,
+            ApiV1S3ClustersPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_name_error_component import (
-            ApiV1S3ClustersPartialUpdateNameErrorComponent,
+            ApiV1S3ClustersPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_namespace_error_component import (
-            ApiV1S3ClustersPartialUpdateNamespaceErrorComponent,
+            ApiV1S3ClustersPartialUpdateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_non_field_errors_error_component import (
-            ApiV1S3ClustersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1S3ClustersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_platform_dns_record_created_error_component import (
-            ApiV1S3ClustersPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1S3ClustersPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_platform_service_error_component import (
-            ApiV1S3ClustersPartialUpdatePlatformServiceErrorComponent,
+            ApiV1S3ClustersPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_provider_error_component import (
-            ApiV1S3ClustersPartialUpdateProviderErrorComponent,
+            ApiV1S3ClustersPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_provider_id_error_component import (
-            ApiV1S3ClustersPartialUpdateProviderIdErrorComponent,
+            ApiV1S3ClustersPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_provider_reference_error_component import (
-            ApiV1S3ClustersPartialUpdateProviderReferenceErrorComponent,
+            ApiV1S3ClustersPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_radosgw_buckets_logical_used_bytes_error_component import (
-            ApiV1S3ClustersPartialUpdateRadosgwBucketsLogicalUsedBytesErrorComponent,
+            ApiV1S3ClustersPartialUpdateRadosgwBucketsLogicalUsedBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_reconciliation_enabled_error_component import (
-            ApiV1S3ClustersPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1S3ClustersPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_region_error_component import (
-            ApiV1S3ClustersPartialUpdateRegionErrorComponent,
+            ApiV1S3ClustersPartialUpdateRegionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_scope_error_component import (
-            ApiV1S3ClustersPartialUpdateScopeErrorComponent,
+            ApiV1S3ClustersPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_sla_availability_error_component import (
-            ApiV1S3ClustersPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1S3ClustersPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_sla_target_error_component import (
-            ApiV1S3ClustersPartialUpdateSlaTargetErrorComponent,
+            ApiV1S3ClustersPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_sla_window_days_error_component import (
-            ApiV1S3ClustersPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1S3ClustersPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_slo_availability_error_component import (
-            ApiV1S3ClustersPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1S3ClustersPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_slo_target_error_component import (
-            ApiV1S3ClustersPartialUpdateSloTargetErrorComponent,
+            ApiV1S3ClustersPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_slo_window_days_error_component import (
-            ApiV1S3ClustersPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1S3ClustersPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_slug_error_component import (
-            ApiV1S3ClustersPartialUpdateSlugErrorComponent,
+            ApiV1S3ClustersPartialUpdateSlugErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_target_availability_error_component import (
-            ApiV1S3ClustersPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1S3ClustersPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -605,175 +605,175 @@ class ApiV1S3ClustersPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1s3_clusters_partial_update_active_error_component import (
-            ApiV1S3ClustersPartialUpdateActiveErrorComponent,
+            ApiV1S3ClustersPartialUpdateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_actual_availability_error_component import (
-            ApiV1S3ClustersPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1S3ClustersPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_admin_endpoint_error_component import (
-            ApiV1S3ClustersPartialUpdateAdminEndpointErrorComponent,
+            ApiV1S3ClustersPartialUpdateAdminEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_admin_endpoint_secure_error_component import (
-            ApiV1S3ClustersPartialUpdateAdminEndpointSecureErrorComponent,
+            ApiV1S3ClustersPartialUpdateAdminEndpointSecureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_alias_error_component import (
-            ApiV1S3ClustersPartialUpdateAliasErrorComponent,
+            ApiV1S3ClustersPartialUpdateAliasErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_allow_new_buckets_error_component import (
-            ApiV1S3ClustersPartialUpdateAllowNewBucketsErrorComponent,
+            ApiV1S3ClustersPartialUpdateAllowNewBucketsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_annotations_error_component import (
-            ApiV1S3ClustersPartialUpdateAnnotationsErrorComponent,
+            ApiV1S3ClustersPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_archived_at_error_component import (
-            ApiV1S3ClustersPartialUpdateArchivedAtErrorComponent,
+            ApiV1S3ClustersPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_archived_by_error_component import (
-            ApiV1S3ClustersPartialUpdateArchivedByErrorComponent,
+            ApiV1S3ClustersPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_archived_error_component import (
-            ApiV1S3ClustersPartialUpdateArchivedErrorComponent,
+            ApiV1S3ClustersPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_archived_reason_error_component import (
-            ApiV1S3ClustersPartialUpdateArchivedReasonErrorComponent,
+            ApiV1S3ClustersPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_ceph_osd_cluster_total_bytes_error_component import (
-            ApiV1S3ClustersPartialUpdateCephOsdClusterTotalBytesErrorComponent,
+            ApiV1S3ClustersPartialUpdateCephOsdClusterTotalBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_cluster_config_error_component import (
-            ApiV1S3ClustersPartialUpdateClusterConfigErrorComponent,
+            ApiV1S3ClustersPartialUpdateClusterConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_cluster_info_error_component import (
-            ApiV1S3ClustersPartialUpdateClusterInfoErrorComponent,
+            ApiV1S3ClustersPartialUpdateClusterInfoErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_created_by_component_error_component import (
-            ApiV1S3ClustersPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1S3ClustersPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_created_by_user_error_component import (
-            ApiV1S3ClustersPartialUpdateCreatedByUserErrorComponent,
+            ApiV1S3ClustersPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_credential_error_component import (
-            ApiV1S3ClustersPartialUpdateCredentialErrorComponent,
+            ApiV1S3ClustersPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_criticality_error_component import (
-            ApiV1S3ClustersPartialUpdateCriticalityErrorComponent,
+            ApiV1S3ClustersPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_debug_mode_error_component import (
-            ApiV1S3ClustersPartialUpdateDebugModeErrorComponent,
+            ApiV1S3ClustersPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_default_product_error_component import (
-            ApiV1S3ClustersPartialUpdateDefaultProductErrorComponent,
+            ApiV1S3ClustersPartialUpdateDefaultProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_description_error_component import (
-            ApiV1S3ClustersPartialUpdateDescriptionErrorComponent,
+            ApiV1S3ClustersPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_discovery_enabled_error_component import (
-            ApiV1S3ClustersPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1S3ClustersPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_display_name_error_component import (
-            ApiV1S3ClustersPartialUpdateDisplayNameErrorComponent,
+            ApiV1S3ClustersPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_endpoint_error_component import (
-            ApiV1S3ClustersPartialUpdateEndpointErrorComponent,
+            ApiV1S3ClustersPartialUpdateEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_endpoint_secure_error_component import (
-            ApiV1S3ClustersPartialUpdateEndpointSecureErrorComponent,
+            ApiV1S3ClustersPartialUpdateEndpointSecureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_include_in_cost_statement_error_component import (
-            ApiV1S3ClustersPartialUpdateIncludeInCostStatementErrorComponent,
+            ApiV1S3ClustersPartialUpdateIncludeInCostStatementErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_k8s_cluster_error_component import (
-            ApiV1S3ClustersPartialUpdateK8SClusterErrorComponent,
+            ApiV1S3ClustersPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_kind_error_component import (
-            ApiV1S3ClustersPartialUpdateKindErrorComponent,
+            ApiV1S3ClustersPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_labels_error_component import (
-            ApiV1S3ClustersPartialUpdateLabelsErrorComponent,
+            ApiV1S3ClustersPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1S3ClustersPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1S3ClustersPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_managed_buckets_object_count_error_component import (
-            ApiV1S3ClustersPartialUpdateManagedBucketsObjectCountErrorComponent,
+            ApiV1S3ClustersPartialUpdateManagedBucketsObjectCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_managed_buckets_usage_kb_error_component import (
-            ApiV1S3ClustersPartialUpdateManagedBucketsUsageKbErrorComponent,
+            ApiV1S3ClustersPartialUpdateManagedBucketsUsageKbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_managed_by_content_type_error_component import (
-            ApiV1S3ClustersPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1S3ClustersPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_managed_by_object_id_error_component import (
-            ApiV1S3ClustersPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1S3ClustersPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_minio_cluster_capacity_usable_bytes_error_component import (
-            ApiV1S3ClustersPartialUpdateMinioClusterCapacityUsableBytesErrorComponent,
+            ApiV1S3ClustersPartialUpdateMinioClusterCapacityUsableBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_minio_cluster_usage_bytes_error_component import (
-            ApiV1S3ClustersPartialUpdateMinioClusterUsageBytesErrorComponent,
+            ApiV1S3ClustersPartialUpdateMinioClusterUsageBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_modified_by_user_error_component import (
-            ApiV1S3ClustersPartialUpdateModifiedByUserErrorComponent,
+            ApiV1S3ClustersPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_name_error_component import (
-            ApiV1S3ClustersPartialUpdateNameErrorComponent,
+            ApiV1S3ClustersPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_namespace_error_component import (
-            ApiV1S3ClustersPartialUpdateNamespaceErrorComponent,
+            ApiV1S3ClustersPartialUpdateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_non_field_errors_error_component import (
-            ApiV1S3ClustersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1S3ClustersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_platform_dns_record_created_error_component import (
-            ApiV1S3ClustersPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1S3ClustersPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_platform_service_error_component import (
-            ApiV1S3ClustersPartialUpdatePlatformServiceErrorComponent,
+            ApiV1S3ClustersPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_provider_error_component import (
-            ApiV1S3ClustersPartialUpdateProviderErrorComponent,
+            ApiV1S3ClustersPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_provider_id_error_component import (
-            ApiV1S3ClustersPartialUpdateProviderIdErrorComponent,
+            ApiV1S3ClustersPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_provider_reference_error_component import (
-            ApiV1S3ClustersPartialUpdateProviderReferenceErrorComponent,
+            ApiV1S3ClustersPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_radosgw_buckets_logical_used_bytes_error_component import (
-            ApiV1S3ClustersPartialUpdateRadosgwBucketsLogicalUsedBytesErrorComponent,
+            ApiV1S3ClustersPartialUpdateRadosgwBucketsLogicalUsedBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_reconciliation_enabled_error_component import (
-            ApiV1S3ClustersPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1S3ClustersPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_region_error_component import (
-            ApiV1S3ClustersPartialUpdateRegionErrorComponent,
+            ApiV1S3ClustersPartialUpdateRegionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_scope_error_component import (
-            ApiV1S3ClustersPartialUpdateScopeErrorComponent,
+            ApiV1S3ClustersPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_sla_availability_error_component import (
-            ApiV1S3ClustersPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1S3ClustersPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_sla_target_error_component import (
-            ApiV1S3ClustersPartialUpdateSlaTargetErrorComponent,
+            ApiV1S3ClustersPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_sla_window_days_error_component import (
-            ApiV1S3ClustersPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1S3ClustersPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_slo_availability_error_component import (
-            ApiV1S3ClustersPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1S3ClustersPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_slo_target_error_component import (
-            ApiV1S3ClustersPartialUpdateSloTargetErrorComponent,
+            ApiV1S3ClustersPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_slo_window_days_error_component import (
-            ApiV1S3ClustersPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1S3ClustersPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_slug_error_component import (
-            ApiV1S3ClustersPartialUpdateSlugErrorComponent,
+            ApiV1S3ClustersPartialUpdateSlugErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_clusters_partial_update_target_availability_error_component import (
-            ApiV1S3ClustersPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1S3ClustersPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

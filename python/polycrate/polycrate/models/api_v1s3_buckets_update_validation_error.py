@@ -51,17 +51,19 @@ class ApiV1S3BucketsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1s3_buckets_update_annotations_error_component import (
-            ApiV1S3BucketsUpdateAnnotationsErrorComponent,
+            ApiV1S3BucketsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_update_include_in_cost_statement_error_component import (
-            ApiV1S3BucketsUpdateIncludeInCostStatementErrorComponent,
+            ApiV1S3BucketsUpdateIncludeInCostStatementErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_update_labels_error_component import ApiV1S3BucketsUpdateLabelsErrorComponent
+        from ..models.api_v1s3_buckets_update_labels_error_component import (
+            ApiV1S3BucketsUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_update_non_field_errors_error_component import (
-            ApiV1S3BucketsUpdateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_update_workspace_error_component import (
-            ApiV1S3BucketsUpdateWorkspaceErrorComponent,
+            ApiV1S3BucketsUpdateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -98,20 +100,22 @@ class ApiV1S3BucketsUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1s3_buckets_update_annotations_error_component import (
-            ApiV1S3BucketsUpdateAnnotationsErrorComponent,
+            ApiV1S3BucketsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_update_cors_allow_all_error_component import (
-            ApiV1S3BucketsUpdateCorsAllowAllErrorComponent,
+            ApiV1S3BucketsUpdateCorsAllowAllErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_update_include_in_cost_statement_error_component import (
-            ApiV1S3BucketsUpdateIncludeInCostStatementErrorComponent,
+            ApiV1S3BucketsUpdateIncludeInCostStatementErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_update_labels_error_component import ApiV1S3BucketsUpdateLabelsErrorComponent
+        from ..models.api_v1s3_buckets_update_labels_error_component import (
+            ApiV1S3BucketsUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_update_non_field_errors_error_component import (
-            ApiV1S3BucketsUpdateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_update_workspace_error_component import (
-            ApiV1S3BucketsUpdateWorkspaceErrorComponent,
+            ApiV1S3BucketsUpdateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

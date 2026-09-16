@@ -53,16 +53,16 @@ class ApiV1ConversationsConversationsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conversations_conversations_update_meta_error_component import (
-            ApiV1ConversationsConversationsUpdateMetaErrorComponent,
+            ApiV1ConversationsConversationsUpdateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_update_non_field_errors_error_component import (
-            ApiV1ConversationsConversationsUpdateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsConversationsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_update_provider_id_error_component import (
-            ApiV1ConversationsConversationsUpdateProviderIdErrorComponent,
+            ApiV1ConversationsConversationsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_update_status_error_component import (
-            ApiV1ConversationsConversationsUpdateStatusErrorComponent,
+            ApiV1ConversationsConversationsUpdateStatusErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -97,19 +97,19 @@ class ApiV1ConversationsConversationsUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conversations_conversations_update_config_error_component import (
-            ApiV1ConversationsConversationsUpdateConfigErrorComponent,
+            ApiV1ConversationsConversationsUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_update_meta_error_component import (
-            ApiV1ConversationsConversationsUpdateMetaErrorComponent,
+            ApiV1ConversationsConversationsUpdateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_update_non_field_errors_error_component import (
-            ApiV1ConversationsConversationsUpdateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsConversationsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_update_provider_id_error_component import (
-            ApiV1ConversationsConversationsUpdateProviderIdErrorComponent,
+            ApiV1ConversationsConversationsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_update_status_error_component import (
-            ApiV1ConversationsConversationsUpdateStatusErrorComponent,
+            ApiV1ConversationsConversationsUpdateStatusErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

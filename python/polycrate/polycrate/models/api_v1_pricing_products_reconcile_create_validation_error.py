@@ -54,6 +54,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_pricing_products_reconcile_create_platform_service_error_component import (
         ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponent,
     )
+    from ..models.api_v1_pricing_products_reconcile_create_pop_error_component import (
+        ApiV1PricingProductsReconcileCreatePopErrorComponent,
+    )
     from ..models.api_v1_pricing_products_reconcile_create_price_per_unit_error_component import (
         ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent,
     )
@@ -117,6 +120,7 @@ class ApiV1PricingProductsReconcileCreateValidationError:
             | ApiV1PricingProductsReconcileCreateNameErrorComponent |
             ApiV1PricingProductsReconcileCreateNonFieldErrorsErrorComponent |
             ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponent |
+            ApiV1PricingProductsReconcileCreatePopErrorComponent |
             ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent |
             ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent |
             ApiV1PricingProductsReconcileCreateProviderErrorComponent |
@@ -149,6 +153,7 @@ class ApiV1PricingProductsReconcileCreateValidationError:
         | ApiV1PricingProductsReconcileCreateNameErrorComponent
         | ApiV1PricingProductsReconcileCreateNonFieldErrorsErrorComponent
         | ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponent
+        | ApiV1PricingProductsReconcileCreatePopErrorComponent
         | ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent
         | ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent
         | ApiV1PricingProductsReconcileCreateProviderErrorComponent
@@ -167,85 +172,88 @@ class ApiV1PricingProductsReconcileCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_products_reconcile_create_annotations_error_component import (
-            ApiV1PricingProductsReconcileCreateAnnotationsErrorComponent,
+            ApiV1PricingProductsReconcileCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_archived_at_error_component import (
-            ApiV1PricingProductsReconcileCreateArchivedAtErrorComponent,
+            ApiV1PricingProductsReconcileCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_archived_error_component import (
-            ApiV1PricingProductsReconcileCreateArchivedErrorComponent,
+            ApiV1PricingProductsReconcileCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_archived_reason_error_component import (
-            ApiV1PricingProductsReconcileCreateArchivedReasonErrorComponent,
+            ApiV1PricingProductsReconcileCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_billing_interval_error_component import (
-            ApiV1PricingProductsReconcileCreateBillingIntervalErrorComponent,
+            ApiV1PricingProductsReconcileCreateBillingIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_cost_per_unit_error_component import (
-            ApiV1PricingProductsReconcileCreateCostPerUnitErrorComponent,
+            ApiV1PricingProductsReconcileCreateCostPerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_criticality_error_component import (
-            ApiV1PricingProductsReconcileCreateCriticalityErrorComponent,
+            ApiV1PricingProductsReconcileCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_debug_mode_error_component import (
-            ApiV1PricingProductsReconcileCreateDebugModeErrorComponent,
+            ApiV1PricingProductsReconcileCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_display_name_error_component import (
-            ApiV1PricingProductsReconcileCreateDisplayNameErrorComponent,
+            ApiV1PricingProductsReconcileCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_kind_error_component import (
-            ApiV1PricingProductsReconcileCreateKindErrorComponent,
+            ApiV1PricingProductsReconcileCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_labels_error_component import (
-            ApiV1PricingProductsReconcileCreateLabelsErrorComponent,
+            ApiV1PricingProductsReconcileCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_name_error_component import (
-            ApiV1PricingProductsReconcileCreateNameErrorComponent,
+            ApiV1PricingProductsReconcileCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_non_field_errors_error_component import (
-            ApiV1PricingProductsReconcileCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingProductsReconcileCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_platform_service_error_component import (
-            ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponent,
+            ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_pricing_products_reconcile_create_pop_error_component import (
+            ApiV1PricingProductsReconcileCreatePopErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_price_per_unit_error_component import (
-            ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent,
+            ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_entity_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_id_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderIdErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_reference_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderReferenceErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_type_id_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderTypeIdErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderTypeIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_reconciliation_enabled_error_component import (
-            ApiV1PricingProductsReconcileCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingProductsReconcileCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_sla_availability_error_component import (
-            ApiV1PricingProductsReconcileCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingProductsReconcileCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_sla_target_error_component import (
-            ApiV1PricingProductsReconcileCreateSlaTargetErrorComponent,
+            ApiV1PricingProductsReconcileCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_slo_availability_error_component import (
-            ApiV1PricingProductsReconcileCreateSloAvailabilityErrorComponent,
+            ApiV1PricingProductsReconcileCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_slo_target_error_component import (
-            ApiV1PricingProductsReconcileCreateSloTargetErrorComponent,
+            ApiV1PricingProductsReconcileCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_target_availability_error_component import (
-            ApiV1PricingProductsReconcileCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingProductsReconcileCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_tolerations_error_component import (
-            ApiV1PricingProductsReconcileCreateTolerationsErrorComponent,
+            ApiV1PricingProductsReconcileCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -305,6 +313,8 @@ class ApiV1PricingProductsReconcileCreateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1PricingProductsReconcileCreatePopErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1PricingProductsReconcileCreateProviderTypeIdErrorComponent):
                 errors_item = errors_item_data.to_dict()
             else:
@@ -326,88 +336,91 @@ class ApiV1PricingProductsReconcileCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_products_reconcile_create_annotations_error_component import (
-            ApiV1PricingProductsReconcileCreateAnnotationsErrorComponent,
+            ApiV1PricingProductsReconcileCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_archived_at_error_component import (
-            ApiV1PricingProductsReconcileCreateArchivedAtErrorComponent,
+            ApiV1PricingProductsReconcileCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_archived_error_component import (
-            ApiV1PricingProductsReconcileCreateArchivedErrorComponent,
+            ApiV1PricingProductsReconcileCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_archived_reason_error_component import (
-            ApiV1PricingProductsReconcileCreateArchivedReasonErrorComponent,
+            ApiV1PricingProductsReconcileCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_billing_interval_error_component import (
-            ApiV1PricingProductsReconcileCreateBillingIntervalErrorComponent,
+            ApiV1PricingProductsReconcileCreateBillingIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_config_error_component import (
-            ApiV1PricingProductsReconcileCreateConfigErrorComponent,
+            ApiV1PricingProductsReconcileCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_cost_per_unit_error_component import (
-            ApiV1PricingProductsReconcileCreateCostPerUnitErrorComponent,
+            ApiV1PricingProductsReconcileCreateCostPerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_criticality_error_component import (
-            ApiV1PricingProductsReconcileCreateCriticalityErrorComponent,
+            ApiV1PricingProductsReconcileCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_debug_mode_error_component import (
-            ApiV1PricingProductsReconcileCreateDebugModeErrorComponent,
+            ApiV1PricingProductsReconcileCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_display_name_error_component import (
-            ApiV1PricingProductsReconcileCreateDisplayNameErrorComponent,
+            ApiV1PricingProductsReconcileCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_kind_error_component import (
-            ApiV1PricingProductsReconcileCreateKindErrorComponent,
+            ApiV1PricingProductsReconcileCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_labels_error_component import (
-            ApiV1PricingProductsReconcileCreateLabelsErrorComponent,
+            ApiV1PricingProductsReconcileCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_name_error_component import (
-            ApiV1PricingProductsReconcileCreateNameErrorComponent,
+            ApiV1PricingProductsReconcileCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_non_field_errors_error_component import (
-            ApiV1PricingProductsReconcileCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingProductsReconcileCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_platform_service_error_component import (
-            ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponent,
+            ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_pricing_products_reconcile_create_pop_error_component import (
+            ApiV1PricingProductsReconcileCreatePopErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_price_per_unit_error_component import (
-            ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent,
+            ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_entity_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_id_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderIdErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_reference_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderReferenceErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_provider_type_id_error_component import (
-            ApiV1PricingProductsReconcileCreateProviderTypeIdErrorComponent,
+            ApiV1PricingProductsReconcileCreateProviderTypeIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_reconciliation_enabled_error_component import (
-            ApiV1PricingProductsReconcileCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingProductsReconcileCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_sla_availability_error_component import (
-            ApiV1PricingProductsReconcileCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingProductsReconcileCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_sla_target_error_component import (
-            ApiV1PricingProductsReconcileCreateSlaTargetErrorComponent,
+            ApiV1PricingProductsReconcileCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_slo_availability_error_component import (
-            ApiV1PricingProductsReconcileCreateSloAvailabilityErrorComponent,
+            ApiV1PricingProductsReconcileCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_slo_target_error_component import (
-            ApiV1PricingProductsReconcileCreateSloTargetErrorComponent,
+            ApiV1PricingProductsReconcileCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_target_availability_error_component import (
-            ApiV1PricingProductsReconcileCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingProductsReconcileCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_reconcile_create_tolerations_error_component import (
-            ApiV1PricingProductsReconcileCreateTolerationsErrorComponent,
+            ApiV1PricingProductsReconcileCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -435,6 +448,7 @@ class ApiV1PricingProductsReconcileCreateValidationError:
                 | ApiV1PricingProductsReconcileCreateNameErrorComponent
                 | ApiV1PricingProductsReconcileCreateNonFieldErrorsErrorComponent
                 | ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponent
+                | ApiV1PricingProductsReconcileCreatePopErrorComponent
                 | ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent
                 | ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent
                 | ApiV1PricingProductsReconcileCreateProviderErrorComponent
@@ -713,19 +727,29 @@ class ApiV1PricingProductsReconcileCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_pricing_products_reconcile_create_error_type_26 = (
-                        ApiV1PricingProductsReconcileCreateProviderTypeIdErrorComponent.from_dict(data)
+                        ApiV1PricingProductsReconcileCreatePopErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_pricing_products_reconcile_create_error_type_26
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_pricing_products_reconcile_create_error_type_27 = (
+                        ApiV1PricingProductsReconcileCreateProviderTypeIdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_pricing_products_reconcile_create_error_type_27
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_pricing_products_reconcile_create_error_type_27 = (
+                componentsschemas_api_v1_pricing_products_reconcile_create_error_type_28 = (
                     ApiV1PricingProductsReconcileCreateConfigErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_pricing_products_reconcile_create_error_type_27
+                return componentsschemas_api_v1_pricing_products_reconcile_create_error_type_28
 
             errors_item = _parse_errors_item(errors_item_data)
 

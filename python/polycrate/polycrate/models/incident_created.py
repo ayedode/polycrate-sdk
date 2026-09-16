@@ -33,7 +33,7 @@ class IncidentCreated:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.incident_created_created_by_type_0 import IncidentCreatedCreatedByType0
+        from ..models.incident_created_created_by_type_0 import IncidentCreatedCreatedByType0  # noqa: PLC0415
 
         created_at: None | str | Unset
         if isinstance(self.created_at, Unset):
@@ -79,7 +79,7 @@ class IncidentCreated:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.incident_created_created_by_type_0 import IncidentCreatedCreatedByType0
+        from ..models.incident_created_created_by_type_0 import IncidentCreatedCreatedByType0  # noqa: PLC0415
 
         d = dict(src_dict)
 

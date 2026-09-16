@@ -208,10 +208,10 @@ class CodeRepository:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.code_repository_deleted_by_user_type_0 import CodeRepositoryDeletedByUserType0
-        from ..models.code_repository_last_action_run_type_0 import CodeRepositoryLastActionRunType0
-        from ..models.code_repository_organization_type_0 import CodeRepositoryOrganizationType0
-        from ..models.code_repository_workspace_type_0 import CodeRepositoryWorkspaceType0
+        from ..models.code_repository_deleted_by_user_type_0 import CodeRepositoryDeletedByUserType0  # noqa: PLC0415
+        from ..models.code_repository_last_action_run_type_0 import CodeRepositoryLastActionRunType0  # noqa: PLC0415
+        from ..models.code_repository_organization_type_0 import CodeRepositoryOrganizationType0  # noqa: PLC0415
+        from ..models.code_repository_workspace_type_0 import CodeRepositoryWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -563,11 +563,11 @@ class CodeRepository:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.code_repository_created import CodeRepositoryCreated
-        from ..models.code_repository_deleted_by_user_type_0 import CodeRepositoryDeletedByUserType0
-        from ..models.code_repository_last_action_run_type_0 import CodeRepositoryLastActionRunType0
-        from ..models.code_repository_organization_type_0 import CodeRepositoryOrganizationType0
-        from ..models.code_repository_workspace_type_0 import CodeRepositoryWorkspaceType0
+        from ..models.code_repository_created import CodeRepositoryCreated  # noqa: PLC0415
+        from ..models.code_repository_deleted_by_user_type_0 import CodeRepositoryDeletedByUserType0  # noqa: PLC0415
+        from ..models.code_repository_last_action_run_type_0 import CodeRepositoryLastActionRunType0  # noqa: PLC0415
+        from ..models.code_repository_organization_type_0 import CodeRepositoryOrganizationType0  # noqa: PLC0415
+        from ..models.code_repository_workspace_type_0 import CodeRepositoryWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

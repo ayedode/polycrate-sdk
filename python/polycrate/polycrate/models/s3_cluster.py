@@ -278,9 +278,9 @@ class S3Cluster:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.s3_cluster_deleted_by_user_type_0 import S3ClusterDeletedByUserType0
-        from ..models.s3_cluster_last_action_run_type_0 import S3ClusterLastActionRunType0
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.s3_cluster_deleted_by_user_type_0 import S3ClusterDeletedByUserType0  # noqa: PLC0415
+        from ..models.s3_cluster_last_action_run_type_0 import S3ClusterLastActionRunType0  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -828,12 +828,12 @@ class S3Cluster:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.s3_bucket_list import S3BucketList
-        from ..models.s3_cluster_created import S3ClusterCreated
-        from ..models.s3_cluster_deleted_by_user_type_0 import S3ClusterDeletedByUserType0
-        from ..models.s3_cluster_last_action_run_type_0 import S3ClusterLastActionRunType0
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.s3_bucket_list import S3BucketList  # noqa: PLC0415
+        from ..models.s3_cluster_created import S3ClusterCreated  # noqa: PLC0415
+        from ..models.s3_cluster_deleted_by_user_type_0 import S3ClusterDeletedByUserType0  # noqa: PLC0415
+        from ..models.s3_cluster_last_action_run_type_0 import S3ClusterLastActionRunType0  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

@@ -94,8 +94,8 @@ class S3BucketList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.s3_bucket_list_organization_type_0 import S3BucketListOrganizationType0
-        from ..models.s3_bucket_list_workspace_type_0 import S3BucketListWorkspaceType0
+        from ..models.s3_bucket_list_organization_type_0 import S3BucketListOrganizationType0  # noqa: PLC0415
+        from ..models.s3_bucket_list_workspace_type_0 import S3BucketListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -198,13 +198,15 @@ class S3BucketList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.region_simple import RegionSimple
-        from ..models.s3_bucket_list_active_condition_instances_item import S3BucketListActiveConditionInstancesItem
-        from ..models.s3_bucket_list_created import S3BucketListCreated
-        from ..models.s3_bucket_list_organization_type_0 import S3BucketListOrganizationType0
-        from ..models.s3_bucket_list_workspace_type_0 import S3BucketListWorkspaceType0
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.region_simple import RegionSimple  # noqa: PLC0415
+        from ..models.s3_bucket_list_active_condition_instances_item import (
+            S3BucketListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.s3_bucket_list_created import S3BucketListCreated  # noqa: PLC0415
+        from ..models.s3_bucket_list_organization_type_0 import S3BucketListOrganizationType0  # noqa: PLC0415
+        from ..models.s3_bucket_list_workspace_type_0 import S3BucketListWorkspaceType0  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

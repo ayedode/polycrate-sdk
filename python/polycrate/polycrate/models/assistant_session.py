@@ -212,9 +212,13 @@ class AssistantSession:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.assistant_session_deleted_by_user_type_0 import AssistantSessionDeletedByUserType0
-        from ..models.assistant_session_last_action_run_type_0 import AssistantSessionLastActionRunType0
-        from ..models.assistant_session_organization_type_0 import AssistantSessionOrganizationType0
+        from ..models.assistant_session_deleted_by_user_type_0 import (
+            AssistantSessionDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.assistant_session_last_action_run_type_0 import (
+            AssistantSessionLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.assistant_session_organization_type_0 import AssistantSessionOrganizationType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -544,11 +548,15 @@ class AssistantSession:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.assistant_session_created import AssistantSessionCreated
-        from ..models.assistant_session_deleted_by_user_type_0 import AssistantSessionDeletedByUserType0
-        from ..models.assistant_session_last_action_run_type_0 import AssistantSessionLastActionRunType0
-        from ..models.assistant_session_organization_type_0 import AssistantSessionOrganizationType0
-        from ..models.assistant_session_participants_item import AssistantSessionParticipantsItem
+        from ..models.assistant_session_created import AssistantSessionCreated  # noqa: PLC0415
+        from ..models.assistant_session_deleted_by_user_type_0 import (
+            AssistantSessionDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.assistant_session_last_action_run_type_0 import (
+            AssistantSessionLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.assistant_session_organization_type_0 import AssistantSessionOrganizationType0  # noqa: PLC0415
+        from ..models.assistant_session_participants_item import AssistantSessionParticipantsItem  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

@@ -68,7 +68,7 @@ class PaginatedPricingRuleListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pricing_rule_list import PricingRuleList
+        from ..models.pricing_rule_list import PricingRuleList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

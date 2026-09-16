@@ -217,10 +217,10 @@ class APMStack:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.apm_stack_deleted_by_user_type_0 import APMStackDeletedByUserType0
-        from ..models.apm_stack_last_action_run_type_0 import APMStackLastActionRunType0
-        from ..models.apm_stack_organization_type_0 import APMStackOrganizationType0
-        from ..models.apm_stack_workspace_type_0 import APMStackWorkspaceType0
+        from ..models.apm_stack_deleted_by_user_type_0 import APMStackDeletedByUserType0  # noqa: PLC0415
+        from ..models.apm_stack_last_action_run_type_0 import APMStackLastActionRunType0  # noqa: PLC0415
+        from ..models.apm_stack_organization_type_0 import APMStackOrganizationType0  # noqa: PLC0415
+        from ..models.apm_stack_workspace_type_0 import APMStackWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -641,11 +641,11 @@ class APMStack:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.apm_stack_created import APMStackCreated
-        from ..models.apm_stack_deleted_by_user_type_0 import APMStackDeletedByUserType0
-        from ..models.apm_stack_last_action_run_type_0 import APMStackLastActionRunType0
-        from ..models.apm_stack_organization_type_0 import APMStackOrganizationType0
-        from ..models.apm_stack_workspace_type_0 import APMStackWorkspaceType0
+        from ..models.apm_stack_created import APMStackCreated  # noqa: PLC0415
+        from ..models.apm_stack_deleted_by_user_type_0 import APMStackDeletedByUserType0  # noqa: PLC0415
+        from ..models.apm_stack_last_action_run_type_0 import APMStackLastActionRunType0  # noqa: PLC0415
+        from ..models.apm_stack_organization_type_0 import APMStackOrganizationType0  # noqa: PLC0415
+        from ..models.apm_stack_workspace_type_0 import APMStackWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

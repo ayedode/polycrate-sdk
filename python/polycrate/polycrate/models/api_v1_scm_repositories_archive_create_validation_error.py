@@ -180,94 +180,94 @@ class ApiV1ScmRepositoriesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_scm_repositories_archive_create_annotations_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateAnnotationsErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_archived_at_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateArchivedAtErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_archived_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateArchivedErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_archived_reason_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_credential_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateCredentialErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_criticality_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateCriticalityErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_debug_mode_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateDebugModeErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_display_name_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateDisplayNameErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_groups_count_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateGroupsCountErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateGroupsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_hostname_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateHostnameErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_k8s_app_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateK8SAppErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_k8s_cluster_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateK8SClusterErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_kind_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateKindErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_labels_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateLabelsErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_name_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateNameErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_non_field_errors_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_platform_service_error_component import (
-            ApiV1ScmRepositoriesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_projects_count_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateProjectsCountErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_provider_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateProviderErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_provider_id_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateProviderIdErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_provider_reference_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_reconciliation_enabled_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_repository_version_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateRepositoryVersionErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateRepositoryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_sla_availability_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_sla_target_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateSlaTargetErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_slo_availability_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_slo_target_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateSloTargetErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_target_availability_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_tolerations_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateTolerationsErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_users_count_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateUsersCountErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateUsersCountErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -354,97 +354,97 @@ class ApiV1ScmRepositoriesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_scm_repositories_archive_create_annotations_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateAnnotationsErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_archived_at_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateArchivedAtErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_archived_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateArchivedErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_archived_reason_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_credential_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateCredentialErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_criticality_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateCriticalityErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_debug_mode_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateDebugModeErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_display_name_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateDisplayNameErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_groups_count_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateGroupsCountErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateGroupsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_hostname_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateHostnameErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_k8s_app_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateK8SAppErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_k8s_cluster_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateK8SClusterErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_kind_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateKindErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_labels_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateLabelsErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_metadata_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateMetadataErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_name_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateNameErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_non_field_errors_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_platform_service_error_component import (
-            ApiV1ScmRepositoriesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_projects_count_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateProjectsCountErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_provider_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateProviderErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_provider_id_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateProviderIdErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_provider_reference_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_reconciliation_enabled_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_repository_version_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateRepositoryVersionErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateRepositoryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_sla_availability_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_sla_target_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateSlaTargetErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_slo_availability_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_slo_target_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateSloTargetErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_target_availability_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_tolerations_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateTolerationsErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_archive_create_users_count_error_component import (
-            ApiV1ScmRepositoriesArchiveCreateUsersCountErrorComponent,
+            ApiV1ScmRepositoriesArchiveCreateUsersCountErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

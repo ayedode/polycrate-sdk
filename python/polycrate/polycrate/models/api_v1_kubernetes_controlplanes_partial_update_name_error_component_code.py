@@ -1,7 +1,7 @@
 from typing import Literal
 
 ApiV1KubernetesControlplanesPartialUpdateNameErrorComponentCode = Literal[
-    "invalid", "max_length", "null", "null_characters_not_allowed", "surrogate_characters_not_allowed"
+    "invalid", "max_length", "null", "null_characters_not_allowed", "required", "surrogate_characters_not_allowed"
 ]
 
 API_V1_KUBERNETES_CONTROLPLANES_PARTIAL_UPDATE_NAME_ERROR_COMPONENT_CODE_VALUES: set[
@@ -11,6 +11,7 @@ API_V1_KUBERNETES_CONTROLPLANES_PARTIAL_UPDATE_NAME_ERROR_COMPONENT_CODE_VALUES:
     "max_length",
     "null",
     "null_characters_not_allowed",
+    "required",
     "surrogate_characters_not_allowed",
 }
 

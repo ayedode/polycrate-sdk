@@ -52,17 +52,25 @@ class ApiV1DatasourcesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_datasources_list_created_at_error_component import (
-            ApiV1DatasourcesListCreatedAtErrorComponent,
+            ApiV1DatasourcesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_list_created_by_component_error_component import (
-            ApiV1DatasourcesListCreatedByComponentErrorComponent,
+            ApiV1DatasourcesListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_datasources_list_kind_error_component import ApiV1DatasourcesListKindErrorComponent
-        from ..models.api_v1_datasources_list_name_error_component import ApiV1DatasourcesListNameErrorComponent
-        from ..models.api_v1_datasources_list_scope_error_component import ApiV1DatasourcesListScopeErrorComponent
-        from ..models.api_v1_datasources_list_state_error_component import ApiV1DatasourcesListStateErrorComponent
+        from ..models.api_v1_datasources_list_kind_error_component import (
+            ApiV1DatasourcesListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_datasources_list_name_error_component import (
+            ApiV1DatasourcesListNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_datasources_list_scope_error_component import (
+            ApiV1DatasourcesListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_datasources_list_state_error_component import (
+            ApiV1DatasourcesListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_datasources_list_updated_at_error_component import (
-            ApiV1DatasourcesListUpdatedAtErrorComponent,
+            ApiV1DatasourcesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -103,20 +111,28 @@ class ApiV1DatasourcesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_datasources_list_created_at_error_component import (
-            ApiV1DatasourcesListCreatedAtErrorComponent,
+            ApiV1DatasourcesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_list_created_by_component_error_component import (
-            ApiV1DatasourcesListCreatedByComponentErrorComponent,
+            ApiV1DatasourcesListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_datasources_list_kind_error_component import ApiV1DatasourcesListKindErrorComponent
-        from ..models.api_v1_datasources_list_name_error_component import ApiV1DatasourcesListNameErrorComponent
+        from ..models.api_v1_datasources_list_kind_error_component import (
+            ApiV1DatasourcesListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_datasources_list_name_error_component import (
+            ApiV1DatasourcesListNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_datasources_list_provider_entity_error_component import (
-            ApiV1DatasourcesListProviderEntityErrorComponent,
+            ApiV1DatasourcesListProviderEntityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_datasources_list_scope_error_component import ApiV1DatasourcesListScopeErrorComponent
-        from ..models.api_v1_datasources_list_state_error_component import ApiV1DatasourcesListStateErrorComponent
+        from ..models.api_v1_datasources_list_scope_error_component import (
+            ApiV1DatasourcesListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_datasources_list_state_error_component import (
+            ApiV1DatasourcesListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_datasources_list_updated_at_error_component import (
-            ApiV1DatasourcesListUpdatedAtErrorComponent,
+            ApiV1DatasourcesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -68,7 +68,7 @@ class PaginatedK8SClusterListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_cluster_list import K8SClusterList
+        from ..models.k8s_cluster_list import K8SClusterList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

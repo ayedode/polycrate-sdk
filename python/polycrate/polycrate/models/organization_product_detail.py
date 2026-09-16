@@ -209,13 +209,17 @@ class OrganizationProductDetail:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.organization_product_detail_deleted_by_user_type_0 import (
-            OrganizationProductDetailDeletedByUserType0,
+            OrganizationProductDetailDeletedByUserType0,  # noqa: PLC0415
         )
         from ..models.organization_product_detail_last_action_run_type_0 import (
-            OrganizationProductDetailLastActionRunType0,
+            OrganizationProductDetailLastActionRunType0,  # noqa: PLC0415
         )
-        from ..models.organization_product_detail_organization_type_0 import OrganizationProductDetailOrganizationType0
-        from ..models.organization_product_detail_workspace_type_0 import OrganizationProductDetailWorkspaceType0
+        from ..models.organization_product_detail_organization_type_0 import (
+            OrganizationProductDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.organization_product_detail_workspace_type_0 import (
+            OrganizationProductDetailWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -578,16 +582,20 @@ class OrganizationProductDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.organization_product_detail_created import OrganizationProductDetailCreated
+        from ..models.organization_product_detail_created import OrganizationProductDetailCreated  # noqa: PLC0415
         from ..models.organization_product_detail_deleted_by_user_type_0 import (
-            OrganizationProductDetailDeletedByUserType0,
+            OrganizationProductDetailDeletedByUserType0,  # noqa: PLC0415
         )
         from ..models.organization_product_detail_last_action_run_type_0 import (
-            OrganizationProductDetailLastActionRunType0,
+            OrganizationProductDetailLastActionRunType0,  # noqa: PLC0415
         )
-        from ..models.organization_product_detail_organization_type_0 import OrganizationProductDetailOrganizationType0
-        from ..models.organization_product_detail_workspace_type_0 import OrganizationProductDetailWorkspaceType0
-        from ..models.product_simple import ProductSimple
+        from ..models.organization_product_detail_organization_type_0 import (
+            OrganizationProductDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.organization_product_detail_workspace_type_0 import (
+            OrganizationProductDetailWorkspaceType0,  # noqa: PLC0415
+        )
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

@@ -70,6 +70,13 @@ class WorkspaceList:
                 (WORKSPACE_BACKUP_SCHEDULE_MISSING, WORKSPACE_BACKUP_SCHEDULE_OVERDUE, WORKSPACE_BACKUP_MISSING). Use when ayedo
                 is not responsible for backups. May later gate related backup features; bucket provisioning stays independent
                 for now.
+            metrics_enabled (bool): If false, ayedo does not auto-subscribe the VictoriaMetrics agent addon. Use when this
+                workspace must not scrape or send cluster metrics.
+            logs_enabled (bool): If false, ayedo does not auto-subscribe VictoriaLogs or Kubernetes Event Exporter. Use when
+                this workspace must not scrape or send cluster logs.
+            k8s_addons_enabled (bool): If false, cluster reconcile does not run K8s addon subscription desired-state (no
+                auto-subscribe, no addon install enqueue, no addon conditions). Subscribe, promote, and the cluster Addons tab
+                are unavailable. Use while this workspace is still git-managed via workspace.poly.
             git_web_url (None | str):
             git_ssh_url (None | str):
             pop (PopSimple): Simple serializer for embedding Pop in other serializers.
@@ -108,6 +115,9 @@ class WorkspaceList:
     git_commit_short_sha: None | str
     notifications_enabled: bool
     backup_enabled: bool
+    metrics_enabled: bool
+    logs_enabled: bool
+    k8s_addons_enabled: bool
     git_web_url: None | str
     git_ssh_url: None | str
     pop: PopSimple
@@ -119,8 +129,8 @@ class WorkspaceList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.workspace_list_organization_type_0 import WorkspaceListOrganizationType0
-        from ..models.workspace_list_workspace_type_0 import WorkspaceListWorkspaceType0
+        from ..models.workspace_list_organization_type_0 import WorkspaceListOrganizationType0  # noqa: PLC0415
+        from ..models.workspace_list_workspace_type_0 import WorkspaceListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -178,6 +188,12 @@ class WorkspaceList:
 
         backup_enabled = self.backup_enabled
 
+        metrics_enabled = self.metrics_enabled
+
+        logs_enabled = self.logs_enabled
+
+        k8s_addons_enabled = self.k8s_addons_enabled
+
         git_web_url: None | str
         git_web_url = self.git_web_url
 
@@ -228,6 +244,9 @@ class WorkspaceList:
                 "git_commit_short_sha": git_commit_short_sha,
                 "notifications_enabled": notifications_enabled,
                 "backup_enabled": backup_enabled,
+                "metrics_enabled": metrics_enabled,
+                "logs_enabled": logs_enabled,
+                "k8s_addons_enabled": k8s_addons_enabled,
                 "git_web_url": git_web_url,
                 "git_ssh_url": git_ssh_url,
                 "pop": pop,
@@ -243,11 +262,13 @@ class WorkspaceList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pop_simple import PopSimple
-        from ..models.workspace_list_active_condition_instances_item import WorkspaceListActiveConditionInstancesItem
-        from ..models.workspace_list_created import WorkspaceListCreated
-        from ..models.workspace_list_organization_type_0 import WorkspaceListOrganizationType0
-        from ..models.workspace_list_workspace_type_0 import WorkspaceListWorkspaceType0
+        from ..models.pop_simple import PopSimple  # noqa: PLC0415
+        from ..models.workspace_list_active_condition_instances_item import (
+            WorkspaceListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.workspace_list_created import WorkspaceListCreated  # noqa: PLC0415
+        from ..models.workspace_list_organization_type_0 import WorkspaceListOrganizationType0  # noqa: PLC0415
+        from ..models.workspace_list_workspace_type_0 import WorkspaceListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -341,6 +362,12 @@ class WorkspaceList:
 
         backup_enabled = d.pop("backup_enabled")
 
+        metrics_enabled = d.pop("metrics_enabled")
+
+        logs_enabled = d.pop("logs_enabled")
+
+        k8s_addons_enabled = d.pop("k8s_addons_enabled")
+
         def _parse_git_web_url(data: object) -> None | str:
             if data is None:
                 return data
@@ -421,6 +448,9 @@ class WorkspaceList:
             git_commit_short_sha=git_commit_short_sha,
             notifications_enabled=notifications_enabled,
             backup_enabled=backup_enabled,
+            metrics_enabled=metrics_enabled,
+            logs_enabled=logs_enabled,
+            k8s_addons_enabled=k8s_addons_enabled,
             git_web_url=git_web_url,
             git_ssh_url=git_ssh_url,
             pop=pop,

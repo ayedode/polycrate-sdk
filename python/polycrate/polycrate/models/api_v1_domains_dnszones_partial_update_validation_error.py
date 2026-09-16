@@ -252,136 +252,136 @@ class ApiV1DomainsDnszonesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_dnszones_partial_update_annotations_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateAnnotationsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_archived_at_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateArchivedAtErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_archived_by_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateArchivedByErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_archived_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateArchivedErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_archived_reason_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_created_by_component_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_created_by_user_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateCreatedByUserErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_credential_id_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateCredentialIdErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_criticality_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateCriticalityErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_debug_mode_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDebugModeErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_default_ttl_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDefaultTtlErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDefaultTtlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_display_name_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDisplayNameErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_algorithm_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecAlgorithmErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecAlgorithmErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_cryptokeys_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecCryptokeysErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecCryptokeysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_ds_records_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecDsRecordsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecDsRecordsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_enabled_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecEnabledErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_nsec_3_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecNsec3ErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecNsec3ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_ds_delegation_synced_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDsDelegationSyncedErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDsDelegationSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_kind_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateKindErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_labels_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateLabelsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_managed_by_content_type_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_managed_by_object_id_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_modified_by_user_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateModifiedByUserErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_name_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateNameErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_non_field_errors_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_ns_delegation_synced_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateNsDelegationSyncedErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateNsDelegationSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_organization_id_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_platform_dns_record_created_error_component import (
-            ApiV1DomainsDnszonesPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_platform_service_error_component import (
-            ApiV1DomainsDnszonesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_powerdns_metadata_error_component import (
-            ApiV1DomainsDnszonesPartialUpdatePowerdnsMetadataErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdatePowerdnsMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_primary_zone_error_component import (
-            ApiV1DomainsDnszonesPartialUpdatePrimaryZoneErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdatePrimaryZoneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_provider_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateProviderErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_provider_id_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateProviderIdErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_provider_reference_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_reconciliation_enabled_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_sla_availability_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_sla_target_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSlaTargetErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_sla_window_days_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_slo_availability_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_slo_target_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSloTargetErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_slo_window_days_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_target_availability_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_tolerations_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateTolerationsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -498,139 +498,139 @@ class ApiV1DomainsDnszonesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_dnszones_partial_update_annotations_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateAnnotationsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_archived_at_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateArchivedAtErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_archived_by_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateArchivedByErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_archived_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateArchivedErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_archived_reason_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_created_by_component_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_created_by_user_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateCreatedByUserErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_credential_id_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateCredentialIdErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_criticality_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateCriticalityErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_debug_mode_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDebugModeErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_default_ttl_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDefaultTtlErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDefaultTtlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_display_name_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDisplayNameErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_algorithm_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecAlgorithmErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecAlgorithmErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_cryptokeys_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecCryptokeysErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecCryptokeysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_ds_records_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecDsRecordsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecDsRecordsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_enabled_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecEnabledErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_dnssec_nsec_3_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDnssecNsec3ErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDnssecNsec3ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_ds_delegation_synced_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateDsDelegationSyncedErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateDsDelegationSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_kind_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateKindErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_labels_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateLabelsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_managed_by_content_type_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_managed_by_object_id_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_modified_by_user_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateModifiedByUserErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_name_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateNameErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_non_field_errors_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_ns_delegation_synced_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateNsDelegationSyncedErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateNsDelegationSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_organization_id_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_platform_dns_record_created_error_component import (
-            ApiV1DomainsDnszonesPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_platform_service_error_component import (
-            ApiV1DomainsDnszonesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_powerdns_metadata_error_component import (
-            ApiV1DomainsDnszonesPartialUpdatePowerdnsMetadataErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdatePowerdnsMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_primary_zone_error_component import (
-            ApiV1DomainsDnszonesPartialUpdatePrimaryZoneErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdatePrimaryZoneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_provider_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateProviderErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_provider_id_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateProviderIdErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_provider_reference_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_reconciliation_enabled_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_sla_availability_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_sla_target_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSlaTargetErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_sla_window_days_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_slo_availability_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_slo_target_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSloTargetErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_slo_window_days_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_sync_from_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateSyncFromErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateSyncFromErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_target_availability_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_partial_update_tolerations_error_component import (
-            ApiV1DomainsDnszonesPartialUpdateTolerationsErrorComponent,
+            ApiV1DomainsDnszonesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

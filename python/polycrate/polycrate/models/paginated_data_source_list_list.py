@@ -68,7 +68,7 @@ class PaginatedDataSourceListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.data_source_list import DataSourceList
+        from ..models.data_source_list import DataSourceList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

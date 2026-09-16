@@ -206,8 +206,10 @@ class ProviderList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.provider_list_active_condition_instances_item import ProviderListActiveConditionInstancesItem
-        from ..models.provider_list_created import ProviderListCreated
+        from ..models.provider_list_active_condition_instances_item import (
+            ProviderListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.provider_list_created import ProviderListCreated  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

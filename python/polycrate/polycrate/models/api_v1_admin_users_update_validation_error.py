@@ -67,32 +67,36 @@ class ApiV1AdminUsersUpdateValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_admin_users_update_email_error_component import ApiV1AdminUsersUpdateEmailErrorComponent
+        from ..models.api_v1_admin_users_update_email_error_component import (
+            ApiV1AdminUsersUpdateEmailErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_admin_users_update_first_name_error_component import (
-            ApiV1AdminUsersUpdateFirstNameErrorComponent,
+            ApiV1AdminUsersUpdateFirstNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_active_error_component import (
-            ApiV1AdminUsersUpdateIsActiveErrorComponent,
+            ApiV1AdminUsersUpdateIsActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_billing_contact_error_component import (
-            ApiV1AdminUsersUpdateIsBillingContactErrorComponent,
+            ApiV1AdminUsersUpdateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_maintenance_contact_error_component import (
-            ApiV1AdminUsersUpdateIsMaintenanceContactErrorComponent,
+            ApiV1AdminUsersUpdateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_staff_error_component import (
-            ApiV1AdminUsersUpdateIsStaffErrorComponent,
+            ApiV1AdminUsersUpdateIsStaffErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_superuser_error_component import (
-            ApiV1AdminUsersUpdateIsSuperuserErrorComponent,
+            ApiV1AdminUsersUpdateIsSuperuserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_last_name_error_component import (
-            ApiV1AdminUsersUpdateLastNameErrorComponent,
+            ApiV1AdminUsersUpdateLastNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_non_field_errors_error_component import (
-            ApiV1AdminUsersUpdateNonFieldErrorsErrorComponent,
+            ApiV1AdminUsersUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_admin_users_update_role_error_component import ApiV1AdminUsersUpdateRoleErrorComponent
+        from ..models.api_v1_admin_users_update_role_error_component import (
+            ApiV1AdminUsersUpdateRoleErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -137,35 +141,39 @@ class ApiV1AdminUsersUpdateValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_admin_users_update_email_error_component import ApiV1AdminUsersUpdateEmailErrorComponent
+        from ..models.api_v1_admin_users_update_email_error_component import (
+            ApiV1AdminUsersUpdateEmailErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_admin_users_update_email_verified_error_component import (
-            ApiV1AdminUsersUpdateEmailVerifiedErrorComponent,
+            ApiV1AdminUsersUpdateEmailVerifiedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_first_name_error_component import (
-            ApiV1AdminUsersUpdateFirstNameErrorComponent,
+            ApiV1AdminUsersUpdateFirstNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_active_error_component import (
-            ApiV1AdminUsersUpdateIsActiveErrorComponent,
+            ApiV1AdminUsersUpdateIsActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_billing_contact_error_component import (
-            ApiV1AdminUsersUpdateIsBillingContactErrorComponent,
+            ApiV1AdminUsersUpdateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_maintenance_contact_error_component import (
-            ApiV1AdminUsersUpdateIsMaintenanceContactErrorComponent,
+            ApiV1AdminUsersUpdateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_staff_error_component import (
-            ApiV1AdminUsersUpdateIsStaffErrorComponent,
+            ApiV1AdminUsersUpdateIsStaffErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_is_superuser_error_component import (
-            ApiV1AdminUsersUpdateIsSuperuserErrorComponent,
+            ApiV1AdminUsersUpdateIsSuperuserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_last_name_error_component import (
-            ApiV1AdminUsersUpdateLastNameErrorComponent,
+            ApiV1AdminUsersUpdateLastNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_update_non_field_errors_error_component import (
-            ApiV1AdminUsersUpdateNonFieldErrorsErrorComponent,
+            ApiV1AdminUsersUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_admin_users_update_role_error_component import ApiV1AdminUsersUpdateRoleErrorComponent
+        from ..models.api_v1_admin_users_update_role_error_component import (
+            ApiV1AdminUsersUpdateRoleErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

@@ -68,7 +68,7 @@ class PaginatedAgentListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.agent_list import AgentList
+        from ..models.agent_list import AgentList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

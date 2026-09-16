@@ -68,7 +68,7 @@ class PaginatedIdentityProviderListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.identity_provider_list import IdentityProviderList
+        from ..models.identity_provider_list import IdentityProviderList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

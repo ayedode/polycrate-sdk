@@ -139,73 +139,73 @@ class ApiV1AssistantSessionsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_assistant_sessions_update_annotations_error_component import (
-            ApiV1AssistantSessionsUpdateAnnotationsErrorComponent,
+            ApiV1AssistantSessionsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_archived_at_error_component import (
-            ApiV1AssistantSessionsUpdateArchivedAtErrorComponent,
+            ApiV1AssistantSessionsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_archived_error_component import (
-            ApiV1AssistantSessionsUpdateArchivedErrorComponent,
+            ApiV1AssistantSessionsUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_archived_reason_error_component import (
-            ApiV1AssistantSessionsUpdateArchivedReasonErrorComponent,
+            ApiV1AssistantSessionsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_criticality_error_component import (
-            ApiV1AssistantSessionsUpdateCriticalityErrorComponent,
+            ApiV1AssistantSessionsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_debug_mode_error_component import (
-            ApiV1AssistantSessionsUpdateDebugModeErrorComponent,
+            ApiV1AssistantSessionsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_display_name_error_component import (
-            ApiV1AssistantSessionsUpdateDisplayNameErrorComponent,
+            ApiV1AssistantSessionsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_kind_error_component import (
-            ApiV1AssistantSessionsUpdateKindErrorComponent,
+            ApiV1AssistantSessionsUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_labels_error_component import (
-            ApiV1AssistantSessionsUpdateLabelsErrorComponent,
+            ApiV1AssistantSessionsUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_name_error_component import (
-            ApiV1AssistantSessionsUpdateNameErrorComponent,
+            ApiV1AssistantSessionsUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_non_field_errors_error_component import (
-            ApiV1AssistantSessionsUpdateNonFieldErrorsErrorComponent,
+            ApiV1AssistantSessionsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_platform_service_error_component import (
-            ApiV1AssistantSessionsUpdatePlatformServiceErrorComponent,
+            ApiV1AssistantSessionsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_provider_error_component import (
-            ApiV1AssistantSessionsUpdateProviderErrorComponent,
+            ApiV1AssistantSessionsUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_provider_id_error_component import (
-            ApiV1AssistantSessionsUpdateProviderIdErrorComponent,
+            ApiV1AssistantSessionsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_provider_reference_error_component import (
-            ApiV1AssistantSessionsUpdateProviderReferenceErrorComponent,
+            ApiV1AssistantSessionsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_reconciliation_enabled_error_component import (
-            ApiV1AssistantSessionsUpdateReconciliationEnabledErrorComponent,
+            ApiV1AssistantSessionsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_sla_availability_error_component import (
-            ApiV1AssistantSessionsUpdateSlaAvailabilityErrorComponent,
+            ApiV1AssistantSessionsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_sla_target_error_component import (
-            ApiV1AssistantSessionsUpdateSlaTargetErrorComponent,
+            ApiV1AssistantSessionsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_slo_availability_error_component import (
-            ApiV1AssistantSessionsUpdateSloAvailabilityErrorComponent,
+            ApiV1AssistantSessionsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_slo_target_error_component import (
-            ApiV1AssistantSessionsUpdateSloTargetErrorComponent,
+            ApiV1AssistantSessionsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_target_availability_error_component import (
-            ApiV1AssistantSessionsUpdateTargetAvailabilityErrorComponent,
+            ApiV1AssistantSessionsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_tolerations_error_component import (
-            ApiV1AssistantSessionsUpdateTolerationsErrorComponent,
+            ApiV1AssistantSessionsUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_workspace_id_error_component import (
-            ApiV1AssistantSessionsUpdateWorkspaceIdErrorComponent,
+            ApiV1AssistantSessionsUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -278,76 +278,76 @@ class ApiV1AssistantSessionsUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_assistant_sessions_update_annotations_error_component import (
-            ApiV1AssistantSessionsUpdateAnnotationsErrorComponent,
+            ApiV1AssistantSessionsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_archived_at_error_component import (
-            ApiV1AssistantSessionsUpdateArchivedAtErrorComponent,
+            ApiV1AssistantSessionsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_archived_error_component import (
-            ApiV1AssistantSessionsUpdateArchivedErrorComponent,
+            ApiV1AssistantSessionsUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_archived_reason_error_component import (
-            ApiV1AssistantSessionsUpdateArchivedReasonErrorComponent,
+            ApiV1AssistantSessionsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_criticality_error_component import (
-            ApiV1AssistantSessionsUpdateCriticalityErrorComponent,
+            ApiV1AssistantSessionsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_debug_mode_error_component import (
-            ApiV1AssistantSessionsUpdateDebugModeErrorComponent,
+            ApiV1AssistantSessionsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_display_name_error_component import (
-            ApiV1AssistantSessionsUpdateDisplayNameErrorComponent,
+            ApiV1AssistantSessionsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_kind_error_component import (
-            ApiV1AssistantSessionsUpdateKindErrorComponent,
+            ApiV1AssistantSessionsUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_labels_error_component import (
-            ApiV1AssistantSessionsUpdateLabelsErrorComponent,
+            ApiV1AssistantSessionsUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_name_error_component import (
-            ApiV1AssistantSessionsUpdateNameErrorComponent,
+            ApiV1AssistantSessionsUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_non_field_errors_error_component import (
-            ApiV1AssistantSessionsUpdateNonFieldErrorsErrorComponent,
+            ApiV1AssistantSessionsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_platform_service_error_component import (
-            ApiV1AssistantSessionsUpdatePlatformServiceErrorComponent,
+            ApiV1AssistantSessionsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_provider_error_component import (
-            ApiV1AssistantSessionsUpdateProviderErrorComponent,
+            ApiV1AssistantSessionsUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_provider_id_error_component import (
-            ApiV1AssistantSessionsUpdateProviderIdErrorComponent,
+            ApiV1AssistantSessionsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_provider_reference_error_component import (
-            ApiV1AssistantSessionsUpdateProviderReferenceErrorComponent,
+            ApiV1AssistantSessionsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_reconciliation_enabled_error_component import (
-            ApiV1AssistantSessionsUpdateReconciliationEnabledErrorComponent,
+            ApiV1AssistantSessionsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_sla_availability_error_component import (
-            ApiV1AssistantSessionsUpdateSlaAvailabilityErrorComponent,
+            ApiV1AssistantSessionsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_sla_target_error_component import (
-            ApiV1AssistantSessionsUpdateSlaTargetErrorComponent,
+            ApiV1AssistantSessionsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_slo_availability_error_component import (
-            ApiV1AssistantSessionsUpdateSloAvailabilityErrorComponent,
+            ApiV1AssistantSessionsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_slo_target_error_component import (
-            ApiV1AssistantSessionsUpdateSloTargetErrorComponent,
+            ApiV1AssistantSessionsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_status_error_component import (
-            ApiV1AssistantSessionsUpdateStatusErrorComponent,
+            ApiV1AssistantSessionsUpdateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_target_availability_error_component import (
-            ApiV1AssistantSessionsUpdateTargetAvailabilityErrorComponent,
+            ApiV1AssistantSessionsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_tolerations_error_component import (
-            ApiV1AssistantSessionsUpdateTolerationsErrorComponent,
+            ApiV1AssistantSessionsUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_update_workspace_id_error_component import (
-            ApiV1AssistantSessionsUpdateWorkspaceIdErrorComponent,
+            ApiV1AssistantSessionsUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

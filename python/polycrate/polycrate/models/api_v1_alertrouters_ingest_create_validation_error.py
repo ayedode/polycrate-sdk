@@ -172,91 +172,91 @@ class ApiV1AlertroutersIngestCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alertrouters_ingest_create_annotations_error_component import (
-            ApiV1AlertroutersIngestCreateAnnotationsErrorComponent,
+            ApiV1AlertroutersIngestCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_archived_at_error_component import (
-            ApiV1AlertroutersIngestCreateArchivedAtErrorComponent,
+            ApiV1AlertroutersIngestCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_archived_error_component import (
-            ApiV1AlertroutersIngestCreateArchivedErrorComponent,
+            ApiV1AlertroutersIngestCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_archived_reason_error_component import (
-            ApiV1AlertroutersIngestCreateArchivedReasonErrorComponent,
+            ApiV1AlertroutersIngestCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_criticality_error_component import (
-            ApiV1AlertroutersIngestCreateCriticalityErrorComponent,
+            ApiV1AlertroutersIngestCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_debug_mode_error_component import (
-            ApiV1AlertroutersIngestCreateDebugModeErrorComponent,
+            ApiV1AlertroutersIngestCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_display_name_error_component import (
-            ApiV1AlertroutersIngestCreateDisplayNameErrorComponent,
+            ApiV1AlertroutersIngestCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_kind_error_component import (
-            ApiV1AlertroutersIngestCreateKindErrorComponent,
+            ApiV1AlertroutersIngestCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_cluster_error_component import (
-            ApiV1AlertroutersIngestCreateLabelClusterErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_namespace_error_component import (
-            ApiV1AlertroutersIngestCreateLabelNamespaceErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_organization_error_component import (
-            ApiV1AlertroutersIngestCreateLabelOrganizationErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_pod_error_component import (
-            ApiV1AlertroutersIngestCreateLabelPodErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelPodErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_workspace_error_component import (
-            ApiV1AlertroutersIngestCreateLabelWorkspaceErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelWorkspaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_labels_error_component import (
-            ApiV1AlertroutersIngestCreateLabelsErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_name_error_component import (
-            ApiV1AlertroutersIngestCreateNameErrorComponent,
+            ApiV1AlertroutersIngestCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_non_field_errors_error_component import (
-            ApiV1AlertroutersIngestCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertroutersIngestCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_organization_id_error_component import (
-            ApiV1AlertroutersIngestCreateOrganizationIdErrorComponent,
+            ApiV1AlertroutersIngestCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_platform_service_error_component import (
-            ApiV1AlertroutersIngestCreatePlatformServiceErrorComponent,
+            ApiV1AlertroutersIngestCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_provider_error_component import (
-            ApiV1AlertroutersIngestCreateProviderErrorComponent,
+            ApiV1AlertroutersIngestCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_provider_id_error_component import (
-            ApiV1AlertroutersIngestCreateProviderIdErrorComponent,
+            ApiV1AlertroutersIngestCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_provider_reference_error_component import (
-            ApiV1AlertroutersIngestCreateProviderReferenceErrorComponent,
+            ApiV1AlertroutersIngestCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_reconciliation_enabled_error_component import (
-            ApiV1AlertroutersIngestCreateReconciliationEnabledErrorComponent,
+            ApiV1AlertroutersIngestCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_sla_availability_error_component import (
-            ApiV1AlertroutersIngestCreateSlaAvailabilityErrorComponent,
+            ApiV1AlertroutersIngestCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_sla_target_error_component import (
-            ApiV1AlertroutersIngestCreateSlaTargetErrorComponent,
+            ApiV1AlertroutersIngestCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_slo_availability_error_component import (
-            ApiV1AlertroutersIngestCreateSloAvailabilityErrorComponent,
+            ApiV1AlertroutersIngestCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_slo_target_error_component import (
-            ApiV1AlertroutersIngestCreateSloTargetErrorComponent,
+            ApiV1AlertroutersIngestCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_target_availability_error_component import (
-            ApiV1AlertroutersIngestCreateTargetAvailabilityErrorComponent,
+            ApiV1AlertroutersIngestCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_tolerations_error_component import (
-            ApiV1AlertroutersIngestCreateTolerationsErrorComponent,
+            ApiV1AlertroutersIngestCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_workspace_id_error_component import (
-            ApiV1AlertroutersIngestCreateWorkspaceIdErrorComponent,
+            ApiV1AlertroutersIngestCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -341,94 +341,94 @@ class ApiV1AlertroutersIngestCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alertrouters_ingest_create_annotations_error_component import (
-            ApiV1AlertroutersIngestCreateAnnotationsErrorComponent,
+            ApiV1AlertroutersIngestCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_archived_at_error_component import (
-            ApiV1AlertroutersIngestCreateArchivedAtErrorComponent,
+            ApiV1AlertroutersIngestCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_archived_error_component import (
-            ApiV1AlertroutersIngestCreateArchivedErrorComponent,
+            ApiV1AlertroutersIngestCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_archived_reason_error_component import (
-            ApiV1AlertroutersIngestCreateArchivedReasonErrorComponent,
+            ApiV1AlertroutersIngestCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_criticality_error_component import (
-            ApiV1AlertroutersIngestCreateCriticalityErrorComponent,
+            ApiV1AlertroutersIngestCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_debug_mode_error_component import (
-            ApiV1AlertroutersIngestCreateDebugModeErrorComponent,
+            ApiV1AlertroutersIngestCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_display_name_error_component import (
-            ApiV1AlertroutersIngestCreateDisplayNameErrorComponent,
+            ApiV1AlertroutersIngestCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_kind_error_component import (
-            ApiV1AlertroutersIngestCreateKindErrorComponent,
+            ApiV1AlertroutersIngestCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_cluster_error_component import (
-            ApiV1AlertroutersIngestCreateLabelClusterErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_criticality_error_component import (
-            ApiV1AlertroutersIngestCreateLabelCriticalityErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_namespace_error_component import (
-            ApiV1AlertroutersIngestCreateLabelNamespaceErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_organization_error_component import (
-            ApiV1AlertroutersIngestCreateLabelOrganizationErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_pod_error_component import (
-            ApiV1AlertroutersIngestCreateLabelPodErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelPodErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_label_workspace_error_component import (
-            ApiV1AlertroutersIngestCreateLabelWorkspaceErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelWorkspaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_labels_error_component import (
-            ApiV1AlertroutersIngestCreateLabelsErrorComponent,
+            ApiV1AlertroutersIngestCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_name_error_component import (
-            ApiV1AlertroutersIngestCreateNameErrorComponent,
+            ApiV1AlertroutersIngestCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_non_field_errors_error_component import (
-            ApiV1AlertroutersIngestCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertroutersIngestCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_organization_id_error_component import (
-            ApiV1AlertroutersIngestCreateOrganizationIdErrorComponent,
+            ApiV1AlertroutersIngestCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_platform_service_error_component import (
-            ApiV1AlertroutersIngestCreatePlatformServiceErrorComponent,
+            ApiV1AlertroutersIngestCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_provider_error_component import (
-            ApiV1AlertroutersIngestCreateProviderErrorComponent,
+            ApiV1AlertroutersIngestCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_provider_id_error_component import (
-            ApiV1AlertroutersIngestCreateProviderIdErrorComponent,
+            ApiV1AlertroutersIngestCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_provider_reference_error_component import (
-            ApiV1AlertroutersIngestCreateProviderReferenceErrorComponent,
+            ApiV1AlertroutersIngestCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_reconciliation_enabled_error_component import (
-            ApiV1AlertroutersIngestCreateReconciliationEnabledErrorComponent,
+            ApiV1AlertroutersIngestCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_sla_availability_error_component import (
-            ApiV1AlertroutersIngestCreateSlaAvailabilityErrorComponent,
+            ApiV1AlertroutersIngestCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_sla_target_error_component import (
-            ApiV1AlertroutersIngestCreateSlaTargetErrorComponent,
+            ApiV1AlertroutersIngestCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_slo_availability_error_component import (
-            ApiV1AlertroutersIngestCreateSloAvailabilityErrorComponent,
+            ApiV1AlertroutersIngestCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_slo_target_error_component import (
-            ApiV1AlertroutersIngestCreateSloTargetErrorComponent,
+            ApiV1AlertroutersIngestCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_target_availability_error_component import (
-            ApiV1AlertroutersIngestCreateTargetAvailabilityErrorComponent,
+            ApiV1AlertroutersIngestCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_tolerations_error_component import (
-            ApiV1AlertroutersIngestCreateTolerationsErrorComponent,
+            ApiV1AlertroutersIngestCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_ingest_create_workspace_id_error_component import (
-            ApiV1AlertroutersIngestCreateWorkspaceIdErrorComponent,
+            ApiV1AlertroutersIngestCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

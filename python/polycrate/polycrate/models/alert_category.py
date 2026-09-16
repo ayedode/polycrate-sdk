@@ -215,10 +215,10 @@ class AlertCategory:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.alert_category_deleted_by_user_type_0 import AlertCategoryDeletedByUserType0
-        from ..models.alert_category_last_action_run_type_0 import AlertCategoryLastActionRunType0
-        from ..models.alert_category_organization_type_0 import AlertCategoryOrganizationType0
-        from ..models.alert_category_workspace_type_0 import AlertCategoryWorkspaceType0
+        from ..models.alert_category_deleted_by_user_type_0 import AlertCategoryDeletedByUserType0  # noqa: PLC0415
+        from ..models.alert_category_last_action_run_type_0 import AlertCategoryLastActionRunType0  # noqa: PLC0415
+        from ..models.alert_category_organization_type_0 import AlertCategoryOrganizationType0  # noqa: PLC0415
+        from ..models.alert_category_workspace_type_0 import AlertCategoryWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -536,11 +536,11 @@ class AlertCategory:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.alert_category_created import AlertCategoryCreated
-        from ..models.alert_category_deleted_by_user_type_0 import AlertCategoryDeletedByUserType0
-        from ..models.alert_category_last_action_run_type_0 import AlertCategoryLastActionRunType0
-        from ..models.alert_category_organization_type_0 import AlertCategoryOrganizationType0
-        from ..models.alert_category_workspace_type_0 import AlertCategoryWorkspaceType0
+        from ..models.alert_category_created import AlertCategoryCreated  # noqa: PLC0415
+        from ..models.alert_category_deleted_by_user_type_0 import AlertCategoryDeletedByUserType0  # noqa: PLC0415
+        from ..models.alert_category_last_action_run_type_0 import AlertCategoryLastActionRunType0  # noqa: PLC0415
+        from ..models.alert_category_organization_type_0 import AlertCategoryOrganizationType0  # noqa: PLC0415
+        from ..models.alert_category_workspace_type_0 import AlertCategoryWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

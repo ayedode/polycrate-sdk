@@ -55,17 +55,31 @@ class ApiV1AgentsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_agents_list_created_by_users_error_component import (
-            ApiV1AgentsListCreatedByUsersErrorComponent,
+            ApiV1AgentsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_agents_list_kind_error_component import ApiV1AgentsListKindErrorComponent
-        from ..models.api_v1_agents_list_organizations_error_component import ApiV1AgentsListOrganizationsErrorComponent
-        from ..models.api_v1_agents_list_pops_error_component import ApiV1AgentsListPopsErrorComponent
-        from ..models.api_v1_agents_list_search_error_component import ApiV1AgentsListSearchErrorComponent
-        from ..models.api_v1_agents_list_state_error_component import ApiV1AgentsListStateErrorComponent
-        from ..models.api_v1_agents_list_state_not_error_component import ApiV1AgentsListStateNotErrorComponent
-        from ..models.api_v1_agents_list_time_range_error_component import ApiV1AgentsListTimeRangeErrorComponent
-        from ..models.api_v1_agents_list_version_error_component import ApiV1AgentsListVersionErrorComponent
-        from ..models.api_v1_agents_list_workspaces_error_component import ApiV1AgentsListWorkspacesErrorComponent
+        from ..models.api_v1_agents_list_kind_error_component import ApiV1AgentsListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_agents_list_organizations_error_component import (
+            ApiV1AgentsListOrganizationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_pops_error_component import ApiV1AgentsListPopsErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_agents_list_search_error_component import (
+            ApiV1AgentsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_state_error_component import (
+            ApiV1AgentsListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_state_not_error_component import (
+            ApiV1AgentsListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_time_range_error_component import (
+            ApiV1AgentsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_version_error_component import (
+            ApiV1AgentsListVersionErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_workspaces_error_component import (
+            ApiV1AgentsListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -111,18 +125,34 @@ class ApiV1AgentsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_agents_list_created_by_users_error_component import (
-            ApiV1AgentsListCreatedByUsersErrorComponent,
+            ApiV1AgentsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_agents_list_kind_error_component import ApiV1AgentsListKindErrorComponent
-        from ..models.api_v1_agents_list_name_exact_error_component import ApiV1AgentsListNameExactErrorComponent
-        from ..models.api_v1_agents_list_organizations_error_component import ApiV1AgentsListOrganizationsErrorComponent
-        from ..models.api_v1_agents_list_pops_error_component import ApiV1AgentsListPopsErrorComponent
-        from ..models.api_v1_agents_list_search_error_component import ApiV1AgentsListSearchErrorComponent
-        from ..models.api_v1_agents_list_state_error_component import ApiV1AgentsListStateErrorComponent
-        from ..models.api_v1_agents_list_state_not_error_component import ApiV1AgentsListStateNotErrorComponent
-        from ..models.api_v1_agents_list_time_range_error_component import ApiV1AgentsListTimeRangeErrorComponent
-        from ..models.api_v1_agents_list_version_error_component import ApiV1AgentsListVersionErrorComponent
-        from ..models.api_v1_agents_list_workspaces_error_component import ApiV1AgentsListWorkspacesErrorComponent
+        from ..models.api_v1_agents_list_kind_error_component import ApiV1AgentsListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_agents_list_name_exact_error_component import (
+            ApiV1AgentsListNameExactErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_organizations_error_component import (
+            ApiV1AgentsListOrganizationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_pops_error_component import ApiV1AgentsListPopsErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_agents_list_search_error_component import (
+            ApiV1AgentsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_state_error_component import (
+            ApiV1AgentsListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_state_not_error_component import (
+            ApiV1AgentsListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_time_range_error_component import (
+            ApiV1AgentsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_version_error_component import (
+            ApiV1AgentsListVersionErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_agents_list_workspaces_error_component import (
+            ApiV1AgentsListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

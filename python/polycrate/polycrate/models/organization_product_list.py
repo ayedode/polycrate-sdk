@@ -82,8 +82,12 @@ class OrganizationProductList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.organization_product_list_organization_type_0 import OrganizationProductListOrganizationType0
-        from ..models.organization_product_list_workspace_type_0 import OrganizationProductListWorkspaceType0
+        from ..models.organization_product_list_organization_type_0 import (
+            OrganizationProductListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.organization_product_list_workspace_type_0 import (
+            OrganizationProductListWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -187,12 +191,16 @@ class OrganizationProductList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.organization_product_list_active_condition_instances_item import (
-            OrganizationProductListActiveConditionInstancesItem,
+            OrganizationProductListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.organization_product_list_created import OrganizationProductListCreated
-        from ..models.organization_product_list_organization_type_0 import OrganizationProductListOrganizationType0
-        from ..models.organization_product_list_workspace_type_0 import OrganizationProductListWorkspaceType0
-        from ..models.product_simple import ProductSimple
+        from ..models.organization_product_list_created import OrganizationProductListCreated  # noqa: PLC0415
+        from ..models.organization_product_list_organization_type_0 import (
+            OrganizationProductListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.organization_product_list_workspace_type_0 import (
+            OrganizationProductListWorkspaceType0,  # noqa: PLC0415
+        )
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

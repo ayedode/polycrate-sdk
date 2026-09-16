@@ -186,97 +186,97 @@ class ApiV1KubernetesWorkerPoolsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_worker_pools_create_actual_availability_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_annotations_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateAnnotationsErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_archived_at_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateArchivedAtErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_archived_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateArchivedErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_archived_reason_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_controlplane_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateControlplaneIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateControlplaneIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_criticality_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateCriticalityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_debug_mode_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateDebugModeErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_desired_count_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateDesiredCountErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateDesiredCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_discovery_enabled_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_display_name_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateDisplayNameErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_image_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateImageErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateImageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_kind_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateKindErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_labels_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateLabelsErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_location_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateLocationErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateLocationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_name_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateNameErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_non_field_errors_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_platform_service_error_component import (
-            ApiV1KubernetesWorkerPoolsCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_product_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProductIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProductIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_provider_account_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProviderAccountIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProviderAccountIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_provider_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProviderErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_provider_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProviderIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_provider_reference_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_scope_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateScopeErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_sla_availability_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_sla_target_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSlaTargetErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_slo_availability_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_slo_target_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSloTargetErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_ssh_key_credential_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSshKeyCredentialIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSshKeyCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_target_availability_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -365,100 +365,100 @@ class ApiV1KubernetesWorkerPoolsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_worker_pools_create_actual_availability_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_annotations_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateAnnotationsErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_archived_at_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateArchivedAtErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_archived_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateArchivedErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_archived_reason_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_controlplane_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateControlplaneIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateControlplaneIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_criticality_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateCriticalityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_debug_mode_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateDebugModeErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_desired_count_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateDesiredCountErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateDesiredCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_discovery_enabled_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_display_name_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateDisplayNameErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_hardening_enabled_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateHardeningEnabledErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateHardeningEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_image_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateImageErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateImageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_kind_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateKindErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_labels_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateLabelsErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_location_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateLocationErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateLocationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_name_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateNameErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_non_field_errors_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_platform_service_error_component import (
-            ApiV1KubernetesWorkerPoolsCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_product_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProductIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProductIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_provider_account_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProviderAccountIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProviderAccountIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_provider_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProviderErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_provider_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProviderIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_provider_reference_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_scope_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateScopeErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_sla_availability_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_sla_target_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSlaTargetErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_slo_availability_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_slo_target_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSloTargetErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_ssh_key_credential_id_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateSshKeyCredentialIdErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateSshKeyCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_create_target_availability_error_component import (
-            ApiV1KubernetesWorkerPoolsCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesWorkerPoolsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

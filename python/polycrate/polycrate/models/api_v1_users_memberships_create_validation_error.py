@@ -42,10 +42,10 @@ class ApiV1UsersMembershipsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_users_memberships_create_non_field_errors_error_component import (
-            ApiV1UsersMembershipsCreateNonFieldErrorsErrorComponent,
+            ApiV1UsersMembershipsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_memberships_create_organization_id_error_component import (
-            ApiV1UsersMembershipsCreateOrganizationIdErrorComponent,
+            ApiV1UsersMembershipsCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -76,13 +76,13 @@ class ApiV1UsersMembershipsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_users_memberships_create_non_field_errors_error_component import (
-            ApiV1UsersMembershipsCreateNonFieldErrorsErrorComponent,
+            ApiV1UsersMembershipsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_memberships_create_organization_id_error_component import (
-            ApiV1UsersMembershipsCreateOrganizationIdErrorComponent,
+            ApiV1UsersMembershipsCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_memberships_create_role_error_component import (
-            ApiV1UsersMembershipsCreateRoleErrorComponent,
+            ApiV1UsersMembershipsCreateRoleErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -284,166 +284,166 @@ class ApiV1BlocksRunDiscoveryCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_blocks_run_discovery_create_actions_error_component import (
-            ApiV1BlocksRunDiscoveryCreateActionsErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateActionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_actual_availability_error_component import (
-            ApiV1BlocksRunDiscoveryCreateActualAvailabilityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_annotations_error_component import (
-            ApiV1BlocksRunDiscoveryCreateAnnotationsErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_app_version_error_component import (
-            ApiV1BlocksRunDiscoveryCreateAppVersionErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_archived_at_error_component import (
-            ApiV1BlocksRunDiscoveryCreateArchivedAtErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_archived_error_component import (
-            ApiV1BlocksRunDiscoveryCreateArchivedErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_archived_reason_error_component import (
-            ApiV1BlocksRunDiscoveryCreateArchivedReasonErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_auto_rollout_error_component import (
-            ApiV1BlocksRunDiscoveryCreateAutoRolloutErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateAutoRolloutErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_block_poly_raw_error_component import (
-            ApiV1BlocksRunDiscoveryCreateBlockPolyRawErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateBlockPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_changelog_poly_raw_error_component import (
-            ApiV1BlocksRunDiscoveryCreateChangelogPolyRawErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateChangelogPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_checksum_error_component import (
-            ApiV1BlocksRunDiscoveryCreateChecksumErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateChecksumErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_config_error_component import (
-            ApiV1BlocksRunDiscoveryCreateConfigErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_created_by_brc_error_component import (
-            ApiV1BlocksRunDiscoveryCreateCreatedByBrcErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateCreatedByBrcErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_criticality_error_component import (
-            ApiV1BlocksRunDiscoveryCreateCriticalityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_debug_mode_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDebugModeErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_description_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDescriptionErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_discovery_enabled_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDiscoveryEnabledErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_display_name_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDisplayNameErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_documentation_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDocumentationUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDocumentationUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_examples_poly_raw_error_component import (
-            ApiV1BlocksRunDiscoveryCreateExamplesPolyRawErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateExamplesPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_flavor_error_component import (
-            ApiV1BlocksRunDiscoveryCreateFlavorErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_from_block_error_component import (
-            ApiV1BlocksRunDiscoveryCreateFromBlockErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateFromBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_full_spec_error_component import (
-            ApiV1BlocksRunDiscoveryCreateFullSpecErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateFullSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_git_repository_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateGitRepositoryUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateGitRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_icon_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateIconUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateIconUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_is_behind_stable_error_component import (
-            ApiV1BlocksRunDiscoveryCreateIsBehindStableErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateIsBehindStableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_kind_error_component import (
-            ApiV1BlocksRunDiscoveryCreateKindErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_labels_error_component import (
-            ApiV1BlocksRunDiscoveryCreateLabelsErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_latest_stable_error_component import (
-            ApiV1BlocksRunDiscoveryCreateLatestStableErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateLatestStableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_license_error_component import (
-            ApiV1BlocksRunDiscoveryCreateLicenseErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateLicenseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_license_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateLicenseUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateLicenseUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_name_error_component import (
-            ApiV1BlocksRunDiscoveryCreateNameErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_non_field_errors_error_component import (
-            ApiV1BlocksRunDiscoveryCreateNonFieldErrorsErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_platform_service_error_component import (
-            ApiV1BlocksRunDiscoveryCreatePlatformServiceErrorComponent,
+            ApiV1BlocksRunDiscoveryCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_provider_error_component import (
-            ApiV1BlocksRunDiscoveryCreateProviderErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_provider_id_error_component import (
-            ApiV1BlocksRunDiscoveryCreateProviderIdErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_provider_reference_error_component import (
-            ApiV1BlocksRunDiscoveryCreateProviderReferenceErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_readme_md_raw_error_component import (
-            ApiV1BlocksRunDiscoveryCreateReadmeMdRawErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateReadmeMdRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_reconciliation_enabled_error_component import (
-            ApiV1BlocksRunDiscoveryCreateReconciliationEnabledErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_registry_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateRegistryUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateRegistryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_releases_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateReleasesUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateReleasesUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_scope_error_component import (
-            ApiV1BlocksRunDiscoveryCreateScopeErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_sla_availability_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSlaAvailabilityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_sla_target_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSlaTargetErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_slo_availability_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSloAvailabilityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_slo_target_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSloTargetErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_supports_ha_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSupportsHaErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSupportsHaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_target_availability_error_component import (
-            ApiV1BlocksRunDiscoveryCreateTargetAvailabilityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_template_block_error_component import (
-            ApiV1BlocksRunDiscoveryCreateTemplateBlockErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateTemplateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_template_error_component import (
-            ApiV1BlocksRunDiscoveryCreateTemplateErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_type_error_component import (
-            ApiV1BlocksRunDiscoveryCreateTypeErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_user_spec_error_component import (
-            ApiV1BlocksRunDiscoveryCreateUserSpecErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateUserSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_version_error_component import (
-            ApiV1BlocksRunDiscoveryCreateVersionErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_website_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateWebsiteUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateWebsiteUrlErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -578,169 +578,169 @@ class ApiV1BlocksRunDiscoveryCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_blocks_run_discovery_create_actions_error_component import (
-            ApiV1BlocksRunDiscoveryCreateActionsErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateActionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_actual_availability_error_component import (
-            ApiV1BlocksRunDiscoveryCreateActualAvailabilityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_annotations_error_component import (
-            ApiV1BlocksRunDiscoveryCreateAnnotationsErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_app_version_error_component import (
-            ApiV1BlocksRunDiscoveryCreateAppVersionErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_archived_at_error_component import (
-            ApiV1BlocksRunDiscoveryCreateArchivedAtErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_archived_error_component import (
-            ApiV1BlocksRunDiscoveryCreateArchivedErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_archived_reason_error_component import (
-            ApiV1BlocksRunDiscoveryCreateArchivedReasonErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_auto_rollout_error_component import (
-            ApiV1BlocksRunDiscoveryCreateAutoRolloutErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateAutoRolloutErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_block_poly_raw_error_component import (
-            ApiV1BlocksRunDiscoveryCreateBlockPolyRawErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateBlockPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_changelog_poly_raw_error_component import (
-            ApiV1BlocksRunDiscoveryCreateChangelogPolyRawErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateChangelogPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_checksum_error_component import (
-            ApiV1BlocksRunDiscoveryCreateChecksumErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateChecksumErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_config_error_component import (
-            ApiV1BlocksRunDiscoveryCreateConfigErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_created_by_brc_error_component import (
-            ApiV1BlocksRunDiscoveryCreateCreatedByBrcErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateCreatedByBrcErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_created_by_component_error_component import (
-            ApiV1BlocksRunDiscoveryCreateCreatedByComponentErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_criticality_error_component import (
-            ApiV1BlocksRunDiscoveryCreateCriticalityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_debug_mode_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDebugModeErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_description_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDescriptionErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_discovery_enabled_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDiscoveryEnabledErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_display_name_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDisplayNameErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_documentation_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateDocumentationUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateDocumentationUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_examples_poly_raw_error_component import (
-            ApiV1BlocksRunDiscoveryCreateExamplesPolyRawErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateExamplesPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_flavor_error_component import (
-            ApiV1BlocksRunDiscoveryCreateFlavorErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_from_block_error_component import (
-            ApiV1BlocksRunDiscoveryCreateFromBlockErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateFromBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_full_spec_error_component import (
-            ApiV1BlocksRunDiscoveryCreateFullSpecErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateFullSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_git_repository_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateGitRepositoryUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateGitRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_icon_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateIconUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateIconUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_is_behind_stable_error_component import (
-            ApiV1BlocksRunDiscoveryCreateIsBehindStableErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateIsBehindStableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_kind_error_component import (
-            ApiV1BlocksRunDiscoveryCreateKindErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_labels_error_component import (
-            ApiV1BlocksRunDiscoveryCreateLabelsErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_latest_stable_error_component import (
-            ApiV1BlocksRunDiscoveryCreateLatestStableErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateLatestStableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_license_error_component import (
-            ApiV1BlocksRunDiscoveryCreateLicenseErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateLicenseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_license_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateLicenseUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateLicenseUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_name_error_component import (
-            ApiV1BlocksRunDiscoveryCreateNameErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_non_field_errors_error_component import (
-            ApiV1BlocksRunDiscoveryCreateNonFieldErrorsErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_platform_service_error_component import (
-            ApiV1BlocksRunDiscoveryCreatePlatformServiceErrorComponent,
+            ApiV1BlocksRunDiscoveryCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_provider_error_component import (
-            ApiV1BlocksRunDiscoveryCreateProviderErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_provider_id_error_component import (
-            ApiV1BlocksRunDiscoveryCreateProviderIdErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_provider_reference_error_component import (
-            ApiV1BlocksRunDiscoveryCreateProviderReferenceErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_readme_md_raw_error_component import (
-            ApiV1BlocksRunDiscoveryCreateReadmeMdRawErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateReadmeMdRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_reconciliation_enabled_error_component import (
-            ApiV1BlocksRunDiscoveryCreateReconciliationEnabledErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_registry_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateRegistryUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateRegistryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_releases_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateReleasesUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateReleasesUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_scope_error_component import (
-            ApiV1BlocksRunDiscoveryCreateScopeErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_sla_availability_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSlaAvailabilityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_sla_target_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSlaTargetErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_slo_availability_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSloAvailabilityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_slo_target_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSloTargetErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_supports_ha_error_component import (
-            ApiV1BlocksRunDiscoveryCreateSupportsHaErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateSupportsHaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_target_availability_error_component import (
-            ApiV1BlocksRunDiscoveryCreateTargetAvailabilityErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_template_block_error_component import (
-            ApiV1BlocksRunDiscoveryCreateTemplateBlockErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateTemplateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_template_error_component import (
-            ApiV1BlocksRunDiscoveryCreateTemplateErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_type_error_component import (
-            ApiV1BlocksRunDiscoveryCreateTypeErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_user_spec_error_component import (
-            ApiV1BlocksRunDiscoveryCreateUserSpecErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateUserSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_version_error_component import (
-            ApiV1BlocksRunDiscoveryCreateVersionErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_blocks_run_discovery_create_website_url_error_component import (
-            ApiV1BlocksRunDiscoveryCreateWebsiteUrlErrorComponent,
+            ApiV1BlocksRunDiscoveryCreateWebsiteUrlErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

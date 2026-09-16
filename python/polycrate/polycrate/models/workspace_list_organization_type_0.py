@@ -47,7 +47,7 @@ class WorkspaceListOrganizationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.workspace_list_organization_type_0_created_by_type_0 import (
-            WorkspaceListOrganizationType0CreatedByType0,
+            WorkspaceListOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         id: str | Unset = UNSET
@@ -129,7 +129,7 @@ class WorkspaceListOrganizationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.workspace_list_organization_type_0_created_by_type_0 import (
-            WorkspaceListOrganizationType0CreatedByType0,
+            WorkspaceListOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

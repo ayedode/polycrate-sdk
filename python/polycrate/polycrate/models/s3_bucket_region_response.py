@@ -72,7 +72,9 @@ class S3BucketRegionResponse:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.s3_bucket_region_response_credential_type_0 import S3BucketRegionResponseCredentialType0
+        from ..models.s3_bucket_region_response_credential_type_0 import (
+            S3BucketRegionResponseCredentialType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -145,11 +147,13 @@ class S3BucketRegionResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.region_simple import RegionSimple
-        from ..models.s3_bucket_region_response_credential_type_0 import S3BucketRegionResponseCredentialType0
-        from ..models.s3_credential import S3Credential
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.region_simple import RegionSimple  # noqa: PLC0415
+        from ..models.s3_bucket_region_response_credential_type_0 import (
+            S3BucketRegionResponseCredentialType0,  # noqa: PLC0415
+        )
+        from ..models.s3_credential import S3Credential  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

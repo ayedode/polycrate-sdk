@@ -78,34 +78,34 @@ class ApiV1BlockRolloutItemsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_block_rollout_items_list_block_error_component import (
-            ApiV1BlockRolloutItemsListBlockErrorComponent,
+            ApiV1BlockRolloutItemsListBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_created_by_users_error_component import (
-            ApiV1BlockRolloutItemsListCreatedByUsersErrorComponent,
+            ApiV1BlockRolloutItemsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_kind_error_component import (
-            ApiV1BlockRolloutItemsListKindErrorComponent,
+            ApiV1BlockRolloutItemsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_rollout_error_component import (
-            ApiV1BlockRolloutItemsListRolloutErrorComponent,
+            ApiV1BlockRolloutItemsListRolloutErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_search_error_component import (
-            ApiV1BlockRolloutItemsListSearchErrorComponent,
+            ApiV1BlockRolloutItemsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_source_error_component import (
-            ApiV1BlockRolloutItemsListSourceErrorComponent,
+            ApiV1BlockRolloutItemsListSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_state_error_component import (
-            ApiV1BlockRolloutItemsListStateErrorComponent,
+            ApiV1BlockRolloutItemsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_state_not_error_component import (
-            ApiV1BlockRolloutItemsListStateNotErrorComponent,
+            ApiV1BlockRolloutItemsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_status_error_component import (
-            ApiV1BlockRolloutItemsListStatusErrorComponent,
+            ApiV1BlockRolloutItemsListStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_time_range_error_component import (
-            ApiV1BlockRolloutItemsListTimeRangeErrorComponent,
+            ApiV1BlockRolloutItemsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -152,37 +152,37 @@ class ApiV1BlockRolloutItemsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_block_rollout_items_list_block_error_component import (
-            ApiV1BlockRolloutItemsListBlockErrorComponent,
+            ApiV1BlockRolloutItemsListBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_created_by_users_error_component import (
-            ApiV1BlockRolloutItemsListCreatedByUsersErrorComponent,
+            ApiV1BlockRolloutItemsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_kind_error_component import (
-            ApiV1BlockRolloutItemsListKindErrorComponent,
+            ApiV1BlockRolloutItemsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_name_exact_error_component import (
-            ApiV1BlockRolloutItemsListNameExactErrorComponent,
+            ApiV1BlockRolloutItemsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_rollout_error_component import (
-            ApiV1BlockRolloutItemsListRolloutErrorComponent,
+            ApiV1BlockRolloutItemsListRolloutErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_search_error_component import (
-            ApiV1BlockRolloutItemsListSearchErrorComponent,
+            ApiV1BlockRolloutItemsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_source_error_component import (
-            ApiV1BlockRolloutItemsListSourceErrorComponent,
+            ApiV1BlockRolloutItemsListSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_state_error_component import (
-            ApiV1BlockRolloutItemsListStateErrorComponent,
+            ApiV1BlockRolloutItemsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_state_not_error_component import (
-            ApiV1BlockRolloutItemsListStateNotErrorComponent,
+            ApiV1BlockRolloutItemsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_status_error_component import (
-            ApiV1BlockRolloutItemsListStatusErrorComponent,
+            ApiV1BlockRolloutItemsListStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_items_list_time_range_error_component import (
-            ApiV1BlockRolloutItemsListTimeRangeErrorComponent,
+            ApiV1BlockRolloutItemsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

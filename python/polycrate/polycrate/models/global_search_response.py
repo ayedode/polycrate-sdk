@@ -57,8 +57,8 @@ class GlobalSearchResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.global_search_response_facets import GlobalSearchResponseFacets
-        from ..models.global_search_response_hits_item import GlobalSearchResponseHitsItem
+        from ..models.global_search_response_facets import GlobalSearchResponseFacets  # noqa: PLC0415
+        from ..models.global_search_response_hits_item import GlobalSearchResponseHitsItem  # noqa: PLC0415
 
         d = dict(src_dict)
         hits = []

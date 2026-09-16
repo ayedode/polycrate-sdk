@@ -34,7 +34,7 @@ class MaintenanceWindowListCreated:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.maintenance_window_list_created_created_by_type_0 import (
-            MaintenanceWindowListCreatedCreatedByType0,
+            MaintenanceWindowListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         created_at: None | str | Unset
@@ -82,7 +82,7 @@ class MaintenanceWindowListCreated:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.maintenance_window_list_created_created_by_type_0 import (
-            MaintenanceWindowListCreatedCreatedByType0,
+            MaintenanceWindowListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

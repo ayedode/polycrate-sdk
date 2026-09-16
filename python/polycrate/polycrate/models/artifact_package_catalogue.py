@@ -153,10 +153,12 @@ class ArtifactPackageCatalogue:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.artifact_package_catalogue_latest_changelog_parsed import (
-            ArtifactPackageCatalogueLatestChangelogParsed,
+            ArtifactPackageCatalogueLatestChangelogParsed,  # noqa: PLC0415
         )
-        from ..models.artifact_package_catalogue_latest_source_urls import ArtifactPackageCatalogueLatestSourceUrls
-        from ..models.artifact_repository_simple import ArtifactRepositorySimple
+        from ..models.artifact_package_catalogue_latest_source_urls import (
+            ArtifactPackageCatalogueLatestSourceUrls,  # noqa: PLC0415
+        )
+        from ..models.artifact_repository_simple import ArtifactRepositorySimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

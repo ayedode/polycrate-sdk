@@ -36,7 +36,7 @@ class PricingQuoteWorkspaceDetailCreated:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.pricing_quote_workspace_detail_created_created_by_type_0 import (
-            PricingQuoteWorkspaceDetailCreatedCreatedByType0,
+            PricingQuoteWorkspaceDetailCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         created_at: None | str | Unset
@@ -84,7 +84,7 @@ class PricingQuoteWorkspaceDetailCreated:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.pricing_quote_workspace_detail_created_created_by_type_0 import (
-            PricingQuoteWorkspaceDetailCreatedCreatedByType0,
+            PricingQuoteWorkspaceDetailCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -53,16 +53,16 @@ class ApiV1ConversationsConversationsArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conversations_conversations_archive_create_meta_error_component import (
-            ApiV1ConversationsConversationsArchiveCreateMetaErrorComponent,
+            ApiV1ConversationsConversationsArchiveCreateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_archive_create_non_field_errors_error_component import (
-            ApiV1ConversationsConversationsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsConversationsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_archive_create_provider_id_error_component import (
-            ApiV1ConversationsConversationsArchiveCreateProviderIdErrorComponent,
+            ApiV1ConversationsConversationsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_archive_create_status_error_component import (
-            ApiV1ConversationsConversationsArchiveCreateStatusErrorComponent,
+            ApiV1ConversationsConversationsArchiveCreateStatusErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -97,19 +97,19 @@ class ApiV1ConversationsConversationsArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conversations_conversations_archive_create_config_error_component import (
-            ApiV1ConversationsConversationsArchiveCreateConfigErrorComponent,
+            ApiV1ConversationsConversationsArchiveCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_archive_create_meta_error_component import (
-            ApiV1ConversationsConversationsArchiveCreateMetaErrorComponent,
+            ApiV1ConversationsConversationsArchiveCreateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_archive_create_non_field_errors_error_component import (
-            ApiV1ConversationsConversationsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsConversationsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_archive_create_provider_id_error_component import (
-            ApiV1ConversationsConversationsArchiveCreateProviderIdErrorComponent,
+            ApiV1ConversationsConversationsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_archive_create_status_error_component import (
-            ApiV1ConversationsConversationsArchiveCreateStatusErrorComponent,
+            ApiV1ConversationsConversationsArchiveCreateStatusErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

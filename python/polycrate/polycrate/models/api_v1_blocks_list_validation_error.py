@@ -67,25 +67,45 @@ class ApiV1BlocksListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_blocks_list_artifact_packages_error_component import (
-            ApiV1BlocksListArtifactPackagesErrorComponent,
+            ApiV1BlocksListArtifactPackagesErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_list_checksum_error_component import ApiV1BlocksListChecksumErrorComponent
+        from ..models.api_v1_blocks_list_checksum_error_component import (
+            ApiV1BlocksListChecksumErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_list_created_by_users_error_component import (
-            ApiV1BlocksListCreatedByUsersErrorComponent,
+            ApiV1BlocksListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_list_from_block_error_component import ApiV1BlocksListFromBlockErrorComponent
-        from ..models.api_v1_blocks_list_kind_error_component import ApiV1BlocksListKindErrorComponent
-        from ..models.api_v1_blocks_list_name_exact_error_component import ApiV1BlocksListNameExactErrorComponent
-        from ..models.api_v1_blocks_list_organizations_error_component import ApiV1BlocksListOrganizationsErrorComponent
-        from ..models.api_v1_blocks_list_search_error_component import ApiV1BlocksListSearchErrorComponent
-        from ..models.api_v1_blocks_list_state_error_component import ApiV1BlocksListStateErrorComponent
-        from ..models.api_v1_blocks_list_state_not_error_component import ApiV1BlocksListStateNotErrorComponent
+        from ..models.api_v1_blocks_list_from_block_error_component import (
+            ApiV1BlocksListFromBlockErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_kind_error_component import ApiV1BlocksListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_blocks_list_name_exact_error_component import (
+            ApiV1BlocksListNameExactErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_organizations_error_component import (
+            ApiV1BlocksListOrganizationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_search_error_component import (
+            ApiV1BlocksListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_state_error_component import (
+            ApiV1BlocksListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_state_not_error_component import (
+            ApiV1BlocksListStateNotErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_list_template_block_error_component import (
-            ApiV1BlocksListTemplateBlockErrorComponent,
+            ApiV1BlocksListTemplateBlockErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_list_time_range_error_component import ApiV1BlocksListTimeRangeErrorComponent
-        from ..models.api_v1_blocks_list_version_error_component import ApiV1BlocksListVersionErrorComponent
-        from ..models.api_v1_blocks_list_workspaces_error_component import ApiV1BlocksListWorkspacesErrorComponent
+        from ..models.api_v1_blocks_list_time_range_error_component import (
+            ApiV1BlocksListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_version_error_component import (
+            ApiV1BlocksListVersionErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_workspaces_error_component import (
+            ApiV1BlocksListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -139,26 +159,48 @@ class ApiV1BlocksListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_blocks_list_artifact_packages_error_component import (
-            ApiV1BlocksListArtifactPackagesErrorComponent,
+            ApiV1BlocksListArtifactPackagesErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_list_checksum_error_component import ApiV1BlocksListChecksumErrorComponent
+        from ..models.api_v1_blocks_list_checksum_error_component import (
+            ApiV1BlocksListChecksumErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_list_created_by_users_error_component import (
-            ApiV1BlocksListCreatedByUsersErrorComponent,
+            ApiV1BlocksListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_list_from_block_error_component import ApiV1BlocksListFromBlockErrorComponent
-        from ..models.api_v1_blocks_list_kind_error_component import ApiV1BlocksListKindErrorComponent
-        from ..models.api_v1_blocks_list_name_exact_error_component import ApiV1BlocksListNameExactErrorComponent
-        from ..models.api_v1_blocks_list_organizations_error_component import ApiV1BlocksListOrganizationsErrorComponent
-        from ..models.api_v1_blocks_list_registry_url_error_component import ApiV1BlocksListRegistryUrlErrorComponent
-        from ..models.api_v1_blocks_list_search_error_component import ApiV1BlocksListSearchErrorComponent
-        from ..models.api_v1_blocks_list_state_error_component import ApiV1BlocksListStateErrorComponent
-        from ..models.api_v1_blocks_list_state_not_error_component import ApiV1BlocksListStateNotErrorComponent
+        from ..models.api_v1_blocks_list_from_block_error_component import (
+            ApiV1BlocksListFromBlockErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_kind_error_component import ApiV1BlocksListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_blocks_list_name_exact_error_component import (
+            ApiV1BlocksListNameExactErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_organizations_error_component import (
+            ApiV1BlocksListOrganizationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_registry_url_error_component import (
+            ApiV1BlocksListRegistryUrlErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_search_error_component import (
+            ApiV1BlocksListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_state_error_component import (
+            ApiV1BlocksListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_state_not_error_component import (
+            ApiV1BlocksListStateNotErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_blocks_list_template_block_error_component import (
-            ApiV1BlocksListTemplateBlockErrorComponent,
+            ApiV1BlocksListTemplateBlockErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_blocks_list_time_range_error_component import ApiV1BlocksListTimeRangeErrorComponent
-        from ..models.api_v1_blocks_list_version_error_component import ApiV1BlocksListVersionErrorComponent
-        from ..models.api_v1_blocks_list_workspaces_error_component import ApiV1BlocksListWorkspacesErrorComponent
+        from ..models.api_v1_blocks_list_time_range_error_component import (
+            ApiV1BlocksListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_version_error_component import (
+            ApiV1BlocksListVersionErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_blocks_list_workspaces_error_component import (
+            ApiV1BlocksListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

@@ -162,83 +162,127 @@ class ApiV1CvesUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_cves_update_actual_availability_error_component import (
-            ApiV1CvesUpdateActualAvailabilityErrorComponent,
+            ApiV1CvesUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_annotations_error_component import ApiV1CvesUpdateAnnotationsErrorComponent
-        from ..models.api_v1_cves_update_archived_at_error_component import ApiV1CvesUpdateArchivedAtErrorComponent
-        from ..models.api_v1_cves_update_archived_by_error_component import ApiV1CvesUpdateArchivedByErrorComponent
-        from ..models.api_v1_cves_update_archived_error_component import ApiV1CvesUpdateArchivedErrorComponent
+        from ..models.api_v1_cves_update_annotations_error_component import (
+            ApiV1CvesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_archived_at_error_component import (
+            ApiV1CvesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_archived_by_error_component import (
+            ApiV1CvesUpdateArchivedByErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_archived_error_component import (
+            ApiV1CvesUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_archived_reason_error_component import (
-            ApiV1CvesUpdateArchivedReasonErrorComponent,
+            ApiV1CvesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_created_by_component_error_component import (
-            ApiV1CvesUpdateCreatedByComponentErrorComponent,
+            ApiV1CvesUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_criticality_error_component import ApiV1CvesUpdateCriticalityErrorComponent
-        from ..models.api_v1_cves_update_cve_id_error_component import ApiV1CvesUpdateCveIdErrorComponent
-        from ..models.api_v1_cves_update_cvss_score_error_component import ApiV1CvesUpdateCvssScoreErrorComponent
-        from ..models.api_v1_cves_update_cvss_vector_error_component import ApiV1CvesUpdateCvssVectorErrorComponent
-        from ..models.api_v1_cves_update_debug_mode_error_component import ApiV1CvesUpdateDebugModeErrorComponent
-        from ..models.api_v1_cves_update_description_error_component import ApiV1CvesUpdateDescriptionErrorComponent
+        from ..models.api_v1_cves_update_criticality_error_component import (
+            ApiV1CvesUpdateCriticalityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_cve_id_error_component import (
+            ApiV1CvesUpdateCveIdErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_cvss_score_error_component import (
+            ApiV1CvesUpdateCvssScoreErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_cvss_vector_error_component import (
+            ApiV1CvesUpdateCvssVectorErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_debug_mode_error_component import (
+            ApiV1CvesUpdateDebugModeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_description_error_component import (
+            ApiV1CvesUpdateDescriptionErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_discovery_enabled_error_component import (
-            ApiV1CvesUpdateDiscoveryEnabledErrorComponent,
+            ApiV1CvesUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_display_name_error_component import ApiV1CvesUpdateDisplayNameErrorComponent
-        from ..models.api_v1_cves_update_kind_error_component import ApiV1CvesUpdateKindErrorComponent
-        from ..models.api_v1_cves_update_labels_error_component import ApiV1CvesUpdateLabelsErrorComponent
+        from ..models.api_v1_cves_update_display_name_error_component import (
+            ApiV1CvesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_kind_error_component import ApiV1CvesUpdateKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_update_labels_error_component import (
+            ApiV1CvesUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1CvesUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1CvesUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_managed_by_content_type_error_component import (
-            ApiV1CvesUpdateManagedByContentTypeErrorComponent,
+            ApiV1CvesUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_managed_by_object_id_error_component import (
-            ApiV1CvesUpdateManagedByObjectIdErrorComponent,
+            ApiV1CvesUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_modified_at_error_component import ApiV1CvesUpdateModifiedAtErrorComponent
+        from ..models.api_v1_cves_update_modified_at_error_component import (
+            ApiV1CvesUpdateModifiedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_modified_by_user_error_component import (
-            ApiV1CvesUpdateModifiedByUserErrorComponent,
+            ApiV1CvesUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_name_error_component import ApiV1CvesUpdateNameErrorComponent
+        from ..models.api_v1_cves_update_name_error_component import ApiV1CvesUpdateNameErrorComponent  # noqa: PLC0415
         from ..models.api_v1_cves_update_non_field_errors_error_component import (
-            ApiV1CvesUpdateNonFieldErrorsErrorComponent,
+            ApiV1CvesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_platform_dns_record_created_error_component import (
-            ApiV1CvesUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1CvesUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_platform_service_error_component import (
-            ApiV1CvesUpdatePlatformServiceErrorComponent,
+            ApiV1CvesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_provider_error_component import ApiV1CvesUpdateProviderErrorComponent
-        from ..models.api_v1_cves_update_provider_id_error_component import ApiV1CvesUpdateProviderIdErrorComponent
+        from ..models.api_v1_cves_update_provider_error_component import (
+            ApiV1CvesUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_provider_id_error_component import (
+            ApiV1CvesUpdateProviderIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_provider_reference_error_component import (
-            ApiV1CvesUpdateProviderReferenceErrorComponent,
+            ApiV1CvesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_published_at_error_component import ApiV1CvesUpdatePublishedAtErrorComponent
+        from ..models.api_v1_cves_update_published_at_error_component import (
+            ApiV1CvesUpdatePublishedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_reconciliation_enabled_error_component import (
-            ApiV1CvesUpdateReconciliationEnabledErrorComponent,
+            ApiV1CvesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_scope_error_component import ApiV1CvesUpdateScopeErrorComponent
-        from ..models.api_v1_cves_update_severity_error_component import ApiV1CvesUpdateSeverityErrorComponent
+        from ..models.api_v1_cves_update_scope_error_component import (
+            ApiV1CvesUpdateScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_severity_error_component import (
+            ApiV1CvesUpdateSeverityErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_sla_availability_error_component import (
-            ApiV1CvesUpdateSlaAvailabilityErrorComponent,
+            ApiV1CvesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_sla_target_error_component import ApiV1CvesUpdateSlaTargetErrorComponent
+        from ..models.api_v1_cves_update_sla_target_error_component import (
+            ApiV1CvesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_sla_window_days_error_component import (
-            ApiV1CvesUpdateSlaWindowDaysErrorComponent,
+            ApiV1CvesUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_slo_availability_error_component import (
-            ApiV1CvesUpdateSloAvailabilityErrorComponent,
+            ApiV1CvesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_slo_target_error_component import ApiV1CvesUpdateSloTargetErrorComponent
+        from ..models.api_v1_cves_update_slo_target_error_component import (
+            ApiV1CvesUpdateSloTargetErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_slo_window_days_error_component import (
-            ApiV1CvesUpdateSloWindowDaysErrorComponent,
+            ApiV1CvesUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_status_error_component import ApiV1CvesUpdateStatusErrorComponent
+        from ..models.api_v1_cves_update_status_error_component import (
+            ApiV1CvesUpdateStatusErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_target_availability_error_component import (
-            ApiV1CvesUpdateTargetAvailabilityErrorComponent,
+            ApiV1CvesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_title_error_component import ApiV1CvesUpdateTitleErrorComponent
+        from ..models.api_v1_cves_update_title_error_component import (
+            ApiV1CvesUpdateTitleErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -348,86 +392,130 @@ class ApiV1CvesUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_cves_update_actual_availability_error_component import (
-            ApiV1CvesUpdateActualAvailabilityErrorComponent,
+            ApiV1CvesUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_annotations_error_component import ApiV1CvesUpdateAnnotationsErrorComponent
-        from ..models.api_v1_cves_update_archived_at_error_component import ApiV1CvesUpdateArchivedAtErrorComponent
-        from ..models.api_v1_cves_update_archived_by_error_component import ApiV1CvesUpdateArchivedByErrorComponent
-        from ..models.api_v1_cves_update_archived_error_component import ApiV1CvesUpdateArchivedErrorComponent
+        from ..models.api_v1_cves_update_annotations_error_component import (
+            ApiV1CvesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_archived_at_error_component import (
+            ApiV1CvesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_archived_by_error_component import (
+            ApiV1CvesUpdateArchivedByErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_archived_error_component import (
+            ApiV1CvesUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_archived_reason_error_component import (
-            ApiV1CvesUpdateArchivedReasonErrorComponent,
+            ApiV1CvesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_created_by_component_error_component import (
-            ApiV1CvesUpdateCreatedByComponentErrorComponent,
+            ApiV1CvesUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_created_by_user_error_component import (
-            ApiV1CvesUpdateCreatedByUserErrorComponent,
+            ApiV1CvesUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_criticality_error_component import ApiV1CvesUpdateCriticalityErrorComponent
-        from ..models.api_v1_cves_update_cve_id_error_component import ApiV1CvesUpdateCveIdErrorComponent
-        from ..models.api_v1_cves_update_cvss_score_error_component import ApiV1CvesUpdateCvssScoreErrorComponent
-        from ..models.api_v1_cves_update_cvss_vector_error_component import ApiV1CvesUpdateCvssVectorErrorComponent
-        from ..models.api_v1_cves_update_debug_mode_error_component import ApiV1CvesUpdateDebugModeErrorComponent
-        from ..models.api_v1_cves_update_description_error_component import ApiV1CvesUpdateDescriptionErrorComponent
+        from ..models.api_v1_cves_update_criticality_error_component import (
+            ApiV1CvesUpdateCriticalityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_cve_id_error_component import (
+            ApiV1CvesUpdateCveIdErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_cvss_score_error_component import (
+            ApiV1CvesUpdateCvssScoreErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_cvss_vector_error_component import (
+            ApiV1CvesUpdateCvssVectorErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_debug_mode_error_component import (
+            ApiV1CvesUpdateDebugModeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_description_error_component import (
+            ApiV1CvesUpdateDescriptionErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_discovery_enabled_error_component import (
-            ApiV1CvesUpdateDiscoveryEnabledErrorComponent,
+            ApiV1CvesUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_display_name_error_component import ApiV1CvesUpdateDisplayNameErrorComponent
-        from ..models.api_v1_cves_update_kind_error_component import ApiV1CvesUpdateKindErrorComponent
-        from ..models.api_v1_cves_update_labels_error_component import ApiV1CvesUpdateLabelsErrorComponent
+        from ..models.api_v1_cves_update_display_name_error_component import (
+            ApiV1CvesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_kind_error_component import ApiV1CvesUpdateKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_update_labels_error_component import (
+            ApiV1CvesUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1CvesUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1CvesUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_managed_by_content_type_error_component import (
-            ApiV1CvesUpdateManagedByContentTypeErrorComponent,
+            ApiV1CvesUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_managed_by_object_id_error_component import (
-            ApiV1CvesUpdateManagedByObjectIdErrorComponent,
+            ApiV1CvesUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_modified_at_error_component import ApiV1CvesUpdateModifiedAtErrorComponent
+        from ..models.api_v1_cves_update_modified_at_error_component import (
+            ApiV1CvesUpdateModifiedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_modified_by_user_error_component import (
-            ApiV1CvesUpdateModifiedByUserErrorComponent,
+            ApiV1CvesUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_name_error_component import ApiV1CvesUpdateNameErrorComponent
+        from ..models.api_v1_cves_update_name_error_component import ApiV1CvesUpdateNameErrorComponent  # noqa: PLC0415
         from ..models.api_v1_cves_update_non_field_errors_error_component import (
-            ApiV1CvesUpdateNonFieldErrorsErrorComponent,
+            ApiV1CvesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_platform_dns_record_created_error_component import (
-            ApiV1CvesUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1CvesUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_platform_service_error_component import (
-            ApiV1CvesUpdatePlatformServiceErrorComponent,
+            ApiV1CvesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_provider_error_component import ApiV1CvesUpdateProviderErrorComponent
-        from ..models.api_v1_cves_update_provider_id_error_component import ApiV1CvesUpdateProviderIdErrorComponent
+        from ..models.api_v1_cves_update_provider_error_component import (
+            ApiV1CvesUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_provider_id_error_component import (
+            ApiV1CvesUpdateProviderIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_provider_reference_error_component import (
-            ApiV1CvesUpdateProviderReferenceErrorComponent,
+            ApiV1CvesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_published_at_error_component import ApiV1CvesUpdatePublishedAtErrorComponent
+        from ..models.api_v1_cves_update_published_at_error_component import (
+            ApiV1CvesUpdatePublishedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_reconciliation_enabled_error_component import (
-            ApiV1CvesUpdateReconciliationEnabledErrorComponent,
+            ApiV1CvesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_scope_error_component import ApiV1CvesUpdateScopeErrorComponent
-        from ..models.api_v1_cves_update_severity_error_component import ApiV1CvesUpdateSeverityErrorComponent
+        from ..models.api_v1_cves_update_scope_error_component import (
+            ApiV1CvesUpdateScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_update_severity_error_component import (
+            ApiV1CvesUpdateSeverityErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_sla_availability_error_component import (
-            ApiV1CvesUpdateSlaAvailabilityErrorComponent,
+            ApiV1CvesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_sla_target_error_component import ApiV1CvesUpdateSlaTargetErrorComponent
+        from ..models.api_v1_cves_update_sla_target_error_component import (
+            ApiV1CvesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_sla_window_days_error_component import (
-            ApiV1CvesUpdateSlaWindowDaysErrorComponent,
+            ApiV1CvesUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_update_slo_availability_error_component import (
-            ApiV1CvesUpdateSloAvailabilityErrorComponent,
+            ApiV1CvesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_slo_target_error_component import ApiV1CvesUpdateSloTargetErrorComponent
+        from ..models.api_v1_cves_update_slo_target_error_component import (
+            ApiV1CvesUpdateSloTargetErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_slo_window_days_error_component import (
-            ApiV1CvesUpdateSloWindowDaysErrorComponent,
+            ApiV1CvesUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_status_error_component import ApiV1CvesUpdateStatusErrorComponent
+        from ..models.api_v1_cves_update_status_error_component import (
+            ApiV1CvesUpdateStatusErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_update_target_availability_error_component import (
-            ApiV1CvesUpdateTargetAvailabilityErrorComponent,
+            ApiV1CvesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_update_title_error_component import ApiV1CvesUpdateTitleErrorComponent
+        from ..models.api_v1_cves_update_title_error_component import (
+            ApiV1CvesUpdateTitleErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

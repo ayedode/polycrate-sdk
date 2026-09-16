@@ -68,7 +68,7 @@ class PaginatedS3BucketListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_bucket_list import S3BucketList
+        from ..models.s3_bucket_list import S3BucketList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

@@ -236,10 +236,10 @@ class ProjectDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.project_detail_deleted_by_user_type_0 import ProjectDetailDeletedByUserType0
-        from ..models.project_detail_last_action_run_type_0 import ProjectDetailLastActionRunType0
-        from ..models.project_detail_product_type_0 import ProjectDetailProductType0
-        from ..models.project_detail_workspace_type_0 import ProjectDetailWorkspaceType0
+        from ..models.project_detail_deleted_by_user_type_0 import ProjectDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.project_detail_last_action_run_type_0 import ProjectDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.project_detail_product_type_0 import ProjectDetailProductType0  # noqa: PLC0415
+        from ..models.project_detail_workspace_type_0 import ProjectDetailWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -621,13 +621,13 @@ class ProjectDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.note_simple import NoteSimple
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.project_detail_created import ProjectDetailCreated
-        from ..models.project_detail_deleted_by_user_type_0 import ProjectDetailDeletedByUserType0
-        from ..models.project_detail_last_action_run_type_0 import ProjectDetailLastActionRunType0
-        from ..models.project_detail_product_type_0 import ProjectDetailProductType0
-        from ..models.project_detail_workspace_type_0 import ProjectDetailWorkspaceType0
+        from ..models.note_simple import NoteSimple  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.project_detail_created import ProjectDetailCreated  # noqa: PLC0415
+        from ..models.project_detail_deleted_by_user_type_0 import ProjectDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.project_detail_last_action_run_type_0 import ProjectDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.project_detail_product_type_0 import ProjectDetailProductType0  # noqa: PLC0415
+        from ..models.project_detail_workspace_type_0 import ProjectDetailWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

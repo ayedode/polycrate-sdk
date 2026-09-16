@@ -44,7 +44,7 @@ class CVEWorkspaceType0:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.cve_workspace_type_0_created_by_type_0 import CVEWorkspaceType0CreatedByType0
+        from ..models.cve_workspace_type_0_created_by_type_0 import CVEWorkspaceType0CreatedByType0  # noqa: PLC0415
 
         id: str | Unset = UNSET
         if not isinstance(self.id, Unset):
@@ -124,7 +124,7 @@ class CVEWorkspaceType0:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.cve_workspace_type_0_created_by_type_0 import CVEWorkspaceType0CreatedByType0
+        from ..models.cve_workspace_type_0_created_by_type_0 import CVEWorkspaceType0CreatedByType0  # noqa: PLC0415
 
         d = dict(src_dict)
         _id = d.pop("id", UNSET)

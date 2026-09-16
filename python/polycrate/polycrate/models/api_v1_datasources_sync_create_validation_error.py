@@ -191,106 +191,106 @@ class ApiV1DatasourcesSyncCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_datasources_sync_create_annotations_error_component import (
-            ApiV1DatasourcesSyncCreateAnnotationsErrorComponent,
+            ApiV1DatasourcesSyncCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_archived_at_error_component import (
-            ApiV1DatasourcesSyncCreateArchivedAtErrorComponent,
+            ApiV1DatasourcesSyncCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_archived_error_component import (
-            ApiV1DatasourcesSyncCreateArchivedErrorComponent,
+            ApiV1DatasourcesSyncCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_archived_reason_error_component import (
-            ApiV1DatasourcesSyncCreateArchivedReasonErrorComponent,
+            ApiV1DatasourcesSyncCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_create_incidents_error_component import (
-            ApiV1DatasourcesSyncCreateCreateIncidentsErrorComponent,
+            ApiV1DatasourcesSyncCreateCreateIncidentsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_create_incidents_without_resources_error_component import (
-            ApiV1DatasourcesSyncCreateCreateIncidentsWithoutResourcesErrorComponent,
+            ApiV1DatasourcesSyncCreateCreateIncidentsWithoutResourcesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_create_maintenance_as_draft_error_component import (
-            ApiV1DatasourcesSyncCreateCreateMaintenanceAsDraftErrorComponent,
+            ApiV1DatasourcesSyncCreateCreateMaintenanceAsDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_create_notes_resolved_error_component import (
-            ApiV1DatasourcesSyncCreateCreateNotesResolvedErrorComponent,
+            ApiV1DatasourcesSyncCreateCreateNotesResolvedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_criticality_error_component import (
-            ApiV1DatasourcesSyncCreateCriticalityErrorComponent,
+            ApiV1DatasourcesSyncCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_datasource_url_error_component import (
-            ApiV1DatasourcesSyncCreateDatasourceUrlErrorComponent,
+            ApiV1DatasourcesSyncCreateDatasourceUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_debug_mode_error_component import (
-            ApiV1DatasourcesSyncCreateDebugModeErrorComponent,
+            ApiV1DatasourcesSyncCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_display_name_error_component import (
-            ApiV1DatasourcesSyncCreateDisplayNameErrorComponent,
+            ApiV1DatasourcesSyncCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_is_enabled_error_component import (
-            ApiV1DatasourcesSyncCreateIsEnabledErrorComponent,
+            ApiV1DatasourcesSyncCreateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_kind_error_component import (
-            ApiV1DatasourcesSyncCreateKindErrorComponent,
+            ApiV1DatasourcesSyncCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_labels_error_component import (
-            ApiV1DatasourcesSyncCreateLabelsErrorComponent,
+            ApiV1DatasourcesSyncCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_last_sync_error_component import (
-            ApiV1DatasourcesSyncCreateLastSyncErrorComponent,
+            ApiV1DatasourcesSyncCreateLastSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_last_sync_error_error_component import (
-            ApiV1DatasourcesSyncCreateLastSyncErrorErrorComponent,
+            ApiV1DatasourcesSyncCreateLastSyncErrorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_name_error_component import (
-            ApiV1DatasourcesSyncCreateNameErrorComponent,
+            ApiV1DatasourcesSyncCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_non_field_errors_error_component import (
-            ApiV1DatasourcesSyncCreateNonFieldErrorsErrorComponent,
+            ApiV1DatasourcesSyncCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_note_kind_error_component import (
-            ApiV1DatasourcesSyncCreateNoteKindErrorComponent,
+            ApiV1DatasourcesSyncCreateNoteKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_note_organization_id_error_component import (
-            ApiV1DatasourcesSyncCreateNoteOrganizationIdErrorComponent,
+            ApiV1DatasourcesSyncCreateNoteOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_note_workspace_id_error_component import (
-            ApiV1DatasourcesSyncCreateNoteWorkspaceIdErrorComponent,
+            ApiV1DatasourcesSyncCreateNoteWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_platform_service_error_component import (
-            ApiV1DatasourcesSyncCreatePlatformServiceErrorComponent,
+            ApiV1DatasourcesSyncCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_provider_error_component import (
-            ApiV1DatasourcesSyncCreateProviderErrorComponent,
+            ApiV1DatasourcesSyncCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_provider_id_error_component import (
-            ApiV1DatasourcesSyncCreateProviderIdErrorComponent,
+            ApiV1DatasourcesSyncCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_provider_reference_error_component import (
-            ApiV1DatasourcesSyncCreateProviderReferenceErrorComponent,
+            ApiV1DatasourcesSyncCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_reconciliation_enabled_error_component import (
-            ApiV1DatasourcesSyncCreateReconciliationEnabledErrorComponent,
+            ApiV1DatasourcesSyncCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_sla_availability_error_component import (
-            ApiV1DatasourcesSyncCreateSlaAvailabilityErrorComponent,
+            ApiV1DatasourcesSyncCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_sla_target_error_component import (
-            ApiV1DatasourcesSyncCreateSlaTargetErrorComponent,
+            ApiV1DatasourcesSyncCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_slo_availability_error_component import (
-            ApiV1DatasourcesSyncCreateSloAvailabilityErrorComponent,
+            ApiV1DatasourcesSyncCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_slo_target_error_component import (
-            ApiV1DatasourcesSyncCreateSloTargetErrorComponent,
+            ApiV1DatasourcesSyncCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_sync_interval_minutes_error_component import (
-            ApiV1DatasourcesSyncCreateSyncIntervalMinutesErrorComponent,
+            ApiV1DatasourcesSyncCreateSyncIntervalMinutesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_target_availability_error_component import (
-            ApiV1DatasourcesSyncCreateTargetAvailabilityErrorComponent,
+            ApiV1DatasourcesSyncCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_tolerations_error_component import (
-            ApiV1DatasourcesSyncCreateTolerationsErrorComponent,
+            ApiV1DatasourcesSyncCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -385,109 +385,109 @@ class ApiV1DatasourcesSyncCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_datasources_sync_create_annotations_error_component import (
-            ApiV1DatasourcesSyncCreateAnnotationsErrorComponent,
+            ApiV1DatasourcesSyncCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_archived_at_error_component import (
-            ApiV1DatasourcesSyncCreateArchivedAtErrorComponent,
+            ApiV1DatasourcesSyncCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_archived_error_component import (
-            ApiV1DatasourcesSyncCreateArchivedErrorComponent,
+            ApiV1DatasourcesSyncCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_archived_reason_error_component import (
-            ApiV1DatasourcesSyncCreateArchivedReasonErrorComponent,
+            ApiV1DatasourcesSyncCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_create_incidents_error_component import (
-            ApiV1DatasourcesSyncCreateCreateIncidentsErrorComponent,
+            ApiV1DatasourcesSyncCreateCreateIncidentsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_create_incidents_without_resources_error_component import (
-            ApiV1DatasourcesSyncCreateCreateIncidentsWithoutResourcesErrorComponent,
+            ApiV1DatasourcesSyncCreateCreateIncidentsWithoutResourcesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_create_maintenance_as_draft_error_component import (
-            ApiV1DatasourcesSyncCreateCreateMaintenanceAsDraftErrorComponent,
+            ApiV1DatasourcesSyncCreateCreateMaintenanceAsDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_create_notes_resolved_error_component import (
-            ApiV1DatasourcesSyncCreateCreateNotesResolvedErrorComponent,
+            ApiV1DatasourcesSyncCreateCreateNotesResolvedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_criticality_error_component import (
-            ApiV1DatasourcesSyncCreateCriticalityErrorComponent,
+            ApiV1DatasourcesSyncCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_datasource_url_error_component import (
-            ApiV1DatasourcesSyncCreateDatasourceUrlErrorComponent,
+            ApiV1DatasourcesSyncCreateDatasourceUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_debug_mode_error_component import (
-            ApiV1DatasourcesSyncCreateDebugModeErrorComponent,
+            ApiV1DatasourcesSyncCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_display_name_error_component import (
-            ApiV1DatasourcesSyncCreateDisplayNameErrorComponent,
+            ApiV1DatasourcesSyncCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_is_enabled_error_component import (
-            ApiV1DatasourcesSyncCreateIsEnabledErrorComponent,
+            ApiV1DatasourcesSyncCreateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_kind_error_component import (
-            ApiV1DatasourcesSyncCreateKindErrorComponent,
+            ApiV1DatasourcesSyncCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_labels_error_component import (
-            ApiV1DatasourcesSyncCreateLabelsErrorComponent,
+            ApiV1DatasourcesSyncCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_last_sync_error_component import (
-            ApiV1DatasourcesSyncCreateLastSyncErrorComponent,
+            ApiV1DatasourcesSyncCreateLastSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_last_sync_error_error_component import (
-            ApiV1DatasourcesSyncCreateLastSyncErrorErrorComponent,
+            ApiV1DatasourcesSyncCreateLastSyncErrorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_name_error_component import (
-            ApiV1DatasourcesSyncCreateNameErrorComponent,
+            ApiV1DatasourcesSyncCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_non_field_errors_error_component import (
-            ApiV1DatasourcesSyncCreateNonFieldErrorsErrorComponent,
+            ApiV1DatasourcesSyncCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_note_kind_error_component import (
-            ApiV1DatasourcesSyncCreateNoteKindErrorComponent,
+            ApiV1DatasourcesSyncCreateNoteKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_note_organization_id_error_component import (
-            ApiV1DatasourcesSyncCreateNoteOrganizationIdErrorComponent,
+            ApiV1DatasourcesSyncCreateNoteOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_note_workspace_id_error_component import (
-            ApiV1DatasourcesSyncCreateNoteWorkspaceIdErrorComponent,
+            ApiV1DatasourcesSyncCreateNoteWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_platform_service_error_component import (
-            ApiV1DatasourcesSyncCreatePlatformServiceErrorComponent,
+            ApiV1DatasourcesSyncCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_provider_entity_id_error_component import (
-            ApiV1DatasourcesSyncCreateProviderEntityIdErrorComponent,
+            ApiV1DatasourcesSyncCreateProviderEntityIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_provider_error_component import (
-            ApiV1DatasourcesSyncCreateProviderErrorComponent,
+            ApiV1DatasourcesSyncCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_provider_id_error_component import (
-            ApiV1DatasourcesSyncCreateProviderIdErrorComponent,
+            ApiV1DatasourcesSyncCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_provider_reference_error_component import (
-            ApiV1DatasourcesSyncCreateProviderReferenceErrorComponent,
+            ApiV1DatasourcesSyncCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_reconciliation_enabled_error_component import (
-            ApiV1DatasourcesSyncCreateReconciliationEnabledErrorComponent,
+            ApiV1DatasourcesSyncCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_sla_availability_error_component import (
-            ApiV1DatasourcesSyncCreateSlaAvailabilityErrorComponent,
+            ApiV1DatasourcesSyncCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_sla_target_error_component import (
-            ApiV1DatasourcesSyncCreateSlaTargetErrorComponent,
+            ApiV1DatasourcesSyncCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_slo_availability_error_component import (
-            ApiV1DatasourcesSyncCreateSloAvailabilityErrorComponent,
+            ApiV1DatasourcesSyncCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_slo_target_error_component import (
-            ApiV1DatasourcesSyncCreateSloTargetErrorComponent,
+            ApiV1DatasourcesSyncCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_sync_interval_minutes_error_component import (
-            ApiV1DatasourcesSyncCreateSyncIntervalMinutesErrorComponent,
+            ApiV1DatasourcesSyncCreateSyncIntervalMinutesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_target_availability_error_component import (
-            ApiV1DatasourcesSyncCreateTargetAvailabilityErrorComponent,
+            ApiV1DatasourcesSyncCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_datasources_sync_create_tolerations_error_component import (
-            ApiV1DatasourcesSyncCreateTolerationsErrorComponent,
+            ApiV1DatasourcesSyncCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

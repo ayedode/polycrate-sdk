@@ -158,87 +158,91 @@ class ApiV1AlertroutersUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alertrouters_update_annotations_error_component import (
-            ApiV1AlertroutersUpdateAnnotationsErrorComponent,
+            ApiV1AlertroutersUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_archived_at_error_component import (
-            ApiV1AlertroutersUpdateArchivedAtErrorComponent,
+            ApiV1AlertroutersUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_archived_error_component import (
-            ApiV1AlertroutersUpdateArchivedErrorComponent,
+            ApiV1AlertroutersUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_archived_reason_error_component import (
-            ApiV1AlertroutersUpdateArchivedReasonErrorComponent,
+            ApiV1AlertroutersUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_criticality_error_component import (
-            ApiV1AlertroutersUpdateCriticalityErrorComponent,
+            ApiV1AlertroutersUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_debug_mode_error_component import (
-            ApiV1AlertroutersUpdateDebugModeErrorComponent,
+            ApiV1AlertroutersUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_display_name_error_component import (
-            ApiV1AlertroutersUpdateDisplayNameErrorComponent,
+            ApiV1AlertroutersUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_alertrouters_update_kind_error_component import ApiV1AlertroutersUpdateKindErrorComponent
+        from ..models.api_v1_alertrouters_update_kind_error_component import (
+            ApiV1AlertroutersUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_alertrouters_update_label_cluster_error_component import (
-            ApiV1AlertroutersUpdateLabelClusterErrorComponent,
+            ApiV1AlertroutersUpdateLabelClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_label_namespace_error_component import (
-            ApiV1AlertroutersUpdateLabelNamespaceErrorComponent,
+            ApiV1AlertroutersUpdateLabelNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_label_organization_error_component import (
-            ApiV1AlertroutersUpdateLabelOrganizationErrorComponent,
+            ApiV1AlertroutersUpdateLabelOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_label_pod_error_component import (
-            ApiV1AlertroutersUpdateLabelPodErrorComponent,
+            ApiV1AlertroutersUpdateLabelPodErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_label_workspace_error_component import (
-            ApiV1AlertroutersUpdateLabelWorkspaceErrorComponent,
+            ApiV1AlertroutersUpdateLabelWorkspaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_labels_error_component import (
-            ApiV1AlertroutersUpdateLabelsErrorComponent,
+            ApiV1AlertroutersUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_alertrouters_update_name_error_component import ApiV1AlertroutersUpdateNameErrorComponent
+        from ..models.api_v1_alertrouters_update_name_error_component import (
+            ApiV1AlertroutersUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_alertrouters_update_non_field_errors_error_component import (
-            ApiV1AlertroutersUpdateNonFieldErrorsErrorComponent,
+            ApiV1AlertroutersUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_organization_id_error_component import (
-            ApiV1AlertroutersUpdateOrganizationIdErrorComponent,
+            ApiV1AlertroutersUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_platform_service_error_component import (
-            ApiV1AlertroutersUpdatePlatformServiceErrorComponent,
+            ApiV1AlertroutersUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_provider_error_component import (
-            ApiV1AlertroutersUpdateProviderErrorComponent,
+            ApiV1AlertroutersUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_provider_id_error_component import (
-            ApiV1AlertroutersUpdateProviderIdErrorComponent,
+            ApiV1AlertroutersUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_provider_reference_error_component import (
-            ApiV1AlertroutersUpdateProviderReferenceErrorComponent,
+            ApiV1AlertroutersUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_reconciliation_enabled_error_component import (
-            ApiV1AlertroutersUpdateReconciliationEnabledErrorComponent,
+            ApiV1AlertroutersUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_sla_availability_error_component import (
-            ApiV1AlertroutersUpdateSlaAvailabilityErrorComponent,
+            ApiV1AlertroutersUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_sla_target_error_component import (
-            ApiV1AlertroutersUpdateSlaTargetErrorComponent,
+            ApiV1AlertroutersUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_slo_availability_error_component import (
-            ApiV1AlertroutersUpdateSloAvailabilityErrorComponent,
+            ApiV1AlertroutersUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_slo_target_error_component import (
-            ApiV1AlertroutersUpdateSloTargetErrorComponent,
+            ApiV1AlertroutersUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_target_availability_error_component import (
-            ApiV1AlertroutersUpdateTargetAvailabilityErrorComponent,
+            ApiV1AlertroutersUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_tolerations_error_component import (
-            ApiV1AlertroutersUpdateTolerationsErrorComponent,
+            ApiV1AlertroutersUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_workspace_id_error_component import (
-            ApiV1AlertroutersUpdateWorkspaceIdErrorComponent,
+            ApiV1AlertroutersUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -323,90 +327,94 @@ class ApiV1AlertroutersUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alertrouters_update_annotations_error_component import (
-            ApiV1AlertroutersUpdateAnnotationsErrorComponent,
+            ApiV1AlertroutersUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_archived_at_error_component import (
-            ApiV1AlertroutersUpdateArchivedAtErrorComponent,
+            ApiV1AlertroutersUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_archived_error_component import (
-            ApiV1AlertroutersUpdateArchivedErrorComponent,
+            ApiV1AlertroutersUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_archived_reason_error_component import (
-            ApiV1AlertroutersUpdateArchivedReasonErrorComponent,
+            ApiV1AlertroutersUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_criticality_error_component import (
-            ApiV1AlertroutersUpdateCriticalityErrorComponent,
+            ApiV1AlertroutersUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_debug_mode_error_component import (
-            ApiV1AlertroutersUpdateDebugModeErrorComponent,
+            ApiV1AlertroutersUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_display_name_error_component import (
-            ApiV1AlertroutersUpdateDisplayNameErrorComponent,
+            ApiV1AlertroutersUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_alertrouters_update_kind_error_component import ApiV1AlertroutersUpdateKindErrorComponent
+        from ..models.api_v1_alertrouters_update_kind_error_component import (
+            ApiV1AlertroutersUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_alertrouters_update_label_cluster_error_component import (
-            ApiV1AlertroutersUpdateLabelClusterErrorComponent,
+            ApiV1AlertroutersUpdateLabelClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_label_criticality_error_component import (
-            ApiV1AlertroutersUpdateLabelCriticalityErrorComponent,
+            ApiV1AlertroutersUpdateLabelCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_label_namespace_error_component import (
-            ApiV1AlertroutersUpdateLabelNamespaceErrorComponent,
+            ApiV1AlertroutersUpdateLabelNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_label_organization_error_component import (
-            ApiV1AlertroutersUpdateLabelOrganizationErrorComponent,
+            ApiV1AlertroutersUpdateLabelOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_label_pod_error_component import (
-            ApiV1AlertroutersUpdateLabelPodErrorComponent,
+            ApiV1AlertroutersUpdateLabelPodErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_label_workspace_error_component import (
-            ApiV1AlertroutersUpdateLabelWorkspaceErrorComponent,
+            ApiV1AlertroutersUpdateLabelWorkspaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_labels_error_component import (
-            ApiV1AlertroutersUpdateLabelsErrorComponent,
+            ApiV1AlertroutersUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_alertrouters_update_name_error_component import ApiV1AlertroutersUpdateNameErrorComponent
+        from ..models.api_v1_alertrouters_update_name_error_component import (
+            ApiV1AlertroutersUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_alertrouters_update_non_field_errors_error_component import (
-            ApiV1AlertroutersUpdateNonFieldErrorsErrorComponent,
+            ApiV1AlertroutersUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_organization_id_error_component import (
-            ApiV1AlertroutersUpdateOrganizationIdErrorComponent,
+            ApiV1AlertroutersUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_platform_service_error_component import (
-            ApiV1AlertroutersUpdatePlatformServiceErrorComponent,
+            ApiV1AlertroutersUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_provider_error_component import (
-            ApiV1AlertroutersUpdateProviderErrorComponent,
+            ApiV1AlertroutersUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_provider_id_error_component import (
-            ApiV1AlertroutersUpdateProviderIdErrorComponent,
+            ApiV1AlertroutersUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_provider_reference_error_component import (
-            ApiV1AlertroutersUpdateProviderReferenceErrorComponent,
+            ApiV1AlertroutersUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_reconciliation_enabled_error_component import (
-            ApiV1AlertroutersUpdateReconciliationEnabledErrorComponent,
+            ApiV1AlertroutersUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_sla_availability_error_component import (
-            ApiV1AlertroutersUpdateSlaAvailabilityErrorComponent,
+            ApiV1AlertroutersUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_sla_target_error_component import (
-            ApiV1AlertroutersUpdateSlaTargetErrorComponent,
+            ApiV1AlertroutersUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_slo_availability_error_component import (
-            ApiV1AlertroutersUpdateSloAvailabilityErrorComponent,
+            ApiV1AlertroutersUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_slo_target_error_component import (
-            ApiV1AlertroutersUpdateSloTargetErrorComponent,
+            ApiV1AlertroutersUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_target_availability_error_component import (
-            ApiV1AlertroutersUpdateTargetAvailabilityErrorComponent,
+            ApiV1AlertroutersUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_tolerations_error_component import (
-            ApiV1AlertroutersUpdateTolerationsErrorComponent,
+            ApiV1AlertroutersUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_update_workspace_id_error_component import (
-            ApiV1AlertroutersUpdateWorkspaceIdErrorComponent,
+            ApiV1AlertroutersUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

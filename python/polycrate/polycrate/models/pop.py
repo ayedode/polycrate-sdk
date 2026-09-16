@@ -217,10 +217,10 @@ class Pop:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.pop_deleted_by_user_type_0 import PopDeletedByUserType0
-        from ..models.pop_last_action_run_type_0 import PopLastActionRunType0
-        from ..models.pop_organization_type_0 import PopOrganizationType0
-        from ..models.pop_workspace_type_0 import PopWorkspaceType0
+        from ..models.pop_deleted_by_user_type_0 import PopDeletedByUserType0  # noqa: PLC0415
+        from ..models.pop_last_action_run_type_0 import PopLastActionRunType0  # noqa: PLC0415
+        from ..models.pop_organization_type_0 import PopOrganizationType0  # noqa: PLC0415
+        from ..models.pop_workspace_type_0 import PopWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -579,13 +579,13 @@ class Pop:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pop_created import PopCreated
-        from ..models.pop_deleted_by_user_type_0 import PopDeletedByUserType0
-        from ..models.pop_last_action_run_type_0 import PopLastActionRunType0
-        from ..models.pop_organization_type_0 import PopOrganizationType0
-        from ..models.pop_reachability_endpoint import PopReachabilityEndpoint
-        from ..models.pop_workspace_type_0 import PopWorkspaceType0
-        from ..models.provider_simple import ProviderSimple
+        from ..models.pop_created import PopCreated  # noqa: PLC0415
+        from ..models.pop_deleted_by_user_type_0 import PopDeletedByUserType0  # noqa: PLC0415
+        from ..models.pop_last_action_run_type_0 import PopLastActionRunType0  # noqa: PLC0415
+        from ..models.pop_organization_type_0 import PopOrganizationType0  # noqa: PLC0415
+        from ..models.pop_reachability_endpoint import PopReachabilityEndpoint  # noqa: PLC0415
+        from ..models.pop_workspace_type_0 import PopWorkspaceType0  # noqa: PLC0415
+        from ..models.provider_simple import ProviderSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

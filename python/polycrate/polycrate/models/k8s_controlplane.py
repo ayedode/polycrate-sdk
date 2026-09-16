@@ -11,6 +11,7 @@ from attrs import field as _attrs_field
 from ..models.blank_enum import BlankEnum, check_blank_enum
 from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
 from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
+from ..models.exposure_type_enum import ExposureTypeEnum, check_exposure_type_enum
 from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
 from ..models.last_state_enum import LastStateEnum, check_last_state_enum
 from ..models.loadbalancer_mode_enum import LoadbalancerModeEnum, check_loadbalancer_mode_enum
@@ -162,6 +163,15 @@ class K8SControlplane:
             loadbalancer_mode (LoadbalancerModeEnum | Unset): * `cluster` - Cluster
                 * `external` - External
             loadbalancer_provider (str | Unset):
+            exposure_type (ExposureTypeEnum | Unset): * `gateway` - Gateway API (Envoy)
+                * `ingress` - Ingress (nginx)
+                * `loadbalancer` - LoadBalancer
+            parent_gateway_name (str | Unset): Platform Gateway to attach TLSRoute to (empty → create own Gateway).
+            parent_gateway_namespace (str | Unset):
+            parent_gateway_section_name (str | Unset): Listener name on the parent Gateway (must match Envoy listener).
+            gateway_class_name (str | Unset): GatewayClass when creating an own Gateway (parent_gateway_name empty).
+            audit_logging_enabled (bool | Unset):
+            secrets_encryption_enabled (bool | Unset):
             persistence_size (str | Unset):
             cluster_domain (str | Unset):
     """
@@ -236,20 +246,29 @@ class K8SControlplane:
     sla_availability: str | Unset = UNSET
     loadbalancer_mode: LoadbalancerModeEnum | Unset = UNSET
     loadbalancer_provider: str | Unset = UNSET
+    exposure_type: ExposureTypeEnum | Unset = UNSET
+    parent_gateway_name: str | Unset = UNSET
+    parent_gateway_namespace: str | Unset = UNSET
+    parent_gateway_section_name: str | Unset = UNSET
+    gateway_class_name: str | Unset = UNSET
+    audit_logging_enabled: bool | Unset = UNSET
+    secrets_encryption_enabled: bool | Unset = UNSET
     persistence_size: str | Unset = UNSET
     cluster_domain: str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_controlplane_deleted_by_user_type_0 import K8SControlplaneDeletedByUserType0
-        from ..models.k8s_controlplane_dns_record_type_0 import K8SControlplaneDnsRecordType0
-        from ..models.k8s_controlplane_ip_address_type_0 import K8SControlplaneIpAddressType0
-        from ..models.k8s_controlplane_k8s_cluster_type_0 import K8SControlplaneK8SClusterType0
-        from ..models.k8s_controlplane_last_action_run_type_0 import K8SControlplaneLastActionRunType0
-        from ..models.k8s_controlplane_organization_type_0 import K8SControlplaneOrganizationType0
-        from ..models.k8s_controlplane_region_type_0 import K8SControlplaneRegionType0
-        from ..models.k8s_controlplane_token_credential_type_0 import K8SControlplaneTokenCredentialType0
-        from ..models.k8s_controlplane_workspace_type_0 import K8SControlplaneWorkspaceType0
+        from ..models.k8s_controlplane_deleted_by_user_type_0 import K8SControlplaneDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_dns_record_type_0 import K8SControlplaneDnsRecordType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_ip_address_type_0 import K8SControlplaneIpAddressType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_k8s_cluster_type_0 import K8SControlplaneK8SClusterType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_last_action_run_type_0 import K8SControlplaneLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_organization_type_0 import K8SControlplaneOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_region_type_0 import K8SControlplaneRegionType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_token_credential_type_0 import (
+            K8SControlplaneTokenCredentialType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_controlplane_workspace_type_0 import K8SControlplaneWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -514,6 +533,22 @@ class K8SControlplane:
 
         loadbalancer_provider = self.loadbalancer_provider
 
+        exposure_type: str | Unset = UNSET
+        if not isinstance(self.exposure_type, Unset):
+            exposure_type = self.exposure_type
+
+        parent_gateway_name = self.parent_gateway_name
+
+        parent_gateway_namespace = self.parent_gateway_namespace
+
+        parent_gateway_section_name = self.parent_gateway_section_name
+
+        gateway_class_name = self.gateway_class_name
+
+        audit_logging_enabled = self.audit_logging_enabled
+
+        secrets_encryption_enabled = self.secrets_encryption_enabled
+
         persistence_size = self.persistence_size
 
         cluster_domain = self.cluster_domain
@@ -619,6 +654,20 @@ class K8SControlplane:
             field_dict["loadbalancer_mode"] = loadbalancer_mode
         if loadbalancer_provider is not UNSET:
             field_dict["loadbalancer_provider"] = loadbalancer_provider
+        if exposure_type is not UNSET:
+            field_dict["exposure_type"] = exposure_type
+        if parent_gateway_name is not UNSET:
+            field_dict["parent_gateway_name"] = parent_gateway_name
+        if parent_gateway_namespace is not UNSET:
+            field_dict["parent_gateway_namespace"] = parent_gateway_namespace
+        if parent_gateway_section_name is not UNSET:
+            field_dict["parent_gateway_section_name"] = parent_gateway_section_name
+        if gateway_class_name is not UNSET:
+            field_dict["gateway_class_name"] = gateway_class_name
+        if audit_logging_enabled is not UNSET:
+            field_dict["audit_logging_enabled"] = audit_logging_enabled
+        if secrets_encryption_enabled is not UNSET:
+            field_dict["secrets_encryption_enabled"] = secrets_encryption_enabled
         if persistence_size is not UNSET:
             field_dict["persistence_size"] = persistence_size
         if cluster_domain is not UNSET:
@@ -628,17 +677,19 @@ class K8SControlplane:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.block_simple import BlockSimple
-        from ..models.k8s_controlplane_created import K8SControlplaneCreated
-        from ..models.k8s_controlplane_deleted_by_user_type_0 import K8SControlplaneDeletedByUserType0
-        from ..models.k8s_controlplane_dns_record_type_0 import K8SControlplaneDnsRecordType0
-        from ..models.k8s_controlplane_ip_address_type_0 import K8SControlplaneIpAddressType0
-        from ..models.k8s_controlplane_k8s_cluster_type_0 import K8SControlplaneK8SClusterType0
-        from ..models.k8s_controlplane_last_action_run_type_0 import K8SControlplaneLastActionRunType0
-        from ..models.k8s_controlplane_organization_type_0 import K8SControlplaneOrganizationType0
-        from ..models.k8s_controlplane_region_type_0 import K8SControlplaneRegionType0
-        from ..models.k8s_controlplane_token_credential_type_0 import K8SControlplaneTokenCredentialType0
-        from ..models.k8s_controlplane_workspace_type_0 import K8SControlplaneWorkspaceType0
+        from ..models.block_simple import BlockSimple  # noqa: PLC0415
+        from ..models.k8s_controlplane_created import K8SControlplaneCreated  # noqa: PLC0415
+        from ..models.k8s_controlplane_deleted_by_user_type_0 import K8SControlplaneDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_dns_record_type_0 import K8SControlplaneDnsRecordType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_ip_address_type_0 import K8SControlplaneIpAddressType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_k8s_cluster_type_0 import K8SControlplaneK8SClusterType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_last_action_run_type_0 import K8SControlplaneLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_organization_type_0 import K8SControlplaneOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_region_type_0 import K8SControlplaneRegionType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_token_credential_type_0 import (
+            K8SControlplaneTokenCredentialType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_controlplane_workspace_type_0 import K8SControlplaneWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -1141,6 +1192,25 @@ class K8SControlplane:
 
         loadbalancer_provider = d.pop("loadbalancer_provider", UNSET)
 
+        _exposure_type = d.pop("exposure_type", UNSET)
+        exposure_type: ExposureTypeEnum | Unset
+        if isinstance(_exposure_type, Unset):
+            exposure_type = UNSET
+        else:
+            exposure_type = check_exposure_type_enum(_exposure_type)
+
+        parent_gateway_name = d.pop("parent_gateway_name", UNSET)
+
+        parent_gateway_namespace = d.pop("parent_gateway_namespace", UNSET)
+
+        parent_gateway_section_name = d.pop("parent_gateway_section_name", UNSET)
+
+        gateway_class_name = d.pop("gateway_class_name", UNSET)
+
+        audit_logging_enabled = d.pop("audit_logging_enabled", UNSET)
+
+        secrets_encryption_enabled = d.pop("secrets_encryption_enabled", UNSET)
+
         persistence_size = d.pop("persistence_size", UNSET)
 
         cluster_domain = d.pop("cluster_domain", UNSET)
@@ -1216,6 +1286,13 @@ class K8SControlplane:
             sla_availability=sla_availability,
             loadbalancer_mode=loadbalancer_mode,
             loadbalancer_provider=loadbalancer_provider,
+            exposure_type=exposure_type,
+            parent_gateway_name=parent_gateway_name,
+            parent_gateway_namespace=parent_gateway_namespace,
+            parent_gateway_section_name=parent_gateway_section_name,
+            gateway_class_name=gateway_class_name,
+            audit_logging_enabled=audit_logging_enabled,
+            secrets_encryption_enabled=secrets_encryption_enabled,
             persistence_size=persistence_size,
             cluster_domain=cluster_domain,
         )

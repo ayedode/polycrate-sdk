@@ -53,16 +53,16 @@ class ApiV1AlertcategoryMappingsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alertcategory_mappings_create_category_id_error_component import (
-            ApiV1AlertcategoryMappingsCreateCategoryIdErrorComponent,
+            ApiV1AlertcategoryMappingsCreateCategoryIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_create_match_type_error_component import (
-            ApiV1AlertcategoryMappingsCreateMatchTypeErrorComponent,
+            ApiV1AlertcategoryMappingsCreateMatchTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_create_non_field_errors_error_component import (
-            ApiV1AlertcategoryMappingsCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertcategoryMappingsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_create_pattern_error_component import (
-            ApiV1AlertcategoryMappingsCreatePatternErrorComponent,
+            ApiV1AlertcategoryMappingsCreatePatternErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -97,19 +97,19 @@ class ApiV1AlertcategoryMappingsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alertcategory_mappings_create_category_id_error_component import (
-            ApiV1AlertcategoryMappingsCreateCategoryIdErrorComponent,
+            ApiV1AlertcategoryMappingsCreateCategoryIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_create_match_type_error_component import (
-            ApiV1AlertcategoryMappingsCreateMatchTypeErrorComponent,
+            ApiV1AlertcategoryMappingsCreateMatchTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_create_non_field_errors_error_component import (
-            ApiV1AlertcategoryMappingsCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertcategoryMappingsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_create_pattern_error_component import (
-            ApiV1AlertcategoryMappingsCreatePatternErrorComponent,
+            ApiV1AlertcategoryMappingsCreatePatternErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_create_priority_error_component import (
-            ApiV1AlertcategoryMappingsCreatePriorityErrorComponent,
+            ApiV1AlertcategoryMappingsCreatePriorityErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

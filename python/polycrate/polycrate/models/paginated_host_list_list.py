@@ -68,7 +68,7 @@ class PaginatedHostListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.host_list import HostList
+        from ..models.host_list import HostList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

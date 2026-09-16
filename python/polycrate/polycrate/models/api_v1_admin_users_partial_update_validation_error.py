@@ -79,34 +79,34 @@ class ApiV1AdminUsersPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_admin_users_partial_update_email_error_component import (
-            ApiV1AdminUsersPartialUpdateEmailErrorComponent,
+            ApiV1AdminUsersPartialUpdateEmailErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_first_name_error_component import (
-            ApiV1AdminUsersPartialUpdateFirstNameErrorComponent,
+            ApiV1AdminUsersPartialUpdateFirstNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_active_error_component import (
-            ApiV1AdminUsersPartialUpdateIsActiveErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_billing_contact_error_component import (
-            ApiV1AdminUsersPartialUpdateIsBillingContactErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_maintenance_contact_error_component import (
-            ApiV1AdminUsersPartialUpdateIsMaintenanceContactErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_staff_error_component import (
-            ApiV1AdminUsersPartialUpdateIsStaffErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsStaffErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_superuser_error_component import (
-            ApiV1AdminUsersPartialUpdateIsSuperuserErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsSuperuserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_last_name_error_component import (
-            ApiV1AdminUsersPartialUpdateLastNameErrorComponent,
+            ApiV1AdminUsersPartialUpdateLastNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_non_field_errors_error_component import (
-            ApiV1AdminUsersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1AdminUsersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_role_error_component import (
-            ApiV1AdminUsersPartialUpdateRoleErrorComponent,
+            ApiV1AdminUsersPartialUpdateRoleErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -153,37 +153,37 @@ class ApiV1AdminUsersPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_admin_users_partial_update_email_error_component import (
-            ApiV1AdminUsersPartialUpdateEmailErrorComponent,
+            ApiV1AdminUsersPartialUpdateEmailErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_email_verified_error_component import (
-            ApiV1AdminUsersPartialUpdateEmailVerifiedErrorComponent,
+            ApiV1AdminUsersPartialUpdateEmailVerifiedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_first_name_error_component import (
-            ApiV1AdminUsersPartialUpdateFirstNameErrorComponent,
+            ApiV1AdminUsersPartialUpdateFirstNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_active_error_component import (
-            ApiV1AdminUsersPartialUpdateIsActiveErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_billing_contact_error_component import (
-            ApiV1AdminUsersPartialUpdateIsBillingContactErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_maintenance_contact_error_component import (
-            ApiV1AdminUsersPartialUpdateIsMaintenanceContactErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_staff_error_component import (
-            ApiV1AdminUsersPartialUpdateIsStaffErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsStaffErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_is_superuser_error_component import (
-            ApiV1AdminUsersPartialUpdateIsSuperuserErrorComponent,
+            ApiV1AdminUsersPartialUpdateIsSuperuserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_last_name_error_component import (
-            ApiV1AdminUsersPartialUpdateLastNameErrorComponent,
+            ApiV1AdminUsersPartialUpdateLastNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_non_field_errors_error_component import (
-            ApiV1AdminUsersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1AdminUsersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_admin_users_partial_update_role_error_component import (
-            ApiV1AdminUsersPartialUpdateRoleErrorComponent,
+            ApiV1AdminUsersPartialUpdateRoleErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

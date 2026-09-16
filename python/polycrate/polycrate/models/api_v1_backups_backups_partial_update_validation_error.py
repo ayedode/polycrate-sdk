@@ -189,100 +189,100 @@ class ApiV1BackupsBackupsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_backups_backups_partial_update_annotations_error_component import (
-            ApiV1BackupsBackupsPartialUpdateAnnotationsErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_archived_at_error_component import (
-            ApiV1BackupsBackupsPartialUpdateArchivedAtErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_archived_error_component import (
-            ApiV1BackupsBackupsPartialUpdateArchivedErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_archived_reason_error_component import (
-            ApiV1BackupsBackupsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_completed_at_error_component import (
-            ApiV1BackupsBackupsPartialUpdateCompletedAtErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateCompletedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_criticality_error_component import (
-            ApiV1BackupsBackupsPartialUpdateCriticalityErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_debug_mode_error_component import (
-            ApiV1BackupsBackupsPartialUpdateDebugModeErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_display_name_error_component import (
-            ApiV1BackupsBackupsPartialUpdateDisplayNameErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_expiration_error_component import (
-            ApiV1BackupsBackupsPartialUpdateExpirationErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateExpirationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_items_backed_up_error_component import (
-            ApiV1BackupsBackupsPartialUpdateItemsBackedUpErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateItemsBackedUpErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_k8s_cluster_error_component import (
-            ApiV1BackupsBackupsPartialUpdateK8SClusterErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_kind_error_component import (
-            ApiV1BackupsBackupsPartialUpdateKindErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_labels_error_component import (
-            ApiV1BackupsBackupsPartialUpdateLabelsErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_name_error_component import (
-            ApiV1BackupsBackupsPartialUpdateNameErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_non_field_errors_error_component import (
-            ApiV1BackupsBackupsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_platform_service_error_component import (
-            ApiV1BackupsBackupsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1BackupsBackupsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_provider_error_component import (
-            ApiV1BackupsBackupsPartialUpdateProviderErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_provider_id_error_component import (
-            ApiV1BackupsBackupsPartialUpdateProviderIdErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_provider_reference_error_component import (
-            ApiV1BackupsBackupsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_reconciliation_enabled_error_component import (
-            ApiV1BackupsBackupsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_retention_policy_error_component import (
-            ApiV1BackupsBackupsPartialUpdateRetentionPolicyErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateRetentionPolicyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_schedule_error_component import (
-            ApiV1BackupsBackupsPartialUpdateScheduleErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateScheduleErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_size_bytes_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSizeBytesErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSizeBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_sla_availability_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_sla_target_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSlaTargetErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_slo_availability_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_slo_target_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSloTargetErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_source_namespace_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSourceNamespaceErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSourceNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_started_at_error_component import (
-            ApiV1BackupsBackupsPartialUpdateStartedAtErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateStartedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_status_error_component import (
-            ApiV1BackupsBackupsPartialUpdateStatusErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_target_availability_error_component import (
-            ApiV1BackupsBackupsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_tolerations_error_component import (
-            ApiV1BackupsBackupsPartialUpdateTolerationsErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -373,103 +373,103 @@ class ApiV1BackupsBackupsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_backups_backups_partial_update_annotations_error_component import (
-            ApiV1BackupsBackupsPartialUpdateAnnotationsErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_archived_at_error_component import (
-            ApiV1BackupsBackupsPartialUpdateArchivedAtErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_archived_error_component import (
-            ApiV1BackupsBackupsPartialUpdateArchivedErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_archived_reason_error_component import (
-            ApiV1BackupsBackupsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_completed_at_error_component import (
-            ApiV1BackupsBackupsPartialUpdateCompletedAtErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateCompletedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_criticality_error_component import (
-            ApiV1BackupsBackupsPartialUpdateCriticalityErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_debug_mode_error_component import (
-            ApiV1BackupsBackupsPartialUpdateDebugModeErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_display_name_error_component import (
-            ApiV1BackupsBackupsPartialUpdateDisplayNameErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_expiration_error_component import (
-            ApiV1BackupsBackupsPartialUpdateExpirationErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateExpirationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_items_backed_up_error_component import (
-            ApiV1BackupsBackupsPartialUpdateItemsBackedUpErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateItemsBackedUpErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_k8s_cluster_error_component import (
-            ApiV1BackupsBackupsPartialUpdateK8SClusterErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_kind_error_component import (
-            ApiV1BackupsBackupsPartialUpdateKindErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_labels_error_component import (
-            ApiV1BackupsBackupsPartialUpdateLabelsErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_metadata_error_component import (
-            ApiV1BackupsBackupsPartialUpdateMetadataErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_name_error_component import (
-            ApiV1BackupsBackupsPartialUpdateNameErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_non_field_errors_error_component import (
-            ApiV1BackupsBackupsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_platform_service_error_component import (
-            ApiV1BackupsBackupsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1BackupsBackupsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_provider_error_component import (
-            ApiV1BackupsBackupsPartialUpdateProviderErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_provider_id_error_component import (
-            ApiV1BackupsBackupsPartialUpdateProviderIdErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_provider_reference_error_component import (
-            ApiV1BackupsBackupsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_reconciliation_enabled_error_component import (
-            ApiV1BackupsBackupsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_retention_policy_error_component import (
-            ApiV1BackupsBackupsPartialUpdateRetentionPolicyErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateRetentionPolicyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_schedule_error_component import (
-            ApiV1BackupsBackupsPartialUpdateScheduleErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateScheduleErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_size_bytes_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSizeBytesErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSizeBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_sla_availability_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_sla_target_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSlaTargetErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_slo_availability_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_slo_target_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSloTargetErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_source_namespace_error_component import (
-            ApiV1BackupsBackupsPartialUpdateSourceNamespaceErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateSourceNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_started_at_error_component import (
-            ApiV1BackupsBackupsPartialUpdateStartedAtErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateStartedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_status_error_component import (
-            ApiV1BackupsBackupsPartialUpdateStatusErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_target_availability_error_component import (
-            ApiV1BackupsBackupsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backups_partial_update_tolerations_error_component import (
-            ApiV1BackupsBackupsPartialUpdateTolerationsErrorComponent,
+            ApiV1BackupsBackupsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

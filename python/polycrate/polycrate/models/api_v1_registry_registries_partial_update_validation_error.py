@@ -183,94 +183,94 @@ class ApiV1RegistryRegistriesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_registry_registries_partial_update_annotations_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateAnnotationsErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_archived_at_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateArchivedAtErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_archived_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateArchivedErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_archived_reason_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_credential_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateCredentialErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_criticality_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateCriticalityErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_debug_mode_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateDebugModeErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_display_name_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateDisplayNameErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_hostname_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateHostnameErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_k8s_app_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateK8SAppErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_k8s_cluster_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateK8SClusterErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_kind_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateKindErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_labels_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateLabelsErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_name_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateNameErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_non_field_errors_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_platform_service_error_component import (
-            ApiV1RegistryRegistriesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_projects_count_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateProjectsCountErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_provider_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateProviderErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_provider_id_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateProviderIdErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_provider_reference_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_reconciliation_enabled_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_registry_version_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateRegistryVersionErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateRegistryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_repositories_count_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateRepositoriesCountErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateRepositoriesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_sla_availability_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_sla_target_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateSlaTargetErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_slo_availability_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_slo_target_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateSloTargetErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_storage_used_bytes_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateStorageUsedBytesErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateStorageUsedBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_target_availability_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_tolerations_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateTolerationsErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -357,97 +357,97 @@ class ApiV1RegistryRegistriesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_registry_registries_partial_update_annotations_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateAnnotationsErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_archived_at_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateArchivedAtErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_archived_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateArchivedErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_archived_reason_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_credential_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateCredentialErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_criticality_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateCriticalityErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_debug_mode_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateDebugModeErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_display_name_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateDisplayNameErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_hostname_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateHostnameErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_k8s_app_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateK8SAppErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_k8s_cluster_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateK8SClusterErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_kind_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateKindErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_labels_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateLabelsErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_metadata_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateMetadataErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_name_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateNameErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_non_field_errors_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_platform_service_error_component import (
-            ApiV1RegistryRegistriesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_projects_count_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateProjectsCountErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_provider_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateProviderErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_provider_id_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateProviderIdErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_provider_reference_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_reconciliation_enabled_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_registry_version_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateRegistryVersionErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateRegistryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_repositories_count_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateRepositoriesCountErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateRepositoriesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_sla_availability_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_sla_target_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateSlaTargetErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_slo_availability_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_slo_target_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateSloTargetErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_storage_used_bytes_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateStorageUsedBytesErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateStorageUsedBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_target_availability_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_partial_update_tolerations_error_component import (
-            ApiV1RegistryRegistriesPartialUpdateTolerationsErrorComponent,
+            ApiV1RegistryRegistriesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

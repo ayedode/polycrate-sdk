@@ -152,12 +152,12 @@ def sync_detailed(
     | ErrorResponse502
     | ParseErrorResponse
 ]:
-    r"""Issue Hocuspocus collaboration JWT
+    """Issue Hocuspocus collaboration JWT
 
      Issue a short-lived JWT for Hocuspocus WebSocket authentication.
 
     POST /api/v1/notes/{id}/collaboration-token/
-    Returns: { token: \"...\" }
+    Returns: { token: "..." }
 
     Spec 56: only callable by authenticated users with note retrieve permission.
     read_only notes → readonly=true in token payload.
@@ -203,12 +203,12 @@ def sync(
     | ParseErrorResponse
     | None
 ):
-    r"""Issue Hocuspocus collaboration JWT
+    """Issue Hocuspocus collaboration JWT
 
      Issue a short-lived JWT for Hocuspocus WebSocket authentication.
 
     POST /api/v1/notes/{id}/collaboration-token/
-    Returns: { token: \"...\" }
+    Returns: { token: "..." }
 
     Spec 56: only callable by authenticated users with note retrieve permission.
     read_only notes → readonly=true in token payload.
@@ -248,12 +248,12 @@ async def asyncio_detailed(
     | ErrorResponse502
     | ParseErrorResponse
 ]:
-    r"""Issue Hocuspocus collaboration JWT
+    """Issue Hocuspocus collaboration JWT
 
      Issue a short-lived JWT for Hocuspocus WebSocket authentication.
 
     POST /api/v1/notes/{id}/collaboration-token/
-    Returns: { token: \"...\" }
+    Returns: { token: "..." }
 
     Spec 56: only callable by authenticated users with note retrieve permission.
     read_only notes → readonly=true in token payload.
@@ -297,12 +297,12 @@ async def asyncio(
     | ParseErrorResponse
     | None
 ):
-    r"""Issue Hocuspocus collaboration JWT
+    """Issue Hocuspocus collaboration JWT
 
      Issue a short-lived JWT for Hocuspocus WebSocket authentication.
 
     POST /api/v1/notes/{id}/collaboration-token/
-    Returns: { token: \"...\" }
+    Returns: { token: "..." }
 
     Spec 56: only callable by authenticated users with note retrieve permission.
     read_only notes → readonly=true in token payload.

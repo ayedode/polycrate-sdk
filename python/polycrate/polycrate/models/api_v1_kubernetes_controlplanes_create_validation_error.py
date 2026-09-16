@@ -24,6 +24,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_kubernetes_controlplanes_create_archived_reason_error_component import (
         ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponent,
     )
+    from ..models.api_v1_kubernetes_controlplanes_create_audit_logging_enabled_error_component import (
+        ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent,
+    )
     from ..models.api_v1_kubernetes_controlplanes_create_cluster_domain_error_component import (
         ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent,
     )
@@ -38,6 +41,12 @@ if TYPE_CHECKING:
     )
     from ..models.api_v1_kubernetes_controlplanes_create_display_name_error_component import (
         ApiV1KubernetesControlplanesCreateDisplayNameErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_create_exposure_type_error_component import (
+        ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_create_gateway_class_name_error_component import (
+        ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent,
     )
     from ..models.api_v1_kubernetes_controlplanes_create_kind_error_component import (
         ApiV1KubernetesControlplanesCreateKindErrorComponent,
@@ -57,6 +66,18 @@ if TYPE_CHECKING:
     from ..models.api_v1_kubernetes_controlplanes_create_non_field_errors_error_component import (
         ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponent,
     )
+    from ..models.api_v1_kubernetes_controlplanes_create_organization_id_error_component import (
+        ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_create_parent_gateway_name_error_component import (
+        ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_create_parent_gateway_namespace_error_component import (
+        ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_create_parent_gateway_section_name_error_component import (
+        ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent,
+    )
     from ..models.api_v1_kubernetes_controlplanes_create_persistence_size_error_component import (
         ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent,
     )
@@ -75,8 +96,14 @@ if TYPE_CHECKING:
     from ..models.api_v1_kubernetes_controlplanes_create_reconciliation_enabled_error_component import (
         ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponent,
     )
+    from ..models.api_v1_kubernetes_controlplanes_create_region_id_error_component import (
+        ApiV1KubernetesControlplanesCreateRegionIdErrorComponent,
+    )
     from ..models.api_v1_kubernetes_controlplanes_create_scope_error_component import (
         ApiV1KubernetesControlplanesCreateScopeErrorComponent,
+    )
+    from ..models.api_v1_kubernetes_controlplanes_create_secrets_encryption_enabled_error_component import (
+        ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent,
     )
     from ..models.api_v1_kubernetes_controlplanes_create_sla_availability_error_component import (
         ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent,
@@ -96,6 +123,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_kubernetes_controlplanes_create_target_availability_error_component import (
         ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponent,
     )
+    from ..models.api_v1_kubernetes_controlplanes_create_workspace_id_error_component import (
+        ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent,
+    )
 
 
 T = TypeVar("T", bound="ApiV1KubernetesControlplanesCreateValidationError")
@@ -111,29 +141,38 @@ class ApiV1KubernetesControlplanesCreateValidationError:
             ApiV1KubernetesControlplanesCreateArchivedAtErrorComponent |
             ApiV1KubernetesControlplanesCreateArchivedErrorComponent |
             ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponent |
+            ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent |
             ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent |
             ApiV1KubernetesControlplanesCreateCriticalityErrorComponent |
             ApiV1KubernetesControlplanesCreateDebugModeErrorComponent |
             ApiV1KubernetesControlplanesCreateDiscoveryEnabledErrorComponent |
             ApiV1KubernetesControlplanesCreateDisplayNameErrorComponent |
+            ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent |
+            ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent |
             ApiV1KubernetesControlplanesCreateKindErrorComponent | ApiV1KubernetesControlplanesCreateLabelsErrorComponent |
             ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent |
             ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent |
             ApiV1KubernetesControlplanesCreateNameErrorComponent |
             ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponent |
+            ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent |
+            ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent |
+            ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent |
+            ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent |
             ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent |
             ApiV1KubernetesControlplanesCreatePlatformServiceErrorComponent |
             ApiV1KubernetesControlplanesCreateProviderErrorComponent |
             ApiV1KubernetesControlplanesCreateProviderIdErrorComponent |
             ApiV1KubernetesControlplanesCreateProviderReferenceErrorComponent |
             ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponent |
-            ApiV1KubernetesControlplanesCreateScopeErrorComponent |
+            ApiV1KubernetesControlplanesCreateRegionIdErrorComponent | ApiV1KubernetesControlplanesCreateScopeErrorComponent
+            | ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent |
             ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent |
             ApiV1KubernetesControlplanesCreateSlaTargetErrorComponent |
             ApiV1KubernetesControlplanesCreateSloAvailabilityErrorComponent |
             ApiV1KubernetesControlplanesCreateSloTargetErrorComponent |
             ApiV1KubernetesControlplanesCreateStorageClassErrorComponent |
-            ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponent]):
+            ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponent |
+            ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent]):
     """
 
     type_: ValidationErrorEnum
@@ -143,117 +182,157 @@ class ApiV1KubernetesControlplanesCreateValidationError:
         | ApiV1KubernetesControlplanesCreateArchivedAtErrorComponent
         | ApiV1KubernetesControlplanesCreateArchivedErrorComponent
         | ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponent
+        | ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent
         | ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent
         | ApiV1KubernetesControlplanesCreateCriticalityErrorComponent
         | ApiV1KubernetesControlplanesCreateDebugModeErrorComponent
         | ApiV1KubernetesControlplanesCreateDiscoveryEnabledErrorComponent
         | ApiV1KubernetesControlplanesCreateDisplayNameErrorComponent
+        | ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent
+        | ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent
         | ApiV1KubernetesControlplanesCreateKindErrorComponent
         | ApiV1KubernetesControlplanesCreateLabelsErrorComponent
         | ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent
         | ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent
         | ApiV1KubernetesControlplanesCreateNameErrorComponent
         | ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponent
+        | ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent
+        | ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent
+        | ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent
+        | ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent
         | ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent
         | ApiV1KubernetesControlplanesCreatePlatformServiceErrorComponent
         | ApiV1KubernetesControlplanesCreateProviderErrorComponent
         | ApiV1KubernetesControlplanesCreateProviderIdErrorComponent
         | ApiV1KubernetesControlplanesCreateProviderReferenceErrorComponent
         | ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponent
+        | ApiV1KubernetesControlplanesCreateRegionIdErrorComponent
         | ApiV1KubernetesControlplanesCreateScopeErrorComponent
+        | ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent
         | ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent
         | ApiV1KubernetesControlplanesCreateSlaTargetErrorComponent
         | ApiV1KubernetesControlplanesCreateSloAvailabilityErrorComponent
         | ApiV1KubernetesControlplanesCreateSloTargetErrorComponent
         | ApiV1KubernetesControlplanesCreateStorageClassErrorComponent
         | ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponent
+        | ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent
     ]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_controlplanes_create_actual_availability_error_component import (
-            ApiV1KubernetesControlplanesCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_annotations_error_component import (
-            ApiV1KubernetesControlplanesCreateAnnotationsErrorComponent,
+            ApiV1KubernetesControlplanesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_archived_at_error_component import (
-            ApiV1KubernetesControlplanesCreateArchivedAtErrorComponent,
+            ApiV1KubernetesControlplanesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_archived_error_component import (
-            ApiV1KubernetesControlplanesCreateArchivedErrorComponent,
+            ApiV1KubernetesControlplanesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_archived_reason_error_component import (
-            ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_audit_logging_enabled_error_component import (
+            ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_criticality_error_component import (
-            ApiV1KubernetesControlplanesCreateCriticalityErrorComponent,
+            ApiV1KubernetesControlplanesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_debug_mode_error_component import (
-            ApiV1KubernetesControlplanesCreateDebugModeErrorComponent,
+            ApiV1KubernetesControlplanesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_discovery_enabled_error_component import (
-            ApiV1KubernetesControlplanesCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesControlplanesCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_display_name_error_component import (
-            ApiV1KubernetesControlplanesCreateDisplayNameErrorComponent,
+            ApiV1KubernetesControlplanesCreateDisplayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_exposure_type_error_component import (
+            ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_gateway_class_name_error_component import (
+            ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_kind_error_component import (
-            ApiV1KubernetesControlplanesCreateKindErrorComponent,
+            ApiV1KubernetesControlplanesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_labels_error_component import (
-            ApiV1KubernetesControlplanesCreateLabelsErrorComponent,
+            ApiV1KubernetesControlplanesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_loadbalancer_mode_error_component import (
-            ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent,
+            ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_loadbalancer_provider_error_component import (
-            ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent,
+            ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_name_error_component import (
-            ApiV1KubernetesControlplanesCreateNameErrorComponent,
+            ApiV1KubernetesControlplanesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_non_field_errors_error_component import (
-            ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_organization_id_error_component import (
+            ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_parent_gateway_name_error_component import (
+            ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_parent_gateway_namespace_error_component import (
+            ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_parent_gateway_section_name_error_component import (
+            ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_persistence_size_error_component import (
-            ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent,
+            ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_platform_service_error_component import (
-            ApiV1KubernetesControlplanesCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesControlplanesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_provider_error_component import (
-            ApiV1KubernetesControlplanesCreateProviderErrorComponent,
+            ApiV1KubernetesControlplanesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_provider_id_error_component import (
-            ApiV1KubernetesControlplanesCreateProviderIdErrorComponent,
+            ApiV1KubernetesControlplanesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_provider_reference_error_component import (
-            ApiV1KubernetesControlplanesCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesControlplanesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_region_id_error_component import (
+            ApiV1KubernetesControlplanesCreateRegionIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_scope_error_component import (
-            ApiV1KubernetesControlplanesCreateScopeErrorComponent,
+            ApiV1KubernetesControlplanesCreateScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_secrets_encryption_enabled_error_component import (
+            ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_sla_availability_error_component import (
-            ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_sla_target_error_component import (
-            ApiV1KubernetesControlplanesCreateSlaTargetErrorComponent,
+            ApiV1KubernetesControlplanesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_slo_availability_error_component import (
-            ApiV1KubernetesControlplanesCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_slo_target_error_component import (
-            ApiV1KubernetesControlplanesCreateSloTargetErrorComponent,
+            ApiV1KubernetesControlplanesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_storage_class_error_component import (
-            ApiV1KubernetesControlplanesCreateStorageClassErrorComponent,
+            ApiV1KubernetesControlplanesCreateStorageClassErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_target_availability_error_component import (
-            ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_workspace_id_error_component import (
+            ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -309,9 +388,29 @@ class ApiV1KubernetesControlplanesCreateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateRegionIdErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1KubernetesControlplanesCreateStorageClassErrorComponent):
                 errors_item = errors_item_data.to_dict()
@@ -336,91 +435,121 @@ class ApiV1KubernetesControlplanesCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_controlplanes_create_actual_availability_error_component import (
-            ApiV1KubernetesControlplanesCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_annotations_error_component import (
-            ApiV1KubernetesControlplanesCreateAnnotationsErrorComponent,
+            ApiV1KubernetesControlplanesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_archived_at_error_component import (
-            ApiV1KubernetesControlplanesCreateArchivedAtErrorComponent,
+            ApiV1KubernetesControlplanesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_archived_error_component import (
-            ApiV1KubernetesControlplanesCreateArchivedErrorComponent,
+            ApiV1KubernetesControlplanesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_archived_reason_error_component import (
-            ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_audit_logging_enabled_error_component import (
+            ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_cluster_domain_error_component import (
-            ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent,
+            ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_criticality_error_component import (
-            ApiV1KubernetesControlplanesCreateCriticalityErrorComponent,
+            ApiV1KubernetesControlplanesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_debug_mode_error_component import (
-            ApiV1KubernetesControlplanesCreateDebugModeErrorComponent,
+            ApiV1KubernetesControlplanesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_discovery_enabled_error_component import (
-            ApiV1KubernetesControlplanesCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesControlplanesCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_display_name_error_component import (
-            ApiV1KubernetesControlplanesCreateDisplayNameErrorComponent,
+            ApiV1KubernetesControlplanesCreateDisplayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_exposure_type_error_component import (
+            ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_gateway_class_name_error_component import (
+            ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_kind_error_component import (
-            ApiV1KubernetesControlplanesCreateKindErrorComponent,
+            ApiV1KubernetesControlplanesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_labels_error_component import (
-            ApiV1KubernetesControlplanesCreateLabelsErrorComponent,
+            ApiV1KubernetesControlplanesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_loadbalancer_mode_error_component import (
-            ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent,
+            ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_loadbalancer_provider_error_component import (
-            ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent,
+            ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_name_error_component import (
-            ApiV1KubernetesControlplanesCreateNameErrorComponent,
+            ApiV1KubernetesControlplanesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_non_field_errors_error_component import (
-            ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_organization_id_error_component import (
+            ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_parent_gateway_name_error_component import (
+            ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_parent_gateway_namespace_error_component import (
+            ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_parent_gateway_section_name_error_component import (
+            ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_persistence_size_error_component import (
-            ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent,
+            ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_platform_service_error_component import (
-            ApiV1KubernetesControlplanesCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesControlplanesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_provider_error_component import (
-            ApiV1KubernetesControlplanesCreateProviderErrorComponent,
+            ApiV1KubernetesControlplanesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_provider_id_error_component import (
-            ApiV1KubernetesControlplanesCreateProviderIdErrorComponent,
+            ApiV1KubernetesControlplanesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_provider_reference_error_component import (
-            ApiV1KubernetesControlplanesCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesControlplanesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_region_id_error_component import (
+            ApiV1KubernetesControlplanesCreateRegionIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_scope_error_component import (
-            ApiV1KubernetesControlplanesCreateScopeErrorComponent,
+            ApiV1KubernetesControlplanesCreateScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_secrets_encryption_enabled_error_component import (
+            ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_sla_availability_error_component import (
-            ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_sla_target_error_component import (
-            ApiV1KubernetesControlplanesCreateSlaTargetErrorComponent,
+            ApiV1KubernetesControlplanesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_slo_availability_error_component import (
-            ApiV1KubernetesControlplanesCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_slo_target_error_component import (
-            ApiV1KubernetesControlplanesCreateSloTargetErrorComponent,
+            ApiV1KubernetesControlplanesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_storage_class_error_component import (
-            ApiV1KubernetesControlplanesCreateStorageClassErrorComponent,
+            ApiV1KubernetesControlplanesCreateStorageClassErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_controlplanes_create_target_availability_error_component import (
-            ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_controlplanes_create_workspace_id_error_component import (
+            ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -438,30 +567,40 @@ class ApiV1KubernetesControlplanesCreateValidationError:
                 | ApiV1KubernetesControlplanesCreateArchivedAtErrorComponent
                 | ApiV1KubernetesControlplanesCreateArchivedErrorComponent
                 | ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponent
+                | ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent
                 | ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent
                 | ApiV1KubernetesControlplanesCreateCriticalityErrorComponent
                 | ApiV1KubernetesControlplanesCreateDebugModeErrorComponent
                 | ApiV1KubernetesControlplanesCreateDiscoveryEnabledErrorComponent
                 | ApiV1KubernetesControlplanesCreateDisplayNameErrorComponent
+                | ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent
+                | ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent
                 | ApiV1KubernetesControlplanesCreateKindErrorComponent
                 | ApiV1KubernetesControlplanesCreateLabelsErrorComponent
                 | ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent
                 | ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent
                 | ApiV1KubernetesControlplanesCreateNameErrorComponent
                 | ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponent
+                | ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent
+                | ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent
+                | ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent
+                | ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent
                 | ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent
                 | ApiV1KubernetesControlplanesCreatePlatformServiceErrorComponent
                 | ApiV1KubernetesControlplanesCreateProviderErrorComponent
                 | ApiV1KubernetesControlplanesCreateProviderIdErrorComponent
                 | ApiV1KubernetesControlplanesCreateProviderReferenceErrorComponent
                 | ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponent
+                | ApiV1KubernetesControlplanesCreateRegionIdErrorComponent
                 | ApiV1KubernetesControlplanesCreateScopeErrorComponent
+                | ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent
                 | ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent
                 | ApiV1KubernetesControlplanesCreateSlaTargetErrorComponent
                 | ApiV1KubernetesControlplanesCreateSloAvailabilityErrorComponent
                 | ApiV1KubernetesControlplanesCreateSloTargetErrorComponent
                 | ApiV1KubernetesControlplanesCreateStorageClassErrorComponent
                 | ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponent
+                | ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent
             ):
                 try:
                     if not isinstance(data, dict):
@@ -707,7 +846,7 @@ class ApiV1KubernetesControlplanesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_24 = (
-                        ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent.from_dict(data)
+                        ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_24
@@ -717,7 +856,7 @@ class ApiV1KubernetesControlplanesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_25 = (
-                        ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent.from_dict(data)
+                        ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_25
@@ -727,7 +866,7 @@ class ApiV1KubernetesControlplanesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_26 = (
-                        ApiV1KubernetesControlplanesCreateStorageClassErrorComponent.from_dict(data)
+                        ApiV1KubernetesControlplanesCreateRegionIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_26
@@ -737,19 +876,119 @@ class ApiV1KubernetesControlplanesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_27 = (
-                        ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent.from_dict(data)
+                        ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_27
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_28 = (
+                        ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_28
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_29 = (
+                        ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_29
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_30 = (
+                        ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_30
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_31 = (
+                        ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_31
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_32 = (
+                        ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_32
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_33 = (
+                        ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_33
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_34 = (
+                        ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_34
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_35 = (
+                        ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_35
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_36 = (
+                        ApiV1KubernetesControlplanesCreateStorageClassErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_36
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_37 = (
+                        ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_37
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_28 = (
+                componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_38 = (
                     ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_28
+                return componentsschemas_api_v1_kubernetes_controlplanes_create_error_type_38
 
             errors_item = _parse_errors_item(errors_item_data)
 

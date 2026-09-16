@@ -61,22 +61,22 @@ class ApiV1ConversationsProvidersCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conversations_providers_create_credential_error_component import (
-            ApiV1ConversationsProvidersCreateCredentialErrorComponent,
+            ApiV1ConversationsProvidersCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_kind_error_component import (
-            ApiV1ConversationsProvidersCreateKindErrorComponent,
+            ApiV1ConversationsProvidersCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_meta_error_component import (
-            ApiV1ConversationsProvidersCreateMetaErrorComponent,
+            ApiV1ConversationsProvidersCreateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_name_error_component import (
-            ApiV1ConversationsProvidersCreateNameErrorComponent,
+            ApiV1ConversationsProvidersCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_non_field_errors_error_component import (
-            ApiV1ConversationsProvidersCreateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsProvidersCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_organization_error_component import (
-            ApiV1ConversationsProvidersCreateOrganizationErrorComponent,
+            ApiV1ConversationsProvidersCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -115,25 +115,25 @@ class ApiV1ConversationsProvidersCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conversations_providers_create_config_error_component import (
-            ApiV1ConversationsProvidersCreateConfigErrorComponent,
+            ApiV1ConversationsProvidersCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_credential_error_component import (
-            ApiV1ConversationsProvidersCreateCredentialErrorComponent,
+            ApiV1ConversationsProvidersCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_kind_error_component import (
-            ApiV1ConversationsProvidersCreateKindErrorComponent,
+            ApiV1ConversationsProvidersCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_meta_error_component import (
-            ApiV1ConversationsProvidersCreateMetaErrorComponent,
+            ApiV1ConversationsProvidersCreateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_name_error_component import (
-            ApiV1ConversationsProvidersCreateNameErrorComponent,
+            ApiV1ConversationsProvidersCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_non_field_errors_error_component import (
-            ApiV1ConversationsProvidersCreateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsProvidersCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_create_organization_error_component import (
-            ApiV1ConversationsProvidersCreateOrganizationErrorComponent,
+            ApiV1ConversationsProvidersCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

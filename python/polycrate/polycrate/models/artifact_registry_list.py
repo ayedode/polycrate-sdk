@@ -80,8 +80,10 @@ class ArtifactRegistryList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.artifact_registry_list_organization_type_0 import ArtifactRegistryListOrganizationType0
-        from ..models.artifact_registry_list_workspace_type_0 import ArtifactRegistryListWorkspaceType0
+        from ..models.artifact_registry_list_organization_type_0 import (
+            ArtifactRegistryListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.artifact_registry_list_workspace_type_0 import ArtifactRegistryListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -170,12 +172,14 @@ class ArtifactRegistryList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.artifact_registry_list_active_condition_instances_item import (
-            ArtifactRegistryListActiveConditionInstancesItem,
+            ArtifactRegistryListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.artifact_registry_list_created import ArtifactRegistryListCreated
-        from ..models.artifact_registry_list_k8s_cluster import ArtifactRegistryListK8SCluster
-        from ..models.artifact_registry_list_organization_type_0 import ArtifactRegistryListOrganizationType0
-        from ..models.artifact_registry_list_workspace_type_0 import ArtifactRegistryListWorkspaceType0
+        from ..models.artifact_registry_list_created import ArtifactRegistryListCreated  # noqa: PLC0415
+        from ..models.artifact_registry_list_k8s_cluster import ArtifactRegistryListK8SCluster  # noqa: PLC0415
+        from ..models.artifact_registry_list_organization_type_0 import (
+            ArtifactRegistryListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.artifact_registry_list_workspace_type_0 import ArtifactRegistryListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

@@ -22283,6 +22283,15 @@ from .api_v1_catalogue_apps_archive_create_last_reconciliation_duration_seconds_
 from .api_v1_catalogue_apps_archive_create_last_reconciliation_duration_seconds_error_component_code import (
     ApiV1CatalogueAppsArchiveCreateLastReconciliationDurationSecondsErrorComponentCode,
 )
+from .api_v1_catalogue_apps_archive_create_maintainer_id_error_component import (
+    ApiV1CatalogueAppsArchiveCreateMaintainerIdErrorComponent,
+)
+from .api_v1_catalogue_apps_archive_create_maintainer_id_error_component_attr import (
+    ApiV1CatalogueAppsArchiveCreateMaintainerIdErrorComponentAttr,
+)
+from .api_v1_catalogue_apps_archive_create_maintainer_id_error_component_code import (
+    ApiV1CatalogueAppsArchiveCreateMaintainerIdErrorComponentCode,
+)
 from .api_v1_catalogue_apps_archive_create_managed_by_content_type_error_component import (
     ApiV1CatalogueAppsArchiveCreateManagedByContentTypeErrorComponent,
 )
@@ -22679,6 +22688,15 @@ from .api_v1_catalogue_apps_create_last_reconciliation_duration_seconds_error_co
 from .api_v1_catalogue_apps_create_last_reconciliation_duration_seconds_error_component_code import (
     ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponentCode,
 )
+from .api_v1_catalogue_apps_create_maintainer_id_error_component import (
+    ApiV1CatalogueAppsCreateMaintainerIdErrorComponent,
+)
+from .api_v1_catalogue_apps_create_maintainer_id_error_component_attr import (
+    ApiV1CatalogueAppsCreateMaintainerIdErrorComponentAttr,
+)
+from .api_v1_catalogue_apps_create_maintainer_id_error_component_code import (
+    ApiV1CatalogueAppsCreateMaintainerIdErrorComponentCode,
+)
 from .api_v1_catalogue_apps_create_managed_by_content_type_error_component import (
     ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent,
 )
@@ -22956,6 +22974,13 @@ from .api_v1_catalogue_apps_list_kind_error_component import ApiV1CatalogueAppsL
 from .api_v1_catalogue_apps_list_kind_error_component_attr import ApiV1CatalogueAppsListKindErrorComponentAttr
 from .api_v1_catalogue_apps_list_kind_error_component_code import ApiV1CatalogueAppsListKindErrorComponentCode
 from .api_v1_catalogue_apps_list_kind_item import ApiV1CatalogueAppsListKindItem
+from .api_v1_catalogue_apps_list_maintainer_error_component import ApiV1CatalogueAppsListMaintainerErrorComponent
+from .api_v1_catalogue_apps_list_maintainer_error_component_attr import (
+    ApiV1CatalogueAppsListMaintainerErrorComponentAttr,
+)
+from .api_v1_catalogue_apps_list_maintainer_error_component_code import (
+    ApiV1CatalogueAppsListMaintainerErrorComponentCode,
+)
 from .api_v1_catalogue_apps_list_name_error_component import ApiV1CatalogueAppsListNameErrorComponent
 from .api_v1_catalogue_apps_list_name_error_component_attr import ApiV1CatalogueAppsListNameErrorComponentAttr
 from .api_v1_catalogue_apps_list_name_error_component_code import ApiV1CatalogueAppsListNameErrorComponentCode
@@ -23174,6 +23199,15 @@ from .api_v1_catalogue_apps_partial_update_last_reconciliation_duration_seconds_
 )
 from .api_v1_catalogue_apps_partial_update_last_reconciliation_duration_seconds_error_component_code import (
     ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponentCode,
+)
+from .api_v1_catalogue_apps_partial_update_maintainer_id_error_component import (
+    ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent,
+)
+from .api_v1_catalogue_apps_partial_update_maintainer_id_error_component_attr import (
+    ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponentAttr,
+)
+from .api_v1_catalogue_apps_partial_update_maintainer_id_error_component_code import (
+    ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponentCode,
 )
 from .api_v1_catalogue_apps_partial_update_managed_by_content_type_error_component import (
     ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent,
@@ -23614,6 +23648,15 @@ from .api_v1_catalogue_apps_sync_releases_create_last_reconciliation_duration_se
 )
 from .api_v1_catalogue_apps_sync_releases_create_last_reconciliation_duration_seconds_error_component_code import (
     ApiV1CatalogueAppsSyncReleasesCreateLastReconciliationDurationSecondsErrorComponentCode,
+)
+from .api_v1_catalogue_apps_sync_releases_create_maintainer_id_error_component import (
+    ApiV1CatalogueAppsSyncReleasesCreateMaintainerIdErrorComponent,
+)
+from .api_v1_catalogue_apps_sync_releases_create_maintainer_id_error_component_attr import (
+    ApiV1CatalogueAppsSyncReleasesCreateMaintainerIdErrorComponentAttr,
+)
+from .api_v1_catalogue_apps_sync_releases_create_maintainer_id_error_component_code import (
+    ApiV1CatalogueAppsSyncReleasesCreateMaintainerIdErrorComponentCode,
 )
 from .api_v1_catalogue_apps_sync_releases_create_managed_by_content_type_error_component import (
     ApiV1CatalogueAppsSyncReleasesCreateManagedByContentTypeErrorComponent,
@@ -24059,6 +24102,15 @@ from .api_v1_catalogue_apps_sync_vulnerability_products_create_last_reconciliati
 from .api_v1_catalogue_apps_sync_vulnerability_products_create_last_reconciliation_duration_seconds_error_component_code import (
     ApiV1CatalogueAppsSyncVulnerabilityProductsCreateLastReconciliationDurationSecondsErrorComponentCode,
 )
+from .api_v1_catalogue_apps_sync_vulnerability_products_create_maintainer_id_error_component import (
+    ApiV1CatalogueAppsSyncVulnerabilityProductsCreateMaintainerIdErrorComponent,
+)
+from .api_v1_catalogue_apps_sync_vulnerability_products_create_maintainer_id_error_component_attr import (
+    ApiV1CatalogueAppsSyncVulnerabilityProductsCreateMaintainerIdErrorComponentAttr,
+)
+from .api_v1_catalogue_apps_sync_vulnerability_products_create_maintainer_id_error_component_code import (
+    ApiV1CatalogueAppsSyncVulnerabilityProductsCreateMaintainerIdErrorComponentCode,
+)
 from .api_v1_catalogue_apps_sync_vulnerability_products_create_managed_by_content_type_error_component import (
     ApiV1CatalogueAppsSyncVulnerabilityProductsCreateManagedByContentTypeErrorComponent,
 )
@@ -24458,6 +24510,15 @@ from .api_v1_catalogue_apps_update_last_reconciliation_duration_seconds_error_co
 )
 from .api_v1_catalogue_apps_update_last_reconciliation_duration_seconds_error_component_code import (
     ApiV1CatalogueAppsUpdateLastReconciliationDurationSecondsErrorComponentCode,
+)
+from .api_v1_catalogue_apps_update_maintainer_id_error_component import (
+    ApiV1CatalogueAppsUpdateMaintainerIdErrorComponent,
+)
+from .api_v1_catalogue_apps_update_maintainer_id_error_component_attr import (
+    ApiV1CatalogueAppsUpdateMaintainerIdErrorComponentAttr,
+)
+from .api_v1_catalogue_apps_update_maintainer_id_error_component_code import (
+    ApiV1CatalogueAppsUpdateMaintainerIdErrorComponentCode,
 )
 from .api_v1_catalogue_apps_update_managed_by_content_type_error_component import (
     ApiV1CatalogueAppsUpdateManagedByContentTypeErrorComponent,
@@ -46724,6 +46785,9 @@ from .api_v1_hosts_list_updated_at_error_component import ApiV1HostsListUpdatedA
 from .api_v1_hosts_list_updated_at_error_component_attr import ApiV1HostsListUpdatedAtErrorComponentAttr
 from .api_v1_hosts_list_updated_at_error_component_code import ApiV1HostsListUpdatedAtErrorComponentCode
 from .api_v1_hosts_list_validation_error import ApiV1HostsListValidationError
+from .api_v1_hosts_list_worker_pool_error_component import ApiV1HostsListWorkerPoolErrorComponent
+from .api_v1_hosts_list_worker_pool_error_component_attr import ApiV1HostsListWorkerPoolErrorComponentAttr
+from .api_v1_hosts_list_worker_pool_error_component_code import ApiV1HostsListWorkerPoolErrorComponentCode
 from .api_v1_hosts_list_workspaces_error_component import ApiV1HostsListWorkspacesErrorComponent
 from .api_v1_hosts_list_workspaces_error_component_attr import ApiV1HostsListWorkspacesErrorComponentAttr
 from .api_v1_hosts_list_workspaces_error_component_code import ApiV1HostsListWorkspacesErrorComponentCode
@@ -62859,6 +62923,15 @@ from .api_v1_kubernetes_controlplanes_archive_create_archived_reason_error_compo
 from .api_v1_kubernetes_controlplanes_archive_create_archived_reason_error_component_code import (
     ApiV1KubernetesControlplanesArchiveCreateArchivedReasonErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_archive_create_audit_logging_enabled_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateAuditLoggingEnabledErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_audit_logging_enabled_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateAuditLoggingEnabledErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_audit_logging_enabled_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateAuditLoggingEnabledErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_archive_create_cluster_domain_error_component import (
     ApiV1KubernetesControlplanesArchiveCreateClusterDomainErrorComponent,
 )
@@ -62903,6 +62976,24 @@ from .api_v1_kubernetes_controlplanes_archive_create_display_name_error_componen
 )
 from .api_v1_kubernetes_controlplanes_archive_create_display_name_error_component_code import (
     ApiV1KubernetesControlplanesArchiveCreateDisplayNameErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_exposure_type_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateExposureTypeErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_exposure_type_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateExposureTypeErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_exposure_type_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateExposureTypeErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_gateway_class_name_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_gateway_class_name_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_gateway_class_name_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_archive_create_kind_error_component import (
     ApiV1KubernetesControlplanesArchiveCreateKindErrorComponent,
@@ -62958,6 +63049,42 @@ from .api_v1_kubernetes_controlplanes_archive_create_non_field_errors_error_comp
 from .api_v1_kubernetes_controlplanes_archive_create_non_field_errors_error_component_code import (
     ApiV1KubernetesControlplanesArchiveCreateNonFieldErrorsErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_archive_create_organization_id_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateOrganizationIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_organization_id_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateOrganizationIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_organization_id_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateOrganizationIdErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_parent_gateway_name_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateParentGatewayNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_parent_gateway_name_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateParentGatewayNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_parent_gateway_name_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateParentGatewayNameErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_parent_gateway_namespace_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateParentGatewayNamespaceErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_parent_gateway_namespace_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateParentGatewayNamespaceErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_parent_gateway_namespace_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateParentGatewayNamespaceErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_parent_gateway_section_name_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateParentGatewaySectionNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_parent_gateway_section_name_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateParentGatewaySectionNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_parent_gateway_section_name_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateParentGatewaySectionNameErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_archive_create_persistence_size_error_component import (
     ApiV1KubernetesControlplanesArchiveCreatePersistenceSizeErrorComponent,
 )
@@ -63012,6 +63139,15 @@ from .api_v1_kubernetes_controlplanes_archive_create_reconciliation_enabled_erro
 from .api_v1_kubernetes_controlplanes_archive_create_reconciliation_enabled_error_component_code import (
     ApiV1KubernetesControlplanesArchiveCreateReconciliationEnabledErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_archive_create_region_id_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateRegionIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_region_id_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateRegionIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_region_id_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateRegionIdErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_archive_create_scope_error_component import (
     ApiV1KubernetesControlplanesArchiveCreateScopeErrorComponent,
 )
@@ -63020,6 +63156,15 @@ from .api_v1_kubernetes_controlplanes_archive_create_scope_error_component_attr 
 )
 from .api_v1_kubernetes_controlplanes_archive_create_scope_error_component_code import (
     ApiV1KubernetesControlplanesArchiveCreateScopeErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_secrets_encryption_enabled_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateSecretsEncryptionEnabledErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_secrets_encryption_enabled_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateSecretsEncryptionEnabledErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_secrets_encryption_enabled_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateSecretsEncryptionEnabledErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_archive_create_sla_availability_error_component import (
     ApiV1KubernetesControlplanesArchiveCreateSlaAvailabilityErrorComponent,
@@ -63078,6 +63223,15 @@ from .api_v1_kubernetes_controlplanes_archive_create_target_availability_error_c
 from .api_v1_kubernetes_controlplanes_archive_create_validation_error import (
     ApiV1KubernetesControlplanesArchiveCreateValidationError,
 )
+from .api_v1_kubernetes_controlplanes_archive_create_workspace_id_error_component import (
+    ApiV1KubernetesControlplanesArchiveCreateWorkspaceIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_workspace_id_error_component_attr import (
+    ApiV1KubernetesControlplanesArchiveCreateWorkspaceIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_archive_create_workspace_id_error_component_code import (
+    ApiV1KubernetesControlplanesArchiveCreateWorkspaceIdErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_create_actual_availability_error_component import (
     ApiV1KubernetesControlplanesCreateActualAvailabilityErrorComponent,
 )
@@ -63123,6 +63277,15 @@ from .api_v1_kubernetes_controlplanes_create_archived_reason_error_component_att
 from .api_v1_kubernetes_controlplanes_create_archived_reason_error_component_code import (
     ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_create_audit_logging_enabled_error_component import (
+    ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_audit_logging_enabled_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_audit_logging_enabled_error_component_code import (
+    ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_create_cluster_domain_error_component import (
     ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent,
 )
@@ -63167,6 +63330,24 @@ from .api_v1_kubernetes_controlplanes_create_display_name_error_component_attr i
 )
 from .api_v1_kubernetes_controlplanes_create_display_name_error_component_code import (
     ApiV1KubernetesControlplanesCreateDisplayNameErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_create_exposure_type_error_component import (
+    ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_exposure_type_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateExposureTypeErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_exposure_type_error_component_code import (
+    ApiV1KubernetesControlplanesCreateExposureTypeErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_create_gateway_class_name_error_component import (
+    ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_gateway_class_name_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_gateway_class_name_error_component_code import (
+    ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_create_kind_error_component import (
     ApiV1KubernetesControlplanesCreateKindErrorComponent,
@@ -63222,6 +63403,42 @@ from .api_v1_kubernetes_controlplanes_create_non_field_errors_error_component_at
 from .api_v1_kubernetes_controlplanes_create_non_field_errors_error_component_code import (
     ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_create_organization_id_error_component import (
+    ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_organization_id_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_organization_id_error_component_code import (
+    ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_create_parent_gateway_name_error_component import (
+    ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_parent_gateway_name_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_parent_gateway_name_error_component_code import (
+    ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_create_parent_gateway_namespace_error_component import (
+    ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_parent_gateway_namespace_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_parent_gateway_namespace_error_component_code import (
+    ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_create_parent_gateway_section_name_error_component import (
+    ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_parent_gateway_section_name_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_parent_gateway_section_name_error_component_code import (
+    ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_create_persistence_size_error_component import (
     ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent,
 )
@@ -63276,6 +63493,15 @@ from .api_v1_kubernetes_controlplanes_create_reconciliation_enabled_error_compon
 from .api_v1_kubernetes_controlplanes_create_reconciliation_enabled_error_component_code import (
     ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_create_region_id_error_component import (
+    ApiV1KubernetesControlplanesCreateRegionIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_region_id_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateRegionIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_region_id_error_component_code import (
+    ApiV1KubernetesControlplanesCreateRegionIdErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_create_scope_error_component import (
     ApiV1KubernetesControlplanesCreateScopeErrorComponent,
 )
@@ -63284,6 +63510,15 @@ from .api_v1_kubernetes_controlplanes_create_scope_error_component_attr import (
 )
 from .api_v1_kubernetes_controlplanes_create_scope_error_component_code import (
     ApiV1KubernetesControlplanesCreateScopeErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_create_secrets_encryption_enabled_error_component import (
+    ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_secrets_encryption_enabled_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_secrets_encryption_enabled_error_component_code import (
+    ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_create_sla_availability_error_component import (
     ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent,
@@ -63340,6 +63575,15 @@ from .api_v1_kubernetes_controlplanes_create_target_availability_error_component
     ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_create_validation_error import ApiV1KubernetesControlplanesCreateValidationError
+from .api_v1_kubernetes_controlplanes_create_workspace_id_error_component import (
+    ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_create_workspace_id_error_component_attr import (
+    ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_create_workspace_id_error_component_code import (
+    ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_list_created_at_error_component import (
     ApiV1KubernetesControlplanesListCreatedAtErrorComponent,
 )
@@ -63548,6 +63792,15 @@ from .api_v1_kubernetes_controlplanes_partial_update_archived_reason_error_compo
 from .api_v1_kubernetes_controlplanes_partial_update_archived_reason_error_component_code import (
     ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_partial_update_audit_logging_enabled_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_audit_logging_enabled_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_audit_logging_enabled_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_partial_update_cluster_domain_error_component import (
     ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent,
 )
@@ -63592,6 +63845,24 @@ from .api_v1_kubernetes_controlplanes_partial_update_display_name_error_componen
 )
 from .api_v1_kubernetes_controlplanes_partial_update_display_name_error_component_code import (
     ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_exposure_type_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_exposure_type_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_exposure_type_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_gateway_class_name_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_gateway_class_name_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_gateway_class_name_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_partial_update_kind_error_component import (
     ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent,
@@ -63647,6 +63918,42 @@ from .api_v1_kubernetes_controlplanes_partial_update_non_field_errors_error_comp
 from .api_v1_kubernetes_controlplanes_partial_update_non_field_errors_error_component_code import (
     ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_partial_update_organization_id_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_organization_id_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_organization_id_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_parent_gateway_name_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_parent_gateway_name_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_parent_gateway_name_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_parent_gateway_namespace_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_parent_gateway_namespace_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_parent_gateway_namespace_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_parent_gateway_section_name_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_parent_gateway_section_name_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_parent_gateway_section_name_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_partial_update_persistence_size_error_component import (
     ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent,
 )
@@ -63701,6 +64008,15 @@ from .api_v1_kubernetes_controlplanes_partial_update_reconciliation_enabled_erro
 from .api_v1_kubernetes_controlplanes_partial_update_reconciliation_enabled_error_component_code import (
     ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_partial_update_region_id_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_region_id_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_region_id_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_partial_update_scope_error_component import (
     ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent,
 )
@@ -63709,6 +64025,15 @@ from .api_v1_kubernetes_controlplanes_partial_update_scope_error_component_attr 
 )
 from .api_v1_kubernetes_controlplanes_partial_update_scope_error_component_code import (
     ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_secrets_encryption_enabled_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_secrets_encryption_enabled_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_secrets_encryption_enabled_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_partial_update_sla_availability_error_component import (
     ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent,
@@ -63767,6 +64092,15 @@ from .api_v1_kubernetes_controlplanes_partial_update_target_availability_error_c
 from .api_v1_kubernetes_controlplanes_partial_update_validation_error import (
     ApiV1KubernetesControlplanesPartialUpdateValidationError,
 )
+from .api_v1_kubernetes_controlplanes_partial_update_workspace_id_error_component import (
+    ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_workspace_id_error_component_attr import (
+    ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_partial_update_workspace_id_error_component_code import (
+    ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_update_actual_availability_error_component import (
     ApiV1KubernetesControlplanesUpdateActualAvailabilityErrorComponent,
 )
@@ -63812,6 +64146,15 @@ from .api_v1_kubernetes_controlplanes_update_archived_reason_error_component_att
 from .api_v1_kubernetes_controlplanes_update_archived_reason_error_component_code import (
     ApiV1KubernetesControlplanesUpdateArchivedReasonErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_update_audit_logging_enabled_error_component import (
+    ApiV1KubernetesControlplanesUpdateAuditLoggingEnabledErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_audit_logging_enabled_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateAuditLoggingEnabledErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_audit_logging_enabled_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateAuditLoggingEnabledErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_update_cluster_domain_error_component import (
     ApiV1KubernetesControlplanesUpdateClusterDomainErrorComponent,
 )
@@ -63856,6 +64199,24 @@ from .api_v1_kubernetes_controlplanes_update_display_name_error_component_attr i
 )
 from .api_v1_kubernetes_controlplanes_update_display_name_error_component_code import (
     ApiV1KubernetesControlplanesUpdateDisplayNameErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_update_exposure_type_error_component import (
+    ApiV1KubernetesControlplanesUpdateExposureTypeErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_exposure_type_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateExposureTypeErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_exposure_type_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateExposureTypeErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_update_gateway_class_name_error_component import (
+    ApiV1KubernetesControlplanesUpdateGatewayClassNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_gateway_class_name_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateGatewayClassNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_gateway_class_name_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateGatewayClassNameErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_update_kind_error_component import (
     ApiV1KubernetesControlplanesUpdateKindErrorComponent,
@@ -63911,6 +64272,42 @@ from .api_v1_kubernetes_controlplanes_update_non_field_errors_error_component_at
 from .api_v1_kubernetes_controlplanes_update_non_field_errors_error_component_code import (
     ApiV1KubernetesControlplanesUpdateNonFieldErrorsErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_update_organization_id_error_component import (
+    ApiV1KubernetesControlplanesUpdateOrganizationIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_organization_id_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateOrganizationIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_organization_id_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateOrganizationIdErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_update_parent_gateway_name_error_component import (
+    ApiV1KubernetesControlplanesUpdateParentGatewayNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_parent_gateway_name_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateParentGatewayNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_parent_gateway_name_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateParentGatewayNameErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_update_parent_gateway_namespace_error_component import (
+    ApiV1KubernetesControlplanesUpdateParentGatewayNamespaceErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_parent_gateway_namespace_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateParentGatewayNamespaceErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_parent_gateway_namespace_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateParentGatewayNamespaceErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_update_parent_gateway_section_name_error_component import (
+    ApiV1KubernetesControlplanesUpdateParentGatewaySectionNameErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_parent_gateway_section_name_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateParentGatewaySectionNameErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_parent_gateway_section_name_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateParentGatewaySectionNameErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_update_persistence_size_error_component import (
     ApiV1KubernetesControlplanesUpdatePersistenceSizeErrorComponent,
 )
@@ -63965,6 +64362,15 @@ from .api_v1_kubernetes_controlplanes_update_reconciliation_enabled_error_compon
 from .api_v1_kubernetes_controlplanes_update_reconciliation_enabled_error_component_code import (
     ApiV1KubernetesControlplanesUpdateReconciliationEnabledErrorComponentCode,
 )
+from .api_v1_kubernetes_controlplanes_update_region_id_error_component import (
+    ApiV1KubernetesControlplanesUpdateRegionIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_region_id_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateRegionIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_region_id_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateRegionIdErrorComponentCode,
+)
 from .api_v1_kubernetes_controlplanes_update_scope_error_component import (
     ApiV1KubernetesControlplanesUpdateScopeErrorComponent,
 )
@@ -63973,6 +64379,15 @@ from .api_v1_kubernetes_controlplanes_update_scope_error_component_attr import (
 )
 from .api_v1_kubernetes_controlplanes_update_scope_error_component_code import (
     ApiV1KubernetesControlplanesUpdateScopeErrorComponentCode,
+)
+from .api_v1_kubernetes_controlplanes_update_secrets_encryption_enabled_error_component import (
+    ApiV1KubernetesControlplanesUpdateSecretsEncryptionEnabledErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_secrets_encryption_enabled_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateSecretsEncryptionEnabledErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_secrets_encryption_enabled_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateSecretsEncryptionEnabledErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_update_sla_availability_error_component import (
     ApiV1KubernetesControlplanesUpdateSlaAvailabilityErrorComponent,
@@ -64029,6 +64444,15 @@ from .api_v1_kubernetes_controlplanes_update_target_availability_error_component
     ApiV1KubernetesControlplanesUpdateTargetAvailabilityErrorComponentCode,
 )
 from .api_v1_kubernetes_controlplanes_update_validation_error import ApiV1KubernetesControlplanesUpdateValidationError
+from .api_v1_kubernetes_controlplanes_update_workspace_id_error_component import (
+    ApiV1KubernetesControlplanesUpdateWorkspaceIdErrorComponent,
+)
+from .api_v1_kubernetes_controlplanes_update_workspace_id_error_component_attr import (
+    ApiV1KubernetesControlplanesUpdateWorkspaceIdErrorComponentAttr,
+)
+from .api_v1_kubernetes_controlplanes_update_workspace_id_error_component_code import (
+    ApiV1KubernetesControlplanesUpdateWorkspaceIdErrorComponentCode,
+)
 from .api_v1_kubernetes_volumes_archive_create_access_modes_error_component import (
     ApiV1KubernetesVolumesArchiveCreateAccessModesErrorComponent,
 )
@@ -67318,6 +67742,15 @@ from .api_v1_loadbalancers_instances_create_display_name_error_component_attr im
 from .api_v1_loadbalancers_instances_create_display_name_error_component_code import (
     ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponentCode,
 )
+from .api_v1_loadbalancers_instances_create_haproxy_defaults_error_component import (
+    ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent,
+)
+from .api_v1_loadbalancers_instances_create_haproxy_defaults_error_component_attr import (
+    ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponentAttr,
+)
+from .api_v1_loadbalancers_instances_create_haproxy_defaults_error_component_code import (
+    ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponentCode,
+)
 from .api_v1_loadbalancers_instances_create_labels_error_component import (
     ApiV1LoadbalancersInstancesCreateLabelsErrorComponent,
 )
@@ -67353,6 +67786,15 @@ from .api_v1_loadbalancers_instances_create_ports_error_component_attr import (
 )
 from .api_v1_loadbalancers_instances_create_ports_error_component_code import (
     ApiV1LoadbalancersInstancesCreatePortsErrorComponentCode,
+)
+from .api_v1_loadbalancers_instances_create_resource_limits_error_component import (
+    ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent,
+)
+from .api_v1_loadbalancers_instances_create_resource_limits_error_component_attr import (
+    ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponentAttr,
+)
+from .api_v1_loadbalancers_instances_create_resource_limits_error_component_code import (
+    ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponentCode,
 )
 from .api_v1_loadbalancers_instances_create_validation_error import ApiV1LoadbalancersInstancesCreateValidationError
 from .api_v1_loadbalancers_instances_create_wizard_ports_error_component import (
@@ -67557,6 +67999,15 @@ from .api_v1_loadbalancers_instances_partial_update_config_error_component_attr 
 from .api_v1_loadbalancers_instances_partial_update_config_error_component_code import (
     ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponentCode,
 )
+from .api_v1_loadbalancers_instances_partial_update_haproxy_defaults_error_component import (
+    ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent,
+)
+from .api_v1_loadbalancers_instances_partial_update_haproxy_defaults_error_component_attr import (
+    ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponentAttr,
+)
+from .api_v1_loadbalancers_instances_partial_update_haproxy_defaults_error_component_code import (
+    ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponentCode,
+)
 from .api_v1_loadbalancers_instances_partial_update_labels_error_component import (
     ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent,
 )
@@ -67583,6 +68034,15 @@ from .api_v1_loadbalancers_instances_partial_update_ports_error_component_attr i
 )
 from .api_v1_loadbalancers_instances_partial_update_ports_error_component_code import (
     ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponentCode,
+)
+from .api_v1_loadbalancers_instances_partial_update_resource_limits_error_component import (
+    ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent,
+)
+from .api_v1_loadbalancers_instances_partial_update_resource_limits_error_component_attr import (
+    ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponentAttr,
+)
+from .api_v1_loadbalancers_instances_partial_update_resource_limits_error_component_code import (
+    ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponentCode,
 )
 from .api_v1_loadbalancers_instances_partial_update_validation_error import (
     ApiV1LoadbalancersInstancesPartialUpdateValidationError,
@@ -67614,6 +68074,15 @@ from .api_v1_loadbalancers_instances_update_config_error_component_attr import (
 from .api_v1_loadbalancers_instances_update_config_error_component_code import (
     ApiV1LoadbalancersInstancesUpdateConfigErrorComponentCode,
 )
+from .api_v1_loadbalancers_instances_update_haproxy_defaults_error_component import (
+    ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent,
+)
+from .api_v1_loadbalancers_instances_update_haproxy_defaults_error_component_attr import (
+    ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponentAttr,
+)
+from .api_v1_loadbalancers_instances_update_haproxy_defaults_error_component_code import (
+    ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponentCode,
+)
 from .api_v1_loadbalancers_instances_update_labels_error_component import (
     ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent,
 )
@@ -67640,6 +68109,15 @@ from .api_v1_loadbalancers_instances_update_ports_error_component_attr import (
 )
 from .api_v1_loadbalancers_instances_update_ports_error_component_code import (
     ApiV1LoadbalancersInstancesUpdatePortsErrorComponentCode,
+)
+from .api_v1_loadbalancers_instances_update_resource_limits_error_component import (
+    ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent,
+)
+from .api_v1_loadbalancers_instances_update_resource_limits_error_component_attr import (
+    ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponentAttr,
+)
+from .api_v1_loadbalancers_instances_update_resource_limits_error_component_code import (
+    ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponentCode,
 )
 from .api_v1_loadbalancers_instances_update_validation_error import ApiV1LoadbalancersInstancesUpdateValidationError
 from .api_v1_loadbalancers_instances_update_wizard_ports_error_component import (
@@ -88441,6 +88919,15 @@ from .api_v1_pricing_products_archive_create_platform_service_error_component_at
 from .api_v1_pricing_products_archive_create_platform_service_error_component_code import (
     ApiV1PricingProductsArchiveCreatePlatformServiceErrorComponentCode,
 )
+from .api_v1_pricing_products_archive_create_pop_error_component import (
+    ApiV1PricingProductsArchiveCreatePopErrorComponent,
+)
+from .api_v1_pricing_products_archive_create_pop_error_component_attr import (
+    ApiV1PricingProductsArchiveCreatePopErrorComponentAttr,
+)
+from .api_v1_pricing_products_archive_create_pop_error_component_code import (
+    ApiV1PricingProductsArchiveCreatePopErrorComponentCode,
+)
 from .api_v1_pricing_products_archive_create_price_per_unit_error_component import (
     ApiV1PricingProductsArchiveCreatePricePerUnitErrorComponent,
 )
@@ -88674,6 +89161,9 @@ from .api_v1_pricing_products_create_platform_service_error_component_attr impor
 from .api_v1_pricing_products_create_platform_service_error_component_code import (
     ApiV1PricingProductsCreatePlatformServiceErrorComponentCode,
 )
+from .api_v1_pricing_products_create_pop_error_component import ApiV1PricingProductsCreatePopErrorComponent
+from .api_v1_pricing_products_create_pop_error_component_attr import ApiV1PricingProductsCreatePopErrorComponentAttr
+from .api_v1_pricing_products_create_pop_error_component_code import ApiV1PricingProductsCreatePopErrorComponentCode
 from .api_v1_pricing_products_create_price_per_unit_error_component import (
     ApiV1PricingProductsCreatePricePerUnitErrorComponent,
 )
@@ -88961,6 +89451,15 @@ from .api_v1_pricing_products_partial_update_platform_service_error_component_at
 from .api_v1_pricing_products_partial_update_platform_service_error_component_code import (
     ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponentCode,
 )
+from .api_v1_pricing_products_partial_update_pop_error_component import (
+    ApiV1PricingProductsPartialUpdatePopErrorComponent,
+)
+from .api_v1_pricing_products_partial_update_pop_error_component_attr import (
+    ApiV1PricingProductsPartialUpdatePopErrorComponentAttr,
+)
+from .api_v1_pricing_products_partial_update_pop_error_component_code import (
+    ApiV1PricingProductsPartialUpdatePopErrorComponentCode,
+)
 from .api_v1_pricing_products_partial_update_price_per_unit_error_component import (
     ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent,
 )
@@ -89214,6 +89713,15 @@ from .api_v1_pricing_products_reconcile_create_platform_service_error_component_
 from .api_v1_pricing_products_reconcile_create_platform_service_error_component_code import (
     ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponentCode,
 )
+from .api_v1_pricing_products_reconcile_create_pop_error_component import (
+    ApiV1PricingProductsReconcileCreatePopErrorComponent,
+)
+from .api_v1_pricing_products_reconcile_create_pop_error_component_attr import (
+    ApiV1PricingProductsReconcileCreatePopErrorComponentAttr,
+)
+from .api_v1_pricing_products_reconcile_create_pop_error_component_code import (
+    ApiV1PricingProductsReconcileCreatePopErrorComponentCode,
+)
 from .api_v1_pricing_products_reconcile_create_price_per_unit_error_component import (
     ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent,
 )
@@ -89449,6 +89957,9 @@ from .api_v1_pricing_products_update_platform_service_error_component_attr impor
 from .api_v1_pricing_products_update_platform_service_error_component_code import (
     ApiV1PricingProductsUpdatePlatformServiceErrorComponentCode,
 )
+from .api_v1_pricing_products_update_pop_error_component import ApiV1PricingProductsUpdatePopErrorComponent
+from .api_v1_pricing_products_update_pop_error_component_attr import ApiV1PricingProductsUpdatePopErrorComponentAttr
+from .api_v1_pricing_products_update_pop_error_component_code import ApiV1PricingProductsUpdatePopErrorComponentCode
 from .api_v1_pricing_products_update_price_per_unit_error_component import (
     ApiV1PricingProductsUpdatePricePerUnitErrorComponent,
 )
@@ -105395,6 +105906,15 @@ from .api_v1_workspaces_archive_create_has_incompatible_kubeconfig_error_compone
 from .api_v1_workspaces_archive_create_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesArchiveCreateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_archive_create_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesArchiveCreateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_archive_create_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesArchiveCreateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_archive_create_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesArchiveCreateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_archive_create_kind_error_component import ApiV1WorkspacesArchiveCreateKindErrorComponent
 from .api_v1_workspaces_archive_create_kind_error_component_attr import (
     ApiV1WorkspacesArchiveCreateKindErrorComponentAttr,
@@ -105408,6 +105928,24 @@ from .api_v1_workspaces_archive_create_labels_error_component_attr import (
 )
 from .api_v1_workspaces_archive_create_labels_error_component_code import (
     ApiV1WorkspacesArchiveCreateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_archive_create_logs_enabled_error_component import (
+    ApiV1WorkspacesArchiveCreateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_archive_create_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesArchiveCreateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_archive_create_logs_enabled_error_component_code import (
+    ApiV1WorkspacesArchiveCreateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_archive_create_metrics_enabled_error_component import (
+    ApiV1WorkspacesArchiveCreateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_archive_create_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesArchiveCreateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_archive_create_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesArchiveCreateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_archive_create_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesArchiveCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -105788,6 +106326,15 @@ from .api_v1_workspaces_check_create_has_incompatible_kubeconfig_error_component
 from .api_v1_workspaces_check_create_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesCheckCreateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_check_create_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesCheckCreateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_check_create_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesCheckCreateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_check_create_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesCheckCreateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_check_create_kind_error_component import ApiV1WorkspacesCheckCreateKindErrorComponent
 from .api_v1_workspaces_check_create_kind_error_component_attr import ApiV1WorkspacesCheckCreateKindErrorComponentAttr
 from .api_v1_workspaces_check_create_kind_error_component_code import ApiV1WorkspacesCheckCreateKindErrorComponentCode
@@ -105797,6 +106344,24 @@ from .api_v1_workspaces_check_create_labels_error_component_attr import (
 )
 from .api_v1_workspaces_check_create_labels_error_component_code import (
     ApiV1WorkspacesCheckCreateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_check_create_logs_enabled_error_component import (
+    ApiV1WorkspacesCheckCreateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_check_create_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesCheckCreateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_check_create_logs_enabled_error_component_code import (
+    ApiV1WorkspacesCheckCreateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_check_create_metrics_enabled_error_component import (
+    ApiV1WorkspacesCheckCreateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_check_create_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesCheckCreateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_check_create_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesCheckCreateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_check_create_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesCheckCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -106123,12 +106688,35 @@ from .api_v1_workspaces_create_has_incompatible_kubeconfig_error_component_attr 
 from .api_v1_workspaces_create_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_create_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_create_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_create_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_create_kind_error_component import ApiV1WorkspacesCreateKindErrorComponent
 from .api_v1_workspaces_create_kind_error_component_attr import ApiV1WorkspacesCreateKindErrorComponentAttr
 from .api_v1_workspaces_create_kind_error_component_code import ApiV1WorkspacesCreateKindErrorComponentCode
 from .api_v1_workspaces_create_labels_error_component import ApiV1WorkspacesCreateLabelsErrorComponent
 from .api_v1_workspaces_create_labels_error_component_attr import ApiV1WorkspacesCreateLabelsErrorComponentAttr
 from .api_v1_workspaces_create_labels_error_component_code import ApiV1WorkspacesCreateLabelsErrorComponentCode
+from .api_v1_workspaces_create_logs_enabled_error_component import ApiV1WorkspacesCreateLogsEnabledErrorComponent
+from .api_v1_workspaces_create_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesCreateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_create_logs_enabled_error_component_code import (
+    ApiV1WorkspacesCreateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_create_metrics_enabled_error_component import ApiV1WorkspacesCreateMetricsEnabledErrorComponent
+from .api_v1_workspaces_create_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesCreateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_create_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesCreateMetricsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_create_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
 )
@@ -106442,6 +107030,15 @@ from .api_v1_workspaces_discover_create_has_incompatible_kubeconfig_error_compon
 from .api_v1_workspaces_discover_create_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesDiscoverCreateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_discover_create_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesDiscoverCreateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_discover_create_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesDiscoverCreateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_discover_create_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesDiscoverCreateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_discover_create_kind_error_component import ApiV1WorkspacesDiscoverCreateKindErrorComponent
 from .api_v1_workspaces_discover_create_kind_error_component_attr import (
     ApiV1WorkspacesDiscoverCreateKindErrorComponentAttr,
@@ -106455,6 +107052,24 @@ from .api_v1_workspaces_discover_create_labels_error_component_attr import (
 )
 from .api_v1_workspaces_discover_create_labels_error_component_code import (
     ApiV1WorkspacesDiscoverCreateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_discover_create_logs_enabled_error_component import (
+    ApiV1WorkspacesDiscoverCreateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_discover_create_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesDiscoverCreateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_discover_create_logs_enabled_error_component_code import (
+    ApiV1WorkspacesDiscoverCreateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_discover_create_metrics_enabled_error_component import (
+    ApiV1WorkspacesDiscoverCreateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_discover_create_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesDiscoverCreateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_discover_create_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesDiscoverCreateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_discover_create_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesDiscoverCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -106905,6 +107520,15 @@ from .api_v1_workspaces_logs_reload_create_has_incompatible_kubeconfig_error_com
 from .api_v1_workspaces_logs_reload_create_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_logs_reload_create_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_logs_reload_create_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_logs_reload_create_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_logs_reload_create_kind_error_component import ApiV1WorkspacesLogsReloadCreateKindErrorComponent
 from .api_v1_workspaces_logs_reload_create_kind_error_component_attr import (
     ApiV1WorkspacesLogsReloadCreateKindErrorComponentAttr,
@@ -106920,6 +107544,24 @@ from .api_v1_workspaces_logs_reload_create_labels_error_component_attr import (
 )
 from .api_v1_workspaces_logs_reload_create_labels_error_component_code import (
     ApiV1WorkspacesLogsReloadCreateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_logs_reload_create_logs_enabled_error_component import (
+    ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_logs_reload_create_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_logs_reload_create_logs_enabled_error_component_code import (
+    ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_logs_reload_create_metrics_enabled_error_component import (
+    ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_logs_reload_create_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_logs_reload_create_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_logs_reload_create_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -107314,6 +107956,15 @@ from .api_v1_workspaces_partial_update_has_incompatible_kubeconfig_error_compone
 from .api_v1_workspaces_partial_update_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_partial_update_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_partial_update_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_partial_update_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_partial_update_kind_error_component import ApiV1WorkspacesPartialUpdateKindErrorComponent
 from .api_v1_workspaces_partial_update_kind_error_component_attr import (
     ApiV1WorkspacesPartialUpdateKindErrorComponentAttr,
@@ -107327,6 +107978,24 @@ from .api_v1_workspaces_partial_update_labels_error_component_attr import (
 )
 from .api_v1_workspaces_partial_update_labels_error_component_code import (
     ApiV1WorkspacesPartialUpdateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_partial_update_logs_enabled_error_component import (
+    ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_partial_update_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_partial_update_logs_enabled_error_component_code import (
+    ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_partial_update_metrics_enabled_error_component import (
+    ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_partial_update_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_partial_update_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_partial_update_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -107713,6 +108382,15 @@ from .api_v1_workspaces_reconcile_create_has_incompatible_kubeconfig_error_compo
 from .api_v1_workspaces_reconcile_create_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesReconcileCreateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_reconcile_create_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesReconcileCreateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_reconcile_create_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesReconcileCreateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_reconcile_create_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesReconcileCreateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_reconcile_create_kind_error_component import ApiV1WorkspacesReconcileCreateKindErrorComponent
 from .api_v1_workspaces_reconcile_create_kind_error_component_attr import (
     ApiV1WorkspacesReconcileCreateKindErrorComponentAttr,
@@ -107728,6 +108406,24 @@ from .api_v1_workspaces_reconcile_create_labels_error_component_attr import (
 )
 from .api_v1_workspaces_reconcile_create_labels_error_component_code import (
     ApiV1WorkspacesReconcileCreateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_reconcile_create_logs_enabled_error_component import (
+    ApiV1WorkspacesReconcileCreateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_reconcile_create_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesReconcileCreateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_reconcile_create_logs_enabled_error_component_code import (
+    ApiV1WorkspacesReconcileCreateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_reconcile_create_metrics_enabled_error_component import (
+    ApiV1WorkspacesReconcileCreateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_reconcile_create_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesReconcileCreateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_reconcile_create_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesReconcileCreateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_reconcile_create_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesReconcileCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -108116,6 +108812,15 @@ from .api_v1_workspaces_reload_create_has_incompatible_kubeconfig_error_componen
 from .api_v1_workspaces_reload_create_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesReloadCreateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_reload_create_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesReloadCreateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_reload_create_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesReloadCreateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_reload_create_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesReloadCreateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_reload_create_kind_error_component import ApiV1WorkspacesReloadCreateKindErrorComponent
 from .api_v1_workspaces_reload_create_kind_error_component_attr import ApiV1WorkspacesReloadCreateKindErrorComponentAttr
 from .api_v1_workspaces_reload_create_kind_error_component_code import ApiV1WorkspacesReloadCreateKindErrorComponentCode
@@ -108125,6 +108830,24 @@ from .api_v1_workspaces_reload_create_labels_error_component_attr import (
 )
 from .api_v1_workspaces_reload_create_labels_error_component_code import (
     ApiV1WorkspacesReloadCreateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_reload_create_logs_enabled_error_component import (
+    ApiV1WorkspacesReloadCreateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_reload_create_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesReloadCreateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_reload_create_logs_enabled_error_component_code import (
+    ApiV1WorkspacesReloadCreateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_reload_create_metrics_enabled_error_component import (
+    ApiV1WorkspacesReloadCreateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_reload_create_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesReloadCreateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_reload_create_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesReloadCreateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_reload_create_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -108495,6 +109218,15 @@ from .api_v1_workspaces_repair_create_has_incompatible_kubeconfig_error_componen
 from .api_v1_workspaces_repair_create_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesRepairCreateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_repair_create_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesRepairCreateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_repair_create_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesRepairCreateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_repair_create_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesRepairCreateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_repair_create_kind_error_component import ApiV1WorkspacesRepairCreateKindErrorComponent
 from .api_v1_workspaces_repair_create_kind_error_component_attr import ApiV1WorkspacesRepairCreateKindErrorComponentAttr
 from .api_v1_workspaces_repair_create_kind_error_component_code import ApiV1WorkspacesRepairCreateKindErrorComponentCode
@@ -108504,6 +109236,24 @@ from .api_v1_workspaces_repair_create_labels_error_component_attr import (
 )
 from .api_v1_workspaces_repair_create_labels_error_component_code import (
     ApiV1WorkspacesRepairCreateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_repair_create_logs_enabled_error_component import (
+    ApiV1WorkspacesRepairCreateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_repair_create_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesRepairCreateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_repair_create_logs_enabled_error_component_code import (
+    ApiV1WorkspacesRepairCreateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_repair_create_metrics_enabled_error_component import (
+    ApiV1WorkspacesRepairCreateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_repair_create_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesRepairCreateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_repair_create_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesRepairCreateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_repair_create_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesRepairCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -108876,6 +109626,15 @@ from .api_v1_workspaces_run_discovery_create_has_incompatible_kubeconfig_error_c
 from .api_v1_workspaces_run_discovery_create_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_run_discovery_create_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_run_discovery_create_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_run_discovery_create_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_run_discovery_create_kind_error_component import (
     ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent,
 )
@@ -108893,6 +109652,24 @@ from .api_v1_workspaces_run_discovery_create_labels_error_component_attr import 
 )
 from .api_v1_workspaces_run_discovery_create_labels_error_component_code import (
     ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_run_discovery_create_logs_enabled_error_component import (
+    ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_run_discovery_create_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_run_discovery_create_logs_enabled_error_component_code import (
+    ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_run_discovery_create_metrics_enabled_error_component import (
+    ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_run_discovery_create_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_run_discovery_create_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_run_discovery_create_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -109255,12 +110032,35 @@ from .api_v1_workspaces_update_has_incompatible_kubeconfig_error_component_attr 
 from .api_v1_workspaces_update_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesUpdateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_update_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesUpdateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_update_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesUpdateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_update_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesUpdateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_update_kind_error_component import ApiV1WorkspacesUpdateKindErrorComponent
 from .api_v1_workspaces_update_kind_error_component_attr import ApiV1WorkspacesUpdateKindErrorComponentAttr
 from .api_v1_workspaces_update_kind_error_component_code import ApiV1WorkspacesUpdateKindErrorComponentCode
 from .api_v1_workspaces_update_labels_error_component import ApiV1WorkspacesUpdateLabelsErrorComponent
 from .api_v1_workspaces_update_labels_error_component_attr import ApiV1WorkspacesUpdateLabelsErrorComponentAttr
 from .api_v1_workspaces_update_labels_error_component_code import ApiV1WorkspacesUpdateLabelsErrorComponentCode
+from .api_v1_workspaces_update_logs_enabled_error_component import ApiV1WorkspacesUpdateLogsEnabledErrorComponent
+from .api_v1_workspaces_update_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesUpdateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_update_logs_enabled_error_component_code import (
+    ApiV1WorkspacesUpdateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_update_metrics_enabled_error_component import ApiV1WorkspacesUpdateMetricsEnabledErrorComponent
+from .api_v1_workspaces_update_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesUpdateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_update_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesUpdateMetricsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_update_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesUpdateMonitoringWorkspaceAllowlistIdsErrorComponent,
 )
@@ -109518,6 +110318,15 @@ from .api_v1_workspaces_update_secrets_poly_partial_update_has_incompatible_kube
 from .api_v1_workspaces_update_secrets_poly_partial_update_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesUpdateSecretsPolyPartialUpdateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_update_secrets_poly_partial_update_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesUpdateSecretsPolyPartialUpdateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_update_secrets_poly_partial_update_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesUpdateSecretsPolyPartialUpdateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_update_secrets_poly_partial_update_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesUpdateSecretsPolyPartialUpdateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_update_secrets_poly_partial_update_kind_error_component import (
     ApiV1WorkspacesUpdateSecretsPolyPartialUpdateKindErrorComponent,
 )
@@ -109535,6 +110344,24 @@ from .api_v1_workspaces_update_secrets_poly_partial_update_labels_error_componen
 )
 from .api_v1_workspaces_update_secrets_poly_partial_update_labels_error_component_code import (
     ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_update_secrets_poly_partial_update_logs_enabled_error_component import (
+    ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_update_secrets_poly_partial_update_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_update_secrets_poly_partial_update_logs_enabled_error_component_code import (
+    ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_update_secrets_poly_partial_update_metrics_enabled_error_component import (
+    ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_update_secrets_poly_partial_update_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_update_secrets_poly_partial_update_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_update_secrets_poly_partial_update_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -109991,6 +110818,15 @@ from .api_v1_workspaces_update_workspace_poly_partial_update_has_incompatible_ku
 from .api_v1_workspaces_update_workspace_poly_partial_update_has_incompatible_kubeconfig_error_component_code import (
     ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateHasIncompatibleKubeconfigErrorComponentCode,
 )
+from .api_v1_workspaces_update_workspace_poly_partial_update_k8s_addons_enabled_error_component import (
+    ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateK8SAddonsEnabledErrorComponent,
+)
+from .api_v1_workspaces_update_workspace_poly_partial_update_k8s_addons_enabled_error_component_attr import (
+    ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateK8SAddonsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_update_workspace_poly_partial_update_k8s_addons_enabled_error_component_code import (
+    ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateK8SAddonsEnabledErrorComponentCode,
+)
 from .api_v1_workspaces_update_workspace_poly_partial_update_kind_error_component import (
     ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateKindErrorComponent,
 )
@@ -110008,6 +110844,24 @@ from .api_v1_workspaces_update_workspace_poly_partial_update_labels_error_compon
 )
 from .api_v1_workspaces_update_workspace_poly_partial_update_labels_error_component_code import (
     ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLabelsErrorComponentCode,
+)
+from .api_v1_workspaces_update_workspace_poly_partial_update_logs_enabled_error_component import (
+    ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLogsEnabledErrorComponent,
+)
+from .api_v1_workspaces_update_workspace_poly_partial_update_logs_enabled_error_component_attr import (
+    ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLogsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_update_workspace_poly_partial_update_logs_enabled_error_component_code import (
+    ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLogsEnabledErrorComponentCode,
+)
+from .api_v1_workspaces_update_workspace_poly_partial_update_metrics_enabled_error_component import (
+    ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMetricsEnabledErrorComponent,
+)
+from .api_v1_workspaces_update_workspace_poly_partial_update_metrics_enabled_error_component_attr import (
+    ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMetricsEnabledErrorComponentAttr,
+)
+from .api_v1_workspaces_update_workspace_poly_partial_update_metrics_enabled_error_component_code import (
+    ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMetricsEnabledErrorComponentCode,
 )
 from .api_v1_workspaces_update_workspace_poly_partial_update_monitoring_workspace_allowlist_ids_error_component import (
     ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -113288,6 +114142,7 @@ from .error_response_415 import ErrorResponse415
 from .error_response_429 import ErrorResponse429
 from .error_response_500 import ErrorResponse500
 from .error_response_502 import ErrorResponse502
+from .exposure_type_enum import ExposureTypeEnum
 from .external_credential import ExternalCredential
 from .external_credential_request import ExternalCredentialRequest
 from .external_traffic_policy_enum import ExternalTrafficPolicyEnum
@@ -113429,6 +114284,7 @@ from .k8s_addon_deleted_by_user_type_0 import K8SAddonDeletedByUserType0
 from .k8s_addon_last_action_run_type_0 import K8SAddonLastActionRunType0
 from .k8s_addon_list import K8SAddonList
 from .k8s_addon_list_active_condition_instances_item import K8SAddonListActiveConditionInstancesItem
+from .k8s_addon_list_available_versions_item import K8SAddonListAvailableVersionsItem
 from .k8s_addon_list_catalogue_app_type_0 import K8SAddonListCatalogueAppType0
 from .k8s_addon_list_created import K8SAddonListCreated
 from .k8s_addon_list_created_created_by_type_0 import K8SAddonListCreatedCreatedByType0
@@ -113585,6 +114441,7 @@ from .k8s_worker_pool_list_created import K8SWorkerPoolListCreated
 from .k8s_worker_pool_list_created_created_by_type_0 import K8SWorkerPoolListCreatedCreatedByType0
 from .k8s_worker_pool_list_organization_type_0 import K8SWorkerPoolListOrganizationType0
 from .k8s_worker_pool_list_organization_type_0_created_by_type_0 import K8SWorkerPoolListOrganizationType0CreatedByType0
+from .k8s_worker_pool_list_pop_type_0 import K8SWorkerPoolListPopType0
 from .k8s_worker_pool_list_product_type_0 import K8SWorkerPoolListProductType0
 from .k8s_worker_pool_list_provider_account_type_0 import K8SWorkerPoolListProviderAccountType0
 from .k8s_worker_pool_list_workspace_type_0 import K8SWorkerPoolListWorkspaceType0
@@ -113607,6 +114464,8 @@ from .loadbalancer_instance_created_created_by_type_0 import LoadbalancerInstanc
 from .loadbalancer_instance_deleted_by_user_type_0 import LoadbalancerInstanceDeletedByUserType0
 from .loadbalancer_instance_deployment import LoadbalancerInstanceDeployment
 from .loadbalancer_instance_deployment_summary import LoadbalancerInstanceDeploymentSummary
+from .loadbalancer_instance_effective_haproxy_defaults import LoadbalancerInstanceEffectiveHaproxyDefaults
+from .loadbalancer_instance_effective_resources import LoadbalancerInstanceEffectiveResources
 from .loadbalancer_instance_last_action_run_type_0 import LoadbalancerInstanceLastActionRunType0
 from .loadbalancer_instance_list import LoadbalancerInstanceList
 from .loadbalancer_instance_list_active_condition_instances_item import (
@@ -124341,6 +125200,9 @@ __all__ = (
     "ApiV1CatalogueAppsArchiveCreateLastReconciliationDurationSecondsErrorComponent",
     "ApiV1CatalogueAppsArchiveCreateLastReconciliationDurationSecondsErrorComponentAttr",
     "ApiV1CatalogueAppsArchiveCreateLastReconciliationDurationSecondsErrorComponentCode",
+    "ApiV1CatalogueAppsArchiveCreateMaintainerIdErrorComponent",
+    "ApiV1CatalogueAppsArchiveCreateMaintainerIdErrorComponentAttr",
+    "ApiV1CatalogueAppsArchiveCreateMaintainerIdErrorComponentCode",
     "ApiV1CatalogueAppsArchiveCreateManagedByContentTypeErrorComponent",
     "ApiV1CatalogueAppsArchiveCreateManagedByContentTypeErrorComponentAttr",
     "ApiV1CatalogueAppsArchiveCreateManagedByContentTypeErrorComponentCode",
@@ -124489,6 +125351,9 @@ __all__ = (
     "ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent",
     "ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponentAttr",
     "ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponentCode",
+    "ApiV1CatalogueAppsCreateMaintainerIdErrorComponent",
+    "ApiV1CatalogueAppsCreateMaintainerIdErrorComponentAttr",
+    "ApiV1CatalogueAppsCreateMaintainerIdErrorComponentCode",
     "ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent",
     "ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponentAttr",
     "ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponentCode",
@@ -124594,6 +125459,9 @@ __all__ = (
     "ApiV1CatalogueAppsListKindErrorComponentAttr",
     "ApiV1CatalogueAppsListKindErrorComponentCode",
     "ApiV1CatalogueAppsListKindItem",
+    "ApiV1CatalogueAppsListMaintainerErrorComponent",
+    "ApiV1CatalogueAppsListMaintainerErrorComponentAttr",
+    "ApiV1CatalogueAppsListMaintainerErrorComponentCode",
     "ApiV1CatalogueAppsListNameErrorComponent",
     "ApiV1CatalogueAppsListNameErrorComponentAttr",
     "ApiV1CatalogueAppsListNameErrorComponentCode",
@@ -124683,6 +125551,9 @@ __all__ = (
     "ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent",
     "ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponentAttr",
     "ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponentCode",
+    "ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent",
+    "ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponentAttr",
+    "ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponentCode",
     "ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent",
     "ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponentAttr",
     "ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponentCode",
@@ -124831,6 +125702,9 @@ __all__ = (
     "ApiV1CatalogueAppsSyncReleasesCreateLastReconciliationDurationSecondsErrorComponent",
     "ApiV1CatalogueAppsSyncReleasesCreateLastReconciliationDurationSecondsErrorComponentAttr",
     "ApiV1CatalogueAppsSyncReleasesCreateLastReconciliationDurationSecondsErrorComponentCode",
+    "ApiV1CatalogueAppsSyncReleasesCreateMaintainerIdErrorComponent",
+    "ApiV1CatalogueAppsSyncReleasesCreateMaintainerIdErrorComponentAttr",
+    "ApiV1CatalogueAppsSyncReleasesCreateMaintainerIdErrorComponentCode",
     "ApiV1CatalogueAppsSyncReleasesCreateManagedByContentTypeErrorComponent",
     "ApiV1CatalogueAppsSyncReleasesCreateManagedByContentTypeErrorComponentAttr",
     "ApiV1CatalogueAppsSyncReleasesCreateManagedByContentTypeErrorComponentCode",
@@ -124979,6 +125853,9 @@ __all__ = (
     "ApiV1CatalogueAppsSyncVulnerabilityProductsCreateLastReconciliationDurationSecondsErrorComponent",
     "ApiV1CatalogueAppsSyncVulnerabilityProductsCreateLastReconciliationDurationSecondsErrorComponentAttr",
     "ApiV1CatalogueAppsSyncVulnerabilityProductsCreateLastReconciliationDurationSecondsErrorComponentCode",
+    "ApiV1CatalogueAppsSyncVulnerabilityProductsCreateMaintainerIdErrorComponent",
+    "ApiV1CatalogueAppsSyncVulnerabilityProductsCreateMaintainerIdErrorComponentAttr",
+    "ApiV1CatalogueAppsSyncVulnerabilityProductsCreateMaintainerIdErrorComponentCode",
     "ApiV1CatalogueAppsSyncVulnerabilityProductsCreateManagedByContentTypeErrorComponent",
     "ApiV1CatalogueAppsSyncVulnerabilityProductsCreateManagedByContentTypeErrorComponentAttr",
     "ApiV1CatalogueAppsSyncVulnerabilityProductsCreateManagedByContentTypeErrorComponentCode",
@@ -125127,6 +126004,9 @@ __all__ = (
     "ApiV1CatalogueAppsUpdateLastReconciliationDurationSecondsErrorComponent",
     "ApiV1CatalogueAppsUpdateLastReconciliationDurationSecondsErrorComponentAttr",
     "ApiV1CatalogueAppsUpdateLastReconciliationDurationSecondsErrorComponentCode",
+    "ApiV1CatalogueAppsUpdateMaintainerIdErrorComponent",
+    "ApiV1CatalogueAppsUpdateMaintainerIdErrorComponentAttr",
+    "ApiV1CatalogueAppsUpdateMaintainerIdErrorComponentCode",
     "ApiV1CatalogueAppsUpdateManagedByContentTypeErrorComponent",
     "ApiV1CatalogueAppsUpdateManagedByContentTypeErrorComponentAttr",
     "ApiV1CatalogueAppsUpdateManagedByContentTypeErrorComponentCode",
@@ -133874,6 +134754,9 @@ __all__ = (
     "ApiV1HostsListUpdatedAtErrorComponentAttr",
     "ApiV1HostsListUpdatedAtErrorComponentCode",
     "ApiV1HostsListValidationError",
+    "ApiV1HostsListWorkerPoolErrorComponent",
+    "ApiV1HostsListWorkerPoolErrorComponentAttr",
+    "ApiV1HostsListWorkerPoolErrorComponentCode",
     "ApiV1HostsListWorkspacesErrorComponent",
     "ApiV1HostsListWorkspacesErrorComponentAttr",
     "ApiV1HostsListWorkspacesErrorComponentCode",
@@ -139765,6 +140648,9 @@ __all__ = (
     "ApiV1KubernetesControlplanesArchiveCreateArchivedReasonErrorComponent",
     "ApiV1KubernetesControlplanesArchiveCreateArchivedReasonErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreateArchivedReasonErrorComponentCode",
+    "ApiV1KubernetesControlplanesArchiveCreateAuditLoggingEnabledErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateAuditLoggingEnabledErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateAuditLoggingEnabledErrorComponentCode",
     "ApiV1KubernetesControlplanesArchiveCreateClusterDomainErrorComponent",
     "ApiV1KubernetesControlplanesArchiveCreateClusterDomainErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreateClusterDomainErrorComponentCode",
@@ -139780,6 +140666,12 @@ __all__ = (
     "ApiV1KubernetesControlplanesArchiveCreateDisplayNameErrorComponent",
     "ApiV1KubernetesControlplanesArchiveCreateDisplayNameErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreateDisplayNameErrorComponentCode",
+    "ApiV1KubernetesControlplanesArchiveCreateExposureTypeErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateExposureTypeErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateExposureTypeErrorComponentCode",
+    "ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponentCode",
     "ApiV1KubernetesControlplanesArchiveCreateKindErrorComponent",
     "ApiV1KubernetesControlplanesArchiveCreateKindErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreateKindErrorComponentCode",
@@ -139798,6 +140690,18 @@ __all__ = (
     "ApiV1KubernetesControlplanesArchiveCreateNonFieldErrorsErrorComponent",
     "ApiV1KubernetesControlplanesArchiveCreateNonFieldErrorsErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreateNonFieldErrorsErrorComponentCode",
+    "ApiV1KubernetesControlplanesArchiveCreateOrganizationIdErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateOrganizationIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateOrganizationIdErrorComponentCode",
+    "ApiV1KubernetesControlplanesArchiveCreateParentGatewayNameErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateParentGatewayNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateParentGatewayNameErrorComponentCode",
+    "ApiV1KubernetesControlplanesArchiveCreateParentGatewayNamespaceErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateParentGatewayNamespaceErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateParentGatewayNamespaceErrorComponentCode",
+    "ApiV1KubernetesControlplanesArchiveCreateParentGatewaySectionNameErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateParentGatewaySectionNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateParentGatewaySectionNameErrorComponentCode",
     "ApiV1KubernetesControlplanesArchiveCreatePersistenceSizeErrorComponent",
     "ApiV1KubernetesControlplanesArchiveCreatePersistenceSizeErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreatePersistenceSizeErrorComponentCode",
@@ -139816,9 +140720,15 @@ __all__ = (
     "ApiV1KubernetesControlplanesArchiveCreateReconciliationEnabledErrorComponent",
     "ApiV1KubernetesControlplanesArchiveCreateReconciliationEnabledErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreateReconciliationEnabledErrorComponentCode",
+    "ApiV1KubernetesControlplanesArchiveCreateRegionIdErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateRegionIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateRegionIdErrorComponentCode",
     "ApiV1KubernetesControlplanesArchiveCreateScopeErrorComponent",
     "ApiV1KubernetesControlplanesArchiveCreateScopeErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreateScopeErrorComponentCode",
+    "ApiV1KubernetesControlplanesArchiveCreateSecretsEncryptionEnabledErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateSecretsEncryptionEnabledErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateSecretsEncryptionEnabledErrorComponentCode",
     "ApiV1KubernetesControlplanesArchiveCreateSlaAvailabilityErrorComponent",
     "ApiV1KubernetesControlplanesArchiveCreateSlaAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreateSlaAvailabilityErrorComponentCode",
@@ -139838,6 +140748,9 @@ __all__ = (
     "ApiV1KubernetesControlplanesArchiveCreateTargetAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesArchiveCreateTargetAvailabilityErrorComponentCode",
     "ApiV1KubernetesControlplanesArchiveCreateValidationError",
+    "ApiV1KubernetesControlplanesArchiveCreateWorkspaceIdErrorComponent",
+    "ApiV1KubernetesControlplanesArchiveCreateWorkspaceIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesArchiveCreateWorkspaceIdErrorComponentCode",
     "ApiV1KubernetesControlplanesCreateActualAvailabilityErrorComponent",
     "ApiV1KubernetesControlplanesCreateActualAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateActualAvailabilityErrorComponentCode",
@@ -139853,6 +140766,9 @@ __all__ = (
     "ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponent",
     "ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponentCode",
+    "ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent",
+    "ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponentCode",
     "ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent",
     "ApiV1KubernetesControlplanesCreateClusterDomainErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateClusterDomainErrorComponentCode",
@@ -139868,6 +140784,12 @@ __all__ = (
     "ApiV1KubernetesControlplanesCreateDisplayNameErrorComponent",
     "ApiV1KubernetesControlplanesCreateDisplayNameErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateDisplayNameErrorComponentCode",
+    "ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent",
+    "ApiV1KubernetesControlplanesCreateExposureTypeErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateExposureTypeErrorComponentCode",
+    "ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent",
+    "ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponentCode",
     "ApiV1KubernetesControlplanesCreateKindErrorComponent",
     "ApiV1KubernetesControlplanesCreateKindErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateKindErrorComponentCode",
@@ -139886,6 +140808,18 @@ __all__ = (
     "ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponent",
     "ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponentCode",
+    "ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent",
+    "ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponentCode",
+    "ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent",
+    "ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponentCode",
+    "ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent",
+    "ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponentCode",
+    "ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent",
+    "ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponentCode",
     "ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent",
     "ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponentCode",
@@ -139904,9 +140838,15 @@ __all__ = (
     "ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponent",
     "ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorComponentCode",
+    "ApiV1KubernetesControlplanesCreateRegionIdErrorComponent",
+    "ApiV1KubernetesControlplanesCreateRegionIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateRegionIdErrorComponentCode",
     "ApiV1KubernetesControlplanesCreateScopeErrorComponent",
     "ApiV1KubernetesControlplanesCreateScopeErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateScopeErrorComponentCode",
+    "ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent",
+    "ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponentCode",
     "ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent",
     "ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponentCode",
@@ -139926,6 +140866,9 @@ __all__ = (
     "ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesCreateTargetAvailabilityErrorComponentCode",
     "ApiV1KubernetesControlplanesCreateValidationError",
+    "ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent",
+    "ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponentCode",
     "ApiV1KubernetesControlplanesListCreatedAtErrorComponent",
     "ApiV1KubernetesControlplanesListCreatedAtErrorComponentAttr",
     "ApiV1KubernetesControlplanesListCreatedAtErrorComponentCode",
@@ -140000,6 +140943,9 @@ __all__ = (
     "ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponent",
     "ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorComponentCode",
+    "ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponentCode",
     "ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent",
     "ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponentCode",
@@ -140015,6 +140961,12 @@ __all__ = (
     "ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponent",
     "ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdateDisplayNameErrorComponentCode",
+    "ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponentCode",
+    "ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponentCode",
     "ApiV1KubernetesControlplanesPartialUpdateKindErrorComponent",
     "ApiV1KubernetesControlplanesPartialUpdateKindErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdateKindErrorComponentCode",
@@ -140033,6 +140985,18 @@ __all__ = (
     "ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent",
     "ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponentCode",
+    "ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponentCode",
+    "ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponentCode",
+    "ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponentCode",
+    "ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponentCode",
     "ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent",
     "ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponentCode",
@@ -140051,9 +141015,15 @@ __all__ = (
     "ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponent",
     "ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledErrorComponentCode",
+    "ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponentCode",
     "ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponent",
     "ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponentCode",
+    "ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponentCode",
     "ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent",
     "ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponentCode",
@@ -140073,6 +141043,9 @@ __all__ = (
     "ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesPartialUpdateTargetAvailabilityErrorComponentCode",
     "ApiV1KubernetesControlplanesPartialUpdateValidationError",
+    "ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent",
+    "ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponentCode",
     "ApiV1KubernetesControlplanesUpdateActualAvailabilityErrorComponent",
     "ApiV1KubernetesControlplanesUpdateActualAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateActualAvailabilityErrorComponentCode",
@@ -140088,6 +141061,9 @@ __all__ = (
     "ApiV1KubernetesControlplanesUpdateArchivedReasonErrorComponent",
     "ApiV1KubernetesControlplanesUpdateArchivedReasonErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateArchivedReasonErrorComponentCode",
+    "ApiV1KubernetesControlplanesUpdateAuditLoggingEnabledErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateAuditLoggingEnabledErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateAuditLoggingEnabledErrorComponentCode",
     "ApiV1KubernetesControlplanesUpdateClusterDomainErrorComponent",
     "ApiV1KubernetesControlplanesUpdateClusterDomainErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateClusterDomainErrorComponentCode",
@@ -140103,6 +141079,12 @@ __all__ = (
     "ApiV1KubernetesControlplanesUpdateDisplayNameErrorComponent",
     "ApiV1KubernetesControlplanesUpdateDisplayNameErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateDisplayNameErrorComponentCode",
+    "ApiV1KubernetesControlplanesUpdateExposureTypeErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateExposureTypeErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateExposureTypeErrorComponentCode",
+    "ApiV1KubernetesControlplanesUpdateGatewayClassNameErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateGatewayClassNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateGatewayClassNameErrorComponentCode",
     "ApiV1KubernetesControlplanesUpdateKindErrorComponent",
     "ApiV1KubernetesControlplanesUpdateKindErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateKindErrorComponentCode",
@@ -140121,6 +141103,18 @@ __all__ = (
     "ApiV1KubernetesControlplanesUpdateNonFieldErrorsErrorComponent",
     "ApiV1KubernetesControlplanesUpdateNonFieldErrorsErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateNonFieldErrorsErrorComponentCode",
+    "ApiV1KubernetesControlplanesUpdateOrganizationIdErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateOrganizationIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateOrganizationIdErrorComponentCode",
+    "ApiV1KubernetesControlplanesUpdateParentGatewayNameErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateParentGatewayNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateParentGatewayNameErrorComponentCode",
+    "ApiV1KubernetesControlplanesUpdateParentGatewayNamespaceErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateParentGatewayNamespaceErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateParentGatewayNamespaceErrorComponentCode",
+    "ApiV1KubernetesControlplanesUpdateParentGatewaySectionNameErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateParentGatewaySectionNameErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateParentGatewaySectionNameErrorComponentCode",
     "ApiV1KubernetesControlplanesUpdatePersistenceSizeErrorComponent",
     "ApiV1KubernetesControlplanesUpdatePersistenceSizeErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdatePersistenceSizeErrorComponentCode",
@@ -140139,9 +141133,15 @@ __all__ = (
     "ApiV1KubernetesControlplanesUpdateReconciliationEnabledErrorComponent",
     "ApiV1KubernetesControlplanesUpdateReconciliationEnabledErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateReconciliationEnabledErrorComponentCode",
+    "ApiV1KubernetesControlplanesUpdateRegionIdErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateRegionIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateRegionIdErrorComponentCode",
     "ApiV1KubernetesControlplanesUpdateScopeErrorComponent",
     "ApiV1KubernetesControlplanesUpdateScopeErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateScopeErrorComponentCode",
+    "ApiV1KubernetesControlplanesUpdateSecretsEncryptionEnabledErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateSecretsEncryptionEnabledErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateSecretsEncryptionEnabledErrorComponentCode",
     "ApiV1KubernetesControlplanesUpdateSlaAvailabilityErrorComponent",
     "ApiV1KubernetesControlplanesUpdateSlaAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateSlaAvailabilityErrorComponentCode",
@@ -140161,6 +141161,9 @@ __all__ = (
     "ApiV1KubernetesControlplanesUpdateTargetAvailabilityErrorComponentAttr",
     "ApiV1KubernetesControlplanesUpdateTargetAvailabilityErrorComponentCode",
     "ApiV1KubernetesControlplanesUpdateValidationError",
+    "ApiV1KubernetesControlplanesUpdateWorkspaceIdErrorComponent",
+    "ApiV1KubernetesControlplanesUpdateWorkspaceIdErrorComponentAttr",
+    "ApiV1KubernetesControlplanesUpdateWorkspaceIdErrorComponentCode",
     "ApiV1KubernetesVolumesArchiveCreateAccessModesErrorComponent",
     "ApiV1KubernetesVolumesArchiveCreateAccessModesErrorComponentAttr",
     "ApiV1KubernetesVolumesArchiveCreateAccessModesErrorComponentCode",
@@ -141298,6 +142301,9 @@ __all__ = (
     "ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponent",
     "ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponentAttr",
     "ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponentCode",
+    "ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent",
+    "ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponentAttr",
+    "ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponentCode",
     "ApiV1LoadbalancersInstancesCreateLabelsErrorComponent",
     "ApiV1LoadbalancersInstancesCreateLabelsErrorComponentAttr",
     "ApiV1LoadbalancersInstancesCreateLabelsErrorComponentCode",
@@ -141310,6 +142316,9 @@ __all__ = (
     "ApiV1LoadbalancersInstancesCreatePortsErrorComponent",
     "ApiV1LoadbalancersInstancesCreatePortsErrorComponentAttr",
     "ApiV1LoadbalancersInstancesCreatePortsErrorComponentCode",
+    "ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent",
+    "ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponentAttr",
+    "ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponentCode",
     "ApiV1LoadbalancersInstancesCreateValidationError",
     "ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponent",
     "ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponentAttr",
@@ -141385,6 +142394,9 @@ __all__ = (
     "ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponent",
     "ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponentAttr",
     "ApiV1LoadbalancersInstancesPartialUpdateConfigErrorComponentCode",
+    "ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent",
+    "ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponentAttr",
+    "ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponentCode",
     "ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent",
     "ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponentAttr",
     "ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponentCode",
@@ -141394,6 +142406,9 @@ __all__ = (
     "ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent",
     "ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponentAttr",
     "ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponentCode",
+    "ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent",
+    "ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponentAttr",
+    "ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponentCode",
     "ApiV1LoadbalancersInstancesPartialUpdateValidationError",
     "ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent",
     "ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponentAttr",
@@ -141404,6 +142419,9 @@ __all__ = (
     "ApiV1LoadbalancersInstancesUpdateConfigErrorComponent",
     "ApiV1LoadbalancersInstancesUpdateConfigErrorComponentAttr",
     "ApiV1LoadbalancersInstancesUpdateConfigErrorComponentCode",
+    "ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent",
+    "ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponentAttr",
+    "ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponentCode",
     "ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent",
     "ApiV1LoadbalancersInstancesUpdateLabelsErrorComponentAttr",
     "ApiV1LoadbalancersInstancesUpdateLabelsErrorComponentCode",
@@ -141413,6 +142431,9 @@ __all__ = (
     "ApiV1LoadbalancersInstancesUpdatePortsErrorComponent",
     "ApiV1LoadbalancersInstancesUpdatePortsErrorComponentAttr",
     "ApiV1LoadbalancersInstancesUpdatePortsErrorComponentCode",
+    "ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent",
+    "ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponentAttr",
+    "ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponentCode",
     "ApiV1LoadbalancersInstancesUpdateValidationError",
     "ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent",
     "ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponentAttr",
@@ -149297,6 +150318,9 @@ __all__ = (
     "ApiV1PricingProductsArchiveCreatePlatformServiceErrorComponent",
     "ApiV1PricingProductsArchiveCreatePlatformServiceErrorComponentAttr",
     "ApiV1PricingProductsArchiveCreatePlatformServiceErrorComponentCode",
+    "ApiV1PricingProductsArchiveCreatePopErrorComponent",
+    "ApiV1PricingProductsArchiveCreatePopErrorComponentAttr",
+    "ApiV1PricingProductsArchiveCreatePopErrorComponentCode",
     "ApiV1PricingProductsArchiveCreatePricePerUnitErrorComponent",
     "ApiV1PricingProductsArchiveCreatePricePerUnitErrorComponentAttr",
     "ApiV1PricingProductsArchiveCreatePricePerUnitErrorComponentCode",
@@ -149382,6 +150406,9 @@ __all__ = (
     "ApiV1PricingProductsCreatePlatformServiceErrorComponent",
     "ApiV1PricingProductsCreatePlatformServiceErrorComponentAttr",
     "ApiV1PricingProductsCreatePlatformServiceErrorComponentCode",
+    "ApiV1PricingProductsCreatePopErrorComponent",
+    "ApiV1PricingProductsCreatePopErrorComponentAttr",
+    "ApiV1PricingProductsCreatePopErrorComponentCode",
     "ApiV1PricingProductsCreatePricePerUnitErrorComponent",
     "ApiV1PricingProductsCreatePricePerUnitErrorComponentAttr",
     "ApiV1PricingProductsCreatePricePerUnitErrorComponentCode",
@@ -149493,6 +150520,9 @@ __all__ = (
     "ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponent",
     "ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponentAttr",
     "ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponentCode",
+    "ApiV1PricingProductsPartialUpdatePopErrorComponent",
+    "ApiV1PricingProductsPartialUpdatePopErrorComponentAttr",
+    "ApiV1PricingProductsPartialUpdatePopErrorComponentCode",
     "ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent",
     "ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponentAttr",
     "ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponentCode",
@@ -149578,6 +150608,9 @@ __all__ = (
     "ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponent",
     "ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponentAttr",
     "ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponentCode",
+    "ApiV1PricingProductsReconcileCreatePopErrorComponent",
+    "ApiV1PricingProductsReconcileCreatePopErrorComponentAttr",
+    "ApiV1PricingProductsReconcileCreatePopErrorComponentCode",
     "ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent",
     "ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponentAttr",
     "ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponentCode",
@@ -149663,6 +150696,9 @@ __all__ = (
     "ApiV1PricingProductsUpdatePlatformServiceErrorComponent",
     "ApiV1PricingProductsUpdatePlatformServiceErrorComponentAttr",
     "ApiV1PricingProductsUpdatePlatformServiceErrorComponentCode",
+    "ApiV1PricingProductsUpdatePopErrorComponent",
+    "ApiV1PricingProductsUpdatePopErrorComponentAttr",
+    "ApiV1PricingProductsUpdatePopErrorComponentCode",
     "ApiV1PricingProductsUpdatePricePerUnitErrorComponent",
     "ApiV1PricingProductsUpdatePricePerUnitErrorComponentAttr",
     "ApiV1PricingProductsUpdatePricePerUnitErrorComponentCode",
@@ -156547,12 +157583,21 @@ __all__ = (
     "ApiV1WorkspacesArchiveCreateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesArchiveCreateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesArchiveCreateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesArchiveCreateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesArchiveCreateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesArchiveCreateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesArchiveCreateKindErrorComponent",
     "ApiV1WorkspacesArchiveCreateKindErrorComponentAttr",
     "ApiV1WorkspacesArchiveCreateKindErrorComponentCode",
     "ApiV1WorkspacesArchiveCreateLabelsErrorComponent",
     "ApiV1WorkspacesArchiveCreateLabelsErrorComponentAttr",
     "ApiV1WorkspacesArchiveCreateLabelsErrorComponentCode",
+    "ApiV1WorkspacesArchiveCreateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesArchiveCreateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesArchiveCreateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesArchiveCreateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesArchiveCreateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesArchiveCreateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesArchiveCreateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesArchiveCreateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesArchiveCreateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -156686,12 +157731,21 @@ __all__ = (
     "ApiV1WorkspacesCheckCreateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesCheckCreateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesCheckCreateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesCheckCreateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesCheckCreateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesCheckCreateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesCheckCreateKindErrorComponent",
     "ApiV1WorkspacesCheckCreateKindErrorComponentAttr",
     "ApiV1WorkspacesCheckCreateKindErrorComponentCode",
     "ApiV1WorkspacesCheckCreateLabelsErrorComponent",
     "ApiV1WorkspacesCheckCreateLabelsErrorComponentAttr",
     "ApiV1WorkspacesCheckCreateLabelsErrorComponentCode",
+    "ApiV1WorkspacesCheckCreateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesCheckCreateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesCheckCreateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesCheckCreateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesCheckCreateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesCheckCreateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesCheckCreateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesCheckCreateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesCheckCreateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -156825,12 +157879,21 @@ __all__ = (
     "ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesCreateKindErrorComponent",
     "ApiV1WorkspacesCreateKindErrorComponentAttr",
     "ApiV1WorkspacesCreateKindErrorComponentCode",
     "ApiV1WorkspacesCreateLabelsErrorComponent",
     "ApiV1WorkspacesCreateLabelsErrorComponentAttr",
     "ApiV1WorkspacesCreateLabelsErrorComponentCode",
+    "ApiV1WorkspacesCreateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesCreateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesCreateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesCreateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesCreateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesCreateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -156964,12 +158027,21 @@ __all__ = (
     "ApiV1WorkspacesDiscoverCreateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesDiscoverCreateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesDiscoverCreateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesDiscoverCreateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesDiscoverCreateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesDiscoverCreateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesDiscoverCreateKindErrorComponent",
     "ApiV1WorkspacesDiscoverCreateKindErrorComponentAttr",
     "ApiV1WorkspacesDiscoverCreateKindErrorComponentCode",
     "ApiV1WorkspacesDiscoverCreateLabelsErrorComponent",
     "ApiV1WorkspacesDiscoverCreateLabelsErrorComponentAttr",
     "ApiV1WorkspacesDiscoverCreateLabelsErrorComponentCode",
+    "ApiV1WorkspacesDiscoverCreateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesDiscoverCreateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesDiscoverCreateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesDiscoverCreateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesDiscoverCreateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesDiscoverCreateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesDiscoverCreateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesDiscoverCreateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesDiscoverCreateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -157145,12 +158217,21 @@ __all__ = (
     "ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesLogsReloadCreateKindErrorComponent",
     "ApiV1WorkspacesLogsReloadCreateKindErrorComponentAttr",
     "ApiV1WorkspacesLogsReloadCreateKindErrorComponentCode",
     "ApiV1WorkspacesLogsReloadCreateLabelsErrorComponent",
     "ApiV1WorkspacesLogsReloadCreateLabelsErrorComponentAttr",
     "ApiV1WorkspacesLogsReloadCreateLabelsErrorComponentCode",
+    "ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -157284,12 +158365,21 @@ __all__ = (
     "ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesPartialUpdateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesPartialUpdateKindErrorComponent",
     "ApiV1WorkspacesPartialUpdateKindErrorComponentAttr",
     "ApiV1WorkspacesPartialUpdateKindErrorComponentCode",
     "ApiV1WorkspacesPartialUpdateLabelsErrorComponent",
     "ApiV1WorkspacesPartialUpdateLabelsErrorComponentAttr",
     "ApiV1WorkspacesPartialUpdateLabelsErrorComponentCode",
+    "ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -157423,12 +158513,21 @@ __all__ = (
     "ApiV1WorkspacesReconcileCreateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesReconcileCreateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesReconcileCreateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesReconcileCreateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesReconcileCreateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesReconcileCreateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesReconcileCreateKindErrorComponent",
     "ApiV1WorkspacesReconcileCreateKindErrorComponentAttr",
     "ApiV1WorkspacesReconcileCreateKindErrorComponentCode",
     "ApiV1WorkspacesReconcileCreateLabelsErrorComponent",
     "ApiV1WorkspacesReconcileCreateLabelsErrorComponentAttr",
     "ApiV1WorkspacesReconcileCreateLabelsErrorComponentCode",
+    "ApiV1WorkspacesReconcileCreateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesReconcileCreateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesReconcileCreateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesReconcileCreateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesReconcileCreateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesReconcileCreateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesReconcileCreateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesReconcileCreateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesReconcileCreateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -157562,12 +158661,21 @@ __all__ = (
     "ApiV1WorkspacesReloadCreateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesReloadCreateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesReloadCreateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesReloadCreateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesReloadCreateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesReloadCreateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesReloadCreateKindErrorComponent",
     "ApiV1WorkspacesReloadCreateKindErrorComponentAttr",
     "ApiV1WorkspacesReloadCreateKindErrorComponentCode",
     "ApiV1WorkspacesReloadCreateLabelsErrorComponent",
     "ApiV1WorkspacesReloadCreateLabelsErrorComponentAttr",
     "ApiV1WorkspacesReloadCreateLabelsErrorComponentCode",
+    "ApiV1WorkspacesReloadCreateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesReloadCreateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesReloadCreateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesReloadCreateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesReloadCreateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesReloadCreateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -157701,12 +158809,21 @@ __all__ = (
     "ApiV1WorkspacesRepairCreateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesRepairCreateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesRepairCreateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesRepairCreateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesRepairCreateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesRepairCreateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesRepairCreateKindErrorComponent",
     "ApiV1WorkspacesRepairCreateKindErrorComponentAttr",
     "ApiV1WorkspacesRepairCreateKindErrorComponentCode",
     "ApiV1WorkspacesRepairCreateLabelsErrorComponent",
     "ApiV1WorkspacesRepairCreateLabelsErrorComponentAttr",
     "ApiV1WorkspacesRepairCreateLabelsErrorComponentCode",
+    "ApiV1WorkspacesRepairCreateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesRepairCreateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesRepairCreateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesRepairCreateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesRepairCreateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesRepairCreateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesRepairCreateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesRepairCreateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesRepairCreateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -157840,12 +158957,21 @@ __all__ = (
     "ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent",
     "ApiV1WorkspacesRunDiscoveryCreateKindErrorComponentAttr",
     "ApiV1WorkspacesRunDiscoveryCreateKindErrorComponentCode",
     "ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponent",
     "ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponentAttr",
     "ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponentCode",
+    "ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -157979,12 +159105,21 @@ __all__ = (
     "ApiV1WorkspacesUpdateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesUpdateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesUpdateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesUpdateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesUpdateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesUpdateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesUpdateKindErrorComponent",
     "ApiV1WorkspacesUpdateKindErrorComponentAttr",
     "ApiV1WorkspacesUpdateKindErrorComponentCode",
     "ApiV1WorkspacesUpdateLabelsErrorComponent",
     "ApiV1WorkspacesUpdateLabelsErrorComponentAttr",
     "ApiV1WorkspacesUpdateLabelsErrorComponentCode",
+    "ApiV1WorkspacesUpdateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesUpdateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesUpdateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesUpdateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesUpdateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesUpdateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesUpdateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesUpdateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesUpdateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -158090,12 +159225,21 @@ __all__ = (
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateKindErrorComponent",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateKindErrorComponentAttr",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateKindErrorComponentCode",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLabelsErrorComponent",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLabelsErrorComponentAttr",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLabelsErrorComponentCode",
+    "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -158257,12 +159401,21 @@ __all__ = (
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateHasIncompatibleKubeconfigErrorComponent",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateHasIncompatibleKubeconfigErrorComponentAttr",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateHasIncompatibleKubeconfigErrorComponentCode",
+    "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateK8SAddonsEnabledErrorComponent",
+    "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateK8SAddonsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateK8SAddonsEnabledErrorComponentCode",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateKindErrorComponent",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateKindErrorComponentAttr",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateKindErrorComponentCode",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLabelsErrorComponent",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLabelsErrorComponentAttr",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLabelsErrorComponentCode",
+    "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLogsEnabledErrorComponent",
+    "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLogsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLogsEnabledErrorComponentCode",
+    "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMetricsEnabledErrorComponent",
+    "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMetricsEnabledErrorComponentAttr",
+    "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMetricsEnabledErrorComponentCode",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponentAttr",
     "ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponentCode",
@@ -159188,6 +160341,7 @@ __all__ = (
     "ErrorResponse429",
     "ErrorResponse500",
     "ErrorResponse502",
+    "ExposureTypeEnum",
     "ExternalCredential",
     "ExternalCredentialRequest",
     "ExternalTrafficPolicyEnum",
@@ -159315,6 +160469,7 @@ __all__ = (
     "K8SAddonLastActionRunType0",
     "K8SAddonList",
     "K8SAddonListActiveConditionInstancesItem",
+    "K8SAddonListAvailableVersionsItem",
     "K8SAddonListCatalogueAppType0",
     "K8SAddonListCreated",
     "K8SAddonListCreatedCreatedByType0",
@@ -159447,6 +160602,7 @@ __all__ = (
     "K8SWorkerPoolListCreatedCreatedByType0",
     "K8SWorkerPoolListOrganizationType0",
     "K8SWorkerPoolListOrganizationType0CreatedByType0",
+    "K8SWorkerPoolListPopType0",
     "K8SWorkerPoolListProductType0",
     "K8SWorkerPoolListProviderAccountType0",
     "K8SWorkerPoolListWorkspaceType0",
@@ -159469,6 +160625,8 @@ __all__ = (
     "LoadbalancerInstanceDeletedByUserType0",
     "LoadbalancerInstanceDeployment",
     "LoadbalancerInstanceDeploymentSummary",
+    "LoadbalancerInstanceEffectiveHaproxyDefaults",
+    "LoadbalancerInstanceEffectiveResources",
     "LoadbalancerInstanceLastActionRunType0",
     "LoadbalancerInstanceList",
     "LoadbalancerInstanceListActiveConditionInstancesItem",

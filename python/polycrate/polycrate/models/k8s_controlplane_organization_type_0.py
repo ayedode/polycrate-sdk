@@ -47,7 +47,7 @@ class K8SControlplaneOrganizationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.k8s_controlplane_organization_type_0_created_by_type_0 import (
-            K8SControlplaneOrganizationType0CreatedByType0,
+            K8SControlplaneOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         id: str | Unset = UNSET
@@ -129,7 +129,7 @@ class K8SControlplaneOrganizationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.k8s_controlplane_organization_type_0_created_by_type_0 import (
-            K8SControlplaneOrganizationType0CreatedByType0,
+            K8SControlplaneOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

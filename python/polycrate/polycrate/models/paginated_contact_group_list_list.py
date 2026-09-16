@@ -68,7 +68,7 @@ class PaginatedContactGroupListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.contact_group_list import ContactGroupList
+        from ..models.contact_group_list import ContactGroupList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

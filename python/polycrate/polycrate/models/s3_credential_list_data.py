@@ -52,7 +52,7 @@ class S3CredentialListData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_credential_with_secrets import S3CredentialWithSecrets
+        from ..models.s3_credential_with_secrets import S3CredentialWithSecrets  # noqa: PLC0415
 
         d = dict(src_dict)
         bucket_id = UUID(d.pop("bucket_id"))

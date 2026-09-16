@@ -86,8 +86,8 @@ class PopList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.pop_list_organization_type_0 import PopListOrganizationType0
-        from ..models.pop_list_workspace_type_0 import PopListWorkspaceType0
+        from ..models.pop_list_organization_type_0 import PopListOrganizationType0  # noqa: PLC0415
+        from ..models.pop_list_workspace_type_0 import PopListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -201,11 +201,13 @@ class PopList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pop_list_active_condition_instances_item import PopListActiveConditionInstancesItem
-        from ..models.pop_list_created import PopListCreated
-        from ..models.pop_list_organization_type_0 import PopListOrganizationType0
-        from ..models.pop_list_workspace_type_0 import PopListWorkspaceType0
-        from ..models.provider_simple import ProviderSimple
+        from ..models.pop_list_active_condition_instances_item import (
+            PopListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.pop_list_created import PopListCreated  # noqa: PLC0415
+        from ..models.pop_list_organization_type_0 import PopListOrganizationType0  # noqa: PLC0415
+        from ..models.pop_list_workspace_type_0 import PopListWorkspaceType0  # noqa: PLC0415
+        from ..models.provider_simple import ProviderSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

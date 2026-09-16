@@ -58,25 +58,25 @@ class ApiV1CredentialsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_credentials_update_api_endpoint_error_component import (
-            ApiV1CredentialsUpdateApiEndpointErrorComponent,
+            ApiV1CredentialsUpdateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_api_key_error_component import (
-            ApiV1CredentialsUpdateApiKeyErrorComponent,
+            ApiV1CredentialsUpdateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_api_user_error_component import (
-            ApiV1CredentialsUpdateApiUserErrorComponent,
+            ApiV1CredentialsUpdateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_kubeconfig_error_component import (
-            ApiV1CredentialsUpdateKubeconfigErrorComponent,
+            ApiV1CredentialsUpdateKubeconfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_non_field_errors_error_component import (
-            ApiV1CredentialsUpdateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_ssh_private_key_error_component import (
-            ApiV1CredentialsUpdateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsUpdateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_ssh_public_key_error_component import (
-            ApiV1CredentialsUpdateSshPublicKeyErrorComponent,
+            ApiV1CredentialsUpdateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -117,28 +117,28 @@ class ApiV1CredentialsUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_credentials_update_api_endpoint_error_component import (
-            ApiV1CredentialsUpdateApiEndpointErrorComponent,
+            ApiV1CredentialsUpdateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_api_key_error_component import (
-            ApiV1CredentialsUpdateApiKeyErrorComponent,
+            ApiV1CredentialsUpdateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_api_user_error_component import (
-            ApiV1CredentialsUpdateApiUserErrorComponent,
+            ApiV1CredentialsUpdateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_kubeconfig_error_component import (
-            ApiV1CredentialsUpdateKubeconfigErrorComponent,
+            ApiV1CredentialsUpdateKubeconfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_metadata_error_component import (
-            ApiV1CredentialsUpdateMetadataErrorComponent,
+            ApiV1CredentialsUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_non_field_errors_error_component import (
-            ApiV1CredentialsUpdateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_ssh_private_key_error_component import (
-            ApiV1CredentialsUpdateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsUpdateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_update_ssh_public_key_error_component import (
-            ApiV1CredentialsUpdateSshPublicKeyErrorComponent,
+            ApiV1CredentialsUpdateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -30,6 +30,7 @@ class CatalogueAppDetailRequest:
             name (str | Unset): Object name
             product_regular_id (None | Unset | UUID):
             product_ha_id (None | Unset | UUID):
+            maintainer_id (int | None | Unset):
             display_name (None | str | Unset): The display name is used to display the object in the UI. It can be different
                 from the name.
             labels (Any | Unset):
@@ -109,6 +110,7 @@ class CatalogueAppDetailRequest:
     name: str | Unset = UNSET
     product_regular_id: None | Unset | UUID = UNSET
     product_ha_id: None | Unset | UUID = UNSET
+    maintainer_id: int | None | Unset = UNSET
     display_name: None | str | Unset = UNSET
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
@@ -175,6 +177,12 @@ class CatalogueAppDetailRequest:
             product_ha_id = str(self.product_ha_id)
         else:
             product_ha_id = self.product_ha_id
+
+        maintainer_id: int | None | Unset
+        if isinstance(self.maintainer_id, Unset):
+            maintainer_id = UNSET
+        else:
+            maintainer_id = self.maintainer_id
 
         display_name: None | str | Unset
         if isinstance(self.display_name, Unset):
@@ -405,6 +413,8 @@ class CatalogueAppDetailRequest:
             field_dict["product_regular_id"] = product_regular_id
         if product_ha_id is not UNSET:
             field_dict["product_ha_id"] = product_ha_id
+        if maintainer_id is not UNSET:
+            field_dict["maintainer_id"] = maintainer_id
         if display_name is not UNSET:
             field_dict["display_name"] = display_name
         if labels is not UNSET:
@@ -515,6 +525,12 @@ class CatalogueAppDetailRequest:
                 files.append(("product_ha_id", (None, str(self.product_ha_id), "text/plain")))
             else:
                 files.append(("product_ha_id", (None, str(self.product_ha_id).encode(), "text/plain")))
+
+        if not isinstance(self.maintainer_id, Unset):
+            if isinstance(self.maintainer_id, int):
+                files.append(("maintainer_id", (None, str(self.maintainer_id).encode(), "text/plain")))
+            else:
+                files.append(("maintainer_id", (None, str(self.maintainer_id).encode(), "text/plain")))
 
         if not isinstance(self.display_name, Unset):
             if isinstance(self.display_name, str):
@@ -792,6 +808,15 @@ class CatalogueAppDetailRequest:
             return cast(None | Unset | UUID, data)
 
         product_ha_id = _parse_product_ha_id(d.pop("product_ha_id", UNSET))
+
+        def _parse_maintainer_id(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        maintainer_id = _parse_maintainer_id(d.pop("maintainer_id", UNSET))
 
         def _parse_display_name(data: object) -> None | str | Unset:
             if data is None:
@@ -1143,6 +1168,7 @@ class CatalogueAppDetailRequest:
             name=name,
             product_regular_id=product_regular_id,
             product_ha_id=product_ha_id,
+            maintainer_id=maintainer_id,
             display_name=display_name,
             labels=labels,
             annotations=annotations,

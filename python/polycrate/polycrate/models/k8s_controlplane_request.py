@@ -3,6 +3,7 @@ from __future__ import annotations
 import datetime
 from collections.abc import Mapping
 from typing import Any, TypeVar, cast
+from uuid import UUID
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -10,6 +11,7 @@ from attrs import field as _attrs_field
 from .. import types
 from ..models.blank_enum import BlankEnum, check_blank_enum
 from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
+from ..models.exposure_type_enum import ExposureTypeEnum, check_exposure_type_enum
 from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
 from ..models.loadbalancer_mode_enum import LoadbalancerModeEnum, check_loadbalancer_mode_enum
 from ..models.provider_enum import ProviderEnum, check_provider_enum
@@ -40,6 +42,9 @@ class K8SControlplaneRequest:
                 fields = ManagedObjectDetailSerializer.Meta.fields + ['kubeconfig', 'nodes']
 
         Attributes:
+            organization_id (UUID):
+            workspace_id (UUID):
+            region_id (UUID):
             storage_class (str):
             name (str | Unset): Object name
             display_name (None | str | Unset): The display name is used to display the object in the UI. It can be different
@@ -87,10 +92,22 @@ class K8SControlplaneRequest:
             loadbalancer_mode (LoadbalancerModeEnum | Unset): * `cluster` - Cluster
                 * `external` - External
             loadbalancer_provider (str | Unset):
+            exposure_type (ExposureTypeEnum | Unset): * `gateway` - Gateway API (Envoy)
+                * `ingress` - Ingress (nginx)
+                * `loadbalancer` - LoadBalancer
+            parent_gateway_name (str | Unset): Platform Gateway to attach TLSRoute to (empty → create own Gateway).
+            parent_gateway_namespace (str | Unset):
+            parent_gateway_section_name (str | Unset): Listener name on the parent Gateway (must match Envoy listener).
+            gateway_class_name (str | Unset): GatewayClass when creating an own Gateway (parent_gateway_name empty).
+            audit_logging_enabled (bool | Unset):
+            secrets_encryption_enabled (bool | Unset):
             persistence_size (str | Unset):
             cluster_domain (str | Unset):
     """
 
+    organization_id: UUID
+    workspace_id: UUID
+    region_id: UUID
     storage_class: str
     name: str | Unset = UNSET
     display_name: None | str | Unset = UNSET
@@ -117,11 +134,24 @@ class K8SControlplaneRequest:
     sla_availability: str | Unset = UNSET
     loadbalancer_mode: LoadbalancerModeEnum | Unset = UNSET
     loadbalancer_provider: str | Unset = UNSET
+    exposure_type: ExposureTypeEnum | Unset = UNSET
+    parent_gateway_name: str | Unset = UNSET
+    parent_gateway_namespace: str | Unset = UNSET
+    parent_gateway_section_name: str | Unset = UNSET
+    gateway_class_name: str | Unset = UNSET
+    audit_logging_enabled: bool | Unset = UNSET
+    secrets_encryption_enabled: bool | Unset = UNSET
     persistence_size: str | Unset = UNSET
     cluster_domain: str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        organization_id = str(self.organization_id)
+
+        workspace_id = str(self.workspace_id)
+
+        region_id = str(self.region_id)
+
         storage_class = self.storage_class
 
         name = self.name
@@ -224,6 +254,22 @@ class K8SControlplaneRequest:
 
         loadbalancer_provider = self.loadbalancer_provider
 
+        exposure_type: str | Unset = UNSET
+        if not isinstance(self.exposure_type, Unset):
+            exposure_type = self.exposure_type
+
+        parent_gateway_name = self.parent_gateway_name
+
+        parent_gateway_namespace = self.parent_gateway_namespace
+
+        parent_gateway_section_name = self.parent_gateway_section_name
+
+        gateway_class_name = self.gateway_class_name
+
+        audit_logging_enabled = self.audit_logging_enabled
+
+        secrets_encryption_enabled = self.secrets_encryption_enabled
+
         persistence_size = self.persistence_size
 
         cluster_domain = self.cluster_domain
@@ -232,6 +278,9 @@ class K8SControlplaneRequest:
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
+                "organization_id": organization_id,
+                "workspace_id": workspace_id,
+                "region_id": region_id,
                 "storage_class": storage_class,
             }
         )
@@ -285,6 +334,20 @@ class K8SControlplaneRequest:
             field_dict["loadbalancer_mode"] = loadbalancer_mode
         if loadbalancer_provider is not UNSET:
             field_dict["loadbalancer_provider"] = loadbalancer_provider
+        if exposure_type is not UNSET:
+            field_dict["exposure_type"] = exposure_type
+        if parent_gateway_name is not UNSET:
+            field_dict["parent_gateway_name"] = parent_gateway_name
+        if parent_gateway_namespace is not UNSET:
+            field_dict["parent_gateway_namespace"] = parent_gateway_namespace
+        if parent_gateway_section_name is not UNSET:
+            field_dict["parent_gateway_section_name"] = parent_gateway_section_name
+        if gateway_class_name is not UNSET:
+            field_dict["gateway_class_name"] = gateway_class_name
+        if audit_logging_enabled is not UNSET:
+            field_dict["audit_logging_enabled"] = audit_logging_enabled
+        if secrets_encryption_enabled is not UNSET:
+            field_dict["secrets_encryption_enabled"] = secrets_encryption_enabled
         if persistence_size is not UNSET:
             field_dict["persistence_size"] = persistence_size
         if cluster_domain is not UNSET:
@@ -294,6 +357,12 @@ class K8SControlplaneRequest:
 
     def to_multipart(self) -> types.RequestFiles:
         files: types.RequestFiles = []
+
+        files.append(("organization_id", (None, str(self.organization_id), "text/plain")))
+
+        files.append(("workspace_id", (None, str(self.workspace_id), "text/plain")))
+
+        files.append(("region_id", (None, str(self.region_id), "text/plain")))
 
         files.append(("storage_class", (None, str(self.storage_class).encode(), "text/plain")))
 
@@ -401,6 +470,33 @@ class K8SControlplaneRequest:
         if not isinstance(self.loadbalancer_provider, Unset):
             files.append(("loadbalancer_provider", (None, str(self.loadbalancer_provider).encode(), "text/plain")))
 
+        if not isinstance(self.exposure_type, Unset):
+            files.append(("exposure_type", (None, str(self.exposure_type).encode(), "text/plain")))
+
+        if not isinstance(self.parent_gateway_name, Unset):
+            files.append(("parent_gateway_name", (None, str(self.parent_gateway_name).encode(), "text/plain")))
+
+        if not isinstance(self.parent_gateway_namespace, Unset):
+            files.append(
+                ("parent_gateway_namespace", (None, str(self.parent_gateway_namespace).encode(), "text/plain"))
+            )
+
+        if not isinstance(self.parent_gateway_section_name, Unset):
+            files.append(
+                ("parent_gateway_section_name", (None, str(self.parent_gateway_section_name).encode(), "text/plain"))
+            )
+
+        if not isinstance(self.gateway_class_name, Unset):
+            files.append(("gateway_class_name", (None, str(self.gateway_class_name).encode(), "text/plain")))
+
+        if not isinstance(self.audit_logging_enabled, Unset):
+            files.append(("audit_logging_enabled", (None, str(self.audit_logging_enabled).encode(), "text/plain")))
+
+        if not isinstance(self.secrets_encryption_enabled, Unset):
+            files.append(
+                ("secrets_encryption_enabled", (None, str(self.secrets_encryption_enabled).encode(), "text/plain"))
+            )
+
         if not isinstance(self.persistence_size, Unset):
             files.append(("persistence_size", (None, str(self.persistence_size).encode(), "text/plain")))
 
@@ -415,6 +511,12 @@ class K8SControlplaneRequest:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
+        organization_id = UUID(d.pop("organization_id"))
+
+        workspace_id = UUID(d.pop("workspace_id"))
+
+        region_id = UUID(d.pop("region_id"))
+
         storage_class = d.pop("storage_class")
 
         name = d.pop("name", UNSET)
@@ -574,11 +676,33 @@ class K8SControlplaneRequest:
 
         loadbalancer_provider = d.pop("loadbalancer_provider", UNSET)
 
+        _exposure_type = d.pop("exposure_type", UNSET)
+        exposure_type: ExposureTypeEnum | Unset
+        if isinstance(_exposure_type, Unset):
+            exposure_type = UNSET
+        else:
+            exposure_type = check_exposure_type_enum(_exposure_type)
+
+        parent_gateway_name = d.pop("parent_gateway_name", UNSET)
+
+        parent_gateway_namespace = d.pop("parent_gateway_namespace", UNSET)
+
+        parent_gateway_section_name = d.pop("parent_gateway_section_name", UNSET)
+
+        gateway_class_name = d.pop("gateway_class_name", UNSET)
+
+        audit_logging_enabled = d.pop("audit_logging_enabled", UNSET)
+
+        secrets_encryption_enabled = d.pop("secrets_encryption_enabled", UNSET)
+
         persistence_size = d.pop("persistence_size", UNSET)
 
         cluster_domain = d.pop("cluster_domain", UNSET)
 
         k8s_controlplane_request = cls(
+            organization_id=organization_id,
+            workspace_id=workspace_id,
+            region_id=region_id,
             storage_class=storage_class,
             name=name,
             display_name=display_name,
@@ -605,6 +729,13 @@ class K8SControlplaneRequest:
             sla_availability=sla_availability,
             loadbalancer_mode=loadbalancer_mode,
             loadbalancer_provider=loadbalancer_provider,
+            exposure_type=exposure_type,
+            parent_gateway_name=parent_gateway_name,
+            parent_gateway_namespace=parent_gateway_namespace,
+            parent_gateway_section_name=parent_gateway_section_name,
+            gateway_class_name=gateway_class_name,
+            audit_logging_enabled=audit_logging_enabled,
+            secrets_encryption_enabled=secrets_encryption_enabled,
             persistence_size=persistence_size,
             cluster_domain=cluster_domain,
         )

@@ -156,82 +156,82 @@ class ApiV1IpaddressesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_ipaddresses_partial_update_annotations_error_component import (
-            ApiV1IpaddressesPartialUpdateAnnotationsErrorComponent,
+            ApiV1IpaddressesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_archived_at_error_component import (
-            ApiV1IpaddressesPartialUpdateArchivedAtErrorComponent,
+            ApiV1IpaddressesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_archived_error_component import (
-            ApiV1IpaddressesPartialUpdateArchivedErrorComponent,
+            ApiV1IpaddressesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_archived_reason_error_component import (
-            ApiV1IpaddressesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1IpaddressesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_credential_id_error_component import (
-            ApiV1IpaddressesPartialUpdateCredentialIdErrorComponent,
+            ApiV1IpaddressesPartialUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_criticality_error_component import (
-            ApiV1IpaddressesPartialUpdateCriticalityErrorComponent,
+            ApiV1IpaddressesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_debug_mode_error_component import (
-            ApiV1IpaddressesPartialUpdateDebugModeErrorComponent,
+            ApiV1IpaddressesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_display_name_error_component import (
-            ApiV1IpaddressesPartialUpdateDisplayNameErrorComponent,
+            ApiV1IpaddressesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_kind_error_component import (
-            ApiV1IpaddressesPartialUpdateKindErrorComponent,
+            ApiV1IpaddressesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_labels_error_component import (
-            ApiV1IpaddressesPartialUpdateLabelsErrorComponent,
+            ApiV1IpaddressesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_name_error_component import (
-            ApiV1IpaddressesPartialUpdateNameErrorComponent,
+            ApiV1IpaddressesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_non_field_errors_error_component import (
-            ApiV1IpaddressesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1IpaddressesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_organization_id_error_component import (
-            ApiV1IpaddressesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1IpaddressesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_platform_service_error_component import (
-            ApiV1IpaddressesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1IpaddressesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_prefix_id_error_component import (
-            ApiV1IpaddressesPartialUpdatePrefixIdErrorComponent,
+            ApiV1IpaddressesPartialUpdatePrefixIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_provider_error_component import (
-            ApiV1IpaddressesPartialUpdateProviderErrorComponent,
+            ApiV1IpaddressesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_provider_id_error_component import (
-            ApiV1IpaddressesPartialUpdateProviderIdErrorComponent,
+            ApiV1IpaddressesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_provider_reference_error_component import (
-            ApiV1IpaddressesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1IpaddressesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_reconciliation_enabled_error_component import (
-            ApiV1IpaddressesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1IpaddressesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_sla_availability_error_component import (
-            ApiV1IpaddressesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1IpaddressesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_sla_target_error_component import (
-            ApiV1IpaddressesPartialUpdateSlaTargetErrorComponent,
+            ApiV1IpaddressesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_slo_availability_error_component import (
-            ApiV1IpaddressesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1IpaddressesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_slo_target_error_component import (
-            ApiV1IpaddressesPartialUpdateSloTargetErrorComponent,
+            ApiV1IpaddressesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_target_availability_error_component import (
-            ApiV1IpaddressesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1IpaddressesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_tolerations_error_component import (
-            ApiV1IpaddressesPartialUpdateTolerationsErrorComponent,
+            ApiV1IpaddressesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_workspace_id_error_component import (
-            ApiV1IpaddressesPartialUpdateWorkspaceIdErrorComponent,
+            ApiV1IpaddressesPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -310,85 +310,85 @@ class ApiV1IpaddressesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_ipaddresses_partial_update_annotations_error_component import (
-            ApiV1IpaddressesPartialUpdateAnnotationsErrorComponent,
+            ApiV1IpaddressesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_archived_at_error_component import (
-            ApiV1IpaddressesPartialUpdateArchivedAtErrorComponent,
+            ApiV1IpaddressesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_archived_error_component import (
-            ApiV1IpaddressesPartialUpdateArchivedErrorComponent,
+            ApiV1IpaddressesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_archived_reason_error_component import (
-            ApiV1IpaddressesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1IpaddressesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_credential_id_error_component import (
-            ApiV1IpaddressesPartialUpdateCredentialIdErrorComponent,
+            ApiV1IpaddressesPartialUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_criticality_error_component import (
-            ApiV1IpaddressesPartialUpdateCriticalityErrorComponent,
+            ApiV1IpaddressesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_debug_mode_error_component import (
-            ApiV1IpaddressesPartialUpdateDebugModeErrorComponent,
+            ApiV1IpaddressesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_display_name_error_component import (
-            ApiV1IpaddressesPartialUpdateDisplayNameErrorComponent,
+            ApiV1IpaddressesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_ip_address_error_component import (
-            ApiV1IpaddressesPartialUpdateIpAddressErrorComponent,
+            ApiV1IpaddressesPartialUpdateIpAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_kind_error_component import (
-            ApiV1IpaddressesPartialUpdateKindErrorComponent,
+            ApiV1IpaddressesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_labels_error_component import (
-            ApiV1IpaddressesPartialUpdateLabelsErrorComponent,
+            ApiV1IpaddressesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_name_error_component import (
-            ApiV1IpaddressesPartialUpdateNameErrorComponent,
+            ApiV1IpaddressesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_non_field_errors_error_component import (
-            ApiV1IpaddressesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1IpaddressesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_organization_id_error_component import (
-            ApiV1IpaddressesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1IpaddressesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_platform_service_error_component import (
-            ApiV1IpaddressesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1IpaddressesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_prefix_id_error_component import (
-            ApiV1IpaddressesPartialUpdatePrefixIdErrorComponent,
+            ApiV1IpaddressesPartialUpdatePrefixIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_provider_error_component import (
-            ApiV1IpaddressesPartialUpdateProviderErrorComponent,
+            ApiV1IpaddressesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_provider_id_error_component import (
-            ApiV1IpaddressesPartialUpdateProviderIdErrorComponent,
+            ApiV1IpaddressesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_provider_reference_error_component import (
-            ApiV1IpaddressesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1IpaddressesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_reconciliation_enabled_error_component import (
-            ApiV1IpaddressesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1IpaddressesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_sla_availability_error_component import (
-            ApiV1IpaddressesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1IpaddressesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_sla_target_error_component import (
-            ApiV1IpaddressesPartialUpdateSlaTargetErrorComponent,
+            ApiV1IpaddressesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_slo_availability_error_component import (
-            ApiV1IpaddressesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1IpaddressesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_slo_target_error_component import (
-            ApiV1IpaddressesPartialUpdateSloTargetErrorComponent,
+            ApiV1IpaddressesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_target_availability_error_component import (
-            ApiV1IpaddressesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1IpaddressesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_tolerations_error_component import (
-            ApiV1IpaddressesPartialUpdateTolerationsErrorComponent,
+            ApiV1IpaddressesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_ipaddresses_partial_update_workspace_id_error_component import (
-            ApiV1IpaddressesPartialUpdateWorkspaceIdErrorComponent,
+            ApiV1IpaddressesPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

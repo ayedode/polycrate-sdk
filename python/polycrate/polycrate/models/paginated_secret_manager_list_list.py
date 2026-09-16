@@ -68,7 +68,7 @@ class PaginatedSecretManagerListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.secret_manager_list import SecretManagerList
+        from ..models.secret_manager_list import SecretManagerList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

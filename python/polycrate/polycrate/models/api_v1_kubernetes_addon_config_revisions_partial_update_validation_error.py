@@ -163,82 +163,82 @@ class ApiV1KubernetesAddonConfigRevisionsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_actual_availability_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_addon_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateAddonErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateAddonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_annotations_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateAnnotationsErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_archived_at_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedAtErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_archived_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_archived_reason_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_criticality_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateCriticalityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_debug_mode_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDebugModeErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_discovery_enabled_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_display_name_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDisplayNameErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_kind_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateKindErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_labels_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateLabelsErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_name_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateNameErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_non_field_errors_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_platform_service_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_provider_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_provider_id_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderIdErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_provider_reference_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_scope_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateScopeErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_sla_availability_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_sla_target_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSlaTargetErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_slo_availability_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_slo_target_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSloTargetErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_target_availability_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_version_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateVersionErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateVersionErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -343,85 +343,85 @@ class ApiV1KubernetesAddonConfigRevisionsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_actual_availability_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_addon_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateAddonErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateAddonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_annotations_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateAnnotationsErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_archived_at_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedAtErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_archived_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_archived_reason_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_block_config_template_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateBlockConfigTemplateErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateBlockConfigTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_criticality_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateCriticalityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_debug_mode_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDebugModeErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_discovery_enabled_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_display_name_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDisplayNameErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_kind_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateKindErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_labels_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateLabelsErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_name_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateNameErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_non_field_errors_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_platform_service_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_provider_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_provider_id_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderIdErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_provider_reference_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_scope_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateScopeErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_sla_availability_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_sla_target_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSlaTargetErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_slo_availability_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_slo_target_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSloTargetErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_target_availability_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_addon_config_revisions_partial_update_version_error_component import (
-            ApiV1KubernetesAddonConfigRevisionsPartialUpdateVersionErrorComponent,
+            ApiV1KubernetesAddonConfigRevisionsPartialUpdateVersionErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

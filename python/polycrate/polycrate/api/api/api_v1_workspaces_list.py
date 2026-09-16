@@ -43,8 +43,11 @@ def _get_kwargs(
     endpoint_monitoring_mode: ApiV1WorkspacesListEndpointMonitoringMode | Unset = UNSET,
     git_sync_enabled: bool | Unset = UNSET,
     has_conditions: bool | Unset = UNSET,
+    k8s_addons_enabled: bool | Unset = UNSET,
     kind: list[ApiV1WorkspacesListKindItem] | Unset = UNSET,
+    logs_enabled: bool | Unset = UNSET,
     maintenance: bool | Unset = UNSET,
+    metrics_enabled: bool | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     notifications_enabled: bool | Unset = UNSET,
@@ -88,6 +91,8 @@ def _get_kwargs(
 
     params["has_conditions"] = has_conditions
 
+    params["k8s_addons_enabled"] = k8s_addons_enabled
+
     json_kind: list[str] | Unset = UNSET
     if not isinstance(kind, Unset):
         json_kind = []
@@ -97,7 +102,11 @@ def _get_kwargs(
 
     params["kind"] = json_kind
 
+    params["logs_enabled"] = logs_enabled
+
     params["maintenance"] = maintenance
+
+    params["metrics_enabled"] = metrics_enabled
 
     params["name"] = name
 
@@ -317,8 +326,11 @@ def sync_detailed(
     endpoint_monitoring_mode: ApiV1WorkspacesListEndpointMonitoringMode | Unset = UNSET,
     git_sync_enabled: bool | Unset = UNSET,
     has_conditions: bool | Unset = UNSET,
+    k8s_addons_enabled: bool | Unset = UNSET,
     kind: list[ApiV1WorkspacesListKindItem] | Unset = UNSET,
+    logs_enabled: bool | Unset = UNSET,
     maintenance: bool | Unset = UNSET,
+    metrics_enabled: bool | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     notifications_enabled: bool | Unset = UNSET,
@@ -361,8 +373,11 @@ def sync_detailed(
         endpoint_monitoring_mode (ApiV1WorkspacesListEndpointMonitoringMode | Unset):
         git_sync_enabled (bool | Unset):
         has_conditions (bool | Unset):
+        k8s_addons_enabled (bool | Unset):
         kind (list[ApiV1WorkspacesListKindItem] | Unset):
+        logs_enabled (bool | Unset):
         maintenance (bool | Unset):
+        metrics_enabled (bool | Unset):
         name (str | Unset):
         name_exact (str | Unset):
         notifications_enabled (bool | Unset):
@@ -394,8 +409,11 @@ def sync_detailed(
         endpoint_monitoring_mode=endpoint_monitoring_mode,
         git_sync_enabled=git_sync_enabled,
         has_conditions=has_conditions,
+        k8s_addons_enabled=k8s_addons_enabled,
         kind=kind,
+        logs_enabled=logs_enabled,
         maintenance=maintenance,
+        metrics_enabled=metrics_enabled,
         name=name,
         name_exact=name_exact,
         notifications_enabled=notifications_enabled,
@@ -429,8 +447,11 @@ def sync(
     endpoint_monitoring_mode: ApiV1WorkspacesListEndpointMonitoringMode | Unset = UNSET,
     git_sync_enabled: bool | Unset = UNSET,
     has_conditions: bool | Unset = UNSET,
+    k8s_addons_enabled: bool | Unset = UNSET,
     kind: list[ApiV1WorkspacesListKindItem] | Unset = UNSET,
+    logs_enabled: bool | Unset = UNSET,
     maintenance: bool | Unset = UNSET,
+    metrics_enabled: bool | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     notifications_enabled: bool | Unset = UNSET,
@@ -474,8 +495,11 @@ def sync(
         endpoint_monitoring_mode (ApiV1WorkspacesListEndpointMonitoringMode | Unset):
         git_sync_enabled (bool | Unset):
         has_conditions (bool | Unset):
+        k8s_addons_enabled (bool | Unset):
         kind (list[ApiV1WorkspacesListKindItem] | Unset):
+        logs_enabled (bool | Unset):
         maintenance (bool | Unset):
+        metrics_enabled (bool | Unset):
         name (str | Unset):
         name_exact (str | Unset):
         notifications_enabled (bool | Unset):
@@ -508,8 +532,11 @@ def sync(
         endpoint_monitoring_mode=endpoint_monitoring_mode,
         git_sync_enabled=git_sync_enabled,
         has_conditions=has_conditions,
+        k8s_addons_enabled=k8s_addons_enabled,
         kind=kind,
+        logs_enabled=logs_enabled,
         maintenance=maintenance,
+        metrics_enabled=metrics_enabled,
         name=name,
         name_exact=name_exact,
         notifications_enabled=notifications_enabled,
@@ -537,8 +564,11 @@ async def asyncio_detailed(
     endpoint_monitoring_mode: ApiV1WorkspacesListEndpointMonitoringMode | Unset = UNSET,
     git_sync_enabled: bool | Unset = UNSET,
     has_conditions: bool | Unset = UNSET,
+    k8s_addons_enabled: bool | Unset = UNSET,
     kind: list[ApiV1WorkspacesListKindItem] | Unset = UNSET,
+    logs_enabled: bool | Unset = UNSET,
     maintenance: bool | Unset = UNSET,
+    metrics_enabled: bool | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     notifications_enabled: bool | Unset = UNSET,
@@ -581,8 +611,11 @@ async def asyncio_detailed(
         endpoint_monitoring_mode (ApiV1WorkspacesListEndpointMonitoringMode | Unset):
         git_sync_enabled (bool | Unset):
         has_conditions (bool | Unset):
+        k8s_addons_enabled (bool | Unset):
         kind (list[ApiV1WorkspacesListKindItem] | Unset):
+        logs_enabled (bool | Unset):
         maintenance (bool | Unset):
+        metrics_enabled (bool | Unset):
         name (str | Unset):
         name_exact (str | Unset):
         notifications_enabled (bool | Unset):
@@ -614,8 +647,11 @@ async def asyncio_detailed(
         endpoint_monitoring_mode=endpoint_monitoring_mode,
         git_sync_enabled=git_sync_enabled,
         has_conditions=has_conditions,
+        k8s_addons_enabled=k8s_addons_enabled,
         kind=kind,
+        logs_enabled=logs_enabled,
         maintenance=maintenance,
+        metrics_enabled=metrics_enabled,
         name=name,
         name_exact=name_exact,
         notifications_enabled=notifications_enabled,
@@ -647,8 +683,11 @@ async def asyncio(
     endpoint_monitoring_mode: ApiV1WorkspacesListEndpointMonitoringMode | Unset = UNSET,
     git_sync_enabled: bool | Unset = UNSET,
     has_conditions: bool | Unset = UNSET,
+    k8s_addons_enabled: bool | Unset = UNSET,
     kind: list[ApiV1WorkspacesListKindItem] | Unset = UNSET,
+    logs_enabled: bool | Unset = UNSET,
     maintenance: bool | Unset = UNSET,
+    metrics_enabled: bool | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     notifications_enabled: bool | Unset = UNSET,
@@ -692,8 +731,11 @@ async def asyncio(
         endpoint_monitoring_mode (ApiV1WorkspacesListEndpointMonitoringMode | Unset):
         git_sync_enabled (bool | Unset):
         has_conditions (bool | Unset):
+        k8s_addons_enabled (bool | Unset):
         kind (list[ApiV1WorkspacesListKindItem] | Unset):
+        logs_enabled (bool | Unset):
         maintenance (bool | Unset):
+        metrics_enabled (bool | Unset):
         name (str | Unset):
         name_exact (str | Unset):
         notifications_enabled (bool | Unset):
@@ -727,8 +769,11 @@ async def asyncio(
             endpoint_monitoring_mode=endpoint_monitoring_mode,
             git_sync_enabled=git_sync_enabled,
             has_conditions=has_conditions,
+            k8s_addons_enabled=k8s_addons_enabled,
             kind=kind,
+            logs_enabled=logs_enabled,
             maintenance=maintenance,
+            metrics_enabled=metrics_enabled,
             name=name,
             name_exact=name_exact,
             notifications_enabled=notifications_enabled,

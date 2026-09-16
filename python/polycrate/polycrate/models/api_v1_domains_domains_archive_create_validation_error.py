@@ -256,139 +256,139 @@ class ApiV1DomainsDomainsArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_domains_archive_create_admin_contact_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateAdminContactIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateAdminContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_annotations_error_component import (
-            ApiV1DomainsDomainsArchiveCreateAnnotationsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_archived_at_error_component import (
-            ApiV1DomainsDomainsArchiveCreateArchivedAtErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_archived_by_error_component import (
-            ApiV1DomainsDomainsArchiveCreateArchivedByErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_archived_error_component import (
-            ApiV1DomainsDomainsArchiveCreateArchivedErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_archived_reason_error_component import (
-            ApiV1DomainsDomainsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_auth_code_credential_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateAuthCodeCredentialIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateAuthCodeCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_created_by_component_error_component import (
-            ApiV1DomainsDomainsArchiveCreateCreatedByComponentErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_criticality_error_component import (
-            ApiV1DomainsDomainsArchiveCreateCriticalityErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_debug_mode_error_component import (
-            ApiV1DomainsDomainsArchiveCreateDebugModeErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_display_name_error_component import (
-            ApiV1DomainsDomainsArchiveCreateDisplayNameErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_dns_zone_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateDnsZoneIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateDnsZoneIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_expiry_date_error_component import (
-            ApiV1DomainsDomainsArchiveCreateExpiryDateErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_kind_error_component import (
-            ApiV1DomainsDomainsArchiveCreateKindErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_labels_error_component import (
-            ApiV1DomainsDomainsArchiveCreateLabelsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDomainsArchiveCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_managed_by_content_type_error_component import (
-            ApiV1DomainsDomainsArchiveCreateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_managed_by_object_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_modified_by_user_error_component import (
-            ApiV1DomainsDomainsArchiveCreateModifiedByUserErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_name_error_component import (
-            ApiV1DomainsDomainsArchiveCreateNameErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_nameservers_error_component import (
-            ApiV1DomainsDomainsArchiveCreateNameserversErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateNameserversErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_non_field_errors_error_component import (
-            ApiV1DomainsDomainsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_owner_contact_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateOwnerContactIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateOwnerContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_platform_dns_record_created_error_component import (
-            ApiV1DomainsDomainsArchiveCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDomainsArchiveCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_platform_service_error_component import (
-            ApiV1DomainsDomainsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1DomainsDomainsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_provider_error_component import (
-            ApiV1DomainsDomainsArchiveCreateProviderErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_provider_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateProviderIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_provider_reference_error_component import (
-            ApiV1DomainsDomainsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_provider_status_error_component import (
-            ApiV1DomainsDomainsArchiveCreateProviderStatusErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateProviderStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_reconciliation_enabled_error_component import (
-            ApiV1DomainsDomainsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_registrar_domain_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateRegistrarDomainIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateRegistrarDomainIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_registrar_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateRegistrarIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateRegistrarIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_registrar_metadata_error_component import (
-            ApiV1DomainsDomainsArchiveCreateRegistrarMetadataErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateRegistrarMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_renewal_mode_error_component import (
-            ApiV1DomainsDomainsArchiveCreateRenewalModeErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateRenewalModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_sla_availability_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_sla_target_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSlaTargetErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_sla_window_days_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_slo_availability_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_slo_target_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSloTargetErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_slo_window_days_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSloWindowDaysErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_target_availability_error_component import (
-            ApiV1DomainsDomainsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_tech_contact_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateTechContactIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateTechContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_tolerations_error_component import (
-            ApiV1DomainsDomainsArchiveCreateTolerationsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_transfer_lock_error_component import (
-            ApiV1DomainsDomainsArchiveCreateTransferLockErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateTransferLockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_use_platform_dns_error_component import (
-            ApiV1DomainsDomainsArchiveCreateUsePlatformDnsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateUsePlatformDnsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -507,142 +507,142 @@ class ApiV1DomainsDomainsArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_domains_archive_create_admin_contact_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateAdminContactIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateAdminContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_annotations_error_component import (
-            ApiV1DomainsDomainsArchiveCreateAnnotationsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_archived_at_error_component import (
-            ApiV1DomainsDomainsArchiveCreateArchivedAtErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_archived_by_error_component import (
-            ApiV1DomainsDomainsArchiveCreateArchivedByErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_archived_error_component import (
-            ApiV1DomainsDomainsArchiveCreateArchivedErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_archived_reason_error_component import (
-            ApiV1DomainsDomainsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_auth_code_credential_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateAuthCodeCredentialIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateAuthCodeCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_created_by_component_error_component import (
-            ApiV1DomainsDomainsArchiveCreateCreatedByComponentErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_created_by_user_error_component import (
-            ApiV1DomainsDomainsArchiveCreateCreatedByUserErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_criticality_error_component import (
-            ApiV1DomainsDomainsArchiveCreateCriticalityErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_debug_mode_error_component import (
-            ApiV1DomainsDomainsArchiveCreateDebugModeErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_display_name_error_component import (
-            ApiV1DomainsDomainsArchiveCreateDisplayNameErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_dns_zone_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateDnsZoneIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateDnsZoneIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_expiry_date_error_component import (
-            ApiV1DomainsDomainsArchiveCreateExpiryDateErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_kind_error_component import (
-            ApiV1DomainsDomainsArchiveCreateKindErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_labels_error_component import (
-            ApiV1DomainsDomainsArchiveCreateLabelsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDomainsArchiveCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_managed_by_content_type_error_component import (
-            ApiV1DomainsDomainsArchiveCreateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_managed_by_object_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_modified_by_user_error_component import (
-            ApiV1DomainsDomainsArchiveCreateModifiedByUserErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_name_error_component import (
-            ApiV1DomainsDomainsArchiveCreateNameErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_nameservers_error_component import (
-            ApiV1DomainsDomainsArchiveCreateNameserversErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateNameserversErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_non_field_errors_error_component import (
-            ApiV1DomainsDomainsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_owner_contact_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateOwnerContactIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateOwnerContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_platform_dns_record_created_error_component import (
-            ApiV1DomainsDomainsArchiveCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDomainsArchiveCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_platform_service_error_component import (
-            ApiV1DomainsDomainsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1DomainsDomainsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_provider_error_component import (
-            ApiV1DomainsDomainsArchiveCreateProviderErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_provider_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateProviderIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_provider_reference_error_component import (
-            ApiV1DomainsDomainsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_provider_status_error_component import (
-            ApiV1DomainsDomainsArchiveCreateProviderStatusErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateProviderStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_reconciliation_enabled_error_component import (
-            ApiV1DomainsDomainsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_registrar_domain_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateRegistrarDomainIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateRegistrarDomainIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_registrar_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateRegistrarIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateRegistrarIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_registrar_metadata_error_component import (
-            ApiV1DomainsDomainsArchiveCreateRegistrarMetadataErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateRegistrarMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_renewal_mode_error_component import (
-            ApiV1DomainsDomainsArchiveCreateRenewalModeErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateRenewalModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_sla_availability_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_sla_target_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSlaTargetErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_sla_window_days_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_slo_availability_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_slo_target_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSloTargetErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_slo_window_days_error_component import (
-            ApiV1DomainsDomainsArchiveCreateSloWindowDaysErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_target_availability_error_component import (
-            ApiV1DomainsDomainsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_tech_contact_id_error_component import (
-            ApiV1DomainsDomainsArchiveCreateTechContactIdErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateTechContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_tolerations_error_component import (
-            ApiV1DomainsDomainsArchiveCreateTolerationsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_transfer_lock_error_component import (
-            ApiV1DomainsDomainsArchiveCreateTransferLockErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateTransferLockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_archive_create_use_platform_dns_error_component import (
-            ApiV1DomainsDomainsArchiveCreateUsePlatformDnsErrorComponent,
+            ApiV1DomainsDomainsArchiveCreateUsePlatformDnsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

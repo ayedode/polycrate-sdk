@@ -94,8 +94,8 @@ class K8SVolumeList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_volume_list_organization_type_0 import K8SVolumeListOrganizationType0
-        from ..models.k8s_volume_list_workspace_type_0 import K8SVolumeListWorkspaceType0
+        from ..models.k8s_volume_list_organization_type_0 import K8SVolumeListOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_volume_list_workspace_type_0 import K8SVolumeListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -201,12 +201,14 @@ class K8SVolumeList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_app_simple import K8SAppSimple
-        from ..models.k8s_cluster_simple import K8SClusterSimple
-        from ..models.k8s_volume_list_active_condition_instances_item import K8SVolumeListActiveConditionInstancesItem
-        from ..models.k8s_volume_list_created import K8SVolumeListCreated
-        from ..models.k8s_volume_list_organization_type_0 import K8SVolumeListOrganizationType0
-        from ..models.k8s_volume_list_workspace_type_0 import K8SVolumeListWorkspaceType0
+        from ..models.k8s_app_simple import K8SAppSimple  # noqa: PLC0415
+        from ..models.k8s_cluster_simple import K8SClusterSimple  # noqa: PLC0415
+        from ..models.k8s_volume_list_active_condition_instances_item import (
+            K8SVolumeListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.k8s_volume_list_created import K8SVolumeListCreated  # noqa: PLC0415
+        from ..models.k8s_volume_list_organization_type_0 import K8SVolumeListOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_volume_list_workspace_type_0 import K8SVolumeListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

@@ -216,8 +216,8 @@ def sync_detailed(
     | ErrorResponse502
     | PricingCalculatorStateDetail
 ]:
-    r"""Staff-only: convert a calculator state into a formal PricingQuote.
-    Body: { \"organization\": \"<uuid>\" }
+    """Staff-only: convert a calculator state into a formal PricingQuote.
+    Body: { "organization": "<uuid>" }
     Spec: .specs/0.13.0/pricing-business-layer.md
 
     Args:
@@ -321,8 +321,8 @@ def sync(
     | PricingCalculatorStateDetail
     | None
 ):
-    r"""Staff-only: convert a calculator state into a formal PricingQuote.
-    Body: { \"organization\": \"<uuid>\" }
+    """Staff-only: convert a calculator state into a formal PricingQuote.
+    Body: { "organization": "<uuid>" }
     Spec: .specs/0.13.0/pricing-business-layer.md
 
     Args:
@@ -420,8 +420,8 @@ async def asyncio_detailed(
     | ErrorResponse502
     | PricingCalculatorStateDetail
 ]:
-    r"""Staff-only: convert a calculator state into a formal PricingQuote.
-    Body: { \"organization\": \"<uuid>\" }
+    """Staff-only: convert a calculator state into a formal PricingQuote.
+    Body: { "organization": "<uuid>" }
     Spec: .specs/0.13.0/pricing-business-layer.md
 
     Args:
@@ -523,8 +523,8 @@ async def asyncio(
     | PricingCalculatorStateDetail
     | None
 ):
-    r"""Staff-only: convert a calculator state into a formal PricingQuote.
-    Body: { \"organization\": \"<uuid>\" }
+    """Staff-only: convert a calculator state into a formal PricingQuote.
+    Body: { "organization": "<uuid>" }
     Spec: .specs/0.13.0/pricing-business-layer.md
 
     Args:

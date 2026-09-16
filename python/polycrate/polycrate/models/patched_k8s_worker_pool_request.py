@@ -88,7 +88,7 @@ class PatchedK8SWorkerPoolRequest:
             product_id (UUID | Unset):
             desired_count (int | Unset): Desired number of worker Hosts in this pool.
             image (str | Unset): Provider image ID/name for new Hosts.
-            location (str | Unset): Optional provider location/region for new Hosts.
+            location (str | Unset): Optional override. Defaults to Product.pop location slug (hetzner-fsn1 → fsn1).
             ssh_key_credential_id (UUID | Unset):
             hardening_enabled (bool | Unset): When true, enqueue linux/hardening before k8s join.
     """

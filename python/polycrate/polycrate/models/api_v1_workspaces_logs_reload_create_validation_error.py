@@ -66,11 +66,20 @@ if TYPE_CHECKING:
     from ..models.api_v1_workspaces_logs_reload_create_has_incompatible_kubeconfig_error_component import (
         ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent,
     )
+    from ..models.api_v1_workspaces_logs_reload_create_k8s_addons_enabled_error_component import (
+        ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent,
+    )
     from ..models.api_v1_workspaces_logs_reload_create_kind_error_component import (
         ApiV1WorkspacesLogsReloadCreateKindErrorComponent,
     )
     from ..models.api_v1_workspaces_logs_reload_create_labels_error_component import (
         ApiV1WorkspacesLogsReloadCreateLabelsErrorComponent,
+    )
+    from ..models.api_v1_workspaces_logs_reload_create_logs_enabled_error_component import (
+        ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent,
+    )
+    from ..models.api_v1_workspaces_logs_reload_create_metrics_enabled_error_component import (
+        ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent,
     )
     from ..models.api_v1_workspaces_logs_reload_create_monitoring_workspace_allowlist_ids_error_component import (
         ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -175,7 +184,10 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
             ApiV1WorkspacesLogsReloadCreateGitlabProjectUrlErrorComponent |
             ApiV1WorkspacesLogsReloadCreateGlobalEndpointMonitorErrorComponent |
             ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent |
+            ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent |
             ApiV1WorkspacesLogsReloadCreateKindErrorComponent | ApiV1WorkspacesLogsReloadCreateLabelsErrorComponent |
+            ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent |
+            ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent |
             ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent |
             ApiV1WorkspacesLogsReloadCreateNameErrorComponent | ApiV1WorkspacesLogsReloadCreateNonFieldErrorsErrorComponent
             | ApiV1WorkspacesLogsReloadCreateNotificationsEnabledErrorComponent |
@@ -219,8 +231,11 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
         | ApiV1WorkspacesLogsReloadCreateGitlabProjectUrlErrorComponent
         | ApiV1WorkspacesLogsReloadCreateGlobalEndpointMonitorErrorComponent
         | ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent
+        | ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent
         | ApiV1WorkspacesLogsReloadCreateKindErrorComponent
         | ApiV1WorkspacesLogsReloadCreateLabelsErrorComponent
+        | ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent
+        | ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent
         | ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent
         | ApiV1WorkspacesLogsReloadCreateNameErrorComponent
         | ApiV1WorkspacesLogsReloadCreateNonFieldErrorsErrorComponent
@@ -251,139 +266,148 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_workspaces_logs_reload_create_actual_availability_error_component import (
-            ApiV1WorkspacesLogsReloadCreateActualAvailabilityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_annotations_error_component import (
-            ApiV1WorkspacesLogsReloadCreateAnnotationsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_archived_at_error_component import (
-            ApiV1WorkspacesLogsReloadCreateArchivedAtErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_archived_error_component import (
-            ApiV1WorkspacesLogsReloadCreateArchivedErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_archived_reason_error_component import (
-            ApiV1WorkspacesLogsReloadCreateArchivedReasonErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_backup_enabled_error_component import (
-            ApiV1WorkspacesLogsReloadCreateBackupEnabledErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateBackupEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_criticality_error_component import (
-            ApiV1WorkspacesLogsReloadCreateCriticalityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_debug_mode_error_component import (
-            ApiV1WorkspacesLogsReloadCreateDebugModeErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_description_error_component import (
-            ApiV1WorkspacesLogsReloadCreateDescriptionErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_discovery_enabled_error_component import (
-            ApiV1WorkspacesLogsReloadCreateDiscoveryEnabledErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_display_name_error_component import (
-            ApiV1WorkspacesLogsReloadCreateDisplayNameErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_encrypted_error_component import (
-            ApiV1WorkspacesLogsReloadCreateEncryptedErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateEncryptedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesLogsReloadCreateEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_endpoint_monitors_error_component import (
-            ApiV1WorkspacesLogsReloadCreateEndpointMonitorsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateEndpointMonitorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_gitlab_project_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreateGitlabProjectIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_gitlab_project_url_error_component import (
-            ApiV1WorkspacesLogsReloadCreateGitlabProjectUrlErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateGitlabProjectUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_global_endpoint_monitor_error_component import (
-            ApiV1WorkspacesLogsReloadCreateGlobalEndpointMonitorErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateGlobalEndpointMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_has_incompatible_kubeconfig_error_component import (
-            ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_logs_reload_create_k8s_addons_enabled_error_component import (
+            ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_kind_error_component import (
-            ApiV1WorkspacesLogsReloadCreateKindErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_labels_error_component import (
-            ApiV1WorkspacesLogsReloadCreateLabelsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_logs_reload_create_logs_enabled_error_component import (
+            ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_logs_reload_create_metrics_enabled_error_component import (
+            ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_monitoring_workspace_allowlist_ids_error_component import (
-            ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_name_error_component import (
-            ApiV1WorkspacesLogsReloadCreateNameErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_non_field_errors_error_component import (
-            ApiV1WorkspacesLogsReloadCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_notifications_enabled_error_component import (
-            ApiV1WorkspacesLogsReloadCreateNotificationsEnabledErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateNotificationsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_on_premise_error_component import (
-            ApiV1WorkspacesLogsReloadCreateOnPremiseErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateOnPremiseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_organization_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreateOrganizationIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_owner_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreateOwnerIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateOwnerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_platform_service_error_component import (
-            ApiV1WorkspacesLogsReloadCreatePlatformServiceErrorComponent,
+            ApiV1WorkspacesLogsReloadCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_pop_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreatePopIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreatePopIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_provider_error_component import (
-            ApiV1WorkspacesLogsReloadCreateProviderErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_provider_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreateProviderIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_provider_reference_error_component import (
-            ApiV1WorkspacesLogsReloadCreateProviderReferenceErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_purpose_error_component import (
-            ApiV1WorkspacesLogsReloadCreatePurposeErrorComponent,
+            ApiV1WorkspacesLogsReloadCreatePurposeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_readme_md_error_component import (
-            ApiV1WorkspacesLogsReloadCreateReadmeMdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateReadmeMdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_reconciliation_enabled_error_component import (
-            ApiV1WorkspacesLogsReloadCreateReconciliationEnabledErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_scope_error_component import (
-            ApiV1WorkspacesLogsReloadCreateScopeErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_secrets_poly_raw_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSecretsPolyRawErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSecretsPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_sla_availability_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSlaAvailabilityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_sla_target_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSlaTargetErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_slo_availability_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSloAvailabilityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_slo_target_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSloTargetErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_target_availability_error_component import (
-            ApiV1WorkspacesLogsReloadCreateTargetAvailabilityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_template_error_component import (
-            ApiV1WorkspacesLogsReloadCreateTemplateErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_urls_error_component import (
-            ApiV1WorkspacesLogsReloadCreateUrlsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateUrlsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_workspace_inventory_raw_error_component import (
-            ApiV1WorkspacesLogsReloadCreateWorkspaceInventoryRawErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateWorkspaceInventoryRawErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -457,6 +481,12 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesLogsReloadCreateBackupEnabledErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesLogsReloadCreateEndpointMonitorsErrorComponent):
@@ -502,142 +532,151 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_workspaces_logs_reload_create_actual_availability_error_component import (
-            ApiV1WorkspacesLogsReloadCreateActualAvailabilityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_alternative_name_error_component import (
-            ApiV1WorkspacesLogsReloadCreateAlternativeNameErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateAlternativeNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_annotations_error_component import (
-            ApiV1WorkspacesLogsReloadCreateAnnotationsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_archived_at_error_component import (
-            ApiV1WorkspacesLogsReloadCreateArchivedAtErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_archived_error_component import (
-            ApiV1WorkspacesLogsReloadCreateArchivedErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_archived_reason_error_component import (
-            ApiV1WorkspacesLogsReloadCreateArchivedReasonErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_backup_enabled_error_component import (
-            ApiV1WorkspacesLogsReloadCreateBackupEnabledErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateBackupEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_criticality_error_component import (
-            ApiV1WorkspacesLogsReloadCreateCriticalityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_debug_mode_error_component import (
-            ApiV1WorkspacesLogsReloadCreateDebugModeErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_description_error_component import (
-            ApiV1WorkspacesLogsReloadCreateDescriptionErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_discovery_enabled_error_component import (
-            ApiV1WorkspacesLogsReloadCreateDiscoveryEnabledErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_display_name_error_component import (
-            ApiV1WorkspacesLogsReloadCreateDisplayNameErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_encrypted_error_component import (
-            ApiV1WorkspacesLogsReloadCreateEncryptedErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateEncryptedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesLogsReloadCreateEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_endpoint_monitors_error_component import (
-            ApiV1WorkspacesLogsReloadCreateEndpointMonitorsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateEndpointMonitorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_gitlab_project_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreateGitlabProjectIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_gitlab_project_url_error_component import (
-            ApiV1WorkspacesLogsReloadCreateGitlabProjectUrlErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateGitlabProjectUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_global_endpoint_monitor_error_component import (
-            ApiV1WorkspacesLogsReloadCreateGlobalEndpointMonitorErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateGlobalEndpointMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_has_incompatible_kubeconfig_error_component import (
-            ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_logs_reload_create_k8s_addons_enabled_error_component import (
+            ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_kind_error_component import (
-            ApiV1WorkspacesLogsReloadCreateKindErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_labels_error_component import (
-            ApiV1WorkspacesLogsReloadCreateLabelsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_logs_reload_create_logs_enabled_error_component import (
+            ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_logs_reload_create_metrics_enabled_error_component import (
+            ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_monitoring_workspace_allowlist_ids_error_component import (
-            ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_name_error_component import (
-            ApiV1WorkspacesLogsReloadCreateNameErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_non_field_errors_error_component import (
-            ApiV1WorkspacesLogsReloadCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_notifications_enabled_error_component import (
-            ApiV1WorkspacesLogsReloadCreateNotificationsEnabledErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateNotificationsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_on_premise_error_component import (
-            ApiV1WorkspacesLogsReloadCreateOnPremiseErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateOnPremiseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_organization_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreateOrganizationIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_owner_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreateOwnerIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateOwnerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_platform_service_error_component import (
-            ApiV1WorkspacesLogsReloadCreatePlatformServiceErrorComponent,
+            ApiV1WorkspacesLogsReloadCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_pop_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreatePopIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreatePopIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_provider_error_component import (
-            ApiV1WorkspacesLogsReloadCreateProviderErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_provider_id_error_component import (
-            ApiV1WorkspacesLogsReloadCreateProviderIdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_provider_reference_error_component import (
-            ApiV1WorkspacesLogsReloadCreateProviderReferenceErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_purpose_error_component import (
-            ApiV1WorkspacesLogsReloadCreatePurposeErrorComponent,
+            ApiV1WorkspacesLogsReloadCreatePurposeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_readme_md_error_component import (
-            ApiV1WorkspacesLogsReloadCreateReadmeMdErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateReadmeMdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_reconciliation_enabled_error_component import (
-            ApiV1WorkspacesLogsReloadCreateReconciliationEnabledErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_scope_error_component import (
-            ApiV1WorkspacesLogsReloadCreateScopeErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_secrets_poly_raw_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSecretsPolyRawErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSecretsPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_sla_availability_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSlaAvailabilityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_sla_target_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSlaTargetErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_slo_availability_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSloAvailabilityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_slo_target_error_component import (
-            ApiV1WorkspacesLogsReloadCreateSloTargetErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_target_availability_error_component import (
-            ApiV1WorkspacesLogsReloadCreateTargetAvailabilityErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_template_error_component import (
-            ApiV1WorkspacesLogsReloadCreateTemplateErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_urls_error_component import (
-            ApiV1WorkspacesLogsReloadCreateUrlsErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateUrlsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_logs_reload_create_workspace_inventory_raw_error_component import (
-            ApiV1WorkspacesLogsReloadCreateWorkspaceInventoryRawErrorComponent,
+            ApiV1WorkspacesLogsReloadCreateWorkspaceInventoryRawErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -669,8 +708,11 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                 | ApiV1WorkspacesLogsReloadCreateGitlabProjectUrlErrorComponent
                 | ApiV1WorkspacesLogsReloadCreateGlobalEndpointMonitorErrorComponent
                 | ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent
+                | ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent
                 | ApiV1WorkspacesLogsReloadCreateKindErrorComponent
                 | ApiV1WorkspacesLogsReloadCreateLabelsErrorComponent
+                | ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent
+                | ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent
                 | ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent
                 | ApiV1WorkspacesLogsReloadCreateNameErrorComponent
                 | ApiV1WorkspacesLogsReloadCreateNonFieldErrorsErrorComponent
@@ -1021,7 +1063,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_32 = (
-                        ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_32
@@ -1031,7 +1073,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_33 = (
-                        ApiV1WorkspacesLogsReloadCreateEndpointMonitorsErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_33
@@ -1041,7 +1083,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_34 = (
-                        ApiV1WorkspacesLogsReloadCreateSecretsPolyRawErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateK8SAddonsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_34
@@ -1051,7 +1093,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_35 = (
-                        ApiV1WorkspacesLogsReloadCreateWorkspaceInventoryRawErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_35
@@ -1061,7 +1103,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_36 = (
-                        ApiV1WorkspacesLogsReloadCreateOrganizationIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateEndpointMonitorsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_36
@@ -1071,7 +1113,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_37 = (
-                        ApiV1WorkspacesLogsReloadCreateEncryptedErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateSecretsPolyRawErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_37
@@ -1081,7 +1123,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_38 = (
-                        ApiV1WorkspacesLogsReloadCreatePopIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateWorkspaceInventoryRawErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_38
@@ -1091,7 +1133,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_39 = (
-                        ApiV1WorkspacesLogsReloadCreateTemplateErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateOrganizationIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_39
@@ -1101,7 +1143,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_40 = (
-                        ApiV1WorkspacesLogsReloadCreateDescriptionErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateEncryptedErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_40
@@ -1111,7 +1153,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_41 = (
-                        ApiV1WorkspacesLogsReloadCreatePurposeErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreatePopIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_41
@@ -1121,7 +1163,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_42 = (
-                        ApiV1WorkspacesLogsReloadCreateUrlsErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateTemplateErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_42
@@ -1131,7 +1173,7 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_43 = (
-                        ApiV1WorkspacesLogsReloadCreateOwnerIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreateDescriptionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_43
@@ -1141,19 +1183,49 @@ class ApiV1WorkspacesLogsReloadCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_logs_reload_create_error_type_44 = (
-                        ApiV1WorkspacesLogsReloadCreateReadmeMdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesLogsReloadCreatePurposeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_44
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_logs_reload_create_error_type_45 = (
+                        ApiV1WorkspacesLogsReloadCreateUrlsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_45
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_logs_reload_create_error_type_46 = (
+                        ApiV1WorkspacesLogsReloadCreateOwnerIdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_46
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_logs_reload_create_error_type_47 = (
+                        ApiV1WorkspacesLogsReloadCreateReadmeMdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_47
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_workspaces_logs_reload_create_error_type_45 = (
+                componentsschemas_api_v1_workspaces_logs_reload_create_error_type_48 = (
                     ApiV1WorkspacesLogsReloadCreateAlternativeNameErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_45
+                return componentsschemas_api_v1_workspaces_logs_reload_create_error_type_48
 
             errors_item = _parse_errors_item(errors_item_data)
 

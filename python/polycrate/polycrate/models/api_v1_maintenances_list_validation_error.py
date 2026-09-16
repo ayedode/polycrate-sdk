@@ -99,43 +99,61 @@ class ApiV1MaintenancesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_maintenances_list_affected_pops_error_component import (
-            ApiV1MaintenancesListAffectedPopsErrorComponent,
+            ApiV1MaintenancesListAffectedPopsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_list_affected_workspace_error_component import (
-            ApiV1MaintenancesListAffectedWorkspaceErrorComponent,
+            ApiV1MaintenancesListAffectedWorkspaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_list_created_by_users_error_component import (
-            ApiV1MaintenancesListCreatedByUsersErrorComponent,
+            ApiV1MaintenancesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_end_error_component import ApiV1MaintenancesListEndErrorComponent
-        from ..models.api_v1_maintenances_list_kind_error_component import ApiV1MaintenancesListKindErrorComponent
+        from ..models.api_v1_maintenances_list_end_error_component import (
+            ApiV1MaintenancesListEndErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_maintenances_list_kind_error_component import (
+            ApiV1MaintenancesListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_organizations_error_component import (
-            ApiV1MaintenancesListOrganizationsErrorComponent,
+            ApiV1MaintenancesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_pop_error_component import ApiV1MaintenancesListPopErrorComponent
+        from ..models.api_v1_maintenances_list_pop_error_component import (
+            ApiV1MaintenancesListPopErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_pop_provider_entity_error_component import (
-            ApiV1MaintenancesListPopProviderEntityErrorComponent,
+            ApiV1MaintenancesListPopProviderEntityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_project_error_component import ApiV1MaintenancesListProjectErrorComponent
-        from ..models.api_v1_maintenances_list_search_error_component import ApiV1MaintenancesListSearchErrorComponent
-        from ..models.api_v1_maintenances_list_since_error_component import ApiV1MaintenancesListSinceErrorComponent
+        from ..models.api_v1_maintenances_list_project_error_component import (
+            ApiV1MaintenancesListProjectErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_maintenances_list_search_error_component import (
+            ApiV1MaintenancesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_maintenances_list_since_error_component import (
+            ApiV1MaintenancesListSinceErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_source_datasource_error_component import (
-            ApiV1MaintenancesListSourceDatasourceErrorComponent,
+            ApiV1MaintenancesListSourceDatasourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_list_source_note_error_component import (
-            ApiV1MaintenancesListSourceNoteErrorComponent,
+            ApiV1MaintenancesListSourceNoteErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_start_error_component import ApiV1MaintenancesListStartErrorComponent
-        from ..models.api_v1_maintenances_list_state_error_component import ApiV1MaintenancesListStateErrorComponent
+        from ..models.api_v1_maintenances_list_start_error_component import (
+            ApiV1MaintenancesListStartErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_maintenances_list_state_error_component import (
+            ApiV1MaintenancesListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_state_not_error_component import (
-            ApiV1MaintenancesListStateNotErrorComponent,
+            ApiV1MaintenancesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_list_time_range_error_component import (
-            ApiV1MaintenancesListTimeRangeErrorComponent,
+            ApiV1MaintenancesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_until_error_component import ApiV1MaintenancesListUntilErrorComponent
+        from ..models.api_v1_maintenances_list_until_error_component import (
+            ApiV1MaintenancesListUntilErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_workspaces_error_component import (
-            ApiV1MaintenancesListWorkspacesErrorComponent,
+            ApiV1MaintenancesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -200,46 +218,64 @@ class ApiV1MaintenancesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_maintenances_list_affected_pops_error_component import (
-            ApiV1MaintenancesListAffectedPopsErrorComponent,
+            ApiV1MaintenancesListAffectedPopsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_list_affected_workspace_error_component import (
-            ApiV1MaintenancesListAffectedWorkspaceErrorComponent,
+            ApiV1MaintenancesListAffectedWorkspaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_list_created_by_users_error_component import (
-            ApiV1MaintenancesListCreatedByUsersErrorComponent,
+            ApiV1MaintenancesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_end_error_component import ApiV1MaintenancesListEndErrorComponent
-        from ..models.api_v1_maintenances_list_kind_error_component import ApiV1MaintenancesListKindErrorComponent
+        from ..models.api_v1_maintenances_list_end_error_component import (
+            ApiV1MaintenancesListEndErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_maintenances_list_kind_error_component import (
+            ApiV1MaintenancesListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_name_exact_error_component import (
-            ApiV1MaintenancesListNameExactErrorComponent,
+            ApiV1MaintenancesListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_list_organizations_error_component import (
-            ApiV1MaintenancesListOrganizationsErrorComponent,
+            ApiV1MaintenancesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_pop_error_component import ApiV1MaintenancesListPopErrorComponent
+        from ..models.api_v1_maintenances_list_pop_error_component import (
+            ApiV1MaintenancesListPopErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_pop_provider_entity_error_component import (
-            ApiV1MaintenancesListPopProviderEntityErrorComponent,
+            ApiV1MaintenancesListPopProviderEntityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_project_error_component import ApiV1MaintenancesListProjectErrorComponent
-        from ..models.api_v1_maintenances_list_search_error_component import ApiV1MaintenancesListSearchErrorComponent
-        from ..models.api_v1_maintenances_list_since_error_component import ApiV1MaintenancesListSinceErrorComponent
+        from ..models.api_v1_maintenances_list_project_error_component import (
+            ApiV1MaintenancesListProjectErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_maintenances_list_search_error_component import (
+            ApiV1MaintenancesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_maintenances_list_since_error_component import (
+            ApiV1MaintenancesListSinceErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_source_datasource_error_component import (
-            ApiV1MaintenancesListSourceDatasourceErrorComponent,
+            ApiV1MaintenancesListSourceDatasourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_list_source_note_error_component import (
-            ApiV1MaintenancesListSourceNoteErrorComponent,
+            ApiV1MaintenancesListSourceNoteErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_start_error_component import ApiV1MaintenancesListStartErrorComponent
-        from ..models.api_v1_maintenances_list_state_error_component import ApiV1MaintenancesListStateErrorComponent
+        from ..models.api_v1_maintenances_list_start_error_component import (
+            ApiV1MaintenancesListStartErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_maintenances_list_state_error_component import (
+            ApiV1MaintenancesListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_state_not_error_component import (
-            ApiV1MaintenancesListStateNotErrorComponent,
+            ApiV1MaintenancesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_list_time_range_error_component import (
-            ApiV1MaintenancesListTimeRangeErrorComponent,
+            ApiV1MaintenancesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_maintenances_list_until_error_component import ApiV1MaintenancesListUntilErrorComponent
+        from ..models.api_v1_maintenances_list_until_error_component import (
+            ApiV1MaintenancesListUntilErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_workspaces_error_component import (
-            ApiV1MaintenancesListWorkspacesErrorComponent,
+            ApiV1MaintenancesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

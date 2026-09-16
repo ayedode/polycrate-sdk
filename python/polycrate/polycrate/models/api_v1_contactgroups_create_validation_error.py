@@ -54,18 +54,22 @@ class ApiV1ContactgroupsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_contactgroups_create_dynamic_rules_error_component import (
-            ApiV1ContactgroupsCreateDynamicRulesErrorComponent,
+            ApiV1ContactgroupsCreateDynamicRulesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_create_email_error_component import (
-            ApiV1ContactgroupsCreateEmailErrorComponent,
+            ApiV1ContactgroupsCreateEmailErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contactgroups_create_kind_error_component import ApiV1ContactgroupsCreateKindErrorComponent
-        from ..models.api_v1_contactgroups_create_name_error_component import ApiV1ContactgroupsCreateNameErrorComponent
+        from ..models.api_v1_contactgroups_create_kind_error_component import (
+            ApiV1ContactgroupsCreateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contactgroups_create_name_error_component import (
+            ApiV1ContactgroupsCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contactgroups_create_non_field_errors_error_component import (
-            ApiV1ContactgroupsCreateNonFieldErrorsErrorComponent,
+            ApiV1ContactgroupsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_create_organization_id_error_component import (
-            ApiV1ContactgroupsCreateOrganizationIdErrorComponent,
+            ApiV1ContactgroupsCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -104,21 +108,25 @@ class ApiV1ContactgroupsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_contactgroups_create_dynamic_rules_error_component import (
-            ApiV1ContactgroupsCreateDynamicRulesErrorComponent,
+            ApiV1ContactgroupsCreateDynamicRulesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_create_email_error_component import (
-            ApiV1ContactgroupsCreateEmailErrorComponent,
+            ApiV1ContactgroupsCreateEmailErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_create_keycloak_group_id_error_component import (
-            ApiV1ContactgroupsCreateKeycloakGroupIdErrorComponent,
+            ApiV1ContactgroupsCreateKeycloakGroupIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contactgroups_create_kind_error_component import ApiV1ContactgroupsCreateKindErrorComponent
-        from ..models.api_v1_contactgroups_create_name_error_component import ApiV1ContactgroupsCreateNameErrorComponent
+        from ..models.api_v1_contactgroups_create_kind_error_component import (
+            ApiV1ContactgroupsCreateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contactgroups_create_name_error_component import (
+            ApiV1ContactgroupsCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contactgroups_create_non_field_errors_error_component import (
-            ApiV1ContactgroupsCreateNonFieldErrorsErrorComponent,
+            ApiV1ContactgroupsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_create_organization_id_error_component import (
-            ApiV1ContactgroupsCreateOrganizationIdErrorComponent,
+            ApiV1ContactgroupsCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -249,15 +249,17 @@ class PricingQuoteWorkspaceDetail:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.pricing_quote_workspace_detail_deleted_by_user_type_0 import (
-            PricingQuoteWorkspaceDetailDeletedByUserType0,
+            PricingQuoteWorkspaceDetailDeletedByUserType0,  # noqa: PLC0415
         )
         from ..models.pricing_quote_workspace_detail_last_action_run_type_0 import (
-            PricingQuoteWorkspaceDetailLastActionRunType0,
+            PricingQuoteWorkspaceDetailLastActionRunType0,  # noqa: PLC0415
         )
         from ..models.pricing_quote_workspace_detail_organization_type_0 import (
-            PricingQuoteWorkspaceDetailOrganizationType0,
+            PricingQuoteWorkspaceDetailOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.pricing_quote_workspace_detail_workspace_type_0 import PricingQuoteWorkspaceDetailWorkspaceType0
+        from ..models.pricing_quote_workspace_detail_workspace_type_0 import (
+            PricingQuoteWorkspaceDetailWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -706,18 +708,20 @@ class PricingQuoteWorkspaceDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pricing_quote_app_simple import PricingQuoteAppSimple
-        from ..models.pricing_quote_workspace_detail_created import PricingQuoteWorkspaceDetailCreated
+        from ..models.pricing_quote_app_simple import PricingQuoteAppSimple  # noqa: PLC0415
+        from ..models.pricing_quote_workspace_detail_created import PricingQuoteWorkspaceDetailCreated  # noqa: PLC0415
         from ..models.pricing_quote_workspace_detail_deleted_by_user_type_0 import (
-            PricingQuoteWorkspaceDetailDeletedByUserType0,
+            PricingQuoteWorkspaceDetailDeletedByUserType0,  # noqa: PLC0415
         )
         from ..models.pricing_quote_workspace_detail_last_action_run_type_0 import (
-            PricingQuoteWorkspaceDetailLastActionRunType0,
+            PricingQuoteWorkspaceDetailLastActionRunType0,  # noqa: PLC0415
         )
         from ..models.pricing_quote_workspace_detail_organization_type_0 import (
-            PricingQuoteWorkspaceDetailOrganizationType0,
+            PricingQuoteWorkspaceDetailOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.pricing_quote_workspace_detail_workspace_type_0 import PricingQuoteWorkspaceDetailWorkspaceType0
+        from ..models.pricing_quote_workspace_detail_workspace_type_0 import (
+            PricingQuoteWorkspaceDetailWorkspaceType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

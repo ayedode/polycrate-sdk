@@ -155,9 +155,9 @@ class ArtifactRepositoryList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.artifact_repository_list_active_condition_instances_item import (
-            ArtifactRepositoryListActiveConditionInstancesItem,
+            ArtifactRepositoryListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.artifact_repository_list_created import ArtifactRepositoryListCreated
+        from ..models.artifact_repository_list_created import ArtifactRepositoryListCreated  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

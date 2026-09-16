@@ -183,94 +183,94 @@ class ApiV1PricingOrganizationProductsChangePricePartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_active_from_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateActiveFromErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateActiveFromErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_active_until_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateActiveUntilErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateActiveUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_agreed_price_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateAgreedPriceErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateAgreedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_agreed_price_reason_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateAgreedPriceReasonErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateAgreedPriceReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_annotations_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateAnnotationsErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_archived_at_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedAtErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_archived_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_archived_reason_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedReasonErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_auto_managed_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateAutoManagedErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateAutoManagedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_catalogue_app_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateCatalogueAppErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_content_type_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateContentTypeErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_criticality_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateCriticalityErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_debug_mode_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateDebugModeErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_display_name_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateDisplayNameErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_kind_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateKindErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_labels_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateLabelsErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_name_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateNameErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_non_field_errors_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_object_id_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateObjectIdErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_platform_service_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdatePlatformServiceErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_provider_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_provider_id_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderIdErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_provider_reference_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderReferenceErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_sla_availability_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_sla_target_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateSlaTargetErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_slo_availability_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_slo_target_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateSloTargetErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_target_availability_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_tolerations_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateTolerationsErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -421,97 +421,97 @@ class ApiV1PricingOrganizationProductsChangePricePartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_active_from_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateActiveFromErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateActiveFromErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_active_until_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateActiveUntilErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateActiveUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_agreed_price_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateAgreedPriceErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateAgreedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_agreed_price_reason_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateAgreedPriceReasonErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateAgreedPriceReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_annotations_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateAnnotationsErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_archived_at_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedAtErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_archived_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_archived_reason_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedReasonErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_auto_managed_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateAutoManagedErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateAutoManagedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_catalogue_app_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateCatalogueAppErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_content_type_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateContentTypeErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_criticality_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateCriticalityErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_debug_mode_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateDebugModeErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_display_name_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateDisplayNameErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_internal_note_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateInternalNoteErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateInternalNoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_kind_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateKindErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_labels_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateLabelsErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_name_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateNameErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_non_field_errors_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_object_id_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateObjectIdErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_platform_service_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdatePlatformServiceErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_provider_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_provider_id_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderIdErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_provider_reference_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderReferenceErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_sla_availability_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_sla_target_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateSlaTargetErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_slo_availability_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_slo_target_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateSloTargetErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_target_availability_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_organization_products_change_price_partial_update_tolerations_error_component import (
-            ApiV1PricingOrganizationProductsChangePricePartialUpdateTolerationsErrorComponent,
+            ApiV1PricingOrganizationProductsChangePricePartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

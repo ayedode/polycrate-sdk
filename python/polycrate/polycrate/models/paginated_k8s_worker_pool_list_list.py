@@ -68,7 +68,7 @@ class PaginatedK8SWorkerPoolListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_worker_pool_list import K8SWorkerPoolList
+        from ..models.k8s_worker_pool_list import K8SWorkerPoolList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

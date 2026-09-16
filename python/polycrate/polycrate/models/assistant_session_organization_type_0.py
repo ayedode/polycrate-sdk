@@ -47,7 +47,7 @@ class AssistantSessionOrganizationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.assistant_session_organization_type_0_created_by_type_0 import (
-            AssistantSessionOrganizationType0CreatedByType0,
+            AssistantSessionOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         id: str | Unset = UNSET
@@ -129,7 +129,7 @@ class AssistantSessionOrganizationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.assistant_session_organization_type_0_created_by_type_0 import (
-            AssistantSessionOrganizationType0CreatedByType0,
+            AssistantSessionOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

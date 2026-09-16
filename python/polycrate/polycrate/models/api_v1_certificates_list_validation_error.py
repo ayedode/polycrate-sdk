@@ -68,28 +68,34 @@ class ApiV1CertificatesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_certificates_list_certificate_status_error_component import (
-            ApiV1CertificatesListCertificateStatusErrorComponent,
+            ApiV1CertificatesListCertificateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_list_created_by_users_error_component import (
-            ApiV1CertificatesListCreatedByUsersErrorComponent,
+            ApiV1CertificatesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_certificates_list_kind_error_component import ApiV1CertificatesListKindErrorComponent
+        from ..models.api_v1_certificates_list_kind_error_component import (
+            ApiV1CertificatesListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_certificates_list_name_exact_error_component import (
-            ApiV1CertificatesListNameExactErrorComponent,
+            ApiV1CertificatesListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_list_organizations_error_component import (
-            ApiV1CertificatesListOrganizationsErrorComponent,
+            ApiV1CertificatesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_certificates_list_search_error_component import ApiV1CertificatesListSearchErrorComponent
-        from ..models.api_v1_certificates_list_state_error_component import ApiV1CertificatesListStateErrorComponent
+        from ..models.api_v1_certificates_list_search_error_component import (
+            ApiV1CertificatesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_certificates_list_state_error_component import (
+            ApiV1CertificatesListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_certificates_list_state_not_error_component import (
-            ApiV1CertificatesListStateNotErrorComponent,
+            ApiV1CertificatesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_list_time_range_error_component import (
-            ApiV1CertificatesListTimeRangeErrorComponent,
+            ApiV1CertificatesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_list_workspaces_error_component import (
-            ApiV1CertificatesListWorkspacesErrorComponent,
+            ApiV1CertificatesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -136,29 +142,37 @@ class ApiV1CertificatesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_certificates_list_certificate_status_error_component import (
-            ApiV1CertificatesListCertificateStatusErrorComponent,
+            ApiV1CertificatesListCertificateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_list_created_by_users_error_component import (
-            ApiV1CertificatesListCreatedByUsersErrorComponent,
+            ApiV1CertificatesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_certificates_list_k8s_app_error_component import ApiV1CertificatesListK8SAppErrorComponent
-        from ..models.api_v1_certificates_list_kind_error_component import ApiV1CertificatesListKindErrorComponent
+        from ..models.api_v1_certificates_list_k8s_app_error_component import (
+            ApiV1CertificatesListK8SAppErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_certificates_list_kind_error_component import (
+            ApiV1CertificatesListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_certificates_list_name_exact_error_component import (
-            ApiV1CertificatesListNameExactErrorComponent,
+            ApiV1CertificatesListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_list_organizations_error_component import (
-            ApiV1CertificatesListOrganizationsErrorComponent,
+            ApiV1CertificatesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_certificates_list_search_error_component import ApiV1CertificatesListSearchErrorComponent
-        from ..models.api_v1_certificates_list_state_error_component import ApiV1CertificatesListStateErrorComponent
+        from ..models.api_v1_certificates_list_search_error_component import (
+            ApiV1CertificatesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_certificates_list_state_error_component import (
+            ApiV1CertificatesListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_certificates_list_state_not_error_component import (
-            ApiV1CertificatesListStateNotErrorComponent,
+            ApiV1CertificatesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_list_time_range_error_component import (
-            ApiV1CertificatesListTimeRangeErrorComponent,
+            ApiV1CertificatesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_list_workspaces_error_component import (
-            ApiV1CertificatesListWorkspacesErrorComponent,
+            ApiV1CertificatesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

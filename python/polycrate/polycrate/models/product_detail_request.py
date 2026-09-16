@@ -83,6 +83,7 @@ class ProductDetailRequest:
         price_per_unit (None | str | Unset):
         cost_per_unit (None | str | Unset):
         provider_entity (None | Unset | UUID):
+        pop (None | Unset | UUID): Concrete IaaS location (e.g. hetzner-fsn1). Location slug is the PoP name suffix.
         provider_type_id (None | str | Unset):
         config (Any | Unset):
     """
@@ -112,6 +113,7 @@ class ProductDetailRequest:
     price_per_unit: None | str | Unset = UNSET
     cost_per_unit: None | str | Unset = UNSET
     provider_entity: None | Unset | UUID = UNSET
+    pop: None | Unset | UUID = UNSET
     provider_type_id: None | str | Unset = UNSET
     config: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -227,6 +229,14 @@ class ProductDetailRequest:
         else:
             provider_entity = self.provider_entity
 
+        pop: None | str | Unset
+        if isinstance(self.pop, Unset):
+            pop = UNSET
+        elif isinstance(self.pop, UUID):
+            pop = str(self.pop)
+        else:
+            pop = self.pop
+
         provider_type_id: None | str | Unset
         if isinstance(self.provider_type_id, Unset):
             provider_type_id = UNSET
@@ -290,6 +300,8 @@ class ProductDetailRequest:
             field_dict["cost_per_unit"] = cost_per_unit
         if provider_entity is not UNSET:
             field_dict["provider_entity"] = provider_entity
+        if pop is not UNSET:
+            field_dict["pop"] = pop
         if provider_type_id is not UNSET:
             field_dict["provider_type_id"] = provider_type_id
         if config is not UNSET:
@@ -411,6 +423,12 @@ class ProductDetailRequest:
                 files.append(("provider_entity", (None, str(self.provider_entity), "text/plain")))
             else:
                 files.append(("provider_entity", (None, str(self.provider_entity).encode(), "text/plain")))
+
+        if not isinstance(self.pop, Unset):
+            if isinstance(self.pop, UUID):
+                files.append(("pop", (None, str(self.pop), "text/plain")))
+            else:
+                files.append(("pop", (None, str(self.pop).encode(), "text/plain")))
 
         if not isinstance(self.provider_type_id, Unset):
             if isinstance(self.provider_type_id, str):
@@ -605,6 +623,23 @@ class ProductDetailRequest:
 
         provider_entity = _parse_provider_entity(d.pop("provider_entity", UNSET))
 
+        def _parse_pop(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                pop_type_0 = UUID(data)
+
+                return pop_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        pop = _parse_pop(d.pop("pop", UNSET))
+
         def _parse_provider_type_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -642,6 +677,7 @@ class ProductDetailRequest:
             price_per_unit=price_per_unit,
             cost_per_unit=cost_per_unit,
             provider_entity=provider_entity,
+            pop=pop,
             provider_type_id=provider_type_id,
             config=config,
         )

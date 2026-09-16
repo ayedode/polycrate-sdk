@@ -6776,6 +6776,7 @@ export const apiV1BlocksRunDiscoveryCreate = (data: ApiV1BlocksRunDiscoveryCreat
  * @param data.hasConditions Has Conditions
  * @param data.isNew
  * @param data.kind Kind
+ * @param data.maintainer
  * @param data.name
  * @param data.nameExact
  * @param data.ordering Which field to use when ordering the results.
@@ -6823,6 +6824,7 @@ export const apiV1CatalogueAppsList = (data: ApiV1CatalogueAppsListData = {}): C
             has_conditions: data.hasConditions,
             is_new: data.isNew,
             kind: data.kind,
+            maintainer: data.maintainer,
             name: data.name,
             name_exact: data.nameExact,
             ordering: data.ordering,
@@ -14854,6 +14856,7 @@ export const apiV1GrafanaDashboardSubscriptionsDestroy = (data: ApiV1GrafanaDash
  * * `30d` - Last 30 days
  * * `90d` - Last 90 days
  * @param data.updatedAt
+ * @param data.workerPool Worker Pool
  * @param data.workspaces
  * @returns PaginatedHostListList
  * @throws ApiError
@@ -14901,6 +14904,7 @@ export const apiV1HostsList = (data: ApiV1HostsListData = {}): CancelablePromise
             state_not: data.stateNot,
             time_range: data.timeRange,
             updated_at: data.updatedAt,
+            worker_pool: data.workerPool,
             workspaces: data.workspaces
         },
         errors: {
@@ -32257,8 +32261,11 @@ export const apiV1WorkspaceTemplatesRenderCreate = (data: ApiV1WorkspaceTemplate
  * @param data.endpointMonitoringMode
  * @param data.gitSyncEnabled Git Sync Enabled
  * @param data.hasConditions Has Conditions
+ * @param data.k8sAddonsEnabled K8s Addons Enabled
  * @param data.kind Kind
+ * @param data.logsEnabled Logs Enabled
  * @param data.maintenance Maintenance
+ * @param data.metricsEnabled Metrics Enabled
  * @param data.name
  * @param data.nameExact
  * @param data.notificationsEnabled Notifications Enabled
@@ -32297,8 +32304,11 @@ export const apiV1WorkspacesList = (data: ApiV1WorkspacesListData = {}): Cancela
             endpoint_monitoring_mode: data.endpointMonitoringMode,
             git_sync_enabled: data.gitSyncEnabled,
             has_conditions: data.hasConditions,
+            k8s_addons_enabled: data.k8sAddonsEnabled,
             kind: data.kind,
+            logs_enabled: data.logsEnabled,
             maintenance: data.maintenance,
+            metrics_enabled: data.metricsEnabled,
             name: data.name,
             name_exact: data.nameExact,
             notifications_enabled: data.notificationsEnabled,

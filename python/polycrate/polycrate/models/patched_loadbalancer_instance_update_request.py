@@ -27,6 +27,9 @@ class PatchedLoadbalancerInstanceUpdateRequest:
             wizard_ports (Any | Unset):
             labels (Any | Unset):
             annotations (Any | Unset):
+            resource_limits (Any | Unset): Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.
+            haproxy_defaults (Any | Unset): Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin,
+                option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.
     """
 
     config: str | Unset = UNSET
@@ -34,6 +37,8 @@ class PatchedLoadbalancerInstanceUpdateRequest:
     wizard_ports: Any | Unset = UNSET
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
+    resource_limits: Any | Unset = UNSET
+    haproxy_defaults: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -46,6 +51,10 @@ class PatchedLoadbalancerInstanceUpdateRequest:
         labels = self.labels
 
         annotations = self.annotations
+
+        resource_limits = self.resource_limits
+
+        haproxy_defaults = self.haproxy_defaults
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -60,6 +69,10 @@ class PatchedLoadbalancerInstanceUpdateRequest:
             field_dict["labels"] = labels
         if annotations is not UNSET:
             field_dict["annotations"] = annotations
+        if resource_limits is not UNSET:
+            field_dict["resource_limits"] = resource_limits
+        if haproxy_defaults is not UNSET:
+            field_dict["haproxy_defaults"] = haproxy_defaults
 
         return field_dict
 
@@ -81,6 +94,12 @@ class PatchedLoadbalancerInstanceUpdateRequest:
         if not isinstance(self.annotations, Unset):
             files.append(("annotations", (None, str(self.annotations).encode(), "text/plain")))
 
+        if not isinstance(self.resource_limits, Unset):
+            files.append(("resource_limits", (None, str(self.resource_limits).encode(), "text/plain")))
+
+        if not isinstance(self.haproxy_defaults, Unset):
+            files.append(("haproxy_defaults", (None, str(self.haproxy_defaults).encode(), "text/plain")))
+
         for prop_name, prop in self.additional_properties.items():
             files.append((prop_name, (None, str(prop).encode(), "text/plain")))
 
@@ -99,12 +118,18 @@ class PatchedLoadbalancerInstanceUpdateRequest:
 
         annotations = d.pop("annotations", UNSET)
 
+        resource_limits = d.pop("resource_limits", UNSET)
+
+        haproxy_defaults = d.pop("haproxy_defaults", UNSET)
+
         patched_loadbalancer_instance_update_request = cls(
             config=config,
             ports=ports,
             wizard_ports=wizard_ports,
             labels=labels,
             annotations=annotations,
+            resource_limits=resource_limits,
+            haproxy_defaults=haproxy_defaults,
         )
 
         patched_loadbalancer_instance_update_request.additional_properties = d

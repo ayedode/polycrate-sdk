@@ -65,10 +65,10 @@ class SloOverviewResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.slo_object import SloObject
-        from ..models.slo_organization_filter import SloOrganizationFilter
-        from ..models.slo_stats import SloStats
-        from ..models.slo_workspace_filter import SloWorkspaceFilter
+        from ..models.slo_object import SloObject  # noqa: PLC0415
+        from ..models.slo_organization_filter import SloOrganizationFilter  # noqa: PLC0415
+        from ..models.slo_stats import SloStats  # noqa: PLC0415
+        from ..models.slo_workspace_filter import SloWorkspaceFilter  # noqa: PLC0415
 
         d = dict(src_dict)
         stats = SloStats.from_dict(d.pop("stats"))

@@ -89,8 +89,8 @@ class CertificateList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.certificate_list_organization_type_0 import CertificateListOrganizationType0
-        from ..models.certificate_list_workspace_type_0 import CertificateListWorkspaceType0
+        from ..models.certificate_list_organization_type_0 import CertificateListOrganizationType0  # noqa: PLC0415
+        from ..models.certificate_list_workspace_type_0 import CertificateListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -194,12 +194,12 @@ class CertificateList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.certificate_list_active_condition_instances_item import (
-            CertificateListActiveConditionInstancesItem,
+            CertificateListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.certificate_list_created import CertificateListCreated
-        from ..models.certificate_list_k8s_cluster import CertificateListK8SCluster
-        from ..models.certificate_list_organization_type_0 import CertificateListOrganizationType0
-        from ..models.certificate_list_workspace_type_0 import CertificateListWorkspaceType0
+        from ..models.certificate_list_created import CertificateListCreated  # noqa: PLC0415
+        from ..models.certificate_list_k8s_cluster import CertificateListK8SCluster  # noqa: PLC0415
+        from ..models.certificate_list_organization_type_0 import CertificateListOrganizationType0  # noqa: PLC0415
+        from ..models.certificate_list_workspace_type_0 import CertificateListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

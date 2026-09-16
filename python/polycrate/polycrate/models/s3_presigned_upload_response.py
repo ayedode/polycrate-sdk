@@ -63,7 +63,7 @@ class S3PresignedUploadResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_presigned_upload_response_fields import S3PresignedUploadResponseFields
+        from ..models.s3_presigned_upload_response_fields import S3PresignedUploadResponseFields  # noqa: PLC0415
 
         d = dict(src_dict)
         url = d.pop("url")

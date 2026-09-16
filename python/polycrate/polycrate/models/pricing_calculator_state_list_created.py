@@ -36,7 +36,7 @@ class PricingCalculatorStateListCreated:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.pricing_calculator_state_list_created_created_by_type_0 import (
-            PricingCalculatorStateListCreatedCreatedByType0,
+            PricingCalculatorStateListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         created_at: None | str | Unset
@@ -84,7 +84,7 @@ class PricingCalculatorStateListCreated:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.pricing_calculator_state_list_created_created_by_type_0 import (
-            PricingCalculatorStateListCreatedCreatedByType0,
+            PricingCalculatorStateListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

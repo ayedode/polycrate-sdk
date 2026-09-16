@@ -47,7 +47,7 @@ class ConditionInstanceDetailOrganizationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.condition_instance_detail_organization_type_0_created_by_type_0 import (
-            ConditionInstanceDetailOrganizationType0CreatedByType0,
+            ConditionInstanceDetailOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         id: str | Unset = UNSET
@@ -129,7 +129,7 @@ class ConditionInstanceDetailOrganizationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.condition_instance_detail_organization_type_0_created_by_type_0 import (
-            ConditionInstanceDetailOrganizationType0CreatedByType0,
+            ConditionInstanceDetailOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

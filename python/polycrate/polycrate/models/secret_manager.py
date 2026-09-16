@@ -216,10 +216,10 @@ class SecretManager:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.secret_manager_deleted_by_user_type_0 import SecretManagerDeletedByUserType0
-        from ..models.secret_manager_last_action_run_type_0 import SecretManagerLastActionRunType0
-        from ..models.secret_manager_organization_type_0 import SecretManagerOrganizationType0
-        from ..models.secret_manager_workspace_type_0 import SecretManagerWorkspaceType0
+        from ..models.secret_manager_deleted_by_user_type_0 import SecretManagerDeletedByUserType0  # noqa: PLC0415
+        from ..models.secret_manager_last_action_run_type_0 import SecretManagerLastActionRunType0  # noqa: PLC0415
+        from ..models.secret_manager_organization_type_0 import SecretManagerOrganizationType0  # noqa: PLC0415
+        from ..models.secret_manager_workspace_type_0 import SecretManagerWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -591,11 +591,11 @@ class SecretManager:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.secret_manager_created import SecretManagerCreated
-        from ..models.secret_manager_deleted_by_user_type_0 import SecretManagerDeletedByUserType0
-        from ..models.secret_manager_last_action_run_type_0 import SecretManagerLastActionRunType0
-        from ..models.secret_manager_organization_type_0 import SecretManagerOrganizationType0
-        from ..models.secret_manager_workspace_type_0 import SecretManagerWorkspaceType0
+        from ..models.secret_manager_created import SecretManagerCreated  # noqa: PLC0415
+        from ..models.secret_manager_deleted_by_user_type_0 import SecretManagerDeletedByUserType0  # noqa: PLC0415
+        from ..models.secret_manager_last_action_run_type_0 import SecretManagerLastActionRunType0  # noqa: PLC0415
+        from ..models.secret_manager_organization_type_0 import SecretManagerOrganizationType0  # noqa: PLC0415
+        from ..models.secret_manager_workspace_type_0 import SecretManagerWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

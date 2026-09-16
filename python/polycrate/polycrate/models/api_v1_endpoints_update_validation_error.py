@@ -233,136 +233,154 @@ class ApiV1EndpointsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_endpoints_update_actual_availability_error_component import (
-            ApiV1EndpointsUpdateActualAvailabilityErrorComponent,
+            ApiV1EndpointsUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_annotations_error_component import (
-            ApiV1EndpointsUpdateAnnotationsErrorComponent,
+            ApiV1EndpointsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_archived_at_error_component import (
-            ApiV1EndpointsUpdateArchivedAtErrorComponent,
+            ApiV1EndpointsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_archived_by_error_component import (
-            ApiV1EndpointsUpdateArchivedByErrorComponent,
+            ApiV1EndpointsUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_archived_error_component import ApiV1EndpointsUpdateArchivedErrorComponent
+        from ..models.api_v1_endpoints_update_archived_error_component import (
+            ApiV1EndpointsUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_archived_reason_error_component import (
-            ApiV1EndpointsUpdateArchivedReasonErrorComponent,
+            ApiV1EndpointsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_check_result_retention_days_error_component import (
-            ApiV1EndpointsUpdateCheckResultRetentionDaysErrorComponent,
+            ApiV1EndpointsUpdateCheckResultRetentionDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_check_results_error_component import (
-            ApiV1EndpointsUpdateCheckResultsErrorComponent,
+            ApiV1EndpointsUpdateCheckResultsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_created_by_component_error_component import (
-            ApiV1EndpointsUpdateCreatedByComponentErrorComponent,
+            ApiV1EndpointsUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_created_by_user_error_component import (
-            ApiV1EndpointsUpdateCreatedByUserErrorComponent,
+            ApiV1EndpointsUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_criticality_error_component import (
-            ApiV1EndpointsUpdateCriticalityErrorComponent,
+            ApiV1EndpointsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_debug_mode_error_component import (
-            ApiV1EndpointsUpdateDebugModeErrorComponent,
+            ApiV1EndpointsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_discovery_enabled_error_component import (
-            ApiV1EndpointsUpdateDiscoveryEnabledErrorComponent,
+            ApiV1EndpointsUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_display_name_error_component import (
-            ApiV1EndpointsUpdateDisplayNameErrorComponent,
+            ApiV1EndpointsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_do_not_monitor_error_component import (
-            ApiV1EndpointsUpdateDoNotMonitorErrorComponent,
+            ApiV1EndpointsUpdateDoNotMonitorErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_k8s_app_error_component import ApiV1EndpointsUpdateK8SAppErrorComponent
+        from ..models.api_v1_endpoints_update_k8s_app_error_component import (
+            ApiV1EndpointsUpdateK8SAppErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_k8s_cluster_error_component import (
-            ApiV1EndpointsUpdateK8SClusterErrorComponent,
+            ApiV1EndpointsUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_kind_error_component import ApiV1EndpointsUpdateKindErrorComponent
-        from ..models.api_v1_endpoints_update_labels_error_component import ApiV1EndpointsUpdateLabelsErrorComponent
+        from ..models.api_v1_endpoints_update_kind_error_component import (
+            ApiV1EndpointsUpdateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_update_labels_error_component import (
+            ApiV1EndpointsUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_last_agent_metrics_error_component import (
-            ApiV1EndpointsUpdateLastAgentMetricsErrorComponent,
+            ApiV1EndpointsUpdateLastAgentMetricsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1EndpointsUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1EndpointsUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_managed_by_content_type_error_component import (
-            ApiV1EndpointsUpdateManagedByContentTypeErrorComponent,
+            ApiV1EndpointsUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_managed_by_object_id_error_component import (
-            ApiV1EndpointsUpdateManagedByObjectIdErrorComponent,
+            ApiV1EndpointsUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_max_agents_per_endpoint_error_component import (
-            ApiV1EndpointsUpdateMaxAgentsPerEndpointErrorComponent,
+            ApiV1EndpointsUpdateMaxAgentsPerEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_modified_by_user_error_component import (
-            ApiV1EndpointsUpdateModifiedByUserErrorComponent,
+            ApiV1EndpointsUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_name_error_component import ApiV1EndpointsUpdateNameErrorComponent
+        from ..models.api_v1_endpoints_update_name_error_component import (
+            ApiV1EndpointsUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_non_field_errors_error_component import (
-            ApiV1EndpointsUpdateNonFieldErrorsErrorComponent,
+            ApiV1EndpointsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_organization_id_error_component import (
-            ApiV1EndpointsUpdateOrganizationIdErrorComponent,
+            ApiV1EndpointsUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_platform_dns_record_created_error_component import (
-            ApiV1EndpointsUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1EndpointsUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_platform_service_error_component import (
-            ApiV1EndpointsUpdatePlatformServiceErrorComponent,
+            ApiV1EndpointsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_pop_endpoint_error_component import (
-            ApiV1EndpointsUpdatePopEndpointErrorComponent,
+            ApiV1EndpointsUpdatePopEndpointErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_provider_error_component import ApiV1EndpointsUpdateProviderErrorComponent
+        from ..models.api_v1_endpoints_update_provider_error_component import (
+            ApiV1EndpointsUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_provider_id_error_component import (
-            ApiV1EndpointsUpdateProviderIdErrorComponent,
+            ApiV1EndpointsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_provider_reference_error_component import (
-            ApiV1EndpointsUpdateProviderReferenceErrorComponent,
+            ApiV1EndpointsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_reconciliation_enabled_error_component import (
-            ApiV1EndpointsUpdateReconciliationEnabledErrorComponent,
+            ApiV1EndpointsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_region_error_component import ApiV1EndpointsUpdateRegionErrorComponent
+        from ..models.api_v1_endpoints_update_region_error_component import (
+            ApiV1EndpointsUpdateRegionErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_remote_address_error_component import (
-            ApiV1EndpointsUpdateRemoteAddressErrorComponent,
+            ApiV1EndpointsUpdateRemoteAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_remote_port_error_component import (
-            ApiV1EndpointsUpdateRemotePortErrorComponent,
+            ApiV1EndpointsUpdateRemotePortErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_resolved_ip_error_component import (
-            ApiV1EndpointsUpdateResolvedIpErrorComponent,
+            ApiV1EndpointsUpdateResolvedIpErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_s3_cluster_error_component import (
-            ApiV1EndpointsUpdateS3ClusterErrorComponent,
+            ApiV1EndpointsUpdateS3ClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_scope_error_component import ApiV1EndpointsUpdateScopeErrorComponent
+        from ..models.api_v1_endpoints_update_scope_error_component import (
+            ApiV1EndpointsUpdateScopeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_sla_availability_error_component import (
-            ApiV1EndpointsUpdateSlaAvailabilityErrorComponent,
+            ApiV1EndpointsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_sla_target_error_component import (
-            ApiV1EndpointsUpdateSlaTargetErrorComponent,
+            ApiV1EndpointsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_sla_window_days_error_component import (
-            ApiV1EndpointsUpdateSlaWindowDaysErrorComponent,
+            ApiV1EndpointsUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_slo_availability_error_component import (
-            ApiV1EndpointsUpdateSloAvailabilityErrorComponent,
+            ApiV1EndpointsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_slo_target_error_component import (
-            ApiV1EndpointsUpdateSloTargetErrorComponent,
+            ApiV1EndpointsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_slo_window_days_error_component import (
-            ApiV1EndpointsUpdateSloWindowDaysErrorComponent,
+            ApiV1EndpointsUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_spec_error_component import ApiV1EndpointsUpdateSpecErrorComponent
+        from ..models.api_v1_endpoints_update_spec_error_component import (
+            ApiV1EndpointsUpdateSpecErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_target_availability_error_component import (
-            ApiV1EndpointsUpdateTargetAvailabilityErrorComponent,
+            ApiV1EndpointsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_workspace_id_error_component import (
-            ApiV1EndpointsUpdateWorkspaceIdErrorComponent,
+            ApiV1EndpointsUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -489,139 +507,157 @@ class ApiV1EndpointsUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_endpoints_update_actual_availability_error_component import (
-            ApiV1EndpointsUpdateActualAvailabilityErrorComponent,
+            ApiV1EndpointsUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_annotations_error_component import (
-            ApiV1EndpointsUpdateAnnotationsErrorComponent,
+            ApiV1EndpointsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_archived_at_error_component import (
-            ApiV1EndpointsUpdateArchivedAtErrorComponent,
+            ApiV1EndpointsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_archived_by_error_component import (
-            ApiV1EndpointsUpdateArchivedByErrorComponent,
+            ApiV1EndpointsUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_archived_error_component import ApiV1EndpointsUpdateArchivedErrorComponent
+        from ..models.api_v1_endpoints_update_archived_error_component import (
+            ApiV1EndpointsUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_archived_reason_error_component import (
-            ApiV1EndpointsUpdateArchivedReasonErrorComponent,
+            ApiV1EndpointsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_check_result_retention_days_error_component import (
-            ApiV1EndpointsUpdateCheckResultRetentionDaysErrorComponent,
+            ApiV1EndpointsUpdateCheckResultRetentionDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_check_results_error_component import (
-            ApiV1EndpointsUpdateCheckResultsErrorComponent,
+            ApiV1EndpointsUpdateCheckResultsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_created_by_component_error_component import (
-            ApiV1EndpointsUpdateCreatedByComponentErrorComponent,
+            ApiV1EndpointsUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_created_by_user_error_component import (
-            ApiV1EndpointsUpdateCreatedByUserErrorComponent,
+            ApiV1EndpointsUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_criticality_error_component import (
-            ApiV1EndpointsUpdateCriticalityErrorComponent,
+            ApiV1EndpointsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_debug_mode_error_component import (
-            ApiV1EndpointsUpdateDebugModeErrorComponent,
+            ApiV1EndpointsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_discovery_enabled_error_component import (
-            ApiV1EndpointsUpdateDiscoveryEnabledErrorComponent,
+            ApiV1EndpointsUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_display_name_error_component import (
-            ApiV1EndpointsUpdateDisplayNameErrorComponent,
+            ApiV1EndpointsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_do_not_monitor_error_component import (
-            ApiV1EndpointsUpdateDoNotMonitorErrorComponent,
+            ApiV1EndpointsUpdateDoNotMonitorErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_k8s_app_error_component import ApiV1EndpointsUpdateK8SAppErrorComponent
+        from ..models.api_v1_endpoints_update_k8s_app_error_component import (
+            ApiV1EndpointsUpdateK8SAppErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_k8s_cluster_error_component import (
-            ApiV1EndpointsUpdateK8SClusterErrorComponent,
+            ApiV1EndpointsUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_kind_error_component import ApiV1EndpointsUpdateKindErrorComponent
-        from ..models.api_v1_endpoints_update_labels_error_component import ApiV1EndpointsUpdateLabelsErrorComponent
+        from ..models.api_v1_endpoints_update_kind_error_component import (
+            ApiV1EndpointsUpdateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_endpoints_update_labels_error_component import (
+            ApiV1EndpointsUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_last_agent_metrics_error_component import (
-            ApiV1EndpointsUpdateLastAgentMetricsErrorComponent,
+            ApiV1EndpointsUpdateLastAgentMetricsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1EndpointsUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1EndpointsUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_loadbalancer_instance_error_component import (
-            ApiV1EndpointsUpdateLoadbalancerInstanceErrorComponent,
+            ApiV1EndpointsUpdateLoadbalancerInstanceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_managed_by_content_type_error_component import (
-            ApiV1EndpointsUpdateManagedByContentTypeErrorComponent,
+            ApiV1EndpointsUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_managed_by_object_id_error_component import (
-            ApiV1EndpointsUpdateManagedByObjectIdErrorComponent,
+            ApiV1EndpointsUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_max_agents_per_endpoint_error_component import (
-            ApiV1EndpointsUpdateMaxAgentsPerEndpointErrorComponent,
+            ApiV1EndpointsUpdateMaxAgentsPerEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_modified_by_user_error_component import (
-            ApiV1EndpointsUpdateModifiedByUserErrorComponent,
+            ApiV1EndpointsUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_name_error_component import ApiV1EndpointsUpdateNameErrorComponent
+        from ..models.api_v1_endpoints_update_name_error_component import (
+            ApiV1EndpointsUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_non_field_errors_error_component import (
-            ApiV1EndpointsUpdateNonFieldErrorsErrorComponent,
+            ApiV1EndpointsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_organization_id_error_component import (
-            ApiV1EndpointsUpdateOrganizationIdErrorComponent,
+            ApiV1EndpointsUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_platform_dns_record_created_error_component import (
-            ApiV1EndpointsUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1EndpointsUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_platform_service_error_component import (
-            ApiV1EndpointsUpdatePlatformServiceErrorComponent,
+            ApiV1EndpointsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_pop_endpoint_error_component import (
-            ApiV1EndpointsUpdatePopEndpointErrorComponent,
+            ApiV1EndpointsUpdatePopEndpointErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_provider_error_component import ApiV1EndpointsUpdateProviderErrorComponent
+        from ..models.api_v1_endpoints_update_provider_error_component import (
+            ApiV1EndpointsUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_provider_id_error_component import (
-            ApiV1EndpointsUpdateProviderIdErrorComponent,
+            ApiV1EndpointsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_provider_reference_error_component import (
-            ApiV1EndpointsUpdateProviderReferenceErrorComponent,
+            ApiV1EndpointsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_reconciliation_enabled_error_component import (
-            ApiV1EndpointsUpdateReconciliationEnabledErrorComponent,
+            ApiV1EndpointsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_region_error_component import ApiV1EndpointsUpdateRegionErrorComponent
+        from ..models.api_v1_endpoints_update_region_error_component import (
+            ApiV1EndpointsUpdateRegionErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_remote_address_error_component import (
-            ApiV1EndpointsUpdateRemoteAddressErrorComponent,
+            ApiV1EndpointsUpdateRemoteAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_remote_port_error_component import (
-            ApiV1EndpointsUpdateRemotePortErrorComponent,
+            ApiV1EndpointsUpdateRemotePortErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_resolved_ip_error_component import (
-            ApiV1EndpointsUpdateResolvedIpErrorComponent,
+            ApiV1EndpointsUpdateResolvedIpErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_s3_cluster_error_component import (
-            ApiV1EndpointsUpdateS3ClusterErrorComponent,
+            ApiV1EndpointsUpdateS3ClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_scope_error_component import ApiV1EndpointsUpdateScopeErrorComponent
+        from ..models.api_v1_endpoints_update_scope_error_component import (
+            ApiV1EndpointsUpdateScopeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_sla_availability_error_component import (
-            ApiV1EndpointsUpdateSlaAvailabilityErrorComponent,
+            ApiV1EndpointsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_sla_target_error_component import (
-            ApiV1EndpointsUpdateSlaTargetErrorComponent,
+            ApiV1EndpointsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_sla_window_days_error_component import (
-            ApiV1EndpointsUpdateSlaWindowDaysErrorComponent,
+            ApiV1EndpointsUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_slo_availability_error_component import (
-            ApiV1EndpointsUpdateSloAvailabilityErrorComponent,
+            ApiV1EndpointsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_slo_target_error_component import (
-            ApiV1EndpointsUpdateSloTargetErrorComponent,
+            ApiV1EndpointsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_slo_window_days_error_component import (
-            ApiV1EndpointsUpdateSloWindowDaysErrorComponent,
+            ApiV1EndpointsUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_endpoints_update_spec_error_component import ApiV1EndpointsUpdateSpecErrorComponent
+        from ..models.api_v1_endpoints_update_spec_error_component import (
+            ApiV1EndpointsUpdateSpecErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_endpoints_update_target_availability_error_component import (
-            ApiV1EndpointsUpdateTargetAvailabilityErrorComponent,
+            ApiV1EndpointsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_update_workspace_id_error_component import (
-            ApiV1EndpointsUpdateWorkspaceIdErrorComponent,
+            ApiV1EndpointsUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

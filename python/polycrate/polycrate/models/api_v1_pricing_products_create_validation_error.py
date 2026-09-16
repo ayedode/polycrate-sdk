@@ -54,6 +54,7 @@ if TYPE_CHECKING:
     from ..models.api_v1_pricing_products_create_platform_service_error_component import (
         ApiV1PricingProductsCreatePlatformServiceErrorComponent,
     )
+    from ..models.api_v1_pricing_products_create_pop_error_component import ApiV1PricingProductsCreatePopErrorComponent
     from ..models.api_v1_pricing_products_create_price_per_unit_error_component import (
         ApiV1PricingProductsCreatePricePerUnitErrorComponent,
     )
@@ -111,9 +112,9 @@ class ApiV1PricingProductsCreateValidationError:
             ApiV1PricingProductsCreateDisplayNameErrorComponent | ApiV1PricingProductsCreateKindErrorComponent |
             ApiV1PricingProductsCreateLabelsErrorComponent | ApiV1PricingProductsCreateNameErrorComponent |
             ApiV1PricingProductsCreateNonFieldErrorsErrorComponent | ApiV1PricingProductsCreatePlatformServiceErrorComponent
-            | ApiV1PricingProductsCreatePricePerUnitErrorComponent | ApiV1PricingProductsCreateProviderEntityErrorComponent
-            | ApiV1PricingProductsCreateProviderErrorComponent | ApiV1PricingProductsCreateProviderIdErrorComponent |
-            ApiV1PricingProductsCreateProviderReferenceErrorComponent |
+            | ApiV1PricingProductsCreatePopErrorComponent | ApiV1PricingProductsCreatePricePerUnitErrorComponent |
+            ApiV1PricingProductsCreateProviderEntityErrorComponent | ApiV1PricingProductsCreateProviderErrorComponent |
+            ApiV1PricingProductsCreateProviderIdErrorComponent | ApiV1PricingProductsCreateProviderReferenceErrorComponent |
             ApiV1PricingProductsCreateProviderTypeIdErrorComponent |
             ApiV1PricingProductsCreateReconciliationEnabledErrorComponent |
             ApiV1PricingProductsCreateSlaAvailabilityErrorComponent | ApiV1PricingProductsCreateSlaTargetErrorComponent |
@@ -139,6 +140,7 @@ class ApiV1PricingProductsCreateValidationError:
         | ApiV1PricingProductsCreateNameErrorComponent
         | ApiV1PricingProductsCreateNonFieldErrorsErrorComponent
         | ApiV1PricingProductsCreatePlatformServiceErrorComponent
+        | ApiV1PricingProductsCreatePopErrorComponent
         | ApiV1PricingProductsCreatePricePerUnitErrorComponent
         | ApiV1PricingProductsCreateProviderEntityErrorComponent
         | ApiV1PricingProductsCreateProviderErrorComponent
@@ -157,85 +159,88 @@ class ApiV1PricingProductsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_products_create_annotations_error_component import (
-            ApiV1PricingProductsCreateAnnotationsErrorComponent,
+            ApiV1PricingProductsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_archived_at_error_component import (
-            ApiV1PricingProductsCreateArchivedAtErrorComponent,
+            ApiV1PricingProductsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_archived_error_component import (
-            ApiV1PricingProductsCreateArchivedErrorComponent,
+            ApiV1PricingProductsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_archived_reason_error_component import (
-            ApiV1PricingProductsCreateArchivedReasonErrorComponent,
+            ApiV1PricingProductsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_billing_interval_error_component import (
-            ApiV1PricingProductsCreateBillingIntervalErrorComponent,
+            ApiV1PricingProductsCreateBillingIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_cost_per_unit_error_component import (
-            ApiV1PricingProductsCreateCostPerUnitErrorComponent,
+            ApiV1PricingProductsCreateCostPerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_criticality_error_component import (
-            ApiV1PricingProductsCreateCriticalityErrorComponent,
+            ApiV1PricingProductsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_debug_mode_error_component import (
-            ApiV1PricingProductsCreateDebugModeErrorComponent,
+            ApiV1PricingProductsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_display_name_error_component import (
-            ApiV1PricingProductsCreateDisplayNameErrorComponent,
+            ApiV1PricingProductsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_kind_error_component import (
-            ApiV1PricingProductsCreateKindErrorComponent,
+            ApiV1PricingProductsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_labels_error_component import (
-            ApiV1PricingProductsCreateLabelsErrorComponent,
+            ApiV1PricingProductsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_name_error_component import (
-            ApiV1PricingProductsCreateNameErrorComponent,
+            ApiV1PricingProductsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_non_field_errors_error_component import (
-            ApiV1PricingProductsCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingProductsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_platform_service_error_component import (
-            ApiV1PricingProductsCreatePlatformServiceErrorComponent,
+            ApiV1PricingProductsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_pricing_products_create_pop_error_component import (
+            ApiV1PricingProductsCreatePopErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_price_per_unit_error_component import (
-            ApiV1PricingProductsCreatePricePerUnitErrorComponent,
+            ApiV1PricingProductsCreatePricePerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_entity_error_component import (
-            ApiV1PricingProductsCreateProviderEntityErrorComponent,
+            ApiV1PricingProductsCreateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_error_component import (
-            ApiV1PricingProductsCreateProviderErrorComponent,
+            ApiV1PricingProductsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_id_error_component import (
-            ApiV1PricingProductsCreateProviderIdErrorComponent,
+            ApiV1PricingProductsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_reference_error_component import (
-            ApiV1PricingProductsCreateProviderReferenceErrorComponent,
+            ApiV1PricingProductsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_type_id_error_component import (
-            ApiV1PricingProductsCreateProviderTypeIdErrorComponent,
+            ApiV1PricingProductsCreateProviderTypeIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_reconciliation_enabled_error_component import (
-            ApiV1PricingProductsCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingProductsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_sla_availability_error_component import (
-            ApiV1PricingProductsCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingProductsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_sla_target_error_component import (
-            ApiV1PricingProductsCreateSlaTargetErrorComponent,
+            ApiV1PricingProductsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_slo_availability_error_component import (
-            ApiV1PricingProductsCreateSloAvailabilityErrorComponent,
+            ApiV1PricingProductsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_slo_target_error_component import (
-            ApiV1PricingProductsCreateSloTargetErrorComponent,
+            ApiV1PricingProductsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_target_availability_error_component import (
-            ApiV1PricingProductsCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingProductsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_tolerations_error_component import (
-            ApiV1PricingProductsCreateTolerationsErrorComponent,
+            ApiV1PricingProductsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -295,6 +300,8 @@ class ApiV1PricingProductsCreateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1PricingProductsCreateProviderEntityErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1PricingProductsCreatePopErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1PricingProductsCreateProviderTypeIdErrorComponent):
                 errors_item = errors_item_data.to_dict()
             else:
@@ -316,88 +323,91 @@ class ApiV1PricingProductsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_products_create_annotations_error_component import (
-            ApiV1PricingProductsCreateAnnotationsErrorComponent,
+            ApiV1PricingProductsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_archived_at_error_component import (
-            ApiV1PricingProductsCreateArchivedAtErrorComponent,
+            ApiV1PricingProductsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_archived_error_component import (
-            ApiV1PricingProductsCreateArchivedErrorComponent,
+            ApiV1PricingProductsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_archived_reason_error_component import (
-            ApiV1PricingProductsCreateArchivedReasonErrorComponent,
+            ApiV1PricingProductsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_billing_interval_error_component import (
-            ApiV1PricingProductsCreateBillingIntervalErrorComponent,
+            ApiV1PricingProductsCreateBillingIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_config_error_component import (
-            ApiV1PricingProductsCreateConfigErrorComponent,
+            ApiV1PricingProductsCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_cost_per_unit_error_component import (
-            ApiV1PricingProductsCreateCostPerUnitErrorComponent,
+            ApiV1PricingProductsCreateCostPerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_criticality_error_component import (
-            ApiV1PricingProductsCreateCriticalityErrorComponent,
+            ApiV1PricingProductsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_debug_mode_error_component import (
-            ApiV1PricingProductsCreateDebugModeErrorComponent,
+            ApiV1PricingProductsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_display_name_error_component import (
-            ApiV1PricingProductsCreateDisplayNameErrorComponent,
+            ApiV1PricingProductsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_kind_error_component import (
-            ApiV1PricingProductsCreateKindErrorComponent,
+            ApiV1PricingProductsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_labels_error_component import (
-            ApiV1PricingProductsCreateLabelsErrorComponent,
+            ApiV1PricingProductsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_name_error_component import (
-            ApiV1PricingProductsCreateNameErrorComponent,
+            ApiV1PricingProductsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_non_field_errors_error_component import (
-            ApiV1PricingProductsCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingProductsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_platform_service_error_component import (
-            ApiV1PricingProductsCreatePlatformServiceErrorComponent,
+            ApiV1PricingProductsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_pricing_products_create_pop_error_component import (
+            ApiV1PricingProductsCreatePopErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_price_per_unit_error_component import (
-            ApiV1PricingProductsCreatePricePerUnitErrorComponent,
+            ApiV1PricingProductsCreatePricePerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_entity_error_component import (
-            ApiV1PricingProductsCreateProviderEntityErrorComponent,
+            ApiV1PricingProductsCreateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_error_component import (
-            ApiV1PricingProductsCreateProviderErrorComponent,
+            ApiV1PricingProductsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_id_error_component import (
-            ApiV1PricingProductsCreateProviderIdErrorComponent,
+            ApiV1PricingProductsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_reference_error_component import (
-            ApiV1PricingProductsCreateProviderReferenceErrorComponent,
+            ApiV1PricingProductsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_provider_type_id_error_component import (
-            ApiV1PricingProductsCreateProviderTypeIdErrorComponent,
+            ApiV1PricingProductsCreateProviderTypeIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_reconciliation_enabled_error_component import (
-            ApiV1PricingProductsCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingProductsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_sla_availability_error_component import (
-            ApiV1PricingProductsCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingProductsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_sla_target_error_component import (
-            ApiV1PricingProductsCreateSlaTargetErrorComponent,
+            ApiV1PricingProductsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_slo_availability_error_component import (
-            ApiV1PricingProductsCreateSloAvailabilityErrorComponent,
+            ApiV1PricingProductsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_slo_target_error_component import (
-            ApiV1PricingProductsCreateSloTargetErrorComponent,
+            ApiV1PricingProductsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_target_availability_error_component import (
-            ApiV1PricingProductsCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingProductsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_create_tolerations_error_component import (
-            ApiV1PricingProductsCreateTolerationsErrorComponent,
+            ApiV1PricingProductsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -425,6 +435,7 @@ class ApiV1PricingProductsCreateValidationError:
                 | ApiV1PricingProductsCreateNameErrorComponent
                 | ApiV1PricingProductsCreateNonFieldErrorsErrorComponent
                 | ApiV1PricingProductsCreatePlatformServiceErrorComponent
+                | ApiV1PricingProductsCreatePopErrorComponent
                 | ApiV1PricingProductsCreatePricePerUnitErrorComponent
                 | ApiV1PricingProductsCreateProviderEntityErrorComponent
                 | ApiV1PricingProductsCreateProviderErrorComponent
@@ -703,19 +714,29 @@ class ApiV1PricingProductsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_pricing_products_create_error_type_26 = (
-                        ApiV1PricingProductsCreateProviderTypeIdErrorComponent.from_dict(data)
+                        ApiV1PricingProductsCreatePopErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_pricing_products_create_error_type_26
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_pricing_products_create_error_type_27 = (
+                        ApiV1PricingProductsCreateProviderTypeIdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_pricing_products_create_error_type_27
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_pricing_products_create_error_type_27 = (
+                componentsschemas_api_v1_pricing_products_create_error_type_28 = (
                     ApiV1PricingProductsCreateConfigErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_pricing_products_create_error_type_27
+                return componentsschemas_api_v1_pricing_products_create_error_type_28
 
             errors_item = _parse_errors_item(errors_item_data)
 

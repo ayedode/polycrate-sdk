@@ -62,22 +62,22 @@ class ApiV1ContactgroupsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_contactgroups_partial_update_dynamic_rules_error_component import (
-            ApiV1ContactgroupsPartialUpdateDynamicRulesErrorComponent,
+            ApiV1ContactgroupsPartialUpdateDynamicRulesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_email_error_component import (
-            ApiV1ContactgroupsPartialUpdateEmailErrorComponent,
+            ApiV1ContactgroupsPartialUpdateEmailErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_kind_error_component import (
-            ApiV1ContactgroupsPartialUpdateKindErrorComponent,
+            ApiV1ContactgroupsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_name_error_component import (
-            ApiV1ContactgroupsPartialUpdateNameErrorComponent,
+            ApiV1ContactgroupsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_non_field_errors_error_component import (
-            ApiV1ContactgroupsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ContactgroupsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_organization_id_error_component import (
-            ApiV1ContactgroupsPartialUpdateOrganizationIdErrorComponent,
+            ApiV1ContactgroupsPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -116,25 +116,25 @@ class ApiV1ContactgroupsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_contactgroups_partial_update_dynamic_rules_error_component import (
-            ApiV1ContactgroupsPartialUpdateDynamicRulesErrorComponent,
+            ApiV1ContactgroupsPartialUpdateDynamicRulesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_email_error_component import (
-            ApiV1ContactgroupsPartialUpdateEmailErrorComponent,
+            ApiV1ContactgroupsPartialUpdateEmailErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_keycloak_group_id_error_component import (
-            ApiV1ContactgroupsPartialUpdateKeycloakGroupIdErrorComponent,
+            ApiV1ContactgroupsPartialUpdateKeycloakGroupIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_kind_error_component import (
-            ApiV1ContactgroupsPartialUpdateKindErrorComponent,
+            ApiV1ContactgroupsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_name_error_component import (
-            ApiV1ContactgroupsPartialUpdateNameErrorComponent,
+            ApiV1ContactgroupsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_non_field_errors_error_component import (
-            ApiV1ContactgroupsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ContactgroupsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contactgroups_partial_update_organization_id_error_component import (
-            ApiV1ContactgroupsPartialUpdateOrganizationIdErrorComponent,
+            ApiV1ContactgroupsPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

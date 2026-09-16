@@ -317,196 +317,196 @@ class UiK8SAppsUninstallCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.ui_k8s_apps_uninstall_create_active_error_component import (
-            UiK8SAppsUninstallCreateActiveErrorComponent,
+            UiK8SAppsUninstallCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_actual_availability_error_component import (
-            UiK8SAppsUninstallCreateActualAvailabilityErrorComponent,
+            UiK8SAppsUninstallCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_annotations_error_component import (
-            UiK8SAppsUninstallCreateAnnotationsErrorComponent,
+            UiK8SAppsUninstallCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_archived_at_error_component import (
-            UiK8SAppsUninstallCreateArchivedAtErrorComponent,
+            UiK8SAppsUninstallCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_archived_by_error_component import (
-            UiK8SAppsUninstallCreateArchivedByErrorComponent,
+            UiK8SAppsUninstallCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_archived_error_component import (
-            UiK8SAppsUninstallCreateArchivedErrorComponent,
+            UiK8SAppsUninstallCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_archived_reason_error_component import (
-            UiK8SAppsUninstallCreateArchivedReasonErrorComponent,
+            UiK8SAppsUninstallCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_artifact_error_component import (
-            UiK8SAppsUninstallCreateArtifactErrorComponent,
+            UiK8SAppsUninstallCreateArtifactErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_artifact_package_error_component import (
-            UiK8SAppsUninstallCreateArtifactPackageErrorComponent,
+            UiK8SAppsUninstallCreateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_block_error_component import (
-            UiK8SAppsUninstallCreateBlockErrorComponent,
+            UiK8SAppsUninstallCreateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_byoa_error_component import (
-            UiK8SAppsUninstallCreateByoaErrorComponent,
+            UiK8SAppsUninstallCreateByoaErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_catalogue_app_error_component import (
-            UiK8SAppsUninstallCreateCatalogueAppErrorComponent,
+            UiK8SAppsUninstallCreateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_created_by_component_error_component import (
-            UiK8SAppsUninstallCreateCreatedByComponentErrorComponent,
+            UiK8SAppsUninstallCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_created_by_user_error_component import (
-            UiK8SAppsUninstallCreateCreatedByUserErrorComponent,
+            UiK8SAppsUninstallCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_criticality_error_component import (
-            UiK8SAppsUninstallCreateCriticalityErrorComponent,
+            UiK8SAppsUninstallCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_debug_mode_error_component import (
-            UiK8SAppsUninstallCreateDebugModeErrorComponent,
+            UiK8SAppsUninstallCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_description_error_component import (
-            UiK8SAppsUninstallCreateDescriptionErrorComponent,
+            UiK8SAppsUninstallCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_discovery_enabled_error_component import (
-            UiK8SAppsUninstallCreateDiscoveryEnabledErrorComponent,
+            UiK8SAppsUninstallCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_display_name_error_component import (
-            UiK8SAppsUninstallCreateDisplayNameErrorComponent,
+            UiK8SAppsUninstallCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_excluded_from_downtime_until_error_component import (
-            UiK8SAppsUninstallCreateExcludedFromDowntimeUntilErrorComponent,
+            UiK8SAppsUninstallCreateExcludedFromDowntimeUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_ha_enabled_error_component import (
-            UiK8SAppsUninstallCreateHaEnabledErrorComponent,
+            UiK8SAppsUninstallCreateHaEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_helm_chart_error_component import (
-            UiK8SAppsUninstallCreateHelmChartErrorComponent,
+            UiK8SAppsUninstallCreateHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_installation_failed_error_component import (
-            UiK8SAppsUninstallCreateInstallationFailedErrorComponent,
+            UiK8SAppsUninstallCreateInstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_installation_running_error_component import (
-            UiK8SAppsUninstallCreateInstallationRunningErrorComponent,
+            UiK8SAppsUninstallCreateInstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_installed_error_component import (
-            UiK8SAppsUninstallCreateInstalledErrorComponent,
+            UiK8SAppsUninstallCreateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_installed_version_error_component import (
-            UiK8SAppsUninstallCreateInstalledVersionErrorComponent,
+            UiK8SAppsUninstallCreateInstalledVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_kind_error_component import (
-            UiK8SAppsUninstallCreateKindErrorComponent,
+            UiK8SAppsUninstallCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_labels_error_component import (
-            UiK8SAppsUninstallCreateLabelsErrorComponent,
+            UiK8SAppsUninstallCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_last_installation_error_component import (
-            UiK8SAppsUninstallCreateLastInstallationErrorComponent,
+            UiK8SAppsUninstallCreateLastInstallationErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_last_metrics_check_error_component import (
-            UiK8SAppsUninstallCreateLastMetricsCheckErrorComponent,
+            UiK8SAppsUninstallCreateLastMetricsCheckErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_last_reconciliation_duration_seconds_error_component import (
-            UiK8SAppsUninstallCreateLastReconciliationDurationSecondsErrorComponent,
+            UiK8SAppsUninstallCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_managed_by_content_type_error_component import (
-            UiK8SAppsUninstallCreateManagedByContentTypeErrorComponent,
+            UiK8SAppsUninstallCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_managed_by_object_id_error_component import (
-            UiK8SAppsUninstallCreateManagedByObjectIdErrorComponent,
+            UiK8SAppsUninstallCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_modified_by_user_error_component import (
-            UiK8SAppsUninstallCreateModifiedByUserErrorComponent,
+            UiK8SAppsUninstallCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_name_error_component import (
-            UiK8SAppsUninstallCreateNameErrorComponent,
+            UiK8SAppsUninstallCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_namespace_error_component import (
-            UiK8SAppsUninstallCreateNamespaceErrorComponent,
+            UiK8SAppsUninstallCreateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_non_field_errors_error_component import (
-            UiK8SAppsUninstallCreateNonFieldErrorsErrorComponent,
+            UiK8SAppsUninstallCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_platform_dns_record_created_error_component import (
-            UiK8SAppsUninstallCreatePlatformDnsRecordCreatedErrorComponent,
+            UiK8SAppsUninstallCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_platform_service_error_component import (
-            UiK8SAppsUninstallCreatePlatformServiceErrorComponent,
+            UiK8SAppsUninstallCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_available_error_component import (
-            UiK8SAppsUninstallCreatePodsAvailableErrorComponent,
+            UiK8SAppsUninstallCreatePodsAvailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_details_error_component import (
-            UiK8SAppsUninstallCreatePodsDetailsErrorComponent,
+            UiK8SAppsUninstallCreatePodsDetailsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_ready_error_component import (
-            UiK8SAppsUninstallCreatePodsReadyErrorComponent,
+            UiK8SAppsUninstallCreatePodsReadyErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_restart_count_last_hour_error_component import (
-            UiK8SAppsUninstallCreatePodsRestartCountLastHourErrorComponent,
+            UiK8SAppsUninstallCreatePodsRestartCountLastHourErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_restart_count_total_error_component import (
-            UiK8SAppsUninstallCreatePodsRestartCountTotalErrorComponent,
+            UiK8SAppsUninstallCreatePodsRestartCountTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_status_hash_error_component import (
-            UiK8SAppsUninstallCreatePodsStatusHashErrorComponent,
+            UiK8SAppsUninstallCreatePodsStatusHashErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_status_updated_at_error_component import (
-            UiK8SAppsUninstallCreatePodsStatusUpdatedAtErrorComponent,
+            UiK8SAppsUninstallCreatePodsStatusUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_total_error_component import (
-            UiK8SAppsUninstallCreatePodsTotalErrorComponent,
+            UiK8SAppsUninstallCreatePodsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_unavailable_error_component import (
-            UiK8SAppsUninstallCreatePodsUnavailableErrorComponent,
+            UiK8SAppsUninstallCreatePodsUnavailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_provider_error_component import (
-            UiK8SAppsUninstallCreateProviderErrorComponent,
+            UiK8SAppsUninstallCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_provider_id_error_component import (
-            UiK8SAppsUninstallCreateProviderIdErrorComponent,
+            UiK8SAppsUninstallCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_provider_reference_error_component import (
-            UiK8SAppsUninstallCreateProviderReferenceErrorComponent,
+            UiK8SAppsUninstallCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_reconciliation_enabled_error_component import (
-            UiK8SAppsUninstallCreateReconciliationEnabledErrorComponent,
+            UiK8SAppsUninstallCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_scope_error_component import (
-            UiK8SAppsUninstallCreateScopeErrorComponent,
+            UiK8SAppsUninstallCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_sla_availability_error_component import (
-            UiK8SAppsUninstallCreateSlaAvailabilityErrorComponent,
+            UiK8SAppsUninstallCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_sla_target_error_component import (
-            UiK8SAppsUninstallCreateSlaTargetErrorComponent,
+            UiK8SAppsUninstallCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_sla_window_days_error_component import (
-            UiK8SAppsUninstallCreateSlaWindowDaysErrorComponent,
+            UiK8SAppsUninstallCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_slo_availability_error_component import (
-            UiK8SAppsUninstallCreateSloAvailabilityErrorComponent,
+            UiK8SAppsUninstallCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_slo_target_error_component import (
-            UiK8SAppsUninstallCreateSloTargetErrorComponent,
+            UiK8SAppsUninstallCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_slo_window_days_error_component import (
-            UiK8SAppsUninstallCreateSloWindowDaysErrorComponent,
+            UiK8SAppsUninstallCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_source_error_component import (
-            UiK8SAppsUninstallCreateSourceErrorComponent,
+            UiK8SAppsUninstallCreateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_target_availability_error_component import (
-            UiK8SAppsUninstallCreateTargetAvailabilityErrorComponent,
+            UiK8SAppsUninstallCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_uninstallation_failed_error_component import (
-            UiK8SAppsUninstallCreateUninstallationFailedErrorComponent,
+            UiK8SAppsUninstallCreateUninstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_uninstallation_running_error_component import (
-            UiK8SAppsUninstallCreateUninstallationRunningErrorComponent,
+            UiK8SAppsUninstallCreateUninstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_uninstalled_error_component import (
-            UiK8SAppsUninstallCreateUninstalledErrorComponent,
+            UiK8SAppsUninstallCreateUninstalledErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -661,199 +661,199 @@ class UiK8SAppsUninstallCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.ui_k8s_apps_uninstall_create_active_error_component import (
-            UiK8SAppsUninstallCreateActiveErrorComponent,
+            UiK8SAppsUninstallCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_actual_availability_error_component import (
-            UiK8SAppsUninstallCreateActualAvailabilityErrorComponent,
+            UiK8SAppsUninstallCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_annotations_error_component import (
-            UiK8SAppsUninstallCreateAnnotationsErrorComponent,
+            UiK8SAppsUninstallCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_archived_at_error_component import (
-            UiK8SAppsUninstallCreateArchivedAtErrorComponent,
+            UiK8SAppsUninstallCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_archived_by_error_component import (
-            UiK8SAppsUninstallCreateArchivedByErrorComponent,
+            UiK8SAppsUninstallCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_archived_error_component import (
-            UiK8SAppsUninstallCreateArchivedErrorComponent,
+            UiK8SAppsUninstallCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_archived_reason_error_component import (
-            UiK8SAppsUninstallCreateArchivedReasonErrorComponent,
+            UiK8SAppsUninstallCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_artifact_error_component import (
-            UiK8SAppsUninstallCreateArtifactErrorComponent,
+            UiK8SAppsUninstallCreateArtifactErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_artifact_package_error_component import (
-            UiK8SAppsUninstallCreateArtifactPackageErrorComponent,
+            UiK8SAppsUninstallCreateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_block_error_component import (
-            UiK8SAppsUninstallCreateBlockErrorComponent,
+            UiK8SAppsUninstallCreateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_byoa_error_component import (
-            UiK8SAppsUninstallCreateByoaErrorComponent,
+            UiK8SAppsUninstallCreateByoaErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_catalogue_app_error_component import (
-            UiK8SAppsUninstallCreateCatalogueAppErrorComponent,
+            UiK8SAppsUninstallCreateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_created_by_component_error_component import (
-            UiK8SAppsUninstallCreateCreatedByComponentErrorComponent,
+            UiK8SAppsUninstallCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_created_by_user_error_component import (
-            UiK8SAppsUninstallCreateCreatedByUserErrorComponent,
+            UiK8SAppsUninstallCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_criticality_error_component import (
-            UiK8SAppsUninstallCreateCriticalityErrorComponent,
+            UiK8SAppsUninstallCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_debug_mode_error_component import (
-            UiK8SAppsUninstallCreateDebugModeErrorComponent,
+            UiK8SAppsUninstallCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_description_error_component import (
-            UiK8SAppsUninstallCreateDescriptionErrorComponent,
+            UiK8SAppsUninstallCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_discovery_enabled_error_component import (
-            UiK8SAppsUninstallCreateDiscoveryEnabledErrorComponent,
+            UiK8SAppsUninstallCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_display_name_error_component import (
-            UiK8SAppsUninstallCreateDisplayNameErrorComponent,
+            UiK8SAppsUninstallCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_excluded_from_downtime_until_error_component import (
-            UiK8SAppsUninstallCreateExcludedFromDowntimeUntilErrorComponent,
+            UiK8SAppsUninstallCreateExcludedFromDowntimeUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_ha_enabled_error_component import (
-            UiK8SAppsUninstallCreateHaEnabledErrorComponent,
+            UiK8SAppsUninstallCreateHaEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_helm_chart_error_component import (
-            UiK8SAppsUninstallCreateHelmChartErrorComponent,
+            UiK8SAppsUninstallCreateHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_installation_failed_error_component import (
-            UiK8SAppsUninstallCreateInstallationFailedErrorComponent,
+            UiK8SAppsUninstallCreateInstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_installation_running_error_component import (
-            UiK8SAppsUninstallCreateInstallationRunningErrorComponent,
+            UiK8SAppsUninstallCreateInstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_installed_error_component import (
-            UiK8SAppsUninstallCreateInstalledErrorComponent,
+            UiK8SAppsUninstallCreateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_installed_version_error_component import (
-            UiK8SAppsUninstallCreateInstalledVersionErrorComponent,
+            UiK8SAppsUninstallCreateInstalledVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_k8s_cluster_error_component import (
-            UiK8SAppsUninstallCreateK8SClusterErrorComponent,
+            UiK8SAppsUninstallCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_kind_error_component import (
-            UiK8SAppsUninstallCreateKindErrorComponent,
+            UiK8SAppsUninstallCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_labels_error_component import (
-            UiK8SAppsUninstallCreateLabelsErrorComponent,
+            UiK8SAppsUninstallCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_last_installation_error_component import (
-            UiK8SAppsUninstallCreateLastInstallationErrorComponent,
+            UiK8SAppsUninstallCreateLastInstallationErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_last_metrics_check_error_component import (
-            UiK8SAppsUninstallCreateLastMetricsCheckErrorComponent,
+            UiK8SAppsUninstallCreateLastMetricsCheckErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_last_reconciliation_duration_seconds_error_component import (
-            UiK8SAppsUninstallCreateLastReconciliationDurationSecondsErrorComponent,
+            UiK8SAppsUninstallCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_managed_by_content_type_error_component import (
-            UiK8SAppsUninstallCreateManagedByContentTypeErrorComponent,
+            UiK8SAppsUninstallCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_managed_by_object_id_error_component import (
-            UiK8SAppsUninstallCreateManagedByObjectIdErrorComponent,
+            UiK8SAppsUninstallCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_modified_by_user_error_component import (
-            UiK8SAppsUninstallCreateModifiedByUserErrorComponent,
+            UiK8SAppsUninstallCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_name_error_component import (
-            UiK8SAppsUninstallCreateNameErrorComponent,
+            UiK8SAppsUninstallCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_namespace_error_component import (
-            UiK8SAppsUninstallCreateNamespaceErrorComponent,
+            UiK8SAppsUninstallCreateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_non_field_errors_error_component import (
-            UiK8SAppsUninstallCreateNonFieldErrorsErrorComponent,
+            UiK8SAppsUninstallCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_platform_dns_record_created_error_component import (
-            UiK8SAppsUninstallCreatePlatformDnsRecordCreatedErrorComponent,
+            UiK8SAppsUninstallCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_platform_service_error_component import (
-            UiK8SAppsUninstallCreatePlatformServiceErrorComponent,
+            UiK8SAppsUninstallCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_available_error_component import (
-            UiK8SAppsUninstallCreatePodsAvailableErrorComponent,
+            UiK8SAppsUninstallCreatePodsAvailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_details_error_component import (
-            UiK8SAppsUninstallCreatePodsDetailsErrorComponent,
+            UiK8SAppsUninstallCreatePodsDetailsErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_ready_error_component import (
-            UiK8SAppsUninstallCreatePodsReadyErrorComponent,
+            UiK8SAppsUninstallCreatePodsReadyErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_restart_count_last_hour_error_component import (
-            UiK8SAppsUninstallCreatePodsRestartCountLastHourErrorComponent,
+            UiK8SAppsUninstallCreatePodsRestartCountLastHourErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_restart_count_total_error_component import (
-            UiK8SAppsUninstallCreatePodsRestartCountTotalErrorComponent,
+            UiK8SAppsUninstallCreatePodsRestartCountTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_status_hash_error_component import (
-            UiK8SAppsUninstallCreatePodsStatusHashErrorComponent,
+            UiK8SAppsUninstallCreatePodsStatusHashErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_status_updated_at_error_component import (
-            UiK8SAppsUninstallCreatePodsStatusUpdatedAtErrorComponent,
+            UiK8SAppsUninstallCreatePodsStatusUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_total_error_component import (
-            UiK8SAppsUninstallCreatePodsTotalErrorComponent,
+            UiK8SAppsUninstallCreatePodsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_pods_unavailable_error_component import (
-            UiK8SAppsUninstallCreatePodsUnavailableErrorComponent,
+            UiK8SAppsUninstallCreatePodsUnavailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_provider_error_component import (
-            UiK8SAppsUninstallCreateProviderErrorComponent,
+            UiK8SAppsUninstallCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_provider_id_error_component import (
-            UiK8SAppsUninstallCreateProviderIdErrorComponent,
+            UiK8SAppsUninstallCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_provider_reference_error_component import (
-            UiK8SAppsUninstallCreateProviderReferenceErrorComponent,
+            UiK8SAppsUninstallCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_reconciliation_enabled_error_component import (
-            UiK8SAppsUninstallCreateReconciliationEnabledErrorComponent,
+            UiK8SAppsUninstallCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_scope_error_component import (
-            UiK8SAppsUninstallCreateScopeErrorComponent,
+            UiK8SAppsUninstallCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_sla_availability_error_component import (
-            UiK8SAppsUninstallCreateSlaAvailabilityErrorComponent,
+            UiK8SAppsUninstallCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_sla_target_error_component import (
-            UiK8SAppsUninstallCreateSlaTargetErrorComponent,
+            UiK8SAppsUninstallCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_sla_window_days_error_component import (
-            UiK8SAppsUninstallCreateSlaWindowDaysErrorComponent,
+            UiK8SAppsUninstallCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_slo_availability_error_component import (
-            UiK8SAppsUninstallCreateSloAvailabilityErrorComponent,
+            UiK8SAppsUninstallCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_slo_target_error_component import (
-            UiK8SAppsUninstallCreateSloTargetErrorComponent,
+            UiK8SAppsUninstallCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_slo_window_days_error_component import (
-            UiK8SAppsUninstallCreateSloWindowDaysErrorComponent,
+            UiK8SAppsUninstallCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_source_error_component import (
-            UiK8SAppsUninstallCreateSourceErrorComponent,
+            UiK8SAppsUninstallCreateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_target_availability_error_component import (
-            UiK8SAppsUninstallCreateTargetAvailabilityErrorComponent,
+            UiK8SAppsUninstallCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_uninstallation_failed_error_component import (
-            UiK8SAppsUninstallCreateUninstallationFailedErrorComponent,
+            UiK8SAppsUninstallCreateUninstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_uninstallation_running_error_component import (
-            UiK8SAppsUninstallCreateUninstallationRunningErrorComponent,
+            UiK8SAppsUninstallCreateUninstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.ui_k8s_apps_uninstall_create_uninstalled_error_component import (
-            UiK8SAppsUninstallCreateUninstalledErrorComponent,
+            UiK8SAppsUninstallCreateUninstalledErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

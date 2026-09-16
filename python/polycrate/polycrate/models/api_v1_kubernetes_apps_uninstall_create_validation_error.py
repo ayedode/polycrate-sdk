@@ -350,196 +350,196 @@ class ApiV1KubernetesAppsUninstallCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_apps_uninstall_create_active_error_component import (
-            ApiV1KubernetesAppsUninstallCreateActiveErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_actual_availability_error_component import (
-            ApiV1KubernetesAppsUninstallCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_annotations_error_component import (
-            ApiV1KubernetesAppsUninstallCreateAnnotationsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_archived_at_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArchivedAtErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_archived_by_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArchivedByErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_archived_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArchivedErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_archived_reason_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_artifact_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArtifactErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArtifactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_artifact_package_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArtifactPackageErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_block_error_component import (
-            ApiV1KubernetesAppsUninstallCreateBlockErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_byoa_error_component import (
-            ApiV1KubernetesAppsUninstallCreateByoaErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateByoaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_catalogue_app_error_component import (
-            ApiV1KubernetesAppsUninstallCreateCatalogueAppErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_created_by_component_error_component import (
-            ApiV1KubernetesAppsUninstallCreateCreatedByComponentErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_created_by_user_error_component import (
-            ApiV1KubernetesAppsUninstallCreateCreatedByUserErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_criticality_error_component import (
-            ApiV1KubernetesAppsUninstallCreateCriticalityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_debug_mode_error_component import (
-            ApiV1KubernetesAppsUninstallCreateDebugModeErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_description_error_component import (
-            ApiV1KubernetesAppsUninstallCreateDescriptionErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_discovery_enabled_error_component import (
-            ApiV1KubernetesAppsUninstallCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_display_name_error_component import (
-            ApiV1KubernetesAppsUninstallCreateDisplayNameErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_excluded_from_downtime_until_error_component import (
-            ApiV1KubernetesAppsUninstallCreateExcludedFromDowntimeUntilErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateExcludedFromDowntimeUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_ha_enabled_error_component import (
-            ApiV1KubernetesAppsUninstallCreateHaEnabledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateHaEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_helm_chart_error_component import (
-            ApiV1KubernetesAppsUninstallCreateHelmChartErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_installation_failed_error_component import (
-            ApiV1KubernetesAppsUninstallCreateInstallationFailedErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateInstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_installation_running_error_component import (
-            ApiV1KubernetesAppsUninstallCreateInstallationRunningErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateInstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_installed_error_component import (
-            ApiV1KubernetesAppsUninstallCreateInstalledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_installed_version_error_component import (
-            ApiV1KubernetesAppsUninstallCreateInstalledVersionErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateInstalledVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_kind_error_component import (
-            ApiV1KubernetesAppsUninstallCreateKindErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_labels_error_component import (
-            ApiV1KubernetesAppsUninstallCreateLabelsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_last_installation_error_component import (
-            ApiV1KubernetesAppsUninstallCreateLastInstallationErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateLastInstallationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_last_metrics_check_error_component import (
-            ApiV1KubernetesAppsUninstallCreateLastMetricsCheckErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateLastMetricsCheckErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1KubernetesAppsUninstallCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_managed_by_content_type_error_component import (
-            ApiV1KubernetesAppsUninstallCreateManagedByContentTypeErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_managed_by_object_id_error_component import (
-            ApiV1KubernetesAppsUninstallCreateManagedByObjectIdErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_modified_by_user_error_component import (
-            ApiV1KubernetesAppsUninstallCreateModifiedByUserErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_name_error_component import (
-            ApiV1KubernetesAppsUninstallCreateNameErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_namespace_error_component import (
-            ApiV1KubernetesAppsUninstallCreateNamespaceErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_non_field_errors_error_component import (
-            ApiV1KubernetesAppsUninstallCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_platform_dns_record_created_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_platform_service_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_available_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsAvailableErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsAvailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_details_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsDetailsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsDetailsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_ready_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsReadyErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsReadyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_restart_count_last_hour_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsRestartCountLastHourErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsRestartCountLastHourErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_restart_count_total_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsRestartCountTotalErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsRestartCountTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_status_hash_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsStatusHashErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsStatusHashErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_status_updated_at_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsStatusUpdatedAtErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsStatusUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_total_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsTotalErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_unavailable_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsUnavailableErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsUnavailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_provider_error_component import (
-            ApiV1KubernetesAppsUninstallCreateProviderErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_provider_id_error_component import (
-            ApiV1KubernetesAppsUninstallCreateProviderIdErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_provider_reference_error_component import (
-            ApiV1KubernetesAppsUninstallCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAppsUninstallCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_scope_error_component import (
-            ApiV1KubernetesAppsUninstallCreateScopeErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_sla_availability_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_sla_target_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSlaTargetErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_sla_window_days_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSlaWindowDaysErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_slo_availability_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_slo_target_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSloTargetErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_slo_window_days_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSloWindowDaysErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_source_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSourceErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_target_availability_error_component import (
-            ApiV1KubernetesAppsUninstallCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_uninstallation_failed_error_component import (
-            ApiV1KubernetesAppsUninstallCreateUninstallationFailedErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateUninstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_uninstallation_running_error_component import (
-            ApiV1KubernetesAppsUninstallCreateUninstallationRunningErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateUninstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_uninstalled_error_component import (
-            ApiV1KubernetesAppsUninstallCreateUninstalledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateUninstalledErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -698,199 +698,199 @@ class ApiV1KubernetesAppsUninstallCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_apps_uninstall_create_active_error_component import (
-            ApiV1KubernetesAppsUninstallCreateActiveErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_actual_availability_error_component import (
-            ApiV1KubernetesAppsUninstallCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_annotations_error_component import (
-            ApiV1KubernetesAppsUninstallCreateAnnotationsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_archived_at_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArchivedAtErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_archived_by_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArchivedByErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_archived_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArchivedErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_archived_reason_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_artifact_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArtifactErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArtifactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_artifact_package_error_component import (
-            ApiV1KubernetesAppsUninstallCreateArtifactPackageErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_block_error_component import (
-            ApiV1KubernetesAppsUninstallCreateBlockErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_byoa_error_component import (
-            ApiV1KubernetesAppsUninstallCreateByoaErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateByoaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_catalogue_app_error_component import (
-            ApiV1KubernetesAppsUninstallCreateCatalogueAppErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_created_by_component_error_component import (
-            ApiV1KubernetesAppsUninstallCreateCreatedByComponentErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_created_by_user_error_component import (
-            ApiV1KubernetesAppsUninstallCreateCreatedByUserErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_criticality_error_component import (
-            ApiV1KubernetesAppsUninstallCreateCriticalityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_debug_mode_error_component import (
-            ApiV1KubernetesAppsUninstallCreateDebugModeErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_description_error_component import (
-            ApiV1KubernetesAppsUninstallCreateDescriptionErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_discovery_enabled_error_component import (
-            ApiV1KubernetesAppsUninstallCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_display_name_error_component import (
-            ApiV1KubernetesAppsUninstallCreateDisplayNameErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_excluded_from_downtime_until_error_component import (
-            ApiV1KubernetesAppsUninstallCreateExcludedFromDowntimeUntilErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateExcludedFromDowntimeUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_ha_enabled_error_component import (
-            ApiV1KubernetesAppsUninstallCreateHaEnabledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateHaEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_helm_chart_error_component import (
-            ApiV1KubernetesAppsUninstallCreateHelmChartErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_installation_failed_error_component import (
-            ApiV1KubernetesAppsUninstallCreateInstallationFailedErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateInstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_installation_running_error_component import (
-            ApiV1KubernetesAppsUninstallCreateInstallationRunningErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateInstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_installed_error_component import (
-            ApiV1KubernetesAppsUninstallCreateInstalledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_installed_version_error_component import (
-            ApiV1KubernetesAppsUninstallCreateInstalledVersionErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateInstalledVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_k8s_cluster_error_component import (
-            ApiV1KubernetesAppsUninstallCreateK8SClusterErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_kind_error_component import (
-            ApiV1KubernetesAppsUninstallCreateKindErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_labels_error_component import (
-            ApiV1KubernetesAppsUninstallCreateLabelsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_last_installation_error_component import (
-            ApiV1KubernetesAppsUninstallCreateLastInstallationErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateLastInstallationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_last_metrics_check_error_component import (
-            ApiV1KubernetesAppsUninstallCreateLastMetricsCheckErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateLastMetricsCheckErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1KubernetesAppsUninstallCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_managed_by_content_type_error_component import (
-            ApiV1KubernetesAppsUninstallCreateManagedByContentTypeErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_managed_by_object_id_error_component import (
-            ApiV1KubernetesAppsUninstallCreateManagedByObjectIdErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_modified_by_user_error_component import (
-            ApiV1KubernetesAppsUninstallCreateModifiedByUserErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_name_error_component import (
-            ApiV1KubernetesAppsUninstallCreateNameErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_namespace_error_component import (
-            ApiV1KubernetesAppsUninstallCreateNamespaceErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_non_field_errors_error_component import (
-            ApiV1KubernetesAppsUninstallCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_platform_dns_record_created_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_platform_service_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_available_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsAvailableErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsAvailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_details_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsDetailsErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsDetailsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_ready_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsReadyErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsReadyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_restart_count_last_hour_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsRestartCountLastHourErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsRestartCountLastHourErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_restart_count_total_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsRestartCountTotalErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsRestartCountTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_status_hash_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsStatusHashErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsStatusHashErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_status_updated_at_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsStatusUpdatedAtErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsStatusUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_total_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsTotalErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_pods_unavailable_error_component import (
-            ApiV1KubernetesAppsUninstallCreatePodsUnavailableErrorComponent,
+            ApiV1KubernetesAppsUninstallCreatePodsUnavailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_provider_error_component import (
-            ApiV1KubernetesAppsUninstallCreateProviderErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_provider_id_error_component import (
-            ApiV1KubernetesAppsUninstallCreateProviderIdErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_provider_reference_error_component import (
-            ApiV1KubernetesAppsUninstallCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAppsUninstallCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_scope_error_component import (
-            ApiV1KubernetesAppsUninstallCreateScopeErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_sla_availability_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_sla_target_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSlaTargetErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_sla_window_days_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSlaWindowDaysErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_slo_availability_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_slo_target_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSloTargetErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_slo_window_days_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSloWindowDaysErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_source_error_component import (
-            ApiV1KubernetesAppsUninstallCreateSourceErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_target_availability_error_component import (
-            ApiV1KubernetesAppsUninstallCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_uninstallation_failed_error_component import (
-            ApiV1KubernetesAppsUninstallCreateUninstallationFailedErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateUninstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_uninstallation_running_error_component import (
-            ApiV1KubernetesAppsUninstallCreateUninstallationRunningErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateUninstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_uninstall_create_uninstalled_error_component import (
-            ApiV1KubernetesAppsUninstallCreateUninstalledErrorComponent,
+            ApiV1KubernetesAppsUninstallCreateUninstalledErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

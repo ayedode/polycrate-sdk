@@ -57,19 +57,19 @@ class ApiV1S3BucketsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1s3_buckets_partial_update_annotations_error_component import (
-            ApiV1S3BucketsPartialUpdateAnnotationsErrorComponent,
+            ApiV1S3BucketsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_partial_update_include_in_cost_statement_error_component import (
-            ApiV1S3BucketsPartialUpdateIncludeInCostStatementErrorComponent,
+            ApiV1S3BucketsPartialUpdateIncludeInCostStatementErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_partial_update_labels_error_component import (
-            ApiV1S3BucketsPartialUpdateLabelsErrorComponent,
+            ApiV1S3BucketsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_partial_update_non_field_errors_error_component import (
-            ApiV1S3BucketsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_partial_update_workspace_error_component import (
-            ApiV1S3BucketsPartialUpdateWorkspaceErrorComponent,
+            ApiV1S3BucketsPartialUpdateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -106,22 +106,22 @@ class ApiV1S3BucketsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1s3_buckets_partial_update_annotations_error_component import (
-            ApiV1S3BucketsPartialUpdateAnnotationsErrorComponent,
+            ApiV1S3BucketsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_partial_update_cors_allow_all_error_component import (
-            ApiV1S3BucketsPartialUpdateCorsAllowAllErrorComponent,
+            ApiV1S3BucketsPartialUpdateCorsAllowAllErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_partial_update_include_in_cost_statement_error_component import (
-            ApiV1S3BucketsPartialUpdateIncludeInCostStatementErrorComponent,
+            ApiV1S3BucketsPartialUpdateIncludeInCostStatementErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_partial_update_labels_error_component import (
-            ApiV1S3BucketsPartialUpdateLabelsErrorComponent,
+            ApiV1S3BucketsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_partial_update_non_field_errors_error_component import (
-            ApiV1S3BucketsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_partial_update_workspace_error_component import (
-            ApiV1S3BucketsPartialUpdateWorkspaceErrorComponent,
+            ApiV1S3BucketsPartialUpdateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -99,8 +99,10 @@ class PricingQuoteAppList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.pricing_quote_app_list_organization_type_0 import PricingQuoteAppListOrganizationType0
-        from ..models.pricing_quote_app_list_workspace_type_0 import PricingQuoteAppListWorkspaceType0
+        from ..models.pricing_quote_app_list_organization_type_0 import (
+            PricingQuoteAppListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.pricing_quote_app_list_workspace_type_0 import PricingQuoteAppListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -202,12 +204,14 @@ class PricingQuoteAppList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.pricing_quote_app_list_active_condition_instances_item import (
-            PricingQuoteAppListActiveConditionInstancesItem,
+            PricingQuoteAppListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.pricing_quote_app_list_created import PricingQuoteAppListCreated
-        from ..models.pricing_quote_app_list_organization_type_0 import PricingQuoteAppListOrganizationType0
-        from ..models.pricing_quote_app_list_workspace_type_0 import PricingQuoteAppListWorkspaceType0
-        from ..models.product_simple import ProductSimple
+        from ..models.pricing_quote_app_list_created import PricingQuoteAppListCreated  # noqa: PLC0415
+        from ..models.pricing_quote_app_list_organization_type_0 import (
+            PricingQuoteAppListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.pricing_quote_app_list_workspace_type_0 import PricingQuoteAppListWorkspaceType0  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

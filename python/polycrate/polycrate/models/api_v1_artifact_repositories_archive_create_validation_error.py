@@ -203,106 +203,106 @@ class ApiV1ArtifactRepositoriesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_artifact_repositories_archive_create_alternative_repository_url_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateAlternativeRepositoryUrlErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateAlternativeRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_annotations_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateAnnotationsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_archived_at_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateArchivedAtErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_archived_by_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateArchivedByErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_archived_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateArchivedErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_archived_reason_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_created_by_component_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateCreatedByComponentErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_created_by_user_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateCreatedByUserErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_criticality_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateCriticalityErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_debug_mode_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateDebugModeErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_display_name_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateDisplayNameErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_kind_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateKindErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_labels_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateLabelsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_managed_by_content_type_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateManagedByContentTypeErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_managed_by_object_id_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateManagedByObjectIdErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_modified_by_user_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateModifiedByUserErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_name_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateNameErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_non_field_errors_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_platform_dns_record_created_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_platform_service_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_provider_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateProviderErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_provider_id_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateProviderIdErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_provider_reference_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_reconciliation_enabled_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_repository_url_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateRepositoryUrlErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_sla_availability_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_sla_target_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSlaTargetErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_sla_window_days_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSlaWindowDaysErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_slo_availability_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_slo_target_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSloTargetErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_slo_window_days_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSloWindowDaysErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_target_availability_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_tolerations_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateTolerationsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -405,109 +405,109 @@ class ApiV1ArtifactRepositoriesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_artifact_repositories_archive_create_alternative_repository_url_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateAlternativeRepositoryUrlErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateAlternativeRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_annotations_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateAnnotationsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_archived_at_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateArchivedAtErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_archived_by_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateArchivedByErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_archived_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateArchivedErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_archived_reason_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_created_by_component_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateCreatedByComponentErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_created_by_user_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateCreatedByUserErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_credential_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateCredentialErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_criticality_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateCriticalityErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_debug_mode_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateDebugModeErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_display_name_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateDisplayNameErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_kind_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateKindErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_labels_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateLabelsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_managed_by_content_type_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateManagedByContentTypeErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_managed_by_object_id_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateManagedByObjectIdErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_modified_by_user_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateModifiedByUserErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_name_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateNameErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_non_field_errors_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_platform_dns_record_created_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_platform_service_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_provider_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateProviderErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_provider_id_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateProviderIdErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_provider_reference_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_reconciliation_enabled_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_repository_url_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateRepositoryUrlErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_sla_availability_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_sla_target_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSlaTargetErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_sla_window_days_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSlaWindowDaysErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_slo_availability_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_slo_target_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSloTargetErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_slo_window_days_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateSloWindowDaysErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_target_availability_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_archive_create_tolerations_error_component import (
-            ApiV1ArtifactRepositoriesArchiveCreateTolerationsErrorComponent,
+            ApiV1ArtifactRepositoriesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

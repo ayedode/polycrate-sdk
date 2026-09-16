@@ -112,10 +112,10 @@ class NoteList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.note_list_created_by_user_type_0 import NoteListCreatedByUserType0
-        from ..models.note_list_managed_by_type_0 import NoteListManagedByType0
-        from ..models.note_list_parent_note_type_0 import NoteListParentNoteType0
-        from ..models.note_list_project_type_0 import NoteListProjectType0
+        from ..models.note_list_created_by_user_type_0 import NoteListCreatedByUserType0  # noqa: PLC0415
+        from ..models.note_list_managed_by_type_0 import NoteListManagedByType0  # noqa: PLC0415
+        from ..models.note_list_parent_note_type_0 import NoteListParentNoteType0  # noqa: PLC0415
+        from ..models.note_list_project_type_0 import NoteListProjectType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -249,15 +249,17 @@ class NoteList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.note_list_active_condition_instances_item import NoteListActiveConditionInstancesItem
-        from ..models.note_list_assignees_item import NoteListAssigneesItem
-        from ..models.note_list_created import NoteListCreated
-        from ..models.note_list_created_by_user_type_0 import NoteListCreatedByUserType0
-        from ..models.note_list_managed_by_type_0 import NoteListManagedByType0
-        from ..models.note_list_parent_note_type_0 import NoteListParentNoteType0
-        from ..models.note_list_project_type_0 import NoteListProjectType0
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.note_list_active_condition_instances_item import (
+            NoteListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.note_list_assignees_item import NoteListAssigneesItem  # noqa: PLC0415
+        from ..models.note_list_created import NoteListCreated  # noqa: PLC0415
+        from ..models.note_list_created_by_user_type_0 import NoteListCreatedByUserType0  # noqa: PLC0415
+        from ..models.note_list_managed_by_type_0 import NoteListManagedByType0  # noqa: PLC0415
+        from ..models.note_list_parent_note_type_0 import NoteListParentNoteType0  # noqa: PLC0415
+        from ..models.note_list_project_type_0 import NoteListProjectType0  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

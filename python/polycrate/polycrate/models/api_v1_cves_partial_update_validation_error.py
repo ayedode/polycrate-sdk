@@ -210,121 +210,131 @@ class ApiV1CvesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_cves_partial_update_actual_availability_error_component import (
-            ApiV1CvesPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1CvesPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_annotations_error_component import (
-            ApiV1CvesPartialUpdateAnnotationsErrorComponent,
+            ApiV1CvesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_archived_at_error_component import (
-            ApiV1CvesPartialUpdateArchivedAtErrorComponent,
+            ApiV1CvesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_archived_by_error_component import (
-            ApiV1CvesPartialUpdateArchivedByErrorComponent,
+            ApiV1CvesPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_archived_error_component import (
-            ApiV1CvesPartialUpdateArchivedErrorComponent,
+            ApiV1CvesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_archived_reason_error_component import (
-            ApiV1CvesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1CvesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_created_by_component_error_component import (
-            ApiV1CvesPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1CvesPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_criticality_error_component import (
-            ApiV1CvesPartialUpdateCriticalityErrorComponent,
+            ApiV1CvesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_cve_id_error_component import ApiV1CvesPartialUpdateCveIdErrorComponent
+        from ..models.api_v1_cves_partial_update_cve_id_error_component import (
+            ApiV1CvesPartialUpdateCveIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_partial_update_cvss_score_error_component import (
-            ApiV1CvesPartialUpdateCvssScoreErrorComponent,
+            ApiV1CvesPartialUpdateCvssScoreErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_cvss_vector_error_component import (
-            ApiV1CvesPartialUpdateCvssVectorErrorComponent,
+            ApiV1CvesPartialUpdateCvssVectorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_debug_mode_error_component import (
-            ApiV1CvesPartialUpdateDebugModeErrorComponent,
+            ApiV1CvesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_description_error_component import (
-            ApiV1CvesPartialUpdateDescriptionErrorComponent,
+            ApiV1CvesPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_discovery_enabled_error_component import (
-            ApiV1CvesPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1CvesPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_display_name_error_component import (
-            ApiV1CvesPartialUpdateDisplayNameErrorComponent,
+            ApiV1CvesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_kind_error_component import ApiV1CvesPartialUpdateKindErrorComponent
+        from ..models.api_v1_cves_partial_update_kind_error_component import (
+            ApiV1CvesPartialUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_partial_update_labels_error_component import (
-            ApiV1CvesPartialUpdateLabelsErrorComponent,
+            ApiV1CvesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1CvesPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1CvesPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_managed_by_content_type_error_component import (
-            ApiV1CvesPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1CvesPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_managed_by_object_id_error_component import (
-            ApiV1CvesPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1CvesPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_modified_at_error_component import (
-            ApiV1CvesPartialUpdateModifiedAtErrorComponent,
+            ApiV1CvesPartialUpdateModifiedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_modified_by_user_error_component import (
-            ApiV1CvesPartialUpdateModifiedByUserErrorComponent,
+            ApiV1CvesPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_name_error_component import ApiV1CvesPartialUpdateNameErrorComponent
+        from ..models.api_v1_cves_partial_update_name_error_component import (
+            ApiV1CvesPartialUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_partial_update_non_field_errors_error_component import (
-            ApiV1CvesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1CvesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_platform_dns_record_created_error_component import (
-            ApiV1CvesPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1CvesPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_platform_service_error_component import (
-            ApiV1CvesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1CvesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_provider_error_component import (
-            ApiV1CvesPartialUpdateProviderErrorComponent,
+            ApiV1CvesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_provider_id_error_component import (
-            ApiV1CvesPartialUpdateProviderIdErrorComponent,
+            ApiV1CvesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_provider_reference_error_component import (
-            ApiV1CvesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1CvesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_published_at_error_component import (
-            ApiV1CvesPartialUpdatePublishedAtErrorComponent,
+            ApiV1CvesPartialUpdatePublishedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_reconciliation_enabled_error_component import (
-            ApiV1CvesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1CvesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_scope_error_component import ApiV1CvesPartialUpdateScopeErrorComponent
+        from ..models.api_v1_cves_partial_update_scope_error_component import (
+            ApiV1CvesPartialUpdateScopeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_partial_update_severity_error_component import (
-            ApiV1CvesPartialUpdateSeverityErrorComponent,
+            ApiV1CvesPartialUpdateSeverityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_sla_availability_error_component import (
-            ApiV1CvesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1CvesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_sla_target_error_component import (
-            ApiV1CvesPartialUpdateSlaTargetErrorComponent,
+            ApiV1CvesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_sla_window_days_error_component import (
-            ApiV1CvesPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1CvesPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_slo_availability_error_component import (
-            ApiV1CvesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1CvesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_slo_target_error_component import (
-            ApiV1CvesPartialUpdateSloTargetErrorComponent,
+            ApiV1CvesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_slo_window_days_error_component import (
-            ApiV1CvesPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1CvesPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_status_error_component import (
-            ApiV1CvesPartialUpdateStatusErrorComponent,
+            ApiV1CvesPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_target_availability_error_component import (
-            ApiV1CvesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1CvesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_title_error_component import ApiV1CvesPartialUpdateTitleErrorComponent
+        from ..models.api_v1_cves_partial_update_title_error_component import (
+            ApiV1CvesPartialUpdateTitleErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -434,124 +444,134 @@ class ApiV1CvesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_cves_partial_update_actual_availability_error_component import (
-            ApiV1CvesPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1CvesPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_annotations_error_component import (
-            ApiV1CvesPartialUpdateAnnotationsErrorComponent,
+            ApiV1CvesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_archived_at_error_component import (
-            ApiV1CvesPartialUpdateArchivedAtErrorComponent,
+            ApiV1CvesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_archived_by_error_component import (
-            ApiV1CvesPartialUpdateArchivedByErrorComponent,
+            ApiV1CvesPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_archived_error_component import (
-            ApiV1CvesPartialUpdateArchivedErrorComponent,
+            ApiV1CvesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_archived_reason_error_component import (
-            ApiV1CvesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1CvesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_created_by_component_error_component import (
-            ApiV1CvesPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1CvesPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_created_by_user_error_component import (
-            ApiV1CvesPartialUpdateCreatedByUserErrorComponent,
+            ApiV1CvesPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_criticality_error_component import (
-            ApiV1CvesPartialUpdateCriticalityErrorComponent,
+            ApiV1CvesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_cve_id_error_component import ApiV1CvesPartialUpdateCveIdErrorComponent
+        from ..models.api_v1_cves_partial_update_cve_id_error_component import (
+            ApiV1CvesPartialUpdateCveIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_partial_update_cvss_score_error_component import (
-            ApiV1CvesPartialUpdateCvssScoreErrorComponent,
+            ApiV1CvesPartialUpdateCvssScoreErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_cvss_vector_error_component import (
-            ApiV1CvesPartialUpdateCvssVectorErrorComponent,
+            ApiV1CvesPartialUpdateCvssVectorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_debug_mode_error_component import (
-            ApiV1CvesPartialUpdateDebugModeErrorComponent,
+            ApiV1CvesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_description_error_component import (
-            ApiV1CvesPartialUpdateDescriptionErrorComponent,
+            ApiV1CvesPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_discovery_enabled_error_component import (
-            ApiV1CvesPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1CvesPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_display_name_error_component import (
-            ApiV1CvesPartialUpdateDisplayNameErrorComponent,
+            ApiV1CvesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_kind_error_component import ApiV1CvesPartialUpdateKindErrorComponent
+        from ..models.api_v1_cves_partial_update_kind_error_component import (
+            ApiV1CvesPartialUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_partial_update_labels_error_component import (
-            ApiV1CvesPartialUpdateLabelsErrorComponent,
+            ApiV1CvesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1CvesPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1CvesPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_managed_by_content_type_error_component import (
-            ApiV1CvesPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1CvesPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_managed_by_object_id_error_component import (
-            ApiV1CvesPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1CvesPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_modified_at_error_component import (
-            ApiV1CvesPartialUpdateModifiedAtErrorComponent,
+            ApiV1CvesPartialUpdateModifiedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_modified_by_user_error_component import (
-            ApiV1CvesPartialUpdateModifiedByUserErrorComponent,
+            ApiV1CvesPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_name_error_component import ApiV1CvesPartialUpdateNameErrorComponent
+        from ..models.api_v1_cves_partial_update_name_error_component import (
+            ApiV1CvesPartialUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_partial_update_non_field_errors_error_component import (
-            ApiV1CvesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1CvesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_platform_dns_record_created_error_component import (
-            ApiV1CvesPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1CvesPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_platform_service_error_component import (
-            ApiV1CvesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1CvesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_provider_error_component import (
-            ApiV1CvesPartialUpdateProviderErrorComponent,
+            ApiV1CvesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_provider_id_error_component import (
-            ApiV1CvesPartialUpdateProviderIdErrorComponent,
+            ApiV1CvesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_provider_reference_error_component import (
-            ApiV1CvesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1CvesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_published_at_error_component import (
-            ApiV1CvesPartialUpdatePublishedAtErrorComponent,
+            ApiV1CvesPartialUpdatePublishedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_reconciliation_enabled_error_component import (
-            ApiV1CvesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1CvesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_scope_error_component import ApiV1CvesPartialUpdateScopeErrorComponent
+        from ..models.api_v1_cves_partial_update_scope_error_component import (
+            ApiV1CvesPartialUpdateScopeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_cves_partial_update_severity_error_component import (
-            ApiV1CvesPartialUpdateSeverityErrorComponent,
+            ApiV1CvesPartialUpdateSeverityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_sla_availability_error_component import (
-            ApiV1CvesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1CvesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_sla_target_error_component import (
-            ApiV1CvesPartialUpdateSlaTargetErrorComponent,
+            ApiV1CvesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_sla_window_days_error_component import (
-            ApiV1CvesPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1CvesPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_slo_availability_error_component import (
-            ApiV1CvesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1CvesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_slo_target_error_component import (
-            ApiV1CvesPartialUpdateSloTargetErrorComponent,
+            ApiV1CvesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_slo_window_days_error_component import (
-            ApiV1CvesPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1CvesPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_status_error_component import (
-            ApiV1CvesPartialUpdateStatusErrorComponent,
+            ApiV1CvesPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_cves_partial_update_target_availability_error_component import (
-            ApiV1CvesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1CvesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_cves_partial_update_title_error_component import ApiV1CvesPartialUpdateTitleErrorComponent
+        from ..models.api_v1_cves_partial_update_title_error_component import (
+            ApiV1CvesPartialUpdateTitleErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

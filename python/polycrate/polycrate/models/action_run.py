@@ -234,10 +234,10 @@ class ActionRun:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.action_run_deleted_by_user_type_0 import ActionRunDeletedByUserType0
-        from ..models.action_run_last_action_run_type_0 import ActionRunLastActionRunType0
-        from ..models.action_run_organization_type_0 import ActionRunOrganizationType0
-        from ..models.action_run_workspace_type_0 import ActionRunWorkspaceType0
+        from ..models.action_run_deleted_by_user_type_0 import ActionRunDeletedByUserType0  # noqa: PLC0415
+        from ..models.action_run_last_action_run_type_0 import ActionRunLastActionRunType0  # noqa: PLC0415
+        from ..models.action_run_organization_type_0 import ActionRunOrganizationType0  # noqa: PLC0415
+        from ..models.action_run_workspace_type_0 import ActionRunWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -560,13 +560,13 @@ class ActionRun:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.action_run_created import ActionRunCreated
-        from ..models.action_run_deleted_by_user_type_0 import ActionRunDeletedByUserType0
-        from ..models.action_run_last_action_run_type_0 import ActionRunLastActionRunType0
-        from ..models.action_run_organization_type_0 import ActionRunOrganizationType0
-        from ..models.action_run_workspace_type_0 import ActionRunWorkspaceType0
-        from ..models.block_rollout_simple import BlockRolloutSimple
-        from ..models.block_simple import BlockSimple
+        from ..models.action_run_created import ActionRunCreated  # noqa: PLC0415
+        from ..models.action_run_deleted_by_user_type_0 import ActionRunDeletedByUserType0  # noqa: PLC0415
+        from ..models.action_run_last_action_run_type_0 import ActionRunLastActionRunType0  # noqa: PLC0415
+        from ..models.action_run_organization_type_0 import ActionRunOrganizationType0  # noqa: PLC0415
+        from ..models.action_run_workspace_type_0 import ActionRunWorkspaceType0  # noqa: PLC0415
+        from ..models.block_rollout_simple import BlockRolloutSimple  # noqa: PLC0415
+        from ..models.block_simple import BlockSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

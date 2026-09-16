@@ -157,79 +157,79 @@ class ApiV1NotificationsSinksTestCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_notifications_sinks_test_create_annotations_error_component import (
-            ApiV1NotificationsSinksTestCreateAnnotationsErrorComponent,
+            ApiV1NotificationsSinksTestCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_archived_at_error_component import (
-            ApiV1NotificationsSinksTestCreateArchivedAtErrorComponent,
+            ApiV1NotificationsSinksTestCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_archived_error_component import (
-            ApiV1NotificationsSinksTestCreateArchivedErrorComponent,
+            ApiV1NotificationsSinksTestCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_archived_reason_error_component import (
-            ApiV1NotificationsSinksTestCreateArchivedReasonErrorComponent,
+            ApiV1NotificationsSinksTestCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_config_error_component import (
-            ApiV1NotificationsSinksTestCreateConfigErrorComponent,
+            ApiV1NotificationsSinksTestCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_criticality_error_component import (
-            ApiV1NotificationsSinksTestCreateCriticalityErrorComponent,
+            ApiV1NotificationsSinksTestCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_debug_mode_error_component import (
-            ApiV1NotificationsSinksTestCreateDebugModeErrorComponent,
+            ApiV1NotificationsSinksTestCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_display_name_error_component import (
-            ApiV1NotificationsSinksTestCreateDisplayNameErrorComponent,
+            ApiV1NotificationsSinksTestCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_is_enabled_error_component import (
-            ApiV1NotificationsSinksTestCreateIsEnabledErrorComponent,
+            ApiV1NotificationsSinksTestCreateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_is_system_default_error_component import (
-            ApiV1NotificationsSinksTestCreateIsSystemDefaultErrorComponent,
+            ApiV1NotificationsSinksTestCreateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_kind_error_component import (
-            ApiV1NotificationsSinksTestCreateKindErrorComponent,
+            ApiV1NotificationsSinksTestCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_labels_error_component import (
-            ApiV1NotificationsSinksTestCreateLabelsErrorComponent,
+            ApiV1NotificationsSinksTestCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_name_error_component import (
-            ApiV1NotificationsSinksTestCreateNameErrorComponent,
+            ApiV1NotificationsSinksTestCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_non_field_errors_error_component import (
-            ApiV1NotificationsSinksTestCreateNonFieldErrorsErrorComponent,
+            ApiV1NotificationsSinksTestCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_platform_service_error_component import (
-            ApiV1NotificationsSinksTestCreatePlatformServiceErrorComponent,
+            ApiV1NotificationsSinksTestCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_provider_error_component import (
-            ApiV1NotificationsSinksTestCreateProviderErrorComponent,
+            ApiV1NotificationsSinksTestCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_provider_id_error_component import (
-            ApiV1NotificationsSinksTestCreateProviderIdErrorComponent,
+            ApiV1NotificationsSinksTestCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_provider_reference_error_component import (
-            ApiV1NotificationsSinksTestCreateProviderReferenceErrorComponent,
+            ApiV1NotificationsSinksTestCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_reconciliation_enabled_error_component import (
-            ApiV1NotificationsSinksTestCreateReconciliationEnabledErrorComponent,
+            ApiV1NotificationsSinksTestCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_sla_availability_error_component import (
-            ApiV1NotificationsSinksTestCreateSlaAvailabilityErrorComponent,
+            ApiV1NotificationsSinksTestCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_sla_target_error_component import (
-            ApiV1NotificationsSinksTestCreateSlaTargetErrorComponent,
+            ApiV1NotificationsSinksTestCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_slo_availability_error_component import (
-            ApiV1NotificationsSinksTestCreateSloAvailabilityErrorComponent,
+            ApiV1NotificationsSinksTestCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_slo_target_error_component import (
-            ApiV1NotificationsSinksTestCreateSloTargetErrorComponent,
+            ApiV1NotificationsSinksTestCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_target_availability_error_component import (
-            ApiV1NotificationsSinksTestCreateTargetAvailabilityErrorComponent,
+            ApiV1NotificationsSinksTestCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_tolerations_error_component import (
-            ApiV1NotificationsSinksTestCreateTolerationsErrorComponent,
+            ApiV1NotificationsSinksTestCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -306,82 +306,82 @@ class ApiV1NotificationsSinksTestCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_notifications_sinks_test_create_annotations_error_component import (
-            ApiV1NotificationsSinksTestCreateAnnotationsErrorComponent,
+            ApiV1NotificationsSinksTestCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_archived_at_error_component import (
-            ApiV1NotificationsSinksTestCreateArchivedAtErrorComponent,
+            ApiV1NotificationsSinksTestCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_archived_error_component import (
-            ApiV1NotificationsSinksTestCreateArchivedErrorComponent,
+            ApiV1NotificationsSinksTestCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_archived_reason_error_component import (
-            ApiV1NotificationsSinksTestCreateArchivedReasonErrorComponent,
+            ApiV1NotificationsSinksTestCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_config_error_component import (
-            ApiV1NotificationsSinksTestCreateConfigErrorComponent,
+            ApiV1NotificationsSinksTestCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_criticality_error_component import (
-            ApiV1NotificationsSinksTestCreateCriticalityErrorComponent,
+            ApiV1NotificationsSinksTestCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_debug_mode_error_component import (
-            ApiV1NotificationsSinksTestCreateDebugModeErrorComponent,
+            ApiV1NotificationsSinksTestCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_display_name_error_component import (
-            ApiV1NotificationsSinksTestCreateDisplayNameErrorComponent,
+            ApiV1NotificationsSinksTestCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_enabled_model_types_error_component import (
-            ApiV1NotificationsSinksTestCreateEnabledModelTypesErrorComponent,
+            ApiV1NotificationsSinksTestCreateEnabledModelTypesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_is_enabled_error_component import (
-            ApiV1NotificationsSinksTestCreateIsEnabledErrorComponent,
+            ApiV1NotificationsSinksTestCreateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_is_system_default_error_component import (
-            ApiV1NotificationsSinksTestCreateIsSystemDefaultErrorComponent,
+            ApiV1NotificationsSinksTestCreateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_kind_error_component import (
-            ApiV1NotificationsSinksTestCreateKindErrorComponent,
+            ApiV1NotificationsSinksTestCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_labels_error_component import (
-            ApiV1NotificationsSinksTestCreateLabelsErrorComponent,
+            ApiV1NotificationsSinksTestCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_name_error_component import (
-            ApiV1NotificationsSinksTestCreateNameErrorComponent,
+            ApiV1NotificationsSinksTestCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_non_field_errors_error_component import (
-            ApiV1NotificationsSinksTestCreateNonFieldErrorsErrorComponent,
+            ApiV1NotificationsSinksTestCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_platform_service_error_component import (
-            ApiV1NotificationsSinksTestCreatePlatformServiceErrorComponent,
+            ApiV1NotificationsSinksTestCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_provider_error_component import (
-            ApiV1NotificationsSinksTestCreateProviderErrorComponent,
+            ApiV1NotificationsSinksTestCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_provider_id_error_component import (
-            ApiV1NotificationsSinksTestCreateProviderIdErrorComponent,
+            ApiV1NotificationsSinksTestCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_provider_reference_error_component import (
-            ApiV1NotificationsSinksTestCreateProviderReferenceErrorComponent,
+            ApiV1NotificationsSinksTestCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_reconciliation_enabled_error_component import (
-            ApiV1NotificationsSinksTestCreateReconciliationEnabledErrorComponent,
+            ApiV1NotificationsSinksTestCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_sla_availability_error_component import (
-            ApiV1NotificationsSinksTestCreateSlaAvailabilityErrorComponent,
+            ApiV1NotificationsSinksTestCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_sla_target_error_component import (
-            ApiV1NotificationsSinksTestCreateSlaTargetErrorComponent,
+            ApiV1NotificationsSinksTestCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_slo_availability_error_component import (
-            ApiV1NotificationsSinksTestCreateSloAvailabilityErrorComponent,
+            ApiV1NotificationsSinksTestCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_slo_target_error_component import (
-            ApiV1NotificationsSinksTestCreateSloTargetErrorComponent,
+            ApiV1NotificationsSinksTestCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_target_availability_error_component import (
-            ApiV1NotificationsSinksTestCreateTargetAvailabilityErrorComponent,
+            ApiV1NotificationsSinksTestCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_test_create_tolerations_error_component import (
-            ApiV1NotificationsSinksTestCreateTolerationsErrorComponent,
+            ApiV1NotificationsSinksTestCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

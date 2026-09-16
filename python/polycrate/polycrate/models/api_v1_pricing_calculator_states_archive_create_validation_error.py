@@ -163,82 +163,82 @@ class ApiV1PricingCalculatorStatesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_calculator_states_archive_create_access_count_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateAccessCountErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateAccessCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_annotations_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateAnnotationsErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_archived_at_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateArchivedAtErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_archived_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateArchivedErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_archived_reason_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_configuration_json_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateConfigurationJsonErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateConfigurationJsonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_criticality_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateCriticalityErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_debug_mode_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateDebugModeErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_display_name_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateDisplayNameErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_kind_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateKindErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_labels_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateLabelsErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_last_access_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateLastAccessErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateLastAccessErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_name_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateNameErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_non_field_errors_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_platform_service_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_provider_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateProviderErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_provider_id_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateProviderIdErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_provider_reference_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_reconciliation_enabled_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_sla_availability_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_sla_target_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateSlaTargetErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_slo_availability_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_slo_target_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateSloTargetErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_target_availability_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_tolerations_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateTolerationsErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_total_price_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateTotalPriceErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateTotalPriceErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -321,85 +321,85 @@ class ApiV1PricingCalculatorStatesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_calculator_states_archive_create_access_count_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateAccessCountErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateAccessCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_annotations_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateAnnotationsErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_archived_at_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateArchivedAtErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_archived_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateArchivedErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_archived_reason_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_booking_id_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateBookingIdErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateBookingIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_configuration_json_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateConfigurationJsonErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateConfigurationJsonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_criticality_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateCriticalityErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_debug_mode_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateDebugModeErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_display_name_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateDisplayNameErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_kind_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateKindErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_labels_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateLabelsErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_last_access_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateLastAccessErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateLastAccessErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_name_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateNameErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_non_field_errors_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_platform_service_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_provider_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateProviderErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_provider_id_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateProviderIdErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_provider_reference_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_reconciliation_enabled_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_sla_availability_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_sla_target_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateSlaTargetErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_slo_availability_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_slo_target_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateSloTargetErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_target_availability_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_tolerations_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateTolerationsErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_calculator_states_archive_create_total_price_error_component import (
-            ApiV1PricingCalculatorStatesArchiveCreateTotalPriceErrorComponent,
+            ApiV1PricingCalculatorStatesArchiveCreateTotalPriceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -84,8 +84,10 @@ class BackupScheduleList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.backup_schedule_list_organization_type_0 import BackupScheduleListOrganizationType0
-        from ..models.backup_schedule_list_workspace_type_0 import BackupScheduleListWorkspaceType0
+        from ..models.backup_schedule_list_organization_type_0 import (
+            BackupScheduleListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.backup_schedule_list_workspace_type_0 import BackupScheduleListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -181,12 +183,14 @@ class BackupScheduleList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.backup_schedule_list_active_condition_instances_item import (
-            BackupScheduleListActiveConditionInstancesItem,
+            BackupScheduleListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.backup_schedule_list_created import BackupScheduleListCreated
-        from ..models.backup_schedule_list_k8s_cluster import BackupScheduleListK8SCluster
-        from ..models.backup_schedule_list_organization_type_0 import BackupScheduleListOrganizationType0
-        from ..models.backup_schedule_list_workspace_type_0 import BackupScheduleListWorkspaceType0
+        from ..models.backup_schedule_list_created import BackupScheduleListCreated  # noqa: PLC0415
+        from ..models.backup_schedule_list_k8s_cluster import BackupScheduleListK8SCluster  # noqa: PLC0415
+        from ..models.backup_schedule_list_organization_type_0 import (
+            BackupScheduleListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.backup_schedule_list_workspace_type_0 import BackupScheduleListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

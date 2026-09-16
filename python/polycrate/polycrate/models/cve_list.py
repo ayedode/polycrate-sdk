@@ -176,8 +176,10 @@ class CVEList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.cve_list_active_condition_instances_item import CVEListActiveConditionInstancesItem
-        from ..models.cve_list_created import CVEListCreated
+        from ..models.cve_list_active_condition_instances_item import (
+            CVEListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.cve_list_created import CVEListCreated  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

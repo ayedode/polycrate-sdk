@@ -68,7 +68,7 @@ class PaginatedConversationListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversation_list import ConversationList
+        from ..models.conversation_list import ConversationList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

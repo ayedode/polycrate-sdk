@@ -96,8 +96,12 @@ class PricingQuoteWorkspaceList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.pricing_quote_workspace_list_organization_type_0 import PricingQuoteWorkspaceListOrganizationType0
-        from ..models.pricing_quote_workspace_list_workspace_type_0 import PricingQuoteWorkspaceListWorkspaceType0
+        from ..models.pricing_quote_workspace_list_organization_type_0 import (
+            PricingQuoteWorkspaceListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.pricing_quote_workspace_list_workspace_type_0 import (
+            PricingQuoteWorkspaceListWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -189,11 +193,15 @@ class PricingQuoteWorkspaceList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.pricing_quote_workspace_list_active_condition_instances_item import (
-            PricingQuoteWorkspaceListActiveConditionInstancesItem,
+            PricingQuoteWorkspaceListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.pricing_quote_workspace_list_created import PricingQuoteWorkspaceListCreated
-        from ..models.pricing_quote_workspace_list_organization_type_0 import PricingQuoteWorkspaceListOrganizationType0
-        from ..models.pricing_quote_workspace_list_workspace_type_0 import PricingQuoteWorkspaceListWorkspaceType0
+        from ..models.pricing_quote_workspace_list_created import PricingQuoteWorkspaceListCreated  # noqa: PLC0415
+        from ..models.pricing_quote_workspace_list_organization_type_0 import (
+            PricingQuoteWorkspaceListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.pricing_quote_workspace_list_workspace_type_0 import (
+            PricingQuoteWorkspaceListWorkspaceType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

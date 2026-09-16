@@ -48,13 +48,13 @@ class ApiV1ConversationsProvidersPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conversations_providers_partial_update_credential_error_component import (
-            ApiV1ConversationsProvidersPartialUpdateCredentialErrorComponent,
+            ApiV1ConversationsProvidersPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_partial_update_meta_error_component import (
-            ApiV1ConversationsProvidersPartialUpdateMetaErrorComponent,
+            ApiV1ConversationsProvidersPartialUpdateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_partial_update_non_field_errors_error_component import (
-            ApiV1ConversationsProvidersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsProvidersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -87,16 +87,16 @@ class ApiV1ConversationsProvidersPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conversations_providers_partial_update_config_error_component import (
-            ApiV1ConversationsProvidersPartialUpdateConfigErrorComponent,
+            ApiV1ConversationsProvidersPartialUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_partial_update_credential_error_component import (
-            ApiV1ConversationsProvidersPartialUpdateCredentialErrorComponent,
+            ApiV1ConversationsProvidersPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_partial_update_meta_error_component import (
-            ApiV1ConversationsProvidersPartialUpdateMetaErrorComponent,
+            ApiV1ConversationsProvidersPartialUpdateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_providers_partial_update_non_field_errors_error_component import (
-            ApiV1ConversationsProvidersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsProvidersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

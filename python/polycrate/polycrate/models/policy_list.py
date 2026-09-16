@@ -79,8 +79,8 @@ class PolicyList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.policy_list_organization_type_0 import PolicyListOrganizationType0
-        from ..models.policy_list_workspace_type_0 import PolicyListWorkspaceType0
+        from ..models.policy_list_organization_type_0 import PolicyListOrganizationType0  # noqa: PLC0415
+        from ..models.policy_list_workspace_type_0 import PolicyListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -170,10 +170,12 @@ class PolicyList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.policy_list_active_condition_instances_item import PolicyListActiveConditionInstancesItem
-        from ..models.policy_list_created import PolicyListCreated
-        from ..models.policy_list_organization_type_0 import PolicyListOrganizationType0
-        from ..models.policy_list_workspace_type_0 import PolicyListWorkspaceType0
+        from ..models.policy_list_active_condition_instances_item import (
+            PolicyListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.policy_list_created import PolicyListCreated  # noqa: PLC0415
+        from ..models.policy_list_organization_type_0 import PolicyListOrganizationType0  # noqa: PLC0415
+        from ..models.policy_list_workspace_type_0 import PolicyListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

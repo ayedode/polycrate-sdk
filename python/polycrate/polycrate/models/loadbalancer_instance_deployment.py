@@ -70,7 +70,7 @@ class LoadbalancerInstanceDeployment:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.region_simple import RegionSimple
+        from ..models.region_simple import RegionSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         deployment_status = check_deployment_status_enum(d.pop("deployment_status"))

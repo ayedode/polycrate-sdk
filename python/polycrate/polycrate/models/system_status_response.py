@@ -68,11 +68,11 @@ class SystemStatusResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.system_status_response_celery import SystemStatusResponseCelery
-        from ..models.system_status_response_config import SystemStatusResponseConfig
-        from ..models.system_status_response_integrations import SystemStatusResponseIntegrations
-        from ..models.system_status_response_state import SystemStatusResponseState
-        from ..models.system_status_response_uptime import SystemStatusResponseUptime
+        from ..models.system_status_response_celery import SystemStatusResponseCelery  # noqa: PLC0415
+        from ..models.system_status_response_config import SystemStatusResponseConfig  # noqa: PLC0415
+        from ..models.system_status_response_integrations import SystemStatusResponseIntegrations  # noqa: PLC0415
+        from ..models.system_status_response_state import SystemStatusResponseState  # noqa: PLC0415
+        from ..models.system_status_response_uptime import SystemStatusResponseUptime  # noqa: PLC0415
 
         d = dict(src_dict)
         timestamp = datetime.datetime.fromisoformat(d.pop("timestamp"))

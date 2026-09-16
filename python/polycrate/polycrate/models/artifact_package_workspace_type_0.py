@@ -45,7 +45,7 @@ class ArtifactPackageWorkspaceType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.artifact_package_workspace_type_0_created_by_type_0 import (
-            ArtifactPackageWorkspaceType0CreatedByType0,
+            ArtifactPackageWorkspaceType0CreatedByType0,  # noqa: PLC0415
         )
 
         id: str | Unset = UNSET
@@ -127,7 +127,7 @@ class ArtifactPackageWorkspaceType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.artifact_package_workspace_type_0_created_by_type_0 import (
-            ArtifactPackageWorkspaceType0CreatedByType0,
+            ArtifactPackageWorkspaceType0CreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

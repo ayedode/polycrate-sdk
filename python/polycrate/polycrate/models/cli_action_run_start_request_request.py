@@ -50,10 +50,10 @@ class CLIActionRunStartRequestRequest:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.cli_action_run_start_request_request_block_config_type_0 import (
-            CLIActionRunStartRequestRequestBlockConfigType0,
+            CLIActionRunStartRequestRequestBlockConfigType0,  # noqa: PLC0415
         )
         from ..models.cli_action_run_start_request_request_block_labels_type_0 import (
-            CLIActionRunStartRequestRequestBlockLabelsType0,
+            CLIActionRunStartRequestRequestBlockLabelsType0,  # noqa: PLC0415
         )
 
         organization = self.organization
@@ -111,10 +111,10 @@ class CLIActionRunStartRequestRequest:
 
     def to_multipart(self) -> types.RequestFiles:
         from ..models.cli_action_run_start_request_request_block_config_type_0 import (
-            CLIActionRunStartRequestRequestBlockConfigType0,
+            CLIActionRunStartRequestRequestBlockConfigType0,  # noqa: PLC0415
         )
         from ..models.cli_action_run_start_request_request_block_labels_type_0 import (
-            CLIActionRunStartRequestRequestBlockLabelsType0,
+            CLIActionRunStartRequestRequestBlockLabelsType0,  # noqa: PLC0415
         )
 
         files: types.RequestFiles = []
@@ -160,10 +160,10 @@ class CLIActionRunStartRequestRequest:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.cli_action_run_start_request_request_block_config_type_0 import (
-            CLIActionRunStartRequestRequestBlockConfigType0,
+            CLIActionRunStartRequestRequestBlockConfigType0,  # noqa: PLC0415
         )
         from ..models.cli_action_run_start_request_request_block_labels_type_0 import (
-            CLIActionRunStartRequestRequestBlockLabelsType0,
+            CLIActionRunStartRequestRequestBlockLabelsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

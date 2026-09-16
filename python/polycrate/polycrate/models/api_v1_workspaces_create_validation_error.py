@@ -62,8 +62,17 @@ if TYPE_CHECKING:
     from ..models.api_v1_workspaces_create_has_incompatible_kubeconfig_error_component import (
         ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent,
     )
+    from ..models.api_v1_workspaces_create_k8s_addons_enabled_error_component import (
+        ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent,
+    )
     from ..models.api_v1_workspaces_create_kind_error_component import ApiV1WorkspacesCreateKindErrorComponent
     from ..models.api_v1_workspaces_create_labels_error_component import ApiV1WorkspacesCreateLabelsErrorComponent
+    from ..models.api_v1_workspaces_create_logs_enabled_error_component import (
+        ApiV1WorkspacesCreateLogsEnabledErrorComponent,
+    )
+    from ..models.api_v1_workspaces_create_metrics_enabled_error_component import (
+        ApiV1WorkspacesCreateMetricsEnabledErrorComponent,
+    )
     from ..models.api_v1_workspaces_create_monitoring_workspace_allowlist_ids_error_component import (
         ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
     )
@@ -141,20 +150,23 @@ class ApiV1WorkspacesCreateValidationError:
             ApiV1WorkspacesCreateEndpointMonitoringModeErrorComponent | ApiV1WorkspacesCreateEndpointMonitorsErrorComponent
             | ApiV1WorkspacesCreateGitlabProjectIdErrorComponent | ApiV1WorkspacesCreateGitlabProjectUrlErrorComponent |
             ApiV1WorkspacesCreateGlobalEndpointMonitorErrorComponent |
-            ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent | ApiV1WorkspacesCreateKindErrorComponent |
-            ApiV1WorkspacesCreateLabelsErrorComponent | ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent |
-            ApiV1WorkspacesCreateNameErrorComponent | ApiV1WorkspacesCreateNonFieldErrorsErrorComponent |
-            ApiV1WorkspacesCreateNotificationsEnabledErrorComponent | ApiV1WorkspacesCreateOnPremiseErrorComponent |
-            ApiV1WorkspacesCreateOrganizationIdErrorComponent | ApiV1WorkspacesCreateOwnerIdErrorComponent |
-            ApiV1WorkspacesCreatePlatformServiceErrorComponent | ApiV1WorkspacesCreatePopIdErrorComponent |
-            ApiV1WorkspacesCreateProviderErrorComponent | ApiV1WorkspacesCreateProviderIdErrorComponent |
-            ApiV1WorkspacesCreateProviderReferenceErrorComponent | ApiV1WorkspacesCreatePurposeErrorComponent |
-            ApiV1WorkspacesCreateReadmeMdErrorComponent | ApiV1WorkspacesCreateReconciliationEnabledErrorComponent |
-            ApiV1WorkspacesCreateScopeErrorComponent | ApiV1WorkspacesCreateSecretsPolyRawErrorComponent |
-            ApiV1WorkspacesCreateSlaAvailabilityErrorComponent | ApiV1WorkspacesCreateSlaTargetErrorComponent |
-            ApiV1WorkspacesCreateSloAvailabilityErrorComponent | ApiV1WorkspacesCreateSloTargetErrorComponent |
-            ApiV1WorkspacesCreateTargetAvailabilityErrorComponent | ApiV1WorkspacesCreateTemplateErrorComponent |
-            ApiV1WorkspacesCreateUrlsErrorComponent | ApiV1WorkspacesCreateWorkspaceInventoryRawErrorComponent]):
+            ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent |
+            ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent | ApiV1WorkspacesCreateKindErrorComponent |
+            ApiV1WorkspacesCreateLabelsErrorComponent | ApiV1WorkspacesCreateLogsEnabledErrorComponent |
+            ApiV1WorkspacesCreateMetricsEnabledErrorComponent |
+            ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent | ApiV1WorkspacesCreateNameErrorComponent |
+            ApiV1WorkspacesCreateNonFieldErrorsErrorComponent | ApiV1WorkspacesCreateNotificationsEnabledErrorComponent |
+            ApiV1WorkspacesCreateOnPremiseErrorComponent | ApiV1WorkspacesCreateOrganizationIdErrorComponent |
+            ApiV1WorkspacesCreateOwnerIdErrorComponent | ApiV1WorkspacesCreatePlatformServiceErrorComponent |
+            ApiV1WorkspacesCreatePopIdErrorComponent | ApiV1WorkspacesCreateProviderErrorComponent |
+            ApiV1WorkspacesCreateProviderIdErrorComponent | ApiV1WorkspacesCreateProviderReferenceErrorComponent |
+            ApiV1WorkspacesCreatePurposeErrorComponent | ApiV1WorkspacesCreateReadmeMdErrorComponent |
+            ApiV1WorkspacesCreateReconciliationEnabledErrorComponent | ApiV1WorkspacesCreateScopeErrorComponent |
+            ApiV1WorkspacesCreateSecretsPolyRawErrorComponent | ApiV1WorkspacesCreateSlaAvailabilityErrorComponent |
+            ApiV1WorkspacesCreateSlaTargetErrorComponent | ApiV1WorkspacesCreateSloAvailabilityErrorComponent |
+            ApiV1WorkspacesCreateSloTargetErrorComponent | ApiV1WorkspacesCreateTargetAvailabilityErrorComponent |
+            ApiV1WorkspacesCreateTemplateErrorComponent | ApiV1WorkspacesCreateUrlsErrorComponent |
+            ApiV1WorkspacesCreateWorkspaceInventoryRawErrorComponent]):
     """
 
     type_: ValidationErrorEnum
@@ -178,8 +190,11 @@ class ApiV1WorkspacesCreateValidationError:
         | ApiV1WorkspacesCreateGitlabProjectUrlErrorComponent
         | ApiV1WorkspacesCreateGlobalEndpointMonitorErrorComponent
         | ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent
+        | ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent
         | ApiV1WorkspacesCreateKindErrorComponent
         | ApiV1WorkspacesCreateLabelsErrorComponent
+        | ApiV1WorkspacesCreateLogsEnabledErrorComponent
+        | ApiV1WorkspacesCreateMetricsEnabledErrorComponent
         | ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent
         | ApiV1WorkspacesCreateNameErrorComponent
         | ApiV1WorkspacesCreateNonFieldErrorsErrorComponent
@@ -210,125 +225,148 @@ class ApiV1WorkspacesCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_workspaces_create_actual_availability_error_component import (
-            ApiV1WorkspacesCreateActualAvailabilityErrorComponent,
+            ApiV1WorkspacesCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_annotations_error_component import (
-            ApiV1WorkspacesCreateAnnotationsErrorComponent,
+            ApiV1WorkspacesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_archived_at_error_component import (
-            ApiV1WorkspacesCreateArchivedAtErrorComponent,
+            ApiV1WorkspacesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_archived_error_component import (
-            ApiV1WorkspacesCreateArchivedErrorComponent,
+            ApiV1WorkspacesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_archived_reason_error_component import (
-            ApiV1WorkspacesCreateArchivedReasonErrorComponent,
+            ApiV1WorkspacesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_backup_enabled_error_component import (
-            ApiV1WorkspacesCreateBackupEnabledErrorComponent,
+            ApiV1WorkspacesCreateBackupEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_criticality_error_component import (
-            ApiV1WorkspacesCreateCriticalityErrorComponent,
+            ApiV1WorkspacesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_debug_mode_error_component import (
-            ApiV1WorkspacesCreateDebugModeErrorComponent,
+            ApiV1WorkspacesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_description_error_component import (
-            ApiV1WorkspacesCreateDescriptionErrorComponent,
+            ApiV1WorkspacesCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_discovery_enabled_error_component import (
-            ApiV1WorkspacesCreateDiscoveryEnabledErrorComponent,
+            ApiV1WorkspacesCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_display_name_error_component import (
-            ApiV1WorkspacesCreateDisplayNameErrorComponent,
+            ApiV1WorkspacesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_encrypted_error_component import (
-            ApiV1WorkspacesCreateEncryptedErrorComponent,
+            ApiV1WorkspacesCreateEncryptedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesCreateEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesCreateEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_endpoint_monitors_error_component import (
-            ApiV1WorkspacesCreateEndpointMonitorsErrorComponent,
+            ApiV1WorkspacesCreateEndpointMonitorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_gitlab_project_id_error_component import (
-            ApiV1WorkspacesCreateGitlabProjectIdErrorComponent,
+            ApiV1WorkspacesCreateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_gitlab_project_url_error_component import (
-            ApiV1WorkspacesCreateGitlabProjectUrlErrorComponent,
+            ApiV1WorkspacesCreateGitlabProjectUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_global_endpoint_monitor_error_component import (
-            ApiV1WorkspacesCreateGlobalEndpointMonitorErrorComponent,
+            ApiV1WorkspacesCreateGlobalEndpointMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_has_incompatible_kubeconfig_error_component import (
-            ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent,
+            ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_kind_error_component import ApiV1WorkspacesCreateKindErrorComponent
-        from ..models.api_v1_workspaces_create_labels_error_component import ApiV1WorkspacesCreateLabelsErrorComponent
+        from ..models.api_v1_workspaces_create_k8s_addons_enabled_error_component import (
+            ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_create_kind_error_component import (
+            ApiV1WorkspacesCreateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_create_labels_error_component import (
+            ApiV1WorkspacesCreateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_create_logs_enabled_error_component import (
+            ApiV1WorkspacesCreateLogsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_create_metrics_enabled_error_component import (
+            ApiV1WorkspacesCreateMetricsEnabledErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_monitoring_workspace_allowlist_ids_error_component import (
-            ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
+            ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_name_error_component import ApiV1WorkspacesCreateNameErrorComponent
+        from ..models.api_v1_workspaces_create_name_error_component import (
+            ApiV1WorkspacesCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_non_field_errors_error_component import (
-            ApiV1WorkspacesCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspacesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_notifications_enabled_error_component import (
-            ApiV1WorkspacesCreateNotificationsEnabledErrorComponent,
+            ApiV1WorkspacesCreateNotificationsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_on_premise_error_component import (
-            ApiV1WorkspacesCreateOnPremiseErrorComponent,
+            ApiV1WorkspacesCreateOnPremiseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_organization_id_error_component import (
-            ApiV1WorkspacesCreateOrganizationIdErrorComponent,
+            ApiV1WorkspacesCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_owner_id_error_component import (
-            ApiV1WorkspacesCreateOwnerIdErrorComponent,
+            ApiV1WorkspacesCreateOwnerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_platform_service_error_component import (
-            ApiV1WorkspacesCreatePlatformServiceErrorComponent,
+            ApiV1WorkspacesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_pop_id_error_component import ApiV1WorkspacesCreatePopIdErrorComponent
+        from ..models.api_v1_workspaces_create_pop_id_error_component import (
+            ApiV1WorkspacesCreatePopIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_provider_error_component import (
-            ApiV1WorkspacesCreateProviderErrorComponent,
+            ApiV1WorkspacesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_provider_id_error_component import (
-            ApiV1WorkspacesCreateProviderIdErrorComponent,
+            ApiV1WorkspacesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_provider_reference_error_component import (
-            ApiV1WorkspacesCreateProviderReferenceErrorComponent,
+            ApiV1WorkspacesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_purpose_error_component import ApiV1WorkspacesCreatePurposeErrorComponent
+        from ..models.api_v1_workspaces_create_purpose_error_component import (
+            ApiV1WorkspacesCreatePurposeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_readme_md_error_component import (
-            ApiV1WorkspacesCreateReadmeMdErrorComponent,
+            ApiV1WorkspacesCreateReadmeMdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_reconciliation_enabled_error_component import (
-            ApiV1WorkspacesCreateReconciliationEnabledErrorComponent,
+            ApiV1WorkspacesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_scope_error_component import ApiV1WorkspacesCreateScopeErrorComponent
+        from ..models.api_v1_workspaces_create_scope_error_component import (
+            ApiV1WorkspacesCreateScopeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_secrets_poly_raw_error_component import (
-            ApiV1WorkspacesCreateSecretsPolyRawErrorComponent,
+            ApiV1WorkspacesCreateSecretsPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_sla_availability_error_component import (
-            ApiV1WorkspacesCreateSlaAvailabilityErrorComponent,
+            ApiV1WorkspacesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_sla_target_error_component import (
-            ApiV1WorkspacesCreateSlaTargetErrorComponent,
+            ApiV1WorkspacesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_slo_availability_error_component import (
-            ApiV1WorkspacesCreateSloAvailabilityErrorComponent,
+            ApiV1WorkspacesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_slo_target_error_component import (
-            ApiV1WorkspacesCreateSloTargetErrorComponent,
+            ApiV1WorkspacesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_target_availability_error_component import (
-            ApiV1WorkspacesCreateTargetAvailabilityErrorComponent,
+            ApiV1WorkspacesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_template_error_component import (
-            ApiV1WorkspacesCreateTemplateErrorComponent,
+            ApiV1WorkspacesCreateTemplateErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_urls_error_component import ApiV1WorkspacesCreateUrlsErrorComponent
+        from ..models.api_v1_workspaces_create_urls_error_component import (
+            ApiV1WorkspacesCreateUrlsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_workspace_inventory_raw_error_component import (
-            ApiV1WorkspacesCreateWorkspaceInventoryRawErrorComponent,
+            ApiV1WorkspacesCreateWorkspaceInventoryRawErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -400,6 +438,12 @@ class ApiV1WorkspacesCreateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesCreateBackupEnabledErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesCreateMetricsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesCreateLogsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesCreateEndpointMonitorsErrorComponent):
@@ -445,128 +489,151 @@ class ApiV1WorkspacesCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_workspaces_create_actual_availability_error_component import (
-            ApiV1WorkspacesCreateActualAvailabilityErrorComponent,
+            ApiV1WorkspacesCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_alternative_name_error_component import (
-            ApiV1WorkspacesCreateAlternativeNameErrorComponent,
+            ApiV1WorkspacesCreateAlternativeNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_annotations_error_component import (
-            ApiV1WorkspacesCreateAnnotationsErrorComponent,
+            ApiV1WorkspacesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_archived_at_error_component import (
-            ApiV1WorkspacesCreateArchivedAtErrorComponent,
+            ApiV1WorkspacesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_archived_error_component import (
-            ApiV1WorkspacesCreateArchivedErrorComponent,
+            ApiV1WorkspacesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_archived_reason_error_component import (
-            ApiV1WorkspacesCreateArchivedReasonErrorComponent,
+            ApiV1WorkspacesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_backup_enabled_error_component import (
-            ApiV1WorkspacesCreateBackupEnabledErrorComponent,
+            ApiV1WorkspacesCreateBackupEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_criticality_error_component import (
-            ApiV1WorkspacesCreateCriticalityErrorComponent,
+            ApiV1WorkspacesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_debug_mode_error_component import (
-            ApiV1WorkspacesCreateDebugModeErrorComponent,
+            ApiV1WorkspacesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_description_error_component import (
-            ApiV1WorkspacesCreateDescriptionErrorComponent,
+            ApiV1WorkspacesCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_discovery_enabled_error_component import (
-            ApiV1WorkspacesCreateDiscoveryEnabledErrorComponent,
+            ApiV1WorkspacesCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_display_name_error_component import (
-            ApiV1WorkspacesCreateDisplayNameErrorComponent,
+            ApiV1WorkspacesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_encrypted_error_component import (
-            ApiV1WorkspacesCreateEncryptedErrorComponent,
+            ApiV1WorkspacesCreateEncryptedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesCreateEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesCreateEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_endpoint_monitors_error_component import (
-            ApiV1WorkspacesCreateEndpointMonitorsErrorComponent,
+            ApiV1WorkspacesCreateEndpointMonitorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_gitlab_project_id_error_component import (
-            ApiV1WorkspacesCreateGitlabProjectIdErrorComponent,
+            ApiV1WorkspacesCreateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_gitlab_project_url_error_component import (
-            ApiV1WorkspacesCreateGitlabProjectUrlErrorComponent,
+            ApiV1WorkspacesCreateGitlabProjectUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_global_endpoint_monitor_error_component import (
-            ApiV1WorkspacesCreateGlobalEndpointMonitorErrorComponent,
+            ApiV1WorkspacesCreateGlobalEndpointMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_has_incompatible_kubeconfig_error_component import (
-            ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent,
+            ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_kind_error_component import ApiV1WorkspacesCreateKindErrorComponent
-        from ..models.api_v1_workspaces_create_labels_error_component import ApiV1WorkspacesCreateLabelsErrorComponent
+        from ..models.api_v1_workspaces_create_k8s_addons_enabled_error_component import (
+            ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_create_kind_error_component import (
+            ApiV1WorkspacesCreateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_create_labels_error_component import (
+            ApiV1WorkspacesCreateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_create_logs_enabled_error_component import (
+            ApiV1WorkspacesCreateLogsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_create_metrics_enabled_error_component import (
+            ApiV1WorkspacesCreateMetricsEnabledErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_monitoring_workspace_allowlist_ids_error_component import (
-            ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
+            ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_name_error_component import ApiV1WorkspacesCreateNameErrorComponent
+        from ..models.api_v1_workspaces_create_name_error_component import (
+            ApiV1WorkspacesCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_non_field_errors_error_component import (
-            ApiV1WorkspacesCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspacesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_notifications_enabled_error_component import (
-            ApiV1WorkspacesCreateNotificationsEnabledErrorComponent,
+            ApiV1WorkspacesCreateNotificationsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_on_premise_error_component import (
-            ApiV1WorkspacesCreateOnPremiseErrorComponent,
+            ApiV1WorkspacesCreateOnPremiseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_organization_id_error_component import (
-            ApiV1WorkspacesCreateOrganizationIdErrorComponent,
+            ApiV1WorkspacesCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_owner_id_error_component import (
-            ApiV1WorkspacesCreateOwnerIdErrorComponent,
+            ApiV1WorkspacesCreateOwnerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_platform_service_error_component import (
-            ApiV1WorkspacesCreatePlatformServiceErrorComponent,
+            ApiV1WorkspacesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_pop_id_error_component import ApiV1WorkspacesCreatePopIdErrorComponent
+        from ..models.api_v1_workspaces_create_pop_id_error_component import (
+            ApiV1WorkspacesCreatePopIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_provider_error_component import (
-            ApiV1WorkspacesCreateProviderErrorComponent,
+            ApiV1WorkspacesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_provider_id_error_component import (
-            ApiV1WorkspacesCreateProviderIdErrorComponent,
+            ApiV1WorkspacesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_provider_reference_error_component import (
-            ApiV1WorkspacesCreateProviderReferenceErrorComponent,
+            ApiV1WorkspacesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_purpose_error_component import ApiV1WorkspacesCreatePurposeErrorComponent
+        from ..models.api_v1_workspaces_create_purpose_error_component import (
+            ApiV1WorkspacesCreatePurposeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_readme_md_error_component import (
-            ApiV1WorkspacesCreateReadmeMdErrorComponent,
+            ApiV1WorkspacesCreateReadmeMdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_reconciliation_enabled_error_component import (
-            ApiV1WorkspacesCreateReconciliationEnabledErrorComponent,
+            ApiV1WorkspacesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_scope_error_component import ApiV1WorkspacesCreateScopeErrorComponent
+        from ..models.api_v1_workspaces_create_scope_error_component import (
+            ApiV1WorkspacesCreateScopeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_secrets_poly_raw_error_component import (
-            ApiV1WorkspacesCreateSecretsPolyRawErrorComponent,
+            ApiV1WorkspacesCreateSecretsPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_sla_availability_error_component import (
-            ApiV1WorkspacesCreateSlaAvailabilityErrorComponent,
+            ApiV1WorkspacesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_sla_target_error_component import (
-            ApiV1WorkspacesCreateSlaTargetErrorComponent,
+            ApiV1WorkspacesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_slo_availability_error_component import (
-            ApiV1WorkspacesCreateSloAvailabilityErrorComponent,
+            ApiV1WorkspacesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_slo_target_error_component import (
-            ApiV1WorkspacesCreateSloTargetErrorComponent,
+            ApiV1WorkspacesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_target_availability_error_component import (
-            ApiV1WorkspacesCreateTargetAvailabilityErrorComponent,
+            ApiV1WorkspacesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_create_template_error_component import (
-            ApiV1WorkspacesCreateTemplateErrorComponent,
+            ApiV1WorkspacesCreateTemplateErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_workspaces_create_urls_error_component import ApiV1WorkspacesCreateUrlsErrorComponent
+        from ..models.api_v1_workspaces_create_urls_error_component import (
+            ApiV1WorkspacesCreateUrlsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_workspaces_create_workspace_inventory_raw_error_component import (
-            ApiV1WorkspacesCreateWorkspaceInventoryRawErrorComponent,
+            ApiV1WorkspacesCreateWorkspaceInventoryRawErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -598,8 +665,11 @@ class ApiV1WorkspacesCreateValidationError:
                 | ApiV1WorkspacesCreateGitlabProjectUrlErrorComponent
                 | ApiV1WorkspacesCreateGlobalEndpointMonitorErrorComponent
                 | ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent
+                | ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent
                 | ApiV1WorkspacesCreateKindErrorComponent
                 | ApiV1WorkspacesCreateLabelsErrorComponent
+                | ApiV1WorkspacesCreateLogsEnabledErrorComponent
+                | ApiV1WorkspacesCreateMetricsEnabledErrorComponent
                 | ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent
                 | ApiV1WorkspacesCreateNameErrorComponent
                 | ApiV1WorkspacesCreateNonFieldErrorsErrorComponent
@@ -950,7 +1020,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_32 = (
-                        ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateMetricsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_32
@@ -960,7 +1030,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_33 = (
-                        ApiV1WorkspacesCreateEndpointMonitorsErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateLogsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_33
@@ -970,7 +1040,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_34 = (
-                        ApiV1WorkspacesCreateSecretsPolyRawErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateK8SAddonsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_34
@@ -980,7 +1050,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_35 = (
-                        ApiV1WorkspacesCreateWorkspaceInventoryRawErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_35
@@ -990,7 +1060,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_36 = (
-                        ApiV1WorkspacesCreateOrganizationIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateEndpointMonitorsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_36
@@ -1000,7 +1070,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_37 = (
-                        ApiV1WorkspacesCreateEncryptedErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateSecretsPolyRawErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_37
@@ -1010,7 +1080,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_38 = (
-                        ApiV1WorkspacesCreatePopIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateWorkspaceInventoryRawErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_38
@@ -1020,7 +1090,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_39 = (
-                        ApiV1WorkspacesCreateTemplateErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateOrganizationIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_39
@@ -1030,7 +1100,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_40 = (
-                        ApiV1WorkspacesCreateDescriptionErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateEncryptedErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_40
@@ -1040,7 +1110,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_41 = (
-                        ApiV1WorkspacesCreatePurposeErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreatePopIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_41
@@ -1050,7 +1120,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_42 = (
-                        ApiV1WorkspacesCreateUrlsErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateTemplateErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_42
@@ -1060,7 +1130,7 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_43 = (
-                        ApiV1WorkspacesCreateOwnerIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreateDescriptionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_43
@@ -1070,19 +1140,49 @@ class ApiV1WorkspacesCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_create_error_type_44 = (
-                        ApiV1WorkspacesCreateReadmeMdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesCreatePurposeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_create_error_type_44
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_create_error_type_45 = (
+                        ApiV1WorkspacesCreateUrlsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_create_error_type_45
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_create_error_type_46 = (
+                        ApiV1WorkspacesCreateOwnerIdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_create_error_type_46
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_create_error_type_47 = (
+                        ApiV1WorkspacesCreateReadmeMdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_create_error_type_47
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_workspaces_create_error_type_45 = (
+                componentsschemas_api_v1_workspaces_create_error_type_48 = (
                     ApiV1WorkspacesCreateAlternativeNameErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_workspaces_create_error_type_45
+                return componentsschemas_api_v1_workspaces_create_error_type_48
 
             errors_item = _parse_errors_item(errors_item_data)
 

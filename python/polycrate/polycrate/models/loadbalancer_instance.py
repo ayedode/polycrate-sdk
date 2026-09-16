@@ -27,6 +27,8 @@ if TYPE_CHECKING:
     from ..models.loadbalancer_instance_deleted_by_user_type_0 import LoadbalancerInstanceDeletedByUserType0
     from ..models.loadbalancer_instance_deployment import LoadbalancerInstanceDeployment
     from ..models.loadbalancer_instance_deployment_summary import LoadbalancerInstanceDeploymentSummary
+    from ..models.loadbalancer_instance_effective_haproxy_defaults import LoadbalancerInstanceEffectiveHaproxyDefaults
+    from ..models.loadbalancer_instance_effective_resources import LoadbalancerInstanceEffectiveResources
     from ..models.loadbalancer_instance_last_action_run_type_0 import LoadbalancerInstanceLastActionRunType0
     from ..models.organization_simple import OrganizationSimple
     from ..models.product_simple import ProductSimple
@@ -123,6 +125,11 @@ class LoadbalancerInstance:
 
                 * `loopback_lb` - Loopback Load Balancer
                 * `loopback_object_store` - Loopback Object Store
+            resource_limits (Any): Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.
+            effective_resources (LoadbalancerInstanceEffectiveResources):
+            haproxy_defaults (Any): Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin,
+                option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.
+            effective_haproxy_defaults (LoadbalancerInstanceEffectiveHaproxyDefaults):
             name (str | Unset): Object name
             display_name (None | str | Unset): The display name is used to display the object in the UI. It can be different
                 from the name.
@@ -230,6 +237,10 @@ class LoadbalancerInstance:
     delegated_workspace: WorkspaceSimple
     loopback_resource_id: None | str
     delegation_source: DelegationSourceEnum | None
+    resource_limits: Any
+    effective_resources: LoadbalancerInstanceEffectiveResources
+    haproxy_defaults: Any
+    effective_haproxy_defaults: LoadbalancerInstanceEffectiveHaproxyDefaults
     name: str | Unset = UNSET
     display_name: None | str | Unset = UNSET
     labels: Any | Unset = UNSET
@@ -264,8 +275,12 @@ class LoadbalancerInstance:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.loadbalancer_instance_deleted_by_user_type_0 import LoadbalancerInstanceDeletedByUserType0
-        from ..models.loadbalancer_instance_last_action_run_type_0 import LoadbalancerInstanceLastActionRunType0
+        from ..models.loadbalancer_instance_deleted_by_user_type_0 import (
+            LoadbalancerInstanceDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_instance_last_action_run_type_0 import (
+            LoadbalancerInstanceLastActionRunType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -413,6 +428,14 @@ class LoadbalancerInstance:
             delegation_source = self.delegation_source
         else:
             delegation_source = self.delegation_source
+
+        resource_limits = self.resource_limits
+
+        effective_resources = self.effective_resources.to_dict()
+
+        haproxy_defaults = self.haproxy_defaults
+
+        effective_haproxy_defaults = self.effective_haproxy_defaults.to_dict()
 
         name = self.name
 
@@ -586,6 +609,10 @@ class LoadbalancerInstance:
                 "delegated_workspace": delegated_workspace,
                 "loopback_resource_id": loopback_resource_id,
                 "delegation_source": delegation_source,
+                "resource_limits": resource_limits,
+                "effective_resources": effective_resources,
+                "haproxy_defaults": haproxy_defaults,
+                "effective_haproxy_defaults": effective_haproxy_defaults,
             }
         )
         if name is not UNSET:
@@ -655,15 +682,27 @@ class LoadbalancerInstance:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.ip_address_simple import IPAddressSimple
-        from ..models.loadbalancer_instance_created import LoadbalancerInstanceCreated
-        from ..models.loadbalancer_instance_deleted_by_user_type_0 import LoadbalancerInstanceDeletedByUserType0
-        from ..models.loadbalancer_instance_deployment import LoadbalancerInstanceDeployment
-        from ..models.loadbalancer_instance_deployment_summary import LoadbalancerInstanceDeploymentSummary
-        from ..models.loadbalancer_instance_last_action_run_type_0 import LoadbalancerInstanceLastActionRunType0
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.product_simple import ProductSimple
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.ip_address_simple import IPAddressSimple  # noqa: PLC0415
+        from ..models.loadbalancer_instance_created import LoadbalancerInstanceCreated  # noqa: PLC0415
+        from ..models.loadbalancer_instance_deleted_by_user_type_0 import (
+            LoadbalancerInstanceDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_instance_deployment import LoadbalancerInstanceDeployment  # noqa: PLC0415
+        from ..models.loadbalancer_instance_deployment_summary import (
+            LoadbalancerInstanceDeploymentSummary,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_instance_effective_haproxy_defaults import (
+            LoadbalancerInstanceEffectiveHaproxyDefaults,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_instance_effective_resources import (
+            LoadbalancerInstanceEffectiveResources,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_instance_last_action_run_type_0 import (
+            LoadbalancerInstanceLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -928,6 +967,16 @@ class LoadbalancerInstance:
 
         delegation_source = _parse_delegation_source(d.pop("delegation_source"))
 
+        resource_limits = d.pop("resource_limits")
+
+        effective_resources = LoadbalancerInstanceEffectiveResources.from_dict(d.pop("effective_resources"))
+
+        haproxy_defaults = d.pop("haproxy_defaults")
+
+        effective_haproxy_defaults = LoadbalancerInstanceEffectiveHaproxyDefaults.from_dict(
+            d.pop("effective_haproxy_defaults")
+        )
+
         name = d.pop("name", UNSET)
 
         def _parse_display_name(data: object) -> None | str | Unset:
@@ -1163,6 +1212,10 @@ class LoadbalancerInstance:
             delegated_workspace=delegated_workspace,
             loopback_resource_id=loopback_resource_id,
             delegation_source=delegation_source,
+            resource_limits=resource_limits,
+            effective_resources=effective_resources,
+            haproxy_defaults=haproxy_defaults,
+            effective_haproxy_defaults=effective_haproxy_defaults,
             name=name,
             display_name=display_name,
             labels=labels,

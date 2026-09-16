@@ -197,15 +197,15 @@ def sync_detailed(
     | ErrorResponse502
     | PolicyBinding
 ]:
-    r"""Create a new PolicyBinding.
+    """Create a new PolicyBinding.
 
     POST /api/v1/policy-bindings/
     {
-        \"policy_id\": \"uuid\",
-        \"object_type\": \"k8s.K8sApp\",
-        \"object_id\": \"uuid\",
-        \"scope\": \"user\",
-        \"enabled\": true
+        "policy_id": "uuid",
+        "object_type": "k8s.K8sApp",
+        "object_id": "uuid",
+        "scope": "user",
+        "enabled": true
     }
 
     Args:
@@ -258,15 +258,15 @@ def sync(
     | PolicyBinding
     | None
 ):
-    r"""Create a new PolicyBinding.
+    """Create a new PolicyBinding.
 
     POST /api/v1/policy-bindings/
     {
-        \"policy_id\": \"uuid\",
-        \"object_type\": \"k8s.K8sApp\",
-        \"object_id\": \"uuid\",
-        \"scope\": \"user\",
-        \"enabled\": true
+        "policy_id": "uuid",
+        "object_type": "k8s.K8sApp",
+        "object_id": "uuid",
+        "scope": "user",
+        "enabled": true
     }
 
     Args:
@@ -313,15 +313,15 @@ async def asyncio_detailed(
     | ErrorResponse502
     | PolicyBinding
 ]:
-    r"""Create a new PolicyBinding.
+    """Create a new PolicyBinding.
 
     POST /api/v1/policy-bindings/
     {
-        \"policy_id\": \"uuid\",
-        \"object_type\": \"k8s.K8sApp\",
-        \"object_id\": \"uuid\",
-        \"scope\": \"user\",
-        \"enabled\": true
+        "policy_id": "uuid",
+        "object_type": "k8s.K8sApp",
+        "object_id": "uuid",
+        "scope": "user",
+        "enabled": true
     }
 
     Args:
@@ -372,15 +372,15 @@ async def asyncio(
     | PolicyBinding
     | None
 ):
-    r"""Create a new PolicyBinding.
+    """Create a new PolicyBinding.
 
     POST /api/v1/policy-bindings/
     {
-        \"policy_id\": \"uuid\",
-        \"object_type\": \"k8s.K8sApp\",
-        \"object_id\": \"uuid\",
-        \"scope\": \"user\",
-        \"enabled\": true
+        "policy_id": "uuid",
+        "object_type": "k8s.K8sApp",
+        "object_id": "uuid",
+        "scope": "user",
+        "enabled": true
     }
 
     Args:

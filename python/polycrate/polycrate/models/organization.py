@@ -82,6 +82,10 @@ class Organization:
             condition will not be applied.
         legal_name (str):
         keycloak_org_id (None | str):
+        forgejo_org_id (int | None):
+        forgejo_org_name (None | str):
+        forgejo_org_url (None | str): Forgejo organization HTML URL
+        forgejo_team_ids (Any): Cached Forgejo team IDs for role teams (admin/billing/developer/viewer/owner)
         support_pin (None | str): 8-digit numeric PIN for support authentication
         tenant_id (None | str): 3-8 digit numeric tenant identifier
         rocketchat_channel_announcement_hash (None | str): MD5 hash of the last successfully applied RocketChat channel
@@ -204,7 +208,8 @@ class Organization:
             traffic.out.30d_total then bytes.out.30d_total
         cached_volume_count (int | Unset): Cached total K8sVolume count across all workspaces
         cached_volume_capacity_bytes (int | Unset): Cached total K8sVolume capacity in bytes across all workspaces
-        cached_k8s_cluster_count (int | Unset): Non-archived K8sCluster count for this organization (Spec 630)
+        cached_k8s_cluster_count (int | Unset): Portal-visible K8sCluster count: cluster and workspace not archived,
+            neither kind generic (Spec 630 / 781)
         cached_workspace_count (int | Unset): Non-archived Workspace count for this organization (Spec 630)
         cached_endpoint_count (int | Unset): Non-archived Endpoint count for this organization (Spec 630)
         cached_endpoint_down_count (int | Unset): Non-archived Endpoints with state=CRITICAL (Spec 630)
@@ -259,6 +264,10 @@ class Organization:
     tolerations: Any
     legal_name: str
     keycloak_org_id: None | str
+    forgejo_org_id: int | None
+    forgejo_org_name: None | str
+    forgejo_org_url: None | str
+    forgejo_team_ids: Any
     support_pin: None | str
     tenant_id: None | str
     rocketchat_channel_announcement_hash: None | str
@@ -455,6 +464,17 @@ class Organization:
 
         keycloak_org_id: None | str
         keycloak_org_id = self.keycloak_org_id
+
+        forgejo_org_id: int | None
+        forgejo_org_id = self.forgejo_org_id
+
+        forgejo_org_name: None | str
+        forgejo_org_name = self.forgejo_org_name
+
+        forgejo_org_url: None | str
+        forgejo_org_url = self.forgejo_org_url
+
+        forgejo_team_ids = self.forgejo_team_ids
 
         support_pin: None | str
         support_pin = self.support_pin
@@ -926,6 +946,10 @@ class Organization:
                 "tolerations": tolerations,
                 "legal_name": legal_name,
                 "keycloak_org_id": keycloak_org_id,
+                "forgejo_org_id": forgejo_org_id,
+                "forgejo_org_name": forgejo_org_name,
+                "forgejo_org_url": forgejo_org_url,
+                "forgejo_team_ids": forgejo_team_ids,
                 "support_pin": support_pin,
                 "tenant_id": tenant_id,
                 "rocketchat_channel_announcement_hash": rocketchat_channel_announcement_hash,
@@ -1127,9 +1151,9 @@ class Organization:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.organization_membership_simple import OrganizationMembershipSimple
-        from ..models.organization_product_list import OrganizationProductList
-        from ..models.organization_workspaces_item import OrganizationWorkspacesItem
+        from ..models.organization_membership_simple import OrganizationMembershipSimple  # noqa: PLC0415
+        from ..models.organization_product_list import OrganizationProductList  # noqa: PLC0415
+        from ..models.organization_workspaces_item import OrganizationWorkspacesItem  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -1295,6 +1319,29 @@ class Organization:
             return cast(None | str, data)
 
         keycloak_org_id = _parse_keycloak_org_id(d.pop("keycloak_org_id"))
+
+        def _parse_forgejo_org_id(data: object) -> int | None:
+            if data is None:
+                return data
+            return cast(int | None, data)
+
+        forgejo_org_id = _parse_forgejo_org_id(d.pop("forgejo_org_id"))
+
+        def _parse_forgejo_org_name(data: object) -> None | str:
+            if data is None:
+                return data
+            return cast(None | str, data)
+
+        forgejo_org_name = _parse_forgejo_org_name(d.pop("forgejo_org_name"))
+
+        def _parse_forgejo_org_url(data: object) -> None | str:
+            if data is None:
+                return data
+            return cast(None | str, data)
+
+        forgejo_org_url = _parse_forgejo_org_url(d.pop("forgejo_org_url"))
+
+        forgejo_team_ids = d.pop("forgejo_team_ids")
 
         def _parse_support_pin(data: object) -> None | str:
             if data is None:
@@ -2020,6 +2067,10 @@ class Organization:
             tolerations=tolerations,
             legal_name=legal_name,
             keycloak_org_id=keycloak_org_id,
+            forgejo_org_id=forgejo_org_id,
+            forgejo_org_name=forgejo_org_name,
+            forgejo_org_url=forgejo_org_url,
+            forgejo_team_ids=forgejo_team_ids,
             support_pin=support_pin,
             tenant_id=tenant_id,
             rocketchat_channel_announcement_hash=rocketchat_channel_announcement_hash,

@@ -54,6 +54,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_pricing_products_partial_update_platform_service_error_component import (
         ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponent,
     )
+    from ..models.api_v1_pricing_products_partial_update_pop_error_component import (
+        ApiV1PricingProductsPartialUpdatePopErrorComponent,
+    )
     from ..models.api_v1_pricing_products_partial_update_price_per_unit_error_component import (
         ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent,
     )
@@ -116,8 +119,8 @@ class ApiV1PricingProductsPartialUpdateValidationError:
             | ApiV1PricingProductsPartialUpdateLabelsErrorComponent | ApiV1PricingProductsPartialUpdateNameErrorComponent |
             ApiV1PricingProductsPartialUpdateNonFieldErrorsErrorComponent |
             ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponent |
-            ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent |
-            ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent |
+            ApiV1PricingProductsPartialUpdatePopErrorComponent | ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent
+            | ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent |
             ApiV1PricingProductsPartialUpdateProviderErrorComponent |
             ApiV1PricingProductsPartialUpdateProviderIdErrorComponent |
             ApiV1PricingProductsPartialUpdateProviderReferenceErrorComponent |
@@ -148,6 +151,7 @@ class ApiV1PricingProductsPartialUpdateValidationError:
         | ApiV1PricingProductsPartialUpdateNameErrorComponent
         | ApiV1PricingProductsPartialUpdateNonFieldErrorsErrorComponent
         | ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponent
+        | ApiV1PricingProductsPartialUpdatePopErrorComponent
         | ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent
         | ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent
         | ApiV1PricingProductsPartialUpdateProviderErrorComponent
@@ -166,85 +170,88 @@ class ApiV1PricingProductsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_products_partial_update_annotations_error_component import (
-            ApiV1PricingProductsPartialUpdateAnnotationsErrorComponent,
+            ApiV1PricingProductsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_archived_at_error_component import (
-            ApiV1PricingProductsPartialUpdateArchivedAtErrorComponent,
+            ApiV1PricingProductsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_archived_error_component import (
-            ApiV1PricingProductsPartialUpdateArchivedErrorComponent,
+            ApiV1PricingProductsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_archived_reason_error_component import (
-            ApiV1PricingProductsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1PricingProductsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_billing_interval_error_component import (
-            ApiV1PricingProductsPartialUpdateBillingIntervalErrorComponent,
+            ApiV1PricingProductsPartialUpdateBillingIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_cost_per_unit_error_component import (
-            ApiV1PricingProductsPartialUpdateCostPerUnitErrorComponent,
+            ApiV1PricingProductsPartialUpdateCostPerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_criticality_error_component import (
-            ApiV1PricingProductsPartialUpdateCriticalityErrorComponent,
+            ApiV1PricingProductsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_debug_mode_error_component import (
-            ApiV1PricingProductsPartialUpdateDebugModeErrorComponent,
+            ApiV1PricingProductsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_display_name_error_component import (
-            ApiV1PricingProductsPartialUpdateDisplayNameErrorComponent,
+            ApiV1PricingProductsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_kind_error_component import (
-            ApiV1PricingProductsPartialUpdateKindErrorComponent,
+            ApiV1PricingProductsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_labels_error_component import (
-            ApiV1PricingProductsPartialUpdateLabelsErrorComponent,
+            ApiV1PricingProductsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_name_error_component import (
-            ApiV1PricingProductsPartialUpdateNameErrorComponent,
+            ApiV1PricingProductsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_non_field_errors_error_component import (
-            ApiV1PricingProductsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingProductsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_platform_service_error_component import (
-            ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_pricing_products_partial_update_pop_error_component import (
+            ApiV1PricingProductsPartialUpdatePopErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_price_per_unit_error_component import (
-            ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent,
+            ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_entity_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_id_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderIdErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_reference_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_type_id_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderTypeIdErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderTypeIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PricingProductsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingProductsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_sla_availability_error_component import (
-            ApiV1PricingProductsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingProductsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_sla_target_error_component import (
-            ApiV1PricingProductsPartialUpdateSlaTargetErrorComponent,
+            ApiV1PricingProductsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_slo_availability_error_component import (
-            ApiV1PricingProductsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingProductsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_slo_target_error_component import (
-            ApiV1PricingProductsPartialUpdateSloTargetErrorComponent,
+            ApiV1PricingProductsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_target_availability_error_component import (
-            ApiV1PricingProductsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingProductsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_tolerations_error_component import (
-            ApiV1PricingProductsPartialUpdateTolerationsErrorComponent,
+            ApiV1PricingProductsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -304,6 +311,8 @@ class ApiV1PricingProductsPartialUpdateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1PricingProductsPartialUpdatePopErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1PricingProductsPartialUpdateProviderTypeIdErrorComponent):
                 errors_item = errors_item_data.to_dict()
             else:
@@ -325,88 +334,91 @@ class ApiV1PricingProductsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_products_partial_update_annotations_error_component import (
-            ApiV1PricingProductsPartialUpdateAnnotationsErrorComponent,
+            ApiV1PricingProductsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_archived_at_error_component import (
-            ApiV1PricingProductsPartialUpdateArchivedAtErrorComponent,
+            ApiV1PricingProductsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_archived_error_component import (
-            ApiV1PricingProductsPartialUpdateArchivedErrorComponent,
+            ApiV1PricingProductsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_archived_reason_error_component import (
-            ApiV1PricingProductsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1PricingProductsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_billing_interval_error_component import (
-            ApiV1PricingProductsPartialUpdateBillingIntervalErrorComponent,
+            ApiV1PricingProductsPartialUpdateBillingIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_config_error_component import (
-            ApiV1PricingProductsPartialUpdateConfigErrorComponent,
+            ApiV1PricingProductsPartialUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_cost_per_unit_error_component import (
-            ApiV1PricingProductsPartialUpdateCostPerUnitErrorComponent,
+            ApiV1PricingProductsPartialUpdateCostPerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_criticality_error_component import (
-            ApiV1PricingProductsPartialUpdateCriticalityErrorComponent,
+            ApiV1PricingProductsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_debug_mode_error_component import (
-            ApiV1PricingProductsPartialUpdateDebugModeErrorComponent,
+            ApiV1PricingProductsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_display_name_error_component import (
-            ApiV1PricingProductsPartialUpdateDisplayNameErrorComponent,
+            ApiV1PricingProductsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_kind_error_component import (
-            ApiV1PricingProductsPartialUpdateKindErrorComponent,
+            ApiV1PricingProductsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_labels_error_component import (
-            ApiV1PricingProductsPartialUpdateLabelsErrorComponent,
+            ApiV1PricingProductsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_name_error_component import (
-            ApiV1PricingProductsPartialUpdateNameErrorComponent,
+            ApiV1PricingProductsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_non_field_errors_error_component import (
-            ApiV1PricingProductsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingProductsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_platform_service_error_component import (
-            ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_pricing_products_partial_update_pop_error_component import (
+            ApiV1PricingProductsPartialUpdatePopErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_price_per_unit_error_component import (
-            ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent,
+            ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_entity_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_id_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderIdErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_reference_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_provider_type_id_error_component import (
-            ApiV1PricingProductsPartialUpdateProviderTypeIdErrorComponent,
+            ApiV1PricingProductsPartialUpdateProviderTypeIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PricingProductsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingProductsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_sla_availability_error_component import (
-            ApiV1PricingProductsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingProductsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_sla_target_error_component import (
-            ApiV1PricingProductsPartialUpdateSlaTargetErrorComponent,
+            ApiV1PricingProductsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_slo_availability_error_component import (
-            ApiV1PricingProductsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingProductsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_slo_target_error_component import (
-            ApiV1PricingProductsPartialUpdateSloTargetErrorComponent,
+            ApiV1PricingProductsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_target_availability_error_component import (
-            ApiV1PricingProductsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingProductsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_partial_update_tolerations_error_component import (
-            ApiV1PricingProductsPartialUpdateTolerationsErrorComponent,
+            ApiV1PricingProductsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -434,6 +446,7 @@ class ApiV1PricingProductsPartialUpdateValidationError:
                 | ApiV1PricingProductsPartialUpdateNameErrorComponent
                 | ApiV1PricingProductsPartialUpdateNonFieldErrorsErrorComponent
                 | ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponent
+                | ApiV1PricingProductsPartialUpdatePopErrorComponent
                 | ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent
                 | ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent
                 | ApiV1PricingProductsPartialUpdateProviderErrorComponent
@@ -712,19 +725,29 @@ class ApiV1PricingProductsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_pricing_products_partial_update_error_type_26 = (
-                        ApiV1PricingProductsPartialUpdateProviderTypeIdErrorComponent.from_dict(data)
+                        ApiV1PricingProductsPartialUpdatePopErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_pricing_products_partial_update_error_type_26
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_pricing_products_partial_update_error_type_27 = (
+                        ApiV1PricingProductsPartialUpdateProviderTypeIdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_pricing_products_partial_update_error_type_27
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_pricing_products_partial_update_error_type_27 = (
+                componentsschemas_api_v1_pricing_products_partial_update_error_type_28 = (
                     ApiV1PricingProductsPartialUpdateConfigErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_pricing_products_partial_update_error_type_27
+                return componentsschemas_api_v1_pricing_products_partial_update_error_type_28
 
             errors_item = _parse_errors_item(errors_item_data)
 

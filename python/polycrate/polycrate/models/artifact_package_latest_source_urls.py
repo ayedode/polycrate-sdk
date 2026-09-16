@@ -11,8 +11,6 @@ T = TypeVar("T", bound="ArtifactPackageLatestSourceUrls")
 
 @_attrs_define
 class ArtifactPackageLatestSourceUrls:
-    """ """
-
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

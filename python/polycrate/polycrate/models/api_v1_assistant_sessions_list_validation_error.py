@@ -78,34 +78,34 @@ class ApiV1AssistantSessionsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_assistant_sessions_list_created_by_users_error_component import (
-            ApiV1AssistantSessionsListCreatedByUsersErrorComponent,
+            ApiV1AssistantSessionsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_kind_error_component import (
-            ApiV1AssistantSessionsListKindErrorComponent,
+            ApiV1AssistantSessionsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_organizations_error_component import (
-            ApiV1AssistantSessionsListOrganizationsErrorComponent,
+            ApiV1AssistantSessionsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_search_error_component import (
-            ApiV1AssistantSessionsListSearchErrorComponent,
+            ApiV1AssistantSessionsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_state_error_component import (
-            ApiV1AssistantSessionsListStateErrorComponent,
+            ApiV1AssistantSessionsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_state_not_error_component import (
-            ApiV1AssistantSessionsListStateNotErrorComponent,
+            ApiV1AssistantSessionsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_status_error_component import (
-            ApiV1AssistantSessionsListStatusErrorComponent,
+            ApiV1AssistantSessionsListStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_time_range_error_component import (
-            ApiV1AssistantSessionsListTimeRangeErrorComponent,
+            ApiV1AssistantSessionsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_turn_status_error_component import (
-            ApiV1AssistantSessionsListTurnStatusErrorComponent,
+            ApiV1AssistantSessionsListTurnStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_workspaces_error_component import (
-            ApiV1AssistantSessionsListWorkspacesErrorComponent,
+            ApiV1AssistantSessionsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -152,37 +152,37 @@ class ApiV1AssistantSessionsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_assistant_sessions_list_created_by_users_error_component import (
-            ApiV1AssistantSessionsListCreatedByUsersErrorComponent,
+            ApiV1AssistantSessionsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_kind_error_component import (
-            ApiV1AssistantSessionsListKindErrorComponent,
+            ApiV1AssistantSessionsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_name_exact_error_component import (
-            ApiV1AssistantSessionsListNameExactErrorComponent,
+            ApiV1AssistantSessionsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_organizations_error_component import (
-            ApiV1AssistantSessionsListOrganizationsErrorComponent,
+            ApiV1AssistantSessionsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_search_error_component import (
-            ApiV1AssistantSessionsListSearchErrorComponent,
+            ApiV1AssistantSessionsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_state_error_component import (
-            ApiV1AssistantSessionsListStateErrorComponent,
+            ApiV1AssistantSessionsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_state_not_error_component import (
-            ApiV1AssistantSessionsListStateNotErrorComponent,
+            ApiV1AssistantSessionsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_status_error_component import (
-            ApiV1AssistantSessionsListStatusErrorComponent,
+            ApiV1AssistantSessionsListStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_time_range_error_component import (
-            ApiV1AssistantSessionsListTimeRangeErrorComponent,
+            ApiV1AssistantSessionsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_turn_status_error_component import (
-            ApiV1AssistantSessionsListTurnStatusErrorComponent,
+            ApiV1AssistantSessionsListTurnStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_list_workspaces_error_component import (
-            ApiV1AssistantSessionsListWorkspacesErrorComponent,
+            ApiV1AssistantSessionsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

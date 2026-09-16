@@ -147,73 +147,73 @@ class ApiV1AssistantSessionsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_assistant_sessions_partial_update_annotations_error_component import (
-            ApiV1AssistantSessionsPartialUpdateAnnotationsErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_archived_at_error_component import (
-            ApiV1AssistantSessionsPartialUpdateArchivedAtErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_archived_error_component import (
-            ApiV1AssistantSessionsPartialUpdateArchivedErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_archived_reason_error_component import (
-            ApiV1AssistantSessionsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_criticality_error_component import (
-            ApiV1AssistantSessionsPartialUpdateCriticalityErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_debug_mode_error_component import (
-            ApiV1AssistantSessionsPartialUpdateDebugModeErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_display_name_error_component import (
-            ApiV1AssistantSessionsPartialUpdateDisplayNameErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_kind_error_component import (
-            ApiV1AssistantSessionsPartialUpdateKindErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_labels_error_component import (
-            ApiV1AssistantSessionsPartialUpdateLabelsErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_name_error_component import (
-            ApiV1AssistantSessionsPartialUpdateNameErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_non_field_errors_error_component import (
-            ApiV1AssistantSessionsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_platform_service_error_component import (
-            ApiV1AssistantSessionsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1AssistantSessionsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_provider_error_component import (
-            ApiV1AssistantSessionsPartialUpdateProviderErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_provider_id_error_component import (
-            ApiV1AssistantSessionsPartialUpdateProviderIdErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_provider_reference_error_component import (
-            ApiV1AssistantSessionsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_reconciliation_enabled_error_component import (
-            ApiV1AssistantSessionsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_sla_availability_error_component import (
-            ApiV1AssistantSessionsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_sla_target_error_component import (
-            ApiV1AssistantSessionsPartialUpdateSlaTargetErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_slo_availability_error_component import (
-            ApiV1AssistantSessionsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_slo_target_error_component import (
-            ApiV1AssistantSessionsPartialUpdateSloTargetErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_target_availability_error_component import (
-            ApiV1AssistantSessionsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_tolerations_error_component import (
-            ApiV1AssistantSessionsPartialUpdateTolerationsErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_workspace_id_error_component import (
-            ApiV1AssistantSessionsPartialUpdateWorkspaceIdErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -286,76 +286,76 @@ class ApiV1AssistantSessionsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_assistant_sessions_partial_update_annotations_error_component import (
-            ApiV1AssistantSessionsPartialUpdateAnnotationsErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_archived_at_error_component import (
-            ApiV1AssistantSessionsPartialUpdateArchivedAtErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_archived_error_component import (
-            ApiV1AssistantSessionsPartialUpdateArchivedErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_archived_reason_error_component import (
-            ApiV1AssistantSessionsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_criticality_error_component import (
-            ApiV1AssistantSessionsPartialUpdateCriticalityErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_debug_mode_error_component import (
-            ApiV1AssistantSessionsPartialUpdateDebugModeErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_display_name_error_component import (
-            ApiV1AssistantSessionsPartialUpdateDisplayNameErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_kind_error_component import (
-            ApiV1AssistantSessionsPartialUpdateKindErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_labels_error_component import (
-            ApiV1AssistantSessionsPartialUpdateLabelsErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_name_error_component import (
-            ApiV1AssistantSessionsPartialUpdateNameErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_non_field_errors_error_component import (
-            ApiV1AssistantSessionsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_platform_service_error_component import (
-            ApiV1AssistantSessionsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1AssistantSessionsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_provider_error_component import (
-            ApiV1AssistantSessionsPartialUpdateProviderErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_provider_id_error_component import (
-            ApiV1AssistantSessionsPartialUpdateProviderIdErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_provider_reference_error_component import (
-            ApiV1AssistantSessionsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_reconciliation_enabled_error_component import (
-            ApiV1AssistantSessionsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_sla_availability_error_component import (
-            ApiV1AssistantSessionsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_sla_target_error_component import (
-            ApiV1AssistantSessionsPartialUpdateSlaTargetErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_slo_availability_error_component import (
-            ApiV1AssistantSessionsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_slo_target_error_component import (
-            ApiV1AssistantSessionsPartialUpdateSloTargetErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_status_error_component import (
-            ApiV1AssistantSessionsPartialUpdateStatusErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_target_availability_error_component import (
-            ApiV1AssistantSessionsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_tolerations_error_component import (
-            ApiV1AssistantSessionsPartialUpdateTolerationsErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_partial_update_workspace_id_error_component import (
-            ApiV1AssistantSessionsPartialUpdateWorkspaceIdErrorComponent,
+            ApiV1AssistantSessionsPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

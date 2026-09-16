@@ -130,17 +130,19 @@ class OrganizationCachedMetrics:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.organization_cached_metrics_active import OrganizationCachedMetricsActive
-        from ..models.organization_cached_metrics_alerts import OrganizationCachedMetricsAlerts
-        from ..models.organization_cached_metrics_costs import OrganizationCachedMetricsCosts
-        from ..models.organization_cached_metrics_endpoints import OrganizationCachedMetricsEndpoints
-        from ..models.organization_cached_metrics_loadbalancers import OrganizationCachedMetricsLoadbalancers
-        from ..models.organization_cached_metrics_members import OrganizationCachedMetricsMembers
-        from ..models.organization_cached_metrics_message import OrganizationCachedMetricsMessage
-        from ..models.organization_cached_metrics_open import OrganizationCachedMetricsOpen
-        from ..models.organization_cached_metrics_s3 import OrganizationCachedMetricsS3
-        from ..models.organization_cached_metrics_total import OrganizationCachedMetricsTotal
-        from ..models.organization_cached_metrics_volumes import OrganizationCachedMetricsVolumes
+        from ..models.organization_cached_metrics_active import OrganizationCachedMetricsActive  # noqa: PLC0415
+        from ..models.organization_cached_metrics_alerts import OrganizationCachedMetricsAlerts  # noqa: PLC0415
+        from ..models.organization_cached_metrics_costs import OrganizationCachedMetricsCosts  # noqa: PLC0415
+        from ..models.organization_cached_metrics_endpoints import OrganizationCachedMetricsEndpoints  # noqa: PLC0415
+        from ..models.organization_cached_metrics_loadbalancers import (
+            OrganizationCachedMetricsLoadbalancers,  # noqa: PLC0415
+        )
+        from ..models.organization_cached_metrics_members import OrganizationCachedMetricsMembers  # noqa: PLC0415
+        from ..models.organization_cached_metrics_message import OrganizationCachedMetricsMessage  # noqa: PLC0415
+        from ..models.organization_cached_metrics_open import OrganizationCachedMetricsOpen  # noqa: PLC0415
+        from ..models.organization_cached_metrics_s3 import OrganizationCachedMetricsS3  # noqa: PLC0415
+        from ..models.organization_cached_metrics_total import OrganizationCachedMetricsTotal  # noqa: PLC0415
+        from ..models.organization_cached_metrics_volumes import OrganizationCachedMetricsVolumes  # noqa: PLC0415
 
         d = dict(src_dict)
         organization_id = UUID(d.pop("organization_id"))

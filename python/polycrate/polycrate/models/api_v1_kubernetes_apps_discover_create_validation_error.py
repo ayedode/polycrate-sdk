@@ -350,196 +350,196 @@ class ApiV1KubernetesAppsDiscoverCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_apps_discover_create_active_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateActiveErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_actual_availability_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_annotations_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateAnnotationsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_archived_at_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArchivedAtErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_archived_by_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArchivedByErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_archived_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArchivedErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_archived_reason_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_artifact_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArtifactErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArtifactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_artifact_package_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArtifactPackageErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_block_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateBlockErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_byoa_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateByoaErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateByoaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_catalogue_app_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateCatalogueAppErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_created_by_component_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateCreatedByComponentErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_created_by_user_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateCreatedByUserErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_criticality_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateCriticalityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_debug_mode_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateDebugModeErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_description_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateDescriptionErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_discovery_enabled_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_display_name_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateDisplayNameErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_excluded_from_downtime_until_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateExcludedFromDowntimeUntilErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateExcludedFromDowntimeUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_ha_enabled_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateHaEnabledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateHaEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_helm_chart_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateHelmChartErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_installation_failed_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateInstallationFailedErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateInstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_installation_running_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateInstallationRunningErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateInstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_installed_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateInstalledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_installed_version_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateInstalledVersionErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateInstalledVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_kind_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateKindErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_labels_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateLabelsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_last_installation_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateLastInstallationErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateLastInstallationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_last_metrics_check_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateLastMetricsCheckErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateLastMetricsCheckErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_managed_by_content_type_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateManagedByContentTypeErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_managed_by_object_id_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateManagedByObjectIdErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_modified_by_user_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateModifiedByUserErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_name_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateNameErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_namespace_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateNamespaceErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_non_field_errors_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_platform_dns_record_created_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_platform_service_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_available_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsAvailableErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsAvailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_details_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsDetailsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsDetailsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_ready_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsReadyErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsReadyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_restart_count_last_hour_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsRestartCountLastHourErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsRestartCountLastHourErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_restart_count_total_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsRestartCountTotalErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsRestartCountTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_status_hash_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsStatusHashErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsStatusHashErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_status_updated_at_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsStatusUpdatedAtErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsStatusUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_total_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsTotalErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_unavailable_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsUnavailableErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsUnavailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_provider_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateProviderErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_provider_id_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateProviderIdErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_provider_reference_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_scope_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateScopeErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_sla_availability_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_sla_target_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSlaTargetErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_sla_window_days_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSlaWindowDaysErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_slo_availability_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_slo_target_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSloTargetErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_slo_window_days_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSloWindowDaysErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_source_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSourceErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_target_availability_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_uninstallation_failed_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateUninstallationFailedErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateUninstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_uninstallation_running_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateUninstallationRunningErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateUninstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_uninstalled_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateUninstalledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateUninstalledErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -696,199 +696,199 @@ class ApiV1KubernetesAppsDiscoverCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_apps_discover_create_active_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateActiveErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_actual_availability_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_annotations_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateAnnotationsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_archived_at_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArchivedAtErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_archived_by_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArchivedByErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_archived_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArchivedErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_archived_reason_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_artifact_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArtifactErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArtifactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_artifact_package_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateArtifactPackageErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_block_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateBlockErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_byoa_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateByoaErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateByoaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_catalogue_app_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateCatalogueAppErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_created_by_component_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateCreatedByComponentErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_created_by_user_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateCreatedByUserErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_criticality_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateCriticalityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_debug_mode_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateDebugModeErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_description_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateDescriptionErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_discovery_enabled_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_display_name_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateDisplayNameErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_excluded_from_downtime_until_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateExcludedFromDowntimeUntilErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateExcludedFromDowntimeUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_ha_enabled_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateHaEnabledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateHaEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_helm_chart_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateHelmChartErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_installation_failed_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateInstallationFailedErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateInstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_installation_running_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateInstallationRunningErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateInstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_installed_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateInstalledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_installed_version_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateInstalledVersionErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateInstalledVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_k8s_cluster_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateK8SClusterErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_kind_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateKindErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_labels_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateLabelsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_last_installation_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateLastInstallationErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateLastInstallationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_last_metrics_check_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateLastMetricsCheckErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateLastMetricsCheckErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_managed_by_content_type_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateManagedByContentTypeErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_managed_by_object_id_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateManagedByObjectIdErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_modified_by_user_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateModifiedByUserErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_name_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateNameErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_namespace_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateNamespaceErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_non_field_errors_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_platform_dns_record_created_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_platform_service_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_available_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsAvailableErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsAvailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_details_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsDetailsErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsDetailsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_ready_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsReadyErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsReadyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_restart_count_last_hour_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsRestartCountLastHourErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsRestartCountLastHourErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_restart_count_total_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsRestartCountTotalErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsRestartCountTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_status_hash_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsStatusHashErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsStatusHashErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_status_updated_at_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsStatusUpdatedAtErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsStatusUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_total_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsTotalErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_pods_unavailable_error_component import (
-            ApiV1KubernetesAppsDiscoverCreatePodsUnavailableErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreatePodsUnavailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_provider_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateProviderErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_provider_id_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateProviderIdErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_provider_reference_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_scope_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateScopeErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_sla_availability_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_sla_target_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSlaTargetErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_sla_window_days_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSlaWindowDaysErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_slo_availability_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_slo_target_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSloTargetErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_slo_window_days_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSloWindowDaysErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_source_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateSourceErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_target_availability_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_uninstallation_failed_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateUninstallationFailedErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateUninstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_uninstallation_running_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateUninstallationRunningErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateUninstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_discover_create_uninstalled_error_component import (
-            ApiV1KubernetesAppsDiscoverCreateUninstalledErrorComponent,
+            ApiV1KubernetesAppsDiscoverCreateUninstalledErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

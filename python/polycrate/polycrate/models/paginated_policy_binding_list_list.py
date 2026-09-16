@@ -68,7 +68,7 @@ class PaginatedPolicyBindingListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.policy_binding_list import PolicyBindingList
+        from ..models.policy_binding_list import PolicyBindingList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

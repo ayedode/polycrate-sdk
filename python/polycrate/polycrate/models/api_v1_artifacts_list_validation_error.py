@@ -47,16 +47,20 @@ class ApiV1ArtifactsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_artifacts_list_app_version_error_component import (
-            ApiV1ArtifactsListAppVersionErrorComponent,
+            ApiV1ArtifactsListAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifacts_list_artifact_package_error_component import (
-            ApiV1ArtifactsListArtifactPackageErrorComponent,
+            ApiV1ArtifactsListArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifacts_list_content_url_error_component import (
-            ApiV1ArtifactsListContentUrlErrorComponent,
+            ApiV1ArtifactsListContentUrlErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_artifacts_list_kind_error_component import ApiV1ArtifactsListKindErrorComponent
-        from ..models.api_v1_artifacts_list_version_error_component import ApiV1ArtifactsListVersionErrorComponent
+        from ..models.api_v1_artifacts_list_kind_error_component import (
+            ApiV1ArtifactsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_artifacts_list_version_error_component import (
+            ApiV1ArtifactsListVersionErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -92,19 +96,23 @@ class ApiV1ArtifactsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_artifacts_list_app_version_error_component import (
-            ApiV1ArtifactsListAppVersionErrorComponent,
+            ApiV1ArtifactsListAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifacts_list_artifact_package_error_component import (
-            ApiV1ArtifactsListArtifactPackageErrorComponent,
+            ApiV1ArtifactsListArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifacts_list_artifact_package_name_error_component import (
-            ApiV1ArtifactsListArtifactPackageNameErrorComponent,
+            ApiV1ArtifactsListArtifactPackageNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifacts_list_content_url_error_component import (
-            ApiV1ArtifactsListContentUrlErrorComponent,
+            ApiV1ArtifactsListContentUrlErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_artifacts_list_kind_error_component import ApiV1ArtifactsListKindErrorComponent
-        from ..models.api_v1_artifacts_list_version_error_component import ApiV1ArtifactsListVersionErrorComponent
+        from ..models.api_v1_artifacts_list_kind_error_component import (
+            ApiV1ArtifactsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_artifacts_list_version_error_component import (
+            ApiV1ArtifactsListVersionErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

@@ -70,7 +70,7 @@ class OrganizationList:
             has_icon (bool):
             icon_url (None | str):
             is_class_icon (bool):
-            s3_storage_bytes (int): Total S3 storage in bytes across all buckets.
+            s3_storage_bytes (int): Total S3 storage in bytes across owned and Loopback-delegated buckets.
             s3_storage_kb (int): DEPRECATED: misnamed value is bytes; prefer s3_storage_bytes.
             lb_traffic_30d (int):
             registry_quota_used_bytes (int | None):
@@ -134,8 +134,8 @@ class OrganizationList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.organization_list_organization_type_0 import OrganizationListOrganizationType0
-        from ..models.organization_list_workspace_type_0 import OrganizationListWorkspaceType0
+        from ..models.organization_list_organization_type_0 import OrganizationListOrganizationType0  # noqa: PLC0415
+        from ..models.organization_list_workspace_type_0 import OrganizationListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -292,11 +292,11 @@ class OrganizationList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.organization_list_active_condition_instances_item import (
-            OrganizationListActiveConditionInstancesItem,
+            OrganizationListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.organization_list_created import OrganizationListCreated
-        from ..models.organization_list_organization_type_0 import OrganizationListOrganizationType0
-        from ..models.organization_list_workspace_type_0 import OrganizationListWorkspaceType0
+        from ..models.organization_list_created import OrganizationListCreated  # noqa: PLC0415
+        from ..models.organization_list_organization_type_0 import OrganizationListOrganizationType0  # noqa: PLC0415
+        from ..models.organization_list_workspace_type_0 import OrganizationListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

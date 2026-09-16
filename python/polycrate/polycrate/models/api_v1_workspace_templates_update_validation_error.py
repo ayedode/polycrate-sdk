@@ -66,25 +66,25 @@ class ApiV1WorkspaceTemplatesUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_workspace_templates_update_description_error_component import (
-            ApiV1WorkspaceTemplatesUpdateDescriptionErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_display_name_error_component import (
-            ApiV1WorkspaceTemplatesUpdateDisplayNameErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_name_error_component import (
-            ApiV1WorkspaceTemplatesUpdateNameErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_non_field_errors_error_component import (
-            ApiV1WorkspaceTemplatesUpdateNonFieldErrorsErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_organization_id_error_component import (
-            ApiV1WorkspaceTemplatesUpdateOrganizationIdErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_secrets_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesUpdateSecretsPolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateSecretsPolyTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_workspace_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesUpdateWorkspacePolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateWorkspacePolyTemplateErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -125,28 +125,28 @@ class ApiV1WorkspaceTemplatesUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_workspace_templates_update_description_error_component import (
-            ApiV1WorkspaceTemplatesUpdateDescriptionErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_display_name_error_component import (
-            ApiV1WorkspaceTemplatesUpdateDisplayNameErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_is_default_error_component import (
-            ApiV1WorkspaceTemplatesUpdateIsDefaultErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateIsDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_name_error_component import (
-            ApiV1WorkspaceTemplatesUpdateNameErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_non_field_errors_error_component import (
-            ApiV1WorkspaceTemplatesUpdateNonFieldErrorsErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_organization_id_error_component import (
-            ApiV1WorkspaceTemplatesUpdateOrganizationIdErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_secrets_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesUpdateSecretsPolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateSecretsPolyTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_update_workspace_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesUpdateWorkspacePolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesUpdateWorkspacePolyTemplateErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

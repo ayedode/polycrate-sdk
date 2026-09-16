@@ -52,8 +52,8 @@ class S3CredentialListResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_credential_list_data import S3CredentialListData
-        from ..models.s3_credential_list_meta import S3CredentialListMeta
+        from ..models.s3_credential_list_data import S3CredentialListData  # noqa: PLC0415
+        from ..models.s3_credential_list_meta import S3CredentialListMeta  # noqa: PLC0415
 
         d = dict(src_dict)
         data = S3CredentialListData.from_dict(d.pop("data"))

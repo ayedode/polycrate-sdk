@@ -1,0 +1,25 @@
+from typing import Literal
+
+ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponentCode = Literal[
+    "invalid", "max_length", "null", "null_characters_not_allowed", "surrogate_characters_not_allowed"
+]
+
+API_V1_KUBERNETES_CONTROLPLANES_ARCHIVE_CREATE_GATEWAY_CLASS_NAME_ERROR_COMPONENT_CODE_VALUES: set[
+    ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponentCode
+] = {
+    "invalid",
+    "max_length",
+    "null",
+    "null_characters_not_allowed",
+    "surrogate_characters_not_allowed",
+}
+
+
+def check_api_v1_kubernetes_controlplanes_archive_create_gateway_class_name_error_component_code(
+    value: str,
+) -> ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponentCode:
+    if value in API_V1_KUBERNETES_CONTROLPLANES_ARCHIVE_CREATE_GATEWAY_CLASS_NAME_ERROR_COMPONENT_CODE_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {API_V1_KUBERNETES_CONTROLPLANES_ARCHIVE_CREATE_GATEWAY_CLASS_NAME_ERROR_COMPONENT_CODE_VALUES!r}"
+    )

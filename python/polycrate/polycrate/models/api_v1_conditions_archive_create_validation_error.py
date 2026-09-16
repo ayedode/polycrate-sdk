@@ -144,76 +144,76 @@ class ApiV1ConditionsArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conditions_archive_create_annotations_error_component import (
-            ApiV1ConditionsArchiveCreateAnnotationsErrorComponent,
+            ApiV1ConditionsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_archived_at_error_component import (
-            ApiV1ConditionsArchiveCreateArchivedAtErrorComponent,
+            ApiV1ConditionsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_archived_error_component import (
-            ApiV1ConditionsArchiveCreateArchivedErrorComponent,
+            ApiV1ConditionsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_archived_reason_error_component import (
-            ApiV1ConditionsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1ConditionsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_criticality_error_component import (
-            ApiV1ConditionsArchiveCreateCriticalityErrorComponent,
+            ApiV1ConditionsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_debug_mode_error_component import (
-            ApiV1ConditionsArchiveCreateDebugModeErrorComponent,
+            ApiV1ConditionsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_display_name_error_component import (
-            ApiV1ConditionsArchiveCreateDisplayNameErrorComponent,
+            ApiV1ConditionsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_is_system_error_component import (
-            ApiV1ConditionsArchiveCreateIsSystemErrorComponent,
+            ApiV1ConditionsArchiveCreateIsSystemErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_kind_error_component import (
-            ApiV1ConditionsArchiveCreateKindErrorComponent,
+            ApiV1ConditionsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_labels_error_component import (
-            ApiV1ConditionsArchiveCreateLabelsErrorComponent,
+            ApiV1ConditionsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_name_error_component import (
-            ApiV1ConditionsArchiveCreateNameErrorComponent,
+            ApiV1ConditionsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_non_field_errors_error_component import (
-            ApiV1ConditionsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ConditionsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_platform_service_error_component import (
-            ApiV1ConditionsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1ConditionsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_provider_error_component import (
-            ApiV1ConditionsArchiveCreateProviderErrorComponent,
+            ApiV1ConditionsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_provider_id_error_component import (
-            ApiV1ConditionsArchiveCreateProviderIdErrorComponent,
+            ApiV1ConditionsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_provider_reference_error_component import (
-            ApiV1ConditionsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1ConditionsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_reconciliation_enabled_error_component import (
-            ApiV1ConditionsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1ConditionsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_severity_error_component import (
-            ApiV1ConditionsArchiveCreateSeverityErrorComponent,
+            ApiV1ConditionsArchiveCreateSeverityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_sla_availability_error_component import (
-            ApiV1ConditionsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1ConditionsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_sla_target_error_component import (
-            ApiV1ConditionsArchiveCreateSlaTargetErrorComponent,
+            ApiV1ConditionsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_slo_availability_error_component import (
-            ApiV1ConditionsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1ConditionsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_slo_target_error_component import (
-            ApiV1ConditionsArchiveCreateSloTargetErrorComponent,
+            ApiV1ConditionsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_target_availability_error_component import (
-            ApiV1ConditionsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1ConditionsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_tolerations_error_component import (
-            ApiV1ConditionsArchiveCreateTolerationsErrorComponent,
+            ApiV1ConditionsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -288,79 +288,79 @@ class ApiV1ConditionsArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conditions_archive_create_annotations_error_component import (
-            ApiV1ConditionsArchiveCreateAnnotationsErrorComponent,
+            ApiV1ConditionsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_archived_at_error_component import (
-            ApiV1ConditionsArchiveCreateArchivedAtErrorComponent,
+            ApiV1ConditionsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_archived_error_component import (
-            ApiV1ConditionsArchiveCreateArchivedErrorComponent,
+            ApiV1ConditionsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_archived_reason_error_component import (
-            ApiV1ConditionsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1ConditionsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_criticality_error_component import (
-            ApiV1ConditionsArchiveCreateCriticalityErrorComponent,
+            ApiV1ConditionsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_debug_mode_error_component import (
-            ApiV1ConditionsArchiveCreateDebugModeErrorComponent,
+            ApiV1ConditionsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_description_error_component import (
-            ApiV1ConditionsArchiveCreateDescriptionErrorComponent,
+            ApiV1ConditionsArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_display_name_error_component import (
-            ApiV1ConditionsArchiveCreateDisplayNameErrorComponent,
+            ApiV1ConditionsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_is_system_error_component import (
-            ApiV1ConditionsArchiveCreateIsSystemErrorComponent,
+            ApiV1ConditionsArchiveCreateIsSystemErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_kind_error_component import (
-            ApiV1ConditionsArchiveCreateKindErrorComponent,
+            ApiV1ConditionsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_labels_error_component import (
-            ApiV1ConditionsArchiveCreateLabelsErrorComponent,
+            ApiV1ConditionsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_name_error_component import (
-            ApiV1ConditionsArchiveCreateNameErrorComponent,
+            ApiV1ConditionsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_non_field_errors_error_component import (
-            ApiV1ConditionsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1ConditionsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_platform_service_error_component import (
-            ApiV1ConditionsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1ConditionsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_provider_error_component import (
-            ApiV1ConditionsArchiveCreateProviderErrorComponent,
+            ApiV1ConditionsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_provider_id_error_component import (
-            ApiV1ConditionsArchiveCreateProviderIdErrorComponent,
+            ApiV1ConditionsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_provider_reference_error_component import (
-            ApiV1ConditionsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1ConditionsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_reconciliation_enabled_error_component import (
-            ApiV1ConditionsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1ConditionsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_severity_error_component import (
-            ApiV1ConditionsArchiveCreateSeverityErrorComponent,
+            ApiV1ConditionsArchiveCreateSeverityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_sla_availability_error_component import (
-            ApiV1ConditionsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1ConditionsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_sla_target_error_component import (
-            ApiV1ConditionsArchiveCreateSlaTargetErrorComponent,
+            ApiV1ConditionsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_slo_availability_error_component import (
-            ApiV1ConditionsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1ConditionsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_slo_target_error_component import (
-            ApiV1ConditionsArchiveCreateSloTargetErrorComponent,
+            ApiV1ConditionsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_target_availability_error_component import (
-            ApiV1ConditionsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1ConditionsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conditions_archive_create_tolerations_error_component import (
-            ApiV1ConditionsArchiveCreateTolerationsErrorComponent,
+            ApiV1ConditionsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

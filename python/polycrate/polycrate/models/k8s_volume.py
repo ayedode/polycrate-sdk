@@ -248,10 +248,10 @@ class K8SVolume:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_volume_deleted_by_user_type_0 import K8SVolumeDeletedByUserType0
-        from ..models.k8s_volume_last_action_run_type_0 import K8SVolumeLastActionRunType0
-        from ..models.k8s_volume_organization_type_0 import K8SVolumeOrganizationType0
-        from ..models.k8s_volume_workspace_type_0 import K8SVolumeWorkspaceType0
+        from ..models.k8s_volume_deleted_by_user_type_0 import K8SVolumeDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_volume_last_action_run_type_0 import K8SVolumeLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_volume_organization_type_0 import K8SVolumeOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_volume_workspace_type_0 import K8SVolumeWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -685,12 +685,12 @@ class K8SVolume:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_volume_created import K8SVolumeCreated
-        from ..models.k8s_volume_deleted_by_user_type_0 import K8SVolumeDeletedByUserType0
-        from ..models.k8s_volume_last_action_run_type_0 import K8SVolumeLastActionRunType0
-        from ..models.k8s_volume_organization_type_0 import K8SVolumeOrganizationType0
-        from ..models.k8s_volume_workspace_type_0 import K8SVolumeWorkspaceType0
-        from ..models.product_simple import ProductSimple
+        from ..models.k8s_volume_created import K8SVolumeCreated  # noqa: PLC0415
+        from ..models.k8s_volume_deleted_by_user_type_0 import K8SVolumeDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_volume_last_action_run_type_0 import K8SVolumeLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_volume_organization_type_0 import K8SVolumeOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_volume_workspace_type_0 import K8SVolumeWorkspaceType0  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

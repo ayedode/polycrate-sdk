@@ -301,169 +301,169 @@ class ApiV1MaintenancesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_maintenances_partial_update_actual_availability_error_component import (
-            ApiV1MaintenancesPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1MaintenancesPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_additional_recipients_error_component import (
-            ApiV1MaintenancesPartialUpdateAdditionalRecipientsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAdditionalRecipientsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_affected_host_ids_error_component import (
-            ApiV1MaintenancesPartialUpdateAffectedHostIdsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAffectedHostIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_affected_pop_ids_error_component import (
-            ApiV1MaintenancesPartialUpdateAffectedPopIdsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAffectedPopIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_affected_volume_ids_error_component import (
-            ApiV1MaintenancesPartialUpdateAffectedVolumeIdsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAffectedVolumeIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_annotations_error_component import (
-            ApiV1MaintenancesPartialUpdateAnnotationsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_announcement_results_error_component import (
-            ApiV1MaintenancesPartialUpdateAnnouncementResultsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAnnouncementResultsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_announcement_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateAnnouncementSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateAnnouncementSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_archived_at_error_component import (
-            ApiV1MaintenancesPartialUpdateArchivedAtErrorComponent,
+            ApiV1MaintenancesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_archived_by_error_component import (
-            ApiV1MaintenancesPartialUpdateArchivedByErrorComponent,
+            ApiV1MaintenancesPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_archived_error_component import (
-            ApiV1MaintenancesPartialUpdateArchivedErrorComponent,
+            ApiV1MaintenancesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_archived_reason_error_component import (
-            ApiV1MaintenancesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1MaintenancesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_created_by_component_error_component import (
-            ApiV1MaintenancesPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1MaintenancesPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_created_by_user_error_component import (
-            ApiV1MaintenancesPartialUpdateCreatedByUserErrorComponent,
+            ApiV1MaintenancesPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_criticality_error_component import (
-            ApiV1MaintenancesPartialUpdateCriticalityErrorComponent,
+            ApiV1MaintenancesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_debug_mode_error_component import (
-            ApiV1MaintenancesPartialUpdateDebugModeErrorComponent,
+            ApiV1MaintenancesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_discovery_enabled_error_component import (
-            ApiV1MaintenancesPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1MaintenancesPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_display_name_error_component import (
-            ApiV1MaintenancesPartialUpdateDisplayNameErrorComponent,
+            ApiV1MaintenancesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_draft_error_component import (
-            ApiV1MaintenancesPartialUpdateDraftErrorComponent,
+            ApiV1MaintenancesPartialUpdateDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_end_announcement_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateEndAnnouncementSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateEndAnnouncementSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_end_error_component import (
-            ApiV1MaintenancesPartialUpdateEndErrorComponent,
+            ApiV1MaintenancesPartialUpdateEndErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_kind_error_component import (
-            ApiV1MaintenancesPartialUpdateKindErrorComponent,
+            ApiV1MaintenancesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_labels_error_component import (
-            ApiV1MaintenancesPartialUpdateLabelsErrorComponent,
+            ApiV1MaintenancesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1MaintenancesPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1MaintenancesPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_managed_by_content_type_error_component import (
-            ApiV1MaintenancesPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1MaintenancesPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_managed_by_object_id_error_component import (
-            ApiV1MaintenancesPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_modified_by_user_error_component import (
-            ApiV1MaintenancesPartialUpdateModifiedByUserErrorComponent,
+            ApiV1MaintenancesPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_name_error_component import (
-            ApiV1MaintenancesPartialUpdateNameErrorComponent,
+            ApiV1MaintenancesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_non_field_errors_error_component import (
-            ApiV1MaintenancesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1MaintenancesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_notification_ended_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateNotificationEndedSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateNotificationEndedSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_notification_scheduled_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateNotificationScheduledSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateNotificationScheduledSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_notification_started_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateNotificationStartedSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateNotificationStartedSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_organization_id_error_component import (
-            ApiV1MaintenancesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_platform_dns_record_created_error_component import (
-            ApiV1MaintenancesPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1MaintenancesPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_platform_service_error_component import (
-            ApiV1MaintenancesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1MaintenancesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_project_id_error_component import (
-            ApiV1MaintenancesPartialUpdateProjectIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_provider_entity_error_component import (
-            ApiV1MaintenancesPartialUpdateProviderEntityErrorComponent,
+            ApiV1MaintenancesPartialUpdateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_provider_error_component import (
-            ApiV1MaintenancesPartialUpdateProviderErrorComponent,
+            ApiV1MaintenancesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_provider_id_error_component import (
-            ApiV1MaintenancesPartialUpdateProviderIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_provider_reference_error_component import (
-            ApiV1MaintenancesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1MaintenancesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_reconciliation_enabled_error_component import (
-            ApiV1MaintenancesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1MaintenancesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_reference_url_error_component import (
-            ApiV1MaintenancesPartialUpdateReferenceUrlErrorComponent,
+            ApiV1MaintenancesPartialUpdateReferenceUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_scope_error_component import (
-            ApiV1MaintenancesPartialUpdateScopeErrorComponent,
+            ApiV1MaintenancesPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_sla_availability_error_component import (
-            ApiV1MaintenancesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1MaintenancesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_sla_target_error_component import (
-            ApiV1MaintenancesPartialUpdateSlaTargetErrorComponent,
+            ApiV1MaintenancesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_sla_window_days_error_component import (
-            ApiV1MaintenancesPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1MaintenancesPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_slo_availability_error_component import (
-            ApiV1MaintenancesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1MaintenancesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_slo_target_error_component import (
-            ApiV1MaintenancesPartialUpdateSloTargetErrorComponent,
+            ApiV1MaintenancesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_slo_window_days_error_component import (
-            ApiV1MaintenancesPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1MaintenancesPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_source_item_id_error_component import (
-            ApiV1MaintenancesPartialUpdateSourceItemIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateSourceItemIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_start_announcement_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateStartAnnouncementSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateStartAnnouncementSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_start_error_component import (
-            ApiV1MaintenancesPartialUpdateStartErrorComponent,
+            ApiV1MaintenancesPartialUpdateStartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_target_availability_error_component import (
-            ApiV1MaintenancesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1MaintenancesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_timeline_error_component import (
-            ApiV1MaintenancesPartialUpdateTimelineErrorComponent,
+            ApiV1MaintenancesPartialUpdateTimelineErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_workspace_id_error_component import (
-            ApiV1MaintenancesPartialUpdateWorkspaceIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -602,172 +602,172 @@ class ApiV1MaintenancesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_maintenances_partial_update_actual_availability_error_component import (
-            ApiV1MaintenancesPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1MaintenancesPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_additional_recipients_error_component import (
-            ApiV1MaintenancesPartialUpdateAdditionalRecipientsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAdditionalRecipientsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_affected_host_ids_error_component import (
-            ApiV1MaintenancesPartialUpdateAffectedHostIdsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAffectedHostIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_affected_pop_ids_error_component import (
-            ApiV1MaintenancesPartialUpdateAffectedPopIdsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAffectedPopIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_affected_volume_ids_error_component import (
-            ApiV1MaintenancesPartialUpdateAffectedVolumeIdsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAffectedVolumeIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_annotations_error_component import (
-            ApiV1MaintenancesPartialUpdateAnnotationsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_announcement_results_error_component import (
-            ApiV1MaintenancesPartialUpdateAnnouncementResultsErrorComponent,
+            ApiV1MaintenancesPartialUpdateAnnouncementResultsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_announcement_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateAnnouncementSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateAnnouncementSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_archived_at_error_component import (
-            ApiV1MaintenancesPartialUpdateArchivedAtErrorComponent,
+            ApiV1MaintenancesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_archived_by_error_component import (
-            ApiV1MaintenancesPartialUpdateArchivedByErrorComponent,
+            ApiV1MaintenancesPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_archived_error_component import (
-            ApiV1MaintenancesPartialUpdateArchivedErrorComponent,
+            ApiV1MaintenancesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_archived_reason_error_component import (
-            ApiV1MaintenancesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1MaintenancesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_created_by_component_error_component import (
-            ApiV1MaintenancesPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1MaintenancesPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_created_by_user_error_component import (
-            ApiV1MaintenancesPartialUpdateCreatedByUserErrorComponent,
+            ApiV1MaintenancesPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_criticality_error_component import (
-            ApiV1MaintenancesPartialUpdateCriticalityErrorComponent,
+            ApiV1MaintenancesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_debug_mode_error_component import (
-            ApiV1MaintenancesPartialUpdateDebugModeErrorComponent,
+            ApiV1MaintenancesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_discovery_enabled_error_component import (
-            ApiV1MaintenancesPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1MaintenancesPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_display_name_error_component import (
-            ApiV1MaintenancesPartialUpdateDisplayNameErrorComponent,
+            ApiV1MaintenancesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_draft_error_component import (
-            ApiV1MaintenancesPartialUpdateDraftErrorComponent,
+            ApiV1MaintenancesPartialUpdateDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_end_announcement_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateEndAnnouncementSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateEndAnnouncementSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_end_error_component import (
-            ApiV1MaintenancesPartialUpdateEndErrorComponent,
+            ApiV1MaintenancesPartialUpdateEndErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_kind_error_component import (
-            ApiV1MaintenancesPartialUpdateKindErrorComponent,
+            ApiV1MaintenancesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_labels_error_component import (
-            ApiV1MaintenancesPartialUpdateLabelsErrorComponent,
+            ApiV1MaintenancesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1MaintenancesPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1MaintenancesPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_managed_by_content_type_error_component import (
-            ApiV1MaintenancesPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1MaintenancesPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_managed_by_object_id_error_component import (
-            ApiV1MaintenancesPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_modified_by_user_error_component import (
-            ApiV1MaintenancesPartialUpdateModifiedByUserErrorComponent,
+            ApiV1MaintenancesPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_name_error_component import (
-            ApiV1MaintenancesPartialUpdateNameErrorComponent,
+            ApiV1MaintenancesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_non_field_errors_error_component import (
-            ApiV1MaintenancesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1MaintenancesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_notification_ended_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateNotificationEndedSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateNotificationEndedSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_notification_scheduled_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateNotificationScheduledSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateNotificationScheduledSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_notification_started_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateNotificationStartedSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateNotificationStartedSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_organization_id_error_component import (
-            ApiV1MaintenancesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_platform_dns_record_created_error_component import (
-            ApiV1MaintenancesPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1MaintenancesPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_platform_service_error_component import (
-            ApiV1MaintenancesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1MaintenancesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_project_id_error_component import (
-            ApiV1MaintenancesPartialUpdateProjectIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_provider_entity_error_component import (
-            ApiV1MaintenancesPartialUpdateProviderEntityErrorComponent,
+            ApiV1MaintenancesPartialUpdateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_provider_error_component import (
-            ApiV1MaintenancesPartialUpdateProviderErrorComponent,
+            ApiV1MaintenancesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_provider_id_error_component import (
-            ApiV1MaintenancesPartialUpdateProviderIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_provider_reference_error_component import (
-            ApiV1MaintenancesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1MaintenancesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_reconciliation_enabled_error_component import (
-            ApiV1MaintenancesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1MaintenancesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_reference_url_error_component import (
-            ApiV1MaintenancesPartialUpdateReferenceUrlErrorComponent,
+            ApiV1MaintenancesPartialUpdateReferenceUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_scope_error_component import (
-            ApiV1MaintenancesPartialUpdateScopeErrorComponent,
+            ApiV1MaintenancesPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_sla_availability_error_component import (
-            ApiV1MaintenancesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1MaintenancesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_sla_target_error_component import (
-            ApiV1MaintenancesPartialUpdateSlaTargetErrorComponent,
+            ApiV1MaintenancesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_sla_window_days_error_component import (
-            ApiV1MaintenancesPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1MaintenancesPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_slo_availability_error_component import (
-            ApiV1MaintenancesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1MaintenancesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_slo_target_error_component import (
-            ApiV1MaintenancesPartialUpdateSloTargetErrorComponent,
+            ApiV1MaintenancesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_slo_window_days_error_component import (
-            ApiV1MaintenancesPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1MaintenancesPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_source_datasource_error_component import (
-            ApiV1MaintenancesPartialUpdateSourceDatasourceErrorComponent,
+            ApiV1MaintenancesPartialUpdateSourceDatasourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_source_item_id_error_component import (
-            ApiV1MaintenancesPartialUpdateSourceItemIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateSourceItemIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_start_announcement_sent_error_component import (
-            ApiV1MaintenancesPartialUpdateStartAnnouncementSentErrorComponent,
+            ApiV1MaintenancesPartialUpdateStartAnnouncementSentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_start_error_component import (
-            ApiV1MaintenancesPartialUpdateStartErrorComponent,
+            ApiV1MaintenancesPartialUpdateStartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_target_availability_error_component import (
-            ApiV1MaintenancesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1MaintenancesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_timeline_error_component import (
-            ApiV1MaintenancesPartialUpdateTimelineErrorComponent,
+            ApiV1MaintenancesPartialUpdateTimelineErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenances_partial_update_workspace_id_error_component import (
-            ApiV1MaintenancesPartialUpdateWorkspaceIdErrorComponent,
+            ApiV1MaintenancesPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -34,7 +34,7 @@ class ArtifactRepositoryListCreated:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.artifact_repository_list_created_created_by_type_0 import (
-            ArtifactRepositoryListCreatedCreatedByType0,
+            ArtifactRepositoryListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         created_at: None | str | Unset
@@ -82,7 +82,7 @@ class ArtifactRepositoryListCreated:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.artifact_repository_list_created_created_by_type_0 import (
-            ArtifactRepositoryListCreatedCreatedByType0,
+            ArtifactRepositoryListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

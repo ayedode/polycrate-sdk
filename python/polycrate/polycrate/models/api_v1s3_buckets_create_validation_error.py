@@ -56,19 +56,25 @@ class ApiV1S3BucketsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1s3_buckets_create_annotations_error_component import (
-            ApiV1S3BucketsCreateAnnotationsErrorComponent,
+            ApiV1S3BucketsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_create_labels_error_component import ApiV1S3BucketsCreateLabelsErrorComponent
-        from ..models.api_v1s3_buckets_create_name_error_component import ApiV1S3BucketsCreateNameErrorComponent
+        from ..models.api_v1s3_buckets_create_labels_error_component import (
+            ApiV1S3BucketsCreateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_create_name_error_component import (
+            ApiV1S3BucketsCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_create_non_field_errors_error_component import (
-            ApiV1S3BucketsCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_create_organization_error_component import (
-            ApiV1S3BucketsCreateOrganizationErrorComponent,
+            ApiV1S3BucketsCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_create_region_error_component import ApiV1S3BucketsCreateRegionErrorComponent
+        from ..models.api_v1s3_buckets_create_region_error_component import (
+            ApiV1S3BucketsCreateRegionErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_create_workspace_error_component import (
-            ApiV1S3BucketsCreateWorkspaceErrorComponent,
+            ApiV1S3BucketsCreateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -109,22 +115,28 @@ class ApiV1S3BucketsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1s3_buckets_create_annotations_error_component import (
-            ApiV1S3BucketsCreateAnnotationsErrorComponent,
+            ApiV1S3BucketsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_create_cors_allow_all_error_component import (
-            ApiV1S3BucketsCreateCorsAllowAllErrorComponent,
+            ApiV1S3BucketsCreateCorsAllowAllErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_create_labels_error_component import ApiV1S3BucketsCreateLabelsErrorComponent
-        from ..models.api_v1s3_buckets_create_name_error_component import ApiV1S3BucketsCreateNameErrorComponent
+        from ..models.api_v1s3_buckets_create_labels_error_component import (
+            ApiV1S3BucketsCreateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_create_name_error_component import (
+            ApiV1S3BucketsCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_create_non_field_errors_error_component import (
-            ApiV1S3BucketsCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_create_organization_error_component import (
-            ApiV1S3BucketsCreateOrganizationErrorComponent,
+            ApiV1S3BucketsCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_create_region_error_component import ApiV1S3BucketsCreateRegionErrorComponent
+        from ..models.api_v1s3_buckets_create_region_error_component import (
+            ApiV1S3BucketsCreateRegionErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_create_workspace_error_component import (
-            ApiV1S3BucketsCreateWorkspaceErrorComponent,
+            ApiV1S3BucketsCreateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -53,16 +53,16 @@ class ApiV1GrafanaDashboardSubscriptionsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_grafana_dashboard_subscriptions_partial_update_dashboard_error_component import (
-            ApiV1GrafanaDashboardSubscriptionsPartialUpdateDashboardErrorComponent,
+            ApiV1GrafanaDashboardSubscriptionsPartialUpdateDashboardErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_grafana_dashboard_subscriptions_partial_update_non_field_errors_error_component import (
-            ApiV1GrafanaDashboardSubscriptionsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1GrafanaDashboardSubscriptionsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_grafana_dashboard_subscriptions_partial_update_organization_error_component import (
-            ApiV1GrafanaDashboardSubscriptionsPartialUpdateOrganizationErrorComponent,
+            ApiV1GrafanaDashboardSubscriptionsPartialUpdateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_grafana_dashboard_subscriptions_partial_update_revision_error_component import (
-            ApiV1GrafanaDashboardSubscriptionsPartialUpdateRevisionErrorComponent,
+            ApiV1GrafanaDashboardSubscriptionsPartialUpdateRevisionErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -101,19 +101,19 @@ class ApiV1GrafanaDashboardSubscriptionsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_grafana_dashboard_subscriptions_partial_update_dashboard_error_component import (
-            ApiV1GrafanaDashboardSubscriptionsPartialUpdateDashboardErrorComponent,
+            ApiV1GrafanaDashboardSubscriptionsPartialUpdateDashboardErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_grafana_dashboard_subscriptions_partial_update_enabled_error_component import (
-            ApiV1GrafanaDashboardSubscriptionsPartialUpdateEnabledErrorComponent,
+            ApiV1GrafanaDashboardSubscriptionsPartialUpdateEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_grafana_dashboard_subscriptions_partial_update_non_field_errors_error_component import (
-            ApiV1GrafanaDashboardSubscriptionsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1GrafanaDashboardSubscriptionsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_grafana_dashboard_subscriptions_partial_update_organization_error_component import (
-            ApiV1GrafanaDashboardSubscriptionsPartialUpdateOrganizationErrorComponent,
+            ApiV1GrafanaDashboardSubscriptionsPartialUpdateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_grafana_dashboard_subscriptions_partial_update_revision_error_component import (
-            ApiV1GrafanaDashboardSubscriptionsPartialUpdateRevisionErrorComponent,
+            ApiV1GrafanaDashboardSubscriptionsPartialUpdateRevisionErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

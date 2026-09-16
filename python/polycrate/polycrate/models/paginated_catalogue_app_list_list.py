@@ -68,7 +68,7 @@ class PaginatedCatalogueAppListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.catalogue_app_list import CatalogueAppList
+        from ..models.catalogue_app_list import CatalogueAppList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

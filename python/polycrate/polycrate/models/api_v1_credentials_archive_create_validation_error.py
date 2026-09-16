@@ -169,91 +169,91 @@ class ApiV1CredentialsArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_credentials_archive_create_annotations_error_component import (
-            ApiV1CredentialsArchiveCreateAnnotationsErrorComponent,
+            ApiV1CredentialsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_api_endpoint_error_component import (
-            ApiV1CredentialsArchiveCreateApiEndpointErrorComponent,
+            ApiV1CredentialsArchiveCreateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_api_key_error_component import (
-            ApiV1CredentialsArchiveCreateApiKeyErrorComponent,
+            ApiV1CredentialsArchiveCreateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_api_user_error_component import (
-            ApiV1CredentialsArchiveCreateApiUserErrorComponent,
+            ApiV1CredentialsArchiveCreateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_archived_at_error_component import (
-            ApiV1CredentialsArchiveCreateArchivedAtErrorComponent,
+            ApiV1CredentialsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_archived_error_component import (
-            ApiV1CredentialsArchiveCreateArchivedErrorComponent,
+            ApiV1CredentialsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_archived_reason_error_component import (
-            ApiV1CredentialsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1CredentialsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_criticality_error_component import (
-            ApiV1CredentialsArchiveCreateCriticalityErrorComponent,
+            ApiV1CredentialsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_debug_mode_error_component import (
-            ApiV1CredentialsArchiveCreateDebugModeErrorComponent,
+            ApiV1CredentialsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_description_error_component import (
-            ApiV1CredentialsArchiveCreateDescriptionErrorComponent,
+            ApiV1CredentialsArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_display_name_error_component import (
-            ApiV1CredentialsArchiveCreateDisplayNameErrorComponent,
+            ApiV1CredentialsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_kind_error_component import (
-            ApiV1CredentialsArchiveCreateKindErrorComponent,
+            ApiV1CredentialsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_kubeconfig_error_component import (
-            ApiV1CredentialsArchiveCreateKubeconfigErrorComponent,
+            ApiV1CredentialsArchiveCreateKubeconfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_labels_error_component import (
-            ApiV1CredentialsArchiveCreateLabelsErrorComponent,
+            ApiV1CredentialsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_name_error_component import (
-            ApiV1CredentialsArchiveCreateNameErrorComponent,
+            ApiV1CredentialsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_non_field_errors_error_component import (
-            ApiV1CredentialsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_platform_service_error_component import (
-            ApiV1CredentialsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1CredentialsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_provider_error_component import (
-            ApiV1CredentialsArchiveCreateProviderErrorComponent,
+            ApiV1CredentialsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_provider_id_error_component import (
-            ApiV1CredentialsArchiveCreateProviderIdErrorComponent,
+            ApiV1CredentialsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_provider_reference_error_component import (
-            ApiV1CredentialsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1CredentialsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_reconciliation_enabled_error_component import (
-            ApiV1CredentialsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1CredentialsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_sla_availability_error_component import (
-            ApiV1CredentialsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1CredentialsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_sla_target_error_component import (
-            ApiV1CredentialsArchiveCreateSlaTargetErrorComponent,
+            ApiV1CredentialsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_slo_availability_error_component import (
-            ApiV1CredentialsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1CredentialsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_slo_target_error_component import (
-            ApiV1CredentialsArchiveCreateSloTargetErrorComponent,
+            ApiV1CredentialsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_ssh_private_key_error_component import (
-            ApiV1CredentialsArchiveCreateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsArchiveCreateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_ssh_public_key_error_component import (
-            ApiV1CredentialsArchiveCreateSshPublicKeyErrorComponent,
+            ApiV1CredentialsArchiveCreateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_target_availability_error_component import (
-            ApiV1CredentialsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1CredentialsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_tolerations_error_component import (
-            ApiV1CredentialsArchiveCreateTolerationsErrorComponent,
+            ApiV1CredentialsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -338,94 +338,94 @@ class ApiV1CredentialsArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_credentials_archive_create_annotations_error_component import (
-            ApiV1CredentialsArchiveCreateAnnotationsErrorComponent,
+            ApiV1CredentialsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_api_endpoint_error_component import (
-            ApiV1CredentialsArchiveCreateApiEndpointErrorComponent,
+            ApiV1CredentialsArchiveCreateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_api_key_error_component import (
-            ApiV1CredentialsArchiveCreateApiKeyErrorComponent,
+            ApiV1CredentialsArchiveCreateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_api_user_error_component import (
-            ApiV1CredentialsArchiveCreateApiUserErrorComponent,
+            ApiV1CredentialsArchiveCreateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_archived_at_error_component import (
-            ApiV1CredentialsArchiveCreateArchivedAtErrorComponent,
+            ApiV1CredentialsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_archived_error_component import (
-            ApiV1CredentialsArchiveCreateArchivedErrorComponent,
+            ApiV1CredentialsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_archived_reason_error_component import (
-            ApiV1CredentialsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1CredentialsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_criticality_error_component import (
-            ApiV1CredentialsArchiveCreateCriticalityErrorComponent,
+            ApiV1CredentialsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_debug_mode_error_component import (
-            ApiV1CredentialsArchiveCreateDebugModeErrorComponent,
+            ApiV1CredentialsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_description_error_component import (
-            ApiV1CredentialsArchiveCreateDescriptionErrorComponent,
+            ApiV1CredentialsArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_display_name_error_component import (
-            ApiV1CredentialsArchiveCreateDisplayNameErrorComponent,
+            ApiV1CredentialsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_kind_error_component import (
-            ApiV1CredentialsArchiveCreateKindErrorComponent,
+            ApiV1CredentialsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_kubeconfig_error_component import (
-            ApiV1CredentialsArchiveCreateKubeconfigErrorComponent,
+            ApiV1CredentialsArchiveCreateKubeconfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_labels_error_component import (
-            ApiV1CredentialsArchiveCreateLabelsErrorComponent,
+            ApiV1CredentialsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_metadata_error_component import (
-            ApiV1CredentialsArchiveCreateMetadataErrorComponent,
+            ApiV1CredentialsArchiveCreateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_name_error_component import (
-            ApiV1CredentialsArchiveCreateNameErrorComponent,
+            ApiV1CredentialsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_non_field_errors_error_component import (
-            ApiV1CredentialsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_platform_service_error_component import (
-            ApiV1CredentialsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1CredentialsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_provider_error_component import (
-            ApiV1CredentialsArchiveCreateProviderErrorComponent,
+            ApiV1CredentialsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_provider_id_error_component import (
-            ApiV1CredentialsArchiveCreateProviderIdErrorComponent,
+            ApiV1CredentialsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_provider_reference_error_component import (
-            ApiV1CredentialsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1CredentialsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_reconciliation_enabled_error_component import (
-            ApiV1CredentialsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1CredentialsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_sla_availability_error_component import (
-            ApiV1CredentialsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1CredentialsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_sla_target_error_component import (
-            ApiV1CredentialsArchiveCreateSlaTargetErrorComponent,
+            ApiV1CredentialsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_slo_availability_error_component import (
-            ApiV1CredentialsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1CredentialsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_slo_target_error_component import (
-            ApiV1CredentialsArchiveCreateSloTargetErrorComponent,
+            ApiV1CredentialsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_ssh_private_key_error_component import (
-            ApiV1CredentialsArchiveCreateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsArchiveCreateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_ssh_public_key_error_component import (
-            ApiV1CredentialsArchiveCreateSshPublicKeyErrorComponent,
+            ApiV1CredentialsArchiveCreateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_target_availability_error_component import (
-            ApiV1CredentialsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1CredentialsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_archive_create_tolerations_error_component import (
-            ApiV1CredentialsArchiveCreateTolerationsErrorComponent,
+            ApiV1CredentialsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -141,9 +141,9 @@ class Agent:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.pop_simple import PopSimple
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.pop_simple import PopSimple  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

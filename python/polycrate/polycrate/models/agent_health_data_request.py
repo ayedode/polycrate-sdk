@@ -289,8 +289,8 @@ class AgentHealthDataRequest:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.check_result_input_request import CheckResultInputRequest
-        from ..models.check_summary_request import CheckSummaryRequest
+        from ..models.check_result_input_request import CheckResultInputRequest  # noqa: PLC0415
+        from ..models.check_summary_request import CheckSummaryRequest  # noqa: PLC0415
 
         d = dict(src_dict)
         reported_agent_id = d.pop("reported_agent_id", UNSET)

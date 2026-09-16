@@ -51,7 +51,7 @@ class ApiV1AgentsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_agents_create_non_field_errors_error_component import (
-            ApiV1AgentsCreateNonFieldErrorsErrorComponent,
+            ApiV1AgentsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

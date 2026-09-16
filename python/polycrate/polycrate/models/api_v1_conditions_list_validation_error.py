@@ -48,7 +48,9 @@ class ApiV1ConditionsListValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_conditions_list_severity_error_component import ApiV1ConditionsListSeverityErrorComponent
+        from ..models.api_v1_conditions_list_severity_error_component import (
+            ApiV1ConditionsListSeverityErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

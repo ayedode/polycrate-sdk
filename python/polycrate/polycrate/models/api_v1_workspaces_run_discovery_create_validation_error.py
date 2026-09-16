@@ -66,11 +66,20 @@ if TYPE_CHECKING:
     from ..models.api_v1_workspaces_run_discovery_create_has_incompatible_kubeconfig_error_component import (
         ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent,
     )
+    from ..models.api_v1_workspaces_run_discovery_create_k8s_addons_enabled_error_component import (
+        ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent,
+    )
     from ..models.api_v1_workspaces_run_discovery_create_kind_error_component import (
         ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent,
     )
     from ..models.api_v1_workspaces_run_discovery_create_labels_error_component import (
         ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponent,
+    )
+    from ..models.api_v1_workspaces_run_discovery_create_logs_enabled_error_component import (
+        ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent,
+    )
+    from ..models.api_v1_workspaces_run_discovery_create_metrics_enabled_error_component import (
+        ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent,
     )
     from ..models.api_v1_workspaces_run_discovery_create_monitoring_workspace_allowlist_ids_error_component import (
         ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
@@ -176,7 +185,10 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
             ApiV1WorkspacesRunDiscoveryCreateGitlabProjectUrlErrorComponent |
             ApiV1WorkspacesRunDiscoveryCreateGlobalEndpointMonitorErrorComponent |
             ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent |
+            ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent |
             ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent | ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponent |
+            ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent |
+            ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent |
             ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent |
             ApiV1WorkspacesRunDiscoveryCreateNameErrorComponent |
             ApiV1WorkspacesRunDiscoveryCreateNonFieldErrorsErrorComponent |
@@ -222,8 +234,11 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
         | ApiV1WorkspacesRunDiscoveryCreateGitlabProjectUrlErrorComponent
         | ApiV1WorkspacesRunDiscoveryCreateGlobalEndpointMonitorErrorComponent
         | ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent
+        | ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent
         | ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent
         | ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponent
+        | ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent
+        | ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent
         | ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent
         | ApiV1WorkspacesRunDiscoveryCreateNameErrorComponent
         | ApiV1WorkspacesRunDiscoveryCreateNonFieldErrorsErrorComponent
@@ -254,139 +269,148 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_workspaces_run_discovery_create_actual_availability_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateActualAvailabilityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_annotations_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateAnnotationsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_archived_at_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateArchivedAtErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_archived_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateArchivedErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_archived_reason_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateArchivedReasonErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_backup_enabled_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateBackupEnabledErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateBackupEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_criticality_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateCriticalityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_debug_mode_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateDebugModeErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_description_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateDescriptionErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_discovery_enabled_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateDiscoveryEnabledErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_display_name_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateDisplayNameErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_encrypted_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateEncryptedErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateEncryptedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_endpoint_monitors_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateEndpointMonitorsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateEndpointMonitorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_gitlab_project_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateGitlabProjectIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_gitlab_project_url_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateGitlabProjectUrlErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateGitlabProjectUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_global_endpoint_monitor_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateGlobalEndpointMonitorErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateGlobalEndpointMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_has_incompatible_kubeconfig_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_run_discovery_create_k8s_addons_enabled_error_component import (
+            ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_kind_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_labels_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_run_discovery_create_logs_enabled_error_component import (
+            ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_run_discovery_create_metrics_enabled_error_component import (
+            ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_monitoring_workspace_allowlist_ids_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_name_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateNameErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_non_field_errors_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_notifications_enabled_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateNotificationsEnabledErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateNotificationsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_on_premise_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateOnPremiseErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateOnPremiseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_organization_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateOrganizationIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_owner_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateOwnerIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateOwnerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_platform_service_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreatePlatformServiceErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_pop_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreatePopIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreatePopIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_provider_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateProviderErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_provider_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateProviderIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_provider_reference_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateProviderReferenceErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_purpose_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreatePurposeErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreatePurposeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_readme_md_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateReadmeMdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateReadmeMdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_reconciliation_enabled_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateReconciliationEnabledErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_scope_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateScopeErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_secrets_poly_raw_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSecretsPolyRawErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSecretsPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_sla_availability_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSlaAvailabilityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_sla_target_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSlaTargetErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_slo_availability_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSloAvailabilityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_slo_target_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSloTargetErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_target_availability_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateTargetAvailabilityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_template_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateTemplateErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_urls_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateUrlsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateUrlsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_workspace_inventory_raw_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateWorkspaceInventoryRawErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateWorkspaceInventoryRawErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -460,6 +484,12 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesRunDiscoveryCreateBackupEnabledErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1WorkspacesRunDiscoveryCreateEndpointMonitorsErrorComponent):
@@ -505,142 +535,151 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_workspaces_run_discovery_create_actual_availability_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateActualAvailabilityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_alternative_name_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateAlternativeNameErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateAlternativeNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_annotations_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateAnnotationsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_archived_at_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateArchivedAtErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_archived_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateArchivedErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_archived_reason_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateArchivedReasonErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_backup_enabled_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateBackupEnabledErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateBackupEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_criticality_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateCriticalityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_debug_mode_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateDebugModeErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_description_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateDescriptionErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_discovery_enabled_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateDiscoveryEnabledErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_display_name_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateDisplayNameErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_encrypted_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateEncryptedErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateEncryptedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_endpoint_monitoring_mode_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateEndpointMonitoringModeErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateEndpointMonitoringModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_endpoint_monitors_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateEndpointMonitorsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateEndpointMonitorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_gitlab_project_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateGitlabProjectIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_gitlab_project_url_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateGitlabProjectUrlErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateGitlabProjectUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_global_endpoint_monitor_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateGlobalEndpointMonitorErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateGlobalEndpointMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_has_incompatible_kubeconfig_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_run_discovery_create_k8s_addons_enabled_error_component import (
+            ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_kind_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_labels_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_run_discovery_create_logs_enabled_error_component import (
+            ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_workspaces_run_discovery_create_metrics_enabled_error_component import (
+            ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_monitoring_workspace_allowlist_ids_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_name_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateNameErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_non_field_errors_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_notifications_enabled_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateNotificationsEnabledErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateNotificationsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_on_premise_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateOnPremiseErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateOnPremiseErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_organization_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateOrganizationIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_owner_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateOwnerIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateOwnerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_platform_service_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreatePlatformServiceErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_pop_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreatePopIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreatePopIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_provider_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateProviderErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_provider_id_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateProviderIdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_provider_reference_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateProviderReferenceErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_purpose_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreatePurposeErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreatePurposeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_readme_md_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateReadmeMdErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateReadmeMdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_reconciliation_enabled_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateReconciliationEnabledErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_scope_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateScopeErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_secrets_poly_raw_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSecretsPolyRawErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSecretsPolyRawErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_sla_availability_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSlaAvailabilityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_sla_target_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSlaTargetErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_slo_availability_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSloAvailabilityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_slo_target_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateSloTargetErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_target_availability_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateTargetAvailabilityErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_template_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateTemplateErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_urls_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateUrlsErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateUrlsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspaces_run_discovery_create_workspace_inventory_raw_error_component import (
-            ApiV1WorkspacesRunDiscoveryCreateWorkspaceInventoryRawErrorComponent,
+            ApiV1WorkspacesRunDiscoveryCreateWorkspaceInventoryRawErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -672,8 +711,11 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                 | ApiV1WorkspacesRunDiscoveryCreateGitlabProjectUrlErrorComponent
                 | ApiV1WorkspacesRunDiscoveryCreateGlobalEndpointMonitorErrorComponent
                 | ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent
+                | ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent
                 | ApiV1WorkspacesRunDiscoveryCreateKindErrorComponent
                 | ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponent
+                | ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent
+                | ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent
                 | ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent
                 | ApiV1WorkspacesRunDiscoveryCreateNameErrorComponent
                 | ApiV1WorkspacesRunDiscoveryCreateNonFieldErrorsErrorComponent
@@ -1024,7 +1066,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_32 = (
-                        ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_32
@@ -1034,7 +1076,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_33 = (
-                        ApiV1WorkspacesRunDiscoveryCreateEndpointMonitorsErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_33
@@ -1044,7 +1086,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_34 = (
-                        ApiV1WorkspacesRunDiscoveryCreateSecretsPolyRawErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateK8SAddonsEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_34
@@ -1054,7 +1096,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_35 = (
-                        ApiV1WorkspacesRunDiscoveryCreateWorkspaceInventoryRawErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_35
@@ -1064,7 +1106,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_36 = (
-                        ApiV1WorkspacesRunDiscoveryCreateOrganizationIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateEndpointMonitorsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_36
@@ -1074,7 +1116,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_37 = (
-                        ApiV1WorkspacesRunDiscoveryCreateEncryptedErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateSecretsPolyRawErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_37
@@ -1084,7 +1126,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_38 = (
-                        ApiV1WorkspacesRunDiscoveryCreatePopIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateWorkspaceInventoryRawErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_38
@@ -1094,7 +1136,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_39 = (
-                        ApiV1WorkspacesRunDiscoveryCreateTemplateErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateOrganizationIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_39
@@ -1104,7 +1146,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_40 = (
-                        ApiV1WorkspacesRunDiscoveryCreateDescriptionErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateEncryptedErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_40
@@ -1114,7 +1156,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_41 = (
-                        ApiV1WorkspacesRunDiscoveryCreatePurposeErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreatePopIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_41
@@ -1124,7 +1166,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_42 = (
-                        ApiV1WorkspacesRunDiscoveryCreateUrlsErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateTemplateErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_42
@@ -1134,7 +1176,7 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_43 = (
-                        ApiV1WorkspacesRunDiscoveryCreateOwnerIdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreateDescriptionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_43
@@ -1144,19 +1186,49 @@ class ApiV1WorkspacesRunDiscoveryCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_workspaces_run_discovery_create_error_type_44 = (
-                        ApiV1WorkspacesRunDiscoveryCreateReadmeMdErrorComponent.from_dict(data)
+                        ApiV1WorkspacesRunDiscoveryCreatePurposeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_44
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_run_discovery_create_error_type_45 = (
+                        ApiV1WorkspacesRunDiscoveryCreateUrlsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_45
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_run_discovery_create_error_type_46 = (
+                        ApiV1WorkspacesRunDiscoveryCreateOwnerIdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_46
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_workspaces_run_discovery_create_error_type_47 = (
+                        ApiV1WorkspacesRunDiscoveryCreateReadmeMdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_47
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_workspaces_run_discovery_create_error_type_45 = (
+                componentsschemas_api_v1_workspaces_run_discovery_create_error_type_48 = (
                     ApiV1WorkspacesRunDiscoveryCreateAlternativeNameErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_45
+                return componentsschemas_api_v1_workspaces_run_discovery_create_error_type_48
 
             errors_item = _parse_errors_item(errors_item_data)
 

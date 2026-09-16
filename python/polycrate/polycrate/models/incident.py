@@ -283,8 +283,8 @@ class Incident:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.incident_deleted_by_user_type_0 import IncidentDeletedByUserType0
-        from ..models.incident_last_action_run_type_0 import IncidentLastActionRunType0
+        from ..models.incident_deleted_by_user_type_0 import IncidentDeletedByUserType0  # noqa: PLC0415
+        from ..models.incident_last_action_run_type_0 import IncidentLastActionRunType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -766,17 +766,17 @@ class Incident:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.downtime_simple import DowntimeSimple
-        from ..models.host_simple import HostSimple
-        from ..models.incident_created import IncidentCreated
-        from ..models.incident_deleted_by_user_type_0 import IncidentDeletedByUserType0
-        from ..models.incident_last_action_run_type_0 import IncidentLastActionRunType0
-        from ..models.k8s_volume_simple import K8SVolumeSimple
-        from ..models.note_simple import NoteSimple
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.pop_simple import PopSimple
-        from ..models.vulnerability_finding_simple import VulnerabilityFindingSimple
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.downtime_simple import DowntimeSimple  # noqa: PLC0415
+        from ..models.host_simple import HostSimple  # noqa: PLC0415
+        from ..models.incident_created import IncidentCreated  # noqa: PLC0415
+        from ..models.incident_deleted_by_user_type_0 import IncidentDeletedByUserType0  # noqa: PLC0415
+        from ..models.incident_last_action_run_type_0 import IncidentLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_volume_simple import K8SVolumeSimple  # noqa: PLC0415
+        from ..models.note_simple import NoteSimple  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.pop_simple import PopSimple  # noqa: PLC0415
+        from ..models.vulnerability_finding_simple import VulnerabilityFindingSimple  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

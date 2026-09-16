@@ -61,25 +61,25 @@ class ApiV1PricingQuoteAppsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_quote_apps_list_created_at_error_component import (
-            ApiV1PricingQuoteAppsListCreatedAtErrorComponent,
+            ApiV1PricingQuoteAppsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_created_by_component_error_component import (
-            ApiV1PricingQuoteAppsListCreatedByComponentErrorComponent,
+            ApiV1PricingQuoteAppsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_kind_error_component import (
-            ApiV1PricingQuoteAppsListKindErrorComponent,
+            ApiV1PricingQuoteAppsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_name_error_component import (
-            ApiV1PricingQuoteAppsListNameErrorComponent,
+            ApiV1PricingQuoteAppsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_scope_error_component import (
-            ApiV1PricingQuoteAppsListScopeErrorComponent,
+            ApiV1PricingQuoteAppsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_state_error_component import (
-            ApiV1PricingQuoteAppsListStateErrorComponent,
+            ApiV1PricingQuoteAppsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_updated_at_error_component import (
-            ApiV1PricingQuoteAppsListUpdatedAtErrorComponent,
+            ApiV1PricingQuoteAppsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -120,28 +120,28 @@ class ApiV1PricingQuoteAppsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_quote_apps_list_created_at_error_component import (
-            ApiV1PricingQuoteAppsListCreatedAtErrorComponent,
+            ApiV1PricingQuoteAppsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_created_by_component_error_component import (
-            ApiV1PricingQuoteAppsListCreatedByComponentErrorComponent,
+            ApiV1PricingQuoteAppsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_kind_error_component import (
-            ApiV1PricingQuoteAppsListKindErrorComponent,
+            ApiV1PricingQuoteAppsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_name_error_component import (
-            ApiV1PricingQuoteAppsListNameErrorComponent,
+            ApiV1PricingQuoteAppsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_quote_workspace_error_component import (
-            ApiV1PricingQuoteAppsListQuoteWorkspaceErrorComponent,
+            ApiV1PricingQuoteAppsListQuoteWorkspaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_scope_error_component import (
-            ApiV1PricingQuoteAppsListScopeErrorComponent,
+            ApiV1PricingQuoteAppsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_state_error_component import (
-            ApiV1PricingQuoteAppsListStateErrorComponent,
+            ApiV1PricingQuoteAppsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_apps_list_updated_at_error_component import (
-            ApiV1PricingQuoteAppsListUpdatedAtErrorComponent,
+            ApiV1PricingQuoteAppsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

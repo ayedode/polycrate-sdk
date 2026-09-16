@@ -60,22 +60,22 @@ class ApiV1ConversationsMessagesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conversations_messages_list_content_kind_error_component import (
-            ApiV1ConversationsMessagesListContentKindErrorComponent,
+            ApiV1ConversationsMessagesListContentKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_conversation_error_component import (
-            ApiV1ConversationsMessagesListConversationErrorComponent,
+            ApiV1ConversationsMessagesListConversationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_kind_error_component import (
-            ApiV1ConversationsMessagesListKindErrorComponent,
+            ApiV1ConversationsMessagesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_organization_error_component import (
-            ApiV1ConversationsMessagesListOrganizationErrorComponent,
+            ApiV1ConversationsMessagesListOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_sender_error_component import (
-            ApiV1ConversationsMessagesListSenderErrorComponent,
+            ApiV1ConversationsMessagesListSenderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_status_error_component import (
-            ApiV1ConversationsMessagesListStatusErrorComponent,
+            ApiV1ConversationsMessagesListStatusErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -114,25 +114,25 @@ class ApiV1ConversationsMessagesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conversations_messages_list_content_kind_error_component import (
-            ApiV1ConversationsMessagesListContentKindErrorComponent,
+            ApiV1ConversationsMessagesListContentKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_conversation_error_component import (
-            ApiV1ConversationsMessagesListConversationErrorComponent,
+            ApiV1ConversationsMessagesListConversationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_kind_error_component import (
-            ApiV1ConversationsMessagesListKindErrorComponent,
+            ApiV1ConversationsMessagesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_organization_error_component import (
-            ApiV1ConversationsMessagesListOrganizationErrorComponent,
+            ApiV1ConversationsMessagesListOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_search_error_component import (
-            ApiV1ConversationsMessagesListSearchErrorComponent,
+            ApiV1ConversationsMessagesListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_sender_error_component import (
-            ApiV1ConversationsMessagesListSenderErrorComponent,
+            ApiV1ConversationsMessagesListSenderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_messages_list_status_error_component import (
-            ApiV1ConversationsMessagesListStatusErrorComponent,
+            ApiV1ConversationsMessagesListStatusErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -68,7 +68,7 @@ class PaginatedK8SAppListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_app_list import K8SAppList
+        from ..models.k8s_app_list import K8SAppList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

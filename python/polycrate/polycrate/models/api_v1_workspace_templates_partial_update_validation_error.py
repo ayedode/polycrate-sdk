@@ -68,25 +68,25 @@ class ApiV1WorkspaceTemplatesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_workspace_templates_partial_update_description_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateDescriptionErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_display_name_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateDisplayNameErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_name_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateNameErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_non_field_errors_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_organization_id_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_secrets_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateSecretsPolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateSecretsPolyTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_workspace_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateWorkspacePolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateWorkspacePolyTemplateErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -127,28 +127,28 @@ class ApiV1WorkspaceTemplatesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_workspace_templates_partial_update_description_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateDescriptionErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_display_name_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateDisplayNameErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_is_default_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateIsDefaultErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateIsDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_name_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateNameErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_non_field_errors_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_organization_id_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_secrets_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateSecretsPolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateSecretsPolyTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_partial_update_workspace_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesPartialUpdateWorkspacePolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesPartialUpdateWorkspacePolyTemplateErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

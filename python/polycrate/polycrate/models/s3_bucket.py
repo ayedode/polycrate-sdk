@@ -266,10 +266,10 @@ class S3Bucket:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.s3_bucket_deleted_by_user_type_0 import S3BucketDeletedByUserType0
-        from ..models.s3_bucket_last_action_run_type_0 import S3BucketLastActionRunType0
-        from ..models.s3_bucket_organization_type_0 import S3BucketOrganizationType0
-        from ..models.s3_bucket_workspace_type_0 import S3BucketWorkspaceType0
+        from ..models.s3_bucket_deleted_by_user_type_0 import S3BucketDeletedByUserType0  # noqa: PLC0415
+        from ..models.s3_bucket_last_action_run_type_0 import S3BucketLastActionRunType0  # noqa: PLC0415
+        from ..models.s3_bucket_organization_type_0 import S3BucketOrganizationType0  # noqa: PLC0415
+        from ..models.s3_bucket_workspace_type_0 import S3BucketWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -654,16 +654,16 @@ class S3Bucket:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.product_simple import ProductSimple
-        from ..models.region_simple import RegionSimple
-        from ..models.s3_bucket_created import S3BucketCreated
-        from ..models.s3_bucket_deleted_by_user_type_0 import S3BucketDeletedByUserType0
-        from ..models.s3_bucket_last_action_run_type_0 import S3BucketLastActionRunType0
-        from ..models.s3_bucket_organization_type_0 import S3BucketOrganizationType0
-        from ..models.s3_bucket_workspace_type_0 import S3BucketWorkspaceType0
-        from ..models.s3_credential import S3Credential
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
+        from ..models.region_simple import RegionSimple  # noqa: PLC0415
+        from ..models.s3_bucket_created import S3BucketCreated  # noqa: PLC0415
+        from ..models.s3_bucket_deleted_by_user_type_0 import S3BucketDeletedByUserType0  # noqa: PLC0415
+        from ..models.s3_bucket_last_action_run_type_0 import S3BucketLastActionRunType0  # noqa: PLC0415
+        from ..models.s3_bucket_organization_type_0 import S3BucketOrganizationType0  # noqa: PLC0415
+        from ..models.s3_bucket_workspace_type_0 import S3BucketWorkspaceType0  # noqa: PLC0415
+        from ..models.s3_credential import S3Credential  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

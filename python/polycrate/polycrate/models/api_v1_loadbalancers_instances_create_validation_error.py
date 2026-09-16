@@ -21,6 +21,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_loadbalancers_instances_create_display_name_error_component import (
         ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponent,
     )
+    from ..models.api_v1_loadbalancers_instances_create_haproxy_defaults_error_component import (
+        ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent,
+    )
     from ..models.api_v1_loadbalancers_instances_create_labels_error_component import (
         ApiV1LoadbalancersInstancesCreateLabelsErrorComponent,
     )
@@ -32,6 +35,9 @@ if TYPE_CHECKING:
     )
     from ..models.api_v1_loadbalancers_instances_create_ports_error_component import (
         ApiV1LoadbalancersInstancesCreatePortsErrorComponent,
+    )
+    from ..models.api_v1_loadbalancers_instances_create_resource_limits_error_component import (
+        ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent,
     )
     from ..models.api_v1_loadbalancers_instances_create_wizard_ports_error_component import (
         ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponent,
@@ -53,10 +59,12 @@ class ApiV1LoadbalancersInstancesCreateValidationError:
             ApiV1LoadbalancersInstancesCreateConfigErrorComponent |
             ApiV1LoadbalancersInstancesCreateConsumerMetaErrorComponent |
             ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponent |
+            ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent |
             ApiV1LoadbalancersInstancesCreateLabelsErrorComponent |
             ApiV1LoadbalancersInstancesCreateNonFieldErrorsErrorComponent |
             ApiV1LoadbalancersInstancesCreateOrganizationErrorComponent |
             ApiV1LoadbalancersInstancesCreatePortsErrorComponent |
+            ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent |
             ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponent |
             ApiV1LoadbalancersInstancesCreateWorkspaceErrorComponent]):
     """
@@ -67,42 +75,50 @@ class ApiV1LoadbalancersInstancesCreateValidationError:
         | ApiV1LoadbalancersInstancesCreateConfigErrorComponent
         | ApiV1LoadbalancersInstancesCreateConsumerMetaErrorComponent
         | ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponent
+        | ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent
         | ApiV1LoadbalancersInstancesCreateLabelsErrorComponent
         | ApiV1LoadbalancersInstancesCreateNonFieldErrorsErrorComponent
         | ApiV1LoadbalancersInstancesCreateOrganizationErrorComponent
         | ApiV1LoadbalancersInstancesCreatePortsErrorComponent
+        | ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent
         | ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponent
         | ApiV1LoadbalancersInstancesCreateWorkspaceErrorComponent
     ]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.api_v1_loadbalancers_instances_create_annotations_error_component import (
+            ApiV1LoadbalancersInstancesCreateAnnotationsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_loadbalancers_instances_create_config_error_component import (
-            ApiV1LoadbalancersInstancesCreateConfigErrorComponent,
+            ApiV1LoadbalancersInstancesCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_consumer_meta_error_component import (
-            ApiV1LoadbalancersInstancesCreateConsumerMetaErrorComponent,
+            ApiV1LoadbalancersInstancesCreateConsumerMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_display_name_error_component import (
-            ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponent,
+            ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_labels_error_component import (
-            ApiV1LoadbalancersInstancesCreateLabelsErrorComponent,
+            ApiV1LoadbalancersInstancesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_non_field_errors_error_component import (
-            ApiV1LoadbalancersInstancesCreateNonFieldErrorsErrorComponent,
+            ApiV1LoadbalancersInstancesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_organization_error_component import (
-            ApiV1LoadbalancersInstancesCreateOrganizationErrorComponent,
+            ApiV1LoadbalancersInstancesCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_ports_error_component import (
-            ApiV1LoadbalancersInstancesCreatePortsErrorComponent,
+            ApiV1LoadbalancersInstancesCreatePortsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_loadbalancers_instances_create_resource_limits_error_component import (
+            ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_wizard_ports_error_component import (
-            ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponent,
+            ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_workspace_error_component import (
-            ApiV1LoadbalancersInstancesCreateWorkspaceErrorComponent,
+            ApiV1LoadbalancersInstancesCreateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -128,6 +144,10 @@ class ApiV1LoadbalancersInstancesCreateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesCreateLabelsErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesCreateAnnotationsErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent):
+                errors_item = errors_item_data.to_dict()
             else:
                 errors_item = errors_item_data.to_dict()
 
@@ -147,34 +167,40 @@ class ApiV1LoadbalancersInstancesCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_loadbalancers_instances_create_annotations_error_component import (
-            ApiV1LoadbalancersInstancesCreateAnnotationsErrorComponent,
+            ApiV1LoadbalancersInstancesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_config_error_component import (
-            ApiV1LoadbalancersInstancesCreateConfigErrorComponent,
+            ApiV1LoadbalancersInstancesCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_consumer_meta_error_component import (
-            ApiV1LoadbalancersInstancesCreateConsumerMetaErrorComponent,
+            ApiV1LoadbalancersInstancesCreateConsumerMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_display_name_error_component import (
-            ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponent,
+            ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_loadbalancers_instances_create_haproxy_defaults_error_component import (
+            ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_labels_error_component import (
-            ApiV1LoadbalancersInstancesCreateLabelsErrorComponent,
+            ApiV1LoadbalancersInstancesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_non_field_errors_error_component import (
-            ApiV1LoadbalancersInstancesCreateNonFieldErrorsErrorComponent,
+            ApiV1LoadbalancersInstancesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_organization_error_component import (
-            ApiV1LoadbalancersInstancesCreateOrganizationErrorComponent,
+            ApiV1LoadbalancersInstancesCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_ports_error_component import (
-            ApiV1LoadbalancersInstancesCreatePortsErrorComponent,
+            ApiV1LoadbalancersInstancesCreatePortsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_loadbalancers_instances_create_resource_limits_error_component import (
+            ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_wizard_ports_error_component import (
-            ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponent,
+            ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_create_workspace_error_component import (
-            ApiV1LoadbalancersInstancesCreateWorkspaceErrorComponent,
+            ApiV1LoadbalancersInstancesCreateWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -191,10 +217,12 @@ class ApiV1LoadbalancersInstancesCreateValidationError:
                 | ApiV1LoadbalancersInstancesCreateConfigErrorComponent
                 | ApiV1LoadbalancersInstancesCreateConsumerMetaErrorComponent
                 | ApiV1LoadbalancersInstancesCreateDisplayNameErrorComponent
+                | ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent
                 | ApiV1LoadbalancersInstancesCreateLabelsErrorComponent
                 | ApiV1LoadbalancersInstancesCreateNonFieldErrorsErrorComponent
                 | ApiV1LoadbalancersInstancesCreateOrganizationErrorComponent
                 | ApiV1LoadbalancersInstancesCreatePortsErrorComponent
+                | ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent
                 | ApiV1LoadbalancersInstancesCreateWizardPortsErrorComponent
                 | ApiV1LoadbalancersInstancesCreateWorkspaceErrorComponent
             ):
@@ -288,13 +316,33 @@ class ApiV1LoadbalancersInstancesCreateValidationError:
                     return componentsschemas_api_v1_loadbalancers_instances_create_error_type_8
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_loadbalancers_instances_create_error_type_9 = (
+                        ApiV1LoadbalancersInstancesCreateAnnotationsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_loadbalancers_instances_create_error_type_9
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_loadbalancers_instances_create_error_type_10 = (
+                        ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_loadbalancers_instances_create_error_type_10
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_loadbalancers_instances_create_error_type_9 = (
-                    ApiV1LoadbalancersInstancesCreateAnnotationsErrorComponent.from_dict(data)
+                componentsschemas_api_v1_loadbalancers_instances_create_error_type_11 = (
+                    ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_loadbalancers_instances_create_error_type_9
+                return componentsschemas_api_v1_loadbalancers_instances_create_error_type_11
 
             errors_item = _parse_errors_item(errors_item_data)
 

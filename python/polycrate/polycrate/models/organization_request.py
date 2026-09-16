@@ -143,7 +143,8 @@ class OrganizationRequest:
             traffic.out.30d_total then bytes.out.30d_total
         cached_volume_count (int | Unset): Cached total K8sVolume count across all workspaces
         cached_volume_capacity_bytes (int | Unset): Cached total K8sVolume capacity in bytes across all workspaces
-        cached_k8s_cluster_count (int | Unset): Non-archived K8sCluster count for this organization (Spec 630)
+        cached_k8s_cluster_count (int | Unset): Portal-visible K8sCluster count: cluster and workspace not archived,
+            neither kind generic (Spec 630 / 781)
         cached_workspace_count (int | Unset): Non-archived Workspace count for this organization (Spec 630)
         cached_endpoint_count (int | Unset): Non-archived Endpoint count for this organization (Spec 630)
         cached_endpoint_down_count (int | Unset): Non-archived Endpoints with state=CRITICAL (Spec 630)

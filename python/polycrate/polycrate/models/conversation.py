@@ -125,9 +125,9 @@ class Conversation:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversation_provider_simple import ConversationProviderSimple
-        from ..models.message_list import MessageList
-        from ..models.organization_simple import OrganizationSimple
+        from ..models.conversation_provider_simple import ConversationProviderSimple  # noqa: PLC0415
+        from ..models.message_list import MessageList  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

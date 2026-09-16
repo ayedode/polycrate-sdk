@@ -104,8 +104,8 @@ class DNSZoneList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.dns_zone_list_organization_type_0 import DNSZoneListOrganizationType0
-        from ..models.dns_zone_list_workspace_type_0 import DNSZoneListWorkspaceType0
+        from ..models.dns_zone_list_organization_type_0 import DNSZoneListOrganizationType0  # noqa: PLC0415
+        from ..models.dns_zone_list_workspace_type_0 import DNSZoneListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -212,10 +212,12 @@ class DNSZoneList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.dns_zone_list_active_condition_instances_item import DNSZoneListActiveConditionInstancesItem
-        from ..models.dns_zone_list_created import DNSZoneListCreated
-        from ..models.dns_zone_list_organization_type_0 import DNSZoneListOrganizationType0
-        from ..models.dns_zone_list_workspace_type_0 import DNSZoneListWorkspaceType0
+        from ..models.dns_zone_list_active_condition_instances_item import (
+            DNSZoneListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.dns_zone_list_created import DNSZoneListCreated  # noqa: PLC0415
+        from ..models.dns_zone_list_organization_type_0 import DNSZoneListOrganizationType0  # noqa: PLC0415
+        from ..models.dns_zone_list_workspace_type_0 import DNSZoneListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

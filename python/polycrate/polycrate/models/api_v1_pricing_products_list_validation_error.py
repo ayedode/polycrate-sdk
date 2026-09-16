@@ -52,22 +52,22 @@ class ApiV1PricingProductsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_products_list_created_at_error_component import (
-            ApiV1PricingProductsListCreatedAtErrorComponent,
+            ApiV1PricingProductsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_kind_error_component import (
-            ApiV1PricingProductsListKindErrorComponent,
+            ApiV1PricingProductsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_name_error_component import (
-            ApiV1PricingProductsListNameErrorComponent,
+            ApiV1PricingProductsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_scope_error_component import (
-            ApiV1PricingProductsListScopeErrorComponent,
+            ApiV1PricingProductsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_state_error_component import (
-            ApiV1PricingProductsListStateErrorComponent,
+            ApiV1PricingProductsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_updated_at_error_component import (
-            ApiV1PricingProductsListUpdatedAtErrorComponent,
+            ApiV1PricingProductsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -106,25 +106,25 @@ class ApiV1PricingProductsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_products_list_created_at_error_component import (
-            ApiV1PricingProductsListCreatedAtErrorComponent,
+            ApiV1PricingProductsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_created_by_component_error_component import (
-            ApiV1PricingProductsListCreatedByComponentErrorComponent,
+            ApiV1PricingProductsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_kind_error_component import (
-            ApiV1PricingProductsListKindErrorComponent,
+            ApiV1PricingProductsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_name_error_component import (
-            ApiV1PricingProductsListNameErrorComponent,
+            ApiV1PricingProductsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_scope_error_component import (
-            ApiV1PricingProductsListScopeErrorComponent,
+            ApiV1PricingProductsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_state_error_component import (
-            ApiV1PricingProductsListStateErrorComponent,
+            ApiV1PricingProductsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_list_updated_at_error_component import (
-            ApiV1PricingProductsListUpdatedAtErrorComponent,
+            ApiV1PricingProductsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

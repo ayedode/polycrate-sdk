@@ -221,130 +221,136 @@ class ApiV1HostsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_hosts_partial_update_active_error_component import (
-            ApiV1HostsPartialUpdateActiveErrorComponent,
+            ApiV1HostsPartialUpdateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_alias_error_component import (
-            ApiV1HostsPartialUpdateAliasErrorComponent,
+            ApiV1HostsPartialUpdateAliasErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_annotations_error_component import (
-            ApiV1HostsPartialUpdateAnnotationsErrorComponent,
+            ApiV1HostsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_archived_at_error_component import (
-            ApiV1HostsPartialUpdateArchivedAtErrorComponent,
+            ApiV1HostsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_archived_error_component import (
-            ApiV1HostsPartialUpdateArchivedErrorComponent,
+            ApiV1HostsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_archived_reason_error_component import (
-            ApiV1HostsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1HostsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_created_by_component_error_component import (
-            ApiV1HostsPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1HostsPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_credential_error_component import (
-            ApiV1HostsPartialUpdateCredentialErrorComponent,
+            ApiV1HostsPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_criticality_error_component import (
-            ApiV1HostsPartialUpdateCriticalityErrorComponent,
+            ApiV1HostsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_debug_mode_error_component import (
-            ApiV1HostsPartialUpdateDebugModeErrorComponent,
+            ApiV1HostsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_default_ipv_4_error_component import (
-            ApiV1HostsPartialUpdateDefaultIpv4ErrorComponent,
+            ApiV1HostsPartialUpdateDefaultIpv4ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_default_ipv_6_error_component import (
-            ApiV1HostsPartialUpdateDefaultIpv6ErrorComponent,
+            ApiV1HostsPartialUpdateDefaultIpv6ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_description_error_component import (
-            ApiV1HostsPartialUpdateDescriptionErrorComponent,
+            ApiV1HostsPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_display_name_error_component import (
-            ApiV1HostsPartialUpdateDisplayNameErrorComponent,
+            ApiV1HostsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_hostname_error_component import (
-            ApiV1HostsPartialUpdateHostnameErrorComponent,
+            ApiV1HostsPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_k8s_cluster_error_component import (
-            ApiV1HostsPartialUpdateK8SClusterErrorComponent,
+            ApiV1HostsPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_partial_update_kind_error_component import ApiV1HostsPartialUpdateKindErrorComponent
+        from ..models.api_v1_hosts_partial_update_kind_error_component import (
+            ApiV1HostsPartialUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_partial_update_labels_error_component import (
-            ApiV1HostsPartialUpdateLabelsErrorComponent,
+            ApiV1HostsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_partial_update_name_error_component import ApiV1HostsPartialUpdateNameErrorComponent
+        from ..models.api_v1_hosts_partial_update_name_error_component import (
+            ApiV1HostsPartialUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_partial_update_non_field_errors_error_component import (
-            ApiV1HostsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1HostsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_platform_service_error_component import (
-            ApiV1HostsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1HostsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_account_id_error_component import (
-            ApiV1HostsPartialUpdateProviderAccountIdErrorComponent,
+            ApiV1HostsPartialUpdateProviderAccountIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_error_component import (
-            ApiV1HostsPartialUpdateProviderErrorComponent,
+            ApiV1HostsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_image_error_component import (
-            ApiV1HostsPartialUpdateProviderImageErrorComponent,
+            ApiV1HostsPartialUpdateProviderImageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_image_os_architecture_error_component import (
-            ApiV1HostsPartialUpdateProviderImageOsArchitectureErrorComponent,
+            ApiV1HostsPartialUpdateProviderImageOsArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_image_os_flavor_error_component import (
-            ApiV1HostsPartialUpdateProviderImageOsFlavorErrorComponent,
+            ApiV1HostsPartialUpdateProviderImageOsFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_image_os_version_error_component import (
-            ApiV1HostsPartialUpdateProviderImageOsVersionErrorComponent,
+            ApiV1HostsPartialUpdateProviderImageOsVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_location_error_component import (
-            ApiV1HostsPartialUpdateProviderLocationErrorComponent,
+            ApiV1HostsPartialUpdateProviderLocationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_reference_error_component import (
-            ApiV1HostsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1HostsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_type_error_component import (
-            ApiV1HostsPartialUpdateProviderTypeErrorComponent,
+            ApiV1HostsPartialUpdateProviderTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_reconciliation_enabled_error_component import (
-            ApiV1HostsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1HostsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_cpu_architecture_error_component import (
-            ApiV1HostsPartialUpdateResourceCpuArchitectureErrorComponent,
+            ApiV1HostsPartialUpdateResourceCpuArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_cpu_cores_error_component import (
-            ApiV1HostsPartialUpdateResourceCpuCoresErrorComponent,
+            ApiV1HostsPartialUpdateResourceCpuCoresErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_cpu_type_error_component import (
-            ApiV1HostsPartialUpdateResourceCpuTypeErrorComponent,
+            ApiV1HostsPartialUpdateResourceCpuTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_disk_error_component import (
-            ApiV1HostsPartialUpdateResourceDiskErrorComponent,
+            ApiV1HostsPartialUpdateResourceDiskErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_memory_error_component import (
-            ApiV1HostsPartialUpdateResourceMemoryErrorComponent,
+            ApiV1HostsPartialUpdateResourceMemoryErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_partial_update_role_error_component import ApiV1HostsPartialUpdateRoleErrorComponent
+        from ..models.api_v1_hosts_partial_update_role_error_component import (
+            ApiV1HostsPartialUpdateRoleErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_partial_update_sla_availability_error_component import (
-            ApiV1HostsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1HostsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_sla_target_error_component import (
-            ApiV1HostsPartialUpdateSlaTargetErrorComponent,
+            ApiV1HostsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_slo_availability_error_component import (
-            ApiV1HostsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1HostsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_slo_target_error_component import (
-            ApiV1HostsPartialUpdateSloTargetErrorComponent,
+            ApiV1HostsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_ssh_keys_id_error_component import (
-            ApiV1HostsPartialUpdateSshKeysIdErrorComponent,
+            ApiV1HostsPartialUpdateSshKeysIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_target_availability_error_component import (
-            ApiV1HostsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1HostsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_tolerations_error_component import (
-            ApiV1HostsPartialUpdateTolerationsErrorComponent,
+            ApiV1HostsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -459,133 +465,139 @@ class ApiV1HostsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_hosts_partial_update_active_error_component import (
-            ApiV1HostsPartialUpdateActiveErrorComponent,
+            ApiV1HostsPartialUpdateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_alias_error_component import (
-            ApiV1HostsPartialUpdateAliasErrorComponent,
+            ApiV1HostsPartialUpdateAliasErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_annotations_error_component import (
-            ApiV1HostsPartialUpdateAnnotationsErrorComponent,
+            ApiV1HostsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_archived_at_error_component import (
-            ApiV1HostsPartialUpdateArchivedAtErrorComponent,
+            ApiV1HostsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_archived_error_component import (
-            ApiV1HostsPartialUpdateArchivedErrorComponent,
+            ApiV1HostsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_archived_reason_error_component import (
-            ApiV1HostsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1HostsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_created_by_component_error_component import (
-            ApiV1HostsPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1HostsPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_credential_error_component import (
-            ApiV1HostsPartialUpdateCredentialErrorComponent,
+            ApiV1HostsPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_criticality_error_component import (
-            ApiV1HostsPartialUpdateCriticalityErrorComponent,
+            ApiV1HostsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_debug_mode_error_component import (
-            ApiV1HostsPartialUpdateDebugModeErrorComponent,
+            ApiV1HostsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_default_ipv_4_error_component import (
-            ApiV1HostsPartialUpdateDefaultIpv4ErrorComponent,
+            ApiV1HostsPartialUpdateDefaultIpv4ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_default_ipv_6_error_component import (
-            ApiV1HostsPartialUpdateDefaultIpv6ErrorComponent,
+            ApiV1HostsPartialUpdateDefaultIpv6ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_description_error_component import (
-            ApiV1HostsPartialUpdateDescriptionErrorComponent,
+            ApiV1HostsPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_display_name_error_component import (
-            ApiV1HostsPartialUpdateDisplayNameErrorComponent,
+            ApiV1HostsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_hostname_error_component import (
-            ApiV1HostsPartialUpdateHostnameErrorComponent,
+            ApiV1HostsPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_k8s_cluster_error_component import (
-            ApiV1HostsPartialUpdateK8SClusterErrorComponent,
+            ApiV1HostsPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_partial_update_kind_error_component import ApiV1HostsPartialUpdateKindErrorComponent
+        from ..models.api_v1_hosts_partial_update_kind_error_component import (
+            ApiV1HostsPartialUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_partial_update_labels_error_component import (
-            ApiV1HostsPartialUpdateLabelsErrorComponent,
+            ApiV1HostsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_partial_update_name_error_component import ApiV1HostsPartialUpdateNameErrorComponent
+        from ..models.api_v1_hosts_partial_update_name_error_component import (
+            ApiV1HostsPartialUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_partial_update_non_field_errors_error_component import (
-            ApiV1HostsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1HostsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_platform_service_error_component import (
-            ApiV1HostsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1HostsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_product_id_error_component import (
-            ApiV1HostsPartialUpdateProductIdErrorComponent,
+            ApiV1HostsPartialUpdateProductIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_account_id_error_component import (
-            ApiV1HostsPartialUpdateProviderAccountIdErrorComponent,
+            ApiV1HostsPartialUpdateProviderAccountIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_error_component import (
-            ApiV1HostsPartialUpdateProviderErrorComponent,
+            ApiV1HostsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_image_error_component import (
-            ApiV1HostsPartialUpdateProviderImageErrorComponent,
+            ApiV1HostsPartialUpdateProviderImageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_image_os_architecture_error_component import (
-            ApiV1HostsPartialUpdateProviderImageOsArchitectureErrorComponent,
+            ApiV1HostsPartialUpdateProviderImageOsArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_image_os_flavor_error_component import (
-            ApiV1HostsPartialUpdateProviderImageOsFlavorErrorComponent,
+            ApiV1HostsPartialUpdateProviderImageOsFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_image_os_version_error_component import (
-            ApiV1HostsPartialUpdateProviderImageOsVersionErrorComponent,
+            ApiV1HostsPartialUpdateProviderImageOsVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_location_error_component import (
-            ApiV1HostsPartialUpdateProviderLocationErrorComponent,
+            ApiV1HostsPartialUpdateProviderLocationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_reference_error_component import (
-            ApiV1HostsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1HostsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_provider_type_error_component import (
-            ApiV1HostsPartialUpdateProviderTypeErrorComponent,
+            ApiV1HostsPartialUpdateProviderTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_reconciliation_enabled_error_component import (
-            ApiV1HostsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1HostsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_cpu_architecture_error_component import (
-            ApiV1HostsPartialUpdateResourceCpuArchitectureErrorComponent,
+            ApiV1HostsPartialUpdateResourceCpuArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_cpu_cores_error_component import (
-            ApiV1HostsPartialUpdateResourceCpuCoresErrorComponent,
+            ApiV1HostsPartialUpdateResourceCpuCoresErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_cpu_type_error_component import (
-            ApiV1HostsPartialUpdateResourceCpuTypeErrorComponent,
+            ApiV1HostsPartialUpdateResourceCpuTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_disk_error_component import (
-            ApiV1HostsPartialUpdateResourceDiskErrorComponent,
+            ApiV1HostsPartialUpdateResourceDiskErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_resource_memory_error_component import (
-            ApiV1HostsPartialUpdateResourceMemoryErrorComponent,
+            ApiV1HostsPartialUpdateResourceMemoryErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_partial_update_role_error_component import ApiV1HostsPartialUpdateRoleErrorComponent
+        from ..models.api_v1_hosts_partial_update_role_error_component import (
+            ApiV1HostsPartialUpdateRoleErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_partial_update_sla_availability_error_component import (
-            ApiV1HostsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1HostsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_sla_target_error_component import (
-            ApiV1HostsPartialUpdateSlaTargetErrorComponent,
+            ApiV1HostsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_slo_availability_error_component import (
-            ApiV1HostsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1HostsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_slo_target_error_component import (
-            ApiV1HostsPartialUpdateSloTargetErrorComponent,
+            ApiV1HostsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_ssh_keys_id_error_component import (
-            ApiV1HostsPartialUpdateSshKeysIdErrorComponent,
+            ApiV1HostsPartialUpdateSshKeysIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_target_availability_error_component import (
-            ApiV1HostsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1HostsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_partial_update_tolerations_error_component import (
-            ApiV1HostsPartialUpdateTolerationsErrorComponent,
+            ApiV1HostsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

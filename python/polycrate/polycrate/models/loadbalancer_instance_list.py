@@ -128,8 +128,12 @@ class LoadbalancerInstanceList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.loadbalancer_instance_list_organization_type_0 import LoadbalancerInstanceListOrganizationType0
-        from ..models.loadbalancer_instance_list_workspace_type_0 import LoadbalancerInstanceListWorkspaceType0
+        from ..models.loadbalancer_instance_list_organization_type_0 import (
+            LoadbalancerInstanceListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_instance_list_workspace_type_0 import (
+            LoadbalancerInstanceListWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -273,16 +277,22 @@ class LoadbalancerInstanceList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.ip_address_simple import IPAddressSimple
+        from ..models.ip_address_simple import IPAddressSimple  # noqa: PLC0415
         from ..models.loadbalancer_instance_list_active_condition_instances_item import (
-            LoadbalancerInstanceListActiveConditionInstancesItem,
+            LoadbalancerInstanceListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.loadbalancer_instance_list_created import LoadbalancerInstanceListCreated
-        from ..models.loadbalancer_instance_list_deployment_summary import LoadbalancerInstanceListDeploymentSummary
-        from ..models.loadbalancer_instance_list_organization_type_0 import LoadbalancerInstanceListOrganizationType0
-        from ..models.loadbalancer_instance_list_workspace_type_0 import LoadbalancerInstanceListWorkspaceType0
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.loadbalancer_instance_list_created import LoadbalancerInstanceListCreated  # noqa: PLC0415
+        from ..models.loadbalancer_instance_list_deployment_summary import (
+            LoadbalancerInstanceListDeploymentSummary,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_instance_list_organization_type_0 import (
+            LoadbalancerInstanceListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.loadbalancer_instance_list_workspace_type_0 import (
+            LoadbalancerInstanceListWorkspaceType0,  # noqa: PLC0415
+        )
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

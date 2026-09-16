@@ -129,7 +129,8 @@ class K8SAddon:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            default_version (str | Unset): Empty = resolve latest matching template block version.
+            default_version (str | Unset): Concrete catalog pin. Empty or "latest" resolves to the highest template-block
+                version (Spec 819).
             default_block_config_template (str | Unset): Jinja2→YAML block config template (same context as BRC).
             template_block (str | Unset): Optional Jinja registry_url. Empty = catalogue_app.registry_url.
             scope_expressions (Any | Unset): List of Jinja boolean expressions; all must be True (like BRC).
@@ -212,10 +213,10 @@ class K8SAddon:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_addon_deleted_by_user_type_0 import K8SAddonDeletedByUserType0
-        from ..models.k8s_addon_last_action_run_type_0 import K8SAddonLastActionRunType0
-        from ..models.k8s_addon_organization_type_0 import K8SAddonOrganizationType0
-        from ..models.k8s_addon_workspace_type_0 import K8SAddonWorkspaceType0
+        from ..models.k8s_addon_deleted_by_user_type_0 import K8SAddonDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_addon_last_action_run_type_0 import K8SAddonLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_addon_organization_type_0 import K8SAddonOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_addon_workspace_type_0 import K8SAddonWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -556,11 +557,11 @@ class K8SAddon:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_addon_created import K8SAddonCreated
-        from ..models.k8s_addon_deleted_by_user_type_0 import K8SAddonDeletedByUserType0
-        from ..models.k8s_addon_last_action_run_type_0 import K8SAddonLastActionRunType0
-        from ..models.k8s_addon_organization_type_0 import K8SAddonOrganizationType0
-        from ..models.k8s_addon_workspace_type_0 import K8SAddonWorkspaceType0
+        from ..models.k8s_addon_created import K8SAddonCreated  # noqa: PLC0415
+        from ..models.k8s_addon_deleted_by_user_type_0 import K8SAddonDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_addon_last_action_run_type_0 import K8SAddonLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_addon_organization_type_0 import K8SAddonOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_addon_workspace_type_0 import K8SAddonWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

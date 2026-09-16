@@ -33,6 +33,9 @@ class LoadbalancerInstanceCreate:
             consumer_meta (Any | Unset): Arbitrary metadata from the consumer of this LoadBalancer instance
             labels (Any | Unset):
             annotations (Any | Unset):
+            resource_limits (Any | Unset): Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.
+            haproxy_defaults (Any | Unset): Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin,
+                option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.
     """
 
     id: UUID
@@ -44,6 +47,8 @@ class LoadbalancerInstanceCreate:
     consumer_meta: Any | Unset = UNSET
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
+    resource_limits: Any | Unset = UNSET
+    haproxy_defaults: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -69,6 +74,10 @@ class LoadbalancerInstanceCreate:
 
         annotations = self.annotations
 
+        resource_limits = self.resource_limits
+
+        haproxy_defaults = self.haproxy_defaults
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -90,6 +99,10 @@ class LoadbalancerInstanceCreate:
             field_dict["labels"] = labels
         if annotations is not UNSET:
             field_dict["annotations"] = annotations
+        if resource_limits is not UNSET:
+            field_dict["resource_limits"] = resource_limits
+        if haproxy_defaults is not UNSET:
+            field_dict["haproxy_defaults"] = haproxy_defaults
 
         return field_dict
 
@@ -121,6 +134,10 @@ class LoadbalancerInstanceCreate:
 
         annotations = d.pop("annotations", UNSET)
 
+        resource_limits = d.pop("resource_limits", UNSET)
+
+        haproxy_defaults = d.pop("haproxy_defaults", UNSET)
+
         loadbalancer_instance_create = cls(
             id=id,
             workspace=workspace,
@@ -131,6 +148,8 @@ class LoadbalancerInstanceCreate:
             consumer_meta=consumer_meta,
             labels=labels,
             annotations=annotations,
+            resource_limits=resource_limits,
+            haproxy_defaults=haproxy_defaults,
         )
 
         loadbalancer_instance_create.additional_properties = d

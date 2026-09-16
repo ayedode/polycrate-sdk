@@ -105,11 +105,15 @@ class AgentErrorReportRequestRequest:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.agent_error_report_request_request_error_counts import AgentErrorReportRequestRequestErrorCounts
-        from ..models.agent_error_report_request_request_recent_errors_item import (
-            AgentErrorReportRequestRequestRecentErrorsItem,
+        from ..models.agent_error_report_request_request_error_counts import (
+            AgentErrorReportRequestRequestErrorCounts,  # noqa: PLC0415
         )
-        from ..models.agent_error_report_request_request_system_info import AgentErrorReportRequestRequestSystemInfo
+        from ..models.agent_error_report_request_request_recent_errors_item import (
+            AgentErrorReportRequestRequestRecentErrorsItem,  # noqa: PLC0415
+        )
+        from ..models.agent_error_report_request_request_system_info import (
+            AgentErrorReportRequestRequestSystemInfo,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         agent_id = d.pop("agent_id")

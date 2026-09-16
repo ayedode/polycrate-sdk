@@ -45,7 +45,7 @@ class CLIActionRunFinishRequestRequest:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.cli_action_run_finish_request_request_metadata_type_0 import (
-            CLIActionRunFinishRequestRequestMetadataType0,
+            CLIActionRunFinishRequestRequestMetadataType0,  # noqa: PLC0415
         )
 
         exit_code = self.exit_code
@@ -90,7 +90,7 @@ class CLIActionRunFinishRequestRequest:
 
     def to_multipart(self) -> types.RequestFiles:
         from ..models.cli_action_run_finish_request_request_metadata_type_0 import (
-            CLIActionRunFinishRequestRequestMetadataType0,
+            CLIActionRunFinishRequestRequestMetadataType0,  # noqa: PLC0415
         )
 
         files: types.RequestFiles = []
@@ -123,7 +123,7 @@ class CLIActionRunFinishRequestRequest:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.cli_action_run_finish_request_request_metadata_type_0 import (
-            CLIActionRunFinishRequestRequestMetadataType0,
+            CLIActionRunFinishRequestRequestMetadataType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

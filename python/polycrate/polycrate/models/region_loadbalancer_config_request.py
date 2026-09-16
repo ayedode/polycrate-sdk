@@ -125,7 +125,7 @@ class RegionLoadbalancerConfigRequest:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.region_loadbalancer_config_request_region_config import (
-            RegionLoadbalancerConfigRequestRegionConfig,
+            RegionLoadbalancerConfigRequestRegionConfig,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -181,97 +181,97 @@ class ApiV1DeliveryControllersUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_delivery_controllers_update_annotations_error_component import (
-            ApiV1DeliveryControllersUpdateAnnotationsErrorComponent,
+            ApiV1DeliveryControllersUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_applications_degraded_error_component import (
-            ApiV1DeliveryControllersUpdateApplicationsDegradedErrorComponent,
+            ApiV1DeliveryControllersUpdateApplicationsDegradedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_applications_out_of_sync_error_component import (
-            ApiV1DeliveryControllersUpdateApplicationsOutOfSyncErrorComponent,
+            ApiV1DeliveryControllersUpdateApplicationsOutOfSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_applications_synced_error_component import (
-            ApiV1DeliveryControllersUpdateApplicationsSyncedErrorComponent,
+            ApiV1DeliveryControllersUpdateApplicationsSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_applications_total_error_component import (
-            ApiV1DeliveryControllersUpdateApplicationsTotalErrorComponent,
+            ApiV1DeliveryControllersUpdateApplicationsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_archived_at_error_component import (
-            ApiV1DeliveryControllersUpdateArchivedAtErrorComponent,
+            ApiV1DeliveryControllersUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_archived_error_component import (
-            ApiV1DeliveryControllersUpdateArchivedErrorComponent,
+            ApiV1DeliveryControllersUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_archived_reason_error_component import (
-            ApiV1DeliveryControllersUpdateArchivedReasonErrorComponent,
+            ApiV1DeliveryControllersUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_controller_app_version_error_component import (
-            ApiV1DeliveryControllersUpdateControllerAppVersionErrorComponent,
+            ApiV1DeliveryControllersUpdateControllerAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_credential_error_component import (
-            ApiV1DeliveryControllersUpdateCredentialErrorComponent,
+            ApiV1DeliveryControllersUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_criticality_error_component import (
-            ApiV1DeliveryControllersUpdateCriticalityErrorComponent,
+            ApiV1DeliveryControllersUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_debug_mode_error_component import (
-            ApiV1DeliveryControllersUpdateDebugModeErrorComponent,
+            ApiV1DeliveryControllersUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_display_name_error_component import (
-            ApiV1DeliveryControllersUpdateDisplayNameErrorComponent,
+            ApiV1DeliveryControllersUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_hostname_error_component import (
-            ApiV1DeliveryControllersUpdateHostnameErrorComponent,
+            ApiV1DeliveryControllersUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_k8s_app_error_component import (
-            ApiV1DeliveryControllersUpdateK8SAppErrorComponent,
+            ApiV1DeliveryControllersUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_k8s_cluster_error_component import (
-            ApiV1DeliveryControllersUpdateK8SClusterErrorComponent,
+            ApiV1DeliveryControllersUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_kind_error_component import (
-            ApiV1DeliveryControllersUpdateKindErrorComponent,
+            ApiV1DeliveryControllersUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_labels_error_component import (
-            ApiV1DeliveryControllersUpdateLabelsErrorComponent,
+            ApiV1DeliveryControllersUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_name_error_component import (
-            ApiV1DeliveryControllersUpdateNameErrorComponent,
+            ApiV1DeliveryControllersUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_non_field_errors_error_component import (
-            ApiV1DeliveryControllersUpdateNonFieldErrorsErrorComponent,
+            ApiV1DeliveryControllersUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_platform_service_error_component import (
-            ApiV1DeliveryControllersUpdatePlatformServiceErrorComponent,
+            ApiV1DeliveryControllersUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_provider_error_component import (
-            ApiV1DeliveryControllersUpdateProviderErrorComponent,
+            ApiV1DeliveryControllersUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_provider_id_error_component import (
-            ApiV1DeliveryControllersUpdateProviderIdErrorComponent,
+            ApiV1DeliveryControllersUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_provider_reference_error_component import (
-            ApiV1DeliveryControllersUpdateProviderReferenceErrorComponent,
+            ApiV1DeliveryControllersUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_reconciliation_enabled_error_component import (
-            ApiV1DeliveryControllersUpdateReconciliationEnabledErrorComponent,
+            ApiV1DeliveryControllersUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_sla_availability_error_component import (
-            ApiV1DeliveryControllersUpdateSlaAvailabilityErrorComponent,
+            ApiV1DeliveryControllersUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_sla_target_error_component import (
-            ApiV1DeliveryControllersUpdateSlaTargetErrorComponent,
+            ApiV1DeliveryControllersUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_slo_availability_error_component import (
-            ApiV1DeliveryControllersUpdateSloAvailabilityErrorComponent,
+            ApiV1DeliveryControllersUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_slo_target_error_component import (
-            ApiV1DeliveryControllersUpdateSloTargetErrorComponent,
+            ApiV1DeliveryControllersUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_target_availability_error_component import (
-            ApiV1DeliveryControllersUpdateTargetAvailabilityErrorComponent,
+            ApiV1DeliveryControllersUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_tolerations_error_component import (
-            ApiV1DeliveryControllersUpdateTolerationsErrorComponent,
+            ApiV1DeliveryControllersUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -360,100 +360,100 @@ class ApiV1DeliveryControllersUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_delivery_controllers_update_annotations_error_component import (
-            ApiV1DeliveryControllersUpdateAnnotationsErrorComponent,
+            ApiV1DeliveryControllersUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_applications_degraded_error_component import (
-            ApiV1DeliveryControllersUpdateApplicationsDegradedErrorComponent,
+            ApiV1DeliveryControllersUpdateApplicationsDegradedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_applications_out_of_sync_error_component import (
-            ApiV1DeliveryControllersUpdateApplicationsOutOfSyncErrorComponent,
+            ApiV1DeliveryControllersUpdateApplicationsOutOfSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_applications_synced_error_component import (
-            ApiV1DeliveryControllersUpdateApplicationsSyncedErrorComponent,
+            ApiV1DeliveryControllersUpdateApplicationsSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_applications_total_error_component import (
-            ApiV1DeliveryControllersUpdateApplicationsTotalErrorComponent,
+            ApiV1DeliveryControllersUpdateApplicationsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_archived_at_error_component import (
-            ApiV1DeliveryControllersUpdateArchivedAtErrorComponent,
+            ApiV1DeliveryControllersUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_archived_error_component import (
-            ApiV1DeliveryControllersUpdateArchivedErrorComponent,
+            ApiV1DeliveryControllersUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_archived_reason_error_component import (
-            ApiV1DeliveryControllersUpdateArchivedReasonErrorComponent,
+            ApiV1DeliveryControllersUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_controller_app_version_error_component import (
-            ApiV1DeliveryControllersUpdateControllerAppVersionErrorComponent,
+            ApiV1DeliveryControllersUpdateControllerAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_credential_error_component import (
-            ApiV1DeliveryControllersUpdateCredentialErrorComponent,
+            ApiV1DeliveryControllersUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_criticality_error_component import (
-            ApiV1DeliveryControllersUpdateCriticalityErrorComponent,
+            ApiV1DeliveryControllersUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_debug_mode_error_component import (
-            ApiV1DeliveryControllersUpdateDebugModeErrorComponent,
+            ApiV1DeliveryControllersUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_display_name_error_component import (
-            ApiV1DeliveryControllersUpdateDisplayNameErrorComponent,
+            ApiV1DeliveryControllersUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_hostname_error_component import (
-            ApiV1DeliveryControllersUpdateHostnameErrorComponent,
+            ApiV1DeliveryControllersUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_k8s_app_error_component import (
-            ApiV1DeliveryControllersUpdateK8SAppErrorComponent,
+            ApiV1DeliveryControllersUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_k8s_cluster_error_component import (
-            ApiV1DeliveryControllersUpdateK8SClusterErrorComponent,
+            ApiV1DeliveryControllersUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_kind_error_component import (
-            ApiV1DeliveryControllersUpdateKindErrorComponent,
+            ApiV1DeliveryControllersUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_labels_error_component import (
-            ApiV1DeliveryControllersUpdateLabelsErrorComponent,
+            ApiV1DeliveryControllersUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_metadata_error_component import (
-            ApiV1DeliveryControllersUpdateMetadataErrorComponent,
+            ApiV1DeliveryControllersUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_name_error_component import (
-            ApiV1DeliveryControllersUpdateNameErrorComponent,
+            ApiV1DeliveryControllersUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_non_field_errors_error_component import (
-            ApiV1DeliveryControllersUpdateNonFieldErrorsErrorComponent,
+            ApiV1DeliveryControllersUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_platform_service_error_component import (
-            ApiV1DeliveryControllersUpdatePlatformServiceErrorComponent,
+            ApiV1DeliveryControllersUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_provider_error_component import (
-            ApiV1DeliveryControllersUpdateProviderErrorComponent,
+            ApiV1DeliveryControllersUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_provider_id_error_component import (
-            ApiV1DeliveryControllersUpdateProviderIdErrorComponent,
+            ApiV1DeliveryControllersUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_provider_reference_error_component import (
-            ApiV1DeliveryControllersUpdateProviderReferenceErrorComponent,
+            ApiV1DeliveryControllersUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_reconciliation_enabled_error_component import (
-            ApiV1DeliveryControllersUpdateReconciliationEnabledErrorComponent,
+            ApiV1DeliveryControllersUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_sla_availability_error_component import (
-            ApiV1DeliveryControllersUpdateSlaAvailabilityErrorComponent,
+            ApiV1DeliveryControllersUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_sla_target_error_component import (
-            ApiV1DeliveryControllersUpdateSlaTargetErrorComponent,
+            ApiV1DeliveryControllersUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_slo_availability_error_component import (
-            ApiV1DeliveryControllersUpdateSloAvailabilityErrorComponent,
+            ApiV1DeliveryControllersUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_slo_target_error_component import (
-            ApiV1DeliveryControllersUpdateSloTargetErrorComponent,
+            ApiV1DeliveryControllersUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_target_availability_error_component import (
-            ApiV1DeliveryControllersUpdateTargetAvailabilityErrorComponent,
+            ApiV1DeliveryControllersUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_update_tolerations_error_component import (
-            ApiV1DeliveryControllersUpdateTolerationsErrorComponent,
+            ApiV1DeliveryControllersUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

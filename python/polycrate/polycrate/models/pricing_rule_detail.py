@@ -220,10 +220,14 @@ class PricingRuleDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.pricing_rule_detail_deleted_by_user_type_0 import PricingRuleDetailDeletedByUserType0
-        from ..models.pricing_rule_detail_last_action_run_type_0 import PricingRuleDetailLastActionRunType0
-        from ..models.pricing_rule_detail_organization_type_0 import PricingRuleDetailOrganizationType0
-        from ..models.pricing_rule_detail_workspace_type_0 import PricingRuleDetailWorkspaceType0
+        from ..models.pricing_rule_detail_deleted_by_user_type_0 import (
+            PricingRuleDetailDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.pricing_rule_detail_last_action_run_type_0 import (
+            PricingRuleDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.pricing_rule_detail_organization_type_0 import PricingRuleDetailOrganizationType0  # noqa: PLC0415
+        from ..models.pricing_rule_detail_workspace_type_0 import PricingRuleDetailWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -561,12 +565,16 @@ class PricingRuleDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pricing_rule_detail_created import PricingRuleDetailCreated
-        from ..models.pricing_rule_detail_deleted_by_user_type_0 import PricingRuleDetailDeletedByUserType0
-        from ..models.pricing_rule_detail_last_action_run_type_0 import PricingRuleDetailLastActionRunType0
-        from ..models.pricing_rule_detail_organization_type_0 import PricingRuleDetailOrganizationType0
-        from ..models.pricing_rule_detail_workspace_type_0 import PricingRuleDetailWorkspaceType0
-        from ..models.product_simple import ProductSimple
+        from ..models.pricing_rule_detail_created import PricingRuleDetailCreated  # noqa: PLC0415
+        from ..models.pricing_rule_detail_deleted_by_user_type_0 import (
+            PricingRuleDetailDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.pricing_rule_detail_last_action_run_type_0 import (
+            PricingRuleDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.pricing_rule_detail_organization_type_0 import PricingRuleDetailOrganizationType0  # noqa: PLC0415
+        from ..models.pricing_rule_detail_workspace_type_0 import PricingRuleDetailWorkspaceType0  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

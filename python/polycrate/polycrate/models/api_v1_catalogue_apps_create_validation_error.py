@@ -61,6 +61,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_catalogue_apps_create_last_reconciliation_duration_seconds_error_component import (
         ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent,
     )
+    from ..models.api_v1_catalogue_apps_create_maintainer_id_error_component import (
+        ApiV1CatalogueAppsCreateMaintainerIdErrorComponent,
+    )
     from ..models.api_v1_catalogue_apps_create_managed_by_content_type_error_component import (
         ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent,
     )
@@ -167,10 +170,10 @@ class ApiV1CatalogueAppsCreateValidationError:
             ApiV1CatalogueAppsCreateHaEnabledExpressionErrorComponent | ApiV1CatalogueAppsCreateIsNewErrorComponent |
             ApiV1CatalogueAppsCreateKindErrorComponent | ApiV1CatalogueAppsCreateLabelsErrorComponent |
             ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent |
-            ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent |
-            ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent | ApiV1CatalogueAppsCreateMarkdownContentErrorComponent
-            | ApiV1CatalogueAppsCreateModifiedByUserErrorComponent | ApiV1CatalogueAppsCreateNameErrorComponent |
-            ApiV1CatalogueAppsCreateNonFieldErrorsErrorComponent |
+            ApiV1CatalogueAppsCreateMaintainerIdErrorComponent | ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent
+            | ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent |
+            ApiV1CatalogueAppsCreateMarkdownContentErrorComponent | ApiV1CatalogueAppsCreateModifiedByUserErrorComponent |
+            ApiV1CatalogueAppsCreateNameErrorComponent | ApiV1CatalogueAppsCreateNonFieldErrorsErrorComponent |
             ApiV1CatalogueAppsCreatePlatformDnsRecordCreatedErrorComponent |
             ApiV1CatalogueAppsCreatePlatformServiceErrorComponent | ApiV1CatalogueAppsCreateProductHaIdErrorComponent |
             ApiV1CatalogueAppsCreateProductRegularIdErrorComponent | ApiV1CatalogueAppsCreateProviderErrorComponent |
@@ -207,6 +210,7 @@ class ApiV1CatalogueAppsCreateValidationError:
         | ApiV1CatalogueAppsCreateKindErrorComponent
         | ApiV1CatalogueAppsCreateLabelsErrorComponent
         | ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent
+        | ApiV1CatalogueAppsCreateMaintainerIdErrorComponent
         | ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent
         | ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent
         | ApiV1CatalogueAppsCreateMarkdownContentErrorComponent
@@ -241,148 +245,151 @@ class ApiV1CatalogueAppsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_catalogue_apps_create_annotations_error_component import (
-            ApiV1CatalogueAppsCreateAnnotationsErrorComponent,
+            ApiV1CatalogueAppsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_archived_at_error_component import (
-            ApiV1CatalogueAppsCreateArchivedAtErrorComponent,
+            ApiV1CatalogueAppsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_archived_by_error_component import (
-            ApiV1CatalogueAppsCreateArchivedByErrorComponent,
+            ApiV1CatalogueAppsCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_archived_error_component import (
-            ApiV1CatalogueAppsCreateArchivedErrorComponent,
+            ApiV1CatalogueAppsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_archived_reason_error_component import (
-            ApiV1CatalogueAppsCreateArchivedReasonErrorComponent,
+            ApiV1CatalogueAppsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_artifact_package_error_component import (
-            ApiV1CatalogueAppsCreateArtifactPackageErrorComponent,
+            ApiV1CatalogueAppsCreateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_claim_error_component import (
-            ApiV1CatalogueAppsCreateClaimErrorComponent,
+            ApiV1CatalogueAppsCreateClaimErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_created_by_component_error_component import (
-            ApiV1CatalogueAppsCreateCreatedByComponentErrorComponent,
+            ApiV1CatalogueAppsCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_created_by_user_error_component import (
-            ApiV1CatalogueAppsCreateCreatedByUserErrorComponent,
+            ApiV1CatalogueAppsCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_criticality_error_component import (
-            ApiV1CatalogueAppsCreateCriticalityErrorComponent,
+            ApiV1CatalogueAppsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_debug_mode_error_component import (
-            ApiV1CatalogueAppsCreateDebugModeErrorComponent,
+            ApiV1CatalogueAppsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_display_name_error_component import (
-            ApiV1CatalogueAppsCreateDisplayNameErrorComponent,
+            ApiV1CatalogueAppsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_draft_error_component import (
-            ApiV1CatalogueAppsCreateDraftErrorComponent,
+            ApiV1CatalogueAppsCreateDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_git_repository_url_error_component import (
-            ApiV1CatalogueAppsCreateGitRepositoryUrlErrorComponent,
+            ApiV1CatalogueAppsCreateGitRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_ha_enabled_expression_error_component import (
-            ApiV1CatalogueAppsCreateHaEnabledExpressionErrorComponent,
+            ApiV1CatalogueAppsCreateHaEnabledExpressionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_is_new_error_component import (
-            ApiV1CatalogueAppsCreateIsNewErrorComponent,
+            ApiV1CatalogueAppsCreateIsNewErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_kind_error_component import (
-            ApiV1CatalogueAppsCreateKindErrorComponent,
+            ApiV1CatalogueAppsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_labels_error_component import (
-            ApiV1CatalogueAppsCreateLabelsErrorComponent,
+            ApiV1CatalogueAppsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_catalogue_apps_create_maintainer_id_error_component import (
+            ApiV1CatalogueAppsCreateMaintainerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_managed_by_content_type_error_component import (
-            ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent,
+            ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_managed_by_object_id_error_component import (
-            ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent,
+            ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_markdown_content_error_component import (
-            ApiV1CatalogueAppsCreateMarkdownContentErrorComponent,
+            ApiV1CatalogueAppsCreateMarkdownContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_modified_by_user_error_component import (
-            ApiV1CatalogueAppsCreateModifiedByUserErrorComponent,
+            ApiV1CatalogueAppsCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_name_error_component import (
-            ApiV1CatalogueAppsCreateNameErrorComponent,
+            ApiV1CatalogueAppsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_non_field_errors_error_component import (
-            ApiV1CatalogueAppsCreateNonFieldErrorsErrorComponent,
+            ApiV1CatalogueAppsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_platform_dns_record_created_error_component import (
-            ApiV1CatalogueAppsCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1CatalogueAppsCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_platform_service_error_component import (
-            ApiV1CatalogueAppsCreatePlatformServiceErrorComponent,
+            ApiV1CatalogueAppsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_product_ha_id_error_component import (
-            ApiV1CatalogueAppsCreateProductHaIdErrorComponent,
+            ApiV1CatalogueAppsCreateProductHaIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_product_regular_id_error_component import (
-            ApiV1CatalogueAppsCreateProductRegularIdErrorComponent,
+            ApiV1CatalogueAppsCreateProductRegularIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_provider_error_component import (
-            ApiV1CatalogueAppsCreateProviderErrorComponent,
+            ApiV1CatalogueAppsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_provider_id_error_component import (
-            ApiV1CatalogueAppsCreateProviderIdErrorComponent,
+            ApiV1CatalogueAppsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_provider_reference_error_component import (
-            ApiV1CatalogueAppsCreateProviderReferenceErrorComponent,
+            ApiV1CatalogueAppsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_reconciliation_enabled_error_component import (
-            ApiV1CatalogueAppsCreateReconciliationEnabledErrorComponent,
+            ApiV1CatalogueAppsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_registry_url_error_component import (
-            ApiV1CatalogueAppsCreateRegistryUrlErrorComponent,
+            ApiV1CatalogueAppsCreateRegistryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_releases_url_error_component import (
-            ApiV1CatalogueAppsCreateReleasesUrlErrorComponent,
+            ApiV1CatalogueAppsCreateReleasesUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_screenshot_error_component import (
-            ApiV1CatalogueAppsCreateScreenshotErrorComponent,
+            ApiV1CatalogueAppsCreateScreenshotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_serial_number_error_component import (
-            ApiV1CatalogueAppsCreateSerialNumberErrorComponent,
+            ApiV1CatalogueAppsCreateSerialNumberErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_short_description_error_component import (
-            ApiV1CatalogueAppsCreateShortDescriptionErrorComponent,
+            ApiV1CatalogueAppsCreateShortDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_sla_availability_error_component import (
-            ApiV1CatalogueAppsCreateSlaAvailabilityErrorComponent,
+            ApiV1CatalogueAppsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_sla_target_error_component import (
-            ApiV1CatalogueAppsCreateSlaTargetErrorComponent,
+            ApiV1CatalogueAppsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_sla_window_days_error_component import (
-            ApiV1CatalogueAppsCreateSlaWindowDaysErrorComponent,
+            ApiV1CatalogueAppsCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_slo_availability_error_component import (
-            ApiV1CatalogueAppsCreateSloAvailabilityErrorComponent,
+            ApiV1CatalogueAppsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_slo_target_error_component import (
-            ApiV1CatalogueAppsCreateSloTargetErrorComponent,
+            ApiV1CatalogueAppsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_slo_window_days_error_component import (
-            ApiV1CatalogueAppsCreateSloWindowDaysErrorComponent,
+            ApiV1CatalogueAppsCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_supports_ha_error_component import (
-            ApiV1CatalogueAppsCreateSupportsHaErrorComponent,
+            ApiV1CatalogueAppsCreateSupportsHaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_target_availability_error_component import (
-            ApiV1CatalogueAppsCreateTargetAvailabilityErrorComponent,
+            ApiV1CatalogueAppsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_tolerations_error_component import (
-            ApiV1CatalogueAppsCreateTolerationsErrorComponent,
+            ApiV1CatalogueAppsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_tracked_app_version_error_component import (
-            ApiV1CatalogueAppsCreateTrackedAppVersionErrorComponent,
+            ApiV1CatalogueAppsCreateTrackedAppVersionErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -397,6 +404,8 @@ class ApiV1CatalogueAppsCreateValidationError:
             elif isinstance(errors_item_data, ApiV1CatalogueAppsCreateProductRegularIdErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1CatalogueAppsCreateProductHaIdErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1CatalogueAppsCreateMaintainerIdErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1CatalogueAppsCreateDisplayNameErrorComponent):
                 errors_item = errors_item_data.to_dict()
@@ -505,151 +514,154 @@ class ApiV1CatalogueAppsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_catalogue_apps_create_annotations_error_component import (
-            ApiV1CatalogueAppsCreateAnnotationsErrorComponent,
+            ApiV1CatalogueAppsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_archived_at_error_component import (
-            ApiV1CatalogueAppsCreateArchivedAtErrorComponent,
+            ApiV1CatalogueAppsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_archived_by_error_component import (
-            ApiV1CatalogueAppsCreateArchivedByErrorComponent,
+            ApiV1CatalogueAppsCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_archived_error_component import (
-            ApiV1CatalogueAppsCreateArchivedErrorComponent,
+            ApiV1CatalogueAppsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_archived_reason_error_component import (
-            ApiV1CatalogueAppsCreateArchivedReasonErrorComponent,
+            ApiV1CatalogueAppsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_artifact_package_error_component import (
-            ApiV1CatalogueAppsCreateArtifactPackageErrorComponent,
+            ApiV1CatalogueAppsCreateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_claim_error_component import (
-            ApiV1CatalogueAppsCreateClaimErrorComponent,
+            ApiV1CatalogueAppsCreateClaimErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_created_by_component_error_component import (
-            ApiV1CatalogueAppsCreateCreatedByComponentErrorComponent,
+            ApiV1CatalogueAppsCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_created_by_user_error_component import (
-            ApiV1CatalogueAppsCreateCreatedByUserErrorComponent,
+            ApiV1CatalogueAppsCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_criticality_error_component import (
-            ApiV1CatalogueAppsCreateCriticalityErrorComponent,
+            ApiV1CatalogueAppsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_debug_mode_error_component import (
-            ApiV1CatalogueAppsCreateDebugModeErrorComponent,
+            ApiV1CatalogueAppsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_dependencies_error_component import (
-            ApiV1CatalogueAppsCreateDependenciesErrorComponent,
+            ApiV1CatalogueAppsCreateDependenciesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_display_name_error_component import (
-            ApiV1CatalogueAppsCreateDisplayNameErrorComponent,
+            ApiV1CatalogueAppsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_draft_error_component import (
-            ApiV1CatalogueAppsCreateDraftErrorComponent,
+            ApiV1CatalogueAppsCreateDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_git_repository_url_error_component import (
-            ApiV1CatalogueAppsCreateGitRepositoryUrlErrorComponent,
+            ApiV1CatalogueAppsCreateGitRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_ha_enabled_expression_error_component import (
-            ApiV1CatalogueAppsCreateHaEnabledExpressionErrorComponent,
+            ApiV1CatalogueAppsCreateHaEnabledExpressionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_is_new_error_component import (
-            ApiV1CatalogueAppsCreateIsNewErrorComponent,
+            ApiV1CatalogueAppsCreateIsNewErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_kind_error_component import (
-            ApiV1CatalogueAppsCreateKindErrorComponent,
+            ApiV1CatalogueAppsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_labels_error_component import (
-            ApiV1CatalogueAppsCreateLabelsErrorComponent,
+            ApiV1CatalogueAppsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_catalogue_apps_create_maintainer_id_error_component import (
+            ApiV1CatalogueAppsCreateMaintainerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_managed_by_content_type_error_component import (
-            ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent,
+            ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_managed_by_object_id_error_component import (
-            ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent,
+            ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_markdown_content_error_component import (
-            ApiV1CatalogueAppsCreateMarkdownContentErrorComponent,
+            ApiV1CatalogueAppsCreateMarkdownContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_modified_by_user_error_component import (
-            ApiV1CatalogueAppsCreateModifiedByUserErrorComponent,
+            ApiV1CatalogueAppsCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_name_error_component import (
-            ApiV1CatalogueAppsCreateNameErrorComponent,
+            ApiV1CatalogueAppsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_non_field_errors_error_component import (
-            ApiV1CatalogueAppsCreateNonFieldErrorsErrorComponent,
+            ApiV1CatalogueAppsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_platform_dns_record_created_error_component import (
-            ApiV1CatalogueAppsCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1CatalogueAppsCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_platform_service_error_component import (
-            ApiV1CatalogueAppsCreatePlatformServiceErrorComponent,
+            ApiV1CatalogueAppsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_product_ha_id_error_component import (
-            ApiV1CatalogueAppsCreateProductHaIdErrorComponent,
+            ApiV1CatalogueAppsCreateProductHaIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_product_regular_id_error_component import (
-            ApiV1CatalogueAppsCreateProductRegularIdErrorComponent,
+            ApiV1CatalogueAppsCreateProductRegularIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_provider_error_component import (
-            ApiV1CatalogueAppsCreateProviderErrorComponent,
+            ApiV1CatalogueAppsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_provider_id_error_component import (
-            ApiV1CatalogueAppsCreateProviderIdErrorComponent,
+            ApiV1CatalogueAppsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_provider_reference_error_component import (
-            ApiV1CatalogueAppsCreateProviderReferenceErrorComponent,
+            ApiV1CatalogueAppsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_reconciliation_enabled_error_component import (
-            ApiV1CatalogueAppsCreateReconciliationEnabledErrorComponent,
+            ApiV1CatalogueAppsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_registry_url_error_component import (
-            ApiV1CatalogueAppsCreateRegistryUrlErrorComponent,
+            ApiV1CatalogueAppsCreateRegistryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_releases_url_error_component import (
-            ApiV1CatalogueAppsCreateReleasesUrlErrorComponent,
+            ApiV1CatalogueAppsCreateReleasesUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_screenshot_error_component import (
-            ApiV1CatalogueAppsCreateScreenshotErrorComponent,
+            ApiV1CatalogueAppsCreateScreenshotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_serial_number_error_component import (
-            ApiV1CatalogueAppsCreateSerialNumberErrorComponent,
+            ApiV1CatalogueAppsCreateSerialNumberErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_short_description_error_component import (
-            ApiV1CatalogueAppsCreateShortDescriptionErrorComponent,
+            ApiV1CatalogueAppsCreateShortDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_sla_availability_error_component import (
-            ApiV1CatalogueAppsCreateSlaAvailabilityErrorComponent,
+            ApiV1CatalogueAppsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_sla_target_error_component import (
-            ApiV1CatalogueAppsCreateSlaTargetErrorComponent,
+            ApiV1CatalogueAppsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_sla_window_days_error_component import (
-            ApiV1CatalogueAppsCreateSlaWindowDaysErrorComponent,
+            ApiV1CatalogueAppsCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_slo_availability_error_component import (
-            ApiV1CatalogueAppsCreateSloAvailabilityErrorComponent,
+            ApiV1CatalogueAppsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_slo_target_error_component import (
-            ApiV1CatalogueAppsCreateSloTargetErrorComponent,
+            ApiV1CatalogueAppsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_slo_window_days_error_component import (
-            ApiV1CatalogueAppsCreateSloWindowDaysErrorComponent,
+            ApiV1CatalogueAppsCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_supports_ha_error_component import (
-            ApiV1CatalogueAppsCreateSupportsHaErrorComponent,
+            ApiV1CatalogueAppsCreateSupportsHaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_target_availability_error_component import (
-            ApiV1CatalogueAppsCreateTargetAvailabilityErrorComponent,
+            ApiV1CatalogueAppsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_tolerations_error_component import (
-            ApiV1CatalogueAppsCreateTolerationsErrorComponent,
+            ApiV1CatalogueAppsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_create_tracked_app_version_error_component import (
-            ApiV1CatalogueAppsCreateTrackedAppVersionErrorComponent,
+            ApiV1CatalogueAppsCreateTrackedAppVersionErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -682,6 +694,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                 | ApiV1CatalogueAppsCreateKindErrorComponent
                 | ApiV1CatalogueAppsCreateLabelsErrorComponent
                 | ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent
+                | ApiV1CatalogueAppsCreateMaintainerIdErrorComponent
                 | ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent
                 | ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent
                 | ApiV1CatalogueAppsCreateMarkdownContentErrorComponent
@@ -756,7 +769,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_4 = (
-                        ApiV1CatalogueAppsCreateDisplayNameErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateMaintainerIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_4
@@ -766,7 +779,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_5 = (
-                        ApiV1CatalogueAppsCreateLabelsErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateDisplayNameErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_5
@@ -776,7 +789,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_6 = (
-                        ApiV1CatalogueAppsCreateAnnotationsErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateLabelsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_6
@@ -786,7 +799,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_7 = (
-                        ApiV1CatalogueAppsCreateDebugModeErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateAnnotationsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_7
@@ -796,7 +809,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_8 = (
-                        ApiV1CatalogueAppsCreateProviderErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateDebugModeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_8
@@ -806,7 +819,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_9 = (
-                        ApiV1CatalogueAppsCreateProviderReferenceErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateProviderErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_9
@@ -816,7 +829,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_10 = (
-                        ApiV1CatalogueAppsCreateProviderIdErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateProviderReferenceErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_10
@@ -826,7 +839,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_11 = (
-                        ApiV1CatalogueAppsCreateReconciliationEnabledErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateProviderIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_11
@@ -836,7 +849,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_12 = (
-                        ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateReconciliationEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_12
@@ -846,7 +859,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_13 = (
-                        ApiV1CatalogueAppsCreatePlatformServiceErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_13
@@ -856,7 +869,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_14 = (
-                        ApiV1CatalogueAppsCreateKindErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreatePlatformServiceErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_14
@@ -866,7 +879,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_15 = (
-                        ApiV1CatalogueAppsCreateTolerationsErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateKindErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_15
@@ -876,7 +889,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_16 = (
-                        ApiV1CatalogueAppsCreateArchivedErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateTolerationsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_16
@@ -886,7 +899,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_17 = (
-                        ApiV1CatalogueAppsCreateArchivedAtErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateArchivedErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_17
@@ -896,7 +909,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_18 = (
-                        ApiV1CatalogueAppsCreateArchivedReasonErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateArchivedAtErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_18
@@ -906,7 +919,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_19 = (
-                        ApiV1CatalogueAppsCreateCreatedByComponentErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateArchivedReasonErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_19
@@ -916,7 +929,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_20 = (
-                        ApiV1CatalogueAppsCreateTargetAvailabilityErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateCreatedByComponentErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_20
@@ -926,7 +939,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_21 = (
-                        ApiV1CatalogueAppsCreateSloTargetErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateTargetAvailabilityErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_21
@@ -936,7 +949,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_22 = (
-                        ApiV1CatalogueAppsCreateSloWindowDaysErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateSloTargetErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_22
@@ -946,7 +959,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_23 = (
-                        ApiV1CatalogueAppsCreateSloAvailabilityErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateSloWindowDaysErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_23
@@ -956,7 +969,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_24 = (
-                        ApiV1CatalogueAppsCreateSlaTargetErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateSloAvailabilityErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_24
@@ -966,7 +979,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_25 = (
-                        ApiV1CatalogueAppsCreateSlaWindowDaysErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateSlaTargetErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_25
@@ -976,7 +989,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_26 = (
-                        ApiV1CatalogueAppsCreateSlaAvailabilityErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateSlaWindowDaysErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_26
@@ -986,7 +999,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_27 = (
-                        ApiV1CatalogueAppsCreateCriticalityErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateSlaAvailabilityErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_27
@@ -996,7 +1009,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_28 = (
-                        ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateCriticalityErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_28
@@ -1006,7 +1019,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_29 = (
-                        ApiV1CatalogueAppsCreatePlatformDnsRecordCreatedErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateManagedByObjectIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_29
@@ -1016,7 +1029,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_30 = (
-                        ApiV1CatalogueAppsCreateSerialNumberErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreatePlatformDnsRecordCreatedErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_30
@@ -1026,7 +1039,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_31 = (
-                        ApiV1CatalogueAppsCreateShortDescriptionErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateSerialNumberErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_31
@@ -1036,7 +1049,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_32 = (
-                        ApiV1CatalogueAppsCreateClaimErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateShortDescriptionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_32
@@ -1046,7 +1059,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_33 = (
-                        ApiV1CatalogueAppsCreateDraftErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateClaimErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_33
@@ -1056,7 +1069,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_34 = (
-                        ApiV1CatalogueAppsCreateIsNewErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateDraftErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_34
@@ -1066,7 +1079,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_35 = (
-                        ApiV1CatalogueAppsCreateScreenshotErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateIsNewErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_35
@@ -1076,7 +1089,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_36 = (
-                        ApiV1CatalogueAppsCreateMarkdownContentErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateScreenshotErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_36
@@ -1086,7 +1099,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_37 = (
-                        ApiV1CatalogueAppsCreateSupportsHaErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateMarkdownContentErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_37
@@ -1096,7 +1109,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_38 = (
-                        ApiV1CatalogueAppsCreateHaEnabledExpressionErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateSupportsHaErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_38
@@ -1106,7 +1119,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_39 = (
-                        ApiV1CatalogueAppsCreateRegistryUrlErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateHaEnabledExpressionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_39
@@ -1116,7 +1129,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_40 = (
-                        ApiV1CatalogueAppsCreateReleasesUrlErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateRegistryUrlErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_40
@@ -1126,7 +1139,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_41 = (
-                        ApiV1CatalogueAppsCreateGitRepositoryUrlErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateReleasesUrlErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_41
@@ -1136,7 +1149,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_42 = (
-                        ApiV1CatalogueAppsCreateTrackedAppVersionErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateGitRepositoryUrlErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_42
@@ -1146,7 +1159,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_43 = (
-                        ApiV1CatalogueAppsCreateArchivedByErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateTrackedAppVersionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_43
@@ -1156,7 +1169,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_44 = (
-                        ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateArchivedByErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_44
@@ -1166,7 +1179,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_45 = (
-                        ApiV1CatalogueAppsCreateModifiedByUserErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateManagedByContentTypeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_45
@@ -1176,7 +1189,7 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_46 = (
-                        ApiV1CatalogueAppsCreateCreatedByUserErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateModifiedByUserErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_46
@@ -1186,19 +1199,29 @@ class ApiV1CatalogueAppsCreateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_create_error_type_47 = (
-                        ApiV1CatalogueAppsCreateArtifactPackageErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsCreateCreatedByUserErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_create_error_type_47
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_catalogue_apps_create_error_type_48 = (
+                        ApiV1CatalogueAppsCreateArtifactPackageErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_catalogue_apps_create_error_type_48
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_catalogue_apps_create_error_type_48 = (
+                componentsschemas_api_v1_catalogue_apps_create_error_type_49 = (
                     ApiV1CatalogueAppsCreateDependenciesErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_catalogue_apps_create_error_type_48
+                return componentsschemas_api_v1_catalogue_apps_create_error_type_49
 
             errors_item = _parse_errors_item(errors_item_data)
 

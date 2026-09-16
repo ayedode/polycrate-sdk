@@ -252,10 +252,18 @@ class DomainRegistrarDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.domain_registrar_detail_deleted_by_user_type_0 import DomainRegistrarDetailDeletedByUserType0
-        from ..models.domain_registrar_detail_last_action_run_type_0 import DomainRegistrarDetailLastActionRunType0
-        from ..models.domain_registrar_detail_organization_type_0 import DomainRegistrarDetailOrganizationType0
-        from ..models.domain_registrar_detail_workspace_type_0 import DomainRegistrarDetailWorkspaceType0
+        from ..models.domain_registrar_detail_deleted_by_user_type_0 import (
+            DomainRegistrarDetailDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.domain_registrar_detail_last_action_run_type_0 import (
+            DomainRegistrarDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.domain_registrar_detail_organization_type_0 import (
+            DomainRegistrarDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.domain_registrar_detail_workspace_type_0 import (
+            DomainRegistrarDetailWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -675,12 +683,20 @@ class DomainRegistrarDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential_simple import CredentialSimple
-        from ..models.domain_registrar_detail_created import DomainRegistrarDetailCreated
-        from ..models.domain_registrar_detail_deleted_by_user_type_0 import DomainRegistrarDetailDeletedByUserType0
-        from ..models.domain_registrar_detail_last_action_run_type_0 import DomainRegistrarDetailLastActionRunType0
-        from ..models.domain_registrar_detail_organization_type_0 import DomainRegistrarDetailOrganizationType0
-        from ..models.domain_registrar_detail_workspace_type_0 import DomainRegistrarDetailWorkspaceType0
+        from ..models.credential_simple import CredentialSimple  # noqa: PLC0415
+        from ..models.domain_registrar_detail_created import DomainRegistrarDetailCreated  # noqa: PLC0415
+        from ..models.domain_registrar_detail_deleted_by_user_type_0 import (
+            DomainRegistrarDetailDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.domain_registrar_detail_last_action_run_type_0 import (
+            DomainRegistrarDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.domain_registrar_detail_organization_type_0 import (
+            DomainRegistrarDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.domain_registrar_detail_workspace_type_0 import (
+            DomainRegistrarDetailWorkspaceType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

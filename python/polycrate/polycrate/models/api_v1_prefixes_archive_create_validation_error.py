@@ -159,88 +159,88 @@ class ApiV1PrefixesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_prefixes_archive_create_annotations_error_component import (
-            ApiV1PrefixesArchiveCreateAnnotationsErrorComponent,
+            ApiV1PrefixesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_archived_at_error_component import (
-            ApiV1PrefixesArchiveCreateArchivedAtErrorComponent,
+            ApiV1PrefixesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_archived_error_component import (
-            ApiV1PrefixesArchiveCreateArchivedErrorComponent,
+            ApiV1PrefixesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_archived_reason_error_component import (
-            ApiV1PrefixesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1PrefixesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_credential_id_error_component import (
-            ApiV1PrefixesArchiveCreateCredentialIdErrorComponent,
+            ApiV1PrefixesArchiveCreateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_criticality_error_component import (
-            ApiV1PrefixesArchiveCreateCriticalityErrorComponent,
+            ApiV1PrefixesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_debug_mode_error_component import (
-            ApiV1PrefixesArchiveCreateDebugModeErrorComponent,
+            ApiV1PrefixesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_display_name_error_component import (
-            ApiV1PrefixesArchiveCreateDisplayNameErrorComponent,
+            ApiV1PrefixesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_kind_error_component import (
-            ApiV1PrefixesArchiveCreateKindErrorComponent,
+            ApiV1PrefixesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_labels_error_component import (
-            ApiV1PrefixesArchiveCreateLabelsErrorComponent,
+            ApiV1PrefixesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_name_error_component import (
-            ApiV1PrefixesArchiveCreateNameErrorComponent,
+            ApiV1PrefixesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_non_field_errors_error_component import (
-            ApiV1PrefixesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1PrefixesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_organization_id_error_component import (
-            ApiV1PrefixesArchiveCreateOrganizationIdErrorComponent,
+            ApiV1PrefixesArchiveCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_platform_service_error_component import (
-            ApiV1PrefixesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1PrefixesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_provider_entity_id_error_component import (
-            ApiV1PrefixesArchiveCreateProviderEntityIdErrorComponent,
+            ApiV1PrefixesArchiveCreateProviderEntityIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_provider_error_component import (
-            ApiV1PrefixesArchiveCreateProviderErrorComponent,
+            ApiV1PrefixesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_provider_id_error_component import (
-            ApiV1PrefixesArchiveCreateProviderIdErrorComponent,
+            ApiV1PrefixesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_provider_reference_error_component import (
-            ApiV1PrefixesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1PrefixesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_purpose_error_component import (
-            ApiV1PrefixesArchiveCreatePurposeErrorComponent,
+            ApiV1PrefixesArchiveCreatePurposeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_reconciliation_enabled_error_component import (
-            ApiV1PrefixesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1PrefixesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_region_id_error_component import (
-            ApiV1PrefixesArchiveCreateRegionIdErrorComponent,
+            ApiV1PrefixesArchiveCreateRegionIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_sla_availability_error_component import (
-            ApiV1PrefixesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1PrefixesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_sla_target_error_component import (
-            ApiV1PrefixesArchiveCreateSlaTargetErrorComponent,
+            ApiV1PrefixesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_slo_availability_error_component import (
-            ApiV1PrefixesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1PrefixesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_slo_target_error_component import (
-            ApiV1PrefixesArchiveCreateSloTargetErrorComponent,
+            ApiV1PrefixesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_target_availability_error_component import (
-            ApiV1PrefixesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1PrefixesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_tolerations_error_component import (
-            ApiV1PrefixesArchiveCreateTolerationsErrorComponent,
+            ApiV1PrefixesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_workspace_id_error_component import (
-            ApiV1PrefixesArchiveCreateWorkspaceIdErrorComponent,
+            ApiV1PrefixesArchiveCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -323,91 +323,91 @@ class ApiV1PrefixesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_prefixes_archive_create_annotations_error_component import (
-            ApiV1PrefixesArchiveCreateAnnotationsErrorComponent,
+            ApiV1PrefixesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_archived_at_error_component import (
-            ApiV1PrefixesArchiveCreateArchivedAtErrorComponent,
+            ApiV1PrefixesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_archived_error_component import (
-            ApiV1PrefixesArchiveCreateArchivedErrorComponent,
+            ApiV1PrefixesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_archived_reason_error_component import (
-            ApiV1PrefixesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1PrefixesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_credential_id_error_component import (
-            ApiV1PrefixesArchiveCreateCredentialIdErrorComponent,
+            ApiV1PrefixesArchiveCreateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_criticality_error_component import (
-            ApiV1PrefixesArchiveCreateCriticalityErrorComponent,
+            ApiV1PrefixesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_debug_mode_error_component import (
-            ApiV1PrefixesArchiveCreateDebugModeErrorComponent,
+            ApiV1PrefixesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_description_error_component import (
-            ApiV1PrefixesArchiveCreateDescriptionErrorComponent,
+            ApiV1PrefixesArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_display_name_error_component import (
-            ApiV1PrefixesArchiveCreateDisplayNameErrorComponent,
+            ApiV1PrefixesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_kind_error_component import (
-            ApiV1PrefixesArchiveCreateKindErrorComponent,
+            ApiV1PrefixesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_labels_error_component import (
-            ApiV1PrefixesArchiveCreateLabelsErrorComponent,
+            ApiV1PrefixesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_name_error_component import (
-            ApiV1PrefixesArchiveCreateNameErrorComponent,
+            ApiV1PrefixesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_non_field_errors_error_component import (
-            ApiV1PrefixesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1PrefixesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_organization_id_error_component import (
-            ApiV1PrefixesArchiveCreateOrganizationIdErrorComponent,
+            ApiV1PrefixesArchiveCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_platform_service_error_component import (
-            ApiV1PrefixesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1PrefixesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_provider_entity_id_error_component import (
-            ApiV1PrefixesArchiveCreateProviderEntityIdErrorComponent,
+            ApiV1PrefixesArchiveCreateProviderEntityIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_provider_error_component import (
-            ApiV1PrefixesArchiveCreateProviderErrorComponent,
+            ApiV1PrefixesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_provider_id_error_component import (
-            ApiV1PrefixesArchiveCreateProviderIdErrorComponent,
+            ApiV1PrefixesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_provider_reference_error_component import (
-            ApiV1PrefixesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1PrefixesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_purpose_error_component import (
-            ApiV1PrefixesArchiveCreatePurposeErrorComponent,
+            ApiV1PrefixesArchiveCreatePurposeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_reconciliation_enabled_error_component import (
-            ApiV1PrefixesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1PrefixesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_region_id_error_component import (
-            ApiV1PrefixesArchiveCreateRegionIdErrorComponent,
+            ApiV1PrefixesArchiveCreateRegionIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_sla_availability_error_component import (
-            ApiV1PrefixesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1PrefixesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_sla_target_error_component import (
-            ApiV1PrefixesArchiveCreateSlaTargetErrorComponent,
+            ApiV1PrefixesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_slo_availability_error_component import (
-            ApiV1PrefixesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1PrefixesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_slo_target_error_component import (
-            ApiV1PrefixesArchiveCreateSloTargetErrorComponent,
+            ApiV1PrefixesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_target_availability_error_component import (
-            ApiV1PrefixesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1PrefixesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_tolerations_error_component import (
-            ApiV1PrefixesArchiveCreateTolerationsErrorComponent,
+            ApiV1PrefixesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_prefixes_archive_create_workspace_id_error_component import (
-            ApiV1PrefixesArchiveCreateWorkspaceIdErrorComponent,
+            ApiV1PrefixesArchiveCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

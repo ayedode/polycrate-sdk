@@ -119,61 +119,61 @@ class ApiV1ContactsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_contacts_partial_update_address_error_component import (
-            ApiV1ContactsPartialUpdateAddressErrorComponent,
+            ApiV1ContactsPartialUpdateAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_city_error_component import (
-            ApiV1ContactsPartialUpdateCityErrorComponent,
+            ApiV1ContactsPartialUpdateCityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_contact_role_error_component import (
-            ApiV1ContactsPartialUpdateContactRoleErrorComponent,
+            ApiV1ContactsPartialUpdateContactRoleErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_country_error_component import (
-            ApiV1ContactsPartialUpdateCountryErrorComponent,
+            ApiV1ContactsPartialUpdateCountryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_credential_id_error_component import (
-            ApiV1ContactsPartialUpdateCredentialIdErrorComponent,
+            ApiV1ContactsPartialUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_email_error_component import (
-            ApiV1ContactsPartialUpdateEmailErrorComponent,
+            ApiV1ContactsPartialUpdateEmailErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_firstname_error_component import (
-            ApiV1ContactsPartialUpdateFirstnameErrorComponent,
+            ApiV1ContactsPartialUpdateFirstnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_is_billing_contact_error_component import (
-            ApiV1ContactsPartialUpdateIsBillingContactErrorComponent,
+            ApiV1ContactsPartialUpdateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_is_maintenance_contact_error_component import (
-            ApiV1ContactsPartialUpdateIsMaintenanceContactErrorComponent,
+            ApiV1ContactsPartialUpdateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_keycloak_user_id_error_component import (
-            ApiV1ContactsPartialUpdateKeycloakUserIdErrorComponent,
+            ApiV1ContactsPartialUpdateKeycloakUserIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_kind_error_component import (
-            ApiV1ContactsPartialUpdateKindErrorComponent,
+            ApiV1ContactsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_lastname_error_component import (
-            ApiV1ContactsPartialUpdateLastnameErrorComponent,
+            ApiV1ContactsPartialUpdateLastnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_name_error_component import (
-            ApiV1ContactsPartialUpdateNameErrorComponent,
+            ApiV1ContactsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_non_field_errors_error_component import (
-            ApiV1ContactsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ContactsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_note_error_component import (
-            ApiV1ContactsPartialUpdateNoteErrorComponent,
+            ApiV1ContactsPartialUpdateNoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_organization_id_error_component import (
-            ApiV1ContactsPartialUpdateOrganizationIdErrorComponent,
+            ApiV1ContactsPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_phone_error_component import (
-            ApiV1ContactsPartialUpdatePhoneErrorComponent,
+            ApiV1ContactsPartialUpdatePhoneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_sync_source_error_component import (
-            ApiV1ContactsPartialUpdateSyncSourceErrorComponent,
+            ApiV1ContactsPartialUpdateSyncSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_zipcode_error_component import (
-            ApiV1ContactsPartialUpdateZipcodeErrorComponent,
+            ApiV1ContactsPartialUpdateZipcodeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -238,64 +238,64 @@ class ApiV1ContactsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_contacts_partial_update_address_error_component import (
-            ApiV1ContactsPartialUpdateAddressErrorComponent,
+            ApiV1ContactsPartialUpdateAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_city_error_component import (
-            ApiV1ContactsPartialUpdateCityErrorComponent,
+            ApiV1ContactsPartialUpdateCityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_contact_role_error_component import (
-            ApiV1ContactsPartialUpdateContactRoleErrorComponent,
+            ApiV1ContactsPartialUpdateContactRoleErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_country_error_component import (
-            ApiV1ContactsPartialUpdateCountryErrorComponent,
+            ApiV1ContactsPartialUpdateCountryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_credential_id_error_component import (
-            ApiV1ContactsPartialUpdateCredentialIdErrorComponent,
+            ApiV1ContactsPartialUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_email_error_component import (
-            ApiV1ContactsPartialUpdateEmailErrorComponent,
+            ApiV1ContactsPartialUpdateEmailErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_firstname_error_component import (
-            ApiV1ContactsPartialUpdateFirstnameErrorComponent,
+            ApiV1ContactsPartialUpdateFirstnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_is_billing_contact_error_component import (
-            ApiV1ContactsPartialUpdateIsBillingContactErrorComponent,
+            ApiV1ContactsPartialUpdateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_is_maintenance_contact_error_component import (
-            ApiV1ContactsPartialUpdateIsMaintenanceContactErrorComponent,
+            ApiV1ContactsPartialUpdateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_keycloak_user_id_error_component import (
-            ApiV1ContactsPartialUpdateKeycloakUserIdErrorComponent,
+            ApiV1ContactsPartialUpdateKeycloakUserIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_kind_error_component import (
-            ApiV1ContactsPartialUpdateKindErrorComponent,
+            ApiV1ContactsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_last_sync_at_error_component import (
-            ApiV1ContactsPartialUpdateLastSyncAtErrorComponent,
+            ApiV1ContactsPartialUpdateLastSyncAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_lastname_error_component import (
-            ApiV1ContactsPartialUpdateLastnameErrorComponent,
+            ApiV1ContactsPartialUpdateLastnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_name_error_component import (
-            ApiV1ContactsPartialUpdateNameErrorComponent,
+            ApiV1ContactsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_non_field_errors_error_component import (
-            ApiV1ContactsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ContactsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_note_error_component import (
-            ApiV1ContactsPartialUpdateNoteErrorComponent,
+            ApiV1ContactsPartialUpdateNoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_organization_id_error_component import (
-            ApiV1ContactsPartialUpdateOrganizationIdErrorComponent,
+            ApiV1ContactsPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_phone_error_component import (
-            ApiV1ContactsPartialUpdatePhoneErrorComponent,
+            ApiV1ContactsPartialUpdatePhoneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_sync_source_error_component import (
-            ApiV1ContactsPartialUpdateSyncSourceErrorComponent,
+            ApiV1ContactsPartialUpdateSyncSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_partial_update_zipcode_error_component import (
-            ApiV1ContactsPartialUpdateZipcodeErrorComponent,
+            ApiV1ContactsPartialUpdateZipcodeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

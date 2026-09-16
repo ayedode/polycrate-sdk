@@ -31,7 +31,9 @@ class ApiV1AdminUsersListValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_admin_users_list_role_error_component import ApiV1AdminUsersListRoleErrorComponent
+        from ..models.api_v1_admin_users_list_role_error_component import (
+            ApiV1AdminUsersListRoleErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -59,9 +61,11 @@ class ApiV1AdminUsersListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_admin_users_list_organization_error_component import (
-            ApiV1AdminUsersListOrganizationErrorComponent,
+            ApiV1AdminUsersListOrganizationErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_admin_users_list_role_error_component import ApiV1AdminUsersListRoleErrorComponent
+        from ..models.api_v1_admin_users_list_role_error_component import (
+            ApiV1AdminUsersListRoleErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

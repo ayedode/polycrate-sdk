@@ -43,10 +43,10 @@ class ApiV1DomainsDnszonesEnableDnssecCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_dnszones_enable_dnssec_create_algorithm_error_component import (
-            ApiV1DomainsDnszonesEnableDnssecCreateAlgorithmErrorComponent,
+            ApiV1DomainsDnszonesEnableDnssecCreateAlgorithmErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_enable_dnssec_create_non_field_errors_error_component import (
-            ApiV1DomainsDnszonesEnableDnssecCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDnszonesEnableDnssecCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -77,13 +77,13 @@ class ApiV1DomainsDnszonesEnableDnssecCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_dnszones_enable_dnssec_create_algorithm_error_component import (
-            ApiV1DomainsDnszonesEnableDnssecCreateAlgorithmErrorComponent,
+            ApiV1DomainsDnszonesEnableDnssecCreateAlgorithmErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_enable_dnssec_create_non_field_errors_error_component import (
-            ApiV1DomainsDnszonesEnableDnssecCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDnszonesEnableDnssecCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_enable_dnssec_create_nsec_3_error_component import (
-            ApiV1DomainsDnszonesEnableDnssecCreateNsec3ErrorComponent,
+            ApiV1DomainsDnszonesEnableDnssecCreateNsec3ErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

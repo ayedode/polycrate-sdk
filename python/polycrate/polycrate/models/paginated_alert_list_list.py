@@ -68,7 +68,7 @@ class PaginatedAlertListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.alert_list import AlertList
+        from ..models.alert_list import AlertList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

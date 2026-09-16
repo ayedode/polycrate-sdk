@@ -68,7 +68,7 @@ class PaginatedPrefixListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.prefix_list import PrefixList
+        from ..models.prefix_list import PrefixList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

@@ -55,19 +55,19 @@ class ApiV1PolicyBindingsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_policy_bindings_update_applied_error_component import (
-            ApiV1PolicyBindingsUpdateAppliedErrorComponent,
+            ApiV1PolicyBindingsUpdateAppliedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_update_enabled_error_component import (
-            ApiV1PolicyBindingsUpdateEnabledErrorComponent,
+            ApiV1PolicyBindingsUpdateEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_update_non_field_errors_error_component import (
-            ApiV1PolicyBindingsUpdateNonFieldErrorsErrorComponent,
+            ApiV1PolicyBindingsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_update_policy_id_error_component import (
-            ApiV1PolicyBindingsUpdatePolicyIdErrorComponent,
+            ApiV1PolicyBindingsUpdatePolicyIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_update_scope_error_component import (
-            ApiV1PolicyBindingsUpdateScopeErrorComponent,
+            ApiV1PolicyBindingsUpdateScopeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -104,22 +104,22 @@ class ApiV1PolicyBindingsUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_policy_bindings_update_applied_error_component import (
-            ApiV1PolicyBindingsUpdateAppliedErrorComponent,
+            ApiV1PolicyBindingsUpdateAppliedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_update_enabled_error_component import (
-            ApiV1PolicyBindingsUpdateEnabledErrorComponent,
+            ApiV1PolicyBindingsUpdateEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_update_execution_log_error_component import (
-            ApiV1PolicyBindingsUpdateExecutionLogErrorComponent,
+            ApiV1PolicyBindingsUpdateExecutionLogErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_update_non_field_errors_error_component import (
-            ApiV1PolicyBindingsUpdateNonFieldErrorsErrorComponent,
+            ApiV1PolicyBindingsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_update_policy_id_error_component import (
-            ApiV1PolicyBindingsUpdatePolicyIdErrorComponent,
+            ApiV1PolicyBindingsUpdatePolicyIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_update_scope_error_component import (
-            ApiV1PolicyBindingsUpdateScopeErrorComponent,
+            ApiV1PolicyBindingsUpdateScopeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

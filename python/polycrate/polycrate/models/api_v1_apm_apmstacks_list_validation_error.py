@@ -61,22 +61,28 @@ class ApiV1ApmApmstacksListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_apm_apmstacks_list_created_by_users_error_component import (
-            ApiV1ApmApmstacksListCreatedByUsersErrorComponent,
+            ApiV1ApmApmstacksListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_apm_apmstacks_list_kind_error_component import ApiV1ApmApmstacksListKindErrorComponent
+        from ..models.api_v1_apm_apmstacks_list_kind_error_component import (
+            ApiV1ApmApmstacksListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_apm_apmstacks_list_organizations_error_component import (
-            ApiV1ApmApmstacksListOrganizationsErrorComponent,
+            ApiV1ApmApmstacksListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_apm_apmstacks_list_search_error_component import ApiV1ApmApmstacksListSearchErrorComponent
-        from ..models.api_v1_apm_apmstacks_list_state_error_component import ApiV1ApmApmstacksListStateErrorComponent
+        from ..models.api_v1_apm_apmstacks_list_search_error_component import (
+            ApiV1ApmApmstacksListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_apm_apmstacks_list_state_error_component import (
+            ApiV1ApmApmstacksListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_apm_apmstacks_list_state_not_error_component import (
-            ApiV1ApmApmstacksListStateNotErrorComponent,
+            ApiV1ApmApmstacksListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_apmstacks_list_time_range_error_component import (
-            ApiV1ApmApmstacksListTimeRangeErrorComponent,
+            ApiV1ApmApmstacksListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_apmstacks_list_workspaces_error_component import (
-            ApiV1ApmApmstacksListWorkspacesErrorComponent,
+            ApiV1ApmApmstacksListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -119,25 +125,31 @@ class ApiV1ApmApmstacksListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_apm_apmstacks_list_created_by_users_error_component import (
-            ApiV1ApmApmstacksListCreatedByUsersErrorComponent,
+            ApiV1ApmApmstacksListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_apm_apmstacks_list_kind_error_component import ApiV1ApmApmstacksListKindErrorComponent
+        from ..models.api_v1_apm_apmstacks_list_kind_error_component import (
+            ApiV1ApmApmstacksListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_apm_apmstacks_list_name_exact_error_component import (
-            ApiV1ApmApmstacksListNameExactErrorComponent,
+            ApiV1ApmApmstacksListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_apmstacks_list_organizations_error_component import (
-            ApiV1ApmApmstacksListOrganizationsErrorComponent,
+            ApiV1ApmApmstacksListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_apm_apmstacks_list_search_error_component import ApiV1ApmApmstacksListSearchErrorComponent
-        from ..models.api_v1_apm_apmstacks_list_state_error_component import ApiV1ApmApmstacksListStateErrorComponent
+        from ..models.api_v1_apm_apmstacks_list_search_error_component import (
+            ApiV1ApmApmstacksListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_apm_apmstacks_list_state_error_component import (
+            ApiV1ApmApmstacksListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_apm_apmstacks_list_state_not_error_component import (
-            ApiV1ApmApmstacksListStateNotErrorComponent,
+            ApiV1ApmApmstacksListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_apmstacks_list_time_range_error_component import (
-            ApiV1ApmApmstacksListTimeRangeErrorComponent,
+            ApiV1ApmApmstacksListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_apm_apmstacks_list_workspaces_error_component import (
-            ApiV1ApmApmstacksListWorkspacesErrorComponent,
+            ApiV1ApmApmstacksListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -44,7 +44,9 @@ class ConversationProviderRequest:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.conversation_provider_request_secrets_type_0 import ConversationProviderRequestSecretsType0
+        from ..models.conversation_provider_request_secrets_type_0 import (
+            ConversationProviderRequestSecretsType0,  # noqa: PLC0415
+        )
 
         meta = self.meta
 
@@ -78,7 +80,9 @@ class ConversationProviderRequest:
         return field_dict
 
     def to_multipart(self) -> types.RequestFiles:
-        from ..models.conversation_provider_request_secrets_type_0 import ConversationProviderRequestSecretsType0
+        from ..models.conversation_provider_request_secrets_type_0 import (
+            ConversationProviderRequestSecretsType0,  # noqa: PLC0415
+        )
 
         files: types.RequestFiles = []
 
@@ -102,7 +106,9 @@ class ConversationProviderRequest:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversation_provider_request_secrets_type_0 import ConversationProviderRequestSecretsType0
+        from ..models.conversation_provider_request_secrets_type_0 import (
+            ConversationProviderRequestSecretsType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         meta = d.pop("meta")

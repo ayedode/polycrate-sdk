@@ -89,7 +89,7 @@ class K8SWorkerPoolRequest:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
             desired_count (int | Unset): Desired number of worker Hosts in this pool.
-            location (str | Unset): Optional provider location/region for new Hosts.
+            location (str | Unset): Optional override. Defaults to Product.pop location slug (hetzner-fsn1 → fsn1).
             hardening_enabled (bool | Unset): When true, enqueue linux/hardening before k8s join.
     """
 

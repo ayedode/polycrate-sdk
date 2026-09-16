@@ -47,7 +47,7 @@ class NotificationSinkListOrganizationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.notification_sink_list_organization_type_0_created_by_type_0 import (
-            NotificationSinkListOrganizationType0CreatedByType0,
+            NotificationSinkListOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         id: str | Unset = UNSET
@@ -129,7 +129,7 @@ class NotificationSinkListOrganizationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.notification_sink_list_organization_type_0_created_by_type_0 import (
-            NotificationSinkListOrganizationType0CreatedByType0,
+            NotificationSinkListOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

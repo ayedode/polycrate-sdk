@@ -267,10 +267,10 @@ class DNSZoneDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.dns_zone_detail_deleted_by_user_type_0 import DNSZoneDetailDeletedByUserType0
-        from ..models.dns_zone_detail_last_action_run_type_0 import DNSZoneDetailLastActionRunType0
-        from ..models.dns_zone_detail_organization_type_0 import DNSZoneDetailOrganizationType0
-        from ..models.dns_zone_detail_workspace_type_0 import DNSZoneDetailWorkspaceType0
+        from ..models.dns_zone_detail_deleted_by_user_type_0 import DNSZoneDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.dns_zone_detail_last_action_run_type_0 import DNSZoneDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.dns_zone_detail_organization_type_0 import DNSZoneDetailOrganizationType0  # noqa: PLC0415
+        from ..models.dns_zone_detail_workspace_type_0 import DNSZoneDetailWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -720,13 +720,13 @@ class DNSZoneDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential_simple import CredentialSimple
-        from ..models.dns_zone_detail_created import DNSZoneDetailCreated
-        from ..models.dns_zone_detail_deleted_by_user_type_0 import DNSZoneDetailDeletedByUserType0
-        from ..models.dns_zone_detail_last_action_run_type_0 import DNSZoneDetailLastActionRunType0
-        from ..models.dns_zone_detail_organization_type_0 import DNSZoneDetailOrganizationType0
-        from ..models.dns_zone_detail_workspace_type_0 import DNSZoneDetailWorkspaceType0
-        from ..models.product_simple import ProductSimple
+        from ..models.credential_simple import CredentialSimple  # noqa: PLC0415
+        from ..models.dns_zone_detail_created import DNSZoneDetailCreated  # noqa: PLC0415
+        from ..models.dns_zone_detail_deleted_by_user_type_0 import DNSZoneDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.dns_zone_detail_last_action_run_type_0 import DNSZoneDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.dns_zone_detail_organization_type_0 import DNSZoneDetailOrganizationType0  # noqa: PLC0415
+        from ..models.dns_zone_detail_workspace_type_0 import DNSZoneDetailWorkspaceType0  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

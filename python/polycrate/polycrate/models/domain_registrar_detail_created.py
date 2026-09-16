@@ -34,7 +34,7 @@ class DomainRegistrarDetailCreated:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.domain_registrar_detail_created_created_by_type_0 import (
-            DomainRegistrarDetailCreatedCreatedByType0,
+            DomainRegistrarDetailCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         created_at: None | str | Unset
@@ -82,7 +82,7 @@ class DomainRegistrarDetailCreated:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.domain_registrar_detail_created_created_by_type_0 import (
-            DomainRegistrarDetailCreatedCreatedByType0,
+            DomainRegistrarDetailCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -95,43 +95,43 @@ class ApiV1DomainsDomainRegistrarsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_domain_registrars_list_created_at_error_component import (
-            ApiV1DomainsDomainRegistrarsListCreatedAtErrorComponent,
+            ApiV1DomainsDomainRegistrarsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_created_by_component_error_component import (
-            ApiV1DomainsDomainRegistrarsListCreatedByComponentErrorComponent,
+            ApiV1DomainsDomainRegistrarsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_created_by_users_error_component import (
-            ApiV1DomainsDomainRegistrarsListCreatedByUsersErrorComponent,
+            ApiV1DomainsDomainRegistrarsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_kind_error_component import (
-            ApiV1DomainsDomainRegistrarsListKindErrorComponent,
+            ApiV1DomainsDomainRegistrarsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_name_error_component import (
-            ApiV1DomainsDomainRegistrarsListNameErrorComponent,
+            ApiV1DomainsDomainRegistrarsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_organization_error_component import (
-            ApiV1DomainsDomainRegistrarsListOrganizationErrorComponent,
+            ApiV1DomainsDomainRegistrarsListOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_organizations_error_component import (
-            ApiV1DomainsDomainRegistrarsListOrganizationsErrorComponent,
+            ApiV1DomainsDomainRegistrarsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_scope_error_component import (
-            ApiV1DomainsDomainRegistrarsListScopeErrorComponent,
+            ApiV1DomainsDomainRegistrarsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_search_error_component import (
-            ApiV1DomainsDomainRegistrarsListSearchErrorComponent,
+            ApiV1DomainsDomainRegistrarsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_state_error_component import (
-            ApiV1DomainsDomainRegistrarsListStateErrorComponent,
+            ApiV1DomainsDomainRegistrarsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_state_not_error_component import (
-            ApiV1DomainsDomainRegistrarsListStateNotErrorComponent,
+            ApiV1DomainsDomainRegistrarsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_time_range_error_component import (
-            ApiV1DomainsDomainRegistrarsListTimeRangeErrorComponent,
+            ApiV1DomainsDomainRegistrarsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_updated_at_error_component import (
-            ApiV1DomainsDomainRegistrarsListUpdatedAtErrorComponent,
+            ApiV1DomainsDomainRegistrarsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -184,46 +184,46 @@ class ApiV1DomainsDomainRegistrarsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_domain_registrars_list_created_at_error_component import (
-            ApiV1DomainsDomainRegistrarsListCreatedAtErrorComponent,
+            ApiV1DomainsDomainRegistrarsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_created_by_component_error_component import (
-            ApiV1DomainsDomainRegistrarsListCreatedByComponentErrorComponent,
+            ApiV1DomainsDomainRegistrarsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_created_by_users_error_component import (
-            ApiV1DomainsDomainRegistrarsListCreatedByUsersErrorComponent,
+            ApiV1DomainsDomainRegistrarsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_kind_error_component import (
-            ApiV1DomainsDomainRegistrarsListKindErrorComponent,
+            ApiV1DomainsDomainRegistrarsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_name_error_component import (
-            ApiV1DomainsDomainRegistrarsListNameErrorComponent,
+            ApiV1DomainsDomainRegistrarsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_name_exact_error_component import (
-            ApiV1DomainsDomainRegistrarsListNameExactErrorComponent,
+            ApiV1DomainsDomainRegistrarsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_organization_error_component import (
-            ApiV1DomainsDomainRegistrarsListOrganizationErrorComponent,
+            ApiV1DomainsDomainRegistrarsListOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_organizations_error_component import (
-            ApiV1DomainsDomainRegistrarsListOrganizationsErrorComponent,
+            ApiV1DomainsDomainRegistrarsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_scope_error_component import (
-            ApiV1DomainsDomainRegistrarsListScopeErrorComponent,
+            ApiV1DomainsDomainRegistrarsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_search_error_component import (
-            ApiV1DomainsDomainRegistrarsListSearchErrorComponent,
+            ApiV1DomainsDomainRegistrarsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_state_error_component import (
-            ApiV1DomainsDomainRegistrarsListStateErrorComponent,
+            ApiV1DomainsDomainRegistrarsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_state_not_error_component import (
-            ApiV1DomainsDomainRegistrarsListStateNotErrorComponent,
+            ApiV1DomainsDomainRegistrarsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_time_range_error_component import (
-            ApiV1DomainsDomainRegistrarsListTimeRangeErrorComponent,
+            ApiV1DomainsDomainRegistrarsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_list_updated_at_error_component import (
-            ApiV1DomainsDomainRegistrarsListUpdatedAtErrorComponent,
+            ApiV1DomainsDomainRegistrarsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

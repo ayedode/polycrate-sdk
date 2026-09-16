@@ -158,79 +158,79 @@ class ApiV1NotificationsSinksPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_notifications_sinks_partial_update_annotations_error_component import (
-            ApiV1NotificationsSinksPartialUpdateAnnotationsErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_archived_at_error_component import (
-            ApiV1NotificationsSinksPartialUpdateArchivedAtErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_archived_error_component import (
-            ApiV1NotificationsSinksPartialUpdateArchivedErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_archived_reason_error_component import (
-            ApiV1NotificationsSinksPartialUpdateArchivedReasonErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_config_error_component import (
-            ApiV1NotificationsSinksPartialUpdateConfigErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_criticality_error_component import (
-            ApiV1NotificationsSinksPartialUpdateCriticalityErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_debug_mode_error_component import (
-            ApiV1NotificationsSinksPartialUpdateDebugModeErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_display_name_error_component import (
-            ApiV1NotificationsSinksPartialUpdateDisplayNameErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_is_enabled_error_component import (
-            ApiV1NotificationsSinksPartialUpdateIsEnabledErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_is_system_default_error_component import (
-            ApiV1NotificationsSinksPartialUpdateIsSystemDefaultErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_kind_error_component import (
-            ApiV1NotificationsSinksPartialUpdateKindErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_labels_error_component import (
-            ApiV1NotificationsSinksPartialUpdateLabelsErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_name_error_component import (
-            ApiV1NotificationsSinksPartialUpdateNameErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_non_field_errors_error_component import (
-            ApiV1NotificationsSinksPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_platform_service_error_component import (
-            ApiV1NotificationsSinksPartialUpdatePlatformServiceErrorComponent,
+            ApiV1NotificationsSinksPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_provider_error_component import (
-            ApiV1NotificationsSinksPartialUpdateProviderErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_provider_id_error_component import (
-            ApiV1NotificationsSinksPartialUpdateProviderIdErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_provider_reference_error_component import (
-            ApiV1NotificationsSinksPartialUpdateProviderReferenceErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_reconciliation_enabled_error_component import (
-            ApiV1NotificationsSinksPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_sla_availability_error_component import (
-            ApiV1NotificationsSinksPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_sla_target_error_component import (
-            ApiV1NotificationsSinksPartialUpdateSlaTargetErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_slo_availability_error_component import (
-            ApiV1NotificationsSinksPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_slo_target_error_component import (
-            ApiV1NotificationsSinksPartialUpdateSloTargetErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_target_availability_error_component import (
-            ApiV1NotificationsSinksPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_tolerations_error_component import (
-            ApiV1NotificationsSinksPartialUpdateTolerationsErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -307,82 +307,82 @@ class ApiV1NotificationsSinksPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_notifications_sinks_partial_update_annotations_error_component import (
-            ApiV1NotificationsSinksPartialUpdateAnnotationsErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_archived_at_error_component import (
-            ApiV1NotificationsSinksPartialUpdateArchivedAtErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_archived_error_component import (
-            ApiV1NotificationsSinksPartialUpdateArchivedErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_archived_reason_error_component import (
-            ApiV1NotificationsSinksPartialUpdateArchivedReasonErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_config_error_component import (
-            ApiV1NotificationsSinksPartialUpdateConfigErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_criticality_error_component import (
-            ApiV1NotificationsSinksPartialUpdateCriticalityErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_debug_mode_error_component import (
-            ApiV1NotificationsSinksPartialUpdateDebugModeErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_display_name_error_component import (
-            ApiV1NotificationsSinksPartialUpdateDisplayNameErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_enabled_model_types_error_component import (
-            ApiV1NotificationsSinksPartialUpdateEnabledModelTypesErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateEnabledModelTypesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_is_enabled_error_component import (
-            ApiV1NotificationsSinksPartialUpdateIsEnabledErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateIsEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_is_system_default_error_component import (
-            ApiV1NotificationsSinksPartialUpdateIsSystemDefaultErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_kind_error_component import (
-            ApiV1NotificationsSinksPartialUpdateKindErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_labels_error_component import (
-            ApiV1NotificationsSinksPartialUpdateLabelsErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_name_error_component import (
-            ApiV1NotificationsSinksPartialUpdateNameErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_non_field_errors_error_component import (
-            ApiV1NotificationsSinksPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_platform_service_error_component import (
-            ApiV1NotificationsSinksPartialUpdatePlatformServiceErrorComponent,
+            ApiV1NotificationsSinksPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_provider_error_component import (
-            ApiV1NotificationsSinksPartialUpdateProviderErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_provider_id_error_component import (
-            ApiV1NotificationsSinksPartialUpdateProviderIdErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_provider_reference_error_component import (
-            ApiV1NotificationsSinksPartialUpdateProviderReferenceErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_reconciliation_enabled_error_component import (
-            ApiV1NotificationsSinksPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_sla_availability_error_component import (
-            ApiV1NotificationsSinksPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_sla_target_error_component import (
-            ApiV1NotificationsSinksPartialUpdateSlaTargetErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_slo_availability_error_component import (
-            ApiV1NotificationsSinksPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_slo_target_error_component import (
-            ApiV1NotificationsSinksPartialUpdateSloTargetErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_target_availability_error_component import (
-            ApiV1NotificationsSinksPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notifications_sinks_partial_update_tolerations_error_component import (
-            ApiV1NotificationsSinksPartialUpdateTolerationsErrorComponent,
+            ApiV1NotificationsSinksPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -235,142 +235,142 @@ class ApiV1BlockRolloutsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_block_rollouts_create_actual_availability_error_component import (
-            ApiV1BlockRolloutsCreateActualAvailabilityErrorComponent,
+            ApiV1BlockRolloutsCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_annotations_error_component import (
-            ApiV1BlockRolloutsCreateAnnotationsErrorComponent,
+            ApiV1BlockRolloutsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_archived_at_error_component import (
-            ApiV1BlockRolloutsCreateArchivedAtErrorComponent,
+            ApiV1BlockRolloutsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_archived_error_component import (
-            ApiV1BlockRolloutsCreateArchivedErrorComponent,
+            ApiV1BlockRolloutsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_archived_reason_error_component import (
-            ApiV1BlockRolloutsCreateArchivedReasonErrorComponent,
+            ApiV1BlockRolloutsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_batch_identifier_error_component import (
-            ApiV1BlockRolloutsCreateBatchIdentifierErrorComponent,
+            ApiV1BlockRolloutsCreateBatchIdentifierErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_completed_items_error_component import (
-            ApiV1BlockRolloutsCreateCompletedItemsErrorComponent,
+            ApiV1BlockRolloutsCreateCompletedItemsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_conditions_error_component import (
-            ApiV1BlockRolloutsCreateConditionsErrorComponent,
+            ApiV1BlockRolloutsCreateConditionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_criticality_error_component import (
-            ApiV1BlockRolloutsCreateCriticalityErrorComponent,
+            ApiV1BlockRolloutsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_debug_mode_error_component import (
-            ApiV1BlockRolloutsCreateDebugModeErrorComponent,
+            ApiV1BlockRolloutsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_discovery_enabled_error_component import (
-            ApiV1BlockRolloutsCreateDiscoveryEnabledErrorComponent,
+            ApiV1BlockRolloutsCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_discovery_running_error_component import (
-            ApiV1BlockRolloutsCreateDiscoveryRunningErrorComponent,
+            ApiV1BlockRolloutsCreateDiscoveryRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_discovery_task_id_error_component import (
-            ApiV1BlockRolloutsCreateDiscoveryTaskIdErrorComponent,
+            ApiV1BlockRolloutsCreateDiscoveryTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_discovery_task_meta_error_component import (
-            ApiV1BlockRolloutsCreateDiscoveryTaskMetaErrorComponent,
+            ApiV1BlockRolloutsCreateDiscoveryTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_dispatched_items_error_component import (
-            ApiV1BlockRolloutsCreateDispatchedItemsErrorComponent,
+            ApiV1BlockRolloutsCreateDispatchedItemsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_display_name_error_component import (
-            ApiV1BlockRolloutsCreateDisplayNameErrorComponent,
+            ApiV1BlockRolloutsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_failed_items_error_component import (
-            ApiV1BlockRolloutsCreateFailedItemsErrorComponent,
+            ApiV1BlockRolloutsCreateFailedItemsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_kind_error_component import (
-            ApiV1BlockRolloutsCreateKindErrorComponent,
+            ApiV1BlockRolloutsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_labels_error_component import (
-            ApiV1BlockRolloutsCreateLabelsErrorComponent,
+            ApiV1BlockRolloutsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_last_item_added_at_error_component import (
-            ApiV1BlockRolloutsCreateLastItemAddedAtErrorComponent,
+            ApiV1BlockRolloutsCreateLastItemAddedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_last_state_change_error_component import (
-            ApiV1BlockRolloutsCreateLastStateChangeErrorComponent,
+            ApiV1BlockRolloutsCreateLastStateChangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_last_state_error_component import (
-            ApiV1BlockRolloutsCreateLastStateErrorComponent,
+            ApiV1BlockRolloutsCreateLastStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_name_error_component import (
-            ApiV1BlockRolloutsCreateNameErrorComponent,
+            ApiV1BlockRolloutsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_non_field_errors_error_component import (
-            ApiV1BlockRolloutsCreateNonFieldErrorsErrorComponent,
+            ApiV1BlockRolloutsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_platform_service_error_component import (
-            ApiV1BlockRolloutsCreatePlatformServiceErrorComponent,
+            ApiV1BlockRolloutsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_provider_error_component import (
-            ApiV1BlockRolloutsCreateProviderErrorComponent,
+            ApiV1BlockRolloutsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_provider_id_error_component import (
-            ApiV1BlockRolloutsCreateProviderIdErrorComponent,
+            ApiV1BlockRolloutsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_provider_reference_error_component import (
-            ApiV1BlockRolloutsCreateProviderReferenceErrorComponent,
+            ApiV1BlockRolloutsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_reconciliation_enabled_error_component import (
-            ApiV1BlockRolloutsCreateReconciliationEnabledErrorComponent,
+            ApiV1BlockRolloutsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_reconciliation_running_error_component import (
-            ApiV1BlockRolloutsCreateReconciliationRunningErrorComponent,
+            ApiV1BlockRolloutsCreateReconciliationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_reconciliation_task_id_error_component import (
-            ApiV1BlockRolloutsCreateReconciliationTaskIdErrorComponent,
+            ApiV1BlockRolloutsCreateReconciliationTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_reconciliation_task_meta_error_component import (
-            ApiV1BlockRolloutsCreateReconciliationTaskMetaErrorComponent,
+            ApiV1BlockRolloutsCreateReconciliationTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_repair_running_error_component import (
-            ApiV1BlockRolloutsCreateRepairRunningErrorComponent,
+            ApiV1BlockRolloutsCreateRepairRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_repair_task_id_error_component import (
-            ApiV1BlockRolloutsCreateRepairTaskIdErrorComponent,
+            ApiV1BlockRolloutsCreateRepairTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_repair_task_meta_error_component import (
-            ApiV1BlockRolloutsCreateRepairTaskMetaErrorComponent,
+            ApiV1BlockRolloutsCreateRepairTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_scope_error_component import (
-            ApiV1BlockRolloutsCreateScopeErrorComponent,
+            ApiV1BlockRolloutsCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_sla_availability_error_component import (
-            ApiV1BlockRolloutsCreateSlaAvailabilityErrorComponent,
+            ApiV1BlockRolloutsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_sla_target_error_component import (
-            ApiV1BlockRolloutsCreateSlaTargetErrorComponent,
+            ApiV1BlockRolloutsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_slo_availability_error_component import (
-            ApiV1BlockRolloutsCreateSloAvailabilityErrorComponent,
+            ApiV1BlockRolloutsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_slo_target_error_component import (
-            ApiV1BlockRolloutsCreateSloTargetErrorComponent,
+            ApiV1BlockRolloutsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_state_error_component import (
-            ApiV1BlockRolloutsCreateStateErrorComponent,
+            ApiV1BlockRolloutsCreateStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_state_reason_error_component import (
-            ApiV1BlockRolloutsCreateStateReasonErrorComponent,
+            ApiV1BlockRolloutsCreateStateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_status_error_component import (
-            ApiV1BlockRolloutsCreateStatusErrorComponent,
+            ApiV1BlockRolloutsCreateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_target_availability_error_component import (
-            ApiV1BlockRolloutsCreateTargetAvailabilityErrorComponent,
+            ApiV1BlockRolloutsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_tolerations_error_component import (
-            ApiV1BlockRolloutsCreateTolerationsErrorComponent,
+            ApiV1BlockRolloutsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_total_items_error_component import (
-            ApiV1BlockRolloutsCreateTotalItemsErrorComponent,
+            ApiV1BlockRolloutsCreateTotalItemsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -489,145 +489,145 @@ class ApiV1BlockRolloutsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_block_rollouts_create_actual_availability_error_component import (
-            ApiV1BlockRolloutsCreateActualAvailabilityErrorComponent,
+            ApiV1BlockRolloutsCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_annotations_error_component import (
-            ApiV1BlockRolloutsCreateAnnotationsErrorComponent,
+            ApiV1BlockRolloutsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_archived_at_error_component import (
-            ApiV1BlockRolloutsCreateArchivedAtErrorComponent,
+            ApiV1BlockRolloutsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_archived_error_component import (
-            ApiV1BlockRolloutsCreateArchivedErrorComponent,
+            ApiV1BlockRolloutsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_archived_reason_error_component import (
-            ApiV1BlockRolloutsCreateArchivedReasonErrorComponent,
+            ApiV1BlockRolloutsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_batch_identifier_error_component import (
-            ApiV1BlockRolloutsCreateBatchIdentifierErrorComponent,
+            ApiV1BlockRolloutsCreateBatchIdentifierErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_completed_items_error_component import (
-            ApiV1BlockRolloutsCreateCompletedItemsErrorComponent,
+            ApiV1BlockRolloutsCreateCompletedItemsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_conditions_error_component import (
-            ApiV1BlockRolloutsCreateConditionsErrorComponent,
+            ApiV1BlockRolloutsCreateConditionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_criticality_error_component import (
-            ApiV1BlockRolloutsCreateCriticalityErrorComponent,
+            ApiV1BlockRolloutsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_debug_mode_error_component import (
-            ApiV1BlockRolloutsCreateDebugModeErrorComponent,
+            ApiV1BlockRolloutsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_discovery_enabled_error_component import (
-            ApiV1BlockRolloutsCreateDiscoveryEnabledErrorComponent,
+            ApiV1BlockRolloutsCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_discovery_running_error_component import (
-            ApiV1BlockRolloutsCreateDiscoveryRunningErrorComponent,
+            ApiV1BlockRolloutsCreateDiscoveryRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_discovery_task_id_error_component import (
-            ApiV1BlockRolloutsCreateDiscoveryTaskIdErrorComponent,
+            ApiV1BlockRolloutsCreateDiscoveryTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_discovery_task_meta_error_component import (
-            ApiV1BlockRolloutsCreateDiscoveryTaskMetaErrorComponent,
+            ApiV1BlockRolloutsCreateDiscoveryTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_dispatched_items_error_component import (
-            ApiV1BlockRolloutsCreateDispatchedItemsErrorComponent,
+            ApiV1BlockRolloutsCreateDispatchedItemsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_display_name_error_component import (
-            ApiV1BlockRolloutsCreateDisplayNameErrorComponent,
+            ApiV1BlockRolloutsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_failed_items_error_component import (
-            ApiV1BlockRolloutsCreateFailedItemsErrorComponent,
+            ApiV1BlockRolloutsCreateFailedItemsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_kind_error_component import (
-            ApiV1BlockRolloutsCreateKindErrorComponent,
+            ApiV1BlockRolloutsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_labels_error_component import (
-            ApiV1BlockRolloutsCreateLabelsErrorComponent,
+            ApiV1BlockRolloutsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_last_item_added_at_error_component import (
-            ApiV1BlockRolloutsCreateLastItemAddedAtErrorComponent,
+            ApiV1BlockRolloutsCreateLastItemAddedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_last_state_change_error_component import (
-            ApiV1BlockRolloutsCreateLastStateChangeErrorComponent,
+            ApiV1BlockRolloutsCreateLastStateChangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_last_state_error_component import (
-            ApiV1BlockRolloutsCreateLastStateErrorComponent,
+            ApiV1BlockRolloutsCreateLastStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_name_error_component import (
-            ApiV1BlockRolloutsCreateNameErrorComponent,
+            ApiV1BlockRolloutsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_non_field_errors_error_component import (
-            ApiV1BlockRolloutsCreateNonFieldErrorsErrorComponent,
+            ApiV1BlockRolloutsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_platform_service_error_component import (
-            ApiV1BlockRolloutsCreatePlatformServiceErrorComponent,
+            ApiV1BlockRolloutsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_provider_error_component import (
-            ApiV1BlockRolloutsCreateProviderErrorComponent,
+            ApiV1BlockRolloutsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_provider_id_error_component import (
-            ApiV1BlockRolloutsCreateProviderIdErrorComponent,
+            ApiV1BlockRolloutsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_provider_reference_error_component import (
-            ApiV1BlockRolloutsCreateProviderReferenceErrorComponent,
+            ApiV1BlockRolloutsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_quiescence_seconds_error_component import (
-            ApiV1BlockRolloutsCreateQuiescenceSecondsErrorComponent,
+            ApiV1BlockRolloutsCreateQuiescenceSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_reconciliation_enabled_error_component import (
-            ApiV1BlockRolloutsCreateReconciliationEnabledErrorComponent,
+            ApiV1BlockRolloutsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_reconciliation_running_error_component import (
-            ApiV1BlockRolloutsCreateReconciliationRunningErrorComponent,
+            ApiV1BlockRolloutsCreateReconciliationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_reconciliation_task_id_error_component import (
-            ApiV1BlockRolloutsCreateReconciliationTaskIdErrorComponent,
+            ApiV1BlockRolloutsCreateReconciliationTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_reconciliation_task_meta_error_component import (
-            ApiV1BlockRolloutsCreateReconciliationTaskMetaErrorComponent,
+            ApiV1BlockRolloutsCreateReconciliationTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_repair_running_error_component import (
-            ApiV1BlockRolloutsCreateRepairRunningErrorComponent,
+            ApiV1BlockRolloutsCreateRepairRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_repair_task_id_error_component import (
-            ApiV1BlockRolloutsCreateRepairTaskIdErrorComponent,
+            ApiV1BlockRolloutsCreateRepairTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_repair_task_meta_error_component import (
-            ApiV1BlockRolloutsCreateRepairTaskMetaErrorComponent,
+            ApiV1BlockRolloutsCreateRepairTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_scope_error_component import (
-            ApiV1BlockRolloutsCreateScopeErrorComponent,
+            ApiV1BlockRolloutsCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_sla_availability_error_component import (
-            ApiV1BlockRolloutsCreateSlaAvailabilityErrorComponent,
+            ApiV1BlockRolloutsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_sla_target_error_component import (
-            ApiV1BlockRolloutsCreateSlaTargetErrorComponent,
+            ApiV1BlockRolloutsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_slo_availability_error_component import (
-            ApiV1BlockRolloutsCreateSloAvailabilityErrorComponent,
+            ApiV1BlockRolloutsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_slo_target_error_component import (
-            ApiV1BlockRolloutsCreateSloTargetErrorComponent,
+            ApiV1BlockRolloutsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_state_error_component import (
-            ApiV1BlockRolloutsCreateStateErrorComponent,
+            ApiV1BlockRolloutsCreateStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_state_reason_error_component import (
-            ApiV1BlockRolloutsCreateStateReasonErrorComponent,
+            ApiV1BlockRolloutsCreateStateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_status_error_component import (
-            ApiV1BlockRolloutsCreateStatusErrorComponent,
+            ApiV1BlockRolloutsCreateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_target_availability_error_component import (
-            ApiV1BlockRolloutsCreateTargetAvailabilityErrorComponent,
+            ApiV1BlockRolloutsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_tolerations_error_component import (
-            ApiV1BlockRolloutsCreateTolerationsErrorComponent,
+            ApiV1BlockRolloutsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollouts_create_total_items_error_component import (
-            ApiV1BlockRolloutsCreateTotalItemsErrorComponent,
+            ApiV1BlockRolloutsCreateTotalItemsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

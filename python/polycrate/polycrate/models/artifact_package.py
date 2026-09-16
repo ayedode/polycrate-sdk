@@ -251,10 +251,10 @@ class ArtifactPackage:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.artifact_package_deleted_by_user_type_0 import ArtifactPackageDeletedByUserType0
-        from ..models.artifact_package_last_action_run_type_0 import ArtifactPackageLastActionRunType0
-        from ..models.artifact_package_organization_type_0 import ArtifactPackageOrganizationType0
-        from ..models.artifact_package_workspace_type_0 import ArtifactPackageWorkspaceType0
+        from ..models.artifact_package_deleted_by_user_type_0 import ArtifactPackageDeletedByUserType0  # noqa: PLC0415
+        from ..models.artifact_package_last_action_run_type_0 import ArtifactPackageLastActionRunType0  # noqa: PLC0415
+        from ..models.artifact_package_organization_type_0 import ArtifactPackageOrganizationType0  # noqa: PLC0415
+        from ..models.artifact_package_workspace_type_0 import ArtifactPackageWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -665,14 +665,16 @@ class ArtifactPackage:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.artifact_package_created import ArtifactPackageCreated
-        from ..models.artifact_package_deleted_by_user_type_0 import ArtifactPackageDeletedByUserType0
-        from ..models.artifact_package_last_action_run_type_0 import ArtifactPackageLastActionRunType0
-        from ..models.artifact_package_latest_changelog_parsed import ArtifactPackageLatestChangelogParsed
-        from ..models.artifact_package_latest_source_urls import ArtifactPackageLatestSourceUrls
-        from ..models.artifact_package_organization_type_0 import ArtifactPackageOrganizationType0
-        from ..models.artifact_package_workspace_type_0 import ArtifactPackageWorkspaceType0
-        from ..models.artifact_repository_simple import ArtifactRepositorySimple
+        from ..models.artifact_package_created import ArtifactPackageCreated  # noqa: PLC0415
+        from ..models.artifact_package_deleted_by_user_type_0 import ArtifactPackageDeletedByUserType0  # noqa: PLC0415
+        from ..models.artifact_package_last_action_run_type_0 import ArtifactPackageLastActionRunType0  # noqa: PLC0415
+        from ..models.artifact_package_latest_changelog_parsed import (
+            ArtifactPackageLatestChangelogParsed,  # noqa: PLC0415
+        )
+        from ..models.artifact_package_latest_source_urls import ArtifactPackageLatestSourceUrls  # noqa: PLC0415
+        from ..models.artifact_package_organization_type_0 import ArtifactPackageOrganizationType0  # noqa: PLC0415
+        from ..models.artifact_package_workspace_type_0 import ArtifactPackageWorkspaceType0  # noqa: PLC0415
+        from ..models.artifact_repository_simple import ArtifactRepositorySimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

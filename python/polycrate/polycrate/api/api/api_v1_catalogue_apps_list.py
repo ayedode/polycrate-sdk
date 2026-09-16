@@ -53,6 +53,7 @@ def _get_kwargs(
     has_conditions: bool | Unset = UNSET,
     is_new: bool | Unset = UNSET,
     kind: list[ApiV1CatalogueAppsListKindItem] | Unset = UNSET,
+    maintainer: float | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -118,6 +119,8 @@ def _get_kwargs(
             json_kind.append(kind_item)
 
     params["kind"] = json_kind
+
+    params["maintainer"] = maintainer
 
     params["name"] = name
 
@@ -345,6 +348,7 @@ def sync_detailed(
     has_conditions: bool | Unset = UNSET,
     is_new: bool | Unset = UNSET,
     kind: list[ApiV1CatalogueAppsListKindItem] | Unset = UNSET,
+    maintainer: float | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -400,6 +404,7 @@ def sync_detailed(
         has_conditions (bool | Unset):
         is_new (bool | Unset):
         kind (list[ApiV1CatalogueAppsListKindItem] | Unset):
+        maintainer (float | Unset):
         name (str | Unset):
         name_exact (str | Unset):
         ordering (str | Unset):
@@ -437,6 +442,7 @@ def sync_detailed(
         has_conditions=has_conditions,
         is_new=is_new,
         kind=kind,
+        maintainer=maintainer,
         name=name,
         name_exact=name_exact,
         ordering=ordering,
@@ -476,6 +482,7 @@ def sync(
     has_conditions: bool | Unset = UNSET,
     is_new: bool | Unset = UNSET,
     kind: list[ApiV1CatalogueAppsListKindItem] | Unset = UNSET,
+    maintainer: float | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -532,6 +539,7 @@ def sync(
         has_conditions (bool | Unset):
         is_new (bool | Unset):
         kind (list[ApiV1CatalogueAppsListKindItem] | Unset):
+        maintainer (float | Unset):
         name (str | Unset):
         name_exact (str | Unset):
         ordering (str | Unset):
@@ -570,6 +578,7 @@ def sync(
         has_conditions=has_conditions,
         is_new=is_new,
         kind=kind,
+        maintainer=maintainer,
         name=name,
         name_exact=name_exact,
         ordering=ordering,
@@ -603,6 +612,7 @@ async def asyncio_detailed(
     has_conditions: bool | Unset = UNSET,
     is_new: bool | Unset = UNSET,
     kind: list[ApiV1CatalogueAppsListKindItem] | Unset = UNSET,
+    maintainer: float | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -658,6 +668,7 @@ async def asyncio_detailed(
         has_conditions (bool | Unset):
         is_new (bool | Unset):
         kind (list[ApiV1CatalogueAppsListKindItem] | Unset):
+        maintainer (float | Unset):
         name (str | Unset):
         name_exact (str | Unset):
         ordering (str | Unset):
@@ -695,6 +706,7 @@ async def asyncio_detailed(
         has_conditions=has_conditions,
         is_new=is_new,
         kind=kind,
+        maintainer=maintainer,
         name=name,
         name_exact=name_exact,
         ordering=ordering,
@@ -732,6 +744,7 @@ async def asyncio(
     has_conditions: bool | Unset = UNSET,
     is_new: bool | Unset = UNSET,
     kind: list[ApiV1CatalogueAppsListKindItem] | Unset = UNSET,
+    maintainer: float | Unset = UNSET,
     name: str | Unset = UNSET,
     name_exact: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -788,6 +801,7 @@ async def asyncio(
         has_conditions (bool | Unset):
         is_new (bool | Unset):
         kind (list[ApiV1CatalogueAppsListKindItem] | Unset):
+        maintainer (float | Unset):
         name (str | Unset):
         name_exact (str | Unset):
         ordering (str | Unset):
@@ -827,6 +841,7 @@ async def asyncio(
             has_conditions=has_conditions,
             is_new=is_new,
             kind=kind,
+            maintainer=maintainer,
             name=name,
             name_exact=name_exact,
             ordering=ordering,

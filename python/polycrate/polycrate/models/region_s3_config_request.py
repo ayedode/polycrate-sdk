@@ -145,7 +145,7 @@ class RegionS3ConfigRequest:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.region_s3_config_request_cluster_config import RegionS3ConfigRequestClusterConfig
+        from ..models.region_s3_config_request_cluster_config import RegionS3ConfigRequestClusterConfig  # noqa: PLC0415
 
         d = dict(src_dict)
         _kind = d.pop("kind", UNSET)

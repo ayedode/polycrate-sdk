@@ -26,6 +26,7 @@ class ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponent:
             non_field_errors
         code (ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorComponentCode): * `invalid` - invalid
             * `null` - null
+            * `unique` - unique
         detail (str):
     """
 

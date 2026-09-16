@@ -68,7 +68,7 @@ class PaginatedWorkspaceTemplateListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.workspace_template_list import WorkspaceTemplateList
+        from ..models.workspace_template_list import WorkspaceTemplateList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

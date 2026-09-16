@@ -203,9 +203,9 @@ def sync_detailed(
     | ErrorResponse500
     | ErrorResponse502
 ]:
-    r"""Toggle archive state
+    """Toggle archive state
 
-     POST with {\"archive_reason\": \"...\"} to archive. POST without body to unarchive. Per
+     POST with {"archive_reason": "..."} to archive. POST without body to unarchive. Per
     .specs/.next/29-managed-object-dashboard-component.md
 
     Args:
@@ -258,9 +258,9 @@ def sync(
     | ErrorResponse502
     | None
 ):
-    r"""Toggle archive state
+    """Toggle archive state
 
-     POST with {\"archive_reason\": \"...\"} to archive. POST without body to unarchive. Per
+     POST with {"archive_reason": "..."} to archive. POST without body to unarchive. Per
     .specs/.next/29-managed-object-dashboard-component.md
 
     Args:
@@ -307,9 +307,9 @@ async def asyncio_detailed(
     | ErrorResponse500
     | ErrorResponse502
 ]:
-    r"""Toggle archive state
+    """Toggle archive state
 
-     POST with {\"archive_reason\": \"...\"} to archive. POST without body to unarchive. Per
+     POST with {"archive_reason": "..."} to archive. POST without body to unarchive. Per
     .specs/.next/29-managed-object-dashboard-component.md
 
     Args:
@@ -360,9 +360,9 @@ async def asyncio(
     | ErrorResponse502
     | None
 ):
-    r"""Toggle archive state
+    """Toggle archive state
 
-     POST with {\"archive_reason\": \"...\"} to archive. POST without body to unarchive. Per
+     POST with {"archive_reason": "..."} to archive. POST without body to unarchive. Per
     .specs/.next/29-managed-object-dashboard-component.md
 
     Args:

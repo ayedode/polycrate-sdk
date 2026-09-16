@@ -74,31 +74,31 @@ class ApiV1IdpIdentityprovidersListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_idp_identityproviders_list_created_by_users_error_component import (
-            ApiV1IdpIdentityprovidersListCreatedByUsersErrorComponent,
+            ApiV1IdpIdentityprovidersListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_kind_error_component import (
-            ApiV1IdpIdentityprovidersListKindErrorComponent,
+            ApiV1IdpIdentityprovidersListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_name_exact_error_component import (
-            ApiV1IdpIdentityprovidersListNameExactErrorComponent,
+            ApiV1IdpIdentityprovidersListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_organizations_error_component import (
-            ApiV1IdpIdentityprovidersListOrganizationsErrorComponent,
+            ApiV1IdpIdentityprovidersListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_search_error_component import (
-            ApiV1IdpIdentityprovidersListSearchErrorComponent,
+            ApiV1IdpIdentityprovidersListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_state_error_component import (
-            ApiV1IdpIdentityprovidersListStateErrorComponent,
+            ApiV1IdpIdentityprovidersListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_state_not_error_component import (
-            ApiV1IdpIdentityprovidersListStateNotErrorComponent,
+            ApiV1IdpIdentityprovidersListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_time_range_error_component import (
-            ApiV1IdpIdentityprovidersListTimeRangeErrorComponent,
+            ApiV1IdpIdentityprovidersListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_workspaces_error_component import (
-            ApiV1IdpIdentityprovidersListWorkspacesErrorComponent,
+            ApiV1IdpIdentityprovidersListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -143,34 +143,34 @@ class ApiV1IdpIdentityprovidersListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_idp_identityproviders_list_created_by_users_error_component import (
-            ApiV1IdpIdentityprovidersListCreatedByUsersErrorComponent,
+            ApiV1IdpIdentityprovidersListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_kind_error_component import (
-            ApiV1IdpIdentityprovidersListKindErrorComponent,
+            ApiV1IdpIdentityprovidersListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_name_exact_error_component import (
-            ApiV1IdpIdentityprovidersListNameExactErrorComponent,
+            ApiV1IdpIdentityprovidersListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_organizations_error_component import (
-            ApiV1IdpIdentityprovidersListOrganizationsErrorComponent,
+            ApiV1IdpIdentityprovidersListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_search_error_component import (
-            ApiV1IdpIdentityprovidersListSearchErrorComponent,
+            ApiV1IdpIdentityprovidersListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_state_error_component import (
-            ApiV1IdpIdentityprovidersListStateErrorComponent,
+            ApiV1IdpIdentityprovidersListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_state_not_error_component import (
-            ApiV1IdpIdentityprovidersListStateNotErrorComponent,
+            ApiV1IdpIdentityprovidersListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_sync_mode_error_component import (
-            ApiV1IdpIdentityprovidersListSyncModeErrorComponent,
+            ApiV1IdpIdentityprovidersListSyncModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_time_range_error_component import (
-            ApiV1IdpIdentityprovidersListTimeRangeErrorComponent,
+            ApiV1IdpIdentityprovidersListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_list_workspaces_error_component import (
-            ApiV1IdpIdentityprovidersListWorkspacesErrorComponent,
+            ApiV1IdpIdentityprovidersListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

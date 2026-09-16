@@ -52,16 +52,16 @@ class ApiV1UsersPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_users_partial_update_first_name_error_component import (
-            ApiV1UsersPartialUpdateFirstNameErrorComponent,
+            ApiV1UsersPartialUpdateFirstNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_partial_update_is_billing_contact_error_component import (
-            ApiV1UsersPartialUpdateIsBillingContactErrorComponent,
+            ApiV1UsersPartialUpdateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_partial_update_is_maintenance_contact_error_component import (
-            ApiV1UsersPartialUpdateIsMaintenanceContactErrorComponent,
+            ApiV1UsersPartialUpdateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_partial_update_non_field_errors_error_component import (
-            ApiV1UsersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1UsersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -96,19 +96,19 @@ class ApiV1UsersPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_users_partial_update_first_name_error_component import (
-            ApiV1UsersPartialUpdateFirstNameErrorComponent,
+            ApiV1UsersPartialUpdateFirstNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_partial_update_is_billing_contact_error_component import (
-            ApiV1UsersPartialUpdateIsBillingContactErrorComponent,
+            ApiV1UsersPartialUpdateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_partial_update_is_maintenance_contact_error_component import (
-            ApiV1UsersPartialUpdateIsMaintenanceContactErrorComponent,
+            ApiV1UsersPartialUpdateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_partial_update_last_name_error_component import (
-            ApiV1UsersPartialUpdateLastNameErrorComponent,
+            ApiV1UsersPartialUpdateLastNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_users_partial_update_non_field_errors_error_component import (
-            ApiV1UsersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1UsersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

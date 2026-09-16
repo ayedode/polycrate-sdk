@@ -178,91 +178,91 @@ class ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_actual_availability_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_addon_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateAddonErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateAddonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_annotations_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateAnnotationsErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_archived_at_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedAtErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_archived_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_archived_reason_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_block_config_template_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateBlockConfigTemplateErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateBlockConfigTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_block_name_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateBlockNameErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateBlockNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_criticality_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateCriticalityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_debug_mode_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDebugModeErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_discovery_enabled_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_display_name_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDisplayNameErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_k8s_cluster_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateK8SClusterErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_kind_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateKindErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_labels_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateLabelsErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_name_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNameErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_non_field_errors_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_platform_service_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_provider_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_provider_id_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderIdErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_provider_reference_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_scope_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateScopeErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_sla_availability_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_sla_target_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSlaTargetErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_slo_availability_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_slo_target_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSloTargetErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_target_availability_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_version_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateVersionErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateVersionErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -398,94 +398,94 @@ class ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_actual_availability_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_addon_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateAddonErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateAddonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_annotations_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateAnnotationsErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_archived_at_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedAtErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_archived_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_archived_reason_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_block_config_template_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateBlockConfigTemplateErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateBlockConfigTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_block_name_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateBlockNameErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateBlockNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_criticality_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateCriticalityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_debug_mode_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDebugModeErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_discovery_enabled_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_display_name_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDisplayNameErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_k8s_cluster_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateK8SClusterErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_kind_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateKindErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_labels_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateLabelsErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_name_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNameErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_non_field_errors_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_order_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateOrderErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateOrderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_platform_service_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_provider_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_provider_id_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderIdErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_provider_reference_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_scope_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateScopeErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_sla_availability_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_sla_target_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSlaTargetErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_slo_availability_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_slo_target_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSloTargetErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_target_availability_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_cluster_addon_subscriptions_archive_create_version_error_component import (
-            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateVersionErrorComponent,
+            ApiV1KubernetesClusterAddonSubscriptionsArchiveCreateVersionErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -41,7 +41,7 @@ class DNSProviderCatalogResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.dns_provider_catalog_item import DNSProviderCatalogItem
+        from ..models.dns_provider_catalog_item import DNSProviderCatalogItem  # noqa: PLC0415
 
         d = dict(src_dict)
         providers = []

@@ -54,6 +54,7 @@ if TYPE_CHECKING:
     from ..models.api_v1_pricing_products_update_platform_service_error_component import (
         ApiV1PricingProductsUpdatePlatformServiceErrorComponent,
     )
+    from ..models.api_v1_pricing_products_update_pop_error_component import ApiV1PricingProductsUpdatePopErrorComponent
     from ..models.api_v1_pricing_products_update_price_per_unit_error_component import (
         ApiV1PricingProductsUpdatePricePerUnitErrorComponent,
     )
@@ -111,9 +112,9 @@ class ApiV1PricingProductsUpdateValidationError:
             ApiV1PricingProductsUpdateDisplayNameErrorComponent | ApiV1PricingProductsUpdateKindErrorComponent |
             ApiV1PricingProductsUpdateLabelsErrorComponent | ApiV1PricingProductsUpdateNameErrorComponent |
             ApiV1PricingProductsUpdateNonFieldErrorsErrorComponent | ApiV1PricingProductsUpdatePlatformServiceErrorComponent
-            | ApiV1PricingProductsUpdatePricePerUnitErrorComponent | ApiV1PricingProductsUpdateProviderEntityErrorComponent
-            | ApiV1PricingProductsUpdateProviderErrorComponent | ApiV1PricingProductsUpdateProviderIdErrorComponent |
-            ApiV1PricingProductsUpdateProviderReferenceErrorComponent |
+            | ApiV1PricingProductsUpdatePopErrorComponent | ApiV1PricingProductsUpdatePricePerUnitErrorComponent |
+            ApiV1PricingProductsUpdateProviderEntityErrorComponent | ApiV1PricingProductsUpdateProviderErrorComponent |
+            ApiV1PricingProductsUpdateProviderIdErrorComponent | ApiV1PricingProductsUpdateProviderReferenceErrorComponent |
             ApiV1PricingProductsUpdateProviderTypeIdErrorComponent |
             ApiV1PricingProductsUpdateReconciliationEnabledErrorComponent |
             ApiV1PricingProductsUpdateSlaAvailabilityErrorComponent | ApiV1PricingProductsUpdateSlaTargetErrorComponent |
@@ -139,6 +140,7 @@ class ApiV1PricingProductsUpdateValidationError:
         | ApiV1PricingProductsUpdateNameErrorComponent
         | ApiV1PricingProductsUpdateNonFieldErrorsErrorComponent
         | ApiV1PricingProductsUpdatePlatformServiceErrorComponent
+        | ApiV1PricingProductsUpdatePopErrorComponent
         | ApiV1PricingProductsUpdatePricePerUnitErrorComponent
         | ApiV1PricingProductsUpdateProviderEntityErrorComponent
         | ApiV1PricingProductsUpdateProviderErrorComponent
@@ -157,85 +159,88 @@ class ApiV1PricingProductsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_products_update_annotations_error_component import (
-            ApiV1PricingProductsUpdateAnnotationsErrorComponent,
+            ApiV1PricingProductsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_archived_at_error_component import (
-            ApiV1PricingProductsUpdateArchivedAtErrorComponent,
+            ApiV1PricingProductsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_archived_error_component import (
-            ApiV1PricingProductsUpdateArchivedErrorComponent,
+            ApiV1PricingProductsUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_archived_reason_error_component import (
-            ApiV1PricingProductsUpdateArchivedReasonErrorComponent,
+            ApiV1PricingProductsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_billing_interval_error_component import (
-            ApiV1PricingProductsUpdateBillingIntervalErrorComponent,
+            ApiV1PricingProductsUpdateBillingIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_cost_per_unit_error_component import (
-            ApiV1PricingProductsUpdateCostPerUnitErrorComponent,
+            ApiV1PricingProductsUpdateCostPerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_criticality_error_component import (
-            ApiV1PricingProductsUpdateCriticalityErrorComponent,
+            ApiV1PricingProductsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_debug_mode_error_component import (
-            ApiV1PricingProductsUpdateDebugModeErrorComponent,
+            ApiV1PricingProductsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_display_name_error_component import (
-            ApiV1PricingProductsUpdateDisplayNameErrorComponent,
+            ApiV1PricingProductsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_kind_error_component import (
-            ApiV1PricingProductsUpdateKindErrorComponent,
+            ApiV1PricingProductsUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_labels_error_component import (
-            ApiV1PricingProductsUpdateLabelsErrorComponent,
+            ApiV1PricingProductsUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_name_error_component import (
-            ApiV1PricingProductsUpdateNameErrorComponent,
+            ApiV1PricingProductsUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_non_field_errors_error_component import (
-            ApiV1PricingProductsUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingProductsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_platform_service_error_component import (
-            ApiV1PricingProductsUpdatePlatformServiceErrorComponent,
+            ApiV1PricingProductsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_pricing_products_update_pop_error_component import (
+            ApiV1PricingProductsUpdatePopErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_price_per_unit_error_component import (
-            ApiV1PricingProductsUpdatePricePerUnitErrorComponent,
+            ApiV1PricingProductsUpdatePricePerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_entity_error_component import (
-            ApiV1PricingProductsUpdateProviderEntityErrorComponent,
+            ApiV1PricingProductsUpdateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_error_component import (
-            ApiV1PricingProductsUpdateProviderErrorComponent,
+            ApiV1PricingProductsUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_id_error_component import (
-            ApiV1PricingProductsUpdateProviderIdErrorComponent,
+            ApiV1PricingProductsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_reference_error_component import (
-            ApiV1PricingProductsUpdateProviderReferenceErrorComponent,
+            ApiV1PricingProductsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_type_id_error_component import (
-            ApiV1PricingProductsUpdateProviderTypeIdErrorComponent,
+            ApiV1PricingProductsUpdateProviderTypeIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_reconciliation_enabled_error_component import (
-            ApiV1PricingProductsUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingProductsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_sla_availability_error_component import (
-            ApiV1PricingProductsUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingProductsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_sla_target_error_component import (
-            ApiV1PricingProductsUpdateSlaTargetErrorComponent,
+            ApiV1PricingProductsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_slo_availability_error_component import (
-            ApiV1PricingProductsUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingProductsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_slo_target_error_component import (
-            ApiV1PricingProductsUpdateSloTargetErrorComponent,
+            ApiV1PricingProductsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_target_availability_error_component import (
-            ApiV1PricingProductsUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingProductsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_tolerations_error_component import (
-            ApiV1PricingProductsUpdateTolerationsErrorComponent,
+            ApiV1PricingProductsUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -295,6 +300,8 @@ class ApiV1PricingProductsUpdateValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1PricingProductsUpdateProviderEntityErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1PricingProductsUpdatePopErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1PricingProductsUpdateProviderTypeIdErrorComponent):
                 errors_item = errors_item_data.to_dict()
             else:
@@ -316,88 +323,91 @@ class ApiV1PricingProductsUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_products_update_annotations_error_component import (
-            ApiV1PricingProductsUpdateAnnotationsErrorComponent,
+            ApiV1PricingProductsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_archived_at_error_component import (
-            ApiV1PricingProductsUpdateArchivedAtErrorComponent,
+            ApiV1PricingProductsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_archived_error_component import (
-            ApiV1PricingProductsUpdateArchivedErrorComponent,
+            ApiV1PricingProductsUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_archived_reason_error_component import (
-            ApiV1PricingProductsUpdateArchivedReasonErrorComponent,
+            ApiV1PricingProductsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_billing_interval_error_component import (
-            ApiV1PricingProductsUpdateBillingIntervalErrorComponent,
+            ApiV1PricingProductsUpdateBillingIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_config_error_component import (
-            ApiV1PricingProductsUpdateConfigErrorComponent,
+            ApiV1PricingProductsUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_cost_per_unit_error_component import (
-            ApiV1PricingProductsUpdateCostPerUnitErrorComponent,
+            ApiV1PricingProductsUpdateCostPerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_criticality_error_component import (
-            ApiV1PricingProductsUpdateCriticalityErrorComponent,
+            ApiV1PricingProductsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_debug_mode_error_component import (
-            ApiV1PricingProductsUpdateDebugModeErrorComponent,
+            ApiV1PricingProductsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_display_name_error_component import (
-            ApiV1PricingProductsUpdateDisplayNameErrorComponent,
+            ApiV1PricingProductsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_kind_error_component import (
-            ApiV1PricingProductsUpdateKindErrorComponent,
+            ApiV1PricingProductsUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_labels_error_component import (
-            ApiV1PricingProductsUpdateLabelsErrorComponent,
+            ApiV1PricingProductsUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_name_error_component import (
-            ApiV1PricingProductsUpdateNameErrorComponent,
+            ApiV1PricingProductsUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_non_field_errors_error_component import (
-            ApiV1PricingProductsUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingProductsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_platform_service_error_component import (
-            ApiV1PricingProductsUpdatePlatformServiceErrorComponent,
+            ApiV1PricingProductsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_pricing_products_update_pop_error_component import (
+            ApiV1PricingProductsUpdatePopErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_price_per_unit_error_component import (
-            ApiV1PricingProductsUpdatePricePerUnitErrorComponent,
+            ApiV1PricingProductsUpdatePricePerUnitErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_entity_error_component import (
-            ApiV1PricingProductsUpdateProviderEntityErrorComponent,
+            ApiV1PricingProductsUpdateProviderEntityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_error_component import (
-            ApiV1PricingProductsUpdateProviderErrorComponent,
+            ApiV1PricingProductsUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_id_error_component import (
-            ApiV1PricingProductsUpdateProviderIdErrorComponent,
+            ApiV1PricingProductsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_reference_error_component import (
-            ApiV1PricingProductsUpdateProviderReferenceErrorComponent,
+            ApiV1PricingProductsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_provider_type_id_error_component import (
-            ApiV1PricingProductsUpdateProviderTypeIdErrorComponent,
+            ApiV1PricingProductsUpdateProviderTypeIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_reconciliation_enabled_error_component import (
-            ApiV1PricingProductsUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingProductsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_sla_availability_error_component import (
-            ApiV1PricingProductsUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingProductsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_sla_target_error_component import (
-            ApiV1PricingProductsUpdateSlaTargetErrorComponent,
+            ApiV1PricingProductsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_slo_availability_error_component import (
-            ApiV1PricingProductsUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingProductsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_slo_target_error_component import (
-            ApiV1PricingProductsUpdateSloTargetErrorComponent,
+            ApiV1PricingProductsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_target_availability_error_component import (
-            ApiV1PricingProductsUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingProductsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_products_update_tolerations_error_component import (
-            ApiV1PricingProductsUpdateTolerationsErrorComponent,
+            ApiV1PricingProductsUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -425,6 +435,7 @@ class ApiV1PricingProductsUpdateValidationError:
                 | ApiV1PricingProductsUpdateNameErrorComponent
                 | ApiV1PricingProductsUpdateNonFieldErrorsErrorComponent
                 | ApiV1PricingProductsUpdatePlatformServiceErrorComponent
+                | ApiV1PricingProductsUpdatePopErrorComponent
                 | ApiV1PricingProductsUpdatePricePerUnitErrorComponent
                 | ApiV1PricingProductsUpdateProviderEntityErrorComponent
                 | ApiV1PricingProductsUpdateProviderErrorComponent
@@ -703,19 +714,29 @@ class ApiV1PricingProductsUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_pricing_products_update_error_type_26 = (
-                        ApiV1PricingProductsUpdateProviderTypeIdErrorComponent.from_dict(data)
+                        ApiV1PricingProductsUpdatePopErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_pricing_products_update_error_type_26
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_pricing_products_update_error_type_27 = (
+                        ApiV1PricingProductsUpdateProviderTypeIdErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_pricing_products_update_error_type_27
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_pricing_products_update_error_type_27 = (
+                componentsschemas_api_v1_pricing_products_update_error_type_28 = (
                     ApiV1PricingProductsUpdateConfigErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_pricing_products_update_error_type_27
+                return componentsschemas_api_v1_pricing_products_update_error_type_28
 
             errors_item = _parse_errors_item(errors_item_data)
 

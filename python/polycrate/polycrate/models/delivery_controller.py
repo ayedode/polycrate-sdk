@@ -209,10 +209,16 @@ class DeliveryController:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.delivery_controller_deleted_by_user_type_0 import DeliveryControllerDeletedByUserType0
-        from ..models.delivery_controller_last_action_run_type_0 import DeliveryControllerLastActionRunType0
-        from ..models.delivery_controller_organization_type_0 import DeliveryControllerOrganizationType0
-        from ..models.delivery_controller_workspace_type_0 import DeliveryControllerWorkspaceType0
+        from ..models.delivery_controller_deleted_by_user_type_0 import (
+            DeliveryControllerDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.delivery_controller_last_action_run_type_0 import (
+            DeliveryControllerLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.delivery_controller_organization_type_0 import (
+            DeliveryControllerOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.delivery_controller_workspace_type_0 import DeliveryControllerWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -568,11 +574,17 @@ class DeliveryController:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.delivery_controller_created import DeliveryControllerCreated
-        from ..models.delivery_controller_deleted_by_user_type_0 import DeliveryControllerDeletedByUserType0
-        from ..models.delivery_controller_last_action_run_type_0 import DeliveryControllerLastActionRunType0
-        from ..models.delivery_controller_organization_type_0 import DeliveryControllerOrganizationType0
-        from ..models.delivery_controller_workspace_type_0 import DeliveryControllerWorkspaceType0
+        from ..models.delivery_controller_created import DeliveryControllerCreated  # noqa: PLC0415
+        from ..models.delivery_controller_deleted_by_user_type_0 import (
+            DeliveryControllerDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.delivery_controller_last_action_run_type_0 import (
+            DeliveryControllerLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.delivery_controller_organization_type_0 import (
+            DeliveryControllerOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.delivery_controller_workspace_type_0 import DeliveryControllerWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

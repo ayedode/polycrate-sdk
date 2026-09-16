@@ -38,7 +38,7 @@ class ApiV1S3BucketsObjectsFolderCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1s3_buckets_objects_folder_create_non_field_errors_error_component import (
-            ApiV1S3BucketsObjectsFolderCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsObjectsFolderCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -67,10 +67,10 @@ class ApiV1S3BucketsObjectsFolderCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1s3_buckets_objects_folder_create_non_field_errors_error_component import (
-            ApiV1S3BucketsObjectsFolderCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsObjectsFolderCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_objects_folder_create_prefix_error_component import (
-            ApiV1S3BucketsObjectsFolderCreatePrefixErrorComponent,
+            ApiV1S3BucketsObjectsFolderCreatePrefixErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

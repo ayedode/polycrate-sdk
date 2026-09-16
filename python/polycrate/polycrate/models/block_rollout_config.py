@@ -270,11 +270,19 @@ class BlockRolloutConfig:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.block_rollout_config_deleted_by_user_type_0 import BlockRolloutConfigDeletedByUserType0
-        from ..models.block_rollout_config_last_action_run_type_0 import BlockRolloutConfigLastActionRunType0
-        from ..models.block_rollout_config_last_rollout_status_type_0 import BlockRolloutConfigLastRolloutStatusType0
-        from ..models.block_rollout_config_organization_type_0 import BlockRolloutConfigOrganizationType0
-        from ..models.block_rollout_config_workspace_type_0 import BlockRolloutConfigWorkspaceType0
+        from ..models.block_rollout_config_deleted_by_user_type_0 import (
+            BlockRolloutConfigDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_config_last_action_run_type_0 import (
+            BlockRolloutConfigLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_config_last_rollout_status_type_0 import (
+            BlockRolloutConfigLastRolloutStatusType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_config_organization_type_0 import (
+            BlockRolloutConfigOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_config_workspace_type_0 import BlockRolloutConfigWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -773,12 +781,20 @@ class BlockRolloutConfig:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.block_rollout_config_created import BlockRolloutConfigCreated
-        from ..models.block_rollout_config_deleted_by_user_type_0 import BlockRolloutConfigDeletedByUserType0
-        from ..models.block_rollout_config_last_action_run_type_0 import BlockRolloutConfigLastActionRunType0
-        from ..models.block_rollout_config_last_rollout_status_type_0 import BlockRolloutConfigLastRolloutStatusType0
-        from ..models.block_rollout_config_organization_type_0 import BlockRolloutConfigOrganizationType0
-        from ..models.block_rollout_config_workspace_type_0 import BlockRolloutConfigWorkspaceType0
+        from ..models.block_rollout_config_created import BlockRolloutConfigCreated  # noqa: PLC0415
+        from ..models.block_rollout_config_deleted_by_user_type_0 import (
+            BlockRolloutConfigDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_config_last_action_run_type_0 import (
+            BlockRolloutConfigLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_config_last_rollout_status_type_0 import (
+            BlockRolloutConfigLastRolloutStatusType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_config_organization_type_0 import (
+            BlockRolloutConfigOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_config_workspace_type_0 import BlockRolloutConfigWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

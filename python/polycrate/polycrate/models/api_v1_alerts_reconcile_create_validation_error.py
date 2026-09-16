@@ -212,124 +212,124 @@ class ApiV1AlertsReconcileCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alerts_reconcile_create_alert_router_error_component import (
-            ApiV1AlertsReconcileCreateAlertRouterErrorComponent,
+            ApiV1AlertsReconcileCreateAlertRouterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_annotations_error_component import (
-            ApiV1AlertsReconcileCreateAnnotationsErrorComponent,
+            ApiV1AlertsReconcileCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_archived_at_error_component import (
-            ApiV1AlertsReconcileCreateArchivedAtErrorComponent,
+            ApiV1AlertsReconcileCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_archived_error_component import (
-            ApiV1AlertsReconcileCreateArchivedErrorComponent,
+            ApiV1AlertsReconcileCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_archived_reason_error_component import (
-            ApiV1AlertsReconcileCreateArchivedReasonErrorComponent,
+            ApiV1AlertsReconcileCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_category_error_component import (
-            ApiV1AlertsReconcileCreateCategoryErrorComponent,
+            ApiV1AlertsReconcileCreateCategoryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_criticality_error_component import (
-            ApiV1AlertsReconcileCreateCriticalityErrorComponent,
+            ApiV1AlertsReconcileCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_dashboard_url_error_component import (
-            ApiV1AlertsReconcileCreateDashboardUrlErrorComponent,
+            ApiV1AlertsReconcileCreateDashboardUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_debug_mode_error_component import (
-            ApiV1AlertsReconcileCreateDebugModeErrorComponent,
+            ApiV1AlertsReconcileCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_display_name_error_component import (
-            ApiV1AlertsReconcileCreateDisplayNameErrorComponent,
+            ApiV1AlertsReconcileCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_external_url_error_component import (
-            ApiV1AlertsReconcileCreateExternalUrlErrorComponent,
+            ApiV1AlertsReconcileCreateExternalUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_fingerprint_error_component import (
-            ApiV1AlertsReconcileCreateFingerprintErrorComponent,
+            ApiV1AlertsReconcileCreateFingerprintErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_generator_url_error_component import (
-            ApiV1AlertsReconcileCreateGeneratorUrlErrorComponent,
+            ApiV1AlertsReconcileCreateGeneratorUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_k8s_app_error_component import (
-            ApiV1AlertsReconcileCreateK8SAppErrorComponent,
+            ApiV1AlertsReconcileCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_k8s_cluster_error_component import (
-            ApiV1AlertsReconcileCreateK8SClusterErrorComponent,
+            ApiV1AlertsReconcileCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_kind_error_component import (
-            ApiV1AlertsReconcileCreateKindErrorComponent,
+            ApiV1AlertsReconcileCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_labels_error_component import (
-            ApiV1AlertsReconcileCreateLabelsErrorComponent,
+            ApiV1AlertsReconcileCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_last_seen_error_component import (
-            ApiV1AlertsReconcileCreateLastSeenErrorComponent,
+            ApiV1AlertsReconcileCreateLastSeenErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_message_error_component import (
-            ApiV1AlertsReconcileCreateMessageErrorComponent,
+            ApiV1AlertsReconcileCreateMessageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_name_error_component import (
-            ApiV1AlertsReconcileCreateNameErrorComponent,
+            ApiV1AlertsReconcileCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_namespace_error_component import (
-            ApiV1AlertsReconcileCreateNamespaceErrorComponent,
+            ApiV1AlertsReconcileCreateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_non_field_errors_error_component import (
-            ApiV1AlertsReconcileCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertsReconcileCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_panel_url_error_component import (
-            ApiV1AlertsReconcileCreatePanelUrlErrorComponent,
+            ApiV1AlertsReconcileCreatePanelUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_platform_service_error_component import (
-            ApiV1AlertsReconcileCreatePlatformServiceErrorComponent,
+            ApiV1AlertsReconcileCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_pod_error_component import (
-            ApiV1AlertsReconcileCreatePodErrorComponent,
+            ApiV1AlertsReconcileCreatePodErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_provider_error_component import (
-            ApiV1AlertsReconcileCreateProviderErrorComponent,
+            ApiV1AlertsReconcileCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_provider_id_error_component import (
-            ApiV1AlertsReconcileCreateProviderIdErrorComponent,
+            ApiV1AlertsReconcileCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_provider_reference_error_component import (
-            ApiV1AlertsReconcileCreateProviderReferenceErrorComponent,
+            ApiV1AlertsReconcileCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_reconciliation_enabled_error_component import (
-            ApiV1AlertsReconcileCreateReconciliationEnabledErrorComponent,
+            ApiV1AlertsReconcileCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_silence_ends_at_error_component import (
-            ApiV1AlertsReconcileCreateSilenceEndsAtErrorComponent,
+            ApiV1AlertsReconcileCreateSilenceEndsAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_silence_url_error_component import (
-            ApiV1AlertsReconcileCreateSilenceUrlErrorComponent,
+            ApiV1AlertsReconcileCreateSilenceUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_sla_availability_error_component import (
-            ApiV1AlertsReconcileCreateSlaAvailabilityErrorComponent,
+            ApiV1AlertsReconcileCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_sla_target_error_component import (
-            ApiV1AlertsReconcileCreateSlaTargetErrorComponent,
+            ApiV1AlertsReconcileCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_slo_availability_error_component import (
-            ApiV1AlertsReconcileCreateSloAvailabilityErrorComponent,
+            ApiV1AlertsReconcileCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_slo_target_error_component import (
-            ApiV1AlertsReconcileCreateSloTargetErrorComponent,
+            ApiV1AlertsReconcileCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_status_error_component import (
-            ApiV1AlertsReconcileCreateStatusErrorComponent,
+            ApiV1AlertsReconcileCreateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_suppressed_error_component import (
-            ApiV1AlertsReconcileCreateSuppressedErrorComponent,
+            ApiV1AlertsReconcileCreateSuppressedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_target_availability_error_component import (
-            ApiV1AlertsReconcileCreateTargetAvailabilityErrorComponent,
+            ApiV1AlertsReconcileCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_title_error_component import (
-            ApiV1AlertsReconcileCreateTitleErrorComponent,
+            ApiV1AlertsReconcileCreateTitleErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_tolerations_error_component import (
-            ApiV1AlertsReconcileCreateTolerationsErrorComponent,
+            ApiV1AlertsReconcileCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -436,127 +436,127 @@ class ApiV1AlertsReconcileCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alerts_reconcile_create_alert_router_error_component import (
-            ApiV1AlertsReconcileCreateAlertRouterErrorComponent,
+            ApiV1AlertsReconcileCreateAlertRouterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_annotations_error_component import (
-            ApiV1AlertsReconcileCreateAnnotationsErrorComponent,
+            ApiV1AlertsReconcileCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_archived_at_error_component import (
-            ApiV1AlertsReconcileCreateArchivedAtErrorComponent,
+            ApiV1AlertsReconcileCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_archived_error_component import (
-            ApiV1AlertsReconcileCreateArchivedErrorComponent,
+            ApiV1AlertsReconcileCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_archived_reason_error_component import (
-            ApiV1AlertsReconcileCreateArchivedReasonErrorComponent,
+            ApiV1AlertsReconcileCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_block_error_component import (
-            ApiV1AlertsReconcileCreateBlockErrorComponent,
+            ApiV1AlertsReconcileCreateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_category_error_component import (
-            ApiV1AlertsReconcileCreateCategoryErrorComponent,
+            ApiV1AlertsReconcileCreateCategoryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_criticality_error_component import (
-            ApiV1AlertsReconcileCreateCriticalityErrorComponent,
+            ApiV1AlertsReconcileCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_dashboard_url_error_component import (
-            ApiV1AlertsReconcileCreateDashboardUrlErrorComponent,
+            ApiV1AlertsReconcileCreateDashboardUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_debug_mode_error_component import (
-            ApiV1AlertsReconcileCreateDebugModeErrorComponent,
+            ApiV1AlertsReconcileCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_display_name_error_component import (
-            ApiV1AlertsReconcileCreateDisplayNameErrorComponent,
+            ApiV1AlertsReconcileCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_external_url_error_component import (
-            ApiV1AlertsReconcileCreateExternalUrlErrorComponent,
+            ApiV1AlertsReconcileCreateExternalUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_fingerprint_error_component import (
-            ApiV1AlertsReconcileCreateFingerprintErrorComponent,
+            ApiV1AlertsReconcileCreateFingerprintErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_generator_url_error_component import (
-            ApiV1AlertsReconcileCreateGeneratorUrlErrorComponent,
+            ApiV1AlertsReconcileCreateGeneratorUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_k8s_app_error_component import (
-            ApiV1AlertsReconcileCreateK8SAppErrorComponent,
+            ApiV1AlertsReconcileCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_k8s_cluster_error_component import (
-            ApiV1AlertsReconcileCreateK8SClusterErrorComponent,
+            ApiV1AlertsReconcileCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_kind_error_component import (
-            ApiV1AlertsReconcileCreateKindErrorComponent,
+            ApiV1AlertsReconcileCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_labels_error_component import (
-            ApiV1AlertsReconcileCreateLabelsErrorComponent,
+            ApiV1AlertsReconcileCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_last_seen_error_component import (
-            ApiV1AlertsReconcileCreateLastSeenErrorComponent,
+            ApiV1AlertsReconcileCreateLastSeenErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_message_error_component import (
-            ApiV1AlertsReconcileCreateMessageErrorComponent,
+            ApiV1AlertsReconcileCreateMessageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_name_error_component import (
-            ApiV1AlertsReconcileCreateNameErrorComponent,
+            ApiV1AlertsReconcileCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_namespace_error_component import (
-            ApiV1AlertsReconcileCreateNamespaceErrorComponent,
+            ApiV1AlertsReconcileCreateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_non_field_errors_error_component import (
-            ApiV1AlertsReconcileCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertsReconcileCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_panel_url_error_component import (
-            ApiV1AlertsReconcileCreatePanelUrlErrorComponent,
+            ApiV1AlertsReconcileCreatePanelUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_platform_service_error_component import (
-            ApiV1AlertsReconcileCreatePlatformServiceErrorComponent,
+            ApiV1AlertsReconcileCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_pod_error_component import (
-            ApiV1AlertsReconcileCreatePodErrorComponent,
+            ApiV1AlertsReconcileCreatePodErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_provider_error_component import (
-            ApiV1AlertsReconcileCreateProviderErrorComponent,
+            ApiV1AlertsReconcileCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_provider_id_error_component import (
-            ApiV1AlertsReconcileCreateProviderIdErrorComponent,
+            ApiV1AlertsReconcileCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_provider_reference_error_component import (
-            ApiV1AlertsReconcileCreateProviderReferenceErrorComponent,
+            ApiV1AlertsReconcileCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_reconciliation_enabled_error_component import (
-            ApiV1AlertsReconcileCreateReconciliationEnabledErrorComponent,
+            ApiV1AlertsReconcileCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_silence_ends_at_error_component import (
-            ApiV1AlertsReconcileCreateSilenceEndsAtErrorComponent,
+            ApiV1AlertsReconcileCreateSilenceEndsAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_silence_url_error_component import (
-            ApiV1AlertsReconcileCreateSilenceUrlErrorComponent,
+            ApiV1AlertsReconcileCreateSilenceUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_sla_availability_error_component import (
-            ApiV1AlertsReconcileCreateSlaAvailabilityErrorComponent,
+            ApiV1AlertsReconcileCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_sla_target_error_component import (
-            ApiV1AlertsReconcileCreateSlaTargetErrorComponent,
+            ApiV1AlertsReconcileCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_slo_availability_error_component import (
-            ApiV1AlertsReconcileCreateSloAvailabilityErrorComponent,
+            ApiV1AlertsReconcileCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_slo_target_error_component import (
-            ApiV1AlertsReconcileCreateSloTargetErrorComponent,
+            ApiV1AlertsReconcileCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_status_error_component import (
-            ApiV1AlertsReconcileCreateStatusErrorComponent,
+            ApiV1AlertsReconcileCreateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_suppressed_error_component import (
-            ApiV1AlertsReconcileCreateSuppressedErrorComponent,
+            ApiV1AlertsReconcileCreateSuppressedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_target_availability_error_component import (
-            ApiV1AlertsReconcileCreateTargetAvailabilityErrorComponent,
+            ApiV1AlertsReconcileCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_title_error_component import (
-            ApiV1AlertsReconcileCreateTitleErrorComponent,
+            ApiV1AlertsReconcileCreateTitleErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alerts_reconcile_create_tolerations_error_component import (
-            ApiV1AlertsReconcileCreateTolerationsErrorComponent,
+            ApiV1AlertsReconcileCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -69,6 +69,7 @@ class ProductList:
         price_per_unit (None | str | Unset):
         cost_per_unit (None | str | Unset):
         provider_type_id (None | str | Unset):
+        pop (None | Unset | UUID): Concrete IaaS location (e.g. hetzner-fsn1). Location slug is the PoP name suffix.
     """
 
     id: UUID
@@ -91,11 +92,12 @@ class ProductList:
     price_per_unit: None | str | Unset = UNSET
     cost_per_unit: None | str | Unset = UNSET
     provider_type_id: None | str | Unset = UNSET
+    pop: None | Unset | UUID = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.product_list_organization_type_0 import ProductListOrganizationType0
-        from ..models.product_list_workspace_type_0 import ProductListWorkspaceType0
+        from ..models.product_list_organization_type_0 import ProductListOrganizationType0  # noqa: PLC0415
+        from ..models.product_list_workspace_type_0 import ProductListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -166,6 +168,14 @@ class ProductList:
         else:
             provider_type_id = self.provider_type_id
 
+        pop: None | str | Unset
+        if isinstance(self.pop, Unset):
+            pop = UNSET
+        elif isinstance(self.pop, UUID):
+            pop = str(self.pop)
+        else:
+            pop = self.pop
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -196,15 +206,19 @@ class ProductList:
             field_dict["cost_per_unit"] = cost_per_unit
         if provider_type_id is not UNSET:
             field_dict["provider_type_id"] = provider_type_id
+        if pop is not UNSET:
+            field_dict["pop"] = pop
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.product_list_active_condition_instances_item import ProductListActiveConditionInstancesItem
-        from ..models.product_list_created import ProductListCreated
-        from ..models.product_list_organization_type_0 import ProductListOrganizationType0
-        from ..models.product_list_workspace_type_0 import ProductListWorkspaceType0
+        from ..models.product_list_active_condition_instances_item import (
+            ProductListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.product_list_created import ProductListCreated  # noqa: PLC0415
+        from ..models.product_list_organization_type_0 import ProductListOrganizationType0  # noqa: PLC0415
+        from ..models.product_list_workspace_type_0 import ProductListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -319,6 +333,23 @@ class ProductList:
 
         provider_type_id = _parse_provider_type_id(d.pop("provider_type_id", UNSET))
 
+        def _parse_pop(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                pop_type_0 = UUID(data)
+
+                return pop_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        pop = _parse_pop(d.pop("pop", UNSET))
+
         product_list = cls(
             id=id,
             name=name,
@@ -340,6 +371,7 @@ class ProductList:
             price_per_unit=price_per_unit,
             cost_per_unit=cost_per_unit,
             provider_type_id=provider_type_id,
+            pop=pop,
         )
 
         product_list.additional_properties = d

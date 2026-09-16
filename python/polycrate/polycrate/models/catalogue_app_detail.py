@@ -28,6 +28,7 @@ if TYPE_CHECKING:
     from ..models.catalogue_app_detail_workspace_type_0 import CatalogueAppDetailWorkspaceType0
     from ..models.catalogue_app_simple import CatalogueAppSimple
     from ..models.product_simple import ProductSimple
+    from ..models.user import User
 
 
 T = TypeVar("T", bound="CatalogueAppDetail")
@@ -67,6 +68,7 @@ class CatalogueAppDetail:
             product_regular (ProductSimple): Compact serializer for embedding Product as FK reference.
             product_ha (ProductSimple): Compact serializer for embedding Product as FK reference.
             upstream_outdated (bool):
+            maintainer (None | User):
             created_at (datetime.datetime):
             updated_at (datetime.datetime):
             deleted_at (datetime.datetime | None): Timestamp when this object was soft-deleted. Null if not deleted.
@@ -203,6 +205,7 @@ class CatalogueAppDetail:
     product_regular: ProductSimple
     product_ha: ProductSimple
     upstream_outdated: bool
+    maintainer: None | User
     created_at: datetime.datetime
     updated_at: datetime.datetime
     deleted_at: datetime.datetime | None
@@ -278,13 +281,20 @@ class CatalogueAppDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.catalogue_app_detail_deleted_by_user_type_0 import CatalogueAppDetailDeletedByUserType0
-        from ..models.catalogue_app_detail_last_action_run_type_0 import CatalogueAppDetailLastActionRunType0
-        from ..models.catalogue_app_detail_organization_type_0 import CatalogueAppDetailOrganizationType0
-        from ..models.catalogue_app_detail_template_block_detail_type_0 import (
-            CatalogueAppDetailTemplateBlockDetailType0,
+        from ..models.catalogue_app_detail_deleted_by_user_type_0 import (
+            CatalogueAppDetailDeletedByUserType0,  # noqa: PLC0415
         )
-        from ..models.catalogue_app_detail_workspace_type_0 import CatalogueAppDetailWorkspaceType0
+        from ..models.catalogue_app_detail_last_action_run_type_0 import (
+            CatalogueAppDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.catalogue_app_detail_organization_type_0 import (
+            CatalogueAppDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.catalogue_app_detail_template_block_detail_type_0 import (
+            CatalogueAppDetailTemplateBlockDetailType0,  # noqa: PLC0415
+        )
+        from ..models.catalogue_app_detail_workspace_type_0 import CatalogueAppDetailWorkspaceType0  # noqa: PLC0415
+        from ..models.user import User  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -352,6 +362,12 @@ class CatalogueAppDetail:
         product_ha = self.product_ha.to_dict()
 
         upstream_outdated = self.upstream_outdated
+
+        maintainer: dict[str, Any] | None
+        if isinstance(self.maintainer, User):
+            maintainer = self.maintainer.to_dict()
+        else:
+            maintainer = self.maintainer
 
         created_at = self.created_at.isoformat()
 
@@ -674,6 +690,7 @@ class CatalogueAppDetail:
                 "product_regular": product_regular,
                 "product_ha": product_ha,
                 "upstream_outdated": upstream_outdated,
+                "maintainer": maintainer,
                 "created_at": created_at,
                 "updated_at": updated_at,
                 "deleted_at": deleted_at,
@@ -798,17 +815,24 @@ class CatalogueAppDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.artifact_package_catalogue import ArtifactPackageCatalogue
-        from ..models.catalogue_app_detail_created import CatalogueAppDetailCreated
-        from ..models.catalogue_app_detail_deleted_by_user_type_0 import CatalogueAppDetailDeletedByUserType0
-        from ..models.catalogue_app_detail_last_action_run_type_0 import CatalogueAppDetailLastActionRunType0
-        from ..models.catalogue_app_detail_organization_type_0 import CatalogueAppDetailOrganizationType0
-        from ..models.catalogue_app_detail_template_block_detail_type_0 import (
-            CatalogueAppDetailTemplateBlockDetailType0,
+        from ..models.artifact_package_catalogue import ArtifactPackageCatalogue  # noqa: PLC0415
+        from ..models.catalogue_app_detail_created import CatalogueAppDetailCreated  # noqa: PLC0415
+        from ..models.catalogue_app_detail_deleted_by_user_type_0 import (
+            CatalogueAppDetailDeletedByUserType0,  # noqa: PLC0415
         )
-        from ..models.catalogue_app_detail_workspace_type_0 import CatalogueAppDetailWorkspaceType0
-        from ..models.catalogue_app_simple import CatalogueAppSimple
-        from ..models.product_simple import ProductSimple
+        from ..models.catalogue_app_detail_last_action_run_type_0 import (
+            CatalogueAppDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.catalogue_app_detail_organization_type_0 import (
+            CatalogueAppDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.catalogue_app_detail_template_block_detail_type_0 import (
+            CatalogueAppDetailTemplateBlockDetailType0,  # noqa: PLC0415
+        )
+        from ..models.catalogue_app_detail_workspace_type_0 import CatalogueAppDetailWorkspaceType0  # noqa: PLC0415
+        from ..models.catalogue_app_simple import CatalogueAppSimple  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
+        from ..models.user import User  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -941,6 +965,21 @@ class CatalogueAppDetail:
         product_ha = ProductSimple.from_dict(d.pop("product_ha"))
 
         upstream_outdated = d.pop("upstream_outdated")
+
+        def _parse_maintainer(data: object) -> None | User:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                maintainer_type_1 = User.from_dict(data)
+
+                return maintainer_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | User, data)
+
+        maintainer = _parse_maintainer(d.pop("maintainer"))
 
         created_at = datetime.datetime.fromisoformat(d.pop("created_at"))
 
@@ -1458,6 +1497,7 @@ class CatalogueAppDetail:
             product_regular=product_regular,
             product_ha=product_ha,
             upstream_outdated=upstream_outdated,
+            maintainer=maintainer,
             created_at=created_at,
             updated_at=updated_at,
             deleted_at=deleted_at,

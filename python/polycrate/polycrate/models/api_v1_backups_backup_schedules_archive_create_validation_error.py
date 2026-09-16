@@ -183,94 +183,94 @@ class ApiV1BackupsBackupSchedulesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_backups_backup_schedules_archive_create_annotations_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateAnnotationsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_archived_at_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateArchivedAtErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_archived_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateArchivedErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_archived_reason_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_criticality_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateCriticalityErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_debug_mode_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateDebugModeErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_display_name_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateDisplayNameErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_k8s_cluster_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateK8SClusterErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_kind_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateKindErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_labels_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateLabelsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_last_backup_at_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateLastBackupAtErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateLastBackupAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_name_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateNameErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_non_field_errors_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_paused_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreatePausedErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreatePausedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_platform_service_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_provider_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateProviderErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_provider_id_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateProviderIdErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_provider_reference_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_reconciliation_enabled_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_retention_policy_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateRetentionPolicyErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateRetentionPolicyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_schedule_cron_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateScheduleCronErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateScheduleCronErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_sla_availability_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_sla_target_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSlaTargetErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_slo_availability_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_slo_target_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSloTargetErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_source_namespace_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSourceNamespaceErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSourceNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_status_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateStatusErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_target_availability_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_tolerations_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateTolerationsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_total_backups_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateTotalBackupsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateTotalBackupsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -359,97 +359,97 @@ class ApiV1BackupsBackupSchedulesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_backups_backup_schedules_archive_create_annotations_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateAnnotationsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_archived_at_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateArchivedAtErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_archived_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateArchivedErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_archived_reason_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_criticality_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateCriticalityErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_debug_mode_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateDebugModeErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_display_name_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateDisplayNameErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_k8s_cluster_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateK8SClusterErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_kind_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateKindErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_labels_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateLabelsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_last_backup_at_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateLastBackupAtErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateLastBackupAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_metadata_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateMetadataErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_name_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateNameErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_non_field_errors_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_paused_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreatePausedErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreatePausedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_platform_service_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_provider_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateProviderErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_provider_id_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateProviderIdErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_provider_reference_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_reconciliation_enabled_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_retention_policy_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateRetentionPolicyErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateRetentionPolicyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_schedule_cron_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateScheduleCronErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateScheduleCronErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_sla_availability_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_sla_target_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSlaTargetErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_slo_availability_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_slo_target_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSloTargetErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_source_namespace_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateSourceNamespaceErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateSourceNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_status_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateStatusErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_target_availability_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_tolerations_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateTolerationsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_backups_backup_schedules_archive_create_total_backups_error_component import (
-            ApiV1BackupsBackupSchedulesArchiveCreateTotalBackupsErrorComponent,
+            ApiV1BackupsBackupSchedulesArchiveCreateTotalBackupsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

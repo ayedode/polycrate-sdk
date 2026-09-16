@@ -159,85 +159,85 @@ class ApiV1MaintenanceWindowsUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_maintenance_windows_update_annotations_error_component import (
-            ApiV1MaintenanceWindowsUpdateAnnotationsErrorComponent,
+            ApiV1MaintenanceWindowsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_archived_at_error_component import (
-            ApiV1MaintenanceWindowsUpdateArchivedAtErrorComponent,
+            ApiV1MaintenanceWindowsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_archived_error_component import (
-            ApiV1MaintenanceWindowsUpdateArchivedErrorComponent,
+            ApiV1MaintenanceWindowsUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_archived_reason_error_component import (
-            ApiV1MaintenanceWindowsUpdateArchivedReasonErrorComponent,
+            ApiV1MaintenanceWindowsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_criticality_error_component import (
-            ApiV1MaintenanceWindowsUpdateCriticalityErrorComponent,
+            ApiV1MaintenanceWindowsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_debug_mode_error_component import (
-            ApiV1MaintenanceWindowsUpdateDebugModeErrorComponent,
+            ApiV1MaintenanceWindowsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_description_error_component import (
-            ApiV1MaintenanceWindowsUpdateDescriptionErrorComponent,
+            ApiV1MaintenanceWindowsUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_display_name_error_component import (
-            ApiV1MaintenanceWindowsUpdateDisplayNameErrorComponent,
+            ApiV1MaintenanceWindowsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_is_system_default_error_component import (
-            ApiV1MaintenanceWindowsUpdateIsSystemDefaultErrorComponent,
+            ApiV1MaintenanceWindowsUpdateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_kind_error_component import (
-            ApiV1MaintenanceWindowsUpdateKindErrorComponent,
+            ApiV1MaintenanceWindowsUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_labels_error_component import (
-            ApiV1MaintenanceWindowsUpdateLabelsErrorComponent,
+            ApiV1MaintenanceWindowsUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_lead_time_days_error_component import (
-            ApiV1MaintenanceWindowsUpdateLeadTimeDaysErrorComponent,
+            ApiV1MaintenanceWindowsUpdateLeadTimeDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_name_error_component import (
-            ApiV1MaintenanceWindowsUpdateNameErrorComponent,
+            ApiV1MaintenanceWindowsUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_non_field_errors_error_component import (
-            ApiV1MaintenanceWindowsUpdateNonFieldErrorsErrorComponent,
+            ApiV1MaintenanceWindowsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_note_error_component import (
-            ApiV1MaintenanceWindowsUpdateNoteErrorComponent,
+            ApiV1MaintenanceWindowsUpdateNoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_notice_required_error_component import (
-            ApiV1MaintenanceWindowsUpdateNoticeRequiredErrorComponent,
+            ApiV1MaintenanceWindowsUpdateNoticeRequiredErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_platform_service_error_component import (
-            ApiV1MaintenanceWindowsUpdatePlatformServiceErrorComponent,
+            ApiV1MaintenanceWindowsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_provider_error_component import (
-            ApiV1MaintenanceWindowsUpdateProviderErrorComponent,
+            ApiV1MaintenanceWindowsUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_provider_id_error_component import (
-            ApiV1MaintenanceWindowsUpdateProviderIdErrorComponent,
+            ApiV1MaintenanceWindowsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_provider_reference_error_component import (
-            ApiV1MaintenanceWindowsUpdateProviderReferenceErrorComponent,
+            ApiV1MaintenanceWindowsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_reconciliation_enabled_error_component import (
-            ApiV1MaintenanceWindowsUpdateReconciliationEnabledErrorComponent,
+            ApiV1MaintenanceWindowsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_sla_availability_error_component import (
-            ApiV1MaintenanceWindowsUpdateSlaAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_sla_target_error_component import (
-            ApiV1MaintenanceWindowsUpdateSlaTargetErrorComponent,
+            ApiV1MaintenanceWindowsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_slo_availability_error_component import (
-            ApiV1MaintenanceWindowsUpdateSloAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_slo_target_error_component import (
-            ApiV1MaintenanceWindowsUpdateSloTargetErrorComponent,
+            ApiV1MaintenanceWindowsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_target_availability_error_component import (
-            ApiV1MaintenanceWindowsUpdateTargetAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_tolerations_error_component import (
-            ApiV1MaintenanceWindowsUpdateTolerationsErrorComponent,
+            ApiV1MaintenanceWindowsUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -318,88 +318,88 @@ class ApiV1MaintenanceWindowsUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_maintenance_windows_update_annotations_error_component import (
-            ApiV1MaintenanceWindowsUpdateAnnotationsErrorComponent,
+            ApiV1MaintenanceWindowsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_archived_at_error_component import (
-            ApiV1MaintenanceWindowsUpdateArchivedAtErrorComponent,
+            ApiV1MaintenanceWindowsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_archived_error_component import (
-            ApiV1MaintenanceWindowsUpdateArchivedErrorComponent,
+            ApiV1MaintenanceWindowsUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_archived_reason_error_component import (
-            ApiV1MaintenanceWindowsUpdateArchivedReasonErrorComponent,
+            ApiV1MaintenanceWindowsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_criticality_error_component import (
-            ApiV1MaintenanceWindowsUpdateCriticalityErrorComponent,
+            ApiV1MaintenanceWindowsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_debug_mode_error_component import (
-            ApiV1MaintenanceWindowsUpdateDebugModeErrorComponent,
+            ApiV1MaintenanceWindowsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_description_error_component import (
-            ApiV1MaintenanceWindowsUpdateDescriptionErrorComponent,
+            ApiV1MaintenanceWindowsUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_display_name_error_component import (
-            ApiV1MaintenanceWindowsUpdateDisplayNameErrorComponent,
+            ApiV1MaintenanceWindowsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_is_system_default_error_component import (
-            ApiV1MaintenanceWindowsUpdateIsSystemDefaultErrorComponent,
+            ApiV1MaintenanceWindowsUpdateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_kind_error_component import (
-            ApiV1MaintenanceWindowsUpdateKindErrorComponent,
+            ApiV1MaintenanceWindowsUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_labels_error_component import (
-            ApiV1MaintenanceWindowsUpdateLabelsErrorComponent,
+            ApiV1MaintenanceWindowsUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_lead_time_days_error_component import (
-            ApiV1MaintenanceWindowsUpdateLeadTimeDaysErrorComponent,
+            ApiV1MaintenanceWindowsUpdateLeadTimeDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_name_error_component import (
-            ApiV1MaintenanceWindowsUpdateNameErrorComponent,
+            ApiV1MaintenanceWindowsUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_non_field_errors_error_component import (
-            ApiV1MaintenanceWindowsUpdateNonFieldErrorsErrorComponent,
+            ApiV1MaintenanceWindowsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_note_error_component import (
-            ApiV1MaintenanceWindowsUpdateNoteErrorComponent,
+            ApiV1MaintenanceWindowsUpdateNoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_notice_required_error_component import (
-            ApiV1MaintenanceWindowsUpdateNoticeRequiredErrorComponent,
+            ApiV1MaintenanceWindowsUpdateNoticeRequiredErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_platform_service_error_component import (
-            ApiV1MaintenanceWindowsUpdatePlatformServiceErrorComponent,
+            ApiV1MaintenanceWindowsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_provider_error_component import (
-            ApiV1MaintenanceWindowsUpdateProviderErrorComponent,
+            ApiV1MaintenanceWindowsUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_provider_id_error_component import (
-            ApiV1MaintenanceWindowsUpdateProviderIdErrorComponent,
+            ApiV1MaintenanceWindowsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_provider_reference_error_component import (
-            ApiV1MaintenanceWindowsUpdateProviderReferenceErrorComponent,
+            ApiV1MaintenanceWindowsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_reconciliation_enabled_error_component import (
-            ApiV1MaintenanceWindowsUpdateReconciliationEnabledErrorComponent,
+            ApiV1MaintenanceWindowsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_sla_availability_error_component import (
-            ApiV1MaintenanceWindowsUpdateSlaAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_sla_target_error_component import (
-            ApiV1MaintenanceWindowsUpdateSlaTargetErrorComponent,
+            ApiV1MaintenanceWindowsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_slo_availability_error_component import (
-            ApiV1MaintenanceWindowsUpdateSloAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_slo_target_error_component import (
-            ApiV1MaintenanceWindowsUpdateSloTargetErrorComponent,
+            ApiV1MaintenanceWindowsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_target_availability_error_component import (
-            ApiV1MaintenanceWindowsUpdateTargetAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_time_slots_error_component import (
-            ApiV1MaintenanceWindowsUpdateTimeSlotsErrorComponent,
+            ApiV1MaintenanceWindowsUpdateTimeSlotsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_update_tolerations_error_component import (
-            ApiV1MaintenanceWindowsUpdateTolerationsErrorComponent,
+            ApiV1MaintenanceWindowsUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

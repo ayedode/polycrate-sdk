@@ -68,7 +68,7 @@ class PaginatedActionRunListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.action_run_list import ActionRunList
+        from ..models.action_run_list import ActionRunList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

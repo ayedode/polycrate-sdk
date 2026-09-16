@@ -53,16 +53,16 @@ class ApiV1ConversationsConversationsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conversations_conversations_partial_update_meta_error_component import (
-            ApiV1ConversationsConversationsPartialUpdateMetaErrorComponent,
+            ApiV1ConversationsConversationsPartialUpdateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_partial_update_non_field_errors_error_component import (
-            ApiV1ConversationsConversationsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsConversationsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_partial_update_provider_id_error_component import (
-            ApiV1ConversationsConversationsPartialUpdateProviderIdErrorComponent,
+            ApiV1ConversationsConversationsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_partial_update_status_error_component import (
-            ApiV1ConversationsConversationsPartialUpdateStatusErrorComponent,
+            ApiV1ConversationsConversationsPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -97,19 +97,19 @@ class ApiV1ConversationsConversationsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conversations_conversations_partial_update_config_error_component import (
-            ApiV1ConversationsConversationsPartialUpdateConfigErrorComponent,
+            ApiV1ConversationsConversationsPartialUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_partial_update_meta_error_component import (
-            ApiV1ConversationsConversationsPartialUpdateMetaErrorComponent,
+            ApiV1ConversationsConversationsPartialUpdateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_partial_update_non_field_errors_error_component import (
-            ApiV1ConversationsConversationsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsConversationsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_partial_update_provider_id_error_component import (
-            ApiV1ConversationsConversationsPartialUpdateProviderIdErrorComponent,
+            ApiV1ConversationsConversationsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_partial_update_status_error_component import (
-            ApiV1ConversationsConversationsPartialUpdateStatusErrorComponent,
+            ApiV1ConversationsConversationsPartialUpdateStatusErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

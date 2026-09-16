@@ -68,7 +68,7 @@ class PaginatedAlertCategoryAnalysisList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.alert_category_analysis import AlertCategoryAnalysis
+        from ..models.alert_category_analysis import AlertCategoryAnalysis  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

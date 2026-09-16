@@ -51,15 +51,23 @@ class ApiV1CvesListValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_cves_list_created_by_users_error_component import ApiV1CvesListCreatedByUsersErrorComponent
-        from ..models.api_v1_cves_list_cve_id_error_component import ApiV1CvesListCveIdErrorComponent
-        from ..models.api_v1_cves_list_kind_error_component import ApiV1CvesListKindErrorComponent
-        from ..models.api_v1_cves_list_search_error_component import ApiV1CvesListSearchErrorComponent
-        from ..models.api_v1_cves_list_severity_error_component import ApiV1CvesListSeverityErrorComponent
-        from ..models.api_v1_cves_list_state_error_component import ApiV1CvesListStateErrorComponent
-        from ..models.api_v1_cves_list_state_not_error_component import ApiV1CvesListStateNotErrorComponent
-        from ..models.api_v1_cves_list_status_error_component import ApiV1CvesListStatusErrorComponent
-        from ..models.api_v1_cves_list_time_range_error_component import ApiV1CvesListTimeRangeErrorComponent
+        from ..models.api_v1_cves_list_created_by_users_error_component import (
+            ApiV1CvesListCreatedByUsersErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_list_cve_id_error_component import ApiV1CvesListCveIdErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_kind_error_component import ApiV1CvesListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_search_error_component import ApiV1CvesListSearchErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_severity_error_component import (
+            ApiV1CvesListSeverityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_list_state_error_component import ApiV1CvesListStateErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_state_not_error_component import (
+            ApiV1CvesListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_list_status_error_component import ApiV1CvesListStatusErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_time_range_error_component import (
+            ApiV1CvesListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -102,16 +110,26 @@ class ApiV1CvesListValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_cves_list_created_by_users_error_component import ApiV1CvesListCreatedByUsersErrorComponent
-        from ..models.api_v1_cves_list_cve_id_error_component import ApiV1CvesListCveIdErrorComponent
-        from ..models.api_v1_cves_list_kind_error_component import ApiV1CvesListKindErrorComponent
-        from ..models.api_v1_cves_list_name_exact_error_component import ApiV1CvesListNameExactErrorComponent
-        from ..models.api_v1_cves_list_search_error_component import ApiV1CvesListSearchErrorComponent
-        from ..models.api_v1_cves_list_severity_error_component import ApiV1CvesListSeverityErrorComponent
-        from ..models.api_v1_cves_list_state_error_component import ApiV1CvesListStateErrorComponent
-        from ..models.api_v1_cves_list_state_not_error_component import ApiV1CvesListStateNotErrorComponent
-        from ..models.api_v1_cves_list_status_error_component import ApiV1CvesListStatusErrorComponent
-        from ..models.api_v1_cves_list_time_range_error_component import ApiV1CvesListTimeRangeErrorComponent
+        from ..models.api_v1_cves_list_created_by_users_error_component import (
+            ApiV1CvesListCreatedByUsersErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_list_cve_id_error_component import ApiV1CvesListCveIdErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_kind_error_component import ApiV1CvesListKindErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_name_exact_error_component import (
+            ApiV1CvesListNameExactErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_list_search_error_component import ApiV1CvesListSearchErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_severity_error_component import (
+            ApiV1CvesListSeverityErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_list_state_error_component import ApiV1CvesListStateErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_state_not_error_component import (
+            ApiV1CvesListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_cves_list_status_error_component import ApiV1CvesListStatusErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_cves_list_time_range_error_component import (
+            ApiV1CvesListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

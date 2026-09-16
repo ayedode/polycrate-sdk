@@ -26,6 +26,7 @@ class ApiV1KubernetesControlplanesArchiveCreateNonFieldErrorsErrorComponent:
             non_field_errors
         code (ApiV1KubernetesControlplanesArchiveCreateNonFieldErrorsErrorComponentCode): * `invalid` - invalid
             * `null` - null
+            * `unique` - unique
         detail (str):
     """
 

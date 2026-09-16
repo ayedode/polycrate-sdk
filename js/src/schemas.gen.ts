@@ -85898,6 +85898,9 @@ export const ApiV1CatalogueAppsArchiveCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsArchiveCreateProductHaIdErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1CatalogueAppsArchiveCreateMaintainerIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsArchiveCreateDisplayNameErrorComponent'
         },
         {
@@ -86040,6 +86043,7 @@ export const ApiV1CatalogueAppsArchiveCreateErrorSchema = {
             name: '#/components/schemas/ApiV1CatalogueAppsArchiveCreateNameErrorComponent',
             product_regular_id: '#/components/schemas/ApiV1CatalogueAppsArchiveCreateProductRegularIdErrorComponent',
             product_ha_id: '#/components/schemas/ApiV1CatalogueAppsArchiveCreateProductHaIdErrorComponent',
+            maintainer_id: '#/components/schemas/ApiV1CatalogueAppsArchiveCreateMaintainerIdErrorComponent',
             display_name: '#/components/schemas/ApiV1CatalogueAppsArchiveCreateDisplayNameErrorComponent',
             labels: '#/components/schemas/ApiV1CatalogueAppsArchiveCreateLabelsErrorComponent',
             annotations: '#/components/schemas/ApiV1CatalogueAppsArchiveCreateAnnotationsErrorComponent',
@@ -86227,6 +86231,27 @@ export const ApiV1CatalogueAppsArchiveCreateLastReconciliationDurationSecondsErr
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_string_length\` - max_string_length`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1CatalogueAppsArchiveCreateMaintainerIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['maintainer_id'],
+            type: 'string',
+            description: '* `maintainer_id` - maintainer_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -87219,6 +87244,9 @@ export const ApiV1CatalogueAppsCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsCreateProductHaIdErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1CatalogueAppsCreateMaintainerIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsCreateDisplayNameErrorComponent'
         },
         {
@@ -87361,6 +87389,7 @@ export const ApiV1CatalogueAppsCreateErrorSchema = {
             name: '#/components/schemas/ApiV1CatalogueAppsCreateNameErrorComponent',
             product_regular_id: '#/components/schemas/ApiV1CatalogueAppsCreateProductRegularIdErrorComponent',
             product_ha_id: '#/components/schemas/ApiV1CatalogueAppsCreateProductHaIdErrorComponent',
+            maintainer_id: '#/components/schemas/ApiV1CatalogueAppsCreateMaintainerIdErrorComponent',
             display_name: '#/components/schemas/ApiV1CatalogueAppsCreateDisplayNameErrorComponent',
             labels: '#/components/schemas/ApiV1CatalogueAppsCreateLabelsErrorComponent',
             annotations: '#/components/schemas/ApiV1CatalogueAppsCreateAnnotationsErrorComponent',
@@ -87548,6 +87577,27 @@ export const ApiV1CatalogueAppsCreateLastReconciliationDurationSecondsErrorCompo
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_string_length\` - max_string_length`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1CatalogueAppsCreateMaintainerIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['maintainer_id'],
+            type: 'string',
+            description: '* `maintainer_id` - maintainer_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -88358,6 +88408,9 @@ export const ApiV1CatalogueAppsListErrorSchema = {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsListArtifactPackageErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1CatalogueAppsListMaintainerErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsListStateNotErrorComponent'
         },
         {
@@ -88378,6 +88431,7 @@ export const ApiV1CatalogueAppsListErrorSchema = {
             updated_at: '#/components/schemas/ApiV1CatalogueAppsListUpdatedAtErrorComponent',
             scope: '#/components/schemas/ApiV1CatalogueAppsListScopeErrorComponent',
             artifact_package: '#/components/schemas/ApiV1CatalogueAppsListArtifactPackageErrorComponent',
+            maintainer: '#/components/schemas/ApiV1CatalogueAppsListMaintainerErrorComponent',
             state_not: '#/components/schemas/ApiV1CatalogueAppsListStateNotErrorComponent',
             name_exact: '#/components/schemas/ApiV1CatalogueAppsListNameExactErrorComponent'
         }
@@ -88415,6 +88469,27 @@ export const ApiV1CatalogueAppsListKindErrorComponentSchema = {
             type: 'string',
             description: `* \`invalid_choice\` - invalid_choice
 * \`invalid_list\` - invalid_list`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1CatalogueAppsListMaintainerErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['maintainer'],
+            type: 'string',
+            description: '* `maintainer` - maintainer'
+        },
+        code: {
+            enum: ['invalid', 'max_value'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_value\` - max_value`
         },
         detail: {
             type: 'string'
@@ -88928,6 +89003,9 @@ export const ApiV1CatalogueAppsPartialUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsPartialUpdateProductHaIdErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsPartialUpdateDisplayNameErrorComponent'
         },
         {
@@ -89070,6 +89148,7 @@ export const ApiV1CatalogueAppsPartialUpdateErrorSchema = {
             name: '#/components/schemas/ApiV1CatalogueAppsPartialUpdateNameErrorComponent',
             product_regular_id: '#/components/schemas/ApiV1CatalogueAppsPartialUpdateProductRegularIdErrorComponent',
             product_ha_id: '#/components/schemas/ApiV1CatalogueAppsPartialUpdateProductHaIdErrorComponent',
+            maintainer_id: '#/components/schemas/ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent',
             display_name: '#/components/schemas/ApiV1CatalogueAppsPartialUpdateDisplayNameErrorComponent',
             labels: '#/components/schemas/ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent',
             annotations: '#/components/schemas/ApiV1CatalogueAppsPartialUpdateAnnotationsErrorComponent',
@@ -89257,6 +89336,27 @@ export const ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErr
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_string_length\` - max_string_length`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['maintainer_id'],
+            type: 'string',
+            description: '* `maintainer_id` - maintainer_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -90263,6 +90363,9 @@ export const ApiV1CatalogueAppsSyncReleasesCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateProductHaIdErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateMaintainerIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateDisplayNameErrorComponent'
         },
         {
@@ -90405,6 +90508,7 @@ export const ApiV1CatalogueAppsSyncReleasesCreateErrorSchema = {
             name: '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateNameErrorComponent',
             product_regular_id: '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateProductRegularIdErrorComponent',
             product_ha_id: '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateProductHaIdErrorComponent',
+            maintainer_id: '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateMaintainerIdErrorComponent',
             display_name: '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateDisplayNameErrorComponent',
             labels: '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateLabelsErrorComponent',
             annotations: '#/components/schemas/ApiV1CatalogueAppsSyncReleasesCreateAnnotationsErrorComponent',
@@ -90592,6 +90696,27 @@ export const ApiV1CatalogueAppsSyncReleasesCreateLastReconciliationDurationSecon
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_string_length\` - max_string_length`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1CatalogueAppsSyncReleasesCreateMaintainerIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['maintainer_id'],
+            type: 'string',
+            description: '* `maintainer_id` - maintainer_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -91584,6 +91709,9 @@ export const ApiV1CatalogueAppsSyncVulnerabilityProductsCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateProductHaIdErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateMaintainerIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateDisplayNameErrorComponent'
         },
         {
@@ -91726,6 +91854,7 @@ export const ApiV1CatalogueAppsSyncVulnerabilityProductsCreateErrorSchema = {
             name: '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateNameErrorComponent',
             product_regular_id: '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateProductRegularIdErrorComponent',
             product_ha_id: '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateProductHaIdErrorComponent',
+            maintainer_id: '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateMaintainerIdErrorComponent',
             display_name: '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateDisplayNameErrorComponent',
             labels: '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateLabelsErrorComponent',
             annotations: '#/components/schemas/ApiV1CatalogueAppsSyncVulnerabilityProductsCreateAnnotationsErrorComponent',
@@ -91913,6 +92042,27 @@ export const ApiV1CatalogueAppsSyncVulnerabilityProductsCreateLastReconciliation
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_string_length\` - max_string_length`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1CatalogueAppsSyncVulnerabilityProductsCreateMaintainerIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['maintainer_id'],
+            type: 'string',
+            description: '* `maintainer_id` - maintainer_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -92905,6 +93055,9 @@ export const ApiV1CatalogueAppsUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsUpdateProductHaIdErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1CatalogueAppsUpdateMaintainerIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1CatalogueAppsUpdateDisplayNameErrorComponent'
         },
         {
@@ -93047,6 +93200,7 @@ export const ApiV1CatalogueAppsUpdateErrorSchema = {
             name: '#/components/schemas/ApiV1CatalogueAppsUpdateNameErrorComponent',
             product_regular_id: '#/components/schemas/ApiV1CatalogueAppsUpdateProductRegularIdErrorComponent',
             product_ha_id: '#/components/schemas/ApiV1CatalogueAppsUpdateProductHaIdErrorComponent',
+            maintainer_id: '#/components/schemas/ApiV1CatalogueAppsUpdateMaintainerIdErrorComponent',
             display_name: '#/components/schemas/ApiV1CatalogueAppsUpdateDisplayNameErrorComponent',
             labels: '#/components/schemas/ApiV1CatalogueAppsUpdateLabelsErrorComponent',
             annotations: '#/components/schemas/ApiV1CatalogueAppsUpdateAnnotationsErrorComponent',
@@ -93234,6 +93388,27 @@ export const ApiV1CatalogueAppsUpdateLastReconciliationDurationSecondsErrorCompo
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_string_length\` - max_string_length`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1CatalogueAppsUpdateMaintainerIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['maintainer_id'],
+            type: 'string',
+            description: '* `maintainer_id` - maintainer_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -172326,6 +172501,9 @@ export const ApiV1HostsListErrorSchema = {
             '$ref': '#/components/schemas/ApiV1HostsListProviderAccountErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1HostsListWorkerPoolErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1HostsListStateNotErrorComponent'
         },
         {
@@ -172364,6 +172542,7 @@ export const ApiV1HostsListErrorSchema = {
             role: '#/components/schemas/ApiV1HostsListRoleErrorComponent',
             bootstrap_status: '#/components/schemas/ApiV1HostsListBootstrapStatusErrorComponent',
             provider_account: '#/components/schemas/ApiV1HostsListProviderAccountErrorComponent',
+            worker_pool: '#/components/schemas/ApiV1HostsListWorkerPoolErrorComponent',
             state_not: '#/components/schemas/ApiV1HostsListStateNotErrorComponent',
             name_exact: '#/components/schemas/ApiV1HostsListNameExactErrorComponent'
         }
@@ -172931,6 +173110,27 @@ export const ApiV1HostsListValidationErrorSchema = {
         }
     },
     required: ['errors', 'type']
+} as const;
+
+export const ApiV1HostsListWorkerPoolErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['worker_pool'],
+            type: 'string',
+            description: '* `worker_pool` - worker_pool'
+        },
+        code: {
+            enum: ['invalid', 'null_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null_characters_not_allowed\` - null_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1HostsListWorkspacesErrorComponentSchema = {
@@ -225896,6 +226096,27 @@ export const ApiV1KubernetesControlplanesArchiveCreateArchivedReasonErrorCompone
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1KubernetesControlplanesArchiveCreateAuditLoggingEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['audit_logging_enabled'],
+            type: 'string',
+            description: '* `audit_logging_enabled` - audit_logging_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1KubernetesControlplanesArchiveCreateClusterDomainErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -226079,10 +226300,40 @@ export const ApiV1KubernetesControlplanesArchiveCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateSlaAvailabilityErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateOrganizationIdErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateWorkspaceIdErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateRegionIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateLoadbalancerModeErrorComponent'
         },
         {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateLoadbalancerProviderErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateExposureTypeErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateParentGatewayNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateParentGatewayNamespaceErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateParentGatewaySectionNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateAuditLoggingEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateSecretsEncryptionEnabledErrorComponent'
         },
         {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateStorageClassErrorComponent'
@@ -226121,8 +226372,18 @@ export const ApiV1KubernetesControlplanesArchiveCreateErrorSchema = {
             slo_availability: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateSloAvailabilityErrorComponent',
             sla_target: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateSlaTargetErrorComponent',
             sla_availability: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateSlaAvailabilityErrorComponent',
+            organization_id: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateOrganizationIdErrorComponent',
+            workspace_id: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateWorkspaceIdErrorComponent',
+            region_id: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateRegionIdErrorComponent',
             loadbalancer_mode: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateLoadbalancerModeErrorComponent',
             loadbalancer_provider: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateLoadbalancerProviderErrorComponent',
+            exposure_type: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateExposureTypeErrorComponent',
+            parent_gateway_name: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateParentGatewayNameErrorComponent',
+            parent_gateway_namespace: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateParentGatewayNamespaceErrorComponent',
+            parent_gateway_section_name: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateParentGatewaySectionNameErrorComponent',
+            gateway_class_name: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponent',
+            audit_logging_enabled: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateAuditLoggingEnabledErrorComponent',
+            secrets_encryption_enabled: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateSecretsEncryptionEnabledErrorComponent',
             storage_class: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateStorageClassErrorComponent',
             persistence_size: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreatePersistenceSizeErrorComponent',
             cluster_domain: '#/components/schemas/ApiV1KubernetesControlplanesArchiveCreateClusterDomainErrorComponent'
@@ -226146,6 +226407,51 @@ export const ApiV1KubernetesControlplanesArchiveCreateErrorResponse400Schema = {
             client_error: '#/components/schemas/ParseErrorResponse'
         }
     }
+} as const;
+
+export const ApiV1KubernetesControlplanesArchiveCreateExposureTypeErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['exposure_type'],
+            type: 'string',
+            description: '* `exposure_type` - exposure_type'
+        },
+        code: {
+            enum: ['invalid_choice', 'null'],
+            type: 'string',
+            description: `* \`invalid_choice\` - invalid_choice
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesArchiveCreateGatewayClassNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['gateway_class_name'],
+            type: 'string',
+            description: '* `gateway_class_name` - gateway_class_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1KubernetesControlplanesArchiveCreateKindErrorComponentSchema = {
@@ -226243,12 +226549,13 @@ export const ApiV1KubernetesControlplanesArchiveCreateNameErrorComponentSchema =
             description: '* `name` - name'
         },
         code: {
-            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'required', 'surrogate_characters_not_allowed'],
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_length\` - max_length
 * \`null\` - null
 * \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`required\` - required
 * \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
         },
         detail: {
@@ -226267,10 +226574,106 @@ export const ApiV1KubernetesControlplanesArchiveCreateNonFieldErrorsErrorCompone
             description: '* `non_field_errors` - non_field_errors'
         },
         code: {
-            enum: ['invalid', 'null'],
+            enum: ['invalid', 'null', 'unique'],
             type: 'string',
             description: `* \`invalid\` - invalid
-* \`null\` - null`
+* \`null\` - null
+* \`unique\` - unique`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesArchiveCreateOrganizationIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['organization_id'],
+            type: 'string',
+            description: '* `organization_id` - organization_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesArchiveCreateParentGatewayNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_name'],
+            type: 'string',
+            description: '* `parent_gateway_name` - parent_gateway_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesArchiveCreateParentGatewayNamespaceErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_namespace'],
+            type: 'string',
+            description: '* `parent_gateway_namespace` - parent_gateway_namespace'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesArchiveCreateParentGatewaySectionNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_section_name'],
+            type: 'string',
+            description: '* `parent_gateway_section_name` - parent_gateway_section_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
         },
         detail: {
             type: 'string'
@@ -226411,6 +226814,29 @@ export const ApiV1KubernetesControlplanesArchiveCreateReconciliationEnabledError
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1KubernetesControlplanesArchiveCreateRegionIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['region_id'],
+            type: 'string',
+            description: '* `region_id` - region_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1KubernetesControlplanesArchiveCreateScopeErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -226423,6 +226849,27 @@ export const ApiV1KubernetesControlplanesArchiveCreateScopeErrorComponentSchema 
             enum: ['invalid_choice', 'null'],
             type: 'string',
             description: `* \`invalid_choice\` - invalid_choice
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesArchiveCreateSecretsEncryptionEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['secrets_encryption_enabled'],
+            type: 'string',
+            description: '* `secrets_encryption_enabled` - secrets_encryption_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
 * \`null\` - null`
         },
         detail: {
@@ -226596,6 +227043,29 @@ export const ApiV1KubernetesControlplanesArchiveCreateValidationErrorSchema = {
     required: ['errors', 'type']
 } as const;
 
+export const ApiV1KubernetesControlplanesArchiveCreateWorkspaceIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['workspace_id'],
+            type: 'string',
+            description: '* `workspace_id` - workspace_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1KubernetesControlplanesCreateActualAvailabilityErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -226699,6 +227169,27 @@ export const ApiV1KubernetesControlplanesCreateArchivedReasonErrorComponentSchem
             description: `* \`invalid\` - invalid
 * \`null_characters_not_allowed\` - null_characters_not_allowed
 * \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['audit_logging_enabled'],
+            type: 'string',
+            description: '* `audit_logging_enabled` - audit_logging_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -226890,10 +227381,40 @@ export const ApiV1KubernetesControlplanesCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateRegionIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent'
         },
         {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent'
         },
         {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesCreateStorageClassErrorComponent'
@@ -226932,8 +227453,18 @@ export const ApiV1KubernetesControlplanesCreateErrorSchema = {
             slo_availability: '#/components/schemas/ApiV1KubernetesControlplanesCreateSloAvailabilityErrorComponent',
             sla_target: '#/components/schemas/ApiV1KubernetesControlplanesCreateSlaTargetErrorComponent',
             sla_availability: '#/components/schemas/ApiV1KubernetesControlplanesCreateSlaAvailabilityErrorComponent',
+            organization_id: '#/components/schemas/ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponent',
+            workspace_id: '#/components/schemas/ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponent',
+            region_id: '#/components/schemas/ApiV1KubernetesControlplanesCreateRegionIdErrorComponent',
             loadbalancer_mode: '#/components/schemas/ApiV1KubernetesControlplanesCreateLoadbalancerModeErrorComponent',
             loadbalancer_provider: '#/components/schemas/ApiV1KubernetesControlplanesCreateLoadbalancerProviderErrorComponent',
+            exposure_type: '#/components/schemas/ApiV1KubernetesControlplanesCreateExposureTypeErrorComponent',
+            parent_gateway_name: '#/components/schemas/ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponent',
+            parent_gateway_namespace: '#/components/schemas/ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponent',
+            parent_gateway_section_name: '#/components/schemas/ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponent',
+            gateway_class_name: '#/components/schemas/ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponent',
+            audit_logging_enabled: '#/components/schemas/ApiV1KubernetesControlplanesCreateAuditLoggingEnabledErrorComponent',
+            secrets_encryption_enabled: '#/components/schemas/ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponent',
             storage_class: '#/components/schemas/ApiV1KubernetesControlplanesCreateStorageClassErrorComponent',
             persistence_size: '#/components/schemas/ApiV1KubernetesControlplanesCreatePersistenceSizeErrorComponent',
             cluster_domain: '#/components/schemas/ApiV1KubernetesControlplanesCreateClusterDomainErrorComponent'
@@ -226957,6 +227488,51 @@ export const ApiV1KubernetesControlplanesCreateErrorResponse400Schema = {
             client_error: '#/components/schemas/ParseErrorResponse'
         }
     }
+} as const;
+
+export const ApiV1KubernetesControlplanesCreateExposureTypeErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['exposure_type'],
+            type: 'string',
+            description: '* `exposure_type` - exposure_type'
+        },
+        code: {
+            enum: ['invalid_choice', 'null'],
+            type: 'string',
+            description: `* \`invalid_choice\` - invalid_choice
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesCreateGatewayClassNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['gateway_class_name'],
+            type: 'string',
+            description: '* `gateway_class_name` - gateway_class_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1KubernetesControlplanesCreateKindErrorComponentSchema = {
@@ -227054,12 +227630,13 @@ export const ApiV1KubernetesControlplanesCreateNameErrorComponentSchema = {
             description: '* `name` - name'
         },
         code: {
-            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'required', 'surrogate_characters_not_allowed'],
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_length\` - max_length
 * \`null\` - null
 * \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`required\` - required
 * \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
         },
         detail: {
@@ -227078,10 +227655,106 @@ export const ApiV1KubernetesControlplanesCreateNonFieldErrorsErrorComponentSchem
             description: '* `non_field_errors` - non_field_errors'
         },
         code: {
-            enum: ['invalid', 'null'],
+            enum: ['invalid', 'null', 'unique'],
             type: 'string',
             description: `* \`invalid\` - invalid
-* \`null\` - null`
+* \`null\` - null
+* \`unique\` - unique`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesCreateOrganizationIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['organization_id'],
+            type: 'string',
+            description: '* `organization_id` - organization_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesCreateParentGatewayNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_name'],
+            type: 'string',
+            description: '* `parent_gateway_name` - parent_gateway_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesCreateParentGatewayNamespaceErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_namespace'],
+            type: 'string',
+            description: '* `parent_gateway_namespace` - parent_gateway_namespace'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesCreateParentGatewaySectionNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_section_name'],
+            type: 'string',
+            description: '* `parent_gateway_section_name` - parent_gateway_section_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
         },
         detail: {
             type: 'string'
@@ -227222,6 +227895,29 @@ export const ApiV1KubernetesControlplanesCreateReconciliationEnabledErrorCompone
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1KubernetesControlplanesCreateRegionIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['region_id'],
+            type: 'string',
+            description: '* `region_id` - region_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1KubernetesControlplanesCreateScopeErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -227234,6 +227930,27 @@ export const ApiV1KubernetesControlplanesCreateScopeErrorComponentSchema = {
             enum: ['invalid_choice', 'null'],
             type: 'string',
             description: `* \`invalid_choice\` - invalid_choice
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesCreateSecretsEncryptionEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['secrets_encryption_enabled'],
+            type: 'string',
+            description: '* `secrets_encryption_enabled` - secrets_encryption_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
 * \`null\` - null`
         },
         detail: {
@@ -227405,6 +228122,29 @@ export const ApiV1KubernetesControlplanesCreateValidationErrorSchema = {
         }
     },
     required: ['errors', 'type']
+} as const;
+
+export const ApiV1KubernetesControlplanesCreateWorkspaceIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['workspace_id'],
+            type: 'string',
+            description: '* `workspace_id` - workspace_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1KubernetesControlplanesDestroyErrorResponse400Schema = {
@@ -228006,6 +228746,27 @@ export const ApiV1KubernetesControlplanesPartialUpdateArchivedReasonErrorCompone
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['audit_logging_enabled'],
+            type: 'string',
+            description: '* `audit_logging_enabled` - audit_logging_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -228189,10 +228950,40 @@ export const ApiV1KubernetesControlplanesPartialUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent'
         },
         {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent'
         },
         {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent'
@@ -228231,8 +229022,18 @@ export const ApiV1KubernetesControlplanesPartialUpdateErrorSchema = {
             slo_availability: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateSloAvailabilityErrorComponent',
             sla_target: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateSlaTargetErrorComponent',
             sla_availability: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateSlaAvailabilityErrorComponent',
+            organization_id: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponent',
+            workspace_id: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponent',
+            region_id: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponent',
             loadbalancer_mode: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateLoadbalancerModeErrorComponent',
             loadbalancer_provider: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateLoadbalancerProviderErrorComponent',
+            exposure_type: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponent',
+            parent_gateway_name: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponent',
+            parent_gateway_namespace: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponent',
+            parent_gateway_section_name: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponent',
+            gateway_class_name: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponent',
+            audit_logging_enabled: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateAuditLoggingEnabledErrorComponent',
+            secrets_encryption_enabled: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponent',
             storage_class: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateStorageClassErrorComponent',
             persistence_size: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdatePersistenceSizeErrorComponent',
             cluster_domain: '#/components/schemas/ApiV1KubernetesControlplanesPartialUpdateClusterDomainErrorComponent'
@@ -228256,6 +229057,51 @@ export const ApiV1KubernetesControlplanesPartialUpdateErrorResponse400Schema = {
             client_error: '#/components/schemas/ParseErrorResponse'
         }
     }
+} as const;
+
+export const ApiV1KubernetesControlplanesPartialUpdateExposureTypeErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['exposure_type'],
+            type: 'string',
+            description: '* `exposure_type` - exposure_type'
+        },
+        code: {
+            enum: ['invalid_choice', 'null'],
+            type: 'string',
+            description: `* \`invalid_choice\` - invalid_choice
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesPartialUpdateGatewayClassNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['gateway_class_name'],
+            type: 'string',
+            description: '* `gateway_class_name` - gateway_class_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1KubernetesControlplanesPartialUpdateKindErrorComponentSchema = {
@@ -228353,12 +229199,13 @@ export const ApiV1KubernetesControlplanesPartialUpdateNameErrorComponentSchema =
             description: '* `name` - name'
         },
         code: {
-            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'required', 'surrogate_characters_not_allowed'],
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_length\` - max_length
 * \`null\` - null
 * \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`required\` - required
 * \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
         },
         detail: {
@@ -228377,10 +229224,106 @@ export const ApiV1KubernetesControlplanesPartialUpdateNonFieldErrorsErrorCompone
             description: '* `non_field_errors` - non_field_errors'
         },
         code: {
-            enum: ['invalid', 'null'],
+            enum: ['invalid', 'null', 'unique'],
             type: 'string',
             description: `* \`invalid\` - invalid
-* \`null\` - null`
+* \`null\` - null
+* \`unique\` - unique`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesPartialUpdateOrganizationIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['organization_id'],
+            type: 'string',
+            description: '* `organization_id` - organization_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesPartialUpdateParentGatewayNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_name'],
+            type: 'string',
+            description: '* `parent_gateway_name` - parent_gateway_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesPartialUpdateParentGatewayNamespaceErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_namespace'],
+            type: 'string',
+            description: '* `parent_gateway_namespace` - parent_gateway_namespace'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesPartialUpdateParentGatewaySectionNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_section_name'],
+            type: 'string',
+            description: '* `parent_gateway_section_name` - parent_gateway_section_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
         },
         detail: {
             type: 'string'
@@ -228521,6 +229464,29 @@ export const ApiV1KubernetesControlplanesPartialUpdateReconciliationEnabledError
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1KubernetesControlplanesPartialUpdateRegionIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['region_id'],
+            type: 'string',
+            description: '* `region_id` - region_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -228533,6 +229499,27 @@ export const ApiV1KubernetesControlplanesPartialUpdateScopeErrorComponentSchema 
             enum: ['invalid_choice', 'null'],
             type: 'string',
             description: `* \`invalid_choice\` - invalid_choice
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesPartialUpdateSecretsEncryptionEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['secrets_encryption_enabled'],
+            type: 'string',
+            description: '* `secrets_encryption_enabled` - secrets_encryption_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
 * \`null\` - null`
         },
         detail: {
@@ -228706,6 +229693,29 @@ export const ApiV1KubernetesControlplanesPartialUpdateValidationErrorSchema = {
     required: ['errors', 'type']
 } as const;
 
+export const ApiV1KubernetesControlplanesPartialUpdateWorkspaceIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['workspace_id'],
+            type: 'string',
+            description: '* `workspace_id` - workspace_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1KubernetesControlplanesRetrieveErrorResponse400Schema = {
     oneOf: [
         {
@@ -228823,6 +229833,27 @@ export const ApiV1KubernetesControlplanesUpdateArchivedReasonErrorComponentSchem
             description: `* \`invalid\` - invalid
 * \`null_characters_not_allowed\` - null_characters_not_allowed
 * \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesUpdateAuditLoggingEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['audit_logging_enabled'],
+            type: 'string',
+            description: '* `audit_logging_enabled` - audit_logging_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -229014,10 +230045,40 @@ export const ApiV1KubernetesControlplanesUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateSlaAvailabilityErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateOrganizationIdErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateWorkspaceIdErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateRegionIdErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateLoadbalancerModeErrorComponent'
         },
         {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateLoadbalancerProviderErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateExposureTypeErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateParentGatewayNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateParentGatewayNamespaceErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateParentGatewaySectionNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateGatewayClassNameErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateAuditLoggingEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateSecretsEncryptionEnabledErrorComponent'
         },
         {
             '$ref': '#/components/schemas/ApiV1KubernetesControlplanesUpdateStorageClassErrorComponent'
@@ -229056,8 +230117,18 @@ export const ApiV1KubernetesControlplanesUpdateErrorSchema = {
             slo_availability: '#/components/schemas/ApiV1KubernetesControlplanesUpdateSloAvailabilityErrorComponent',
             sla_target: '#/components/schemas/ApiV1KubernetesControlplanesUpdateSlaTargetErrorComponent',
             sla_availability: '#/components/schemas/ApiV1KubernetesControlplanesUpdateSlaAvailabilityErrorComponent',
+            organization_id: '#/components/schemas/ApiV1KubernetesControlplanesUpdateOrganizationIdErrorComponent',
+            workspace_id: '#/components/schemas/ApiV1KubernetesControlplanesUpdateWorkspaceIdErrorComponent',
+            region_id: '#/components/schemas/ApiV1KubernetesControlplanesUpdateRegionIdErrorComponent',
             loadbalancer_mode: '#/components/schemas/ApiV1KubernetesControlplanesUpdateLoadbalancerModeErrorComponent',
             loadbalancer_provider: '#/components/schemas/ApiV1KubernetesControlplanesUpdateLoadbalancerProviderErrorComponent',
+            exposure_type: '#/components/schemas/ApiV1KubernetesControlplanesUpdateExposureTypeErrorComponent',
+            parent_gateway_name: '#/components/schemas/ApiV1KubernetesControlplanesUpdateParentGatewayNameErrorComponent',
+            parent_gateway_namespace: '#/components/schemas/ApiV1KubernetesControlplanesUpdateParentGatewayNamespaceErrorComponent',
+            parent_gateway_section_name: '#/components/schemas/ApiV1KubernetesControlplanesUpdateParentGatewaySectionNameErrorComponent',
+            gateway_class_name: '#/components/schemas/ApiV1KubernetesControlplanesUpdateGatewayClassNameErrorComponent',
+            audit_logging_enabled: '#/components/schemas/ApiV1KubernetesControlplanesUpdateAuditLoggingEnabledErrorComponent',
+            secrets_encryption_enabled: '#/components/schemas/ApiV1KubernetesControlplanesUpdateSecretsEncryptionEnabledErrorComponent',
             storage_class: '#/components/schemas/ApiV1KubernetesControlplanesUpdateStorageClassErrorComponent',
             persistence_size: '#/components/schemas/ApiV1KubernetesControlplanesUpdatePersistenceSizeErrorComponent',
             cluster_domain: '#/components/schemas/ApiV1KubernetesControlplanesUpdateClusterDomainErrorComponent'
@@ -229081,6 +230152,51 @@ export const ApiV1KubernetesControlplanesUpdateErrorResponse400Schema = {
             client_error: '#/components/schemas/ParseErrorResponse'
         }
     }
+} as const;
+
+export const ApiV1KubernetesControlplanesUpdateExposureTypeErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['exposure_type'],
+            type: 'string',
+            description: '* `exposure_type` - exposure_type'
+        },
+        code: {
+            enum: ['invalid_choice', 'null'],
+            type: 'string',
+            description: `* \`invalid_choice\` - invalid_choice
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesUpdateGatewayClassNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['gateway_class_name'],
+            type: 'string',
+            description: '* `gateway_class_name` - gateway_class_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1KubernetesControlplanesUpdateKindErrorComponentSchema = {
@@ -229178,12 +230294,13 @@ export const ApiV1KubernetesControlplanesUpdateNameErrorComponentSchema = {
             description: '* `name` - name'
         },
         code: {
-            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'required', 'surrogate_characters_not_allowed'],
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`max_length\` - max_length
 * \`null\` - null
 * \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`required\` - required
 * \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
         },
         detail: {
@@ -229202,10 +230319,106 @@ export const ApiV1KubernetesControlplanesUpdateNonFieldErrorsErrorComponentSchem
             description: '* `non_field_errors` - non_field_errors'
         },
         code: {
-            enum: ['invalid', 'null'],
+            enum: ['invalid', 'null', 'unique'],
             type: 'string',
             description: `* \`invalid\` - invalid
-* \`null\` - null`
+* \`null\` - null
+* \`unique\` - unique`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesUpdateOrganizationIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['organization_id'],
+            type: 'string',
+            description: '* `organization_id` - organization_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesUpdateParentGatewayNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_name'],
+            type: 'string',
+            description: '* `parent_gateway_name` - parent_gateway_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesUpdateParentGatewayNamespaceErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_namespace'],
+            type: 'string',
+            description: '* `parent_gateway_namespace` - parent_gateway_namespace'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesUpdateParentGatewaySectionNameErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['parent_gateway_section_name'],
+            type: 'string',
+            description: '* `parent_gateway_section_name` - parent_gateway_section_name'
+        },
+        code: {
+            enum: ['invalid', 'max_length', 'null', 'null_characters_not_allowed', 'surrogate_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`max_length\` - max_length
+* \`null\` - null
+* \`null_characters_not_allowed\` - null_characters_not_allowed
+* \`surrogate_characters_not_allowed\` - surrogate_characters_not_allowed`
         },
         detail: {
             type: 'string'
@@ -229346,6 +230559,29 @@ export const ApiV1KubernetesControlplanesUpdateReconciliationEnabledErrorCompone
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1KubernetesControlplanesUpdateRegionIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['region_id'],
+            type: 'string',
+            description: '* `region_id` - region_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1KubernetesControlplanesUpdateScopeErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -229358,6 +230594,27 @@ export const ApiV1KubernetesControlplanesUpdateScopeErrorComponentSchema = {
             enum: ['invalid_choice', 'null'],
             type: 'string',
             description: `* \`invalid_choice\` - invalid_choice
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1KubernetesControlplanesUpdateSecretsEncryptionEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['secrets_encryption_enabled'],
+            type: 'string',
+            description: '* `secrets_encryption_enabled` - secrets_encryption_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
 * \`null\` - null`
         },
         detail: {
@@ -229529,6 +230786,29 @@ export const ApiV1KubernetesControlplanesUpdateValidationErrorSchema = {
         }
     },
     required: ['errors', 'type']
+} as const;
+
+export const ApiV1KubernetesControlplanesUpdateWorkspaceIdErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['workspace_id'],
+            type: 'string',
+            description: '* `workspace_id` - workspace_id'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type', 'null', 'required'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type
+* \`null\` - null
+* \`required\` - required`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1KubernetesVolumesArchiveCreateAccessModesErrorComponentSchema = {
@@ -239792,6 +241072,12 @@ export const ApiV1LoadbalancersInstancesCreateErrorSchema = {
         },
         {
             '$ref': '#/components/schemas/ApiV1LoadbalancersInstancesCreateAnnotationsErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent'
         }
     ],
     discriminator: {
@@ -239806,7 +241092,9 @@ export const ApiV1LoadbalancersInstancesCreateErrorSchema = {
             workspace: '#/components/schemas/ApiV1LoadbalancersInstancesCreateWorkspaceErrorComponent',
             organization: '#/components/schemas/ApiV1LoadbalancersInstancesCreateOrganizationErrorComponent',
             labels: '#/components/schemas/ApiV1LoadbalancersInstancesCreateLabelsErrorComponent',
-            annotations: '#/components/schemas/ApiV1LoadbalancersInstancesCreateAnnotationsErrorComponent'
+            annotations: '#/components/schemas/ApiV1LoadbalancersInstancesCreateAnnotationsErrorComponent',
+            resource_limits: '#/components/schemas/ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponent',
+            haproxy_defaults: '#/components/schemas/ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponent'
         }
     }
 } as const;
@@ -239827,6 +241115,27 @@ export const ApiV1LoadbalancersInstancesCreateErrorResponse400Schema = {
             client_error: '#/components/schemas/ParseErrorResponse'
         }
     }
+} as const;
+
+export const ApiV1LoadbalancersInstancesCreateHaproxyDefaultsErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['haproxy_defaults'],
+            type: 'string',
+            description: '* `haproxy_defaults` - haproxy_defaults'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1LoadbalancersInstancesCreateLabelsErrorComponentSchema = {
@@ -239900,6 +241209,27 @@ export const ApiV1LoadbalancersInstancesCreatePortsErrorComponentSchema = {
             enum: ['ports'],
             type: 'string',
             description: '* `ports` - ports'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1LoadbalancersInstancesCreateResourceLimitsErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['resource_limits'],
+            type: 'string',
+            description: '* `resource_limits` - resource_limits'
         },
         code: {
             enum: ['invalid', 'null'],
@@ -240549,6 +241879,12 @@ export const ApiV1LoadbalancersInstancesPartialUpdateErrorSchema = {
         },
         {
             '$ref': '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent'
         }
     ],
     discriminator: {
@@ -240559,7 +241895,9 @@ export const ApiV1LoadbalancersInstancesPartialUpdateErrorSchema = {
             ports: '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponent',
             wizard_ports: '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdateWizardPortsErrorComponent',
             labels: '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponent',
-            annotations: '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent'
+            annotations: '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdateAnnotationsErrorComponent',
+            resource_limits: '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponent',
+            haproxy_defaults: '#/components/schemas/ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponent'
         }
     }
 } as const;
@@ -240580,6 +241918,27 @@ export const ApiV1LoadbalancersInstancesPartialUpdateErrorResponse400Schema = {
             client_error: '#/components/schemas/ParseErrorResponse'
         }
     }
+} as const;
+
+export const ApiV1LoadbalancersInstancesPartialUpdateHaproxyDefaultsErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['haproxy_defaults'],
+            type: 'string',
+            description: '* `haproxy_defaults` - haproxy_defaults'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1LoadbalancersInstancesPartialUpdateLabelsErrorComponentSchema = {
@@ -240630,6 +241989,27 @@ export const ApiV1LoadbalancersInstancesPartialUpdatePortsErrorComponentSchema =
             enum: ['ports'],
             type: 'string',
             description: '* `ports` - ports'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1LoadbalancersInstancesPartialUpdateResourceLimitsErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['resource_limits'],
+            type: 'string',
+            description: '* `resource_limits` - resource_limits'
         },
         code: {
             enum: ['invalid', 'null'],
@@ -240756,6 +242136,12 @@ export const ApiV1LoadbalancersInstancesUpdateErrorSchema = {
         },
         {
             '$ref': '#/components/schemas/ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent'
         }
     ],
     discriminator: {
@@ -240766,7 +242152,9 @@ export const ApiV1LoadbalancersInstancesUpdateErrorSchema = {
             ports: '#/components/schemas/ApiV1LoadbalancersInstancesUpdatePortsErrorComponent',
             wizard_ports: '#/components/schemas/ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent',
             labels: '#/components/schemas/ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent',
-            annotations: '#/components/schemas/ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent'
+            annotations: '#/components/schemas/ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent',
+            resource_limits: '#/components/schemas/ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent',
+            haproxy_defaults: '#/components/schemas/ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent'
         }
     }
 } as const;
@@ -240787,6 +242175,27 @@ export const ApiV1LoadbalancersInstancesUpdateErrorResponse400Schema = {
             client_error: '#/components/schemas/ParseErrorResponse'
         }
     }
+} as const;
+
+export const ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['haproxy_defaults'],
+            type: 'string',
+            description: '* `haproxy_defaults` - haproxy_defaults'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
 } as const;
 
 export const ApiV1LoadbalancersInstancesUpdateLabelsErrorComponentSchema = {
@@ -240837,6 +242246,27 @@ export const ApiV1LoadbalancersInstancesUpdatePortsErrorComponentSchema = {
             enum: ['ports'],
             type: 'string',
             description: '* `ports` - ports'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['resource_limits'],
+            type: 'string',
+            description: '* `resource_limits` - resource_limits'
         },
         code: {
             enum: ['invalid', 'null'],
@@ -312521,6 +313951,9 @@ export const ApiV1PricingProductsArchiveCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1PricingProductsArchiveCreateProviderEntityErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1PricingProductsArchiveCreatePopErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1PricingProductsArchiveCreateProviderTypeIdErrorComponent'
         },
         {
@@ -312556,6 +313989,7 @@ export const ApiV1PricingProductsArchiveCreateErrorSchema = {
             price_per_unit: '#/components/schemas/ApiV1PricingProductsArchiveCreatePricePerUnitErrorComponent',
             cost_per_unit: '#/components/schemas/ApiV1PricingProductsArchiveCreateCostPerUnitErrorComponent',
             provider_entity: '#/components/schemas/ApiV1PricingProductsArchiveCreateProviderEntityErrorComponent',
+            pop: '#/components/schemas/ApiV1PricingProductsArchiveCreatePopErrorComponent',
             provider_type_id: '#/components/schemas/ApiV1PricingProductsArchiveCreateProviderTypeIdErrorComponent',
             config: '#/components/schemas/ApiV1PricingProductsArchiveCreateConfigErrorComponent'
         }
@@ -312680,6 +314114,27 @@ export const ApiV1PricingProductsArchiveCreatePlatformServiceErrorComponentSchem
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1PricingProductsArchiveCreatePopErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['pop'],
+            type: 'string',
+            description: '* `pop` - pop'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -313297,6 +314752,9 @@ export const ApiV1PricingProductsCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1PricingProductsCreateProviderEntityErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1PricingProductsCreatePopErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1PricingProductsCreateProviderTypeIdErrorComponent'
         },
         {
@@ -313332,6 +314790,7 @@ export const ApiV1PricingProductsCreateErrorSchema = {
             price_per_unit: '#/components/schemas/ApiV1PricingProductsCreatePricePerUnitErrorComponent',
             cost_per_unit: '#/components/schemas/ApiV1PricingProductsCreateCostPerUnitErrorComponent',
             provider_entity: '#/components/schemas/ApiV1PricingProductsCreateProviderEntityErrorComponent',
+            pop: '#/components/schemas/ApiV1PricingProductsCreatePopErrorComponent',
             provider_type_id: '#/components/schemas/ApiV1PricingProductsCreateProviderTypeIdErrorComponent',
             config: '#/components/schemas/ApiV1PricingProductsCreateConfigErrorComponent'
         }
@@ -313456,6 +314915,27 @@ export const ApiV1PricingProductsCreatePlatformServiceErrorComponentSchema = {
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1PricingProductsCreatePopErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['pop'],
+            type: 'string',
+            description: '* `pop` - pop'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -314313,6 +315793,9 @@ export const ApiV1PricingProductsPartialUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1PricingProductsPartialUpdatePopErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1PricingProductsPartialUpdateProviderTypeIdErrorComponent'
         },
         {
@@ -314348,6 +315831,7 @@ export const ApiV1PricingProductsPartialUpdateErrorSchema = {
             price_per_unit: '#/components/schemas/ApiV1PricingProductsPartialUpdatePricePerUnitErrorComponent',
             cost_per_unit: '#/components/schemas/ApiV1PricingProductsPartialUpdateCostPerUnitErrorComponent',
             provider_entity: '#/components/schemas/ApiV1PricingProductsPartialUpdateProviderEntityErrorComponent',
+            pop: '#/components/schemas/ApiV1PricingProductsPartialUpdatePopErrorComponent',
             provider_type_id: '#/components/schemas/ApiV1PricingProductsPartialUpdateProviderTypeIdErrorComponent',
             config: '#/components/schemas/ApiV1PricingProductsPartialUpdateConfigErrorComponent'
         }
@@ -314472,6 +315956,27 @@ export const ApiV1PricingProductsPartialUpdatePlatformServiceErrorComponentSchem
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1PricingProductsPartialUpdatePopErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['pop'],
+            type: 'string',
+            description: '* `pop` - pop'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -315089,6 +316594,9 @@ export const ApiV1PricingProductsReconcileCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1PricingProductsReconcileCreatePopErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1PricingProductsReconcileCreateProviderTypeIdErrorComponent'
         },
         {
@@ -315124,6 +316632,7 @@ export const ApiV1PricingProductsReconcileCreateErrorSchema = {
             price_per_unit: '#/components/schemas/ApiV1PricingProductsReconcileCreatePricePerUnitErrorComponent',
             cost_per_unit: '#/components/schemas/ApiV1PricingProductsReconcileCreateCostPerUnitErrorComponent',
             provider_entity: '#/components/schemas/ApiV1PricingProductsReconcileCreateProviderEntityErrorComponent',
+            pop: '#/components/schemas/ApiV1PricingProductsReconcileCreatePopErrorComponent',
             provider_type_id: '#/components/schemas/ApiV1PricingProductsReconcileCreateProviderTypeIdErrorComponent',
             config: '#/components/schemas/ApiV1PricingProductsReconcileCreateConfigErrorComponent'
         }
@@ -315248,6 +316757,27 @@ export const ApiV1PricingProductsReconcileCreatePlatformServiceErrorComponentSch
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1PricingProductsReconcileCreatePopErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['pop'],
+            type: 'string',
+            description: '* `pop` - pop'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -315879,6 +317409,9 @@ export const ApiV1PricingProductsUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1PricingProductsUpdateProviderEntityErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1PricingProductsUpdatePopErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1PricingProductsUpdateProviderTypeIdErrorComponent'
         },
         {
@@ -315914,6 +317447,7 @@ export const ApiV1PricingProductsUpdateErrorSchema = {
             price_per_unit: '#/components/schemas/ApiV1PricingProductsUpdatePricePerUnitErrorComponent',
             cost_per_unit: '#/components/schemas/ApiV1PricingProductsUpdateCostPerUnitErrorComponent',
             provider_entity: '#/components/schemas/ApiV1PricingProductsUpdateProviderEntityErrorComponent',
+            pop: '#/components/schemas/ApiV1PricingProductsUpdatePopErrorComponent',
             provider_type_id: '#/components/schemas/ApiV1PricingProductsUpdateProviderTypeIdErrorComponent',
             config: '#/components/schemas/ApiV1PricingProductsUpdateConfigErrorComponent'
         }
@@ -316038,6 +317572,27 @@ export const ApiV1PricingProductsUpdatePlatformServiceErrorComponentSchema = {
             type: 'string',
             description: `* \`invalid\` - invalid
 * \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1PricingProductsUpdatePopErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['pop'],
+            type: 'string',
+            description: '* `pop` - pop'
+        },
+        code: {
+            enum: ['does_not_exist', 'incorrect_type'],
+            type: 'string',
+            description: `* \`does_not_exist\` - does_not_exist
+* \`incorrect_type\` - incorrect_type`
         },
         detail: {
             type: 'string'
@@ -380376,6 +381931,15 @@ export const ApiV1WorkspacesArchiveCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesArchiveCreateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesArchiveCreateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesArchiveCreateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesArchiveCreateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesArchiveCreateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -380453,6 +382017,9 @@ export const ApiV1WorkspacesArchiveCreateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesArchiveCreateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesArchiveCreateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesArchiveCreateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesArchiveCreateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesArchiveCreateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesArchiveCreateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesArchiveCreateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesArchiveCreateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesArchiveCreateSecretsPolyRawErrorComponent',
@@ -380579,6 +382146,27 @@ export const ApiV1WorkspacesArchiveCreateHasIncompatibleKubeconfigErrorComponent
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesArchiveCreateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesArchiveCreateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -380612,6 +382200,48 @@ export const ApiV1WorkspacesArchiveCreateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesArchiveCreateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesArchiveCreateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -381616,6 +383246,15 @@ export const ApiV1WorkspacesCheckCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesCheckCreateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesCheckCreateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesCheckCreateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesCheckCreateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesCheckCreateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -381693,6 +383332,9 @@ export const ApiV1WorkspacesCheckCreateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesCheckCreateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesCheckCreateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesCheckCreateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesCheckCreateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesCheckCreateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesCheckCreateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesCheckCreateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesCheckCreateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesCheckCreateSecretsPolyRawErrorComponent',
@@ -381819,6 +383461,27 @@ export const ApiV1WorkspacesCheckCreateHasIncompatibleKubeconfigErrorComponentSc
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesCheckCreateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesCheckCreateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -381852,6 +383515,48 @@ export const ApiV1WorkspacesCheckCreateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesCheckCreateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesCheckCreateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -382856,6 +384561,15 @@ export const ApiV1WorkspacesCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesCreateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesCreateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesCreateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesCreateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -382933,6 +384647,9 @@ export const ApiV1WorkspacesCreateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesCreateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesCreateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesCreateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesCreateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesCreateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesCreateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesCreateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesCreateSecretsPolyRawErrorComponent',
@@ -383059,6 +384776,27 @@ export const ApiV1WorkspacesCreateHasIncompatibleKubeconfigErrorComponentSchema 
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesCreateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesCreateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -383092,6 +384830,48 @@ export const ApiV1WorkspacesCreateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesCreateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesCreateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -384110,6 +385890,15 @@ export const ApiV1WorkspacesDiscoverCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesDiscoverCreateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesDiscoverCreateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesDiscoverCreateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesDiscoverCreateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesDiscoverCreateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -384187,6 +385976,9 @@ export const ApiV1WorkspacesDiscoverCreateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesDiscoverCreateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesDiscoverCreateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesDiscoverCreateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesDiscoverCreateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesDiscoverCreateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesDiscoverCreateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesDiscoverCreateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesDiscoverCreateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesDiscoverCreateSecretsPolyRawErrorComponent',
@@ -384313,6 +386105,27 @@ export const ApiV1WorkspacesDiscoverCreateHasIncompatibleKubeconfigErrorComponen
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesDiscoverCreateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesDiscoverCreateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -384346,6 +386159,48 @@ export const ApiV1WorkspacesDiscoverCreateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesDiscoverCreateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesDiscoverCreateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -385689,6 +387544,15 @@ export const ApiV1WorkspacesLogsReloadCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesLogsReloadCreateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesLogsReloadCreateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -385766,6 +387630,9 @@ export const ApiV1WorkspacesLogsReloadCreateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesLogsReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesLogsReloadCreateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesLogsReloadCreateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesLogsReloadCreateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesLogsReloadCreateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesLogsReloadCreateSecretsPolyRawErrorComponent',
@@ -385892,6 +387759,27 @@ export const ApiV1WorkspacesLogsReloadCreateHasIncompatibleKubeconfigErrorCompon
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesLogsReloadCreateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesLogsReloadCreateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -385925,6 +387813,48 @@ export const ApiV1WorkspacesLogsReloadCreateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesLogsReloadCreateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesLogsReloadCreateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -386971,6 +388901,15 @@ export const ApiV1WorkspacesPartialUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesPartialUpdateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesPartialUpdateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -387048,6 +388987,9 @@ export const ApiV1WorkspacesPartialUpdateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesPartialUpdateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesPartialUpdateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesPartialUpdateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesPartialUpdateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesPartialUpdateSecretsPolyRawErrorComponent',
@@ -387174,6 +389116,27 @@ export const ApiV1WorkspacesPartialUpdateHasIncompatibleKubeconfigErrorComponent
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesPartialUpdateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesPartialUpdateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -387207,6 +389170,48 @@ export const ApiV1WorkspacesPartialUpdateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesPartialUpdateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesPartialUpdateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -388211,6 +390216,15 @@ export const ApiV1WorkspacesReconcileCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesReconcileCreateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesReconcileCreateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesReconcileCreateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesReconcileCreateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesReconcileCreateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -388288,6 +390302,9 @@ export const ApiV1WorkspacesReconcileCreateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesReconcileCreateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesReconcileCreateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesReconcileCreateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesReconcileCreateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesReconcileCreateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesReconcileCreateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesReconcileCreateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesReconcileCreateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesReconcileCreateSecretsPolyRawErrorComponent',
@@ -388414,6 +390431,27 @@ export const ApiV1WorkspacesReconcileCreateHasIncompatibleKubeconfigErrorCompone
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesReconcileCreateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesReconcileCreateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -388447,6 +390485,48 @@ export const ApiV1WorkspacesReconcileCreateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesReconcileCreateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesReconcileCreateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -389451,6 +391531,15 @@ export const ApiV1WorkspacesReloadCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesReloadCreateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesReloadCreateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesReloadCreateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesReloadCreateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesReloadCreateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -389528,6 +391617,9 @@ export const ApiV1WorkspacesReloadCreateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesReloadCreateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesReloadCreateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesReloadCreateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesReloadCreateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesReloadCreateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesReloadCreateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesReloadCreateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesReloadCreateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesReloadCreateSecretsPolyRawErrorComponent',
@@ -389654,6 +391746,27 @@ export const ApiV1WorkspacesReloadCreateHasIncompatibleKubeconfigErrorComponentS
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesReloadCreateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesReloadCreateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -389687,6 +391800,48 @@ export const ApiV1WorkspacesReloadCreateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesReloadCreateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesReloadCreateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -390691,6 +392846,15 @@ export const ApiV1WorkspacesRepairCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesRepairCreateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesRepairCreateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesRepairCreateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesRepairCreateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesRepairCreateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -390768,6 +392932,9 @@ export const ApiV1WorkspacesRepairCreateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesRepairCreateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesRepairCreateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesRepairCreateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesRepairCreateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesRepairCreateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesRepairCreateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesRepairCreateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesRepairCreateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesRepairCreateSecretsPolyRawErrorComponent',
@@ -390894,6 +393061,27 @@ export const ApiV1WorkspacesRepairCreateHasIncompatibleKubeconfigErrorComponentS
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesRepairCreateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesRepairCreateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -390927,6 +393115,48 @@ export const ApiV1WorkspacesRepairCreateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesRepairCreateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesRepairCreateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -391945,6 +394175,15 @@ export const ApiV1WorkspacesRunDiscoveryCreateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -392022,6 +394261,9 @@ export const ApiV1WorkspacesRunDiscoveryCreateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesRunDiscoveryCreateSecretsPolyRawErrorComponent',
@@ -392148,6 +394390,27 @@ export const ApiV1WorkspacesRunDiscoveryCreateHasIncompatibleKubeconfigErrorComp
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesRunDiscoveryCreateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesRunDiscoveryCreateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -392181,6 +394444,48 @@ export const ApiV1WorkspacesRunDiscoveryCreateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesRunDiscoveryCreateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesRunDiscoveryCreateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -393185,6 +395490,15 @@ export const ApiV1WorkspacesUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesUpdateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesUpdateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesUpdateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesUpdateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesUpdateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -393262,6 +395576,9 @@ export const ApiV1WorkspacesUpdateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesUpdateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesUpdateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesUpdateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesUpdateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesUpdateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesUpdateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesUpdateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesUpdateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyRawErrorComponent',
@@ -393388,6 +395705,27 @@ export const ApiV1WorkspacesUpdateHasIncompatibleKubeconfigErrorComponentSchema 
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesUpdateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesUpdateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -393421,6 +395759,48 @@ export const ApiV1WorkspacesUpdateLabelsErrorComponentSchema = {
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesUpdateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesUpdateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -394201,6 +396581,15 @@ export const ApiV1WorkspacesUpdateSecretsPolyPartialUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -394278,6 +396667,9 @@ export const ApiV1WorkspacesUpdateSecretsPolyPartialUpdateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesUpdateSecretsPolyPartialUpdateSecretsPolyRawErrorComponent',
@@ -394404,6 +396796,27 @@ export const ApiV1WorkspacesUpdateSecretsPolyPartialUpdateHasIncompatibleKubecon
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesUpdateSecretsPolyPartialUpdateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesUpdateSecretsPolyPartialUpdateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -394437,6 +396850,48 @@ export const ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLabelsErrorComponentSc
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesUpdateSecretsPolyPartialUpdateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesUpdateSecretsPolyPartialUpdateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -395665,6 +398120,15 @@ export const ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateErrorSchema = {
             '$ref': '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateBackupEnabledErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMetricsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLogsEnabledErrorComponent'
+        },
+        {
+            '$ref': '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateK8sAddonsEnabledErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateHasIncompatibleKubeconfigErrorComponent'
         },
         {
@@ -395742,6 +398206,9 @@ export const ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateErrorSchema = {
             monitoring_workspace_allowlist_ids: '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMonitoringWorkspaceAllowlistIdsErrorComponent',
             notifications_enabled: '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateNotificationsEnabledErrorComponent',
             backup_enabled: '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateBackupEnabledErrorComponent',
+            metrics_enabled: '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMetricsEnabledErrorComponent',
+            logs_enabled: '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLogsEnabledErrorComponent',
+            k8s_addons_enabled: '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateK8sAddonsEnabledErrorComponent',
             has_incompatible_kubeconfig: '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateHasIncompatibleKubeconfigErrorComponent',
             endpoint_monitors: '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateEndpointMonitorsErrorComponent',
             secrets_poly_raw: '#/components/schemas/ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateSecretsPolyRawErrorComponent',
@@ -395868,6 +398335,27 @@ export const ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateHasIncompatibleKubec
     required: ['attr', 'code', 'detail']
 } as const;
 
+export const ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateK8sAddonsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['k8s_addons_enabled'],
+            type: 'string',
+            description: '* `k8s_addons_enabled` - k8s_addons_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateKindErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -395901,6 +398389,48 @@ export const ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLabelsErrorComponent
             enum: ['invalid'],
             type: 'string',
             description: '* `invalid` - invalid'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateLogsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['logs_enabled'],
+            type: 'string',
+            description: '* `logs_enabled` - logs_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1WorkspacesUpdateWorkspacePolyPartialUpdateMetricsEnabledErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['metrics_enabled'],
+            type: 'string',
+            description: '* `metrics_enabled` - metrics_enabled'
+        },
+        code: {
+            enum: ['invalid', 'null'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null\` - null`
         },
         detail: {
             type: 'string'
@@ -409931,6 +412461,15 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
             type: 'boolean',
             readOnly: true
         },
+        maintainer: {
+            allOf: [
+                {
+                    '$ref': '#/components/schemas/User'
+                }
+            ],
+            readOnly: true,
+            nullable: true
+        },
         display_name: {
             type: 'string',
             nullable: true,
@@ -410348,7 +412887,7 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
             description: 'Upstream dependencies (other CatalogueApps)'
         }
     },
-    required: ['actual_availability', 'artifact_package_detail', 'conditions', 'created', 'created_at', 'deleted_at', 'deleted_by_user', 'dependencies_detail', 'discovery_enabled', 'discovery_running', 'discovery_task_id', 'discovery_task_meta', 'effective_criticality', 'effective_sla_target', 'effective_slo_target', 'icon_url', 'id', 'is_class_icon', 'is_deleted', 'last_action_run', 'last_discovery', 'last_reconciliation', 'last_repair', 'last_state', 'last_state_change', 'latest_upstream_version', 'organization', 'product_ha', 'product_regular', 'reconciliation_running', 'reconciliation_task_id', 'reconciliation_task_meta', 'repair_running', 'repair_task_id', 'repair_task_meta', 'scope', 'screenshot_url', 'serial_number', 'state', 'state_reason', 'template_block_detail', 'updated_at', 'upstream_checked_at', 'upstream_outdated', 'url', 'workspace']
+    required: ['actual_availability', 'artifact_package_detail', 'conditions', 'created', 'created_at', 'deleted_at', 'deleted_by_user', 'dependencies_detail', 'discovery_enabled', 'discovery_running', 'discovery_task_id', 'discovery_task_meta', 'effective_criticality', 'effective_sla_target', 'effective_slo_target', 'icon_url', 'id', 'is_class_icon', 'is_deleted', 'last_action_run', 'last_discovery', 'last_reconciliation', 'last_repair', 'last_state', 'last_state_change', 'latest_upstream_version', 'maintainer', 'organization', 'product_ha', 'product_regular', 'reconciliation_running', 'reconciliation_task_id', 'reconciliation_task_meta', 'repair_running', 'repair_task_id', 'repair_task_meta', 'scope', 'screenshot_url', 'serial_number', 'state', 'state_reason', 'template_block_detail', 'updated_at', 'upstream_checked_at', 'upstream_outdated', 'url', 'workspace']
 } as const;
 
 export const CatalogueAppDetailRequestSchema = {
@@ -410370,6 +412909,11 @@ Handles Paradigma B (API-based Create/Edit) per .specs/0.12.0/catalogue-app.md`,
         product_ha_id: {
             type: 'string',
             format: 'uuid',
+            writeOnly: true,
+            nullable: true
+        },
+        maintainer_id: {
+            type: 'integer',
             writeOnly: true,
             nullable: true
         },
@@ -410895,9 +413439,18 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             nullable: true,
             type: 'object',
             readOnly: true
+        },
+        maintainer: {
+            allOf: [
+                {
+                    '$ref': '#/components/schemas/User'
+                }
+            ],
+            readOnly: true,
+            nullable: true
         }
     },
-    required: ['active_condition_instances', 'archived', 'artifact_package', 'condition_instance_count', 'conditions', 'created', 'dependency_count', 'effective_criticality', 'id', 'labels', 'latest_block', 'name', 'organization', 'organization_priority', 'price_monthly', 'product_ha', 'product_regular', 'reconciliation_running', 'screenshot_url', 'serial_number', 'state', 'upstream_outdated', 'url', 'workspace']
+    required: ['active_condition_instances', 'archived', 'artifact_package', 'condition_instance_count', 'conditions', 'created', 'dependency_count', 'effective_criticality', 'id', 'labels', 'latest_block', 'maintainer', 'name', 'organization', 'organization_priority', 'price_monthly', 'product_ha', 'product_regular', 'reconciliation_running', 'screenshot_url', 'serial_number', 'state', 'upstream_outdated', 'url', 'workspace']
 } as const;
 
 export const CatalogueAppSimpleSchema = {
@@ -420229,8 +422782,8 @@ Usage:
     properties: {
         id: {
             type: 'string',
-            format: 'uuid',
-            readOnly: true
+            readOnly: true,
+            description: "Record identifier. Internal zones: UUID of the DNSRecord DB row. External zones: opaque composite '<zone_uuid>::<provider_assigned_id>' as returned by the list endpoint. Do not treat this field as UUID-only."
         },
         created: {
             type: 'object',
@@ -421053,8 +423606,8 @@ Usage:
     properties: {
         id: {
             type: 'string',
-            format: 'uuid',
-            readOnly: true
+            readOnly: true,
+            description: "Record identifier. Internal zones: UUID of the DNSRecord DB row. External zones: opaque composite '<zone_uuid>::<provider_assigned_id>' as returned by the list endpoint. Do not treat this field as UUID-only."
         },
         name: {
             type: 'string',
@@ -429788,6 +432341,14 @@ export const ErrorResponse502Schema = {
     required: ['errors', 'type']
 } as const;
 
+export const ExposureTypeEnumSchema = {
+    enum: ['gateway', 'ingress', 'loadbalancer'],
+    type: 'string',
+    description: `* \`gateway\` - Gateway API (Envoy)
+* \`ingress\` - Ingress (nginx)
+* \`loadbalancer\` - LoadBalancer`
+} as const;
+
 export const ExternalCredentialSchema = {
     type: 'object',
     description: `Serializer for creating/retrieving Credentials via the external API endpoint.
@@ -435592,7 +438153,7 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
         },
         default_version: {
             type: 'string',
-            description: 'Empty = resolve latest matching template block version.',
+            description: 'Concrete catalog pin. Empty or "latest" resolves to the highest template-block version (Spec 819).',
             maxLength: 128
         },
         default_block_config_template: {
@@ -436768,6 +439329,18 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             type: 'string',
             readOnly: true
         },
+        resolved_default_version: {
+            type: 'string',
+            readOnly: true
+        },
+        available_versions: {
+            type: 'array',
+            items: {
+                type: 'object',
+                additionalProperties: {}
+            },
+            readOnly: true
+        },
         default_block_config_template: {
             type: 'string',
             readOnly: true
@@ -436787,9 +439360,18 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
         enforcement: {
             type: 'string',
             readOnly: true
+        },
+        icon_url: {
+            type: 'string',
+            format: 'uri',
+            readOnly: true
+        },
+        is_class_icon: {
+            type: 'boolean',
+            readOnly: true
         }
     },
-    required: ['active_condition_instances', 'allow_multiple', 'archived', 'block_name', 'catalogue_app', 'condition_instance_count', 'conditions', 'created', 'default_block_config_template', 'default_version', 'effective_criticality', 'enforcement', 'id', 'is_default', 'labels', 'name', 'order', 'organization', 'organization_priority', 'reconciliation_running', 'state', 'url', 'workspace']
+    required: ['active_condition_instances', 'allow_multiple', 'archived', 'available_versions', 'block_name', 'catalogue_app', 'condition_instance_count', 'conditions', 'created', 'default_block_config_template', 'default_version', 'effective_criticality', 'enforcement', 'icon_url', 'id', 'is_class_icon', 'is_default', 'labels', 'name', 'order', 'organization', 'organization_priority', 'reconciliation_running', 'resolved_default_version', 'state', 'url', 'workspace']
 } as const;
 
 export const K8sAddonRequestSchema = {
@@ -436936,7 +439518,7 @@ catalogue_app is a writable FK (UUID). Spec: polycrate spec inspect 695`,
         },
         default_version: {
             type: 'string',
-            description: 'Empty = resolve latest matching template block version.',
+            description: 'Concrete catalog pin. Empty or "latest" resolves to the highest template-block version (Spec 819).',
             maxLength: 128
         },
         default_block_config_template: {
@@ -441020,6 +443602,43 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
             type: 'string',
             maxLength: 64
         },
+        exposure_type: {
+            allOf: [
+                {
+                    '$ref': '#/components/schemas/ExposureTypeEnum'
+                }
+            ],
+            description: `How the controlplane API is exposed on the host cluster.
+
+* \`gateway\` - Gateway API (Envoy)
+* \`ingress\` - Ingress (nginx)
+* \`loadbalancer\` - LoadBalancer`
+        },
+        parent_gateway_name: {
+            type: 'string',
+            description: 'Platform Gateway to attach TLSRoute to (empty → create own Gateway).',
+            maxLength: 128
+        },
+        parent_gateway_namespace: {
+            type: 'string',
+            maxLength: 128
+        },
+        parent_gateway_section_name: {
+            type: 'string',
+            description: 'Listener name on the parent Gateway (must match Envoy listener).',
+            maxLength: 64
+        },
+        gateway_class_name: {
+            type: 'string',
+            description: 'GatewayClass when creating an own Gateway (parent_gateway_name empty).',
+            maxLength: 128
+        },
+        audit_logging_enabled: {
+            type: 'boolean'
+        },
+        secrets_encryption_enabled: {
+            type: 'boolean'
+        },
         storage_class: {
             type: 'string',
             maxLength: 128
@@ -441288,6 +443907,10 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             type: 'string',
             readOnly: true
         },
+        exposure_type: {
+            type: 'string',
+            readOnly: true
+        },
         storage_class: {
             type: 'string',
             readOnly: true
@@ -441312,7 +443935,7 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             nullable: true
         }
     },
-    required: ['active_condition_instances', 'archived', 'block', 'cluster_domain', 'condition_instance_count', 'conditions', 'created', 'deployment_checksum', 'effective_criticality', 'hostname', 'id', 'ip_address', 'k8s_cluster', 'labels', 'last_deployed_checksum', 'loadbalancer_mode', 'name', 'organization', 'organization_priority', 'reconciliation_running', 'region', 'state', 'storage_class', 'url', 'workspace']
+    required: ['active_condition_instances', 'archived', 'block', 'cluster_domain', 'condition_instance_count', 'conditions', 'created', 'deployment_checksum', 'effective_criticality', 'exposure_type', 'hostname', 'id', 'ip_address', 'k8s_cluster', 'labels', 'last_deployed_checksum', 'loadbalancer_mode', 'name', 'organization', 'organization_priority', 'reconciliation_running', 'region', 'state', 'storage_class', 'url', 'workspace']
 } as const;
 
 export const K8sControlplaneRequestSchema = {
@@ -441461,12 +444084,64 @@ Usage:
             pattern: '^-?\\d{0,3}(?:\\.\\d{0,2})?$',
             description: 'Calculated SLA availability in % (updated in reconcile)'
         },
+        organization_id: {
+            type: 'string',
+            format: 'uuid',
+            writeOnly: true
+        },
+        workspace_id: {
+            type: 'string',
+            format: 'uuid',
+            writeOnly: true
+        },
+        region_id: {
+            type: 'string',
+            format: 'uuid',
+            writeOnly: true
+        },
         loadbalancer_mode: {
             '$ref': '#/components/schemas/LoadbalancerModeEnum'
         },
         loadbalancer_provider: {
             type: 'string',
             maxLength: 64
+        },
+        exposure_type: {
+            allOf: [
+                {
+                    '$ref': '#/components/schemas/ExposureTypeEnum'
+                }
+            ],
+            description: `How the controlplane API is exposed on the host cluster.
+
+* \`gateway\` - Gateway API (Envoy)
+* \`ingress\` - Ingress (nginx)
+* \`loadbalancer\` - LoadBalancer`
+        },
+        parent_gateway_name: {
+            type: 'string',
+            description: 'Platform Gateway to attach TLSRoute to (empty → create own Gateway).',
+            maxLength: 128
+        },
+        parent_gateway_namespace: {
+            type: 'string',
+            maxLength: 128
+        },
+        parent_gateway_section_name: {
+            type: 'string',
+            description: 'Listener name on the parent Gateway (must match Envoy listener).',
+            maxLength: 64
+        },
+        gateway_class_name: {
+            type: 'string',
+            description: 'GatewayClass when creating an own Gateway (parent_gateway_name empty).',
+            maxLength: 128
+        },
+        audit_logging_enabled: {
+            type: 'boolean'
+        },
+        secrets_encryption_enabled: {
+            type: 'boolean'
         },
         storage_class: {
             type: 'string',
@@ -441483,7 +444158,7 @@ Usage:
             maxLength: 253
         }
     },
-    required: ['storage_class']
+    required: ['organization_id', 'region_id', 'storage_class', 'workspace_id']
 } as const;
 
 export const K8sControlplaneSimpleSchema = {
@@ -443122,7 +445797,7 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
         },
         location: {
             type: 'string',
-            description: 'Optional provider location/region for new Hosts.',
+            description: 'Optional override. Defaults to Product.pop location slug (hetzner-fsn1 → fsn1).',
             maxLength: 128
         },
         ssh_key_credential: {
@@ -443391,6 +446066,16 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             nullable: true,
             readOnly: true
         },
+        pop: {
+            type: 'object',
+            additionalProperties: {},
+            nullable: true,
+            readOnly: true
+        },
+        location_slug: {
+            type: 'string',
+            readOnly: true
+        },
         desired_count: {
             type: 'integer',
             readOnly: true
@@ -443399,11 +446084,6 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             type: 'string',
             readOnly: true,
             description: 'Provider image ID/name for new Hosts.'
-        },
-        location: {
-            type: 'string',
-            readOnly: true,
-            description: 'Optional provider location/region for new Hosts.'
         },
         hardening_enabled: {
             type: 'boolean',
@@ -443420,7 +446100,7 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             nullable: true
         }
     },
-    required: ['active_condition_instances', 'archived', 'condition_instance_count', 'conditions', 'controlplane', 'created', 'deployment_checksum', 'desired_count', 'effective_criticality', 'hardening_enabled', 'id', 'image', 'labels', 'last_deployed_checksum', 'location', 'name', 'organization', 'organization_priority', 'product', 'provider_account', 'reconciliation_running', 'state', 'url', 'workspace']
+    required: ['active_condition_instances', 'archived', 'condition_instance_count', 'conditions', 'controlplane', 'created', 'deployment_checksum', 'desired_count', 'effective_criticality', 'hardening_enabled', 'id', 'image', 'labels', 'last_deployed_checksum', 'location_slug', 'name', 'organization', 'organization_priority', 'pop', 'product', 'provider_account', 'reconciliation_running', 'state', 'url', 'workspace']
 } as const;
 
 export const K8sWorkerPoolRequestSchema = {
@@ -443598,7 +446278,7 @@ Usage:
         },
         location: {
             type: 'string',
-            description: 'Optional provider location/region for new Hosts.',
+            description: 'Optional override. Defaults to Product.pop location slug (hetzner-fsn1 → fsn1).',
             maxLength: 128
         },
         ssh_key_credential_id: {
@@ -443628,7 +446308,7 @@ export const LabelKeyListSchema = {
 } as const;
 
 export const LabelKeysEnumSchema = {
-    enum: ['polycrate_object_type', 'polycrate_object_name', 'polycrate_object_id', 'polycrate_managed_by', 'polycrate_log_source', 'polycrate_system_name', 'polycrate_workspace_name', 'polycrate_workspace_id', 'polycrate_workspace_git_bootstrap', 'polycrate_organization_name', 'polycrate_organization_slug', 'polycrate_organization_id', 'polycrate_actionrun_id', 'polycrate_block_name', 'polycrate_block_id', 'polycrate_block_version', 'polycrate_block_kind', 'polycrate_block_type', 'polycrate_block_flavor', 'polycrate_block_implementation', 'polycrate_k8sapp_name', 'polycrate_k8sapp_id', 'polycrate_k8sapp_byoa', 'polycrate_k8scluster_name', 'polycrate_k8scluster_id', 'polycrate_k8scontrolplane_name', 'polycrate_k8scontrolplane_id', 'polycrate_k8scontrolplane_ip_address', 'polycrate_k8scontrolplane_deployment_checksum', 'polycrate_k8sworkerpool_name', 'polycrate_k8sworkerpool_id', 'polycrate_host_name', 'polycrate_host_id', 'polycrate_transport', 'polycrate_worker_block_purpose', 'polycrate_endpoint_name', 'polycrate_endpoint_id', 'polycrate_endpoint_kind', 'polycrate_endpoint_remote_address', 'polycrate_endpoint_remote_port', 'polycrate_loadbalancerinstance_name', 'polycrate_loadbalancerinstance_id', 'polycrate_loadbalancerinstance_ip_address', 'polycrate_loadbalancerregion_id', 'polycrate_loadbalancerregion_name', 'polycrate_loadbalancerinstance_deployment_checksum', 'polycrate_criticality', 'polycrate_priority', 'polycrate_controlled_by'],
+    enum: ['polycrate_object_type', 'polycrate_object_name', 'polycrate_object_id', 'polycrate_managed_by', 'polycrate_log_source', 'polycrate_system_name', 'polycrate_workspace_name', 'polycrate_workspace_id', 'polycrate_workspace_git_bootstrap', 'polycrate_organization_name', 'polycrate_organization_slug', 'polycrate_organization_id', 'polycrate_actionrun_id', 'polycrate_block_name', 'polycrate_block_id', 'polycrate_block_version', 'polycrate_block_kind', 'polycrate_block_type', 'polycrate_block_flavor', 'polycrate_block_implementation', 'polycrate_k8sapp_name', 'polycrate_k8sapp_id', 'polycrate_k8sapp_byoa', 'polycrate_k8scluster_name', 'polycrate_k8scluster_id', 'polycrate_k8scontrolplane_name', 'polycrate_k8scontrolplane_id', 'polycrate_k8scontrolplane_ip_address', 'polycrate_k8scontrolplane_deployment_checksum', 'polycrate_k8sworkerpool_name', 'polycrate_k8sworkerpool_id', 'polycrate_host_name', 'polycrate_host_id', 'polycrate_discovered', 'polycrate_transport', 'polycrate_worker_block_purpose', 'polycrate_worker_block_deployment_checksum', 'polycrate_worker_block_last_deployed_checksum', 'polycrate_endpoint_name', 'polycrate_endpoint_id', 'polycrate_endpoint_kind', 'polycrate_endpoint_remote_address', 'polycrate_endpoint_remote_port', 'polycrate_loadbalancerinstance_name', 'polycrate_loadbalancerinstance_id', 'polycrate_loadbalancerinstance_ip_address', 'polycrate_loadbalancerregion_id', 'polycrate_loadbalancerregion_name', 'polycrate_loadbalancerinstance_deployment_checksum', 'polycrate_criticality', 'polycrate_priority', 'polycrate_controlled_by'],
     type: 'string',
     description: `* \`polycrate_object_type\` - OBJECT_TYPE
 * \`polycrate_object_name\` - OBJECT_NAME
@@ -443663,8 +446343,11 @@ export const LabelKeysEnumSchema = {
 * \`polycrate_k8sworkerpool_id\` - K8SWORKERPOOL_ID
 * \`polycrate_host_name\` - HOST_NAME
 * \`polycrate_host_id\` - HOST_ID
+* \`polycrate_discovered\` - HOST_DISCOVERED
 * \`polycrate_transport\` - TRANSPORT
 * \`polycrate_worker_block_purpose\` - WORKER_BLOCK_PURPOSE
+* \`polycrate_worker_block_deployment_checksum\` - WORKER_BLOCK_DEPLOYMENT_CHECKSUM
+* \`polycrate_worker_block_last_deployed_checksum\` - WORKER_BLOCK_LAST_DEPLOYED_CHECKSUM
 * \`polycrate_endpoint_name\` - ENDPOINT_NAME
 * \`polycrate_endpoint_id\` - ENDPOINT_ID
 * \`polycrate_endpoint_kind\` - ENDPOINT_KIND
@@ -444206,9 +446889,27 @@ Spec: polycrate spec inspect 271`,
                     '$ref': '#/components/schemas/NullEnum'
                 }
             ]
+        },
+        resource_limits: {
+            readOnly: true,
+            description: 'Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.'
+        },
+        effective_resources: {
+            type: 'object',
+            additionalProperties: {},
+            readOnly: true
+        },
+        haproxy_defaults: {
+            readOnly: true,
+            description: 'Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin, option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.'
+        },
+        effective_haproxy_defaults: {
+            type: 'object',
+            additionalProperties: {},
+            readOnly: true
         }
     },
-    required: ['actual_availability', 'computed_cost', 'conditions', 'created', 'created_at', 'delegated_organization', 'delegated_workspace', 'delegation_source', 'deleted_at', 'deleted_by_user', 'deployment_summary', 'deployments_ready', 'deployments_total', 'discovery_enabled', 'discovery_running', 'discovery_task_id', 'discovery_task_meta', 'effective_criticality', 'effective_sla_target', 'effective_slo_target', 'icon_url', 'id', 'ip_address', 'ip_address_value', 'is_class_icon', 'is_deleted', 'last_action_run', 'last_discovery', 'last_reconciliation', 'last_repair', 'last_state', 'last_state_change', 'loopback_resource_id', 'organization', 'product', 'protocol_mode', 'reconciliation_running', 'reconciliation_task_id', 'reconciliation_task_meta', 'region_deployments', 'repair_running', 'repair_task_id', 'repair_task_meta', 'scope', 'state', 'state_reason', 'tolerations', 'updated_at', 'url', 'workspace']
+    required: ['actual_availability', 'computed_cost', 'conditions', 'created', 'created_at', 'delegated_organization', 'delegated_workspace', 'delegation_source', 'deleted_at', 'deleted_by_user', 'deployment_summary', 'deployments_ready', 'deployments_total', 'discovery_enabled', 'discovery_running', 'discovery_task_id', 'discovery_task_meta', 'effective_criticality', 'effective_haproxy_defaults', 'effective_resources', 'effective_sla_target', 'effective_slo_target', 'haproxy_defaults', 'icon_url', 'id', 'ip_address', 'ip_address_value', 'is_class_icon', 'is_deleted', 'last_action_run', 'last_discovery', 'last_reconciliation', 'last_repair', 'last_state', 'last_state_change', 'loopback_resource_id', 'organization', 'product', 'protocol_mode', 'reconciliation_running', 'reconciliation_task_id', 'reconciliation_task_meta', 'region_deployments', 'repair_running', 'repair_task_id', 'repair_task_meta', 'resource_limits', 'scope', 'state', 'state_reason', 'tolerations', 'updated_at', 'url', 'workspace']
 } as const;
 
 export const LoadbalancerInstanceCreateSchema = {
@@ -444255,6 +446956,12 @@ returned in the response.`,
         },
         annotations: {
             nullable: true
+        },
+        resource_limits: {
+            description: 'Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.'
+        },
+        haproxy_defaults: {
+            description: 'Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin, option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.'
         }
     },
     required: ['id', 'organization', 'workspace']
@@ -444303,6 +447010,12 @@ returned in the response.`,
         },
         annotations: {
             nullable: true
+        },
+        resource_limits: {
+            description: 'Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.'
+        },
+        haproxy_defaults: {
+            description: 'Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin, option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.'
         }
     },
     required: ['organization', 'workspace']
@@ -444844,6 +447557,12 @@ does and what the UI wizard edit form does.`,
         },
         annotations: {
             nullable: true
+        },
+        resource_limits: {
+            description: 'Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.'
+        },
+        haproxy_defaults: {
+            description: 'Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin, option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.'
         }
     }
 } as const;
@@ -444873,6 +447592,12 @@ does and what the UI wizard edit form does.`,
         },
         annotations: {
             nullable: true
+        },
+        resource_limits: {
+            description: 'Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.'
+        },
+        haproxy_defaults: {
+            description: 'Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin, option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.'
         }
     }
 } as const;
@@ -451872,6 +454597,27 @@ export const OrganizationSchema = {
                 }
             ]
         },
+        forgejo_org_id: {
+            type: 'integer',
+            readOnly: true,
+            nullable: true
+        },
+        forgejo_org_name: {
+            type: 'string',
+            readOnly: true,
+            nullable: true
+        },
+        forgejo_org_url: {
+            type: 'string',
+            format: 'uri',
+            readOnly: true,
+            nullable: true,
+            description: 'Forgejo organization HTML URL'
+        },
+        forgejo_team_ids: {
+            readOnly: true,
+            description: 'Cached Forgejo team IDs for role teams (admin/billing/developer/viewer/owner)'
+        },
         endpoint_monitoring_mode: {
             '$ref': '#/components/schemas/OrganizationEndpointMonitoringModeEnum'
         },
@@ -452073,7 +454819,7 @@ export const OrganizationSchema = {
             maximum: 9223372036854776000,
             minimum: -9223372036854776000,
             format: 'int64',
-            description: 'Non-archived K8sCluster count for this organization (Spec 630)'
+            description: 'Portal-visible K8sCluster count: cluster and workspace not archived, neither kind generic (Spec 630 / 781)'
         },
         cached_workspace_count: {
             type: 'integer',
@@ -452211,7 +454957,7 @@ export const OrganizationSchema = {
             }
         }
     },
-    required: ['active_support_product', 'apmstack_credential', 'conditions', 'created_at', 'deleted_at', 'deleted_by_user', 'discovery_running', 'discovery_task_id', 'discovery_task_meta', 'has_icon', 'icon_data', 'icon_url', 'id', 'is_deleted', 'keycloak_org_id', 'last_discovery', 'last_reconciliation', 'last_repair', 'last_state', 'last_state_change', 'legal_name', 'members', 'name', 'owner', 'reconciliation_running', 'reconciliation_task_id', 'reconciliation_task_meta', 'repair_running', 'repair_task_id', 'repair_task_meta', 'rocketchat_channel_announcement_hash', 'state', 'state_reason', 'support_pin', 'tenant_id', 'tolerations', 'unified_apm_credential', 'updated_at', 'workspace_default_owner', 'workspaces']
+    required: ['active_support_product', 'apmstack_credential', 'conditions', 'created_at', 'deleted_at', 'deleted_by_user', 'discovery_running', 'discovery_task_id', 'discovery_task_meta', 'forgejo_org_id', 'forgejo_org_name', 'forgejo_org_url', 'forgejo_team_ids', 'has_icon', 'icon_data', 'icon_url', 'id', 'is_deleted', 'keycloak_org_id', 'last_discovery', 'last_reconciliation', 'last_repair', 'last_state', 'last_state_change', 'legal_name', 'members', 'name', 'owner', 'reconciliation_running', 'reconciliation_task_id', 'reconciliation_task_meta', 'repair_running', 'repair_task_id', 'repair_task_meta', 'rocketchat_channel_announcement_hash', 'state', 'state_reason', 'support_pin', 'tenant_id', 'tolerations', 'unified_apm_credential', 'updated_at', 'workspace_default_owner', 'workspaces']
 } as const;
 
 export const OrganizationCachedMetricsSchema = {
@@ -452356,11 +455102,13 @@ export const OrganizationCachedMetricsLoadbalancersSchema = {
     properties: {
         count: {
             type: 'integer',
-            minimum: 0
+            minimum: 0,
+            description: 'Non-archived owned plus Loopback-delegated load balancer count'
         },
         traffic_30d_bytes: {
             type: 'integer',
-            minimum: 0
+            minimum: 0,
+            description: '30-day traffic in bytes for owned plus Loopback-delegated load balancers'
         }
     },
     required: ['count', 'traffic_30d_bytes']
@@ -452443,15 +455191,18 @@ export const OrganizationCachedMetricsS3Schema = {
     properties: {
         storage_bytes: {
             type: 'integer',
-            minimum: 0
+            minimum: 0,
+            description: 'Non-archived owned plus Loopback-delegated bucket storage in bytes'
         },
         bucket_count: {
             type: 'integer',
-            minimum: 0
+            minimum: 0,
+            description: 'Non-archived owned plus Loopback-delegated S3 bucket count'
         },
         object_count: {
             type: 'integer',
-            minimum: 0
+            minimum: 0,
+            description: 'Object count across owned plus Loopback-delegated buckets'
         }
     },
     required: ['bucket_count', 'object_count', 'storage_bytes']
@@ -452794,7 +455545,7 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
         s3_storage_bytes: {
             type: 'integer',
             readOnly: true,
-            description: 'Total S3 storage in bytes across all buckets.'
+            description: 'Total S3 storage in bytes across owned and Loopback-delegated buckets.'
         },
         s3_storage_kb: {
             type: 'integer',
@@ -454320,7 +457071,7 @@ export const OrganizationRequestSchema = {
             maximum: 9223372036854776000,
             minimum: -9223372036854776000,
             format: 'int64',
-            description: 'Non-archived K8sCluster count for this organization (Spec 630)'
+            description: 'Portal-visible K8sCluster count: cluster and workspace not archived, neither kind generic (Spec 630 / 781)'
         },
         cached_workspace_count: {
             type: 'integer',
@@ -460560,6 +463311,11 @@ Handles Paradigma B (API-based Create/Edit) per .specs/0.12.0/catalogue-app.md`,
             writeOnly: true,
             nullable: true
         },
+        maintainer_id: {
+            type: 'integer',
+            writeOnly: true,
+            nullable: true
+        },
         display_name: {
             type: 'string',
             nullable: true,
@@ -465041,7 +467797,7 @@ catalogue_app is a writable FK (UUID). Spec: polycrate spec inspect 695`,
         },
         default_version: {
             type: 'string',
-            description: 'Empty = resolve latest matching template block version.',
+            description: 'Concrete catalog pin. Empty or "latest" resolves to the highest template-block version (Spec 819).',
             maxLength: 128
         },
         default_block_config_template: {
@@ -465968,12 +468724,64 @@ Usage:
             pattern: '^-?\\d{0,3}(?:\\.\\d{0,2})?$',
             description: 'Calculated SLA availability in % (updated in reconcile)'
         },
+        organization_id: {
+            type: 'string',
+            format: 'uuid',
+            writeOnly: true
+        },
+        workspace_id: {
+            type: 'string',
+            format: 'uuid',
+            writeOnly: true
+        },
+        region_id: {
+            type: 'string',
+            format: 'uuid',
+            writeOnly: true
+        },
         loadbalancer_mode: {
             '$ref': '#/components/schemas/LoadbalancerModeEnum'
         },
         loadbalancer_provider: {
             type: 'string',
             maxLength: 64
+        },
+        exposure_type: {
+            allOf: [
+                {
+                    '$ref': '#/components/schemas/ExposureTypeEnum'
+                }
+            ],
+            description: `How the controlplane API is exposed on the host cluster.
+
+* \`gateway\` - Gateway API (Envoy)
+* \`ingress\` - Ingress (nginx)
+* \`loadbalancer\` - LoadBalancer`
+        },
+        parent_gateway_name: {
+            type: 'string',
+            description: 'Platform Gateway to attach TLSRoute to (empty → create own Gateway).',
+            maxLength: 128
+        },
+        parent_gateway_namespace: {
+            type: 'string',
+            maxLength: 128
+        },
+        parent_gateway_section_name: {
+            type: 'string',
+            description: 'Listener name on the parent Gateway (must match Envoy listener).',
+            maxLength: 64
+        },
+        gateway_class_name: {
+            type: 'string',
+            description: 'GatewayClass when creating an own Gateway (parent_gateway_name empty).',
+            maxLength: 128
+        },
+        audit_logging_enabled: {
+            type: 'boolean'
+        },
+        secrets_encryption_enabled: {
+            type: 'boolean'
         },
         storage_class: {
             type: 'string',
@@ -466388,7 +469196,7 @@ Usage:
         },
         location: {
             type: 'string',
-            description: 'Optional provider location/region for new Hosts.',
+            description: 'Optional override. Defaults to Product.pop location slug (hetzner-fsn1 → fsn1).',
             maxLength: 128
         },
         ssh_key_credential_id: {
@@ -466428,6 +469236,12 @@ does and what the UI wizard edit form does.`,
         },
         annotations: {
             nullable: true
+        },
+        resource_limits: {
+            description: 'Optional HAProxy limit overrides: {cpu, memory}. Empty inherits SystemConfig.'
+        },
+        haproxy_defaults: {
+            description: 'Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin, option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.'
         }
     }
 } as const;
@@ -468110,7 +470924,7 @@ export const PatchedOrganizationRequestSchema = {
             maximum: 9223372036854776000,
             minimum: -9223372036854776000,
             format: 'int64',
-            description: 'Non-archived K8sCluster count for this organization (Spec 630)'
+            description: 'Portal-visible K8sCluster count: cluster and workspace not archived, neither kind generic (Spec 630 / 781)'
         },
         cached_workspace_count: {
             type: 'integer',
@@ -469754,6 +472568,12 @@ export const PatchedProductDetailRequestSchema = {
             type: 'string',
             format: 'uuid',
             nullable: true
+        },
+        pop: {
+            type: 'string',
+            format: 'uuid',
+            nullable: true,
+            description: 'Concrete IaaS location (e.g. hetzner-fsn1). Location slug is the PoP name suffix.'
         },
         provider_type_id: {
             type: 'string',
@@ -471905,6 +474725,18 @@ Template can be org-specific or system-wide (organization=null).`,
         backup_enabled: {
             type: 'boolean',
             description: 'If false, ayedo does not evaluate workspace-level backup health (WORKSPACE_BACKUP_SCHEDULE_MISSING, WORKSPACE_BACKUP_SCHEDULE_OVERDUE, WORKSPACE_BACKUP_MISSING). Use when ayedo is not responsible for backups. May later gate related backup features; bucket provisioning stays independent for now.'
+        },
+        metrics_enabled: {
+            type: 'boolean',
+            description: 'If false, ayedo does not auto-subscribe the VictoriaMetrics agent addon. Use when this workspace must not scrape or send cluster metrics.'
+        },
+        logs_enabled: {
+            type: 'boolean',
+            description: 'If false, ayedo does not auto-subscribe VictoriaLogs or Kubernetes Event Exporter. Use when this workspace must not scrape or send cluster logs.'
+        },
+        k8s_addons_enabled: {
+            type: 'boolean',
+            description: 'If false, cluster reconcile does not run K8s addon subscription desired-state (no auto-subscribe, no addon install enqueue, no addon conditions). Subscribe, promote, and the cluster Addons tab are unavailable. Use while this workspace is still git-managed via workspace.poly.'
         },
         has_incompatible_kubeconfig: {
             type: 'boolean'
@@ -480719,6 +483551,12 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
             format: 'uuid',
             nullable: true
         },
+        pop: {
+            type: 'string',
+            format: 'uuid',
+            nullable: true,
+            description: 'Concrete IaaS location (e.g. hetzner-fsn1). Location slug is the PoP name suffix.'
+        },
         provider_type_id: {
             type: 'string',
             nullable: true,
@@ -480861,6 +483699,12 @@ export const ProductDetailRequestSchema = {
             type: 'string',
             format: 'uuid',
             nullable: true
+        },
+        pop: {
+            type: 'string',
+            format: 'uuid',
+            nullable: true,
+            description: 'Concrete IaaS location (e.g. hetzner-fsn1). Location slug is the PoP name suffix.'
         },
         provider_type_id: {
             type: 'string',
@@ -481111,6 +483955,12 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             type: 'string',
             nullable: true,
             maxLength: 255
+        },
+        pop: {
+            type: 'string',
+            format: 'uuid',
+            nullable: true,
+            description: 'Concrete IaaS location (e.g. hetzner-fsn1). Location slug is the PoP name suffix.'
         }
     },
     required: ['active_condition_instances', 'archived', 'condition_instance_count', 'conditions', 'created', 'effective_criticality', 'id', 'kind', 'labels', 'name', 'organization', 'organization_priority', 'reconciliation_running', 'state', 'url', 'workspace']
@@ -493684,6 +496534,12 @@ Spec: polycrate spec inspect 127`,
             nullable: true,
             description: 'Platform Grafana user ID (global, not org-specific). Set during org user sync.'
         },
+        forgejo_user_id: {
+            type: 'integer',
+            readOnly: true,
+            nullable: true,
+            description: 'Forgejo user ID (numeric instance id). Set during org member sync. Login is User.uuid.'
+        },
         migrated_from_contact: {
             type: 'string',
             format: 'uuid',
@@ -493732,7 +496588,7 @@ Spec: polycrate spec inspect 127`,
             readOnly: true
         }
     },
-    required: ['date_joined', 'display_name', 'email', 'email_verified', 'first_name', 'grafana_user_id', 'has_social_account', 'id', 'is_active', 'is_billing_contact', 'is_maintenance_contact', 'is_staff', 'is_superuser', 'keycloak_user_id', 'last_login', 'last_name', 'membership_joined_at', 'migrated_from_contact', 'organizations', 'role', 'uuid']
+    required: ['date_joined', 'display_name', 'email', 'email_verified', 'first_name', 'forgejo_user_id', 'grafana_user_id', 'has_social_account', 'id', 'is_active', 'is_billing_contact', 'is_maintenance_contact', 'is_staff', 'is_superuser', 'keycloak_user_id', 'last_login', 'last_name', 'membership_joined_at', 'migrated_from_contact', 'organizations', 'role', 'uuid']
 } as const;
 
 export const UserAdminWriteSchema = {
@@ -495863,6 +498719,24 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
                 }
             ]
         },
+        forgejo_repo_id: {
+            type: 'integer',
+            readOnly: true,
+            nullable: true
+        },
+        forgejo_repo_url: {
+            type: 'string',
+            format: 'uri',
+            readOnly: true,
+            nullable: true,
+            description: 'Forgejo repository HTML URL'
+        },
+        forgejo_clone_url: {
+            type: 'string',
+            readOnly: true,
+            nullable: true,
+            description: 'Forgejo HTTPS clone URL'
+        },
         git_branch: {
             type: 'string',
             readOnly: true,
@@ -495935,6 +498809,18 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
         backup_enabled: {
             type: 'boolean',
             description: 'If false, ayedo does not evaluate workspace-level backup health (WORKSPACE_BACKUP_SCHEDULE_MISSING, WORKSPACE_BACKUP_SCHEDULE_OVERDUE, WORKSPACE_BACKUP_MISSING). Use when ayedo is not responsible for backups. May later gate related backup features; bucket provisioning stays independent for now.'
+        },
+        metrics_enabled: {
+            type: 'boolean',
+            description: 'If false, ayedo does not auto-subscribe the VictoriaMetrics agent addon. Use when this workspace must not scrape or send cluster metrics.'
+        },
+        logs_enabled: {
+            type: 'boolean',
+            description: 'If false, ayedo does not auto-subscribe VictoriaLogs or Kubernetes Event Exporter. Use when this workspace must not scrape or send cluster logs.'
+        },
+        k8s_addons_enabled: {
+            type: 'boolean',
+            description: 'If false, cluster reconcile does not run K8s addon subscription desired-state (no auto-subscribe, no addon install enqueue, no addon conditions). Subscribe, promote, and the cluster Addons tab are unavailable. Use while this workspace is still git-managed via workspace.poly.'
         },
         has_incompatible_kubeconfig: {
             type: 'boolean'
@@ -496059,7 +498945,7 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
             nullable: true
         }
     },
-    required: ['active_maintenances', 'blocks', 'conditions', 'created', 'created_at', 'credential', 'deleted_at', 'deleted_by_user', 'discovery_running', 'discovery_task_id', 'discovery_task_meta', 'edge_endpoint_monitor', 'effective_criticality', 'effective_sla_target', 'effective_slo_target', 'git_branch', 'git_commit_short_sha', 'git_http_url', 'git_reconciled_commit', 'git_ssh_url', 'git_web_url', 'icon_url', 'id', 'is_class_icon', 'is_deleted', 'last_action_run', 'last_discovery', 'last_reconciliation', 'last_repair', 'last_state', 'last_state_change', 'logs_discovered_up_to_commit', 'monitoring_workspace_allowlist', 'organization', 'owner', 'pop', 'reconciliation_running', 'reconciliation_task_id', 'reconciliation_task_meta', 'repair_running', 'repair_task_id', 'repair_task_meta', 'snapshot', 'state', 'state_reason', 'tolerations', 'updated_at', 'url', 'workspace', 'workspace_app_version', 'workspace_poly_raw', 'workspace_version']
+    required: ['active_maintenances', 'blocks', 'conditions', 'created', 'created_at', 'credential', 'deleted_at', 'deleted_by_user', 'discovery_running', 'discovery_task_id', 'discovery_task_meta', 'edge_endpoint_monitor', 'effective_criticality', 'effective_sla_target', 'effective_slo_target', 'forgejo_clone_url', 'forgejo_repo_id', 'forgejo_repo_url', 'git_branch', 'git_commit_short_sha', 'git_http_url', 'git_reconciled_commit', 'git_ssh_url', 'git_web_url', 'icon_url', 'id', 'is_class_icon', 'is_deleted', 'last_action_run', 'last_discovery', 'last_reconciliation', 'last_repair', 'last_state', 'last_state_change', 'logs_discovered_up_to_commit', 'monitoring_workspace_allowlist', 'organization', 'owner', 'pop', 'reconciliation_running', 'reconciliation_task_id', 'reconciliation_task_meta', 'repair_running', 'repair_task_id', 'repair_task_meta', 'snapshot', 'state', 'state_reason', 'tolerations', 'updated_at', 'url', 'workspace', 'workspace_app_version', 'workspace_poly_raw', 'workspace_version']
 } as const;
 
 export const WorkspaceEncryptionCredentialSchema = {
@@ -496360,6 +499246,21 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             readOnly: true,
             description: 'If false, ayedo does not evaluate workspace-level backup health (WORKSPACE_BACKUP_SCHEDULE_MISSING, WORKSPACE_BACKUP_SCHEDULE_OVERDUE, WORKSPACE_BACKUP_MISSING). Use when ayedo is not responsible for backups. May later gate related backup features; bucket provisioning stays independent for now.'
         },
+        metrics_enabled: {
+            type: 'boolean',
+            readOnly: true,
+            description: 'If false, ayedo does not auto-subscribe the VictoriaMetrics agent addon. Use when this workspace must not scrape or send cluster metrics.'
+        },
+        logs_enabled: {
+            type: 'boolean',
+            readOnly: true,
+            description: 'If false, ayedo does not auto-subscribe VictoriaLogs or Kubernetes Event Exporter. Use when this workspace must not scrape or send cluster logs.'
+        },
+        k8s_addons_enabled: {
+            type: 'boolean',
+            readOnly: true,
+            description: 'If false, cluster reconcile does not run K8s addon subscription desired-state (no auto-subscribe, no addon install enqueue, no addon conditions). Subscribe, promote, and the cluster Addons tab are unavailable. Use while this workspace is still git-managed via workspace.poly.'
+        },
         git_web_url: {
             type: 'string',
             readOnly: true,
@@ -496420,7 +499321,7 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
             ]
         }
     },
-    required: ['active_condition_instances', 'archived', 'backup_enabled', 'condition_instance_count', 'conditions', 'created', 'description', 'effective_criticality', 'git_commit_short_sha', 'git_ssh_url', 'git_web_url', 'id', 'kind', 'labels', 'legacy', 'name', 'notifications_enabled', 'operator_version', 'organization', 'organization_priority', 'pop', 'purpose', 'reconciliation_running', 'state', 'url', 'workspace', 'workspace_app_version', 'workspace_version']
+    required: ['active_condition_instances', 'archived', 'backup_enabled', 'condition_instance_count', 'conditions', 'created', 'description', 'effective_criticality', 'git_commit_short_sha', 'git_ssh_url', 'git_web_url', 'id', 'k8s_addons_enabled', 'kind', 'labels', 'legacy', 'logs_enabled', 'metrics_enabled', 'name', 'notifications_enabled', 'operator_version', 'organization', 'organization_priority', 'pop', 'purpose', 'reconciliation_running', 'state', 'url', 'workspace', 'workspace_app_version', 'workspace_version']
 } as const;
 
 export const WorkspaceRequestSchema = {
@@ -496616,6 +499517,18 @@ Template can be org-specific or system-wide (organization=null).`,
         backup_enabled: {
             type: 'boolean',
             description: 'If false, ayedo does not evaluate workspace-level backup health (WORKSPACE_BACKUP_SCHEDULE_MISSING, WORKSPACE_BACKUP_SCHEDULE_OVERDUE, WORKSPACE_BACKUP_MISSING). Use when ayedo is not responsible for backups. May later gate related backup features; bucket provisioning stays independent for now.'
+        },
+        metrics_enabled: {
+            type: 'boolean',
+            description: 'If false, ayedo does not auto-subscribe the VictoriaMetrics agent addon. Use when this workspace must not scrape or send cluster metrics.'
+        },
+        logs_enabled: {
+            type: 'boolean',
+            description: 'If false, ayedo does not auto-subscribe VictoriaLogs or Kubernetes Event Exporter. Use when this workspace must not scrape or send cluster logs.'
+        },
+        k8s_addons_enabled: {
+            type: 'boolean',
+            description: 'If false, cluster reconcile does not run K8s addon subscription desired-state (no auto-subscribe, no addon install enqueue, no addon conditions). Subscribe, promote, and the cluster Addons tab are unavailable. Use while this workspace is still git-managed via workspace.poly.'
         },
         has_incompatible_kubeconfig: {
             type: 'boolean'

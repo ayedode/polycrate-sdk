@@ -124,7 +124,9 @@ class RegionLoadbalancerConfig:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.region_loadbalancer_config_region_config import RegionLoadbalancerConfigRegionConfig
+        from ..models.region_loadbalancer_config_region_config import (
+            RegionLoadbalancerConfigRegionConfig,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         _kind = d.pop("kind", UNSET)

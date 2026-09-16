@@ -51,10 +51,10 @@ class DashboardOperationsWidgetsResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.dashboard_operations_widgets_response_lb_traffic import (
-            DashboardOperationsWidgetsResponseLbTraffic,
+            DashboardOperationsWidgetsResponseLbTraffic,  # noqa: PLC0415
         )
         from ..models.dashboard_operations_widgets_response_s3_storage import (
-            DashboardOperationsWidgetsResponseS3Storage,
+            DashboardOperationsWidgetsResponseS3Storage,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

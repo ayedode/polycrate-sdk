@@ -36,9 +36,11 @@ class ApiLoginCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_login_create_non_field_errors_error_component import (
-            ApiLoginCreateNonFieldErrorsErrorComponent,
+            ApiLoginCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_login_create_username_error_component import ApiLoginCreateUsernameErrorComponent
+        from ..models.api_login_create_username_error_component import (
+            ApiLoginCreateUsernameErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -68,10 +70,14 @@ class ApiLoginCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_login_create_non_field_errors_error_component import (
-            ApiLoginCreateNonFieldErrorsErrorComponent,
+            ApiLoginCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_login_create_password_error_component import ApiLoginCreatePasswordErrorComponent
-        from ..models.api_login_create_username_error_component import ApiLoginCreateUsernameErrorComponent
+        from ..models.api_login_create_password_error_component import (
+            ApiLoginCreatePasswordErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_login_create_username_error_component import (
+            ApiLoginCreateUsernameErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

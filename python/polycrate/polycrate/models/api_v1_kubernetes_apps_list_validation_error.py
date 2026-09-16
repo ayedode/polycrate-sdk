@@ -95,48 +95,52 @@ class ApiV1KubernetesAppsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_apps_list_catalogue_app_error_component import (
-            ApiV1KubernetesAppsListCatalogueAppErrorComponent,
+            ApiV1KubernetesAppsListCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_created_at_error_component import (
-            ApiV1KubernetesAppsListCreatedAtErrorComponent,
+            ApiV1KubernetesAppsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_created_by_component_error_component import (
-            ApiV1KubernetesAppsListCreatedByComponentErrorComponent,
+            ApiV1KubernetesAppsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_created_by_users_error_component import (
-            ApiV1KubernetesAppsListCreatedByUsersErrorComponent,
+            ApiV1KubernetesAppsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_helm_chart_error_component import (
-            ApiV1KubernetesAppsListHelmChartErrorComponent,
+            ApiV1KubernetesAppsListHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_k8s_cluster_error_component import (
-            ApiV1KubernetesAppsListK8SClusterErrorComponent,
+            ApiV1KubernetesAppsListK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_kubernetes_apps_list_kind_error_component import ApiV1KubernetesAppsListKindErrorComponent
-        from ..models.api_v1_kubernetes_apps_list_name_error_component import ApiV1KubernetesAppsListNameErrorComponent
+        from ..models.api_v1_kubernetes_apps_list_kind_error_component import (
+            ApiV1KubernetesAppsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_apps_list_name_error_component import (
+            ApiV1KubernetesAppsListNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_kubernetes_apps_list_organizations_error_component import (
-            ApiV1KubernetesAppsListOrganizationsErrorComponent,
+            ApiV1KubernetesAppsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_scope_error_component import (
-            ApiV1KubernetesAppsListScopeErrorComponent,
+            ApiV1KubernetesAppsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_search_error_component import (
-            ApiV1KubernetesAppsListSearchErrorComponent,
+            ApiV1KubernetesAppsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_state_error_component import (
-            ApiV1KubernetesAppsListStateErrorComponent,
+            ApiV1KubernetesAppsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_state_not_error_component import (
-            ApiV1KubernetesAppsListStateNotErrorComponent,
+            ApiV1KubernetesAppsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_time_range_error_component import (
-            ApiV1KubernetesAppsListTimeRangeErrorComponent,
+            ApiV1KubernetesAppsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_updated_at_error_component import (
-            ApiV1KubernetesAppsListUpdatedAtErrorComponent,
+            ApiV1KubernetesAppsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_workspaces_error_component import (
-            ApiV1KubernetesAppsListWorkspacesErrorComponent,
+            ApiV1KubernetesAppsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -195,51 +199,55 @@ class ApiV1KubernetesAppsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_apps_list_catalogue_app_error_component import (
-            ApiV1KubernetesAppsListCatalogueAppErrorComponent,
+            ApiV1KubernetesAppsListCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_created_at_error_component import (
-            ApiV1KubernetesAppsListCreatedAtErrorComponent,
+            ApiV1KubernetesAppsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_created_by_component_error_component import (
-            ApiV1KubernetesAppsListCreatedByComponentErrorComponent,
+            ApiV1KubernetesAppsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_created_by_users_error_component import (
-            ApiV1KubernetesAppsListCreatedByUsersErrorComponent,
+            ApiV1KubernetesAppsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_helm_chart_error_component import (
-            ApiV1KubernetesAppsListHelmChartErrorComponent,
+            ApiV1KubernetesAppsListHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_k8s_cluster_error_component import (
-            ApiV1KubernetesAppsListK8SClusterErrorComponent,
+            ApiV1KubernetesAppsListK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_kubernetes_apps_list_kind_error_component import ApiV1KubernetesAppsListKindErrorComponent
-        from ..models.api_v1_kubernetes_apps_list_name_error_component import ApiV1KubernetesAppsListNameErrorComponent
+        from ..models.api_v1_kubernetes_apps_list_kind_error_component import (
+            ApiV1KubernetesAppsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_kubernetes_apps_list_name_error_component import (
+            ApiV1KubernetesAppsListNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_kubernetes_apps_list_name_exact_error_component import (
-            ApiV1KubernetesAppsListNameExactErrorComponent,
+            ApiV1KubernetesAppsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_organizations_error_component import (
-            ApiV1KubernetesAppsListOrganizationsErrorComponent,
+            ApiV1KubernetesAppsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_scope_error_component import (
-            ApiV1KubernetesAppsListScopeErrorComponent,
+            ApiV1KubernetesAppsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_search_error_component import (
-            ApiV1KubernetesAppsListSearchErrorComponent,
+            ApiV1KubernetesAppsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_state_error_component import (
-            ApiV1KubernetesAppsListStateErrorComponent,
+            ApiV1KubernetesAppsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_state_not_error_component import (
-            ApiV1KubernetesAppsListStateNotErrorComponent,
+            ApiV1KubernetesAppsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_time_range_error_component import (
-            ApiV1KubernetesAppsListTimeRangeErrorComponent,
+            ApiV1KubernetesAppsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_updated_at_error_component import (
-            ApiV1KubernetesAppsListUpdatedAtErrorComponent,
+            ApiV1KubernetesAppsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_list_workspaces_error_component import (
-            ApiV1KubernetesAppsListWorkspacesErrorComponent,
+            ApiV1KubernetesAppsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -41,7 +41,7 @@ class PatchedConversationProviderUpdateRequest:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.patched_conversation_provider_update_request_secrets_type_0 import (
-            PatchedConversationProviderUpdateRequestSecretsType0,
+            PatchedConversationProviderUpdateRequestSecretsType0,  # noqa: PLC0415
         )
 
         credential: None | str | Unset
@@ -80,7 +80,7 @@ class PatchedConversationProviderUpdateRequest:
 
     def to_multipart(self) -> types.RequestFiles:
         from ..models.patched_conversation_provider_update_request_secrets_type_0 import (
-            PatchedConversationProviderUpdateRequestSecretsType0,
+            PatchedConversationProviderUpdateRequestSecretsType0,  # noqa: PLC0415
         )
 
         files: types.RequestFiles = []
@@ -111,7 +111,7 @@ class PatchedConversationProviderUpdateRequest:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.patched_conversation_provider_update_request_secrets_type_0 import (
-            PatchedConversationProviderUpdateRequestSecretsType0,
+            PatchedConversationProviderUpdateRequestSecretsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -79,40 +79,40 @@ class ApiV1DomainsDnszonesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_dnszones_list_created_at_error_component import (
-            ApiV1DomainsDnszonesListCreatedAtErrorComponent,
+            ApiV1DomainsDnszonesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_created_by_component_error_component import (
-            ApiV1DomainsDnszonesListCreatedByComponentErrorComponent,
+            ApiV1DomainsDnszonesListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_created_by_users_error_component import (
-            ApiV1DomainsDnszonesListCreatedByUsersErrorComponent,
+            ApiV1DomainsDnszonesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_kind_error_component import (
-            ApiV1DomainsDnszonesListKindErrorComponent,
+            ApiV1DomainsDnszonesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_name_error_component import (
-            ApiV1DomainsDnszonesListNameErrorComponent,
+            ApiV1DomainsDnszonesListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_organizations_error_component import (
-            ApiV1DomainsDnszonesListOrganizationsErrorComponent,
+            ApiV1DomainsDnszonesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_scope_error_component import (
-            ApiV1DomainsDnszonesListScopeErrorComponent,
+            ApiV1DomainsDnszonesListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_search_error_component import (
-            ApiV1DomainsDnszonesListSearchErrorComponent,
+            ApiV1DomainsDnszonesListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_state_error_component import (
-            ApiV1DomainsDnszonesListStateErrorComponent,
+            ApiV1DomainsDnszonesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_state_not_error_component import (
-            ApiV1DomainsDnszonesListStateNotErrorComponent,
+            ApiV1DomainsDnszonesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_time_range_error_component import (
-            ApiV1DomainsDnszonesListTimeRangeErrorComponent,
+            ApiV1DomainsDnszonesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_updated_at_error_component import (
-            ApiV1DomainsDnszonesListUpdatedAtErrorComponent,
+            ApiV1DomainsDnszonesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -163,43 +163,43 @@ class ApiV1DomainsDnszonesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_dnszones_list_created_at_error_component import (
-            ApiV1DomainsDnszonesListCreatedAtErrorComponent,
+            ApiV1DomainsDnszonesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_created_by_component_error_component import (
-            ApiV1DomainsDnszonesListCreatedByComponentErrorComponent,
+            ApiV1DomainsDnszonesListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_created_by_users_error_component import (
-            ApiV1DomainsDnszonesListCreatedByUsersErrorComponent,
+            ApiV1DomainsDnszonesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_kind_error_component import (
-            ApiV1DomainsDnszonesListKindErrorComponent,
+            ApiV1DomainsDnszonesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_name_error_component import (
-            ApiV1DomainsDnszonesListNameErrorComponent,
+            ApiV1DomainsDnszonesListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_name_exact_error_component import (
-            ApiV1DomainsDnszonesListNameExactErrorComponent,
+            ApiV1DomainsDnszonesListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_organizations_error_component import (
-            ApiV1DomainsDnszonesListOrganizationsErrorComponent,
+            ApiV1DomainsDnszonesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_scope_error_component import (
-            ApiV1DomainsDnszonesListScopeErrorComponent,
+            ApiV1DomainsDnszonesListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_search_error_component import (
-            ApiV1DomainsDnszonesListSearchErrorComponent,
+            ApiV1DomainsDnszonesListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_state_error_component import (
-            ApiV1DomainsDnszonesListStateErrorComponent,
+            ApiV1DomainsDnszonesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_state_not_error_component import (
-            ApiV1DomainsDnszonesListStateNotErrorComponent,
+            ApiV1DomainsDnszonesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_time_range_error_component import (
-            ApiV1DomainsDnszonesListTimeRangeErrorComponent,
+            ApiV1DomainsDnszonesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_list_updated_at_error_component import (
-            ApiV1DomainsDnszonesListUpdatedAtErrorComponent,
+            ApiV1DomainsDnszonesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

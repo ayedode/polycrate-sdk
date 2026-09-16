@@ -47,7 +47,7 @@ class PricingQuoteWorkspaceDetailOrganizationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.pricing_quote_workspace_detail_organization_type_0_created_by_type_0 import (
-            PricingQuoteWorkspaceDetailOrganizationType0CreatedByType0,
+            PricingQuoteWorkspaceDetailOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         id: str | Unset = UNSET
@@ -129,7 +129,7 @@ class PricingQuoteWorkspaceDetailOrganizationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.pricing_quote_workspace_detail_organization_type_0_created_by_type_0 import (
-            PricingQuoteWorkspaceDetailOrganizationType0CreatedByType0,
+            PricingQuoteWorkspaceDetailOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -251,9 +251,9 @@ class Note:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.note_created_by_user_type_0 import NoteCreatedByUserType0
-        from ..models.note_deleted_by_user_type_0 import NoteDeletedByUserType0
-        from ..models.note_last_action_run_type_0 import NoteLastActionRunType0
+        from ..models.note_created_by_user_type_0 import NoteCreatedByUserType0  # noqa: PLC0415
+        from ..models.note_deleted_by_user_type_0 import NoteDeletedByUserType0  # noqa: PLC0415
+        from ..models.note_last_action_run_type_0 import NoteLastActionRunType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -642,16 +642,16 @@ class Note:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential_simple import CredentialSimple
-        from ..models.note_assignees_item import NoteAssigneesItem
-        from ..models.note_created import NoteCreated
-        from ..models.note_created_by_user_type_0 import NoteCreatedByUserType0
-        from ..models.note_deleted_by_user_type_0 import NoteDeletedByUserType0
-        from ..models.note_last_action_run_type_0 import NoteLastActionRunType0
-        from ..models.note_simple import NoteSimple
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.project_simple import ProjectSimple
-        from ..models.workspace_simple import WorkspaceSimple
+        from ..models.credential_simple import CredentialSimple  # noqa: PLC0415
+        from ..models.note_assignees_item import NoteAssigneesItem  # noqa: PLC0415
+        from ..models.note_created import NoteCreated  # noqa: PLC0415
+        from ..models.note_created_by_user_type_0 import NoteCreatedByUserType0  # noqa: PLC0415
+        from ..models.note_deleted_by_user_type_0 import NoteDeletedByUserType0  # noqa: PLC0415
+        from ..models.note_last_action_run_type_0 import NoteLastActionRunType0  # noqa: PLC0415
+        from ..models.note_simple import NoteSimple  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.project_simple import ProjectSimple  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

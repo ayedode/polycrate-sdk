@@ -65,25 +65,25 @@ class ApiV1PricingQuoteWorkspacesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_quote_workspaces_list_created_at_error_component import (
-            ApiV1PricingQuoteWorkspacesListCreatedAtErrorComponent,
+            ApiV1PricingQuoteWorkspacesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_created_by_component_error_component import (
-            ApiV1PricingQuoteWorkspacesListCreatedByComponentErrorComponent,
+            ApiV1PricingQuoteWorkspacesListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_kind_error_component import (
-            ApiV1PricingQuoteWorkspacesListKindErrorComponent,
+            ApiV1PricingQuoteWorkspacesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_name_error_component import (
-            ApiV1PricingQuoteWorkspacesListNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_scope_error_component import (
-            ApiV1PricingQuoteWorkspacesListScopeErrorComponent,
+            ApiV1PricingQuoteWorkspacesListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_state_error_component import (
-            ApiV1PricingQuoteWorkspacesListStateErrorComponent,
+            ApiV1PricingQuoteWorkspacesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_updated_at_error_component import (
-            ApiV1PricingQuoteWorkspacesListUpdatedAtErrorComponent,
+            ApiV1PricingQuoteWorkspacesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -124,28 +124,28 @@ class ApiV1PricingQuoteWorkspacesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_quote_workspaces_list_created_at_error_component import (
-            ApiV1PricingQuoteWorkspacesListCreatedAtErrorComponent,
+            ApiV1PricingQuoteWorkspacesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_created_by_component_error_component import (
-            ApiV1PricingQuoteWorkspacesListCreatedByComponentErrorComponent,
+            ApiV1PricingQuoteWorkspacesListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_kind_error_component import (
-            ApiV1PricingQuoteWorkspacesListKindErrorComponent,
+            ApiV1PricingQuoteWorkspacesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_name_error_component import (
-            ApiV1PricingQuoteWorkspacesListNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_quote_error_component import (
-            ApiV1PricingQuoteWorkspacesListQuoteErrorComponent,
+            ApiV1PricingQuoteWorkspacesListQuoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_scope_error_component import (
-            ApiV1PricingQuoteWorkspacesListScopeErrorComponent,
+            ApiV1PricingQuoteWorkspacesListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_state_error_component import (
-            ApiV1PricingQuoteWorkspacesListStateErrorComponent,
+            ApiV1PricingQuoteWorkspacesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_list_updated_at_error_component import (
-            ApiV1PricingQuoteWorkspacesListUpdatedAtErrorComponent,
+            ApiV1PricingQuoteWorkspacesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

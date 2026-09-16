@@ -233,124 +233,124 @@ class ApiV1PricingQuoteWorkspacesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_quote_workspaces_partial_update_annotations_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateAnnotationsErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_archived_at_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedAtErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_archived_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_archived_reason_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_block_storage_gb_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageGbErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageGbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_block_storage_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_block_storage_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_cluster_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateClusterProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateClusterProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_cluster_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateClusterQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateClusterQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_criticality_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateCriticalityErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_debug_mode_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateDebugModeErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_display_name_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateDisplayNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_host_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateHostProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateHostProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_host_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateHostQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateHostQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_hosts_count_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateHostsCountErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateHostsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_kind_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateKindErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_label_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLabelErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLabelErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_labels_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLabelsErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_loadbalancer_count_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerCountErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_loadbalancer_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_loadbalancer_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_name_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_non_field_errors_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_object_storage_gb_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageGbErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageGbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_object_storage_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_object_storage_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_platform_service_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_provider_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateProviderErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_provider_id_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateProviderIdErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_provider_reference_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_quote_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateQuoteErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateQuoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_sla_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_sla_target_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSlaTargetErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_slo_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_slo_target_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSloTargetErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_support_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSupportProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSupportProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_support_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSupportQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSupportQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_target_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_tolerations_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateTolerationsErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -471,127 +471,127 @@ class ApiV1PricingQuoteWorkspacesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_quote_workspaces_partial_update_annotations_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateAnnotationsErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_archived_at_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedAtErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_archived_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_archived_reason_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_block_storage_gb_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageGbErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageGbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_block_storage_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_block_storage_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateBlockStorageQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_cluster_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateClusterProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateClusterProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_cluster_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateClusterQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateClusterQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_criticality_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateCriticalityErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_debug_mode_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateDebugModeErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_display_name_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateDisplayNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_host_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateHostProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateHostProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_host_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateHostQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateHostQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_hosts_count_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateHostsCountErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateHostsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_kind_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateKindErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_label_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLabelErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLabelErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_labels_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLabelsErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_loadbalancer_count_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerCountErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_loadbalancer_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_loadbalancer_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateLoadbalancerQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_name_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateNameErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_non_field_errors_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_object_storage_gb_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageGbErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageGbErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_object_storage_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_object_storage_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateObjectStorageQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_platform_service_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_provider_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateProviderErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_provider_id_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateProviderIdErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_provider_reference_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_quote_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateQuoteErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateQuoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_reconciliation_enabled_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_sla_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_sla_target_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSlaTargetErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_slo_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_slo_target_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSloTargetErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_support_product_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSupportProductErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSupportProductErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_support_quoted_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateSupportQuotedPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateSupportQuotedPriceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_target_availability_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_tolerations_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateTolerationsErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_quote_workspaces_partial_update_total_price_error_component import (
-            ApiV1PricingQuoteWorkspacesPartialUpdateTotalPriceErrorComponent,
+            ApiV1PricingQuoteWorkspacesPartialUpdateTotalPriceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

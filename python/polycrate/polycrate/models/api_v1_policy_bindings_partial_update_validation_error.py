@@ -57,19 +57,19 @@ class ApiV1PolicyBindingsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_policy_bindings_partial_update_applied_error_component import (
-            ApiV1PolicyBindingsPartialUpdateAppliedErrorComponent,
+            ApiV1PolicyBindingsPartialUpdateAppliedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_partial_update_enabled_error_component import (
-            ApiV1PolicyBindingsPartialUpdateEnabledErrorComponent,
+            ApiV1PolicyBindingsPartialUpdateEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_partial_update_non_field_errors_error_component import (
-            ApiV1PolicyBindingsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PolicyBindingsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_partial_update_policy_id_error_component import (
-            ApiV1PolicyBindingsPartialUpdatePolicyIdErrorComponent,
+            ApiV1PolicyBindingsPartialUpdatePolicyIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_partial_update_scope_error_component import (
-            ApiV1PolicyBindingsPartialUpdateScopeErrorComponent,
+            ApiV1PolicyBindingsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -106,22 +106,22 @@ class ApiV1PolicyBindingsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_policy_bindings_partial_update_applied_error_component import (
-            ApiV1PolicyBindingsPartialUpdateAppliedErrorComponent,
+            ApiV1PolicyBindingsPartialUpdateAppliedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_partial_update_enabled_error_component import (
-            ApiV1PolicyBindingsPartialUpdateEnabledErrorComponent,
+            ApiV1PolicyBindingsPartialUpdateEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_partial_update_execution_log_error_component import (
-            ApiV1PolicyBindingsPartialUpdateExecutionLogErrorComponent,
+            ApiV1PolicyBindingsPartialUpdateExecutionLogErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_partial_update_non_field_errors_error_component import (
-            ApiV1PolicyBindingsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1PolicyBindingsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_partial_update_policy_id_error_component import (
-            ApiV1PolicyBindingsPartialUpdatePolicyIdErrorComponent,
+            ApiV1PolicyBindingsPartialUpdatePolicyIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_partial_update_scope_error_component import (
-            ApiV1PolicyBindingsPartialUpdateScopeErrorComponent,
+            ApiV1PolicyBindingsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

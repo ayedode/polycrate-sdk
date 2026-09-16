@@ -194,111 +194,115 @@ class ApiV1NotesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_notes_partial_update_additional_recipients_error_component import (
-            ApiV1NotesPartialUpdateAdditionalRecipientsErrorComponent,
+            ApiV1NotesPartialUpdateAdditionalRecipientsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_annotations_error_component import (
-            ApiV1NotesPartialUpdateAnnotationsErrorComponent,
+            ApiV1NotesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_archived_at_error_component import (
-            ApiV1NotesPartialUpdateArchivedAtErrorComponent,
+            ApiV1NotesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_archived_error_component import (
-            ApiV1NotesPartialUpdateArchivedErrorComponent,
+            ApiV1NotesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_archived_reason_error_component import (
-            ApiV1NotesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1NotesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_assigned_to_ids_error_component import (
-            ApiV1NotesPartialUpdateAssignedToIdsErrorComponent,
+            ApiV1NotesPartialUpdateAssignedToIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_assigned_to_ids_index_error_component import (
-            ApiV1NotesPartialUpdateAssignedToIdsINDEXErrorComponent,
+            ApiV1NotesPartialUpdateAssignedToIdsINDEXErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_content_error_component import (
-            ApiV1NotesPartialUpdateContentErrorComponent,
+            ApiV1NotesPartialUpdateContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_credential_id_error_component import (
-            ApiV1NotesPartialUpdateCredentialIdErrorComponent,
+            ApiV1NotesPartialUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_criticality_error_component import (
-            ApiV1NotesPartialUpdateCriticalityErrorComponent,
+            ApiV1NotesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_debug_mode_error_component import (
-            ApiV1NotesPartialUpdateDebugModeErrorComponent,
+            ApiV1NotesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_display_name_error_component import (
-            ApiV1NotesPartialUpdateDisplayNameErrorComponent,
+            ApiV1NotesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_partial_update_kind_error_component import ApiV1NotesPartialUpdateKindErrorComponent
+        from ..models.api_v1_notes_partial_update_kind_error_component import (
+            ApiV1NotesPartialUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_partial_update_labels_error_component import (
-            ApiV1NotesPartialUpdateLabelsErrorComponent,
+            ApiV1NotesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_partial_update_name_error_component import ApiV1NotesPartialUpdateNameErrorComponent
+        from ..models.api_v1_notes_partial_update_name_error_component import (
+            ApiV1NotesPartialUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_partial_update_non_field_errors_error_component import (
-            ApiV1NotesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1NotesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_organization_id_error_component import (
-            ApiV1NotesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1NotesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_parent_note_id_error_component import (
-            ApiV1NotesPartialUpdateParentNoteIdErrorComponent,
+            ApiV1NotesPartialUpdateParentNoteIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_platform_service_error_component import (
-            ApiV1NotesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1NotesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_project_id_error_component import (
-            ApiV1NotesPartialUpdateProjectIdErrorComponent,
+            ApiV1NotesPartialUpdateProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_provider_error_component import (
-            ApiV1NotesPartialUpdateProviderErrorComponent,
+            ApiV1NotesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_provider_id_error_component import (
-            ApiV1NotesPartialUpdateProviderIdErrorComponent,
+            ApiV1NotesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_provider_reference_error_component import (
-            ApiV1NotesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1NotesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_reconciliation_enabled_error_component import (
-            ApiV1NotesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1NotesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_remind_at_error_component import (
-            ApiV1NotesPartialUpdateRemindAtErrorComponent,
+            ApiV1NotesPartialUpdateRemindAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_resolved_error_component import (
-            ApiV1NotesPartialUpdateResolvedErrorComponent,
+            ApiV1NotesPartialUpdateResolvedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_sla_availability_error_component import (
-            ApiV1NotesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1NotesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_sla_target_error_component import (
-            ApiV1NotesPartialUpdateSlaTargetErrorComponent,
+            ApiV1NotesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_slo_availability_error_component import (
-            ApiV1NotesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1NotesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_slo_target_error_component import (
-            ApiV1NotesPartialUpdateSloTargetErrorComponent,
+            ApiV1NotesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_structured_content_error_component import (
-            ApiV1NotesPartialUpdateStructuredContentErrorComponent,
+            ApiV1NotesPartialUpdateStructuredContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_target_availability_error_component import (
-            ApiV1NotesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1NotesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_time_tracked_hours_error_component import (
-            ApiV1NotesPartialUpdateTimeTrackedHoursErrorComponent,
+            ApiV1NotesPartialUpdateTimeTrackedHoursErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_tolerations_error_component import (
-            ApiV1NotesPartialUpdateTolerationsErrorComponent,
+            ApiV1NotesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_tracked_at_error_component import (
-            ApiV1NotesPartialUpdateTrackedAtErrorComponent,
+            ApiV1NotesPartialUpdateTrackedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_vydeo_enabled_error_component import (
-            ApiV1NotesPartialUpdateVydeoEnabledErrorComponent,
+            ApiV1NotesPartialUpdateVydeoEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_workspace_id_error_component import (
-            ApiV1NotesPartialUpdateWorkspaceIdErrorComponent,
+            ApiV1NotesPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -399,114 +403,118 @@ class ApiV1NotesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_notes_partial_update_additional_recipients_error_component import (
-            ApiV1NotesPartialUpdateAdditionalRecipientsErrorComponent,
+            ApiV1NotesPartialUpdateAdditionalRecipientsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_annotations_error_component import (
-            ApiV1NotesPartialUpdateAnnotationsErrorComponent,
+            ApiV1NotesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_archived_at_error_component import (
-            ApiV1NotesPartialUpdateArchivedAtErrorComponent,
+            ApiV1NotesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_archived_error_component import (
-            ApiV1NotesPartialUpdateArchivedErrorComponent,
+            ApiV1NotesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_archived_reason_error_component import (
-            ApiV1NotesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1NotesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_assigned_to_ids_error_component import (
-            ApiV1NotesPartialUpdateAssignedToIdsErrorComponent,
+            ApiV1NotesPartialUpdateAssignedToIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_assigned_to_ids_index_error_component import (
-            ApiV1NotesPartialUpdateAssignedToIdsINDEXErrorComponent,
+            ApiV1NotesPartialUpdateAssignedToIdsINDEXErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_content_error_component import (
-            ApiV1NotesPartialUpdateContentErrorComponent,
+            ApiV1NotesPartialUpdateContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_credential_id_error_component import (
-            ApiV1NotesPartialUpdateCredentialIdErrorComponent,
+            ApiV1NotesPartialUpdateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_criticality_error_component import (
-            ApiV1NotesPartialUpdateCriticalityErrorComponent,
+            ApiV1NotesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_debug_mode_error_component import (
-            ApiV1NotesPartialUpdateDebugModeErrorComponent,
+            ApiV1NotesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_display_name_error_component import (
-            ApiV1NotesPartialUpdateDisplayNameErrorComponent,
+            ApiV1NotesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_partial_update_kind_error_component import ApiV1NotesPartialUpdateKindErrorComponent
+        from ..models.api_v1_notes_partial_update_kind_error_component import (
+            ApiV1NotesPartialUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_partial_update_labels_error_component import (
-            ApiV1NotesPartialUpdateLabelsErrorComponent,
+            ApiV1NotesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_meeting_duration_minutes_error_component import (
-            ApiV1NotesPartialUpdateMeetingDurationMinutesErrorComponent,
+            ApiV1NotesPartialUpdateMeetingDurationMinutesErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_partial_update_name_error_component import ApiV1NotesPartialUpdateNameErrorComponent
+        from ..models.api_v1_notes_partial_update_name_error_component import (
+            ApiV1NotesPartialUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_partial_update_non_field_errors_error_component import (
-            ApiV1NotesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1NotesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_organization_id_error_component import (
-            ApiV1NotesPartialUpdateOrganizationIdErrorComponent,
+            ApiV1NotesPartialUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_parent_note_id_error_component import (
-            ApiV1NotesPartialUpdateParentNoteIdErrorComponent,
+            ApiV1NotesPartialUpdateParentNoteIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_platform_service_error_component import (
-            ApiV1NotesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1NotesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_project_id_error_component import (
-            ApiV1NotesPartialUpdateProjectIdErrorComponent,
+            ApiV1NotesPartialUpdateProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_provider_error_component import (
-            ApiV1NotesPartialUpdateProviderErrorComponent,
+            ApiV1NotesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_provider_id_error_component import (
-            ApiV1NotesPartialUpdateProviderIdErrorComponent,
+            ApiV1NotesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_provider_reference_error_component import (
-            ApiV1NotesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1NotesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_reconciliation_enabled_error_component import (
-            ApiV1NotesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1NotesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_remind_at_error_component import (
-            ApiV1NotesPartialUpdateRemindAtErrorComponent,
+            ApiV1NotesPartialUpdateRemindAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_resolved_error_component import (
-            ApiV1NotesPartialUpdateResolvedErrorComponent,
+            ApiV1NotesPartialUpdateResolvedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_sla_availability_error_component import (
-            ApiV1NotesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1NotesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_sla_target_error_component import (
-            ApiV1NotesPartialUpdateSlaTargetErrorComponent,
+            ApiV1NotesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_slo_availability_error_component import (
-            ApiV1NotesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1NotesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_slo_target_error_component import (
-            ApiV1NotesPartialUpdateSloTargetErrorComponent,
+            ApiV1NotesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_structured_content_error_component import (
-            ApiV1NotesPartialUpdateStructuredContentErrorComponent,
+            ApiV1NotesPartialUpdateStructuredContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_target_availability_error_component import (
-            ApiV1NotesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1NotesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_time_tracked_hours_error_component import (
-            ApiV1NotesPartialUpdateTimeTrackedHoursErrorComponent,
+            ApiV1NotesPartialUpdateTimeTrackedHoursErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_tolerations_error_component import (
-            ApiV1NotesPartialUpdateTolerationsErrorComponent,
+            ApiV1NotesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_tracked_at_error_component import (
-            ApiV1NotesPartialUpdateTrackedAtErrorComponent,
+            ApiV1NotesPartialUpdateTrackedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_vydeo_enabled_error_component import (
-            ApiV1NotesPartialUpdateVydeoEnabledErrorComponent,
+            ApiV1NotesPartialUpdateVydeoEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_partial_update_workspace_id_error_component import (
-            ApiV1NotesPartialUpdateWorkspaceIdErrorComponent,
+            ApiV1NotesPartialUpdateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

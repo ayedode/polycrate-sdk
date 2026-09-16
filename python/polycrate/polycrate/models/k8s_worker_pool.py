@@ -154,7 +154,7 @@ class K8SWorkerPool:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
             desired_count (int | Unset): Desired number of worker Hosts in this pool.
-            location (str | Unset): Optional provider location/region for new Hosts.
+            location (str | Unset): Optional override. Defaults to Product.pop location slug (hetzner-fsn1 → fsn1).
             hardening_enabled (bool | Unset): When true, enqueue linux/hardening before k8s join.
     """
 
@@ -229,12 +229,14 @@ class K8SWorkerPool:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_worker_pool_deleted_by_user_type_0 import K8SWorkerPoolDeletedByUserType0
-        from ..models.k8s_worker_pool_last_action_run_type_0 import K8SWorkerPoolLastActionRunType0
-        from ..models.k8s_worker_pool_organization_type_0 import K8SWorkerPoolOrganizationType0
-        from ..models.k8s_worker_pool_provider_account_type_0 import K8SWorkerPoolProviderAccountType0
-        from ..models.k8s_worker_pool_ssh_key_credential_type_0 import K8SWorkerPoolSshKeyCredentialType0
-        from ..models.k8s_worker_pool_workspace_type_0 import K8SWorkerPoolWorkspaceType0
+        from ..models.k8s_worker_pool_deleted_by_user_type_0 import K8SWorkerPoolDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_last_action_run_type_0 import K8SWorkerPoolLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_organization_type_0 import K8SWorkerPoolOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_provider_account_type_0 import K8SWorkerPoolProviderAccountType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_ssh_key_credential_type_0 import (
+            K8SWorkerPoolSshKeyCredentialType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_worker_pool_workspace_type_0 import K8SWorkerPoolWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -581,15 +583,17 @@ class K8SWorkerPool:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_controlplane_simple import K8SControlplaneSimple
-        from ..models.k8s_worker_pool_created import K8SWorkerPoolCreated
-        from ..models.k8s_worker_pool_deleted_by_user_type_0 import K8SWorkerPoolDeletedByUserType0
-        from ..models.k8s_worker_pool_last_action_run_type_0 import K8SWorkerPoolLastActionRunType0
-        from ..models.k8s_worker_pool_organization_type_0 import K8SWorkerPoolOrganizationType0
-        from ..models.k8s_worker_pool_provider_account_type_0 import K8SWorkerPoolProviderAccountType0
-        from ..models.k8s_worker_pool_ssh_key_credential_type_0 import K8SWorkerPoolSshKeyCredentialType0
-        from ..models.k8s_worker_pool_workspace_type_0 import K8SWorkerPoolWorkspaceType0
-        from ..models.product_simple import ProductSimple
+        from ..models.k8s_controlplane_simple import K8SControlplaneSimple  # noqa: PLC0415
+        from ..models.k8s_worker_pool_created import K8SWorkerPoolCreated  # noqa: PLC0415
+        from ..models.k8s_worker_pool_deleted_by_user_type_0 import K8SWorkerPoolDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_last_action_run_type_0 import K8SWorkerPoolLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_organization_type_0 import K8SWorkerPoolOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_provider_account_type_0 import K8SWorkerPoolProviderAccountType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_ssh_key_credential_type_0 import (
+            K8SWorkerPoolSshKeyCredentialType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_worker_pool_workspace_type_0 import K8SWorkerPoolWorkspaceType0  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

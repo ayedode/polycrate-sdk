@@ -221,130 +221,136 @@ class ApiV1HostsArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_hosts_archive_create_active_error_component import (
-            ApiV1HostsArchiveCreateActiveErrorComponent,
+            ApiV1HostsArchiveCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_alias_error_component import (
-            ApiV1HostsArchiveCreateAliasErrorComponent,
+            ApiV1HostsArchiveCreateAliasErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_annotations_error_component import (
-            ApiV1HostsArchiveCreateAnnotationsErrorComponent,
+            ApiV1HostsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_archived_at_error_component import (
-            ApiV1HostsArchiveCreateArchivedAtErrorComponent,
+            ApiV1HostsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_archived_error_component import (
-            ApiV1HostsArchiveCreateArchivedErrorComponent,
+            ApiV1HostsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_archived_reason_error_component import (
-            ApiV1HostsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1HostsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_created_by_component_error_component import (
-            ApiV1HostsArchiveCreateCreatedByComponentErrorComponent,
+            ApiV1HostsArchiveCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_credential_error_component import (
-            ApiV1HostsArchiveCreateCredentialErrorComponent,
+            ApiV1HostsArchiveCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_criticality_error_component import (
-            ApiV1HostsArchiveCreateCriticalityErrorComponent,
+            ApiV1HostsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_debug_mode_error_component import (
-            ApiV1HostsArchiveCreateDebugModeErrorComponent,
+            ApiV1HostsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_default_ipv_4_error_component import (
-            ApiV1HostsArchiveCreateDefaultIpv4ErrorComponent,
+            ApiV1HostsArchiveCreateDefaultIpv4ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_default_ipv_6_error_component import (
-            ApiV1HostsArchiveCreateDefaultIpv6ErrorComponent,
+            ApiV1HostsArchiveCreateDefaultIpv6ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_description_error_component import (
-            ApiV1HostsArchiveCreateDescriptionErrorComponent,
+            ApiV1HostsArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_display_name_error_component import (
-            ApiV1HostsArchiveCreateDisplayNameErrorComponent,
+            ApiV1HostsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_hostname_error_component import (
-            ApiV1HostsArchiveCreateHostnameErrorComponent,
+            ApiV1HostsArchiveCreateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_k8s_cluster_error_component import (
-            ApiV1HostsArchiveCreateK8SClusterErrorComponent,
+            ApiV1HostsArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_archive_create_kind_error_component import ApiV1HostsArchiveCreateKindErrorComponent
+        from ..models.api_v1_hosts_archive_create_kind_error_component import (
+            ApiV1HostsArchiveCreateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_archive_create_labels_error_component import (
-            ApiV1HostsArchiveCreateLabelsErrorComponent,
+            ApiV1HostsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_archive_create_name_error_component import ApiV1HostsArchiveCreateNameErrorComponent
+        from ..models.api_v1_hosts_archive_create_name_error_component import (
+            ApiV1HostsArchiveCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_archive_create_non_field_errors_error_component import (
-            ApiV1HostsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1HostsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_platform_service_error_component import (
-            ApiV1HostsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1HostsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_account_id_error_component import (
-            ApiV1HostsArchiveCreateProviderAccountIdErrorComponent,
+            ApiV1HostsArchiveCreateProviderAccountIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_error_component import (
-            ApiV1HostsArchiveCreateProviderErrorComponent,
+            ApiV1HostsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_image_error_component import (
-            ApiV1HostsArchiveCreateProviderImageErrorComponent,
+            ApiV1HostsArchiveCreateProviderImageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_image_os_architecture_error_component import (
-            ApiV1HostsArchiveCreateProviderImageOsArchitectureErrorComponent,
+            ApiV1HostsArchiveCreateProviderImageOsArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_image_os_flavor_error_component import (
-            ApiV1HostsArchiveCreateProviderImageOsFlavorErrorComponent,
+            ApiV1HostsArchiveCreateProviderImageOsFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_image_os_version_error_component import (
-            ApiV1HostsArchiveCreateProviderImageOsVersionErrorComponent,
+            ApiV1HostsArchiveCreateProviderImageOsVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_location_error_component import (
-            ApiV1HostsArchiveCreateProviderLocationErrorComponent,
+            ApiV1HostsArchiveCreateProviderLocationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_reference_error_component import (
-            ApiV1HostsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1HostsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_type_error_component import (
-            ApiV1HostsArchiveCreateProviderTypeErrorComponent,
+            ApiV1HostsArchiveCreateProviderTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_reconciliation_enabled_error_component import (
-            ApiV1HostsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1HostsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_cpu_architecture_error_component import (
-            ApiV1HostsArchiveCreateResourceCpuArchitectureErrorComponent,
+            ApiV1HostsArchiveCreateResourceCpuArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_cpu_cores_error_component import (
-            ApiV1HostsArchiveCreateResourceCpuCoresErrorComponent,
+            ApiV1HostsArchiveCreateResourceCpuCoresErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_cpu_type_error_component import (
-            ApiV1HostsArchiveCreateResourceCpuTypeErrorComponent,
+            ApiV1HostsArchiveCreateResourceCpuTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_disk_error_component import (
-            ApiV1HostsArchiveCreateResourceDiskErrorComponent,
+            ApiV1HostsArchiveCreateResourceDiskErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_memory_error_component import (
-            ApiV1HostsArchiveCreateResourceMemoryErrorComponent,
+            ApiV1HostsArchiveCreateResourceMemoryErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_archive_create_role_error_component import ApiV1HostsArchiveCreateRoleErrorComponent
+        from ..models.api_v1_hosts_archive_create_role_error_component import (
+            ApiV1HostsArchiveCreateRoleErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_archive_create_sla_availability_error_component import (
-            ApiV1HostsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1HostsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_sla_target_error_component import (
-            ApiV1HostsArchiveCreateSlaTargetErrorComponent,
+            ApiV1HostsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_slo_availability_error_component import (
-            ApiV1HostsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1HostsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_slo_target_error_component import (
-            ApiV1HostsArchiveCreateSloTargetErrorComponent,
+            ApiV1HostsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_ssh_keys_id_error_component import (
-            ApiV1HostsArchiveCreateSshKeysIdErrorComponent,
+            ApiV1HostsArchiveCreateSshKeysIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_target_availability_error_component import (
-            ApiV1HostsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1HostsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_tolerations_error_component import (
-            ApiV1HostsArchiveCreateTolerationsErrorComponent,
+            ApiV1HostsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -459,133 +465,139 @@ class ApiV1HostsArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_hosts_archive_create_active_error_component import (
-            ApiV1HostsArchiveCreateActiveErrorComponent,
+            ApiV1HostsArchiveCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_alias_error_component import (
-            ApiV1HostsArchiveCreateAliasErrorComponent,
+            ApiV1HostsArchiveCreateAliasErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_annotations_error_component import (
-            ApiV1HostsArchiveCreateAnnotationsErrorComponent,
+            ApiV1HostsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_archived_at_error_component import (
-            ApiV1HostsArchiveCreateArchivedAtErrorComponent,
+            ApiV1HostsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_archived_error_component import (
-            ApiV1HostsArchiveCreateArchivedErrorComponent,
+            ApiV1HostsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_archived_reason_error_component import (
-            ApiV1HostsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1HostsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_created_by_component_error_component import (
-            ApiV1HostsArchiveCreateCreatedByComponentErrorComponent,
+            ApiV1HostsArchiveCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_credential_error_component import (
-            ApiV1HostsArchiveCreateCredentialErrorComponent,
+            ApiV1HostsArchiveCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_criticality_error_component import (
-            ApiV1HostsArchiveCreateCriticalityErrorComponent,
+            ApiV1HostsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_debug_mode_error_component import (
-            ApiV1HostsArchiveCreateDebugModeErrorComponent,
+            ApiV1HostsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_default_ipv_4_error_component import (
-            ApiV1HostsArchiveCreateDefaultIpv4ErrorComponent,
+            ApiV1HostsArchiveCreateDefaultIpv4ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_default_ipv_6_error_component import (
-            ApiV1HostsArchiveCreateDefaultIpv6ErrorComponent,
+            ApiV1HostsArchiveCreateDefaultIpv6ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_description_error_component import (
-            ApiV1HostsArchiveCreateDescriptionErrorComponent,
+            ApiV1HostsArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_display_name_error_component import (
-            ApiV1HostsArchiveCreateDisplayNameErrorComponent,
+            ApiV1HostsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_hostname_error_component import (
-            ApiV1HostsArchiveCreateHostnameErrorComponent,
+            ApiV1HostsArchiveCreateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_k8s_cluster_error_component import (
-            ApiV1HostsArchiveCreateK8SClusterErrorComponent,
+            ApiV1HostsArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_archive_create_kind_error_component import ApiV1HostsArchiveCreateKindErrorComponent
+        from ..models.api_v1_hosts_archive_create_kind_error_component import (
+            ApiV1HostsArchiveCreateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_archive_create_labels_error_component import (
-            ApiV1HostsArchiveCreateLabelsErrorComponent,
+            ApiV1HostsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_archive_create_name_error_component import ApiV1HostsArchiveCreateNameErrorComponent
+        from ..models.api_v1_hosts_archive_create_name_error_component import (
+            ApiV1HostsArchiveCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_archive_create_non_field_errors_error_component import (
-            ApiV1HostsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1HostsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_platform_service_error_component import (
-            ApiV1HostsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1HostsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_product_id_error_component import (
-            ApiV1HostsArchiveCreateProductIdErrorComponent,
+            ApiV1HostsArchiveCreateProductIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_account_id_error_component import (
-            ApiV1HostsArchiveCreateProviderAccountIdErrorComponent,
+            ApiV1HostsArchiveCreateProviderAccountIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_error_component import (
-            ApiV1HostsArchiveCreateProviderErrorComponent,
+            ApiV1HostsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_image_error_component import (
-            ApiV1HostsArchiveCreateProviderImageErrorComponent,
+            ApiV1HostsArchiveCreateProviderImageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_image_os_architecture_error_component import (
-            ApiV1HostsArchiveCreateProviderImageOsArchitectureErrorComponent,
+            ApiV1HostsArchiveCreateProviderImageOsArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_image_os_flavor_error_component import (
-            ApiV1HostsArchiveCreateProviderImageOsFlavorErrorComponent,
+            ApiV1HostsArchiveCreateProviderImageOsFlavorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_image_os_version_error_component import (
-            ApiV1HostsArchiveCreateProviderImageOsVersionErrorComponent,
+            ApiV1HostsArchiveCreateProviderImageOsVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_location_error_component import (
-            ApiV1HostsArchiveCreateProviderLocationErrorComponent,
+            ApiV1HostsArchiveCreateProviderLocationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_reference_error_component import (
-            ApiV1HostsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1HostsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_provider_type_error_component import (
-            ApiV1HostsArchiveCreateProviderTypeErrorComponent,
+            ApiV1HostsArchiveCreateProviderTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_reconciliation_enabled_error_component import (
-            ApiV1HostsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1HostsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_cpu_architecture_error_component import (
-            ApiV1HostsArchiveCreateResourceCpuArchitectureErrorComponent,
+            ApiV1HostsArchiveCreateResourceCpuArchitectureErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_cpu_cores_error_component import (
-            ApiV1HostsArchiveCreateResourceCpuCoresErrorComponent,
+            ApiV1HostsArchiveCreateResourceCpuCoresErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_cpu_type_error_component import (
-            ApiV1HostsArchiveCreateResourceCpuTypeErrorComponent,
+            ApiV1HostsArchiveCreateResourceCpuTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_disk_error_component import (
-            ApiV1HostsArchiveCreateResourceDiskErrorComponent,
+            ApiV1HostsArchiveCreateResourceDiskErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_resource_memory_error_component import (
-            ApiV1HostsArchiveCreateResourceMemoryErrorComponent,
+            ApiV1HostsArchiveCreateResourceMemoryErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_hosts_archive_create_role_error_component import ApiV1HostsArchiveCreateRoleErrorComponent
+        from ..models.api_v1_hosts_archive_create_role_error_component import (
+            ApiV1HostsArchiveCreateRoleErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_hosts_archive_create_sla_availability_error_component import (
-            ApiV1HostsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1HostsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_sla_target_error_component import (
-            ApiV1HostsArchiveCreateSlaTargetErrorComponent,
+            ApiV1HostsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_slo_availability_error_component import (
-            ApiV1HostsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1HostsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_slo_target_error_component import (
-            ApiV1HostsArchiveCreateSloTargetErrorComponent,
+            ApiV1HostsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_ssh_keys_id_error_component import (
-            ApiV1HostsArchiveCreateSshKeysIdErrorComponent,
+            ApiV1HostsArchiveCreateSshKeysIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_target_availability_error_component import (
-            ApiV1HostsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1HostsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_hosts_archive_create_tolerations_error_component import (
-            ApiV1HostsArchiveCreateTolerationsErrorComponent,
+            ApiV1HostsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

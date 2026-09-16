@@ -169,9 +169,11 @@ class ProjectList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.project_list_active_condition_instances_item import ProjectListActiveConditionInstancesItem
-        from ..models.project_list_created import ProjectListCreated
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.project_list_active_condition_instances_item import (
+            ProjectListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.project_list_created import ProjectListCreated  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

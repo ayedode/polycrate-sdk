@@ -252,136 +252,136 @@ class ApiV1DomainsDnszonesRectifyCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_dnszones_rectify_create_annotations_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateAnnotationsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_archived_at_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateArchivedAtErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_archived_by_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateArchivedByErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_archived_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateArchivedErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_archived_reason_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateArchivedReasonErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_created_by_component_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateCreatedByComponentErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_created_by_user_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateCreatedByUserErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_credential_id_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateCredentialIdErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_criticality_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateCriticalityErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_debug_mode_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDebugModeErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_default_ttl_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDefaultTtlErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDefaultTtlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_display_name_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDisplayNameErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_algorithm_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecAlgorithmErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecAlgorithmErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_cryptokeys_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecCryptokeysErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecCryptokeysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_ds_records_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecDsRecordsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecDsRecordsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_enabled_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecEnabledErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_nsec_3_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecNsec3ErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecNsec3ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_ds_delegation_synced_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDsDelegationSyncedErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDsDelegationSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_kind_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateKindErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_labels_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateLabelsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_managed_by_content_type_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_managed_by_object_id_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_modified_by_user_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateModifiedByUserErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_name_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateNameErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_non_field_errors_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_ns_delegation_synced_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateNsDelegationSyncedErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateNsDelegationSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_organization_id_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateOrganizationIdErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_platform_dns_record_created_error_component import (
-            ApiV1DomainsDnszonesRectifyCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_platform_service_error_component import (
-            ApiV1DomainsDnszonesRectifyCreatePlatformServiceErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_powerdns_metadata_error_component import (
-            ApiV1DomainsDnszonesRectifyCreatePowerdnsMetadataErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreatePowerdnsMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_primary_zone_error_component import (
-            ApiV1DomainsDnszonesRectifyCreatePrimaryZoneErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreatePrimaryZoneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_provider_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateProviderErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_provider_id_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateProviderIdErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_provider_reference_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateProviderReferenceErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_reconciliation_enabled_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_sla_availability_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_sla_target_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSlaTargetErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_sla_window_days_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_slo_availability_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSloAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_slo_target_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSloTargetErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_slo_window_days_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSloWindowDaysErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_target_availability_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_tolerations_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateTolerationsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -498,139 +498,139 @@ class ApiV1DomainsDnszonesRectifyCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_dnszones_rectify_create_annotations_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateAnnotationsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_archived_at_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateArchivedAtErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_archived_by_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateArchivedByErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_archived_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateArchivedErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_archived_reason_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateArchivedReasonErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_created_by_component_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateCreatedByComponentErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_created_by_user_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateCreatedByUserErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_credential_id_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateCredentialIdErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_criticality_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateCriticalityErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_debug_mode_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDebugModeErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_default_ttl_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDefaultTtlErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDefaultTtlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_display_name_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDisplayNameErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_algorithm_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecAlgorithmErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecAlgorithmErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_cryptokeys_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecCryptokeysErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecCryptokeysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_ds_records_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecDsRecordsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecDsRecordsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_enabled_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecEnabledErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_dnssec_nsec_3_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDnssecNsec3ErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDnssecNsec3ErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_ds_delegation_synced_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateDsDelegationSyncedErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateDsDelegationSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_kind_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateKindErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_labels_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateLabelsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_managed_by_content_type_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_managed_by_object_id_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_modified_by_user_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateModifiedByUserErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_name_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateNameErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_non_field_errors_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_ns_delegation_synced_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateNsDelegationSyncedErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateNsDelegationSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_organization_id_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateOrganizationIdErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_platform_dns_record_created_error_component import (
-            ApiV1DomainsDnszonesRectifyCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_platform_service_error_component import (
-            ApiV1DomainsDnszonesRectifyCreatePlatformServiceErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_powerdns_metadata_error_component import (
-            ApiV1DomainsDnszonesRectifyCreatePowerdnsMetadataErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreatePowerdnsMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_primary_zone_error_component import (
-            ApiV1DomainsDnszonesRectifyCreatePrimaryZoneErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreatePrimaryZoneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_provider_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateProviderErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_provider_id_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateProviderIdErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_provider_reference_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateProviderReferenceErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_reconciliation_enabled_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_sla_availability_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_sla_target_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSlaTargetErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_sla_window_days_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_slo_availability_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSloAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_slo_target_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSloTargetErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_slo_window_days_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSloWindowDaysErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_sync_from_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateSyncFromErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateSyncFromErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_target_availability_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_rectify_create_tolerations_error_component import (
-            ApiV1DomainsDnszonesRectifyCreateTolerationsErrorComponent,
+            ApiV1DomainsDnszonesRectifyCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

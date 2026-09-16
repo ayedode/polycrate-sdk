@@ -68,7 +68,7 @@ class PaginatedLoadbalancerInstanceListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.loadbalancer_instance_list import LoadbalancerInstanceList
+        from ..models.loadbalancer_instance_list import LoadbalancerInstanceList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

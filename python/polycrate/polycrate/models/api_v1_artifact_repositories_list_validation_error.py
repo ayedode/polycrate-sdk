@@ -60,22 +60,22 @@ class ApiV1ArtifactRepositoriesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_artifact_repositories_list_created_at_error_component import (
-            ApiV1ArtifactRepositoriesListCreatedAtErrorComponent,
+            ApiV1ArtifactRepositoriesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_kind_error_component import (
-            ApiV1ArtifactRepositoriesListKindErrorComponent,
+            ApiV1ArtifactRepositoriesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_name_error_component import (
-            ApiV1ArtifactRepositoriesListNameErrorComponent,
+            ApiV1ArtifactRepositoriesListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_scope_error_component import (
-            ApiV1ArtifactRepositoriesListScopeErrorComponent,
+            ApiV1ArtifactRepositoriesListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_state_error_component import (
-            ApiV1ArtifactRepositoriesListStateErrorComponent,
+            ApiV1ArtifactRepositoriesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_updated_at_error_component import (
-            ApiV1ArtifactRepositoriesListUpdatedAtErrorComponent,
+            ApiV1ArtifactRepositoriesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -114,25 +114,25 @@ class ApiV1ArtifactRepositoriesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_artifact_repositories_list_created_at_error_component import (
-            ApiV1ArtifactRepositoriesListCreatedAtErrorComponent,
+            ApiV1ArtifactRepositoriesListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_created_by_component_error_component import (
-            ApiV1ArtifactRepositoriesListCreatedByComponentErrorComponent,
+            ApiV1ArtifactRepositoriesListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_kind_error_component import (
-            ApiV1ArtifactRepositoriesListKindErrorComponent,
+            ApiV1ArtifactRepositoriesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_name_error_component import (
-            ApiV1ArtifactRepositoriesListNameErrorComponent,
+            ApiV1ArtifactRepositoriesListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_scope_error_component import (
-            ApiV1ArtifactRepositoriesListScopeErrorComponent,
+            ApiV1ArtifactRepositoriesListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_state_error_component import (
-            ApiV1ArtifactRepositoriesListStateErrorComponent,
+            ApiV1ArtifactRepositoriesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_repositories_list_updated_at_error_component import (
-            ApiV1ArtifactRepositoriesListUpdatedAtErrorComponent,
+            ApiV1ArtifactRepositoriesListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

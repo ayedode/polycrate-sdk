@@ -62,25 +62,37 @@ class ApiV1ActivitiesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_activities_list_created_by_users_error_component import (
-            ApiV1ActivitiesListCreatedByUsersErrorComponent,
+            ApiV1ActivitiesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_activities_list_kind_error_component import ApiV1ActivitiesListKindErrorComponent
-        from ..models.api_v1_activities_list_object_id_error_component import ApiV1ActivitiesListObjectIdErrorComponent
+        from ..models.api_v1_activities_list_kind_error_component import (
+            ApiV1ActivitiesListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_activities_list_object_id_error_component import (
+            ApiV1ActivitiesListObjectIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_activities_list_object_type_error_component import (
-            ApiV1ActivitiesListObjectTypeErrorComponent,
+            ApiV1ActivitiesListObjectTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_activities_list_organizations_error_component import (
-            ApiV1ActivitiesListOrganizationsErrorComponent,
+            ApiV1ActivitiesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_activities_list_search_error_component import ApiV1ActivitiesListSearchErrorComponent
-        from ..models.api_v1_activities_list_state_error_component import ApiV1ActivitiesListStateErrorComponent
-        from ..models.api_v1_activities_list_state_not_error_component import ApiV1ActivitiesListStateNotErrorComponent
+        from ..models.api_v1_activities_list_search_error_component import (
+            ApiV1ActivitiesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_activities_list_state_error_component import (
+            ApiV1ActivitiesListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_activities_list_state_not_error_component import (
+            ApiV1ActivitiesListStateNotErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_activities_list_time_range_error_component import (
-            ApiV1ActivitiesListTimeRangeErrorComponent,
+            ApiV1ActivitiesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_activities_list_user_error_component import ApiV1ActivitiesListUserErrorComponent
+        from ..models.api_v1_activities_list_user_error_component import (
+            ApiV1ActivitiesListUserErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_activities_list_workspaces_error_component import (
-            ApiV1ActivitiesListWorkspacesErrorComponent,
+            ApiV1ActivitiesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -129,28 +141,40 @@ class ApiV1ActivitiesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_activities_list_created_by_users_error_component import (
-            ApiV1ActivitiesListCreatedByUsersErrorComponent,
+            ApiV1ActivitiesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_activities_list_kind_error_component import ApiV1ActivitiesListKindErrorComponent
+        from ..models.api_v1_activities_list_kind_error_component import (
+            ApiV1ActivitiesListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_activities_list_name_exact_error_component import (
-            ApiV1ActivitiesListNameExactErrorComponent,
+            ApiV1ActivitiesListNameExactErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_activities_list_object_id_error_component import ApiV1ActivitiesListObjectIdErrorComponent
+        from ..models.api_v1_activities_list_object_id_error_component import (
+            ApiV1ActivitiesListObjectIdErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_activities_list_object_type_error_component import (
-            ApiV1ActivitiesListObjectTypeErrorComponent,
+            ApiV1ActivitiesListObjectTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_activities_list_organizations_error_component import (
-            ApiV1ActivitiesListOrganizationsErrorComponent,
+            ApiV1ActivitiesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_activities_list_search_error_component import ApiV1ActivitiesListSearchErrorComponent
-        from ..models.api_v1_activities_list_state_error_component import ApiV1ActivitiesListStateErrorComponent
-        from ..models.api_v1_activities_list_state_not_error_component import ApiV1ActivitiesListStateNotErrorComponent
+        from ..models.api_v1_activities_list_search_error_component import (
+            ApiV1ActivitiesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_activities_list_state_error_component import (
+            ApiV1ActivitiesListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_activities_list_state_not_error_component import (
+            ApiV1ActivitiesListStateNotErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_activities_list_time_range_error_component import (
-            ApiV1ActivitiesListTimeRangeErrorComponent,
+            ApiV1ActivitiesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_activities_list_user_error_component import ApiV1ActivitiesListUserErrorComponent
+        from ..models.api_v1_activities_list_user_error_component import (
+            ApiV1ActivitiesListUserErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_activities_list_workspaces_error_component import (
-            ApiV1ActivitiesListWorkspacesErrorComponent,
+            ApiV1ActivitiesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

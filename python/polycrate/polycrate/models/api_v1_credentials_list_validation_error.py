@@ -80,41 +80,53 @@ class ApiV1CredentialsListValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_credentials_list_api_user_error_component import ApiV1CredentialsListApiUserErrorComponent
+        from ..models.api_v1_credentials_list_api_user_error_component import (
+            ApiV1CredentialsListApiUserErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_list_created_at_error_component import (
-            ApiV1CredentialsListCreatedAtErrorComponent,
+            ApiV1CredentialsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_created_by_component_error_component import (
-            ApiV1CredentialsListCreatedByComponentErrorComponent,
+            ApiV1CredentialsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_created_by_users_error_component import (
-            ApiV1CredentialsListCreatedByUsersErrorComponent,
+            ApiV1CredentialsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_k8s_clusters_error_component import (
-            ApiV1CredentialsListK8SClustersErrorComponent,
+            ApiV1CredentialsListK8SClustersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_credentials_list_kind_error_component import ApiV1CredentialsListKindErrorComponent
-        from ..models.api_v1_credentials_list_name_error_component import ApiV1CredentialsListNameErrorComponent
+        from ..models.api_v1_credentials_list_kind_error_component import (
+            ApiV1CredentialsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_credentials_list_name_error_component import (
+            ApiV1CredentialsListNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_list_organizations_error_component import (
-            ApiV1CredentialsListOrganizationsErrorComponent,
+            ApiV1CredentialsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_s3_clusters_error_component import (
-            ApiV1CredentialsListS3ClustersErrorComponent,
+            ApiV1CredentialsListS3ClustersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_credentials_list_scope_error_component import ApiV1CredentialsListScopeErrorComponent
-        from ..models.api_v1_credentials_list_search_error_component import ApiV1CredentialsListSearchErrorComponent
-        from ..models.api_v1_credentials_list_state_error_component import ApiV1CredentialsListStateErrorComponent
+        from ..models.api_v1_credentials_list_scope_error_component import (
+            ApiV1CredentialsListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_credentials_list_search_error_component import (
+            ApiV1CredentialsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_credentials_list_state_error_component import (
+            ApiV1CredentialsListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_list_state_not_error_component import (
-            ApiV1CredentialsListStateNotErrorComponent,
+            ApiV1CredentialsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_time_range_error_component import (
-            ApiV1CredentialsListTimeRangeErrorComponent,
+            ApiV1CredentialsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_updated_at_error_component import (
-            ApiV1CredentialsListUpdatedAtErrorComponent,
+            ApiV1CredentialsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_workspaces_error_component import (
-            ApiV1CredentialsListWorkspacesErrorComponent,
+            ApiV1CredentialsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -172,44 +184,56 @@ class ApiV1CredentialsListValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_credentials_list_api_user_error_component import ApiV1CredentialsListApiUserErrorComponent
+        from ..models.api_v1_credentials_list_api_user_error_component import (
+            ApiV1CredentialsListApiUserErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_list_created_at_error_component import (
-            ApiV1CredentialsListCreatedAtErrorComponent,
+            ApiV1CredentialsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_created_by_component_error_component import (
-            ApiV1CredentialsListCreatedByComponentErrorComponent,
+            ApiV1CredentialsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_created_by_users_error_component import (
-            ApiV1CredentialsListCreatedByUsersErrorComponent,
+            ApiV1CredentialsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_k8s_clusters_error_component import (
-            ApiV1CredentialsListK8SClustersErrorComponent,
+            ApiV1CredentialsListK8SClustersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_credentials_list_kind_error_component import ApiV1CredentialsListKindErrorComponent
-        from ..models.api_v1_credentials_list_name_error_component import ApiV1CredentialsListNameErrorComponent
+        from ..models.api_v1_credentials_list_kind_error_component import (
+            ApiV1CredentialsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_credentials_list_name_error_component import (
+            ApiV1CredentialsListNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_list_name_exact_error_component import (
-            ApiV1CredentialsListNameExactErrorComponent,
+            ApiV1CredentialsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_organizations_error_component import (
-            ApiV1CredentialsListOrganizationsErrorComponent,
+            ApiV1CredentialsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_s3_clusters_error_component import (
-            ApiV1CredentialsListS3ClustersErrorComponent,
+            ApiV1CredentialsListS3ClustersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_credentials_list_scope_error_component import ApiV1CredentialsListScopeErrorComponent
-        from ..models.api_v1_credentials_list_search_error_component import ApiV1CredentialsListSearchErrorComponent
-        from ..models.api_v1_credentials_list_state_error_component import ApiV1CredentialsListStateErrorComponent
+        from ..models.api_v1_credentials_list_scope_error_component import (
+            ApiV1CredentialsListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_credentials_list_search_error_component import (
+            ApiV1CredentialsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_credentials_list_state_error_component import (
+            ApiV1CredentialsListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_credentials_list_state_not_error_component import (
-            ApiV1CredentialsListStateNotErrorComponent,
+            ApiV1CredentialsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_time_range_error_component import (
-            ApiV1CredentialsListTimeRangeErrorComponent,
+            ApiV1CredentialsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_updated_at_error_component import (
-            ApiV1CredentialsListUpdatedAtErrorComponent,
+            ApiV1CredentialsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_list_workspaces_error_component import (
-            ApiV1CredentialsListWorkspacesErrorComponent,
+            ApiV1CredentialsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

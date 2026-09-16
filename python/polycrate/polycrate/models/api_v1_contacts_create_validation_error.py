@@ -91,41 +91,63 @@ class ApiV1ContactsCreateValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_contacts_create_address_error_component import ApiV1ContactsCreateAddressErrorComponent
-        from ..models.api_v1_contacts_create_city_error_component import ApiV1ContactsCreateCityErrorComponent
+        from ..models.api_v1_contacts_create_address_error_component import (
+            ApiV1ContactsCreateAddressErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_create_city_error_component import (
+            ApiV1ContactsCreateCityErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_contact_role_error_component import (
-            ApiV1ContactsCreateContactRoleErrorComponent,
+            ApiV1ContactsCreateContactRoleErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_country_error_component import ApiV1ContactsCreateCountryErrorComponent
+        from ..models.api_v1_contacts_create_country_error_component import (
+            ApiV1ContactsCreateCountryErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_credential_id_error_component import (
-            ApiV1ContactsCreateCredentialIdErrorComponent,
+            ApiV1ContactsCreateCredentialIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_email_error_component import ApiV1ContactsCreateEmailErrorComponent
-        from ..models.api_v1_contacts_create_firstname_error_component import ApiV1ContactsCreateFirstnameErrorComponent
+        from ..models.api_v1_contacts_create_email_error_component import (
+            ApiV1ContactsCreateEmailErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_create_firstname_error_component import (
+            ApiV1ContactsCreateFirstnameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_is_billing_contact_error_component import (
-            ApiV1ContactsCreateIsBillingContactErrorComponent,
+            ApiV1ContactsCreateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_create_is_maintenance_contact_error_component import (
-            ApiV1ContactsCreateIsMaintenanceContactErrorComponent,
+            ApiV1ContactsCreateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_create_keycloak_user_id_error_component import (
-            ApiV1ContactsCreateKeycloakUserIdErrorComponent,
+            ApiV1ContactsCreateKeycloakUserIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_kind_error_component import ApiV1ContactsCreateKindErrorComponent
-        from ..models.api_v1_contacts_create_lastname_error_component import ApiV1ContactsCreateLastnameErrorComponent
-        from ..models.api_v1_contacts_create_name_error_component import ApiV1ContactsCreateNameErrorComponent
+        from ..models.api_v1_contacts_create_kind_error_component import (
+            ApiV1ContactsCreateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_create_lastname_error_component import (
+            ApiV1ContactsCreateLastnameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_create_name_error_component import (
+            ApiV1ContactsCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_non_field_errors_error_component import (
-            ApiV1ContactsCreateNonFieldErrorsErrorComponent,
+            ApiV1ContactsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_note_error_component import ApiV1ContactsCreateNoteErrorComponent
+        from ..models.api_v1_contacts_create_note_error_component import (
+            ApiV1ContactsCreateNoteErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_organization_id_error_component import (
-            ApiV1ContactsCreateOrganizationIdErrorComponent,
+            ApiV1ContactsCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_phone_error_component import ApiV1ContactsCreatePhoneErrorComponent
+        from ..models.api_v1_contacts_create_phone_error_component import (
+            ApiV1ContactsCreatePhoneErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_sync_source_error_component import (
-            ApiV1ContactsCreateSyncSourceErrorComponent,
+            ApiV1ContactsCreateSyncSourceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_zipcode_error_component import ApiV1ContactsCreateZipcodeErrorComponent
+        from ..models.api_v1_contacts_create_zipcode_error_component import (
+            ApiV1ContactsCreateZipcodeErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -188,44 +210,66 @@ class ApiV1ContactsCreateValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_contacts_create_address_error_component import ApiV1ContactsCreateAddressErrorComponent
-        from ..models.api_v1_contacts_create_city_error_component import ApiV1ContactsCreateCityErrorComponent
+        from ..models.api_v1_contacts_create_address_error_component import (
+            ApiV1ContactsCreateAddressErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_create_city_error_component import (
+            ApiV1ContactsCreateCityErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_contact_role_error_component import (
-            ApiV1ContactsCreateContactRoleErrorComponent,
+            ApiV1ContactsCreateContactRoleErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_country_error_component import ApiV1ContactsCreateCountryErrorComponent
+        from ..models.api_v1_contacts_create_country_error_component import (
+            ApiV1ContactsCreateCountryErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_credential_id_error_component import (
-            ApiV1ContactsCreateCredentialIdErrorComponent,
+            ApiV1ContactsCreateCredentialIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_email_error_component import ApiV1ContactsCreateEmailErrorComponent
-        from ..models.api_v1_contacts_create_firstname_error_component import ApiV1ContactsCreateFirstnameErrorComponent
+        from ..models.api_v1_contacts_create_email_error_component import (
+            ApiV1ContactsCreateEmailErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_create_firstname_error_component import (
+            ApiV1ContactsCreateFirstnameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_is_billing_contact_error_component import (
-            ApiV1ContactsCreateIsBillingContactErrorComponent,
+            ApiV1ContactsCreateIsBillingContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_create_is_maintenance_contact_error_component import (
-            ApiV1ContactsCreateIsMaintenanceContactErrorComponent,
+            ApiV1ContactsCreateIsMaintenanceContactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_contacts_create_keycloak_user_id_error_component import (
-            ApiV1ContactsCreateKeycloakUserIdErrorComponent,
+            ApiV1ContactsCreateKeycloakUserIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_kind_error_component import ApiV1ContactsCreateKindErrorComponent
+        from ..models.api_v1_contacts_create_kind_error_component import (
+            ApiV1ContactsCreateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_last_sync_at_error_component import (
-            ApiV1ContactsCreateLastSyncAtErrorComponent,
+            ApiV1ContactsCreateLastSyncAtErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_lastname_error_component import ApiV1ContactsCreateLastnameErrorComponent
-        from ..models.api_v1_contacts_create_name_error_component import ApiV1ContactsCreateNameErrorComponent
+        from ..models.api_v1_contacts_create_lastname_error_component import (
+            ApiV1ContactsCreateLastnameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_contacts_create_name_error_component import (
+            ApiV1ContactsCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_non_field_errors_error_component import (
-            ApiV1ContactsCreateNonFieldErrorsErrorComponent,
+            ApiV1ContactsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_note_error_component import ApiV1ContactsCreateNoteErrorComponent
+        from ..models.api_v1_contacts_create_note_error_component import (
+            ApiV1ContactsCreateNoteErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_organization_id_error_component import (
-            ApiV1ContactsCreateOrganizationIdErrorComponent,
+            ApiV1ContactsCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_phone_error_component import ApiV1ContactsCreatePhoneErrorComponent
+        from ..models.api_v1_contacts_create_phone_error_component import (
+            ApiV1ContactsCreatePhoneErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_contacts_create_sync_source_error_component import (
-            ApiV1ContactsCreateSyncSourceErrorComponent,
+            ApiV1ContactsCreateSyncSourceErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_contacts_create_zipcode_error_component import ApiV1ContactsCreateZipcodeErrorComponent
+        from ..models.api_v1_contacts_create_zipcode_error_component import (
+            ApiV1ContactsCreateZipcodeErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

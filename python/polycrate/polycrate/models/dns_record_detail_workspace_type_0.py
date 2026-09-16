@@ -47,7 +47,7 @@ class DNSRecordDetailWorkspaceType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.dns_record_detail_workspace_type_0_created_by_type_0 import (
-            DNSRecordDetailWorkspaceType0CreatedByType0,
+            DNSRecordDetailWorkspaceType0CreatedByType0,  # noqa: PLC0415
         )
 
         id: str | Unset = UNSET
@@ -129,7 +129,7 @@ class DNSRecordDetailWorkspaceType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.dns_record_detail_workspace_type_0_created_by_type_0 import (
-            DNSRecordDetailWorkspaceType0CreatedByType0,
+            DNSRecordDetailWorkspaceType0CreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

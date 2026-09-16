@@ -188,97 +188,97 @@ class ApiV1DeliveryControllersArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_delivery_controllers_archive_create_annotations_error_component import (
-            ApiV1DeliveryControllersArchiveCreateAnnotationsErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_applications_degraded_error_component import (
-            ApiV1DeliveryControllersArchiveCreateApplicationsDegradedErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateApplicationsDegradedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_applications_out_of_sync_error_component import (
-            ApiV1DeliveryControllersArchiveCreateApplicationsOutOfSyncErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateApplicationsOutOfSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_applications_synced_error_component import (
-            ApiV1DeliveryControllersArchiveCreateApplicationsSyncedErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateApplicationsSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_applications_total_error_component import (
-            ApiV1DeliveryControllersArchiveCreateApplicationsTotalErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateApplicationsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_archived_at_error_component import (
-            ApiV1DeliveryControllersArchiveCreateArchivedAtErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_archived_error_component import (
-            ApiV1DeliveryControllersArchiveCreateArchivedErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_archived_reason_error_component import (
-            ApiV1DeliveryControllersArchiveCreateArchivedReasonErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_controller_app_version_error_component import (
-            ApiV1DeliveryControllersArchiveCreateControllerAppVersionErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateControllerAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_credential_error_component import (
-            ApiV1DeliveryControllersArchiveCreateCredentialErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_criticality_error_component import (
-            ApiV1DeliveryControllersArchiveCreateCriticalityErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_debug_mode_error_component import (
-            ApiV1DeliveryControllersArchiveCreateDebugModeErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_display_name_error_component import (
-            ApiV1DeliveryControllersArchiveCreateDisplayNameErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_hostname_error_component import (
-            ApiV1DeliveryControllersArchiveCreateHostnameErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_k8s_app_error_component import (
-            ApiV1DeliveryControllersArchiveCreateK8SAppErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_k8s_cluster_error_component import (
-            ApiV1DeliveryControllersArchiveCreateK8SClusterErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_kind_error_component import (
-            ApiV1DeliveryControllersArchiveCreateKindErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_labels_error_component import (
-            ApiV1DeliveryControllersArchiveCreateLabelsErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_name_error_component import (
-            ApiV1DeliveryControllersArchiveCreateNameErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_non_field_errors_error_component import (
-            ApiV1DeliveryControllersArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_platform_service_error_component import (
-            ApiV1DeliveryControllersArchiveCreatePlatformServiceErrorComponent,
+            ApiV1DeliveryControllersArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_provider_error_component import (
-            ApiV1DeliveryControllersArchiveCreateProviderErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_provider_id_error_component import (
-            ApiV1DeliveryControllersArchiveCreateProviderIdErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_provider_reference_error_component import (
-            ApiV1DeliveryControllersArchiveCreateProviderReferenceErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_reconciliation_enabled_error_component import (
-            ApiV1DeliveryControllersArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_sla_availability_error_component import (
-            ApiV1DeliveryControllersArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_sla_target_error_component import (
-            ApiV1DeliveryControllersArchiveCreateSlaTargetErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_slo_availability_error_component import (
-            ApiV1DeliveryControllersArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_slo_target_error_component import (
-            ApiV1DeliveryControllersArchiveCreateSloTargetErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_target_availability_error_component import (
-            ApiV1DeliveryControllersArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_tolerations_error_component import (
-            ApiV1DeliveryControllersArchiveCreateTolerationsErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -367,100 +367,100 @@ class ApiV1DeliveryControllersArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_delivery_controllers_archive_create_annotations_error_component import (
-            ApiV1DeliveryControllersArchiveCreateAnnotationsErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_applications_degraded_error_component import (
-            ApiV1DeliveryControllersArchiveCreateApplicationsDegradedErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateApplicationsDegradedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_applications_out_of_sync_error_component import (
-            ApiV1DeliveryControllersArchiveCreateApplicationsOutOfSyncErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateApplicationsOutOfSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_applications_synced_error_component import (
-            ApiV1DeliveryControllersArchiveCreateApplicationsSyncedErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateApplicationsSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_applications_total_error_component import (
-            ApiV1DeliveryControllersArchiveCreateApplicationsTotalErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateApplicationsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_archived_at_error_component import (
-            ApiV1DeliveryControllersArchiveCreateArchivedAtErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_archived_error_component import (
-            ApiV1DeliveryControllersArchiveCreateArchivedErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_archived_reason_error_component import (
-            ApiV1DeliveryControllersArchiveCreateArchivedReasonErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_controller_app_version_error_component import (
-            ApiV1DeliveryControllersArchiveCreateControllerAppVersionErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateControllerAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_credential_error_component import (
-            ApiV1DeliveryControllersArchiveCreateCredentialErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_criticality_error_component import (
-            ApiV1DeliveryControllersArchiveCreateCriticalityErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_debug_mode_error_component import (
-            ApiV1DeliveryControllersArchiveCreateDebugModeErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_display_name_error_component import (
-            ApiV1DeliveryControllersArchiveCreateDisplayNameErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_hostname_error_component import (
-            ApiV1DeliveryControllersArchiveCreateHostnameErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_k8s_app_error_component import (
-            ApiV1DeliveryControllersArchiveCreateK8SAppErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_k8s_cluster_error_component import (
-            ApiV1DeliveryControllersArchiveCreateK8SClusterErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_kind_error_component import (
-            ApiV1DeliveryControllersArchiveCreateKindErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_labels_error_component import (
-            ApiV1DeliveryControllersArchiveCreateLabelsErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_metadata_error_component import (
-            ApiV1DeliveryControllersArchiveCreateMetadataErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_name_error_component import (
-            ApiV1DeliveryControllersArchiveCreateNameErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_non_field_errors_error_component import (
-            ApiV1DeliveryControllersArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_platform_service_error_component import (
-            ApiV1DeliveryControllersArchiveCreatePlatformServiceErrorComponent,
+            ApiV1DeliveryControllersArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_provider_error_component import (
-            ApiV1DeliveryControllersArchiveCreateProviderErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_provider_id_error_component import (
-            ApiV1DeliveryControllersArchiveCreateProviderIdErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_provider_reference_error_component import (
-            ApiV1DeliveryControllersArchiveCreateProviderReferenceErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_reconciliation_enabled_error_component import (
-            ApiV1DeliveryControllersArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_sla_availability_error_component import (
-            ApiV1DeliveryControllersArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_sla_target_error_component import (
-            ApiV1DeliveryControllersArchiveCreateSlaTargetErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_slo_availability_error_component import (
-            ApiV1DeliveryControllersArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_slo_target_error_component import (
-            ApiV1DeliveryControllersArchiveCreateSloTargetErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_target_availability_error_component import (
-            ApiV1DeliveryControllersArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_archive_create_tolerations_error_component import (
-            ApiV1DeliveryControllersArchiveCreateTolerationsErrorComponent,
+            ApiV1DeliveryControllersArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -66,25 +66,25 @@ class ApiV1CredentialsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_credentials_partial_update_api_endpoint_error_component import (
-            ApiV1CredentialsPartialUpdateApiEndpointErrorComponent,
+            ApiV1CredentialsPartialUpdateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_api_key_error_component import (
-            ApiV1CredentialsPartialUpdateApiKeyErrorComponent,
+            ApiV1CredentialsPartialUpdateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_api_user_error_component import (
-            ApiV1CredentialsPartialUpdateApiUserErrorComponent,
+            ApiV1CredentialsPartialUpdateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_kubeconfig_error_component import (
-            ApiV1CredentialsPartialUpdateKubeconfigErrorComponent,
+            ApiV1CredentialsPartialUpdateKubeconfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_non_field_errors_error_component import (
-            ApiV1CredentialsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_ssh_private_key_error_component import (
-            ApiV1CredentialsPartialUpdateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsPartialUpdateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_ssh_public_key_error_component import (
-            ApiV1CredentialsPartialUpdateSshPublicKeyErrorComponent,
+            ApiV1CredentialsPartialUpdateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -125,28 +125,28 @@ class ApiV1CredentialsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_credentials_partial_update_api_endpoint_error_component import (
-            ApiV1CredentialsPartialUpdateApiEndpointErrorComponent,
+            ApiV1CredentialsPartialUpdateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_api_key_error_component import (
-            ApiV1CredentialsPartialUpdateApiKeyErrorComponent,
+            ApiV1CredentialsPartialUpdateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_api_user_error_component import (
-            ApiV1CredentialsPartialUpdateApiUserErrorComponent,
+            ApiV1CredentialsPartialUpdateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_kubeconfig_error_component import (
-            ApiV1CredentialsPartialUpdateKubeconfigErrorComponent,
+            ApiV1CredentialsPartialUpdateKubeconfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_metadata_error_component import (
-            ApiV1CredentialsPartialUpdateMetadataErrorComponent,
+            ApiV1CredentialsPartialUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_non_field_errors_error_component import (
-            ApiV1CredentialsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_ssh_private_key_error_component import (
-            ApiV1CredentialsPartialUpdateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsPartialUpdateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_partial_update_ssh_public_key_error_component import (
-            ApiV1CredentialsPartialUpdateSshPublicKeyErrorComponent,
+            ApiV1CredentialsPartialUpdateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

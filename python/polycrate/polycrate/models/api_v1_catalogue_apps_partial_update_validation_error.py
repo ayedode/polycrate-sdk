@@ -69,6 +69,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_catalogue_apps_partial_update_last_reconciliation_duration_seconds_error_component import (
         ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent,
     )
+    from ..models.api_v1_catalogue_apps_partial_update_maintainer_id_error_component import (
+        ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent,
+    )
     from ..models.api_v1_catalogue_apps_partial_update_managed_by_content_type_error_component import (
         ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent,
     )
@@ -183,6 +186,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
             ApiV1CatalogueAppsPartialUpdateIsNewErrorComponent | ApiV1CatalogueAppsPartialUpdateKindErrorComponent |
             ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent |
             ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent |
+            ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent |
             ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent |
             ApiV1CatalogueAppsPartialUpdateManagedByObjectIdErrorComponent |
             ApiV1CatalogueAppsPartialUpdateMarkdownContentErrorComponent |
@@ -234,6 +238,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
         | ApiV1CatalogueAppsPartialUpdateKindErrorComponent
         | ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent
         | ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent
+        | ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent
         | ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent
         | ApiV1CatalogueAppsPartialUpdateManagedByObjectIdErrorComponent
         | ApiV1CatalogueAppsPartialUpdateMarkdownContentErrorComponent
@@ -268,148 +273,151 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_catalogue_apps_partial_update_annotations_error_component import (
-            ApiV1CatalogueAppsPartialUpdateAnnotationsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_archived_at_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArchivedAtErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_archived_by_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArchivedByErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_archived_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArchivedErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_archived_reason_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_artifact_package_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArtifactPackageErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_claim_error_component import (
-            ApiV1CatalogueAppsPartialUpdateClaimErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateClaimErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_created_by_component_error_component import (
-            ApiV1CatalogueAppsPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_created_by_user_error_component import (
-            ApiV1CatalogueAppsPartialUpdateCreatedByUserErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_criticality_error_component import (
-            ApiV1CatalogueAppsPartialUpdateCriticalityErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_debug_mode_error_component import (
-            ApiV1CatalogueAppsPartialUpdateDebugModeErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_display_name_error_component import (
-            ApiV1CatalogueAppsPartialUpdateDisplayNameErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_draft_error_component import (
-            ApiV1CatalogueAppsPartialUpdateDraftErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_git_repository_url_error_component import (
-            ApiV1CatalogueAppsPartialUpdateGitRepositoryUrlErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateGitRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_ha_enabled_expression_error_component import (
-            ApiV1CatalogueAppsPartialUpdateHaEnabledExpressionErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateHaEnabledExpressionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_is_new_error_component import (
-            ApiV1CatalogueAppsPartialUpdateIsNewErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateIsNewErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_kind_error_component import (
-            ApiV1CatalogueAppsPartialUpdateKindErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_labels_error_component import (
-            ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_catalogue_apps_partial_update_maintainer_id_error_component import (
+            ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_managed_by_content_type_error_component import (
-            ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_managed_by_object_id_error_component import (
-            ApiV1CatalogueAppsPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_markdown_content_error_component import (
-            ApiV1CatalogueAppsPartialUpdateMarkdownContentErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateMarkdownContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_modified_by_user_error_component import (
-            ApiV1CatalogueAppsPartialUpdateModifiedByUserErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_name_error_component import (
-            ApiV1CatalogueAppsPartialUpdateNameErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_non_field_errors_error_component import (
-            ApiV1CatalogueAppsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_platform_dns_record_created_error_component import (
-            ApiV1CatalogueAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1CatalogueAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_platform_service_error_component import (
-            ApiV1CatalogueAppsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1CatalogueAppsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_product_ha_id_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProductHaIdErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProductHaIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_product_regular_id_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProductRegularIdErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProductRegularIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_provider_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProviderErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_provider_id_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProviderIdErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_provider_reference_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_reconciliation_enabled_error_component import (
-            ApiV1CatalogueAppsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_registry_url_error_component import (
-            ApiV1CatalogueAppsPartialUpdateRegistryUrlErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateRegistryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_releases_url_error_component import (
-            ApiV1CatalogueAppsPartialUpdateReleasesUrlErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateReleasesUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_screenshot_error_component import (
-            ApiV1CatalogueAppsPartialUpdateScreenshotErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateScreenshotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_serial_number_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSerialNumberErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSerialNumberErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_short_description_error_component import (
-            ApiV1CatalogueAppsPartialUpdateShortDescriptionErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateShortDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_sla_availability_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_sla_target_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSlaTargetErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_sla_window_days_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_slo_availability_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_slo_target_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSloTargetErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_slo_window_days_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_supports_ha_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSupportsHaErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSupportsHaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_target_availability_error_component import (
-            ApiV1CatalogueAppsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_tolerations_error_component import (
-            ApiV1CatalogueAppsPartialUpdateTolerationsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_tracked_app_version_error_component import (
-            ApiV1CatalogueAppsPartialUpdateTrackedAppVersionErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateTrackedAppVersionErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -424,6 +432,8 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
             elif isinstance(errors_item_data, ApiV1CatalogueAppsPartialUpdateProductRegularIdErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1CatalogueAppsPartialUpdateProductHaIdErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1CatalogueAppsPartialUpdateDisplayNameErrorComponent):
                 errors_item = errors_item_data.to_dict()
@@ -534,151 +544,154 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_catalogue_apps_partial_update_annotations_error_component import (
-            ApiV1CatalogueAppsPartialUpdateAnnotationsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_archived_at_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArchivedAtErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_archived_by_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArchivedByErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_archived_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArchivedErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_archived_reason_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_artifact_package_error_component import (
-            ApiV1CatalogueAppsPartialUpdateArtifactPackageErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_claim_error_component import (
-            ApiV1CatalogueAppsPartialUpdateClaimErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateClaimErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_created_by_component_error_component import (
-            ApiV1CatalogueAppsPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_created_by_user_error_component import (
-            ApiV1CatalogueAppsPartialUpdateCreatedByUserErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_criticality_error_component import (
-            ApiV1CatalogueAppsPartialUpdateCriticalityErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_debug_mode_error_component import (
-            ApiV1CatalogueAppsPartialUpdateDebugModeErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_dependencies_error_component import (
-            ApiV1CatalogueAppsPartialUpdateDependenciesErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateDependenciesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_display_name_error_component import (
-            ApiV1CatalogueAppsPartialUpdateDisplayNameErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_draft_error_component import (
-            ApiV1CatalogueAppsPartialUpdateDraftErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateDraftErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_git_repository_url_error_component import (
-            ApiV1CatalogueAppsPartialUpdateGitRepositoryUrlErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateGitRepositoryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_ha_enabled_expression_error_component import (
-            ApiV1CatalogueAppsPartialUpdateHaEnabledExpressionErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateHaEnabledExpressionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_is_new_error_component import (
-            ApiV1CatalogueAppsPartialUpdateIsNewErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateIsNewErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_kind_error_component import (
-            ApiV1CatalogueAppsPartialUpdateKindErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_labels_error_component import (
-            ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_catalogue_apps_partial_update_maintainer_id_error_component import (
+            ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_managed_by_content_type_error_component import (
-            ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_managed_by_object_id_error_component import (
-            ApiV1CatalogueAppsPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_markdown_content_error_component import (
-            ApiV1CatalogueAppsPartialUpdateMarkdownContentErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateMarkdownContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_modified_by_user_error_component import (
-            ApiV1CatalogueAppsPartialUpdateModifiedByUserErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_name_error_component import (
-            ApiV1CatalogueAppsPartialUpdateNameErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_non_field_errors_error_component import (
-            ApiV1CatalogueAppsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_platform_dns_record_created_error_component import (
-            ApiV1CatalogueAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1CatalogueAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_platform_service_error_component import (
-            ApiV1CatalogueAppsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1CatalogueAppsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_product_ha_id_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProductHaIdErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProductHaIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_product_regular_id_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProductRegularIdErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProductRegularIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_provider_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProviderErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_provider_id_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProviderIdErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_provider_reference_error_component import (
-            ApiV1CatalogueAppsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_reconciliation_enabled_error_component import (
-            ApiV1CatalogueAppsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_registry_url_error_component import (
-            ApiV1CatalogueAppsPartialUpdateRegistryUrlErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateRegistryUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_releases_url_error_component import (
-            ApiV1CatalogueAppsPartialUpdateReleasesUrlErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateReleasesUrlErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_screenshot_error_component import (
-            ApiV1CatalogueAppsPartialUpdateScreenshotErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateScreenshotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_serial_number_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSerialNumberErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSerialNumberErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_short_description_error_component import (
-            ApiV1CatalogueAppsPartialUpdateShortDescriptionErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateShortDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_sla_availability_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_sla_target_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSlaTargetErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_sla_window_days_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_slo_availability_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_slo_target_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSloTargetErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_slo_window_days_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_supports_ha_error_component import (
-            ApiV1CatalogueAppsPartialUpdateSupportsHaErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateSupportsHaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_target_availability_error_component import (
-            ApiV1CatalogueAppsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_tolerations_error_component import (
-            ApiV1CatalogueAppsPartialUpdateTolerationsErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_partial_update_tracked_app_version_error_component import (
-            ApiV1CatalogueAppsPartialUpdateTrackedAppVersionErrorComponent,
+            ApiV1CatalogueAppsPartialUpdateTrackedAppVersionErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -711,6 +724,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                 | ApiV1CatalogueAppsPartialUpdateKindErrorComponent
                 | ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent
                 | ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent
+                | ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent
                 | ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent
                 | ApiV1CatalogueAppsPartialUpdateManagedByObjectIdErrorComponent
                 | ApiV1CatalogueAppsPartialUpdateMarkdownContentErrorComponent
@@ -785,7 +799,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_4 = (
-                        ApiV1CatalogueAppsPartialUpdateDisplayNameErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateMaintainerIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_4
@@ -795,7 +809,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_5 = (
-                        ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateDisplayNameErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_5
@@ -805,7 +819,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_6 = (
-                        ApiV1CatalogueAppsPartialUpdateAnnotationsErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateLabelsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_6
@@ -815,7 +829,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_7 = (
-                        ApiV1CatalogueAppsPartialUpdateDebugModeErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateAnnotationsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_7
@@ -825,7 +839,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_8 = (
-                        ApiV1CatalogueAppsPartialUpdateProviderErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateDebugModeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_8
@@ -835,7 +849,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_9 = (
-                        ApiV1CatalogueAppsPartialUpdateProviderReferenceErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateProviderErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_9
@@ -845,7 +859,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_10 = (
-                        ApiV1CatalogueAppsPartialUpdateProviderIdErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateProviderReferenceErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_10
@@ -855,7 +869,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_11 = (
-                        ApiV1CatalogueAppsPartialUpdateReconciliationEnabledErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateProviderIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_11
@@ -865,7 +879,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_12 = (
-                        ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateReconciliationEnabledErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_12
@@ -875,7 +889,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_13 = (
-                        ApiV1CatalogueAppsPartialUpdatePlatformServiceErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_13
@@ -885,7 +899,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_14 = (
-                        ApiV1CatalogueAppsPartialUpdateKindErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdatePlatformServiceErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_14
@@ -895,7 +909,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_15 = (
-                        ApiV1CatalogueAppsPartialUpdateTolerationsErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateKindErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_15
@@ -905,7 +919,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_16 = (
-                        ApiV1CatalogueAppsPartialUpdateArchivedErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateTolerationsErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_16
@@ -915,7 +929,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_17 = (
-                        ApiV1CatalogueAppsPartialUpdateArchivedAtErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateArchivedErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_17
@@ -925,7 +939,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_18 = (
-                        ApiV1CatalogueAppsPartialUpdateArchivedReasonErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateArchivedAtErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_18
@@ -935,7 +949,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_19 = (
-                        ApiV1CatalogueAppsPartialUpdateCreatedByComponentErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateArchivedReasonErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_19
@@ -945,7 +959,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_20 = (
-                        ApiV1CatalogueAppsPartialUpdateTargetAvailabilityErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateCreatedByComponentErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_20
@@ -955,7 +969,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_21 = (
-                        ApiV1CatalogueAppsPartialUpdateSloTargetErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateTargetAvailabilityErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_21
@@ -965,7 +979,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_22 = (
-                        ApiV1CatalogueAppsPartialUpdateSloWindowDaysErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateSloTargetErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_22
@@ -975,7 +989,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_23 = (
-                        ApiV1CatalogueAppsPartialUpdateSloAvailabilityErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateSloWindowDaysErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_23
@@ -985,7 +999,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_24 = (
-                        ApiV1CatalogueAppsPartialUpdateSlaTargetErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateSloAvailabilityErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_24
@@ -995,7 +1009,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_25 = (
-                        ApiV1CatalogueAppsPartialUpdateSlaWindowDaysErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateSlaTargetErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_25
@@ -1005,7 +1019,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_26 = (
-                        ApiV1CatalogueAppsPartialUpdateSlaAvailabilityErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateSlaWindowDaysErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_26
@@ -1015,7 +1029,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_27 = (
-                        ApiV1CatalogueAppsPartialUpdateCriticalityErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateSlaAvailabilityErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_27
@@ -1025,7 +1039,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_28 = (
-                        ApiV1CatalogueAppsPartialUpdateManagedByObjectIdErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateCriticalityErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_28
@@ -1035,7 +1049,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_29 = (
-                        ApiV1CatalogueAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateManagedByObjectIdErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_29
@@ -1045,7 +1059,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_30 = (
-                        ApiV1CatalogueAppsPartialUpdateSerialNumberErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_30
@@ -1055,7 +1069,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_31 = (
-                        ApiV1CatalogueAppsPartialUpdateShortDescriptionErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateSerialNumberErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_31
@@ -1065,7 +1079,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_32 = (
-                        ApiV1CatalogueAppsPartialUpdateClaimErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateShortDescriptionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_32
@@ -1075,7 +1089,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_33 = (
-                        ApiV1CatalogueAppsPartialUpdateDraftErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateClaimErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_33
@@ -1085,7 +1099,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_34 = (
-                        ApiV1CatalogueAppsPartialUpdateIsNewErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateDraftErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_34
@@ -1095,7 +1109,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_35 = (
-                        ApiV1CatalogueAppsPartialUpdateScreenshotErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateIsNewErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_35
@@ -1105,7 +1119,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_36 = (
-                        ApiV1CatalogueAppsPartialUpdateMarkdownContentErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateScreenshotErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_36
@@ -1115,7 +1129,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_37 = (
-                        ApiV1CatalogueAppsPartialUpdateSupportsHaErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateMarkdownContentErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_37
@@ -1125,7 +1139,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_38 = (
-                        ApiV1CatalogueAppsPartialUpdateHaEnabledExpressionErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateSupportsHaErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_38
@@ -1135,7 +1149,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_39 = (
-                        ApiV1CatalogueAppsPartialUpdateRegistryUrlErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateHaEnabledExpressionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_39
@@ -1145,7 +1159,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_40 = (
-                        ApiV1CatalogueAppsPartialUpdateReleasesUrlErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateRegistryUrlErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_40
@@ -1155,7 +1169,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_41 = (
-                        ApiV1CatalogueAppsPartialUpdateGitRepositoryUrlErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateReleasesUrlErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_41
@@ -1165,7 +1179,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_42 = (
-                        ApiV1CatalogueAppsPartialUpdateTrackedAppVersionErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateGitRepositoryUrlErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_42
@@ -1175,7 +1189,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_43 = (
-                        ApiV1CatalogueAppsPartialUpdateArchivedByErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateTrackedAppVersionErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_43
@@ -1185,7 +1199,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_44 = (
-                        ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateArchivedByErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_44
@@ -1195,7 +1209,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_45 = (
-                        ApiV1CatalogueAppsPartialUpdateModifiedByUserErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateManagedByContentTypeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_45
@@ -1205,7 +1219,7 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_46 = (
-                        ApiV1CatalogueAppsPartialUpdateCreatedByUserErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateModifiedByUserErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_46
@@ -1215,19 +1229,29 @@ class ApiV1CatalogueAppsPartialUpdateValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_partial_update_error_type_47 = (
-                        ApiV1CatalogueAppsPartialUpdateArtifactPackageErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsPartialUpdateCreatedByUserErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_47
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_catalogue_apps_partial_update_error_type_48 = (
+                        ApiV1CatalogueAppsPartialUpdateArtifactPackageErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_48
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_catalogue_apps_partial_update_error_type_48 = (
+                componentsschemas_api_v1_catalogue_apps_partial_update_error_type_49 = (
                     ApiV1CatalogueAppsPartialUpdateDependenciesErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_48
+                return componentsschemas_api_v1_catalogue_apps_partial_update_error_type_49
 
             errors_item = _parse_errors_item(errors_item_data)
 

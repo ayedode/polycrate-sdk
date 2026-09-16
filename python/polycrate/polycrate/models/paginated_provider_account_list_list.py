@@ -68,7 +68,7 @@ class PaginatedProviderAccountListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.provider_account_list import ProviderAccountList
+        from ..models.provider_account_list import ProviderAccountList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

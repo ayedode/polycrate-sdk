@@ -69,28 +69,28 @@ class ApiV1RegistryRegistriesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_registry_registries_list_created_by_users_error_component import (
-            ApiV1RegistryRegistriesListCreatedByUsersErrorComponent,
+            ApiV1RegistryRegistriesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_kind_error_component import (
-            ApiV1RegistryRegistriesListKindErrorComponent,
+            ApiV1RegistryRegistriesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_organizations_error_component import (
-            ApiV1RegistryRegistriesListOrganizationsErrorComponent,
+            ApiV1RegistryRegistriesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_search_error_component import (
-            ApiV1RegistryRegistriesListSearchErrorComponent,
+            ApiV1RegistryRegistriesListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_state_error_component import (
-            ApiV1RegistryRegistriesListStateErrorComponent,
+            ApiV1RegistryRegistriesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_state_not_error_component import (
-            ApiV1RegistryRegistriesListStateNotErrorComponent,
+            ApiV1RegistryRegistriesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_time_range_error_component import (
-            ApiV1RegistryRegistriesListTimeRangeErrorComponent,
+            ApiV1RegistryRegistriesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_workspaces_error_component import (
-            ApiV1RegistryRegistriesListWorkspacesErrorComponent,
+            ApiV1RegistryRegistriesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -133,31 +133,31 @@ class ApiV1RegistryRegistriesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_registry_registries_list_created_by_users_error_component import (
-            ApiV1RegistryRegistriesListCreatedByUsersErrorComponent,
+            ApiV1RegistryRegistriesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_kind_error_component import (
-            ApiV1RegistryRegistriesListKindErrorComponent,
+            ApiV1RegistryRegistriesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_name_exact_error_component import (
-            ApiV1RegistryRegistriesListNameExactErrorComponent,
+            ApiV1RegistryRegistriesListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_organizations_error_component import (
-            ApiV1RegistryRegistriesListOrganizationsErrorComponent,
+            ApiV1RegistryRegistriesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_search_error_component import (
-            ApiV1RegistryRegistriesListSearchErrorComponent,
+            ApiV1RegistryRegistriesListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_state_error_component import (
-            ApiV1RegistryRegistriesListStateErrorComponent,
+            ApiV1RegistryRegistriesListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_state_not_error_component import (
-            ApiV1RegistryRegistriesListStateNotErrorComponent,
+            ApiV1RegistryRegistriesListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_time_range_error_component import (
-            ApiV1RegistryRegistriesListTimeRangeErrorComponent,
+            ApiV1RegistryRegistriesListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_list_workspaces_error_component import (
-            ApiV1RegistryRegistriesListWorkspacesErrorComponent,
+            ApiV1RegistryRegistriesListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

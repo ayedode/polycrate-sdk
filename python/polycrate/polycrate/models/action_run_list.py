@@ -102,9 +102,9 @@ class ActionRunList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.action_run_list_created_by_user_type_0 import ActionRunListCreatedByUserType0
-        from ..models.action_run_list_organization_type_0 import ActionRunListOrganizationType0
-        from ..models.action_run_list_workspace_type_0 import ActionRunListWorkspaceType0
+        from ..models.action_run_list_created_by_user_type_0 import ActionRunListCreatedByUserType0  # noqa: PLC0415
+        from ..models.action_run_list_organization_type_0 import ActionRunListOrganizationType0  # noqa: PLC0415
+        from ..models.action_run_list_workspace_type_0 import ActionRunListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -212,12 +212,14 @@ class ActionRunList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.action_run_list_active_condition_instances_item import ActionRunListActiveConditionInstancesItem
-        from ..models.action_run_list_created import ActionRunListCreated
-        from ..models.action_run_list_created_by_user_type_0 import ActionRunListCreatedByUserType0
-        from ..models.action_run_list_organization_type_0 import ActionRunListOrganizationType0
-        from ..models.action_run_list_workspace_type_0 import ActionRunListWorkspaceType0
-        from ..models.block_ref import BlockRef
+        from ..models.action_run_list_active_condition_instances_item import (
+            ActionRunListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.action_run_list_created import ActionRunListCreated  # noqa: PLC0415
+        from ..models.action_run_list_created_by_user_type_0 import ActionRunListCreatedByUserType0  # noqa: PLC0415
+        from ..models.action_run_list_organization_type_0 import ActionRunListOrganizationType0  # noqa: PLC0415
+        from ..models.action_run_list_workspace_type_0 import ActionRunListWorkspaceType0  # noqa: PLC0415
+        from ..models.block_ref import BlockRef  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

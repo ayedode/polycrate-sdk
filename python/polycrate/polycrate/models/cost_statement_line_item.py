@@ -135,7 +135,7 @@ class CostStatementLineItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.cost_statement_line_item_usage_row import CostStatementLineItemUsageRow
+        from ..models.cost_statement_line_item_usage_row import CostStatementLineItemUsageRow  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

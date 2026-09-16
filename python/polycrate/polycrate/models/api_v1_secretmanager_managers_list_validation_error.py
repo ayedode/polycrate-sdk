@@ -70,28 +70,28 @@ class ApiV1SecretmanagerManagersListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_secretmanager_managers_list_created_by_users_error_component import (
-            ApiV1SecretmanagerManagersListCreatedByUsersErrorComponent,
+            ApiV1SecretmanagerManagersListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_kind_error_component import (
-            ApiV1SecretmanagerManagersListKindErrorComponent,
+            ApiV1SecretmanagerManagersListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_organizations_error_component import (
-            ApiV1SecretmanagerManagersListOrganizationsErrorComponent,
+            ApiV1SecretmanagerManagersListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_search_error_component import (
-            ApiV1SecretmanagerManagersListSearchErrorComponent,
+            ApiV1SecretmanagerManagersListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_state_error_component import (
-            ApiV1SecretmanagerManagersListStateErrorComponent,
+            ApiV1SecretmanagerManagersListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_state_not_error_component import (
-            ApiV1SecretmanagerManagersListStateNotErrorComponent,
+            ApiV1SecretmanagerManagersListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_time_range_error_component import (
-            ApiV1SecretmanagerManagersListTimeRangeErrorComponent,
+            ApiV1SecretmanagerManagersListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_workspaces_error_component import (
-            ApiV1SecretmanagerManagersListWorkspacesErrorComponent,
+            ApiV1SecretmanagerManagersListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -134,31 +134,31 @@ class ApiV1SecretmanagerManagersListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_secretmanager_managers_list_created_by_users_error_component import (
-            ApiV1SecretmanagerManagersListCreatedByUsersErrorComponent,
+            ApiV1SecretmanagerManagersListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_kind_error_component import (
-            ApiV1SecretmanagerManagersListKindErrorComponent,
+            ApiV1SecretmanagerManagersListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_name_exact_error_component import (
-            ApiV1SecretmanagerManagersListNameExactErrorComponent,
+            ApiV1SecretmanagerManagersListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_organizations_error_component import (
-            ApiV1SecretmanagerManagersListOrganizationsErrorComponent,
+            ApiV1SecretmanagerManagersListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_search_error_component import (
-            ApiV1SecretmanagerManagersListSearchErrorComponent,
+            ApiV1SecretmanagerManagersListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_state_error_component import (
-            ApiV1SecretmanagerManagersListStateErrorComponent,
+            ApiV1SecretmanagerManagersListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_state_not_error_component import (
-            ApiV1SecretmanagerManagersListStateNotErrorComponent,
+            ApiV1SecretmanagerManagersListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_time_range_error_component import (
-            ApiV1SecretmanagerManagersListTimeRangeErrorComponent,
+            ApiV1SecretmanagerManagersListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_secretmanager_managers_list_workspaces_error_component import (
-            ApiV1SecretmanagerManagersListWorkspacesErrorComponent,
+            ApiV1SecretmanagerManagersListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

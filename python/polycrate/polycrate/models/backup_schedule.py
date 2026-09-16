@@ -217,10 +217,10 @@ class BackupSchedule:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.backup_schedule_deleted_by_user_type_0 import BackupScheduleDeletedByUserType0
-        from ..models.backup_schedule_last_action_run_type_0 import BackupScheduleLastActionRunType0
-        from ..models.backup_schedule_organization_type_0 import BackupScheduleOrganizationType0
-        from ..models.backup_schedule_workspace_type_0 import BackupScheduleWorkspaceType0
+        from ..models.backup_schedule_deleted_by_user_type_0 import BackupScheduleDeletedByUserType0  # noqa: PLC0415
+        from ..models.backup_schedule_last_action_run_type_0 import BackupScheduleLastActionRunType0  # noqa: PLC0415
+        from ..models.backup_schedule_organization_type_0 import BackupScheduleOrganizationType0  # noqa: PLC0415
+        from ..models.backup_schedule_workspace_type_0 import BackupScheduleWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -574,11 +574,11 @@ class BackupSchedule:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.backup_schedule_created import BackupScheduleCreated
-        from ..models.backup_schedule_deleted_by_user_type_0 import BackupScheduleDeletedByUserType0
-        from ..models.backup_schedule_last_action_run_type_0 import BackupScheduleLastActionRunType0
-        from ..models.backup_schedule_organization_type_0 import BackupScheduleOrganizationType0
-        from ..models.backup_schedule_workspace_type_0 import BackupScheduleWorkspaceType0
+        from ..models.backup_schedule_created import BackupScheduleCreated  # noqa: PLC0415
+        from ..models.backup_schedule_deleted_by_user_type_0 import BackupScheduleDeletedByUserType0  # noqa: PLC0415
+        from ..models.backup_schedule_last_action_run_type_0 import BackupScheduleLastActionRunType0  # noqa: PLC0415
+        from ..models.backup_schedule_organization_type_0 import BackupScheduleOrganizationType0  # noqa: PLC0415
+        from ..models.backup_schedule_workspace_type_0 import BackupScheduleWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

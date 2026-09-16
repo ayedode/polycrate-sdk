@@ -53,16 +53,16 @@ class ApiV1AlertcategoryMappingsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alertcategory_mappings_partial_update_category_id_error_component import (
-            ApiV1AlertcategoryMappingsPartialUpdateCategoryIdErrorComponent,
+            ApiV1AlertcategoryMappingsPartialUpdateCategoryIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_partial_update_match_type_error_component import (
-            ApiV1AlertcategoryMappingsPartialUpdateMatchTypeErrorComponent,
+            ApiV1AlertcategoryMappingsPartialUpdateMatchTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_partial_update_non_field_errors_error_component import (
-            ApiV1AlertcategoryMappingsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1AlertcategoryMappingsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_partial_update_pattern_error_component import (
-            ApiV1AlertcategoryMappingsPartialUpdatePatternErrorComponent,
+            ApiV1AlertcategoryMappingsPartialUpdatePatternErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -97,19 +97,19 @@ class ApiV1AlertcategoryMappingsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alertcategory_mappings_partial_update_category_id_error_component import (
-            ApiV1AlertcategoryMappingsPartialUpdateCategoryIdErrorComponent,
+            ApiV1AlertcategoryMappingsPartialUpdateCategoryIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_partial_update_match_type_error_component import (
-            ApiV1AlertcategoryMappingsPartialUpdateMatchTypeErrorComponent,
+            ApiV1AlertcategoryMappingsPartialUpdateMatchTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_partial_update_non_field_errors_error_component import (
-            ApiV1AlertcategoryMappingsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1AlertcategoryMappingsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_partial_update_pattern_error_component import (
-            ApiV1AlertcategoryMappingsPartialUpdatePatternErrorComponent,
+            ApiV1AlertcategoryMappingsPartialUpdatePatternErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategory_mappings_partial_update_priority_error_component import (
-            ApiV1AlertcategoryMappingsPartialUpdatePriorityErrorComponent,
+            ApiV1AlertcategoryMappingsPartialUpdatePriorityErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

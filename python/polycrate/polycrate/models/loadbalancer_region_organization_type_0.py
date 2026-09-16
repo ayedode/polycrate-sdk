@@ -47,7 +47,7 @@ class LoadbalancerRegionOrganizationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.loadbalancer_region_organization_type_0_created_by_type_0 import (
-            LoadbalancerRegionOrganizationType0CreatedByType0,
+            LoadbalancerRegionOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         id: str | Unset = UNSET
@@ -129,7 +129,7 @@ class LoadbalancerRegionOrganizationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.loadbalancer_region_organization_type_0_created_by_type_0 import (
-            LoadbalancerRegionOrganizationType0CreatedByType0,
+            LoadbalancerRegionOrganizationType0CreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

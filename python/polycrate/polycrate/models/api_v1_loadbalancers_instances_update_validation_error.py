@@ -15,6 +15,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_loadbalancers_instances_update_config_error_component import (
         ApiV1LoadbalancersInstancesUpdateConfigErrorComponent,
     )
+    from ..models.api_v1_loadbalancers_instances_update_haproxy_defaults_error_component import (
+        ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent,
+    )
     from ..models.api_v1_loadbalancers_instances_update_labels_error_component import (
         ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent,
     )
@@ -23,6 +26,9 @@ if TYPE_CHECKING:
     )
     from ..models.api_v1_loadbalancers_instances_update_ports_error_component import (
         ApiV1LoadbalancersInstancesUpdatePortsErrorComponent,
+    )
+    from ..models.api_v1_loadbalancers_instances_update_resource_limits_error_component import (
+        ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent,
     )
     from ..models.api_v1_loadbalancers_instances_update_wizard_ports_error_component import (
         ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent,
@@ -38,9 +44,12 @@ class ApiV1LoadbalancersInstancesUpdateValidationError:
     Attributes:
         type_ (ValidationErrorEnum): * `validation_error` - Validation Error
         errors (list[ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent |
-            ApiV1LoadbalancersInstancesUpdateConfigErrorComponent | ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent |
+            ApiV1LoadbalancersInstancesUpdateConfigErrorComponent |
+            ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent |
+            ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent |
             ApiV1LoadbalancersInstancesUpdateNonFieldErrorsErrorComponent |
             ApiV1LoadbalancersInstancesUpdatePortsErrorComponent |
+            ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent |
             ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent]):
     """
 
@@ -48,28 +57,36 @@ class ApiV1LoadbalancersInstancesUpdateValidationError:
     errors: list[
         ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent
         | ApiV1LoadbalancersInstancesUpdateConfigErrorComponent
+        | ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent
         | ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent
         | ApiV1LoadbalancersInstancesUpdateNonFieldErrorsErrorComponent
         | ApiV1LoadbalancersInstancesUpdatePortsErrorComponent
+        | ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent
         | ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent
     ]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.api_v1_loadbalancers_instances_update_annotations_error_component import (
+            ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_loadbalancers_instances_update_config_error_component import (
-            ApiV1LoadbalancersInstancesUpdateConfigErrorComponent,
+            ApiV1LoadbalancersInstancesUpdateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_update_labels_error_component import (
-            ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent,
+            ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_update_non_field_errors_error_component import (
-            ApiV1LoadbalancersInstancesUpdateNonFieldErrorsErrorComponent,
+            ApiV1LoadbalancersInstancesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_update_ports_error_component import (
-            ApiV1LoadbalancersInstancesUpdatePortsErrorComponent,
+            ApiV1LoadbalancersInstancesUpdatePortsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_loadbalancers_instances_update_resource_limits_error_component import (
+            ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_update_wizard_ports_error_component import (
-            ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent,
+            ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -86,6 +103,10 @@ class ApiV1LoadbalancersInstancesUpdateValidationError:
             elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent):
                 errors_item = errors_item_data.to_dict()
             else:
                 errors_item = errors_item_data.to_dict()
@@ -106,22 +127,28 @@ class ApiV1LoadbalancersInstancesUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_loadbalancers_instances_update_annotations_error_component import (
-            ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent,
+            ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_update_config_error_component import (
-            ApiV1LoadbalancersInstancesUpdateConfigErrorComponent,
+            ApiV1LoadbalancersInstancesUpdateConfigErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_loadbalancers_instances_update_haproxy_defaults_error_component import (
+            ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_update_labels_error_component import (
-            ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent,
+            ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_update_non_field_errors_error_component import (
-            ApiV1LoadbalancersInstancesUpdateNonFieldErrorsErrorComponent,
+            ApiV1LoadbalancersInstancesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_update_ports_error_component import (
-            ApiV1LoadbalancersInstancesUpdatePortsErrorComponent,
+            ApiV1LoadbalancersInstancesUpdatePortsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_loadbalancers_instances_update_resource_limits_error_component import (
+            ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_loadbalancers_instances_update_wizard_ports_error_component import (
-            ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent,
+            ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -136,9 +163,11 @@ class ApiV1LoadbalancersInstancesUpdateValidationError:
             ) -> (
                 ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent
                 | ApiV1LoadbalancersInstancesUpdateConfigErrorComponent
+                | ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent
                 | ApiV1LoadbalancersInstancesUpdateLabelsErrorComponent
                 | ApiV1LoadbalancersInstancesUpdateNonFieldErrorsErrorComponent
                 | ApiV1LoadbalancersInstancesUpdatePortsErrorComponent
+                | ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent
                 | ApiV1LoadbalancersInstancesUpdateWizardPortsErrorComponent
             ):
                 try:
@@ -191,13 +220,33 @@ class ApiV1LoadbalancersInstancesUpdateValidationError:
                     return componentsschemas_api_v1_loadbalancers_instances_update_error_type_4
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_loadbalancers_instances_update_error_type_5 = (
+                        ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_loadbalancers_instances_update_error_type_5
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_loadbalancers_instances_update_error_type_6 = (
+                        ApiV1LoadbalancersInstancesUpdateResourceLimitsErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_loadbalancers_instances_update_error_type_6
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_loadbalancers_instances_update_error_type_5 = (
-                    ApiV1LoadbalancersInstancesUpdateAnnotationsErrorComponent.from_dict(data)
+                componentsschemas_api_v1_loadbalancers_instances_update_error_type_7 = (
+                    ApiV1LoadbalancersInstancesUpdateHaproxyDefaultsErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_loadbalancers_instances_update_error_type_5
+                return componentsschemas_api_v1_loadbalancers_instances_update_error_type_7
 
             errors_item = _parse_errors_item(errors_item_data)
 

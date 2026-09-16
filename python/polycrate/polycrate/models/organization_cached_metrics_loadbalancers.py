@@ -13,8 +13,8 @@ T = TypeVar("T", bound="OrganizationCachedMetricsLoadbalancers")
 class OrganizationCachedMetricsLoadbalancers:
     """
     Attributes:
-        count (int):
-        traffic_30d_bytes (int):
+        count (int): Non-archived owned plus Loopback-delegated load balancer count
+        traffic_30d_bytes (int): 30-day traffic in bytes for owned plus Loopback-delegated load balancers
     """
 
     count: int

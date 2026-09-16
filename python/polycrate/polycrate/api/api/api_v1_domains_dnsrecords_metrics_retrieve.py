@@ -176,8 +176,8 @@ def sync_detailed(
     | ErrorResponse502
     | ParseErrorResponse
 ]:
-    r"""Retrieve metric data or discover available metrics for this object. Without \"metric\" parameter:
-    returns available metric functions (discovery). With \"metric\" parameter: returns raw Prometheus-
+    """Retrieve metric data or discover available metrics for this object. Without "metric" parameter:
+    returns available metric functions (discovery). With "metric" parameter: returns raw Prometheus-
     compatible metric data + chart spec.
 
     Args:
@@ -230,8 +230,8 @@ def sync(
     | ParseErrorResponse
     | None
 ):
-    r"""Retrieve metric data or discover available metrics for this object. Without \"metric\" parameter:
-    returns available metric functions (discovery). With \"metric\" parameter: returns raw Prometheus-
+    """Retrieve metric data or discover available metrics for this object. Without "metric" parameter:
+    returns available metric functions (discovery). With "metric" parameter: returns raw Prometheus-
     compatible metric data + chart spec.
 
     Args:
@@ -278,8 +278,8 @@ async def asyncio_detailed(
     | ErrorResponse502
     | ParseErrorResponse
 ]:
-    r"""Retrieve metric data or discover available metrics for this object. Without \"metric\" parameter:
-    returns available metric functions (discovery). With \"metric\" parameter: returns raw Prometheus-
+    """Retrieve metric data or discover available metrics for this object. Without "metric" parameter:
+    returns available metric functions (discovery). With "metric" parameter: returns raw Prometheus-
     compatible metric data + chart spec.
 
     Args:
@@ -330,8 +330,8 @@ async def asyncio(
     | ParseErrorResponse
     | None
 ):
-    r"""Retrieve metric data or discover available metrics for this object. Without \"metric\" parameter:
-    returns available metric functions (discovery). With \"metric\" parameter: returns raw Prometheus-
+    """Retrieve metric data or discover available metrics for this object. Without "metric" parameter:
+    returns available metric functions (discovery). With "metric" parameter: returns raw Prometheus-
     compatible metric data + chart spec.
 
     Args:

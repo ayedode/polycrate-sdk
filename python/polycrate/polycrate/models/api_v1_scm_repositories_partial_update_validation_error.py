@@ -180,94 +180,94 @@ class ApiV1ScmRepositoriesPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_scm_repositories_partial_update_annotations_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateAnnotationsErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_archived_at_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateArchivedAtErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_archived_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateArchivedErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_archived_reason_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_credential_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateCredentialErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_criticality_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateCriticalityErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_debug_mode_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateDebugModeErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_display_name_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateDisplayNameErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_groups_count_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateGroupsCountErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateGroupsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_hostname_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateHostnameErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_k8s_app_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateK8SAppErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_k8s_cluster_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateK8SClusterErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_kind_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateKindErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_labels_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateLabelsErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_name_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateNameErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_non_field_errors_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_platform_service_error_component import (
-            ApiV1ScmRepositoriesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_projects_count_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateProjectsCountErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_provider_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateProviderErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_provider_id_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateProviderIdErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_provider_reference_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_reconciliation_enabled_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_repository_version_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateRepositoryVersionErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateRepositoryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_sla_availability_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_sla_target_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateSlaTargetErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_slo_availability_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_slo_target_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateSloTargetErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_target_availability_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_tolerations_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateTolerationsErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_users_count_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateUsersCountErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateUsersCountErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -354,97 +354,97 @@ class ApiV1ScmRepositoriesPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_scm_repositories_partial_update_annotations_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateAnnotationsErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_archived_at_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateArchivedAtErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_archived_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateArchivedErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_archived_reason_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateArchivedReasonErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_credential_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateCredentialErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_criticality_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateCriticalityErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_debug_mode_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateDebugModeErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_display_name_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateDisplayNameErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_groups_count_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateGroupsCountErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateGroupsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_hostname_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateHostnameErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_k8s_app_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateK8SAppErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_k8s_cluster_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateK8SClusterErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_kind_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateKindErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_labels_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateLabelsErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_metadata_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateMetadataErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_name_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateNameErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_non_field_errors_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_platform_service_error_component import (
-            ApiV1ScmRepositoriesPartialUpdatePlatformServiceErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_projects_count_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateProjectsCountErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_provider_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateProviderErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_provider_id_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateProviderIdErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_provider_reference_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateProviderReferenceErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_reconciliation_enabled_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_repository_version_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateRepositoryVersionErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateRepositoryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_sla_availability_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_sla_target_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateSlaTargetErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_slo_availability_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_slo_target_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateSloTargetErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_target_availability_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_tolerations_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateTolerationsErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_scm_repositories_partial_update_users_count_error_component import (
-            ApiV1ScmRepositoriesPartialUpdateUsersCountErrorComponent,
+            ApiV1ScmRepositoriesPartialUpdateUsersCountErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -72,6 +72,7 @@ def _get_kwargs(
     state_not: ApiV1HostsListStateNot | Unset = UNSET,
     time_range: ApiV1HostsListTimeRange | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
+    worker_pool: UUID | Unset = UNSET,
     workspaces: list[list[UUID]] | Unset = UNSET,
 ) -> dict[str, Any]:
 
@@ -217,6 +218,11 @@ def _get_kwargs(
     if not isinstance(updated_at, Unset):
         json_updated_at = updated_at.isoformat()
     params["updated_at"] = json_updated_at
+
+    json_worker_pool: str | Unset = UNSET
+    if not isinstance(worker_pool, Unset):
+        json_worker_pool = str(worker_pool)
+    params["worker_pool"] = json_worker_pool
 
     json_workspaces: list[list[str]] | Unset = UNSET
     if not isinstance(workspaces, Unset):
@@ -410,6 +416,7 @@ def sync_detailed(
     state_not: ApiV1HostsListStateNot | Unset = UNSET,
     time_range: ApiV1HostsListTimeRange | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
+    worker_pool: UUID | Unset = UNSET,
     workspaces: list[list[UUID]] | Unset = UNSET,
 ) -> Response[
     ApiV1HostsListValidationError
@@ -475,6 +482,7 @@ def sync_detailed(
         state_not (ApiV1HostsListStateNot | Unset):
         time_range (ApiV1HostsListTimeRange | Unset):
         updated_at (datetime.datetime | Unset):
+        worker_pool (UUID | Unset):
         workspaces (list[list[UUID]] | Unset):
 
     Raises:
@@ -524,6 +532,7 @@ def sync_detailed(
         state_not=state_not,
         time_range=time_range,
         updated_at=updated_at,
+        worker_pool=worker_pool,
         workspaces=workspaces,
     )
 
@@ -575,6 +584,7 @@ def sync(
     state_not: ApiV1HostsListStateNot | Unset = UNSET,
     time_range: ApiV1HostsListTimeRange | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
+    worker_pool: UUID | Unset = UNSET,
     workspaces: list[list[UUID]] | Unset = UNSET,
 ) -> (
     ApiV1HostsListValidationError
@@ -641,6 +651,7 @@ def sync(
         state_not (ApiV1HostsListStateNot | Unset):
         time_range (ApiV1HostsListTimeRange | Unset):
         updated_at (datetime.datetime | Unset):
+        worker_pool (UUID | Unset):
         workspaces (list[list[UUID]] | Unset):
 
     Raises:
@@ -691,6 +702,7 @@ def sync(
         state_not=state_not,
         time_range=time_range,
         updated_at=updated_at,
+        worker_pool=worker_pool,
         workspaces=workspaces,
     ).parsed
 
@@ -736,6 +748,7 @@ async def asyncio_detailed(
     state_not: ApiV1HostsListStateNot | Unset = UNSET,
     time_range: ApiV1HostsListTimeRange | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
+    worker_pool: UUID | Unset = UNSET,
     workspaces: list[list[UUID]] | Unset = UNSET,
 ) -> Response[
     ApiV1HostsListValidationError
@@ -801,6 +814,7 @@ async def asyncio_detailed(
         state_not (ApiV1HostsListStateNot | Unset):
         time_range (ApiV1HostsListTimeRange | Unset):
         updated_at (datetime.datetime | Unset):
+        worker_pool (UUID | Unset):
         workspaces (list[list[UUID]] | Unset):
 
     Raises:
@@ -850,6 +864,7 @@ async def asyncio_detailed(
         state_not=state_not,
         time_range=time_range,
         updated_at=updated_at,
+        worker_pool=worker_pool,
         workspaces=workspaces,
     )
 
@@ -899,6 +914,7 @@ async def asyncio(
     state_not: ApiV1HostsListStateNot | Unset = UNSET,
     time_range: ApiV1HostsListTimeRange | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
+    worker_pool: UUID | Unset = UNSET,
     workspaces: list[list[UUID]] | Unset = UNSET,
 ) -> (
     ApiV1HostsListValidationError
@@ -965,6 +981,7 @@ async def asyncio(
         state_not (ApiV1HostsListStateNot | Unset):
         time_range (ApiV1HostsListTimeRange | Unset):
         updated_at (datetime.datetime | Unset):
+        worker_pool (UUID | Unset):
         workspaces (list[list[UUID]] | Unset):
 
     Raises:
@@ -1016,6 +1033,7 @@ async def asyncio(
             state_not=state_not,
             time_range=time_range,
             updated_at=updated_at,
+            worker_pool=worker_pool,
             workspaces=workspaces,
         )
     ).parsed

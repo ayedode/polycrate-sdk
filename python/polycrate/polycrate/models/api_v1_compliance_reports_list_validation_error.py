@@ -92,43 +92,43 @@ class ApiV1ComplianceReportsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_compliance_reports_list_created_by_users_error_component import (
-            ApiV1ComplianceReportsListCreatedByUsersErrorComponent,
+            ApiV1ComplianceReportsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_framework_refs_error_component import (
-            ApiV1ComplianceReportsListFrameworkRefsErrorComponent,
+            ApiV1ComplianceReportsListFrameworkRefsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_kind_error_component import (
-            ApiV1ComplianceReportsListKindErrorComponent,
+            ApiV1ComplianceReportsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_organizations_error_component import (
-            ApiV1ComplianceReportsListOrganizationsErrorComponent,
+            ApiV1ComplianceReportsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_period_end_error_component import (
-            ApiV1ComplianceReportsListPeriodEndErrorComponent,
+            ApiV1ComplianceReportsListPeriodEndErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_period_end_gte_error_component import (
-            ApiV1ComplianceReportsListPeriodEndGteErrorComponent,
+            ApiV1ComplianceReportsListPeriodEndGteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_period_start_error_component import (
-            ApiV1ComplianceReportsListPeriodStartErrorComponent,
+            ApiV1ComplianceReportsListPeriodStartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_period_start_lte_error_component import (
-            ApiV1ComplianceReportsListPeriodStartLteErrorComponent,
+            ApiV1ComplianceReportsListPeriodStartLteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_search_error_component import (
-            ApiV1ComplianceReportsListSearchErrorComponent,
+            ApiV1ComplianceReportsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_state_error_component import (
-            ApiV1ComplianceReportsListStateErrorComponent,
+            ApiV1ComplianceReportsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_state_not_error_component import (
-            ApiV1ComplianceReportsListStateNotErrorComponent,
+            ApiV1ComplianceReportsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_status_error_component import (
-            ApiV1ComplianceReportsListStatusErrorComponent,
+            ApiV1ComplianceReportsListStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_time_range_error_component import (
-            ApiV1ComplianceReportsListTimeRangeErrorComponent,
+            ApiV1ComplianceReportsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -181,46 +181,46 @@ class ApiV1ComplianceReportsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_compliance_reports_list_created_by_users_error_component import (
-            ApiV1ComplianceReportsListCreatedByUsersErrorComponent,
+            ApiV1ComplianceReportsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_framework_refs_error_component import (
-            ApiV1ComplianceReportsListFrameworkRefsErrorComponent,
+            ApiV1ComplianceReportsListFrameworkRefsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_kind_error_component import (
-            ApiV1ComplianceReportsListKindErrorComponent,
+            ApiV1ComplianceReportsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_name_exact_error_component import (
-            ApiV1ComplianceReportsListNameExactErrorComponent,
+            ApiV1ComplianceReportsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_organizations_error_component import (
-            ApiV1ComplianceReportsListOrganizationsErrorComponent,
+            ApiV1ComplianceReportsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_period_end_error_component import (
-            ApiV1ComplianceReportsListPeriodEndErrorComponent,
+            ApiV1ComplianceReportsListPeriodEndErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_period_end_gte_error_component import (
-            ApiV1ComplianceReportsListPeriodEndGteErrorComponent,
+            ApiV1ComplianceReportsListPeriodEndGteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_period_start_error_component import (
-            ApiV1ComplianceReportsListPeriodStartErrorComponent,
+            ApiV1ComplianceReportsListPeriodStartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_period_start_lte_error_component import (
-            ApiV1ComplianceReportsListPeriodStartLteErrorComponent,
+            ApiV1ComplianceReportsListPeriodStartLteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_search_error_component import (
-            ApiV1ComplianceReportsListSearchErrorComponent,
+            ApiV1ComplianceReportsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_state_error_component import (
-            ApiV1ComplianceReportsListStateErrorComponent,
+            ApiV1ComplianceReportsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_state_not_error_component import (
-            ApiV1ComplianceReportsListStateNotErrorComponent,
+            ApiV1ComplianceReportsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_status_error_component import (
-            ApiV1ComplianceReportsListStatusErrorComponent,
+            ApiV1ComplianceReportsListStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_compliance_reports_list_time_range_error_component import (
-            ApiV1ComplianceReportsListTimeRangeErrorComponent,
+            ApiV1ComplianceReportsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -110,16 +110,20 @@ class K8SClusterAddonSubscriptionList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_cluster_addon_subscription_list_addon_type_0 import K8SClusterAddonSubscriptionListAddonType0
-        from ..models.k8s_cluster_addon_subscription_list_block_type_0 import K8SClusterAddonSubscriptionListBlockType0
+        from ..models.k8s_cluster_addon_subscription_list_addon_type_0 import (
+            K8SClusterAddonSubscriptionListAddonType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_cluster_addon_subscription_list_block_type_0 import (
+            K8SClusterAddonSubscriptionListBlockType0,  # noqa: PLC0415
+        )
         from ..models.k8s_cluster_addon_subscription_list_k8s_cluster_type_0 import (
-            K8SClusterAddonSubscriptionListK8SClusterType0,
+            K8SClusterAddonSubscriptionListK8SClusterType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_list_organization_type_0 import (
-            K8SClusterAddonSubscriptionListOrganizationType0,
+            K8SClusterAddonSubscriptionListOrganizationType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_list_workspace_type_0 import (
-            K8SClusterAddonSubscriptionListWorkspaceType0,
+            K8SClusterAddonSubscriptionListWorkspaceType0,  # noqa: PLC0415
         )
 
         id = str(self.id)
@@ -227,19 +231,25 @@ class K8SClusterAddonSubscriptionList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.k8s_cluster_addon_subscription_list_active_condition_instances_item import (
-            K8SClusterAddonSubscriptionListActiveConditionInstancesItem,
+            K8SClusterAddonSubscriptionListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.k8s_cluster_addon_subscription_list_addon_type_0 import K8SClusterAddonSubscriptionListAddonType0
-        from ..models.k8s_cluster_addon_subscription_list_block_type_0 import K8SClusterAddonSubscriptionListBlockType0
-        from ..models.k8s_cluster_addon_subscription_list_created import K8SClusterAddonSubscriptionListCreated
+        from ..models.k8s_cluster_addon_subscription_list_addon_type_0 import (
+            K8SClusterAddonSubscriptionListAddonType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_cluster_addon_subscription_list_block_type_0 import (
+            K8SClusterAddonSubscriptionListBlockType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_cluster_addon_subscription_list_created import (
+            K8SClusterAddonSubscriptionListCreated,  # noqa: PLC0415
+        )
         from ..models.k8s_cluster_addon_subscription_list_k8s_cluster_type_0 import (
-            K8SClusterAddonSubscriptionListK8SClusterType0,
+            K8SClusterAddonSubscriptionListK8SClusterType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_list_organization_type_0 import (
-            K8SClusterAddonSubscriptionListOrganizationType0,
+            K8SClusterAddonSubscriptionListOrganizationType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_list_workspace_type_0 import (
-            K8SClusterAddonSubscriptionListWorkspaceType0,
+            K8SClusterAddonSubscriptionListWorkspaceType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

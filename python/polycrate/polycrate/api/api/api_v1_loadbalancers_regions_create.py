@@ -199,14 +199,14 @@ def sync_detailed(
     | ErrorResponse502
     | LoadbalancerRegion
 ]:
-    r"""Translate DB unique-constraint violations into HTTP 409 Conflict.
+    """Translate DB unique-constraint violations into HTTP 409 Conflict.
 
     Spec 159 F2: ``POST`` on ManagedObject endpoints previously returned 500
     when the underlying ``INSERT`` violated a unique constraint (e.g.
     ``unique_k8s_cluster_per_workspace``) because ``IntegrityError`` bubbled
     up to the default exception handler. Clients — especially the Polycrate
     Operator — need a deterministic 409 signal so they can treat
-    \"already exists\" as a legitimate case instead of a transport error.
+    "already exists" as a legitimate case instead of a transport error.
 
     Args:
         body (LoadbalancerRegionRequest): Detail serializer for LoadbalancerRegion — erbt von
@@ -258,14 +258,14 @@ def sync(
     | LoadbalancerRegion
     | None
 ):
-    r"""Translate DB unique-constraint violations into HTTP 409 Conflict.
+    """Translate DB unique-constraint violations into HTTP 409 Conflict.
 
     Spec 159 F2: ``POST`` on ManagedObject endpoints previously returned 500
     when the underlying ``INSERT`` violated a unique constraint (e.g.
     ``unique_k8s_cluster_per_workspace``) because ``IntegrityError`` bubbled
     up to the default exception handler. Clients — especially the Polycrate
     Operator — need a deterministic 409 signal so they can treat
-    \"already exists\" as a legitimate case instead of a transport error.
+    "already exists" as a legitimate case instead of a transport error.
 
     Args:
         body (LoadbalancerRegionRequest): Detail serializer for LoadbalancerRegion — erbt von
@@ -311,14 +311,14 @@ async def asyncio_detailed(
     | ErrorResponse502
     | LoadbalancerRegion
 ]:
-    r"""Translate DB unique-constraint violations into HTTP 409 Conflict.
+    """Translate DB unique-constraint violations into HTTP 409 Conflict.
 
     Spec 159 F2: ``POST`` on ManagedObject endpoints previously returned 500
     when the underlying ``INSERT`` violated a unique constraint (e.g.
     ``unique_k8s_cluster_per_workspace``) because ``IntegrityError`` bubbled
     up to the default exception handler. Clients — especially the Polycrate
     Operator — need a deterministic 409 signal so they can treat
-    \"already exists\" as a legitimate case instead of a transport error.
+    "already exists" as a legitimate case instead of a transport error.
 
     Args:
         body (LoadbalancerRegionRequest): Detail serializer for LoadbalancerRegion — erbt von
@@ -368,14 +368,14 @@ async def asyncio(
     | LoadbalancerRegion
     | None
 ):
-    r"""Translate DB unique-constraint violations into HTTP 409 Conflict.
+    """Translate DB unique-constraint violations into HTTP 409 Conflict.
 
     Spec 159 F2: ``POST`` on ManagedObject endpoints previously returned 500
     when the underlying ``INSERT`` violated a unique constraint (e.g.
     ``unique_k8s_cluster_per_workspace``) because ``IntegrityError`` bubbled
     up to the default exception handler. Clients — especially the Polycrate
     Operator — need a deterministic 409 signal so they can treat
-    \"already exists\" as a legitimate case instead of a transport error.
+    "already exists" as a legitimate case instead of a transport error.
 
     Args:
         body (LoadbalancerRegionRequest): Detail serializer for LoadbalancerRegion — erbt von

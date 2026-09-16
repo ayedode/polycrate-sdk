@@ -139,73 +139,73 @@ class ApiV1AssistantSessionsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_assistant_sessions_create_annotations_error_component import (
-            ApiV1AssistantSessionsCreateAnnotationsErrorComponent,
+            ApiV1AssistantSessionsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_archived_at_error_component import (
-            ApiV1AssistantSessionsCreateArchivedAtErrorComponent,
+            ApiV1AssistantSessionsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_archived_error_component import (
-            ApiV1AssistantSessionsCreateArchivedErrorComponent,
+            ApiV1AssistantSessionsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_archived_reason_error_component import (
-            ApiV1AssistantSessionsCreateArchivedReasonErrorComponent,
+            ApiV1AssistantSessionsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_criticality_error_component import (
-            ApiV1AssistantSessionsCreateCriticalityErrorComponent,
+            ApiV1AssistantSessionsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_debug_mode_error_component import (
-            ApiV1AssistantSessionsCreateDebugModeErrorComponent,
+            ApiV1AssistantSessionsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_display_name_error_component import (
-            ApiV1AssistantSessionsCreateDisplayNameErrorComponent,
+            ApiV1AssistantSessionsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_kind_error_component import (
-            ApiV1AssistantSessionsCreateKindErrorComponent,
+            ApiV1AssistantSessionsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_labels_error_component import (
-            ApiV1AssistantSessionsCreateLabelsErrorComponent,
+            ApiV1AssistantSessionsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_name_error_component import (
-            ApiV1AssistantSessionsCreateNameErrorComponent,
+            ApiV1AssistantSessionsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_non_field_errors_error_component import (
-            ApiV1AssistantSessionsCreateNonFieldErrorsErrorComponent,
+            ApiV1AssistantSessionsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_platform_service_error_component import (
-            ApiV1AssistantSessionsCreatePlatformServiceErrorComponent,
+            ApiV1AssistantSessionsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_provider_error_component import (
-            ApiV1AssistantSessionsCreateProviderErrorComponent,
+            ApiV1AssistantSessionsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_provider_id_error_component import (
-            ApiV1AssistantSessionsCreateProviderIdErrorComponent,
+            ApiV1AssistantSessionsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_provider_reference_error_component import (
-            ApiV1AssistantSessionsCreateProviderReferenceErrorComponent,
+            ApiV1AssistantSessionsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_reconciliation_enabled_error_component import (
-            ApiV1AssistantSessionsCreateReconciliationEnabledErrorComponent,
+            ApiV1AssistantSessionsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_sla_availability_error_component import (
-            ApiV1AssistantSessionsCreateSlaAvailabilityErrorComponent,
+            ApiV1AssistantSessionsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_sla_target_error_component import (
-            ApiV1AssistantSessionsCreateSlaTargetErrorComponent,
+            ApiV1AssistantSessionsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_slo_availability_error_component import (
-            ApiV1AssistantSessionsCreateSloAvailabilityErrorComponent,
+            ApiV1AssistantSessionsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_slo_target_error_component import (
-            ApiV1AssistantSessionsCreateSloTargetErrorComponent,
+            ApiV1AssistantSessionsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_target_availability_error_component import (
-            ApiV1AssistantSessionsCreateTargetAvailabilityErrorComponent,
+            ApiV1AssistantSessionsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_tolerations_error_component import (
-            ApiV1AssistantSessionsCreateTolerationsErrorComponent,
+            ApiV1AssistantSessionsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_workspace_id_error_component import (
-            ApiV1AssistantSessionsCreateWorkspaceIdErrorComponent,
+            ApiV1AssistantSessionsCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -278,76 +278,76 @@ class ApiV1AssistantSessionsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_assistant_sessions_create_annotations_error_component import (
-            ApiV1AssistantSessionsCreateAnnotationsErrorComponent,
+            ApiV1AssistantSessionsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_archived_at_error_component import (
-            ApiV1AssistantSessionsCreateArchivedAtErrorComponent,
+            ApiV1AssistantSessionsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_archived_error_component import (
-            ApiV1AssistantSessionsCreateArchivedErrorComponent,
+            ApiV1AssistantSessionsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_archived_reason_error_component import (
-            ApiV1AssistantSessionsCreateArchivedReasonErrorComponent,
+            ApiV1AssistantSessionsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_criticality_error_component import (
-            ApiV1AssistantSessionsCreateCriticalityErrorComponent,
+            ApiV1AssistantSessionsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_debug_mode_error_component import (
-            ApiV1AssistantSessionsCreateDebugModeErrorComponent,
+            ApiV1AssistantSessionsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_display_name_error_component import (
-            ApiV1AssistantSessionsCreateDisplayNameErrorComponent,
+            ApiV1AssistantSessionsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_kind_error_component import (
-            ApiV1AssistantSessionsCreateKindErrorComponent,
+            ApiV1AssistantSessionsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_labels_error_component import (
-            ApiV1AssistantSessionsCreateLabelsErrorComponent,
+            ApiV1AssistantSessionsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_name_error_component import (
-            ApiV1AssistantSessionsCreateNameErrorComponent,
+            ApiV1AssistantSessionsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_non_field_errors_error_component import (
-            ApiV1AssistantSessionsCreateNonFieldErrorsErrorComponent,
+            ApiV1AssistantSessionsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_platform_service_error_component import (
-            ApiV1AssistantSessionsCreatePlatformServiceErrorComponent,
+            ApiV1AssistantSessionsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_provider_error_component import (
-            ApiV1AssistantSessionsCreateProviderErrorComponent,
+            ApiV1AssistantSessionsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_provider_id_error_component import (
-            ApiV1AssistantSessionsCreateProviderIdErrorComponent,
+            ApiV1AssistantSessionsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_provider_reference_error_component import (
-            ApiV1AssistantSessionsCreateProviderReferenceErrorComponent,
+            ApiV1AssistantSessionsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_reconciliation_enabled_error_component import (
-            ApiV1AssistantSessionsCreateReconciliationEnabledErrorComponent,
+            ApiV1AssistantSessionsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_sla_availability_error_component import (
-            ApiV1AssistantSessionsCreateSlaAvailabilityErrorComponent,
+            ApiV1AssistantSessionsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_sla_target_error_component import (
-            ApiV1AssistantSessionsCreateSlaTargetErrorComponent,
+            ApiV1AssistantSessionsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_slo_availability_error_component import (
-            ApiV1AssistantSessionsCreateSloAvailabilityErrorComponent,
+            ApiV1AssistantSessionsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_slo_target_error_component import (
-            ApiV1AssistantSessionsCreateSloTargetErrorComponent,
+            ApiV1AssistantSessionsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_status_error_component import (
-            ApiV1AssistantSessionsCreateStatusErrorComponent,
+            ApiV1AssistantSessionsCreateStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_target_availability_error_component import (
-            ApiV1AssistantSessionsCreateTargetAvailabilityErrorComponent,
+            ApiV1AssistantSessionsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_tolerations_error_component import (
-            ApiV1AssistantSessionsCreateTolerationsErrorComponent,
+            ApiV1AssistantSessionsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_assistant_sessions_create_workspace_id_error_component import (
-            ApiV1AssistantSessionsCreateWorkspaceIdErrorComponent,
+            ApiV1AssistantSessionsCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,6 +1,6 @@
 {
   "name": "@ayedo/polycrate-sdk",
-  "version": "0.33.0",
+  "version": "0.34.0",
   "description": "Polycrate HTTP API client (generated from OpenAPI)",
   "type": "module",
   "main": "./src/index.ts",

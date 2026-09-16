@@ -350,196 +350,196 @@ class ApiV1KubernetesAppsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_apps_partial_update_active_error_component import (
-            ApiV1KubernetesAppsPartialUpdateActiveErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_actual_availability_error_component import (
-            ApiV1KubernetesAppsPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_annotations_error_component import (
-            ApiV1KubernetesAppsPartialUpdateAnnotationsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_archived_at_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArchivedAtErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_archived_by_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArchivedByErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_archived_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArchivedErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_archived_reason_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_artifact_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArtifactErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArtifactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_artifact_package_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArtifactPackageErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_block_error_component import (
-            ApiV1KubernetesAppsPartialUpdateBlockErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_byoa_error_component import (
-            ApiV1KubernetesAppsPartialUpdateByoaErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateByoaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_catalogue_app_error_component import (
-            ApiV1KubernetesAppsPartialUpdateCatalogueAppErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_created_by_component_error_component import (
-            ApiV1KubernetesAppsPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_created_by_user_error_component import (
-            ApiV1KubernetesAppsPartialUpdateCreatedByUserErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_criticality_error_component import (
-            ApiV1KubernetesAppsPartialUpdateCriticalityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_debug_mode_error_component import (
-            ApiV1KubernetesAppsPartialUpdateDebugModeErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_description_error_component import (
-            ApiV1KubernetesAppsPartialUpdateDescriptionErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_discovery_enabled_error_component import (
-            ApiV1KubernetesAppsPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_display_name_error_component import (
-            ApiV1KubernetesAppsPartialUpdateDisplayNameErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_excluded_from_downtime_until_error_component import (
-            ApiV1KubernetesAppsPartialUpdateExcludedFromDowntimeUntilErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateExcludedFromDowntimeUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_ha_enabled_error_component import (
-            ApiV1KubernetesAppsPartialUpdateHaEnabledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateHaEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_helm_chart_error_component import (
-            ApiV1KubernetesAppsPartialUpdateHelmChartErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_installation_failed_error_component import (
-            ApiV1KubernetesAppsPartialUpdateInstallationFailedErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateInstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_installation_running_error_component import (
-            ApiV1KubernetesAppsPartialUpdateInstallationRunningErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateInstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_installed_error_component import (
-            ApiV1KubernetesAppsPartialUpdateInstalledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_installed_version_error_component import (
-            ApiV1KubernetesAppsPartialUpdateInstalledVersionErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateInstalledVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_kind_error_component import (
-            ApiV1KubernetesAppsPartialUpdateKindErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_labels_error_component import (
-            ApiV1KubernetesAppsPartialUpdateLabelsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_last_installation_error_component import (
-            ApiV1KubernetesAppsPartialUpdateLastInstallationErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateLastInstallationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_last_metrics_check_error_component import (
-            ApiV1KubernetesAppsPartialUpdateLastMetricsCheckErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateLastMetricsCheckErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1KubernetesAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_managed_by_content_type_error_component import (
-            ApiV1KubernetesAppsPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_managed_by_object_id_error_component import (
-            ApiV1KubernetesAppsPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_modified_by_user_error_component import (
-            ApiV1KubernetesAppsPartialUpdateModifiedByUserErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_name_error_component import (
-            ApiV1KubernetesAppsPartialUpdateNameErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_namespace_error_component import (
-            ApiV1KubernetesAppsPartialUpdateNamespaceErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_non_field_errors_error_component import (
-            ApiV1KubernetesAppsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_platform_dns_record_created_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_platform_service_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_available_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsAvailableErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsAvailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_details_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsDetailsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsDetailsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_ready_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsReadyErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsReadyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_restart_count_last_hour_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsRestartCountLastHourErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsRestartCountLastHourErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_restart_count_total_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsRestartCountTotalErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsRestartCountTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_status_hash_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsStatusHashErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsStatusHashErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_status_updated_at_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsStatusUpdatedAtErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsStatusUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_total_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsTotalErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_unavailable_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsUnavailableErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsUnavailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_provider_error_component import (
-            ApiV1KubernetesAppsPartialUpdateProviderErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_provider_id_error_component import (
-            ApiV1KubernetesAppsPartialUpdateProviderIdErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_provider_reference_error_component import (
-            ApiV1KubernetesAppsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAppsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_scope_error_component import (
-            ApiV1KubernetesAppsPartialUpdateScopeErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_sla_availability_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_sla_target_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSlaTargetErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_sla_window_days_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_slo_availability_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_slo_target_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSloTargetErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_slo_window_days_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_source_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSourceErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_target_availability_error_component import (
-            ApiV1KubernetesAppsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_uninstallation_failed_error_component import (
-            ApiV1KubernetesAppsPartialUpdateUninstallationFailedErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateUninstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_uninstallation_running_error_component import (
-            ApiV1KubernetesAppsPartialUpdateUninstallationRunningErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateUninstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_uninstalled_error_component import (
-            ApiV1KubernetesAppsPartialUpdateUninstalledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateUninstalledErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -696,199 +696,199 @@ class ApiV1KubernetesAppsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_apps_partial_update_active_error_component import (
-            ApiV1KubernetesAppsPartialUpdateActiveErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_actual_availability_error_component import (
-            ApiV1KubernetesAppsPartialUpdateActualAvailabilityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_annotations_error_component import (
-            ApiV1KubernetesAppsPartialUpdateAnnotationsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_archived_at_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArchivedAtErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_archived_by_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArchivedByErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_archived_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArchivedErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_archived_reason_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_artifact_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArtifactErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArtifactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_artifact_package_error_component import (
-            ApiV1KubernetesAppsPartialUpdateArtifactPackageErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_block_error_component import (
-            ApiV1KubernetesAppsPartialUpdateBlockErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_byoa_error_component import (
-            ApiV1KubernetesAppsPartialUpdateByoaErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateByoaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_catalogue_app_error_component import (
-            ApiV1KubernetesAppsPartialUpdateCatalogueAppErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateCatalogueAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_created_by_component_error_component import (
-            ApiV1KubernetesAppsPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_created_by_user_error_component import (
-            ApiV1KubernetesAppsPartialUpdateCreatedByUserErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_criticality_error_component import (
-            ApiV1KubernetesAppsPartialUpdateCriticalityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_debug_mode_error_component import (
-            ApiV1KubernetesAppsPartialUpdateDebugModeErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_description_error_component import (
-            ApiV1KubernetesAppsPartialUpdateDescriptionErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_discovery_enabled_error_component import (
-            ApiV1KubernetesAppsPartialUpdateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_display_name_error_component import (
-            ApiV1KubernetesAppsPartialUpdateDisplayNameErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_excluded_from_downtime_until_error_component import (
-            ApiV1KubernetesAppsPartialUpdateExcludedFromDowntimeUntilErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateExcludedFromDowntimeUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_ha_enabled_error_component import (
-            ApiV1KubernetesAppsPartialUpdateHaEnabledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateHaEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_helm_chart_error_component import (
-            ApiV1KubernetesAppsPartialUpdateHelmChartErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateHelmChartErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_installation_failed_error_component import (
-            ApiV1KubernetesAppsPartialUpdateInstallationFailedErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateInstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_installation_running_error_component import (
-            ApiV1KubernetesAppsPartialUpdateInstallationRunningErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateInstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_installed_error_component import (
-            ApiV1KubernetesAppsPartialUpdateInstalledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_installed_version_error_component import (
-            ApiV1KubernetesAppsPartialUpdateInstalledVersionErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateInstalledVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_k8s_cluster_error_component import (
-            ApiV1KubernetesAppsPartialUpdateK8SClusterErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_kind_error_component import (
-            ApiV1KubernetesAppsPartialUpdateKindErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_labels_error_component import (
-            ApiV1KubernetesAppsPartialUpdateLabelsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_last_installation_error_component import (
-            ApiV1KubernetesAppsPartialUpdateLastInstallationErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateLastInstallationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_last_metrics_check_error_component import (
-            ApiV1KubernetesAppsPartialUpdateLastMetricsCheckErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateLastMetricsCheckErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1KubernetesAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_managed_by_content_type_error_component import (
-            ApiV1KubernetesAppsPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_managed_by_object_id_error_component import (
-            ApiV1KubernetesAppsPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_modified_by_user_error_component import (
-            ApiV1KubernetesAppsPartialUpdateModifiedByUserErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_name_error_component import (
-            ApiV1KubernetesAppsPartialUpdateNameErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_namespace_error_component import (
-            ApiV1KubernetesAppsPartialUpdateNamespaceErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateNamespaceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_non_field_errors_error_component import (
-            ApiV1KubernetesAppsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_platform_dns_record_created_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_platform_service_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_available_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsAvailableErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsAvailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_details_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsDetailsErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsDetailsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_ready_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsReadyErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsReadyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_restart_count_last_hour_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsRestartCountLastHourErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsRestartCountLastHourErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_restart_count_total_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsRestartCountTotalErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsRestartCountTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_status_hash_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsStatusHashErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsStatusHashErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_status_updated_at_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsStatusUpdatedAtErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsStatusUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_total_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsTotalErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_pods_unavailable_error_component import (
-            ApiV1KubernetesAppsPartialUpdatePodsUnavailableErrorComponent,
+            ApiV1KubernetesAppsPartialUpdatePodsUnavailableErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_provider_error_component import (
-            ApiV1KubernetesAppsPartialUpdateProviderErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_provider_id_error_component import (
-            ApiV1KubernetesAppsPartialUpdateProviderIdErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_provider_reference_error_component import (
-            ApiV1KubernetesAppsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_reconciliation_enabled_error_component import (
-            ApiV1KubernetesAppsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_scope_error_component import (
-            ApiV1KubernetesAppsPartialUpdateScopeErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_sla_availability_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_sla_target_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSlaTargetErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_sla_window_days_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_slo_availability_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_slo_target_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSloTargetErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_slo_window_days_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_source_error_component import (
-            ApiV1KubernetesAppsPartialUpdateSourceErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateSourceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_target_availability_error_component import (
-            ApiV1KubernetesAppsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_uninstallation_failed_error_component import (
-            ApiV1KubernetesAppsPartialUpdateUninstallationFailedErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateUninstallationFailedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_uninstallation_running_error_component import (
-            ApiV1KubernetesAppsPartialUpdateUninstallationRunningErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateUninstallationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_apps_partial_update_uninstalled_error_component import (
-            ApiV1KubernetesAppsPartialUpdateUninstalledErrorComponent,
+            ApiV1KubernetesAppsPartialUpdateUninstalledErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "polycrate"
-version = "0.33.0"
+version = "0.34.0"
 description = "A client library for accessing Polycrate API"
 authors = ["Ayedo Cloud Solutions GmbH"]
 license = "Apache-2.0"

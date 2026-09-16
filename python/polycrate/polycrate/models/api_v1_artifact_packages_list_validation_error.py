@@ -43,13 +43,13 @@ class ApiV1ArtifactPackagesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_artifact_packages_list_artifact_repository_error_component import (
-            ApiV1ArtifactPackagesListArtifactRepositoryErrorComponent,
+            ApiV1ArtifactPackagesListArtifactRepositoryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_list_kind_error_component import (
-            ApiV1ArtifactPackagesListKindErrorComponent,
+            ApiV1ArtifactPackagesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_list_name_error_component import (
-            ApiV1ArtifactPackagesListNameErrorComponent,
+            ApiV1ArtifactPackagesListNameErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -82,16 +82,16 @@ class ApiV1ArtifactPackagesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_artifact_packages_list_artifact_repository_error_component import (
-            ApiV1ArtifactPackagesListArtifactRepositoryErrorComponent,
+            ApiV1ArtifactPackagesListArtifactRepositoryErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_list_artifact_repository_name_error_component import (
-            ApiV1ArtifactPackagesListArtifactRepositoryNameErrorComponent,
+            ApiV1ArtifactPackagesListArtifactRepositoryNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_list_kind_error_component import (
-            ApiV1ArtifactPackagesListKindErrorComponent,
+            ApiV1ArtifactPackagesListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_list_name_error_component import (
-            ApiV1ArtifactPackagesListNameErrorComponent,
+            ApiV1ArtifactPackagesListNameErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -17,6 +17,7 @@ if TYPE_CHECKING:
     from ..models.k8s_worker_pool_list_controlplane_type_0 import K8SWorkerPoolListControlplaneType0
     from ..models.k8s_worker_pool_list_created import K8SWorkerPoolListCreated
     from ..models.k8s_worker_pool_list_organization_type_0 import K8SWorkerPoolListOrganizationType0
+    from ..models.k8s_worker_pool_list_pop_type_0 import K8SWorkerPoolListPopType0
     from ..models.k8s_worker_pool_list_product_type_0 import K8SWorkerPoolListProductType0
     from ..models.k8s_worker_pool_list_provider_account_type_0 import K8SWorkerPoolListProviderAccountType0
     from ..models.k8s_worker_pool_list_workspace_type_0 import K8SWorkerPoolListWorkspaceType0
@@ -73,9 +74,10 @@ class K8SWorkerPoolList:
             controlplane (K8SWorkerPoolListControlplaneType0 | None):
             provider_account (K8SWorkerPoolListProviderAccountType0 | None):
             product (K8SWorkerPoolListProductType0 | None):
+            pop (K8SWorkerPoolListPopType0 | None):
+            location_slug (str):
             desired_count (int):
             image (str): Provider image ID/name for new Hosts.
-            location (str): Optional provider location/region for new Hosts.
             hardening_enabled (bool):
             deployment_checksum (None | str):
             last_deployed_checksum (None | str):
@@ -99,20 +101,28 @@ class K8SWorkerPoolList:
     controlplane: K8SWorkerPoolListControlplaneType0 | None
     provider_account: K8SWorkerPoolListProviderAccountType0 | None
     product: K8SWorkerPoolListProductType0 | None
+    pop: K8SWorkerPoolListPopType0 | None
+    location_slug: str
     desired_count: int
     image: str
-    location: str
     hardening_enabled: bool
     deployment_checksum: None | str
     last_deployed_checksum: None | str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_worker_pool_list_controlplane_type_0 import K8SWorkerPoolListControlplaneType0
-        from ..models.k8s_worker_pool_list_organization_type_0 import K8SWorkerPoolListOrganizationType0
-        from ..models.k8s_worker_pool_list_product_type_0 import K8SWorkerPoolListProductType0
-        from ..models.k8s_worker_pool_list_provider_account_type_0 import K8SWorkerPoolListProviderAccountType0
-        from ..models.k8s_worker_pool_list_workspace_type_0 import K8SWorkerPoolListWorkspaceType0
+        from ..models.k8s_worker_pool_list_controlplane_type_0 import (
+            K8SWorkerPoolListControlplaneType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_worker_pool_list_organization_type_0 import (
+            K8SWorkerPoolListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_worker_pool_list_pop_type_0 import K8SWorkerPoolListPopType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_list_product_type_0 import K8SWorkerPoolListProductType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_list_provider_account_type_0 import (
+            K8SWorkerPoolListProviderAccountType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_worker_pool_list_workspace_type_0 import K8SWorkerPoolListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -177,11 +187,17 @@ class K8SWorkerPoolList:
         else:
             product = self.product
 
+        pop: dict[str, Any] | None
+        if isinstance(self.pop, K8SWorkerPoolListPopType0):
+            pop = self.pop.to_dict()
+        else:
+            pop = self.pop
+
+        location_slug = self.location_slug
+
         desired_count = self.desired_count
 
         image = self.image
-
-        location = self.location
 
         hardening_enabled = self.hardening_enabled
 
@@ -213,9 +229,10 @@ class K8SWorkerPoolList:
                 "controlplane": controlplane,
                 "provider_account": provider_account,
                 "product": product,
+                "pop": pop,
+                "location_slug": location_slug,
                 "desired_count": desired_count,
                 "image": image,
-                "location": location,
                 "hardening_enabled": hardening_enabled,
                 "deployment_checksum": deployment_checksum,
                 "last_deployed_checksum": last_deployed_checksum,
@@ -227,14 +244,21 @@ class K8SWorkerPoolList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.k8s_worker_pool_list_active_condition_instances_item import (
-            K8SWorkerPoolListActiveConditionInstancesItem,
+            K8SWorkerPoolListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.k8s_worker_pool_list_controlplane_type_0 import K8SWorkerPoolListControlplaneType0
-        from ..models.k8s_worker_pool_list_created import K8SWorkerPoolListCreated
-        from ..models.k8s_worker_pool_list_organization_type_0 import K8SWorkerPoolListOrganizationType0
-        from ..models.k8s_worker_pool_list_product_type_0 import K8SWorkerPoolListProductType0
-        from ..models.k8s_worker_pool_list_provider_account_type_0 import K8SWorkerPoolListProviderAccountType0
-        from ..models.k8s_worker_pool_list_workspace_type_0 import K8SWorkerPoolListWorkspaceType0
+        from ..models.k8s_worker_pool_list_controlplane_type_0 import (
+            K8SWorkerPoolListControlplaneType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_worker_pool_list_created import K8SWorkerPoolListCreated  # noqa: PLC0415
+        from ..models.k8s_worker_pool_list_organization_type_0 import (
+            K8SWorkerPoolListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_worker_pool_list_pop_type_0 import K8SWorkerPoolListPopType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_list_product_type_0 import K8SWorkerPoolListProductType0  # noqa: PLC0415
+        from ..models.k8s_worker_pool_list_provider_account_type_0 import (
+            K8SWorkerPoolListProviderAccountType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_worker_pool_list_workspace_type_0 import K8SWorkerPoolListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -358,11 +382,26 @@ class K8SWorkerPoolList:
 
         product = _parse_product(d.pop("product"))
 
+        def _parse_pop(data: object) -> K8SWorkerPoolListPopType0 | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                pop_type_0 = K8SWorkerPoolListPopType0.from_dict(data)
+
+                return pop_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(K8SWorkerPoolListPopType0 | None, data)
+
+        pop = _parse_pop(d.pop("pop"))
+
+        location_slug = d.pop("location_slug")
+
         desired_count = d.pop("desired_count")
 
         image = d.pop("image")
-
-        location = d.pop("location")
 
         hardening_enabled = d.pop("hardening_enabled")
 
@@ -399,9 +438,10 @@ class K8SWorkerPoolList:
             controlplane=controlplane,
             provider_account=provider_account,
             product=product,
+            pop=pop,
+            location_slug=location_slug,
             desired_count=desired_count,
             image=image,
-            location=location,
             hardening_enabled=hardening_enabled,
             deployment_checksum=deployment_checksum,
             last_deployed_checksum=last_deployed_checksum,

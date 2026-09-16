@@ -38,7 +38,7 @@ class ApiV1DomainsDnszonesImportRecordsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_dnszones_import_records_create_non_field_errors_error_component import (
-            ApiV1DomainsDnszonesImportRecordsCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDnszonesImportRecordsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -67,10 +67,10 @@ class ApiV1DomainsDnszonesImportRecordsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_dnszones_import_records_create_non_field_errors_error_component import (
-            ApiV1DomainsDnszonesImportRecordsCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDnszonesImportRecordsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_dnszones_import_records_create_zone_text_error_component import (
-            ApiV1DomainsDnszonesImportRecordsCreateZoneTextErrorComponent,
+            ApiV1DomainsDnszonesImportRecordsCreateZoneTextErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

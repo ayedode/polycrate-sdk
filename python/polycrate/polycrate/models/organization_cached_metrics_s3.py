@@ -13,9 +13,9 @@ T = TypeVar("T", bound="OrganizationCachedMetricsS3")
 class OrganizationCachedMetricsS3:
     """
     Attributes:
-        storage_bytes (int):
-        bucket_count (int):
-        object_count (int):
+        storage_bytes (int): Non-archived owned plus Loopback-delegated bucket storage in bytes
+        bucket_count (int): Non-archived owned plus Loopback-delegated S3 bucket count
+        object_count (int): Object count across owned plus Loopback-delegated buckets
     """
 
     storage_bytes: int

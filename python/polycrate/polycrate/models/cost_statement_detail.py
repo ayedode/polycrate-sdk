@@ -227,10 +227,16 @@ class CostStatementDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.cost_statement_detail_deleted_by_user_type_0 import CostStatementDetailDeletedByUserType0
-        from ..models.cost_statement_detail_last_action_run_type_0 import CostStatementDetailLastActionRunType0
-        from ..models.cost_statement_detail_organization_type_0 import CostStatementDetailOrganizationType0
-        from ..models.cost_statement_detail_workspace_type_0 import CostStatementDetailWorkspaceType0
+        from ..models.cost_statement_detail_deleted_by_user_type_0 import (
+            CostStatementDetailDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.cost_statement_detail_last_action_run_type_0 import (
+            CostStatementDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.cost_statement_detail_organization_type_0 import (
+            CostStatementDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.cost_statement_detail_workspace_type_0 import CostStatementDetailWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -579,12 +585,18 @@ class CostStatementDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.cost_statement_detail_created import CostStatementDetailCreated
-        from ..models.cost_statement_detail_deleted_by_user_type_0 import CostStatementDetailDeletedByUserType0
-        from ..models.cost_statement_detail_last_action_run_type_0 import CostStatementDetailLastActionRunType0
-        from ..models.cost_statement_detail_organization_type_0 import CostStatementDetailOrganizationType0
-        from ..models.cost_statement_detail_workspace_type_0 import CostStatementDetailWorkspaceType0
-        from ..models.cost_statement_line_item import CostStatementLineItem
+        from ..models.cost_statement_detail_created import CostStatementDetailCreated  # noqa: PLC0415
+        from ..models.cost_statement_detail_deleted_by_user_type_0 import (
+            CostStatementDetailDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.cost_statement_detail_last_action_run_type_0 import (
+            CostStatementDetailLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.cost_statement_detail_organization_type_0 import (
+            CostStatementDetailOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.cost_statement_detail_workspace_type_0 import CostStatementDetailWorkspaceType0  # noqa: PLC0415
+        from ..models.cost_statement_line_item import CostStatementLineItem  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

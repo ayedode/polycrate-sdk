@@ -237,10 +237,14 @@ class BlockRolloutItem:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.block_rollout_item_deleted_by_user_type_0 import BlockRolloutItemDeletedByUserType0
-        from ..models.block_rollout_item_last_action_run_type_0 import BlockRolloutItemLastActionRunType0
-        from ..models.block_rollout_item_organization_type_0 import BlockRolloutItemOrganizationType0
-        from ..models.block_rollout_item_workspace_type_0 import BlockRolloutItemWorkspaceType0
+        from ..models.block_rollout_item_deleted_by_user_type_0 import (
+            BlockRolloutItemDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_item_last_action_run_type_0 import (
+            BlockRolloutItemLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_item_organization_type_0 import BlockRolloutItemOrganizationType0  # noqa: PLC0415
+        from ..models.block_rollout_item_workspace_type_0 import BlockRolloutItemWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -655,11 +659,15 @@ class BlockRolloutItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.block_rollout_item_created import BlockRolloutItemCreated
-        from ..models.block_rollout_item_deleted_by_user_type_0 import BlockRolloutItemDeletedByUserType0
-        from ..models.block_rollout_item_last_action_run_type_0 import BlockRolloutItemLastActionRunType0
-        from ..models.block_rollout_item_organization_type_0 import BlockRolloutItemOrganizationType0
-        from ..models.block_rollout_item_workspace_type_0 import BlockRolloutItemWorkspaceType0
+        from ..models.block_rollout_item_created import BlockRolloutItemCreated  # noqa: PLC0415
+        from ..models.block_rollout_item_deleted_by_user_type_0 import (
+            BlockRolloutItemDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_item_last_action_run_type_0 import (
+            BlockRolloutItemLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.block_rollout_item_organization_type_0 import BlockRolloutItemOrganizationType0  # noqa: PLC0415
+        from ..models.block_rollout_item_workspace_type_0 import BlockRolloutItemWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

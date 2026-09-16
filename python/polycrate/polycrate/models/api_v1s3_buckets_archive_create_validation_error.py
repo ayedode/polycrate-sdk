@@ -139,73 +139,73 @@ class ApiV1S3BucketsArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1s3_buckets_archive_create_annotations_error_component import (
-            ApiV1S3BucketsArchiveCreateAnnotationsErrorComponent,
+            ApiV1S3BucketsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_archived_at_error_component import (
-            ApiV1S3BucketsArchiveCreateArchivedAtErrorComponent,
+            ApiV1S3BucketsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_archived_error_component import (
-            ApiV1S3BucketsArchiveCreateArchivedErrorComponent,
+            ApiV1S3BucketsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_archived_reason_error_component import (
-            ApiV1S3BucketsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1S3BucketsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_criticality_error_component import (
-            ApiV1S3BucketsArchiveCreateCriticalityErrorComponent,
+            ApiV1S3BucketsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_debug_mode_error_component import (
-            ApiV1S3BucketsArchiveCreateDebugModeErrorComponent,
+            ApiV1S3BucketsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_display_name_error_component import (
-            ApiV1S3BucketsArchiveCreateDisplayNameErrorComponent,
+            ApiV1S3BucketsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_include_in_cost_statement_error_component import (
-            ApiV1S3BucketsArchiveCreateIncludeInCostStatementErrorComponent,
+            ApiV1S3BucketsArchiveCreateIncludeInCostStatementErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_kind_error_component import (
-            ApiV1S3BucketsArchiveCreateKindErrorComponent,
+            ApiV1S3BucketsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_labels_error_component import (
-            ApiV1S3BucketsArchiveCreateLabelsErrorComponent,
+            ApiV1S3BucketsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_name_error_component import (
-            ApiV1S3BucketsArchiveCreateNameErrorComponent,
+            ApiV1S3BucketsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_non_field_errors_error_component import (
-            ApiV1S3BucketsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_platform_service_error_component import (
-            ApiV1S3BucketsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1S3BucketsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_provider_error_component import (
-            ApiV1S3BucketsArchiveCreateProviderErrorComponent,
+            ApiV1S3BucketsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_provider_id_error_component import (
-            ApiV1S3BucketsArchiveCreateProviderIdErrorComponent,
+            ApiV1S3BucketsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_provider_reference_error_component import (
-            ApiV1S3BucketsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1S3BucketsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_reconciliation_enabled_error_component import (
-            ApiV1S3BucketsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1S3BucketsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_sla_availability_error_component import (
-            ApiV1S3BucketsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1S3BucketsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_sla_target_error_component import (
-            ApiV1S3BucketsArchiveCreateSlaTargetErrorComponent,
+            ApiV1S3BucketsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_slo_availability_error_component import (
-            ApiV1S3BucketsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1S3BucketsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_slo_target_error_component import (
-            ApiV1S3BucketsArchiveCreateSloTargetErrorComponent,
+            ApiV1S3BucketsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_target_availability_error_component import (
-            ApiV1S3BucketsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1S3BucketsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_tolerations_error_component import (
-            ApiV1S3BucketsArchiveCreateTolerationsErrorComponent,
+            ApiV1S3BucketsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -278,76 +278,76 @@ class ApiV1S3BucketsArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1s3_buckets_archive_create_annotations_error_component import (
-            ApiV1S3BucketsArchiveCreateAnnotationsErrorComponent,
+            ApiV1S3BucketsArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_archived_at_error_component import (
-            ApiV1S3BucketsArchiveCreateArchivedAtErrorComponent,
+            ApiV1S3BucketsArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_archived_error_component import (
-            ApiV1S3BucketsArchiveCreateArchivedErrorComponent,
+            ApiV1S3BucketsArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_archived_reason_error_component import (
-            ApiV1S3BucketsArchiveCreateArchivedReasonErrorComponent,
+            ApiV1S3BucketsArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_cors_allow_all_error_component import (
-            ApiV1S3BucketsArchiveCreateCorsAllowAllErrorComponent,
+            ApiV1S3BucketsArchiveCreateCorsAllowAllErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_criticality_error_component import (
-            ApiV1S3BucketsArchiveCreateCriticalityErrorComponent,
+            ApiV1S3BucketsArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_debug_mode_error_component import (
-            ApiV1S3BucketsArchiveCreateDebugModeErrorComponent,
+            ApiV1S3BucketsArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_display_name_error_component import (
-            ApiV1S3BucketsArchiveCreateDisplayNameErrorComponent,
+            ApiV1S3BucketsArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_include_in_cost_statement_error_component import (
-            ApiV1S3BucketsArchiveCreateIncludeInCostStatementErrorComponent,
+            ApiV1S3BucketsArchiveCreateIncludeInCostStatementErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_kind_error_component import (
-            ApiV1S3BucketsArchiveCreateKindErrorComponent,
+            ApiV1S3BucketsArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_labels_error_component import (
-            ApiV1S3BucketsArchiveCreateLabelsErrorComponent,
+            ApiV1S3BucketsArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_name_error_component import (
-            ApiV1S3BucketsArchiveCreateNameErrorComponent,
+            ApiV1S3BucketsArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_non_field_errors_error_component import (
-            ApiV1S3BucketsArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_platform_service_error_component import (
-            ApiV1S3BucketsArchiveCreatePlatformServiceErrorComponent,
+            ApiV1S3BucketsArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_provider_error_component import (
-            ApiV1S3BucketsArchiveCreateProviderErrorComponent,
+            ApiV1S3BucketsArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_provider_id_error_component import (
-            ApiV1S3BucketsArchiveCreateProviderIdErrorComponent,
+            ApiV1S3BucketsArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_provider_reference_error_component import (
-            ApiV1S3BucketsArchiveCreateProviderReferenceErrorComponent,
+            ApiV1S3BucketsArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_reconciliation_enabled_error_component import (
-            ApiV1S3BucketsArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1S3BucketsArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_sla_availability_error_component import (
-            ApiV1S3BucketsArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1S3BucketsArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_sla_target_error_component import (
-            ApiV1S3BucketsArchiveCreateSlaTargetErrorComponent,
+            ApiV1S3BucketsArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_slo_availability_error_component import (
-            ApiV1S3BucketsArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1S3BucketsArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_slo_target_error_component import (
-            ApiV1S3BucketsArchiveCreateSloTargetErrorComponent,
+            ApiV1S3BucketsArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_target_availability_error_component import (
-            ApiV1S3BucketsArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1S3BucketsArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_archive_create_tolerations_error_component import (
-            ApiV1S3BucketsArchiveCreateTolerationsErrorComponent,
+            ApiV1S3BucketsArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

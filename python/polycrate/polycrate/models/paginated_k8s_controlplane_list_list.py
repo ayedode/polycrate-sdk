@@ -68,7 +68,7 @@ class PaginatedK8SControlplaneListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_controlplane_list import K8SControlplaneList
+        from ..models.k8s_controlplane_list import K8SControlplaneList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

@@ -48,7 +48,7 @@ class ParseErrorResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.parse_error import ParseError
+        from ..models.parse_error import ParseError  # noqa: PLC0415
 
         d = dict(src_dict)
         type_ = check_client_error_enum(d.pop("type"))

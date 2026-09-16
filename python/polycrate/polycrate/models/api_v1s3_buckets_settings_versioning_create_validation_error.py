@@ -38,7 +38,7 @@ class ApiV1S3BucketsSettingsVersioningCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1s3_buckets_settings_versioning_create_non_field_errors_error_component import (
-            ApiV1S3BucketsSettingsVersioningCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsSettingsVersioningCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -67,10 +67,10 @@ class ApiV1S3BucketsSettingsVersioningCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1s3_buckets_settings_versioning_create_non_field_errors_error_component import (
-            ApiV1S3BucketsSettingsVersioningCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsSettingsVersioningCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_settings_versioning_create_status_error_component import (
-            ApiV1S3BucketsSettingsVersioningCreateStatusErrorComponent,
+            ApiV1S3BucketsSettingsVersioningCreateStatusErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

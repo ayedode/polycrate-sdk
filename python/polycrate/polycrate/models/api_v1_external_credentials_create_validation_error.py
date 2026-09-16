@@ -61,22 +61,22 @@ class ApiV1ExternalCredentialsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_external_credentials_create_api_key_error_component import (
-            ApiV1ExternalCredentialsCreateApiKeyErrorComponent,
+            ApiV1ExternalCredentialsCreateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_api_user_error_component import (
-            ApiV1ExternalCredentialsCreateApiUserErrorComponent,
+            ApiV1ExternalCredentialsCreateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_kind_error_component import (
-            ApiV1ExternalCredentialsCreateKindErrorComponent,
+            ApiV1ExternalCredentialsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_name_error_component import (
-            ApiV1ExternalCredentialsCreateNameErrorComponent,
+            ApiV1ExternalCredentialsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_non_field_errors_error_component import (
-            ApiV1ExternalCredentialsCreateNonFieldErrorsErrorComponent,
+            ApiV1ExternalCredentialsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_organization_id_error_component import (
-            ApiV1ExternalCredentialsCreateOrganizationIdErrorComponent,
+            ApiV1ExternalCredentialsCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -115,25 +115,25 @@ class ApiV1ExternalCredentialsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_external_credentials_create_api_key_error_component import (
-            ApiV1ExternalCredentialsCreateApiKeyErrorComponent,
+            ApiV1ExternalCredentialsCreateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_api_user_error_component import (
-            ApiV1ExternalCredentialsCreateApiUserErrorComponent,
+            ApiV1ExternalCredentialsCreateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_kind_error_component import (
-            ApiV1ExternalCredentialsCreateKindErrorComponent,
+            ApiV1ExternalCredentialsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_metadata_error_component import (
-            ApiV1ExternalCredentialsCreateMetadataErrorComponent,
+            ApiV1ExternalCredentialsCreateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_name_error_component import (
-            ApiV1ExternalCredentialsCreateNameErrorComponent,
+            ApiV1ExternalCredentialsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_non_field_errors_error_component import (
-            ApiV1ExternalCredentialsCreateNonFieldErrorsErrorComponent,
+            ApiV1ExternalCredentialsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_external_credentials_create_organization_id_error_component import (
-            ApiV1ExternalCredentialsCreateOrganizationIdErrorComponent,
+            ApiV1ExternalCredentialsCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

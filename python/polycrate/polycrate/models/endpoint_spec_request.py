@@ -41,11 +41,11 @@ class EndpointSpecRequest:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.endpoint_dns_spec_request import EndpointDNSSpecRequest
-        from ..models.endpoint_http_spec_request import EndpointHTTPSpecRequest
-        from ..models.endpoint_icmp_spec_request import EndpointICMPSpecRequest
-        from ..models.endpoint_retry_spec_request import EndpointRetrySpecRequest
-        from ..models.endpoint_tcp_spec_request import EndpointTCPSpecRequest
+        from ..models.endpoint_dns_spec_request import EndpointDNSSpecRequest  # noqa: PLC0415
+        from ..models.endpoint_http_spec_request import EndpointHTTPSpecRequest  # noqa: PLC0415
+        from ..models.endpoint_icmp_spec_request import EndpointICMPSpecRequest  # noqa: PLC0415
+        from ..models.endpoint_retry_spec_request import EndpointRetrySpecRequest  # noqa: PLC0415
+        from ..models.endpoint_tcp_spec_request import EndpointTCPSpecRequest  # noqa: PLC0415
 
         retry: dict[str, Any] | None | Unset
         if isinstance(self.retry, Unset):
@@ -105,11 +105,11 @@ class EndpointSpecRequest:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.endpoint_dns_spec_request import EndpointDNSSpecRequest
-        from ..models.endpoint_http_spec_request import EndpointHTTPSpecRequest
-        from ..models.endpoint_icmp_spec_request import EndpointICMPSpecRequest
-        from ..models.endpoint_retry_spec_request import EndpointRetrySpecRequest
-        from ..models.endpoint_tcp_spec_request import EndpointTCPSpecRequest
+        from ..models.endpoint_dns_spec_request import EndpointDNSSpecRequest  # noqa: PLC0415
+        from ..models.endpoint_http_spec_request import EndpointHTTPSpecRequest  # noqa: PLC0415
+        from ..models.endpoint_icmp_spec_request import EndpointICMPSpecRequest  # noqa: PLC0415
+        from ..models.endpoint_retry_spec_request import EndpointRetrySpecRequest  # noqa: PLC0415
+        from ..models.endpoint_tcp_spec_request import EndpointTCPSpecRequest  # noqa: PLC0415
 
         d = dict(src_dict)
 

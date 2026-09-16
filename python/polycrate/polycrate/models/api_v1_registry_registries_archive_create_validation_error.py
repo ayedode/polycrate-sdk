@@ -183,94 +183,94 @@ class ApiV1RegistryRegistriesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_registry_registries_archive_create_annotations_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateAnnotationsErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_archived_at_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateArchivedAtErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_archived_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateArchivedErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_archived_reason_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_credential_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateCredentialErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_criticality_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateCriticalityErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_debug_mode_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateDebugModeErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_display_name_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateDisplayNameErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_hostname_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateHostnameErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_k8s_app_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateK8SAppErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_k8s_cluster_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateK8SClusterErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_kind_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateKindErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_labels_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateLabelsErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_name_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateNameErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_non_field_errors_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_platform_service_error_component import (
-            ApiV1RegistryRegistriesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_projects_count_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateProjectsCountErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_provider_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateProviderErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_provider_id_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateProviderIdErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_provider_reference_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_reconciliation_enabled_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_registry_version_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateRegistryVersionErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateRegistryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_repositories_count_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateRepositoriesCountErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateRepositoriesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_sla_availability_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_sla_target_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateSlaTargetErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_slo_availability_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_slo_target_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateSloTargetErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_storage_used_bytes_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateStorageUsedBytesErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateStorageUsedBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_target_availability_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_tolerations_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateTolerationsErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -357,97 +357,97 @@ class ApiV1RegistryRegistriesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_registry_registries_archive_create_annotations_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateAnnotationsErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_archived_at_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateArchivedAtErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_archived_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateArchivedErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_archived_reason_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_credential_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateCredentialErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_criticality_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateCriticalityErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_debug_mode_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateDebugModeErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_display_name_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateDisplayNameErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_hostname_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateHostnameErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_k8s_app_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateK8SAppErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_k8s_cluster_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateK8SClusterErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_kind_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateKindErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_labels_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateLabelsErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_metadata_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateMetadataErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_name_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateNameErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_non_field_errors_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_platform_service_error_component import (
-            ApiV1RegistryRegistriesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_projects_count_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateProjectsCountErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateProjectsCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_provider_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateProviderErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_provider_id_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateProviderIdErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_provider_reference_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_reconciliation_enabled_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_registry_version_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateRegistryVersionErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateRegistryVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_repositories_count_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateRepositoriesCountErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateRepositoriesCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_sla_availability_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_sla_target_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateSlaTargetErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_slo_availability_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_slo_target_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateSloTargetErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_storage_used_bytes_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateStorageUsedBytesErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateStorageUsedBytesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_target_availability_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_registry_registries_archive_create_tolerations_error_component import (
-            ApiV1RegistryRegistriesArchiveCreateTolerationsErrorComponent,
+            ApiV1RegistryRegistriesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

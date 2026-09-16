@@ -51,7 +51,9 @@ class ConversationProviderPost:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.conversation_provider_post_secrets_type_0 import ConversationProviderPostSecretsType0
+        from ..models.conversation_provider_post_secrets_type_0 import (
+            ConversationProviderPostSecretsType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -114,7 +116,9 @@ class ConversationProviderPost:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversation_provider_post_secrets_type_0 import ConversationProviderPostSecretsType0
+        from ..models.conversation_provider_post_secrets_type_0 import (
+            ConversationProviderPostSecretsType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

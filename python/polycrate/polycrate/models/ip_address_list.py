@@ -79,8 +79,8 @@ class IPAddressList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.ip_address_list_organization_type_0 import IPAddressListOrganizationType0
-        from ..models.ip_address_list_workspace_type_0 import IPAddressListWorkspaceType0
+        from ..models.ip_address_list_organization_type_0 import IPAddressListOrganizationType0  # noqa: PLC0415
+        from ..models.ip_address_list_workspace_type_0 import IPAddressListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -170,11 +170,13 @@ class IPAddressList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.ip_address_list_active_condition_instances_item import IPAddressListActiveConditionInstancesItem
-        from ..models.ip_address_list_created import IPAddressListCreated
-        from ..models.ip_address_list_organization_type_0 import IPAddressListOrganizationType0
-        from ..models.ip_address_list_prefix import IPAddressListPrefix
-        from ..models.ip_address_list_workspace_type_0 import IPAddressListWorkspaceType0
+        from ..models.ip_address_list_active_condition_instances_item import (
+            IPAddressListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.ip_address_list_created import IPAddressListCreated  # noqa: PLC0415
+        from ..models.ip_address_list_organization_type_0 import IPAddressListOrganizationType0  # noqa: PLC0415
+        from ..models.ip_address_list_prefix import IPAddressListPrefix  # noqa: PLC0415
+        from ..models.ip_address_list_workspace_type_0 import IPAddressListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

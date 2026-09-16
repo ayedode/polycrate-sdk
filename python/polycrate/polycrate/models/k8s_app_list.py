@@ -100,10 +100,10 @@ class K8SAppList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_app_list_catalogue_app_type_0 import K8SAppListCatalogueAppType0
-        from ..models.k8s_app_list_k8s_cluster_type_0 import K8SAppListK8SClusterType0
-        from ..models.k8s_app_list_organization_type_0 import K8SAppListOrganizationType0
-        from ..models.k8s_app_list_workspace_type_0 import K8SAppListWorkspaceType0
+        from ..models.k8s_app_list_catalogue_app_type_0 import K8SAppListCatalogueAppType0  # noqa: PLC0415
+        from ..models.k8s_app_list_k8s_cluster_type_0 import K8SAppListK8SClusterType0  # noqa: PLC0415
+        from ..models.k8s_app_list_organization_type_0 import K8SAppListOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_app_list_workspace_type_0 import K8SAppListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -228,12 +228,14 @@ class K8SAppList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_app_list_active_condition_instances_item import K8SAppListActiveConditionInstancesItem
-        from ..models.k8s_app_list_catalogue_app_type_0 import K8SAppListCatalogueAppType0
-        from ..models.k8s_app_list_created import K8SAppListCreated
-        from ..models.k8s_app_list_k8s_cluster_type_0 import K8SAppListK8SClusterType0
-        from ..models.k8s_app_list_organization_type_0 import K8SAppListOrganizationType0
-        from ..models.k8s_app_list_workspace_type_0 import K8SAppListWorkspaceType0
+        from ..models.k8s_app_list_active_condition_instances_item import (
+            K8SAppListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.k8s_app_list_catalogue_app_type_0 import K8SAppListCatalogueAppType0  # noqa: PLC0415
+        from ..models.k8s_app_list_created import K8SAppListCreated  # noqa: PLC0415
+        from ..models.k8s_app_list_k8s_cluster_type_0 import K8SAppListK8SClusterType0  # noqa: PLC0415
+        from ..models.k8s_app_list_organization_type_0 import K8SAppListOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_app_list_workspace_type_0 import K8SAppListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

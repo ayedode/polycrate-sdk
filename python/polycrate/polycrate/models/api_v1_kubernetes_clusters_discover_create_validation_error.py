@@ -263,142 +263,142 @@ class ApiV1KubernetesClustersDiscoverCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_clusters_discover_create_active_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateActiveErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_actual_availability_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_addons_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateAddonsErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateAddonsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_alias_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateAliasErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateAliasErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_annotations_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateAnnotationsErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_api_server_cert_expiry_date_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateApiServerCertExpiryDateErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateApiServerCertExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_archived_at_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateArchivedAtErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_archived_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateArchivedErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_archived_reason_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_backup_schedules_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateBackupSchedulesErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateBackupSchedulesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_baserow_id_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateBaserowIdErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateBaserowIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_credential_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateCredentialErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_criticality_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateCriticalityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_debug_mode_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDebugModeErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_description_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDescriptionErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_discovery_enabled_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_discovery_ignored_namespaces_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDiscoveryIgnoredNamespacesErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDiscoveryIgnoredNamespacesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_display_name_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDisplayNameErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_gitlab_project_id_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateGitlabProjectIdErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_installed_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateInstalledErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_is_host_cluster_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateIsHostClusterErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateIsHostClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_is_infrastructure_cluster_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateIsInfrastructureClusterErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateIsInfrastructureClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_kind_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateKindErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_kubeconfig_ca_cert_expiry_date_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateKubeconfigCaCertExpiryDateErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateKubeconfigCaCertExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_kubeconfig_client_cert_expiry_date_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateKubeconfigClientCertExpiryDateErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateKubeconfigClientCertExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_kubernetes_version_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateKubernetesVersionErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateKubernetesVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_labels_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateLabelsErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_last_backup_import_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateLastBackupImportErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateLastBackupImportErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_managed_by_content_type_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateManagedByContentTypeErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_name_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateNameErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_non_field_errors_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_operator_ignore_namespaces_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateOperatorIgnoreNamespacesErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateOperatorIgnoreNamespacesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_operator_loglevel_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateOperatorLoglevelErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateOperatorLoglevelErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_platform_dns_record_created_error_component import (
-            ApiV1KubernetesClustersDiscoverCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_platform_service_error_component import (
-            ApiV1KubernetesClustersDiscoverCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_provider_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateProviderErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_provider_id_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateProviderIdErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_provider_reference_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_scope_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateScopeErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_sla_availability_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_sla_target_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSlaTargetErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_slo_availability_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_slo_target_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSloTargetErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_slug_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSlugErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSlugErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_target_availability_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -531,145 +531,145 @@ class ApiV1KubernetesClustersDiscoverCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_clusters_discover_create_active_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateActiveErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_actual_availability_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateActualAvailabilityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_addons_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateAddonsErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateAddonsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_alias_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateAliasErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateAliasErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_annotations_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateAnnotationsErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_api_server_cert_expiry_date_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateApiServerCertExpiryDateErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateApiServerCertExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_archived_at_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateArchivedAtErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_archived_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateArchivedErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_archived_reason_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateArchivedReasonErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_backup_schedules_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateBackupSchedulesErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateBackupSchedulesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_baserow_id_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateBaserowIdErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateBaserowIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_credential_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateCredentialErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_criticality_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateCriticalityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_debug_mode_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDebugModeErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_description_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDescriptionErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_discovery_enabled_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDiscoveryEnabledErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_discovery_ignored_namespaces_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDiscoveryIgnoredNamespacesErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDiscoveryIgnoredNamespacesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_display_name_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateDisplayNameErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_gitlab_project_id_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateGitlabProjectIdErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateGitlabProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_installed_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateInstalledErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateInstalledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_is_host_cluster_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateIsHostClusterErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateIsHostClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_is_infrastructure_cluster_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateIsInfrastructureClusterErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateIsInfrastructureClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_kind_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateKindErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_kubeconfig_ca_cert_expiry_date_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateKubeconfigCaCertExpiryDateErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateKubeconfigCaCertExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_kubeconfig_client_cert_expiry_date_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateKubeconfigClientCertExpiryDateErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateKubeconfigClientCertExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_kubernetes_version_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateKubernetesVersionErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateKubernetesVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_labels_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateLabelsErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_last_backup_import_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateLastBackupImportErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateLastBackupImportErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_managed_by_content_type_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateManagedByContentTypeErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_managed_by_object_id_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateManagedByObjectIdErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_name_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateNameErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_non_field_errors_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateNonFieldErrorsErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_operator_ignore_namespaces_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateOperatorIgnoreNamespacesErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateOperatorIgnoreNamespacesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_operator_loglevel_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateOperatorLoglevelErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateOperatorLoglevelErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_platform_dns_record_created_error_component import (
-            ApiV1KubernetesClustersDiscoverCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_platform_service_error_component import (
-            ApiV1KubernetesClustersDiscoverCreatePlatformServiceErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_provider_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateProviderErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_provider_id_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateProviderIdErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_provider_reference_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateProviderReferenceErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_reconciliation_enabled_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateReconciliationEnabledErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_scope_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateScopeErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_sla_availability_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSlaAvailabilityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_sla_target_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSlaTargetErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_slo_availability_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSloAvailabilityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_slo_target_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSloTargetErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_slug_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateSlugErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateSlugErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_discover_create_target_availability_error_component import (
-            ApiV1KubernetesClustersDiscoverCreateTargetAvailabilityErrorComponent,
+            ApiV1KubernetesClustersDiscoverCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

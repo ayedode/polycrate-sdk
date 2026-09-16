@@ -68,7 +68,7 @@ class PaginatedCredentialListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential_list import CredentialList
+        from ..models.credential_list import CredentialList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

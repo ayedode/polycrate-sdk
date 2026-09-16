@@ -83,7 +83,7 @@ class MaintenanceList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.maintenance_list_workspace_type_0 import MaintenanceListWorkspaceType0
+        from ..models.maintenance_list_workspace_type_0 import MaintenanceListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -172,11 +172,11 @@ class MaintenanceList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.maintenance_list_active_condition_instances_item import (
-            MaintenanceListActiveConditionInstancesItem,
+            MaintenanceListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.maintenance_list_created import MaintenanceListCreated
-        from ..models.maintenance_list_workspace_type_0 import MaintenanceListWorkspaceType0
-        from ..models.pop_simple import PopSimple
+        from ..models.maintenance_list_created import MaintenanceListCreated  # noqa: PLC0415
+        from ..models.maintenance_list_workspace_type_0 import MaintenanceListWorkspaceType0  # noqa: PLC0415
+        from ..models.pop_simple import PopSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

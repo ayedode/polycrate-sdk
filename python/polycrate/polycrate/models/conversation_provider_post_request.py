@@ -52,7 +52,7 @@ class ConversationProviderPostRequest:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.conversation_provider_post_request_secrets_type_0 import (
-            ConversationProviderPostRequestSecretsType0,
+            ConversationProviderPostRequestSecretsType0,  # noqa: PLC0415
         )
 
         name = self.name
@@ -113,7 +113,7 @@ class ConversationProviderPostRequest:
 
     def to_multipart(self) -> types.RequestFiles:
         from ..models.conversation_provider_post_request_secrets_type_0 import (
-            ConversationProviderPostRequestSecretsType0,
+            ConversationProviderPostRequestSecretsType0,  # noqa: PLC0415
         )
 
         files: types.RequestFiles = []
@@ -155,7 +155,7 @@ class ConversationProviderPostRequest:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.conversation_provider_post_request_secrets_type_0 import (
-            ConversationProviderPostRequestSecretsType0,
+            ConversationProviderPostRequestSecretsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

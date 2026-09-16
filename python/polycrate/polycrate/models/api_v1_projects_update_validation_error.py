@@ -131,80 +131,96 @@ class ApiV1ProjectsUpdateValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_projects_update_active_error_component import ApiV1ProjectsUpdateActiveErrorComponent
+        from ..models.api_v1_projects_update_active_error_component import (
+            ApiV1ProjectsUpdateActiveErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_projects_update_annotations_error_component import (
-            ApiV1ProjectsUpdateAnnotationsErrorComponent,
+            ApiV1ProjectsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_archived_at_error_component import (
-            ApiV1ProjectsUpdateArchivedAtErrorComponent,
+            ApiV1ProjectsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_projects_update_archived_error_component import ApiV1ProjectsUpdateArchivedErrorComponent
+        from ..models.api_v1_projects_update_archived_error_component import (
+            ApiV1ProjectsUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_projects_update_archived_reason_error_component import (
-            ApiV1ProjectsUpdateArchivedReasonErrorComponent,
+            ApiV1ProjectsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_budgeted_hours_error_component import (
-            ApiV1ProjectsUpdateBudgetedHoursErrorComponent,
+            ApiV1ProjectsUpdateBudgetedHoursErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_budgeted_hours_interval_error_component import (
-            ApiV1ProjectsUpdateBudgetedHoursIntervalErrorComponent,
+            ApiV1ProjectsUpdateBudgetedHoursIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_criticality_error_component import (
-            ApiV1ProjectsUpdateCriticalityErrorComponent,
+            ApiV1ProjectsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_debug_mode_error_component import (
-            ApiV1ProjectsUpdateDebugModeErrorComponent,
+            ApiV1ProjectsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_display_name_error_component import (
-            ApiV1ProjectsUpdateDisplayNameErrorComponent,
+            ApiV1ProjectsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_projects_update_end_date_error_component import ApiV1ProjectsUpdateEndDateErrorComponent
-        from ..models.api_v1_projects_update_kind_error_component import ApiV1ProjectsUpdateKindErrorComponent
-        from ..models.api_v1_projects_update_labels_error_component import ApiV1ProjectsUpdateLabelsErrorComponent
-        from ..models.api_v1_projects_update_name_error_component import ApiV1ProjectsUpdateNameErrorComponent
+        from ..models.api_v1_projects_update_end_date_error_component import (
+            ApiV1ProjectsUpdateEndDateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_projects_update_kind_error_component import (
+            ApiV1ProjectsUpdateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_projects_update_labels_error_component import (
+            ApiV1ProjectsUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_projects_update_name_error_component import (
+            ApiV1ProjectsUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_projects_update_non_field_errors_error_component import (
-            ApiV1ProjectsUpdateNonFieldErrorsErrorComponent,
+            ApiV1ProjectsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_organization_id_error_component import (
-            ApiV1ProjectsUpdateOrganizationIdErrorComponent,
+            ApiV1ProjectsUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_platform_service_error_component import (
-            ApiV1ProjectsUpdatePlatformServiceErrorComponent,
+            ApiV1ProjectsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_product_id_error_component import (
-            ApiV1ProjectsUpdateProductIdErrorComponent,
+            ApiV1ProjectsUpdateProductIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_projects_update_provider_error_component import ApiV1ProjectsUpdateProviderErrorComponent
+        from ..models.api_v1_projects_update_provider_error_component import (
+            ApiV1ProjectsUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_projects_update_provider_id_error_component import (
-            ApiV1ProjectsUpdateProviderIdErrorComponent,
+            ApiV1ProjectsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_provider_reference_error_component import (
-            ApiV1ProjectsUpdateProviderReferenceErrorComponent,
+            ApiV1ProjectsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_reconciliation_enabled_error_component import (
-            ApiV1ProjectsUpdateReconciliationEnabledErrorComponent,
+            ApiV1ProjectsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_sla_availability_error_component import (
-            ApiV1ProjectsUpdateSlaAvailabilityErrorComponent,
+            ApiV1ProjectsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_sla_target_error_component import (
-            ApiV1ProjectsUpdateSlaTargetErrorComponent,
+            ApiV1ProjectsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_slo_availability_error_component import (
-            ApiV1ProjectsUpdateSloAvailabilityErrorComponent,
+            ApiV1ProjectsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_slo_target_error_component import (
-            ApiV1ProjectsUpdateSloTargetErrorComponent,
+            ApiV1ProjectsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_start_date_error_component import (
-            ApiV1ProjectsUpdateStartDateErrorComponent,
+            ApiV1ProjectsUpdateStartDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_target_availability_error_component import (
-            ApiV1ProjectsUpdateTargetAvailabilityErrorComponent,
+            ApiV1ProjectsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_tolerations_error_component import (
-            ApiV1ProjectsUpdateTolerationsErrorComponent,
+            ApiV1ProjectsUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_projects_update_urls_error_component import ApiV1ProjectsUpdateUrlsErrorComponent
+        from ..models.api_v1_projects_update_urls_error_component import (
+            ApiV1ProjectsUpdateUrlsErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -289,83 +305,99 @@ class ApiV1ProjectsUpdateValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_projects_update_active_error_component import ApiV1ProjectsUpdateActiveErrorComponent
+        from ..models.api_v1_projects_update_active_error_component import (
+            ApiV1ProjectsUpdateActiveErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_projects_update_annotations_error_component import (
-            ApiV1ProjectsUpdateAnnotationsErrorComponent,
+            ApiV1ProjectsUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_archived_at_error_component import (
-            ApiV1ProjectsUpdateArchivedAtErrorComponent,
+            ApiV1ProjectsUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_projects_update_archived_error_component import ApiV1ProjectsUpdateArchivedErrorComponent
+        from ..models.api_v1_projects_update_archived_error_component import (
+            ApiV1ProjectsUpdateArchivedErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_projects_update_archived_reason_error_component import (
-            ApiV1ProjectsUpdateArchivedReasonErrorComponent,
+            ApiV1ProjectsUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_budgeted_hours_error_component import (
-            ApiV1ProjectsUpdateBudgetedHoursErrorComponent,
+            ApiV1ProjectsUpdateBudgetedHoursErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_budgeted_hours_interval_error_component import (
-            ApiV1ProjectsUpdateBudgetedHoursIntervalErrorComponent,
+            ApiV1ProjectsUpdateBudgetedHoursIntervalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_budgeted_hours_mode_error_component import (
-            ApiV1ProjectsUpdateBudgetedHoursModeErrorComponent,
+            ApiV1ProjectsUpdateBudgetedHoursModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_criticality_error_component import (
-            ApiV1ProjectsUpdateCriticalityErrorComponent,
+            ApiV1ProjectsUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_debug_mode_error_component import (
-            ApiV1ProjectsUpdateDebugModeErrorComponent,
+            ApiV1ProjectsUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_display_name_error_component import (
-            ApiV1ProjectsUpdateDisplayNameErrorComponent,
+            ApiV1ProjectsUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_projects_update_end_date_error_component import ApiV1ProjectsUpdateEndDateErrorComponent
-        from ..models.api_v1_projects_update_kind_error_component import ApiV1ProjectsUpdateKindErrorComponent
-        from ..models.api_v1_projects_update_labels_error_component import ApiV1ProjectsUpdateLabelsErrorComponent
-        from ..models.api_v1_projects_update_name_error_component import ApiV1ProjectsUpdateNameErrorComponent
+        from ..models.api_v1_projects_update_end_date_error_component import (
+            ApiV1ProjectsUpdateEndDateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_projects_update_kind_error_component import (
+            ApiV1ProjectsUpdateKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_projects_update_labels_error_component import (
+            ApiV1ProjectsUpdateLabelsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_projects_update_name_error_component import (
+            ApiV1ProjectsUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_projects_update_non_field_errors_error_component import (
-            ApiV1ProjectsUpdateNonFieldErrorsErrorComponent,
+            ApiV1ProjectsUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_organization_id_error_component import (
-            ApiV1ProjectsUpdateOrganizationIdErrorComponent,
+            ApiV1ProjectsUpdateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_platform_service_error_component import (
-            ApiV1ProjectsUpdatePlatformServiceErrorComponent,
+            ApiV1ProjectsUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_product_id_error_component import (
-            ApiV1ProjectsUpdateProductIdErrorComponent,
+            ApiV1ProjectsUpdateProductIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_projects_update_provider_error_component import ApiV1ProjectsUpdateProviderErrorComponent
+        from ..models.api_v1_projects_update_provider_error_component import (
+            ApiV1ProjectsUpdateProviderErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_projects_update_provider_id_error_component import (
-            ApiV1ProjectsUpdateProviderIdErrorComponent,
+            ApiV1ProjectsUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_provider_reference_error_component import (
-            ApiV1ProjectsUpdateProviderReferenceErrorComponent,
+            ApiV1ProjectsUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_reconciliation_enabled_error_component import (
-            ApiV1ProjectsUpdateReconciliationEnabledErrorComponent,
+            ApiV1ProjectsUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_sla_availability_error_component import (
-            ApiV1ProjectsUpdateSlaAvailabilityErrorComponent,
+            ApiV1ProjectsUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_sla_target_error_component import (
-            ApiV1ProjectsUpdateSlaTargetErrorComponent,
+            ApiV1ProjectsUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_slo_availability_error_component import (
-            ApiV1ProjectsUpdateSloAvailabilityErrorComponent,
+            ApiV1ProjectsUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_slo_target_error_component import (
-            ApiV1ProjectsUpdateSloTargetErrorComponent,
+            ApiV1ProjectsUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_start_date_error_component import (
-            ApiV1ProjectsUpdateStartDateErrorComponent,
+            ApiV1ProjectsUpdateStartDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_target_availability_error_component import (
-            ApiV1ProjectsUpdateTargetAvailabilityErrorComponent,
+            ApiV1ProjectsUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_projects_update_tolerations_error_component import (
-            ApiV1ProjectsUpdateTolerationsErrorComponent,
+            ApiV1ProjectsUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_projects_update_urls_error_component import ApiV1ProjectsUpdateUrlsErrorComponent
+        from ..models.api_v1_projects_update_urls_error_component import (
+            ApiV1ProjectsUpdateUrlsErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

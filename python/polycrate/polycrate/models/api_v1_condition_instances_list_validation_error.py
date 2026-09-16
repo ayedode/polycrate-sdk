@@ -47,13 +47,13 @@ class ApiV1ConditionInstancesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_condition_instances_list_condition_error_component import (
-            ApiV1ConditionInstancesListConditionErrorComponent,
+            ApiV1ConditionInstancesListConditionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_list_condition_severity_error_component import (
-            ApiV1ConditionInstancesListConditionSeverityErrorComponent,
+            ApiV1ConditionInstancesListConditionSeverityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_list_organization_error_component import (
-            ApiV1ConditionInstancesListOrganizationErrorComponent,
+            ApiV1ConditionInstancesListOrganizationErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -86,16 +86,16 @@ class ApiV1ConditionInstancesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_condition_instances_list_condition_error_component import (
-            ApiV1ConditionInstancesListConditionErrorComponent,
+            ApiV1ConditionInstancesListConditionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_list_condition_severity_error_component import (
-            ApiV1ConditionInstancesListConditionSeverityErrorComponent,
+            ApiV1ConditionInstancesListConditionSeverityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_list_organization_error_component import (
-            ApiV1ConditionInstancesListOrganizationErrorComponent,
+            ApiV1ConditionInstancesListOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_list_workspace_error_component import (
-            ApiV1ConditionInstancesListWorkspaceErrorComponent,
+            ApiV1ConditionInstancesListWorkspaceErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -97,46 +97,46 @@ class ApiV1KubernetesClustersListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_clusters_list_created_at_error_component import (
-            ApiV1KubernetesClustersListCreatedAtErrorComponent,
+            ApiV1KubernetesClustersListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_created_by_component_error_component import (
-            ApiV1KubernetesClustersListCreatedByComponentErrorComponent,
+            ApiV1KubernetesClustersListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_created_by_users_error_component import (
-            ApiV1KubernetesClustersListCreatedByUsersErrorComponent,
+            ApiV1KubernetesClustersListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_kind_error_component import (
-            ApiV1KubernetesClustersListKindErrorComponent,
+            ApiV1KubernetesClustersListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_kubernetes_version_error_component import (
-            ApiV1KubernetesClustersListKubernetesVersionErrorComponent,
+            ApiV1KubernetesClustersListKubernetesVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_name_error_component import (
-            ApiV1KubernetesClustersListNameErrorComponent,
+            ApiV1KubernetesClustersListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_organizations_error_component import (
-            ApiV1KubernetesClustersListOrganizationsErrorComponent,
+            ApiV1KubernetesClustersListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_scope_error_component import (
-            ApiV1KubernetesClustersListScopeErrorComponent,
+            ApiV1KubernetesClustersListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_search_error_component import (
-            ApiV1KubernetesClustersListSearchErrorComponent,
+            ApiV1KubernetesClustersListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_state_error_component import (
-            ApiV1KubernetesClustersListStateErrorComponent,
+            ApiV1KubernetesClustersListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_state_not_error_component import (
-            ApiV1KubernetesClustersListStateNotErrorComponent,
+            ApiV1KubernetesClustersListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_time_range_error_component import (
-            ApiV1KubernetesClustersListTimeRangeErrorComponent,
+            ApiV1KubernetesClustersListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_updated_at_error_component import (
-            ApiV1KubernetesClustersListUpdatedAtErrorComponent,
+            ApiV1KubernetesClustersListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_workspaces_error_component import (
-            ApiV1KubernetesClustersListWorkspacesErrorComponent,
+            ApiV1KubernetesClustersListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -191,49 +191,49 @@ class ApiV1KubernetesClustersListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_clusters_list_created_at_error_component import (
-            ApiV1KubernetesClustersListCreatedAtErrorComponent,
+            ApiV1KubernetesClustersListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_created_by_component_error_component import (
-            ApiV1KubernetesClustersListCreatedByComponentErrorComponent,
+            ApiV1KubernetesClustersListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_created_by_users_error_component import (
-            ApiV1KubernetesClustersListCreatedByUsersErrorComponent,
+            ApiV1KubernetesClustersListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_kind_error_component import (
-            ApiV1KubernetesClustersListKindErrorComponent,
+            ApiV1KubernetesClustersListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_kubernetes_version_error_component import (
-            ApiV1KubernetesClustersListKubernetesVersionErrorComponent,
+            ApiV1KubernetesClustersListKubernetesVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_name_error_component import (
-            ApiV1KubernetesClustersListNameErrorComponent,
+            ApiV1KubernetesClustersListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_name_exact_error_component import (
-            ApiV1KubernetesClustersListNameExactErrorComponent,
+            ApiV1KubernetesClustersListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_organizations_error_component import (
-            ApiV1KubernetesClustersListOrganizationsErrorComponent,
+            ApiV1KubernetesClustersListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_scope_error_component import (
-            ApiV1KubernetesClustersListScopeErrorComponent,
+            ApiV1KubernetesClustersListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_search_error_component import (
-            ApiV1KubernetesClustersListSearchErrorComponent,
+            ApiV1KubernetesClustersListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_state_error_component import (
-            ApiV1KubernetesClustersListStateErrorComponent,
+            ApiV1KubernetesClustersListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_state_not_error_component import (
-            ApiV1KubernetesClustersListStateNotErrorComponent,
+            ApiV1KubernetesClustersListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_time_range_error_component import (
-            ApiV1KubernetesClustersListTimeRangeErrorComponent,
+            ApiV1KubernetesClustersListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_updated_at_error_component import (
-            ApiV1KubernetesClustersListUpdatedAtErrorComponent,
+            ApiV1KubernetesClustersListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_clusters_list_workspaces_error_component import (
-            ApiV1KubernetesClustersListWorkspacesErrorComponent,
+            ApiV1KubernetesClustersListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

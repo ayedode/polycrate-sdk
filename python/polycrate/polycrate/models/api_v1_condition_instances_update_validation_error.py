@@ -163,88 +163,88 @@ class ApiV1ConditionInstancesUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_condition_instances_update_active_error_component import (
-            ApiV1ConditionInstancesUpdateActiveErrorComponent,
+            ApiV1ConditionInstancesUpdateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_annotations_error_component import (
-            ApiV1ConditionInstancesUpdateAnnotationsErrorComponent,
+            ApiV1ConditionInstancesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_archived_at_error_component import (
-            ApiV1ConditionInstancesUpdateArchivedAtErrorComponent,
+            ApiV1ConditionInstancesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_archived_error_component import (
-            ApiV1ConditionInstancesUpdateArchivedErrorComponent,
+            ApiV1ConditionInstancesUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_archived_reason_error_component import (
-            ApiV1ConditionInstancesUpdateArchivedReasonErrorComponent,
+            ApiV1ConditionInstancesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_condition_error_component import (
-            ApiV1ConditionInstancesUpdateConditionErrorComponent,
+            ApiV1ConditionInstancesUpdateConditionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_context_error_component import (
-            ApiV1ConditionInstancesUpdateContextErrorComponent,
+            ApiV1ConditionInstancesUpdateContextErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_criticality_error_component import (
-            ApiV1ConditionInstancesUpdateCriticalityErrorComponent,
+            ApiV1ConditionInstancesUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_debug_mode_error_component import (
-            ApiV1ConditionInstancesUpdateDebugModeErrorComponent,
+            ApiV1ConditionInstancesUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_display_name_error_component import (
-            ApiV1ConditionInstancesUpdateDisplayNameErrorComponent,
+            ApiV1ConditionInstancesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_immediate_error_component import (
-            ApiV1ConditionInstancesUpdateImmediateErrorComponent,
+            ApiV1ConditionInstancesUpdateImmediateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_kind_error_component import (
-            ApiV1ConditionInstancesUpdateKindErrorComponent,
+            ApiV1ConditionInstancesUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_labels_error_component import (
-            ApiV1ConditionInstancesUpdateLabelsErrorComponent,
+            ApiV1ConditionInstancesUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_name_error_component import (
-            ApiV1ConditionInstancesUpdateNameErrorComponent,
+            ApiV1ConditionInstancesUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_non_field_errors_error_component import (
-            ApiV1ConditionInstancesUpdateNonFieldErrorsErrorComponent,
+            ApiV1ConditionInstancesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_object_id_error_component import (
-            ApiV1ConditionInstancesUpdateObjectIdErrorComponent,
+            ApiV1ConditionInstancesUpdateObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_platform_service_error_component import (
-            ApiV1ConditionInstancesUpdatePlatformServiceErrorComponent,
+            ApiV1ConditionInstancesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_provider_error_component import (
-            ApiV1ConditionInstancesUpdateProviderErrorComponent,
+            ApiV1ConditionInstancesUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_provider_id_error_component import (
-            ApiV1ConditionInstancesUpdateProviderIdErrorComponent,
+            ApiV1ConditionInstancesUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_provider_reference_error_component import (
-            ApiV1ConditionInstancesUpdateProviderReferenceErrorComponent,
+            ApiV1ConditionInstancesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_reason_error_component import (
-            ApiV1ConditionInstancesUpdateReasonErrorComponent,
+            ApiV1ConditionInstancesUpdateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_reconciliation_enabled_error_component import (
-            ApiV1ConditionInstancesUpdateReconciliationEnabledErrorComponent,
+            ApiV1ConditionInstancesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_sla_availability_error_component import (
-            ApiV1ConditionInstancesUpdateSlaAvailabilityErrorComponent,
+            ApiV1ConditionInstancesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_sla_target_error_component import (
-            ApiV1ConditionInstancesUpdateSlaTargetErrorComponent,
+            ApiV1ConditionInstancesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_slo_availability_error_component import (
-            ApiV1ConditionInstancesUpdateSloAvailabilityErrorComponent,
+            ApiV1ConditionInstancesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_slo_target_error_component import (
-            ApiV1ConditionInstancesUpdateSloTargetErrorComponent,
+            ApiV1ConditionInstancesUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_target_availability_error_component import (
-            ApiV1ConditionInstancesUpdateTargetAvailabilityErrorComponent,
+            ApiV1ConditionInstancesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_tolerations_error_component import (
-            ApiV1ConditionInstancesUpdateTolerationsErrorComponent,
+            ApiV1ConditionInstancesUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -327,91 +327,91 @@ class ApiV1ConditionInstancesUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_condition_instances_update_active_error_component import (
-            ApiV1ConditionInstancesUpdateActiveErrorComponent,
+            ApiV1ConditionInstancesUpdateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_annotations_error_component import (
-            ApiV1ConditionInstancesUpdateAnnotationsErrorComponent,
+            ApiV1ConditionInstancesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_archived_at_error_component import (
-            ApiV1ConditionInstancesUpdateArchivedAtErrorComponent,
+            ApiV1ConditionInstancesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_archived_error_component import (
-            ApiV1ConditionInstancesUpdateArchivedErrorComponent,
+            ApiV1ConditionInstancesUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_archived_reason_error_component import (
-            ApiV1ConditionInstancesUpdateArchivedReasonErrorComponent,
+            ApiV1ConditionInstancesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_condition_error_component import (
-            ApiV1ConditionInstancesUpdateConditionErrorComponent,
+            ApiV1ConditionInstancesUpdateConditionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_context_error_component import (
-            ApiV1ConditionInstancesUpdateContextErrorComponent,
+            ApiV1ConditionInstancesUpdateContextErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_criticality_error_component import (
-            ApiV1ConditionInstancesUpdateCriticalityErrorComponent,
+            ApiV1ConditionInstancesUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_debug_mode_error_component import (
-            ApiV1ConditionInstancesUpdateDebugModeErrorComponent,
+            ApiV1ConditionInstancesUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_display_name_error_component import (
-            ApiV1ConditionInstancesUpdateDisplayNameErrorComponent,
+            ApiV1ConditionInstancesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_immediate_error_component import (
-            ApiV1ConditionInstancesUpdateImmediateErrorComponent,
+            ApiV1ConditionInstancesUpdateImmediateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_kind_error_component import (
-            ApiV1ConditionInstancesUpdateKindErrorComponent,
+            ApiV1ConditionInstancesUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_labels_error_component import (
-            ApiV1ConditionInstancesUpdateLabelsErrorComponent,
+            ApiV1ConditionInstancesUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_name_error_component import (
-            ApiV1ConditionInstancesUpdateNameErrorComponent,
+            ApiV1ConditionInstancesUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_non_field_errors_error_component import (
-            ApiV1ConditionInstancesUpdateNonFieldErrorsErrorComponent,
+            ApiV1ConditionInstancesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_object_id_error_component import (
-            ApiV1ConditionInstancesUpdateObjectIdErrorComponent,
+            ApiV1ConditionInstancesUpdateObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_platform_service_error_component import (
-            ApiV1ConditionInstancesUpdatePlatformServiceErrorComponent,
+            ApiV1ConditionInstancesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_provider_error_component import (
-            ApiV1ConditionInstancesUpdateProviderErrorComponent,
+            ApiV1ConditionInstancesUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_provider_id_error_component import (
-            ApiV1ConditionInstancesUpdateProviderIdErrorComponent,
+            ApiV1ConditionInstancesUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_provider_reference_error_component import (
-            ApiV1ConditionInstancesUpdateProviderReferenceErrorComponent,
+            ApiV1ConditionInstancesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_reason_error_component import (
-            ApiV1ConditionInstancesUpdateReasonErrorComponent,
+            ApiV1ConditionInstancesUpdateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_reconciliation_enabled_error_component import (
-            ApiV1ConditionInstancesUpdateReconciliationEnabledErrorComponent,
+            ApiV1ConditionInstancesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_resolved_at_error_component import (
-            ApiV1ConditionInstancesUpdateResolvedAtErrorComponent,
+            ApiV1ConditionInstancesUpdateResolvedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_sla_availability_error_component import (
-            ApiV1ConditionInstancesUpdateSlaAvailabilityErrorComponent,
+            ApiV1ConditionInstancesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_sla_target_error_component import (
-            ApiV1ConditionInstancesUpdateSlaTargetErrorComponent,
+            ApiV1ConditionInstancesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_slo_availability_error_component import (
-            ApiV1ConditionInstancesUpdateSloAvailabilityErrorComponent,
+            ApiV1ConditionInstancesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_slo_target_error_component import (
-            ApiV1ConditionInstancesUpdateSloTargetErrorComponent,
+            ApiV1ConditionInstancesUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_target_availability_error_component import (
-            ApiV1ConditionInstancesUpdateTargetAvailabilityErrorComponent,
+            ApiV1ConditionInstancesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_condition_instances_update_tolerations_error_component import (
-            ApiV1ConditionInstancesUpdateTolerationsErrorComponent,
+            ApiV1ConditionInstancesUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -56,19 +56,19 @@ class ApiV1PolicyBindingsToggleCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_policy_bindings_toggle_create_applied_error_component import (
-            ApiV1PolicyBindingsToggleCreateAppliedErrorComponent,
+            ApiV1PolicyBindingsToggleCreateAppliedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_toggle_create_enabled_error_component import (
-            ApiV1PolicyBindingsToggleCreateEnabledErrorComponent,
+            ApiV1PolicyBindingsToggleCreateEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_toggle_create_non_field_errors_error_component import (
-            ApiV1PolicyBindingsToggleCreateNonFieldErrorsErrorComponent,
+            ApiV1PolicyBindingsToggleCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_toggle_create_policy_id_error_component import (
-            ApiV1PolicyBindingsToggleCreatePolicyIdErrorComponent,
+            ApiV1PolicyBindingsToggleCreatePolicyIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_toggle_create_scope_error_component import (
-            ApiV1PolicyBindingsToggleCreateScopeErrorComponent,
+            ApiV1PolicyBindingsToggleCreateScopeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -105,22 +105,22 @@ class ApiV1PolicyBindingsToggleCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_policy_bindings_toggle_create_applied_error_component import (
-            ApiV1PolicyBindingsToggleCreateAppliedErrorComponent,
+            ApiV1PolicyBindingsToggleCreateAppliedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_toggle_create_enabled_error_component import (
-            ApiV1PolicyBindingsToggleCreateEnabledErrorComponent,
+            ApiV1PolicyBindingsToggleCreateEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_toggle_create_execution_log_error_component import (
-            ApiV1PolicyBindingsToggleCreateExecutionLogErrorComponent,
+            ApiV1PolicyBindingsToggleCreateExecutionLogErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_toggle_create_non_field_errors_error_component import (
-            ApiV1PolicyBindingsToggleCreateNonFieldErrorsErrorComponent,
+            ApiV1PolicyBindingsToggleCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_toggle_create_policy_id_error_component import (
-            ApiV1PolicyBindingsToggleCreatePolicyIdErrorComponent,
+            ApiV1PolicyBindingsToggleCreatePolicyIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_policy_bindings_toggle_create_scope_error_component import (
-            ApiV1PolicyBindingsToggleCreateScopeErrorComponent,
+            ApiV1PolicyBindingsToggleCreateScopeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

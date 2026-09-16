@@ -108,52 +108,52 @@ class ApiV1KubernetesWorkerPoolsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_kubernetes_worker_pools_list_controlplane_error_component import (
-            ApiV1KubernetesWorkerPoolsListControlplaneErrorComponent,
+            ApiV1KubernetesWorkerPoolsListControlplaneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_created_at_error_component import (
-            ApiV1KubernetesWorkerPoolsListCreatedAtErrorComponent,
+            ApiV1KubernetesWorkerPoolsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_created_by_component_error_component import (
-            ApiV1KubernetesWorkerPoolsListCreatedByComponentErrorComponent,
+            ApiV1KubernetesWorkerPoolsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_created_by_users_error_component import (
-            ApiV1KubernetesWorkerPoolsListCreatedByUsersErrorComponent,
+            ApiV1KubernetesWorkerPoolsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_desired_count_error_component import (
-            ApiV1KubernetesWorkerPoolsListDesiredCountErrorComponent,
+            ApiV1KubernetesWorkerPoolsListDesiredCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_kind_error_component import (
-            ApiV1KubernetesWorkerPoolsListKindErrorComponent,
+            ApiV1KubernetesWorkerPoolsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_name_error_component import (
-            ApiV1KubernetesWorkerPoolsListNameErrorComponent,
+            ApiV1KubernetesWorkerPoolsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_organizations_error_component import (
-            ApiV1KubernetesWorkerPoolsListOrganizationsErrorComponent,
+            ApiV1KubernetesWorkerPoolsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_provider_account_error_component import (
-            ApiV1KubernetesWorkerPoolsListProviderAccountErrorComponent,
+            ApiV1KubernetesWorkerPoolsListProviderAccountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_scope_error_component import (
-            ApiV1KubernetesWorkerPoolsListScopeErrorComponent,
+            ApiV1KubernetesWorkerPoolsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_search_error_component import (
-            ApiV1KubernetesWorkerPoolsListSearchErrorComponent,
+            ApiV1KubernetesWorkerPoolsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_state_error_component import (
-            ApiV1KubernetesWorkerPoolsListStateErrorComponent,
+            ApiV1KubernetesWorkerPoolsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_state_not_error_component import (
-            ApiV1KubernetesWorkerPoolsListStateNotErrorComponent,
+            ApiV1KubernetesWorkerPoolsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_time_range_error_component import (
-            ApiV1KubernetesWorkerPoolsListTimeRangeErrorComponent,
+            ApiV1KubernetesWorkerPoolsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_updated_at_error_component import (
-            ApiV1KubernetesWorkerPoolsListUpdatedAtErrorComponent,
+            ApiV1KubernetesWorkerPoolsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_workspaces_error_component import (
-            ApiV1KubernetesWorkerPoolsListWorkspacesErrorComponent,
+            ApiV1KubernetesWorkerPoolsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -212,55 +212,55 @@ class ApiV1KubernetesWorkerPoolsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_kubernetes_worker_pools_list_controlplane_error_component import (
-            ApiV1KubernetesWorkerPoolsListControlplaneErrorComponent,
+            ApiV1KubernetesWorkerPoolsListControlplaneErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_created_at_error_component import (
-            ApiV1KubernetesWorkerPoolsListCreatedAtErrorComponent,
+            ApiV1KubernetesWorkerPoolsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_created_by_component_error_component import (
-            ApiV1KubernetesWorkerPoolsListCreatedByComponentErrorComponent,
+            ApiV1KubernetesWorkerPoolsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_created_by_users_error_component import (
-            ApiV1KubernetesWorkerPoolsListCreatedByUsersErrorComponent,
+            ApiV1KubernetesWorkerPoolsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_desired_count_error_component import (
-            ApiV1KubernetesWorkerPoolsListDesiredCountErrorComponent,
+            ApiV1KubernetesWorkerPoolsListDesiredCountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_kind_error_component import (
-            ApiV1KubernetesWorkerPoolsListKindErrorComponent,
+            ApiV1KubernetesWorkerPoolsListKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_name_error_component import (
-            ApiV1KubernetesWorkerPoolsListNameErrorComponent,
+            ApiV1KubernetesWorkerPoolsListNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_name_exact_error_component import (
-            ApiV1KubernetesWorkerPoolsListNameExactErrorComponent,
+            ApiV1KubernetesWorkerPoolsListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_organizations_error_component import (
-            ApiV1KubernetesWorkerPoolsListOrganizationsErrorComponent,
+            ApiV1KubernetesWorkerPoolsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_provider_account_error_component import (
-            ApiV1KubernetesWorkerPoolsListProviderAccountErrorComponent,
+            ApiV1KubernetesWorkerPoolsListProviderAccountErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_scope_error_component import (
-            ApiV1KubernetesWorkerPoolsListScopeErrorComponent,
+            ApiV1KubernetesWorkerPoolsListScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_search_error_component import (
-            ApiV1KubernetesWorkerPoolsListSearchErrorComponent,
+            ApiV1KubernetesWorkerPoolsListSearchErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_state_error_component import (
-            ApiV1KubernetesWorkerPoolsListStateErrorComponent,
+            ApiV1KubernetesWorkerPoolsListStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_state_not_error_component import (
-            ApiV1KubernetesWorkerPoolsListStateNotErrorComponent,
+            ApiV1KubernetesWorkerPoolsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_time_range_error_component import (
-            ApiV1KubernetesWorkerPoolsListTimeRangeErrorComponent,
+            ApiV1KubernetesWorkerPoolsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_updated_at_error_component import (
-            ApiV1KubernetesWorkerPoolsListUpdatedAtErrorComponent,
+            ApiV1KubernetesWorkerPoolsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_kubernetes_worker_pools_list_workspaces_error_component import (
-            ApiV1KubernetesWorkerPoolsListWorkspacesErrorComponent,
+            ApiV1KubernetesWorkerPoolsListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

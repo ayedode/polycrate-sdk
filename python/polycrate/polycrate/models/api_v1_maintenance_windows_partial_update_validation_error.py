@@ -168,85 +168,85 @@ class ApiV1MaintenanceWindowsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_maintenance_windows_partial_update_annotations_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateAnnotationsErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_archived_at_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateArchivedAtErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_archived_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateArchivedErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_archived_reason_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_criticality_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateCriticalityErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_debug_mode_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateDebugModeErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_description_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateDescriptionErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_display_name_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateDisplayNameErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_is_system_default_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateIsSystemDefaultErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_kind_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateKindErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_labels_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateLabelsErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_lead_time_days_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateLeadTimeDaysErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateLeadTimeDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_name_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateNameErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_non_field_errors_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_note_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateNoteErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateNoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_notice_required_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateNoticeRequiredErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateNoticeRequiredErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_platform_service_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_provider_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateProviderErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_provider_id_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateProviderIdErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_provider_reference_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_reconciliation_enabled_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_sla_availability_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_sla_target_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateSlaTargetErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_slo_availability_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_slo_target_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateSloTargetErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_target_availability_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_tolerations_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateTolerationsErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -327,88 +327,88 @@ class ApiV1MaintenanceWindowsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_maintenance_windows_partial_update_annotations_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateAnnotationsErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_archived_at_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateArchivedAtErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_archived_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateArchivedErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_archived_reason_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_criticality_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateCriticalityErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_debug_mode_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateDebugModeErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_description_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateDescriptionErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_display_name_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateDisplayNameErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_is_system_default_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateIsSystemDefaultErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateIsSystemDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_kind_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateKindErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_labels_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateLabelsErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_lead_time_days_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateLeadTimeDaysErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateLeadTimeDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_name_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateNameErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_non_field_errors_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_note_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateNoteErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateNoteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_notice_required_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateNoticeRequiredErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateNoticeRequiredErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_platform_service_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_provider_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateProviderErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_provider_id_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateProviderIdErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_provider_reference_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_reconciliation_enabled_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_sla_availability_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_sla_target_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateSlaTargetErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_slo_availability_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_slo_target_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateSloTargetErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_target_availability_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_time_slots_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateTimeSlotsErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateTimeSlotsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_maintenance_windows_partial_update_tolerations_error_component import (
-            ApiV1MaintenanceWindowsPartialUpdateTolerationsErrorComponent,
+            ApiV1MaintenanceWindowsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

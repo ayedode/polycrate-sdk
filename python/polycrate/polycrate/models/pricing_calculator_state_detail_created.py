@@ -36,7 +36,7 @@ class PricingCalculatorStateDetailCreated:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.pricing_calculator_state_detail_created_created_by_type_0 import (
-            PricingCalculatorStateDetailCreatedCreatedByType0,
+            PricingCalculatorStateDetailCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         created_at: None | str | Unset
@@ -84,7 +84,7 @@ class PricingCalculatorStateDetailCreated:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.pricing_calculator_state_detail_created_created_by_type_0 import (
-            PricingCalculatorStateDetailCreatedCreatedByType0,
+            PricingCalculatorStateDetailCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

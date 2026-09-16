@@ -328,181 +328,181 @@ class ApiV1BlockRolloutConfigsTriggerNowCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_block_rollout_configs_trigger_now_create_action_name_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateActionNameErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateActionNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_active_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateActiveErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_actual_availability_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateActualAvailabilityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_annotations_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateAnnotationsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_archived_at_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedAtErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_archived_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_archived_reason_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedReasonErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_auto_takeover_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateAutoTakeoverErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateAutoTakeoverErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_block_config_template_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateBlockConfigTemplateErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateBlockConfigTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_block_name_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateBlockNameErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateBlockNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_bypass_maintenance_window_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateBypassMaintenanceWindowErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateBypassMaintenanceWindowErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_conditions_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateConditionsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateConditionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_config_to_credential_mappings_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateConfigToCredentialMappingsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateConfigToCredentialMappingsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_criticality_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateCriticalityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_cron_expression_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateCronExpressionErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateCronExpressionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_debug_mode_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDebugModeErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_discovery_enabled_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryEnabledErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_discovery_running_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryRunningErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_discovery_task_id_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryTaskIdErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_discovery_task_meta_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryTaskMetaErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_display_name_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDisplayNameErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_enqueue_reason_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateEnqueueReasonErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateEnqueueReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_failure_threshold_percent_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateFailureThresholdPercentErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateFailureThresholdPercentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_is_system_config_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateIsSystemConfigErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateIsSystemConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_kind_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateKindErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_labels_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateLabelsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_last_state_change_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateLastStateChangeErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateLastStateChangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_last_state_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateLastStateErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateLastStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_maintenance_window_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateMaintenanceWindowErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateMaintenanceWindowErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_max_concurrent_percent_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateMaxConcurrentPercentErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateMaxConcurrentPercentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_max_retries_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateMaxRetriesErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateMaxRetriesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_name_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateNameErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_non_field_errors_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateNonFieldErrorsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_platform_service_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreatePlatformServiceErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_provider_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateProviderErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_provider_id_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateProviderIdErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_provider_reference_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateProviderReferenceErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_reconciliation_enabled_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationEnabledErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_reconciliation_running_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationRunningErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_reconciliation_task_id_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationTaskIdErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_reconciliation_task_meta_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationTaskMetaErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_repair_running_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateRepairRunningErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateRepairRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_repair_task_id_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateRepairTaskIdErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateRepairTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_repair_task_meta_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateRepairTaskMetaErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateRepairTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_scope_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateScopeErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_scope_expressions_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateScopeExpressionsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateScopeExpressionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_sla_availability_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateSlaAvailabilityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_sla_target_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateSlaTargetErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_slo_availability_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateSloAvailabilityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_slo_target_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateSloTargetErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_state_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateStateErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_state_reason_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateStateReasonErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateStateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_target_availability_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTargetAvailabilityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_target_organizations_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTargetOrganizationsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTargetOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_target_version_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTargetVersionErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTargetVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_target_workspaces_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTargetWorkspacesErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTargetWorkspacesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_template_block_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTemplateBlockErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTemplateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_tolerations_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTolerationsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_trigger_type_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTriggerTypeErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTriggerTypeErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -667,184 +667,184 @@ class ApiV1BlockRolloutConfigsTriggerNowCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_block_rollout_configs_trigger_now_create_action_name_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateActionNameErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateActionNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_active_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateActiveErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_actual_availability_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateActualAvailabilityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_annotations_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateAnnotationsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_archived_at_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedAtErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_archived_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_archived_reason_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedReasonErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_auto_takeover_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateAutoTakeoverErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateAutoTakeoverErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_block_config_template_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateBlockConfigTemplateErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateBlockConfigTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_block_name_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateBlockNameErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateBlockNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_bypass_maintenance_window_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateBypassMaintenanceWindowErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateBypassMaintenanceWindowErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_conditions_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateConditionsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateConditionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_config_to_credential_mappings_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateConfigToCredentialMappingsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateConfigToCredentialMappingsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_criticality_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateCriticalityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_cron_expression_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateCronExpressionErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateCronExpressionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_debug_mode_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDebugModeErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_discovery_enabled_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryEnabledErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_discovery_running_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryRunningErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_discovery_task_id_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryTaskIdErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_discovery_task_meta_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryTaskMetaErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDiscoveryTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_display_name_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateDisplayNameErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_enqueue_reason_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateEnqueueReasonErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateEnqueueReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_failure_threshold_percent_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateFailureThresholdPercentErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateFailureThresholdPercentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_is_system_config_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateIsSystemConfigErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateIsSystemConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_kind_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateKindErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_labels_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateLabelsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_last_state_change_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateLastStateChangeErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateLastStateChangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_last_state_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateLastStateErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateLastStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_maintenance_window_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateMaintenanceWindowErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateMaintenanceWindowErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_max_concurrent_percent_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateMaxConcurrentPercentErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateMaxConcurrentPercentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_max_retries_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateMaxRetriesErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateMaxRetriesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_name_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateNameErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_non_field_errors_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateNonFieldErrorsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_notify_on_wave_blocked_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateNotifyOnWaveBlockedErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateNotifyOnWaveBlockedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_platform_service_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreatePlatformServiceErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_provider_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateProviderErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_provider_id_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateProviderIdErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_provider_reference_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateProviderReferenceErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_reconciliation_enabled_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationEnabledErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_reconciliation_running_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationRunningErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_reconciliation_task_id_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationTaskIdErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_reconciliation_task_meta_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationTaskMetaErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateReconciliationTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_repair_running_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateRepairRunningErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateRepairRunningErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_repair_task_id_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateRepairTaskIdErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateRepairTaskIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_repair_task_meta_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateRepairTaskMetaErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateRepairTaskMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_scope_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateScopeErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_scope_expressions_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateScopeExpressionsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateScopeExpressionsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_sla_availability_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateSlaAvailabilityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_sla_target_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateSlaTargetErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_slo_availability_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateSloAvailabilityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_slo_target_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateSloTargetErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_state_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateStateErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateStateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_state_reason_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateStateReasonErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateStateReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_target_availability_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTargetAvailabilityErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_target_organizations_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTargetOrganizationsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTargetOrganizationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_target_version_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTargetVersionErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTargetVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_target_workspaces_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTargetWorkspacesErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTargetWorkspacesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_template_block_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTemplateBlockErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTemplateBlockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_tolerations_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTolerationsErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_block_rollout_configs_trigger_now_create_trigger_type_error_component import (
-            ApiV1BlockRolloutConfigsTriggerNowCreateTriggerTypeErrorComponent,
+            ApiV1BlockRolloutConfigsTriggerNowCreateTriggerTypeErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

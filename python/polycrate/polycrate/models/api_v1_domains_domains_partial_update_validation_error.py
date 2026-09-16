@@ -256,139 +256,139 @@ class ApiV1DomainsDomainsPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_domains_partial_update_admin_contact_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateAdminContactIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateAdminContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_annotations_error_component import (
-            ApiV1DomainsDomainsPartialUpdateAnnotationsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_archived_at_error_component import (
-            ApiV1DomainsDomainsPartialUpdateArchivedAtErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_archived_by_error_component import (
-            ApiV1DomainsDomainsPartialUpdateArchivedByErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_archived_error_component import (
-            ApiV1DomainsDomainsPartialUpdateArchivedErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_archived_reason_error_component import (
-            ApiV1DomainsDomainsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_auth_code_credential_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateAuthCodeCredentialIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateAuthCodeCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_created_by_component_error_component import (
-            ApiV1DomainsDomainsPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_criticality_error_component import (
-            ApiV1DomainsDomainsPartialUpdateCriticalityErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_debug_mode_error_component import (
-            ApiV1DomainsDomainsPartialUpdateDebugModeErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_display_name_error_component import (
-            ApiV1DomainsDomainsPartialUpdateDisplayNameErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_dns_zone_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateDnsZoneIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateDnsZoneIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_expiry_date_error_component import (
-            ApiV1DomainsDomainsPartialUpdateExpiryDateErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_kind_error_component import (
-            ApiV1DomainsDomainsPartialUpdateKindErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_labels_error_component import (
-            ApiV1DomainsDomainsPartialUpdateLabelsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDomainsPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_managed_by_content_type_error_component import (
-            ApiV1DomainsDomainsPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_managed_by_object_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_modified_by_user_error_component import (
-            ApiV1DomainsDomainsPartialUpdateModifiedByUserErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_name_error_component import (
-            ApiV1DomainsDomainsPartialUpdateNameErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_nameservers_error_component import (
-            ApiV1DomainsDomainsPartialUpdateNameserversErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateNameserversErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_non_field_errors_error_component import (
-            ApiV1DomainsDomainsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_owner_contact_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateOwnerContactIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateOwnerContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_platform_dns_record_created_error_component import (
-            ApiV1DomainsDomainsPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDomainsPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_platform_service_error_component import (
-            ApiV1DomainsDomainsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1DomainsDomainsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_provider_error_component import (
-            ApiV1DomainsDomainsPartialUpdateProviderErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_provider_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateProviderIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_provider_reference_error_component import (
-            ApiV1DomainsDomainsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_provider_status_error_component import (
-            ApiV1DomainsDomainsPartialUpdateProviderStatusErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateProviderStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_reconciliation_enabled_error_component import (
-            ApiV1DomainsDomainsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_registrar_domain_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateRegistrarDomainIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateRegistrarDomainIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_registrar_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateRegistrarIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateRegistrarIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_registrar_metadata_error_component import (
-            ApiV1DomainsDomainsPartialUpdateRegistrarMetadataErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateRegistrarMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_renewal_mode_error_component import (
-            ApiV1DomainsDomainsPartialUpdateRenewalModeErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateRenewalModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_sla_availability_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_sla_target_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSlaTargetErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_sla_window_days_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_slo_availability_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_slo_target_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSloTargetErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_slo_window_days_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_target_availability_error_component import (
-            ApiV1DomainsDomainsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_tech_contact_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateTechContactIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateTechContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_tolerations_error_component import (
-            ApiV1DomainsDomainsPartialUpdateTolerationsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_transfer_lock_error_component import (
-            ApiV1DomainsDomainsPartialUpdateTransferLockErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateTransferLockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_use_platform_dns_error_component import (
-            ApiV1DomainsDomainsPartialUpdateUsePlatformDnsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateUsePlatformDnsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -507,142 +507,142 @@ class ApiV1DomainsDomainsPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_domains_partial_update_admin_contact_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateAdminContactIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateAdminContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_annotations_error_component import (
-            ApiV1DomainsDomainsPartialUpdateAnnotationsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_archived_at_error_component import (
-            ApiV1DomainsDomainsPartialUpdateArchivedAtErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_archived_by_error_component import (
-            ApiV1DomainsDomainsPartialUpdateArchivedByErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_archived_error_component import (
-            ApiV1DomainsDomainsPartialUpdateArchivedErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_archived_reason_error_component import (
-            ApiV1DomainsDomainsPartialUpdateArchivedReasonErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_auth_code_credential_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateAuthCodeCredentialIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateAuthCodeCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_created_by_component_error_component import (
-            ApiV1DomainsDomainsPartialUpdateCreatedByComponentErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_created_by_user_error_component import (
-            ApiV1DomainsDomainsPartialUpdateCreatedByUserErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_criticality_error_component import (
-            ApiV1DomainsDomainsPartialUpdateCriticalityErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_debug_mode_error_component import (
-            ApiV1DomainsDomainsPartialUpdateDebugModeErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_display_name_error_component import (
-            ApiV1DomainsDomainsPartialUpdateDisplayNameErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_dns_zone_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateDnsZoneIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateDnsZoneIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_expiry_date_error_component import (
-            ApiV1DomainsDomainsPartialUpdateExpiryDateErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateExpiryDateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_kind_error_component import (
-            ApiV1DomainsDomainsPartialUpdateKindErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_labels_error_component import (
-            ApiV1DomainsDomainsPartialUpdateLabelsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDomainsPartialUpdateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_managed_by_content_type_error_component import (
-            ApiV1DomainsDomainsPartialUpdateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_managed_by_object_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_modified_by_user_error_component import (
-            ApiV1DomainsDomainsPartialUpdateModifiedByUserErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_name_error_component import (
-            ApiV1DomainsDomainsPartialUpdateNameErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_nameservers_error_component import (
-            ApiV1DomainsDomainsPartialUpdateNameserversErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateNameserversErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_non_field_errors_error_component import (
-            ApiV1DomainsDomainsPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_owner_contact_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateOwnerContactIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateOwnerContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_platform_dns_record_created_error_component import (
-            ApiV1DomainsDomainsPartialUpdatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDomainsPartialUpdatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_platform_service_error_component import (
-            ApiV1DomainsDomainsPartialUpdatePlatformServiceErrorComponent,
+            ApiV1DomainsDomainsPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_provider_error_component import (
-            ApiV1DomainsDomainsPartialUpdateProviderErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_provider_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateProviderIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_provider_reference_error_component import (
-            ApiV1DomainsDomainsPartialUpdateProviderReferenceErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_provider_status_error_component import (
-            ApiV1DomainsDomainsPartialUpdateProviderStatusErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateProviderStatusErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_reconciliation_enabled_error_component import (
-            ApiV1DomainsDomainsPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_registrar_domain_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateRegistrarDomainIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateRegistrarDomainIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_registrar_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateRegistrarIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateRegistrarIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_registrar_metadata_error_component import (
-            ApiV1DomainsDomainsPartialUpdateRegistrarMetadataErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateRegistrarMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_renewal_mode_error_component import (
-            ApiV1DomainsDomainsPartialUpdateRenewalModeErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateRenewalModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_sla_availability_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_sla_target_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSlaTargetErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_sla_window_days_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_slo_availability_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_slo_target_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSloTargetErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_slo_window_days_error_component import (
-            ApiV1DomainsDomainsPartialUpdateSloWindowDaysErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_target_availability_error_component import (
-            ApiV1DomainsDomainsPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_tech_contact_id_error_component import (
-            ApiV1DomainsDomainsPartialUpdateTechContactIdErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateTechContactIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_tolerations_error_component import (
-            ApiV1DomainsDomainsPartialUpdateTolerationsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_transfer_lock_error_component import (
-            ApiV1DomainsDomainsPartialUpdateTransferLockErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateTransferLockErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domains_partial_update_use_platform_dns_error_component import (
-            ApiV1DomainsDomainsPartialUpdateUsePlatformDnsErrorComponent,
+            ApiV1DomainsDomainsPartialUpdateUsePlatformDnsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

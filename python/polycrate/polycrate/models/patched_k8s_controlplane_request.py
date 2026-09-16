@@ -3,6 +3,7 @@ from __future__ import annotations
 import datetime
 from collections.abc import Mapping
 from typing import Any, TypeVar, cast
+from uuid import UUID
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -10,6 +11,7 @@ from attrs import field as _attrs_field
 from .. import types
 from ..models.blank_enum import BlankEnum, check_blank_enum
 from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
+from ..models.exposure_type_enum import ExposureTypeEnum, check_exposure_type_enum
 from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
 from ..models.loadbalancer_mode_enum import LoadbalancerModeEnum, check_loadbalancer_mode_enum
 from ..models.provider_enum import ProviderEnum, check_provider_enum
@@ -83,9 +85,21 @@ class PatchedK8SControlplaneRequest:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
+            organization_id (UUID | Unset):
+            workspace_id (UUID | Unset):
+            region_id (UUID | Unset):
             loadbalancer_mode (LoadbalancerModeEnum | Unset): * `cluster` - Cluster
                 * `external` - External
             loadbalancer_provider (str | Unset):
+            exposure_type (ExposureTypeEnum | Unset): * `gateway` - Gateway API (Envoy)
+                * `ingress` - Ingress (nginx)
+                * `loadbalancer` - LoadBalancer
+            parent_gateway_name (str | Unset): Platform Gateway to attach TLSRoute to (empty → create own Gateway).
+            parent_gateway_namespace (str | Unset):
+            parent_gateway_section_name (str | Unset): Listener name on the parent Gateway (must match Envoy listener).
+            gateway_class_name (str | Unset): GatewayClass when creating an own Gateway (parent_gateway_name empty).
+            audit_logging_enabled (bool | Unset):
+            secrets_encryption_enabled (bool | Unset):
             storage_class (str | Unset):
             persistence_size (str | Unset):
             cluster_domain (str | Unset):
@@ -114,8 +128,18 @@ class PatchedK8SControlplaneRequest:
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
+    organization_id: UUID | Unset = UNSET
+    workspace_id: UUID | Unset = UNSET
+    region_id: UUID | Unset = UNSET
     loadbalancer_mode: LoadbalancerModeEnum | Unset = UNSET
     loadbalancer_provider: str | Unset = UNSET
+    exposure_type: ExposureTypeEnum | Unset = UNSET
+    parent_gateway_name: str | Unset = UNSET
+    parent_gateway_namespace: str | Unset = UNSET
+    parent_gateway_section_name: str | Unset = UNSET
+    gateway_class_name: str | Unset = UNSET
+    audit_logging_enabled: bool | Unset = UNSET
+    secrets_encryption_enabled: bool | Unset = UNSET
     storage_class: str | Unset = UNSET
     persistence_size: str | Unset = UNSET
     cluster_domain: str | Unset = UNSET
@@ -216,11 +240,39 @@ class PatchedK8SControlplaneRequest:
 
         sla_availability = self.sla_availability
 
+        organization_id: str | Unset = UNSET
+        if not isinstance(self.organization_id, Unset):
+            organization_id = str(self.organization_id)
+
+        workspace_id: str | Unset = UNSET
+        if not isinstance(self.workspace_id, Unset):
+            workspace_id = str(self.workspace_id)
+
+        region_id: str | Unset = UNSET
+        if not isinstance(self.region_id, Unset):
+            region_id = str(self.region_id)
+
         loadbalancer_mode: str | Unset = UNSET
         if not isinstance(self.loadbalancer_mode, Unset):
             loadbalancer_mode = self.loadbalancer_mode
 
         loadbalancer_provider = self.loadbalancer_provider
+
+        exposure_type: str | Unset = UNSET
+        if not isinstance(self.exposure_type, Unset):
+            exposure_type = self.exposure_type
+
+        parent_gateway_name = self.parent_gateway_name
+
+        parent_gateway_namespace = self.parent_gateway_namespace
+
+        parent_gateway_section_name = self.parent_gateway_section_name
+
+        gateway_class_name = self.gateway_class_name
+
+        audit_logging_enabled = self.audit_logging_enabled
+
+        secrets_encryption_enabled = self.secrets_encryption_enabled
 
         storage_class = self.storage_class
 
@@ -277,10 +329,30 @@ class PatchedK8SControlplaneRequest:
             field_dict["sla_target"] = sla_target
         if sla_availability is not UNSET:
             field_dict["sla_availability"] = sla_availability
+        if organization_id is not UNSET:
+            field_dict["organization_id"] = organization_id
+        if workspace_id is not UNSET:
+            field_dict["workspace_id"] = workspace_id
+        if region_id is not UNSET:
+            field_dict["region_id"] = region_id
         if loadbalancer_mode is not UNSET:
             field_dict["loadbalancer_mode"] = loadbalancer_mode
         if loadbalancer_provider is not UNSET:
             field_dict["loadbalancer_provider"] = loadbalancer_provider
+        if exposure_type is not UNSET:
+            field_dict["exposure_type"] = exposure_type
+        if parent_gateway_name is not UNSET:
+            field_dict["parent_gateway_name"] = parent_gateway_name
+        if parent_gateway_namespace is not UNSET:
+            field_dict["parent_gateway_namespace"] = parent_gateway_namespace
+        if parent_gateway_section_name is not UNSET:
+            field_dict["parent_gateway_section_name"] = parent_gateway_section_name
+        if gateway_class_name is not UNSET:
+            field_dict["gateway_class_name"] = gateway_class_name
+        if audit_logging_enabled is not UNSET:
+            field_dict["audit_logging_enabled"] = audit_logging_enabled
+        if secrets_encryption_enabled is not UNSET:
+            field_dict["secrets_encryption_enabled"] = secrets_encryption_enabled
         if storage_class is not UNSET:
             field_dict["storage_class"] = storage_class
         if persistence_size is not UNSET:
@@ -391,11 +463,47 @@ class PatchedK8SControlplaneRequest:
         if not isinstance(self.sla_availability, Unset):
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
+        if not isinstance(self.organization_id, Unset):
+            files.append(("organization_id", (None, str(self.organization_id), "text/plain")))
+
+        if not isinstance(self.workspace_id, Unset):
+            files.append(("workspace_id", (None, str(self.workspace_id), "text/plain")))
+
+        if not isinstance(self.region_id, Unset):
+            files.append(("region_id", (None, str(self.region_id), "text/plain")))
+
         if not isinstance(self.loadbalancer_mode, Unset):
             files.append(("loadbalancer_mode", (None, str(self.loadbalancer_mode).encode(), "text/plain")))
 
         if not isinstance(self.loadbalancer_provider, Unset):
             files.append(("loadbalancer_provider", (None, str(self.loadbalancer_provider).encode(), "text/plain")))
+
+        if not isinstance(self.exposure_type, Unset):
+            files.append(("exposure_type", (None, str(self.exposure_type).encode(), "text/plain")))
+
+        if not isinstance(self.parent_gateway_name, Unset):
+            files.append(("parent_gateway_name", (None, str(self.parent_gateway_name).encode(), "text/plain")))
+
+        if not isinstance(self.parent_gateway_namespace, Unset):
+            files.append(
+                ("parent_gateway_namespace", (None, str(self.parent_gateway_namespace).encode(), "text/plain"))
+            )
+
+        if not isinstance(self.parent_gateway_section_name, Unset):
+            files.append(
+                ("parent_gateway_section_name", (None, str(self.parent_gateway_section_name).encode(), "text/plain"))
+            )
+
+        if not isinstance(self.gateway_class_name, Unset):
+            files.append(("gateway_class_name", (None, str(self.gateway_class_name).encode(), "text/plain")))
+
+        if not isinstance(self.audit_logging_enabled, Unset):
+            files.append(("audit_logging_enabled", (None, str(self.audit_logging_enabled).encode(), "text/plain")))
+
+        if not isinstance(self.secrets_encryption_enabled, Unset):
+            files.append(
+                ("secrets_encryption_enabled", (None, str(self.secrets_encryption_enabled).encode(), "text/plain"))
+            )
 
         if not isinstance(self.storage_class, Unset):
             files.append(("storage_class", (None, str(self.storage_class).encode(), "text/plain")))
@@ -562,6 +670,27 @@ class PatchedK8SControlplaneRequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
+        _organization_id = d.pop("organization_id", UNSET)
+        organization_id: UUID | Unset
+        if isinstance(_organization_id, Unset):
+            organization_id = UNSET
+        else:
+            organization_id = UUID(_organization_id)
+
+        _workspace_id = d.pop("workspace_id", UNSET)
+        workspace_id: UUID | Unset
+        if isinstance(_workspace_id, Unset):
+            workspace_id = UNSET
+        else:
+            workspace_id = UUID(_workspace_id)
+
+        _region_id = d.pop("region_id", UNSET)
+        region_id: UUID | Unset
+        if isinstance(_region_id, Unset):
+            region_id = UNSET
+        else:
+            region_id = UUID(_region_id)
+
         _loadbalancer_mode = d.pop("loadbalancer_mode", UNSET)
         loadbalancer_mode: LoadbalancerModeEnum | Unset
         if isinstance(_loadbalancer_mode, Unset):
@@ -570,6 +699,25 @@ class PatchedK8SControlplaneRequest:
             loadbalancer_mode = check_loadbalancer_mode_enum(_loadbalancer_mode)
 
         loadbalancer_provider = d.pop("loadbalancer_provider", UNSET)
+
+        _exposure_type = d.pop("exposure_type", UNSET)
+        exposure_type: ExposureTypeEnum | Unset
+        if isinstance(_exposure_type, Unset):
+            exposure_type = UNSET
+        else:
+            exposure_type = check_exposure_type_enum(_exposure_type)
+
+        parent_gateway_name = d.pop("parent_gateway_name", UNSET)
+
+        parent_gateway_namespace = d.pop("parent_gateway_namespace", UNSET)
+
+        parent_gateway_section_name = d.pop("parent_gateway_section_name", UNSET)
+
+        gateway_class_name = d.pop("gateway_class_name", UNSET)
+
+        audit_logging_enabled = d.pop("audit_logging_enabled", UNSET)
+
+        secrets_encryption_enabled = d.pop("secrets_encryption_enabled", UNSET)
 
         storage_class = d.pop("storage_class", UNSET)
 
@@ -601,8 +749,18 @@ class PatchedK8SControlplaneRequest:
             slo_availability=slo_availability,
             sla_target=sla_target,
             sla_availability=sla_availability,
+            organization_id=organization_id,
+            workspace_id=workspace_id,
+            region_id=region_id,
             loadbalancer_mode=loadbalancer_mode,
             loadbalancer_provider=loadbalancer_provider,
+            exposure_type=exposure_type,
+            parent_gateway_name=parent_gateway_name,
+            parent_gateway_namespace=parent_gateway_namespace,
+            parent_gateway_section_name=parent_gateway_section_name,
+            gateway_class_name=gateway_class_name,
+            audit_logging_enabled=audit_logging_enabled,
+            secrets_encryption_enabled=secrets_encryption_enabled,
             storage_class=storage_class,
             persistence_size=persistence_size,
             cluster_domain=cluster_domain,

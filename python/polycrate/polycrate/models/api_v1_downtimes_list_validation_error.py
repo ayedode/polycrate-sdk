@@ -74,27 +74,47 @@ class ApiV1DowntimesListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_downtimes_list_created_by_users_error_component import (
-            ApiV1DowntimesListCreatedByUsersErrorComponent,
+            ApiV1DowntimesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_downtimes_list_endpoints_error_component import ApiV1DowntimesListEndpointsErrorComponent
-        from ..models.api_v1_downtimes_list_incidents_error_component import ApiV1DowntimesListIncidentsErrorComponent
-        from ..models.api_v1_downtimes_list_kind_error_component import ApiV1DowntimesListKindErrorComponent
+        from ..models.api_v1_downtimes_list_endpoints_error_component import (
+            ApiV1DowntimesListEndpointsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_incidents_error_component import (
+            ApiV1DowntimesListIncidentsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_kind_error_component import (
+            ApiV1DowntimesListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_downtimes_list_kubernetes_apps_error_component import (
-            ApiV1DowntimesListKubernetesAppsErrorComponent,
+            ApiV1DowntimesListKubernetesAppsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_list_kubernetes_clusters_error_component import (
-            ApiV1DowntimesListKubernetesClustersErrorComponent,
+            ApiV1DowntimesListKubernetesClustersErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_list_organizations_error_component import (
-            ApiV1DowntimesListOrganizationsErrorComponent,
+            ApiV1DowntimesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_downtimes_list_search_error_component import ApiV1DowntimesListSearchErrorComponent
-        from ..models.api_v1_downtimes_list_since_error_component import ApiV1DowntimesListSinceErrorComponent
-        from ..models.api_v1_downtimes_list_state_error_component import ApiV1DowntimesListStateErrorComponent
-        from ..models.api_v1_downtimes_list_state_not_error_component import ApiV1DowntimesListStateNotErrorComponent
-        from ..models.api_v1_downtimes_list_time_range_error_component import ApiV1DowntimesListTimeRangeErrorComponent
-        from ..models.api_v1_downtimes_list_until_error_component import ApiV1DowntimesListUntilErrorComponent
-        from ..models.api_v1_downtimes_list_workspaces_error_component import ApiV1DowntimesListWorkspacesErrorComponent
+        from ..models.api_v1_downtimes_list_search_error_component import (
+            ApiV1DowntimesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_since_error_component import (
+            ApiV1DowntimesListSinceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_state_error_component import (
+            ApiV1DowntimesListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_state_not_error_component import (
+            ApiV1DowntimesListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_time_range_error_component import (
+            ApiV1DowntimesListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_until_error_component import (
+            ApiV1DowntimesListUntilErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_workspaces_error_component import (
+            ApiV1DowntimesListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -148,28 +168,50 @@ class ApiV1DowntimesListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_downtimes_list_created_by_users_error_component import (
-            ApiV1DowntimesListCreatedByUsersErrorComponent,
+            ApiV1DowntimesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_downtimes_list_endpoints_error_component import ApiV1DowntimesListEndpointsErrorComponent
-        from ..models.api_v1_downtimes_list_incidents_error_component import ApiV1DowntimesListIncidentsErrorComponent
-        from ..models.api_v1_downtimes_list_kind_error_component import ApiV1DowntimesListKindErrorComponent
+        from ..models.api_v1_downtimes_list_endpoints_error_component import (
+            ApiV1DowntimesListEndpointsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_incidents_error_component import (
+            ApiV1DowntimesListIncidentsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_kind_error_component import (
+            ApiV1DowntimesListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_downtimes_list_kubernetes_apps_error_component import (
-            ApiV1DowntimesListKubernetesAppsErrorComponent,
+            ApiV1DowntimesListKubernetesAppsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_downtimes_list_kubernetes_clusters_error_component import (
-            ApiV1DowntimesListKubernetesClustersErrorComponent,
+            ApiV1DowntimesListKubernetesClustersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_downtimes_list_name_exact_error_component import ApiV1DowntimesListNameExactErrorComponent
+        from ..models.api_v1_downtimes_list_name_exact_error_component import (
+            ApiV1DowntimesListNameExactErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_downtimes_list_organizations_error_component import (
-            ApiV1DowntimesListOrganizationsErrorComponent,
+            ApiV1DowntimesListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_downtimes_list_search_error_component import ApiV1DowntimesListSearchErrorComponent
-        from ..models.api_v1_downtimes_list_since_error_component import ApiV1DowntimesListSinceErrorComponent
-        from ..models.api_v1_downtimes_list_state_error_component import ApiV1DowntimesListStateErrorComponent
-        from ..models.api_v1_downtimes_list_state_not_error_component import ApiV1DowntimesListStateNotErrorComponent
-        from ..models.api_v1_downtimes_list_time_range_error_component import ApiV1DowntimesListTimeRangeErrorComponent
-        from ..models.api_v1_downtimes_list_until_error_component import ApiV1DowntimesListUntilErrorComponent
-        from ..models.api_v1_downtimes_list_workspaces_error_component import ApiV1DowntimesListWorkspacesErrorComponent
+        from ..models.api_v1_downtimes_list_search_error_component import (
+            ApiV1DowntimesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_since_error_component import (
+            ApiV1DowntimesListSinceErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_state_error_component import (
+            ApiV1DowntimesListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_state_not_error_component import (
+            ApiV1DowntimesListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_time_range_error_component import (
+            ApiV1DowntimesListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_until_error_component import (
+            ApiV1DowntimesListUntilErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_downtimes_list_workspaces_error_component import (
+            ApiV1DowntimesListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

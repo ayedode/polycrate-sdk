@@ -46,7 +46,7 @@ class ObjectTasksListResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.object_tasks_list_response_tasks_item import ObjectTasksListResponseTasksItem
+        from ..models.object_tasks_list_response_tasks_item import ObjectTasksListResponseTasksItem  # noqa: PLC0415
 
         d = dict(src_dict)
         count_running = d.pop("count_running")

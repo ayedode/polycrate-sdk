@@ -194,111 +194,115 @@ class ApiV1NotesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_notes_archive_create_additional_recipients_error_component import (
-            ApiV1NotesArchiveCreateAdditionalRecipientsErrorComponent,
+            ApiV1NotesArchiveCreateAdditionalRecipientsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_annotations_error_component import (
-            ApiV1NotesArchiveCreateAnnotationsErrorComponent,
+            ApiV1NotesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_archived_at_error_component import (
-            ApiV1NotesArchiveCreateArchivedAtErrorComponent,
+            ApiV1NotesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_archived_error_component import (
-            ApiV1NotesArchiveCreateArchivedErrorComponent,
+            ApiV1NotesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_archived_reason_error_component import (
-            ApiV1NotesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1NotesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_assigned_to_ids_error_component import (
-            ApiV1NotesArchiveCreateAssignedToIdsErrorComponent,
+            ApiV1NotesArchiveCreateAssignedToIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_assigned_to_ids_index_error_component import (
-            ApiV1NotesArchiveCreateAssignedToIdsINDEXErrorComponent,
+            ApiV1NotesArchiveCreateAssignedToIdsINDEXErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_content_error_component import (
-            ApiV1NotesArchiveCreateContentErrorComponent,
+            ApiV1NotesArchiveCreateContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_credential_id_error_component import (
-            ApiV1NotesArchiveCreateCredentialIdErrorComponent,
+            ApiV1NotesArchiveCreateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_criticality_error_component import (
-            ApiV1NotesArchiveCreateCriticalityErrorComponent,
+            ApiV1NotesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_debug_mode_error_component import (
-            ApiV1NotesArchiveCreateDebugModeErrorComponent,
+            ApiV1NotesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_display_name_error_component import (
-            ApiV1NotesArchiveCreateDisplayNameErrorComponent,
+            ApiV1NotesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_archive_create_kind_error_component import ApiV1NotesArchiveCreateKindErrorComponent
+        from ..models.api_v1_notes_archive_create_kind_error_component import (
+            ApiV1NotesArchiveCreateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_archive_create_labels_error_component import (
-            ApiV1NotesArchiveCreateLabelsErrorComponent,
+            ApiV1NotesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_archive_create_name_error_component import ApiV1NotesArchiveCreateNameErrorComponent
+        from ..models.api_v1_notes_archive_create_name_error_component import (
+            ApiV1NotesArchiveCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_archive_create_non_field_errors_error_component import (
-            ApiV1NotesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1NotesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_organization_id_error_component import (
-            ApiV1NotesArchiveCreateOrganizationIdErrorComponent,
+            ApiV1NotesArchiveCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_parent_note_id_error_component import (
-            ApiV1NotesArchiveCreateParentNoteIdErrorComponent,
+            ApiV1NotesArchiveCreateParentNoteIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_platform_service_error_component import (
-            ApiV1NotesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1NotesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_project_id_error_component import (
-            ApiV1NotesArchiveCreateProjectIdErrorComponent,
+            ApiV1NotesArchiveCreateProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_provider_error_component import (
-            ApiV1NotesArchiveCreateProviderErrorComponent,
+            ApiV1NotesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_provider_id_error_component import (
-            ApiV1NotesArchiveCreateProviderIdErrorComponent,
+            ApiV1NotesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_provider_reference_error_component import (
-            ApiV1NotesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1NotesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_reconciliation_enabled_error_component import (
-            ApiV1NotesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1NotesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_remind_at_error_component import (
-            ApiV1NotesArchiveCreateRemindAtErrorComponent,
+            ApiV1NotesArchiveCreateRemindAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_resolved_error_component import (
-            ApiV1NotesArchiveCreateResolvedErrorComponent,
+            ApiV1NotesArchiveCreateResolvedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_sla_availability_error_component import (
-            ApiV1NotesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1NotesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_sla_target_error_component import (
-            ApiV1NotesArchiveCreateSlaTargetErrorComponent,
+            ApiV1NotesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_slo_availability_error_component import (
-            ApiV1NotesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1NotesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_slo_target_error_component import (
-            ApiV1NotesArchiveCreateSloTargetErrorComponent,
+            ApiV1NotesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_structured_content_error_component import (
-            ApiV1NotesArchiveCreateStructuredContentErrorComponent,
+            ApiV1NotesArchiveCreateStructuredContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_target_availability_error_component import (
-            ApiV1NotesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1NotesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_time_tracked_hours_error_component import (
-            ApiV1NotesArchiveCreateTimeTrackedHoursErrorComponent,
+            ApiV1NotesArchiveCreateTimeTrackedHoursErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_tolerations_error_component import (
-            ApiV1NotesArchiveCreateTolerationsErrorComponent,
+            ApiV1NotesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_tracked_at_error_component import (
-            ApiV1NotesArchiveCreateTrackedAtErrorComponent,
+            ApiV1NotesArchiveCreateTrackedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_vydeo_enabled_error_component import (
-            ApiV1NotesArchiveCreateVydeoEnabledErrorComponent,
+            ApiV1NotesArchiveCreateVydeoEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_workspace_id_error_component import (
-            ApiV1NotesArchiveCreateWorkspaceIdErrorComponent,
+            ApiV1NotesArchiveCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -399,114 +403,118 @@ class ApiV1NotesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_notes_archive_create_additional_recipients_error_component import (
-            ApiV1NotesArchiveCreateAdditionalRecipientsErrorComponent,
+            ApiV1NotesArchiveCreateAdditionalRecipientsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_annotations_error_component import (
-            ApiV1NotesArchiveCreateAnnotationsErrorComponent,
+            ApiV1NotesArchiveCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_archived_at_error_component import (
-            ApiV1NotesArchiveCreateArchivedAtErrorComponent,
+            ApiV1NotesArchiveCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_archived_error_component import (
-            ApiV1NotesArchiveCreateArchivedErrorComponent,
+            ApiV1NotesArchiveCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_archived_reason_error_component import (
-            ApiV1NotesArchiveCreateArchivedReasonErrorComponent,
+            ApiV1NotesArchiveCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_assigned_to_ids_error_component import (
-            ApiV1NotesArchiveCreateAssignedToIdsErrorComponent,
+            ApiV1NotesArchiveCreateAssignedToIdsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_assigned_to_ids_index_error_component import (
-            ApiV1NotesArchiveCreateAssignedToIdsINDEXErrorComponent,
+            ApiV1NotesArchiveCreateAssignedToIdsINDEXErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_content_error_component import (
-            ApiV1NotesArchiveCreateContentErrorComponent,
+            ApiV1NotesArchiveCreateContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_credential_id_error_component import (
-            ApiV1NotesArchiveCreateCredentialIdErrorComponent,
+            ApiV1NotesArchiveCreateCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_criticality_error_component import (
-            ApiV1NotesArchiveCreateCriticalityErrorComponent,
+            ApiV1NotesArchiveCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_debug_mode_error_component import (
-            ApiV1NotesArchiveCreateDebugModeErrorComponent,
+            ApiV1NotesArchiveCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_display_name_error_component import (
-            ApiV1NotesArchiveCreateDisplayNameErrorComponent,
+            ApiV1NotesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_archive_create_kind_error_component import ApiV1NotesArchiveCreateKindErrorComponent
+        from ..models.api_v1_notes_archive_create_kind_error_component import (
+            ApiV1NotesArchiveCreateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_archive_create_labels_error_component import (
-            ApiV1NotesArchiveCreateLabelsErrorComponent,
+            ApiV1NotesArchiveCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_meeting_duration_minutes_error_component import (
-            ApiV1NotesArchiveCreateMeetingDurationMinutesErrorComponent,
+            ApiV1NotesArchiveCreateMeetingDurationMinutesErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_archive_create_name_error_component import ApiV1NotesArchiveCreateNameErrorComponent
+        from ..models.api_v1_notes_archive_create_name_error_component import (
+            ApiV1NotesArchiveCreateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_archive_create_non_field_errors_error_component import (
-            ApiV1NotesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1NotesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_organization_id_error_component import (
-            ApiV1NotesArchiveCreateOrganizationIdErrorComponent,
+            ApiV1NotesArchiveCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_parent_note_id_error_component import (
-            ApiV1NotesArchiveCreateParentNoteIdErrorComponent,
+            ApiV1NotesArchiveCreateParentNoteIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_platform_service_error_component import (
-            ApiV1NotesArchiveCreatePlatformServiceErrorComponent,
+            ApiV1NotesArchiveCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_project_id_error_component import (
-            ApiV1NotesArchiveCreateProjectIdErrorComponent,
+            ApiV1NotesArchiveCreateProjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_provider_error_component import (
-            ApiV1NotesArchiveCreateProviderErrorComponent,
+            ApiV1NotesArchiveCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_provider_id_error_component import (
-            ApiV1NotesArchiveCreateProviderIdErrorComponent,
+            ApiV1NotesArchiveCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_provider_reference_error_component import (
-            ApiV1NotesArchiveCreateProviderReferenceErrorComponent,
+            ApiV1NotesArchiveCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_reconciliation_enabled_error_component import (
-            ApiV1NotesArchiveCreateReconciliationEnabledErrorComponent,
+            ApiV1NotesArchiveCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_remind_at_error_component import (
-            ApiV1NotesArchiveCreateRemindAtErrorComponent,
+            ApiV1NotesArchiveCreateRemindAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_resolved_error_component import (
-            ApiV1NotesArchiveCreateResolvedErrorComponent,
+            ApiV1NotesArchiveCreateResolvedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_sla_availability_error_component import (
-            ApiV1NotesArchiveCreateSlaAvailabilityErrorComponent,
+            ApiV1NotesArchiveCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_sla_target_error_component import (
-            ApiV1NotesArchiveCreateSlaTargetErrorComponent,
+            ApiV1NotesArchiveCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_slo_availability_error_component import (
-            ApiV1NotesArchiveCreateSloAvailabilityErrorComponent,
+            ApiV1NotesArchiveCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_slo_target_error_component import (
-            ApiV1NotesArchiveCreateSloTargetErrorComponent,
+            ApiV1NotesArchiveCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_structured_content_error_component import (
-            ApiV1NotesArchiveCreateStructuredContentErrorComponent,
+            ApiV1NotesArchiveCreateStructuredContentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_target_availability_error_component import (
-            ApiV1NotesArchiveCreateTargetAvailabilityErrorComponent,
+            ApiV1NotesArchiveCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_time_tracked_hours_error_component import (
-            ApiV1NotesArchiveCreateTimeTrackedHoursErrorComponent,
+            ApiV1NotesArchiveCreateTimeTrackedHoursErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_tolerations_error_component import (
-            ApiV1NotesArchiveCreateTolerationsErrorComponent,
+            ApiV1NotesArchiveCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_tracked_at_error_component import (
-            ApiV1NotesArchiveCreateTrackedAtErrorComponent,
+            ApiV1NotesArchiveCreateTrackedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_vydeo_enabled_error_component import (
-            ApiV1NotesArchiveCreateVydeoEnabledErrorComponent,
+            ApiV1NotesArchiveCreateVydeoEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_notes_archive_create_workspace_id_error_component import (
-            ApiV1NotesArchiveCreateWorkspaceIdErrorComponent,
+            ApiV1NotesArchiveCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

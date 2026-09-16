@@ -68,25 +68,25 @@ class ApiV1WorkspaceTemplatesArchiveCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_workspace_templates_archive_create_description_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateDescriptionErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_display_name_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateDisplayNameErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_name_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateNameErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_non_field_errors_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_organization_id_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateOrganizationIdErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_secrets_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateSecretsPolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateSecretsPolyTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_workspace_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateWorkspacePolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateWorkspacePolyTemplateErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -127,28 +127,28 @@ class ApiV1WorkspaceTemplatesArchiveCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_workspace_templates_archive_create_description_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateDescriptionErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_display_name_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateDisplayNameErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_is_default_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateIsDefaultErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateIsDefaultErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_name_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateNameErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_non_field_errors_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateNonFieldErrorsErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_organization_id_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateOrganizationIdErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_secrets_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateSecretsPolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateSecretsPolyTemplateErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_workspace_templates_archive_create_workspace_poly_template_error_component import (
-            ApiV1WorkspaceTemplatesArchiveCreateWorkspacePolyTemplateErrorComponent,
+            ApiV1WorkspaceTemplatesArchiveCreateWorkspacePolyTemplateErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

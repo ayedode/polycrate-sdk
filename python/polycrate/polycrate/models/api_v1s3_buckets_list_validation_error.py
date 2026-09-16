@@ -78,30 +78,54 @@ class ApiV1S3BucketsListValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1s3_buckets_list_created_at_error_component import ApiV1S3BucketsListCreatedAtErrorComponent
+        from ..models.api_v1s3_buckets_list_created_at_error_component import (
+            ApiV1S3BucketsListCreatedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_list_created_by_component_error_component import (
-            ApiV1S3BucketsListCreatedByComponentErrorComponent,
+            ApiV1S3BucketsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_list_created_by_users_error_component import (
-            ApiV1S3BucketsListCreatedByUsersErrorComponent,
+            ApiV1S3BucketsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_list_kind_error_component import ApiV1S3BucketsListKindErrorComponent
-        from ..models.api_v1s3_buckets_list_name_error_component import ApiV1S3BucketsListNameErrorComponent
+        from ..models.api_v1s3_buckets_list_kind_error_component import (
+            ApiV1S3BucketsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_name_error_component import (
+            ApiV1S3BucketsListNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_list_organizations_error_component import (
-            ApiV1S3BucketsListOrganizationsErrorComponent,
+            ApiV1S3BucketsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_list_region_error_component import ApiV1S3BucketsListRegionErrorComponent
-        from ..models.api_v1s3_buckets_list_s3_cluster_error_component import ApiV1S3BucketsListS3ClusterErrorComponent
-        from ..models.api_v1s3_buckets_list_scope_error_component import ApiV1S3BucketsListScopeErrorComponent
-        from ..models.api_v1s3_buckets_list_search_error_component import ApiV1S3BucketsListSearchErrorComponent
-        from ..models.api_v1s3_buckets_list_state_error_component import ApiV1S3BucketsListStateErrorComponent
-        from ..models.api_v1s3_buckets_list_state_not_error_component import ApiV1S3BucketsListStateNotErrorComponent
+        from ..models.api_v1s3_buckets_list_region_error_component import (
+            ApiV1S3BucketsListRegionErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_s3_cluster_error_component import (
+            ApiV1S3BucketsListS3ClusterErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_scope_error_component import (
+            ApiV1S3BucketsListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_search_error_component import (
+            ApiV1S3BucketsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_state_error_component import (
+            ApiV1S3BucketsListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_state_not_error_component import (
+            ApiV1S3BucketsListStateNotErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_list_storage_class_error_component import (
-            ApiV1S3BucketsListStorageClassErrorComponent,
+            ApiV1S3BucketsListStorageClassErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_list_time_range_error_component import ApiV1S3BucketsListTimeRangeErrorComponent
-        from ..models.api_v1s3_buckets_list_updated_at_error_component import ApiV1S3BucketsListUpdatedAtErrorComponent
-        from ..models.api_v1s3_buckets_list_workspaces_error_component import ApiV1S3BucketsListWorkspacesErrorComponent
+        from ..models.api_v1s3_buckets_list_time_range_error_component import (
+            ApiV1S3BucketsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_updated_at_error_component import (
+            ApiV1S3BucketsListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_workspaces_error_component import (
+            ApiV1S3BucketsListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -158,31 +182,57 @@ class ApiV1S3BucketsListValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1s3_buckets_list_created_at_error_component import ApiV1S3BucketsListCreatedAtErrorComponent
+        from ..models.api_v1s3_buckets_list_created_at_error_component import (
+            ApiV1S3BucketsListCreatedAtErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_list_created_by_component_error_component import (
-            ApiV1S3BucketsListCreatedByComponentErrorComponent,
+            ApiV1S3BucketsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_list_created_by_users_error_component import (
-            ApiV1S3BucketsListCreatedByUsersErrorComponent,
+            ApiV1S3BucketsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_list_kind_error_component import ApiV1S3BucketsListKindErrorComponent
-        from ..models.api_v1s3_buckets_list_name_error_component import ApiV1S3BucketsListNameErrorComponent
-        from ..models.api_v1s3_buckets_list_name_exact_error_component import ApiV1S3BucketsListNameExactErrorComponent
+        from ..models.api_v1s3_buckets_list_kind_error_component import (
+            ApiV1S3BucketsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_name_error_component import (
+            ApiV1S3BucketsListNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_name_exact_error_component import (
+            ApiV1S3BucketsListNameExactErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_list_organizations_error_component import (
-            ApiV1S3BucketsListOrganizationsErrorComponent,
+            ApiV1S3BucketsListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_list_region_error_component import ApiV1S3BucketsListRegionErrorComponent
-        from ..models.api_v1s3_buckets_list_s3_cluster_error_component import ApiV1S3BucketsListS3ClusterErrorComponent
-        from ..models.api_v1s3_buckets_list_scope_error_component import ApiV1S3BucketsListScopeErrorComponent
-        from ..models.api_v1s3_buckets_list_search_error_component import ApiV1S3BucketsListSearchErrorComponent
-        from ..models.api_v1s3_buckets_list_state_error_component import ApiV1S3BucketsListStateErrorComponent
-        from ..models.api_v1s3_buckets_list_state_not_error_component import ApiV1S3BucketsListStateNotErrorComponent
+        from ..models.api_v1s3_buckets_list_region_error_component import (
+            ApiV1S3BucketsListRegionErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_s3_cluster_error_component import (
+            ApiV1S3BucketsListS3ClusterErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_scope_error_component import (
+            ApiV1S3BucketsListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_search_error_component import (
+            ApiV1S3BucketsListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_state_error_component import (
+            ApiV1S3BucketsListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_state_not_error_component import (
+            ApiV1S3BucketsListStateNotErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1s3_buckets_list_storage_class_error_component import (
-            ApiV1S3BucketsListStorageClassErrorComponent,
+            ApiV1S3BucketsListStorageClassErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1s3_buckets_list_time_range_error_component import ApiV1S3BucketsListTimeRangeErrorComponent
-        from ..models.api_v1s3_buckets_list_updated_at_error_component import ApiV1S3BucketsListUpdatedAtErrorComponent
-        from ..models.api_v1s3_buckets_list_workspaces_error_component import ApiV1S3BucketsListWorkspacesErrorComponent
+        from ..models.api_v1s3_buckets_list_time_range_error_component import (
+            ApiV1S3BucketsListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_updated_at_error_component import (
+            ApiV1S3BucketsListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1s3_buckets_list_workspaces_error_component import (
+            ApiV1S3BucketsListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

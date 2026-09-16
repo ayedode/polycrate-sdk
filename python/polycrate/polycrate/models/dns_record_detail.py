@@ -3,7 +3,6 @@ from __future__ import annotations
 import datetime
 from collections.abc import Mapping
 from typing import TYPE_CHECKING, Any, TypeVar, cast
-from uuid import UUID
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -52,7 +51,8 @@ class DNSRecordDetail:
                 fields = ManagedObjectDetailSerializer.Meta.fields + ['kubeconfig', 'nodes']
 
         Attributes:
-            id (UUID):
+            id (str): Record identifier. Internal zones: UUID of the DNSRecord DB row. External zones: opaque composite
+                '<zone_uuid>::<provider_assigned_id>' as returned by the list endpoint. Do not treat this field as UUID-only.
             created (DNSRecordDetailCreated):
             organization (DNSRecordDetailOrganizationType0 | None):
             workspace (DNSRecordDetailWorkspaceType0 | None):
@@ -180,7 +180,7 @@ class DNSRecordDetail:
             created_by_user (int | None | Unset): The user who created the object
     """
 
-    id: UUID
+    id: str
     created: DNSRecordDetailCreated
     organization: DNSRecordDetailOrganizationType0 | None
     workspace: DNSRecordDetailWorkspaceType0 | None
@@ -255,12 +255,12 @@ class DNSRecordDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.dns_record_detail_deleted_by_user_type_0 import DNSRecordDetailDeletedByUserType0
-        from ..models.dns_record_detail_last_action_run_type_0 import DNSRecordDetailLastActionRunType0
-        from ..models.dns_record_detail_organization_type_0 import DNSRecordDetailOrganizationType0
-        from ..models.dns_record_detail_workspace_type_0 import DNSRecordDetailWorkspaceType0
+        from ..models.dns_record_detail_deleted_by_user_type_0 import DNSRecordDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.dns_record_detail_last_action_run_type_0 import DNSRecordDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.dns_record_detail_organization_type_0 import DNSRecordDetailOrganizationType0  # noqa: PLC0415
+        from ..models.dns_record_detail_workspace_type_0 import DNSRecordDetailWorkspaceType0  # noqa: PLC0415
 
-        id = str(self.id)
+        id = self.id
 
         created = self.created.to_dict()
 
@@ -659,15 +659,15 @@ class DNSRecordDetail:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.dns_record_detail_created import DNSRecordDetailCreated
-        from ..models.dns_record_detail_deleted_by_user_type_0 import DNSRecordDetailDeletedByUserType0
-        from ..models.dns_record_detail_last_action_run_type_0 import DNSRecordDetailLastActionRunType0
-        from ..models.dns_record_detail_organization_type_0 import DNSRecordDetailOrganizationType0
-        from ..models.dns_record_detail_workspace_type_0 import DNSRecordDetailWorkspaceType0
-        from ..models.dns_zone_simple import DNSZoneSimple
+        from ..models.dns_record_detail_created import DNSRecordDetailCreated  # noqa: PLC0415
+        from ..models.dns_record_detail_deleted_by_user_type_0 import DNSRecordDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.dns_record_detail_last_action_run_type_0 import DNSRecordDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.dns_record_detail_organization_type_0 import DNSRecordDetailOrganizationType0  # noqa: PLC0415
+        from ..models.dns_record_detail_workspace_type_0 import DNSRecordDetailWorkspaceType0  # noqa: PLC0415
+        from ..models.dns_zone_simple import DNSZoneSimple  # noqa: PLC0415
 
         d = dict(src_dict)
-        id = UUID(d.pop("id"))
+        id = d.pop("id")
 
         created = DNSRecordDetailCreated.from_dict(d.pop("created"))
 

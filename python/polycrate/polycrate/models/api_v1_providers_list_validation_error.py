@@ -47,12 +47,24 @@ class ApiV1ProvidersListValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_providers_list_created_at_error_component import ApiV1ProvidersListCreatedAtErrorComponent
-        from ..models.api_v1_providers_list_kind_error_component import ApiV1ProvidersListKindErrorComponent
-        from ..models.api_v1_providers_list_name_error_component import ApiV1ProvidersListNameErrorComponent
-        from ..models.api_v1_providers_list_scope_error_component import ApiV1ProvidersListScopeErrorComponent
-        from ..models.api_v1_providers_list_state_error_component import ApiV1ProvidersListStateErrorComponent
-        from ..models.api_v1_providers_list_updated_at_error_component import ApiV1ProvidersListUpdatedAtErrorComponent
+        from ..models.api_v1_providers_list_created_at_error_component import (
+            ApiV1ProvidersListCreatedAtErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_kind_error_component import (
+            ApiV1ProvidersListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_name_error_component import (
+            ApiV1ProvidersListNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_scope_error_component import (
+            ApiV1ProvidersListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_state_error_component import (
+            ApiV1ProvidersListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_updated_at_error_component import (
+            ApiV1ProvidersListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -89,15 +101,27 @@ class ApiV1ProvidersListValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_providers_list_created_at_error_component import ApiV1ProvidersListCreatedAtErrorComponent
-        from ..models.api_v1_providers_list_created_by_component_error_component import (
-            ApiV1ProvidersListCreatedByComponentErrorComponent,
+        from ..models.api_v1_providers_list_created_at_error_component import (
+            ApiV1ProvidersListCreatedAtErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_providers_list_kind_error_component import ApiV1ProvidersListKindErrorComponent
-        from ..models.api_v1_providers_list_name_error_component import ApiV1ProvidersListNameErrorComponent
-        from ..models.api_v1_providers_list_scope_error_component import ApiV1ProvidersListScopeErrorComponent
-        from ..models.api_v1_providers_list_state_error_component import ApiV1ProvidersListStateErrorComponent
-        from ..models.api_v1_providers_list_updated_at_error_component import ApiV1ProvidersListUpdatedAtErrorComponent
+        from ..models.api_v1_providers_list_created_by_component_error_component import (
+            ApiV1ProvidersListCreatedByComponentErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_kind_error_component import (
+            ApiV1ProvidersListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_name_error_component import (
+            ApiV1ProvidersListNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_scope_error_component import (
+            ApiV1ProvidersListScopeErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_state_error_component import (
+            ApiV1ProvidersListStateErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_providers_list_updated_at_error_component import (
+            ApiV1ProvidersListUpdatedAtErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

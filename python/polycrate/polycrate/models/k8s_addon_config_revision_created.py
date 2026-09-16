@@ -34,7 +34,7 @@ class K8SAddonConfigRevisionCreated:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.k8s_addon_config_revision_created_created_by_type_0 import (
-            K8SAddonConfigRevisionCreatedCreatedByType0,
+            K8SAddonConfigRevisionCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         created_at: None | str | Unset
@@ -82,7 +82,7 @@ class K8SAddonConfigRevisionCreated:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.k8s_addon_config_revision_created_created_by_type_0 import (
-            K8SAddonConfigRevisionCreatedCreatedByType0,
+            K8SAddonConfigRevisionCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -145,7 +145,7 @@ def sync_detailed(
     | ErrorResponse502
     | ParseErrorResponse
 ]:
-    r"""List supported DNS providers
+    """List supported DNS providers
 
      Returns the list of DNS providers enabled on this system (configured via
     SystemConfig.dns_supported_providers). Each provider entry includes the Lexicon slug, a human-
@@ -153,7 +153,7 @@ def sync_detailed(
     metadata) are required or optional for that provider.
 
     To associate a Credential with a DNS provider, set Credential.metadata.dns_provider to the provider
-    slug. Example: {\"dns_provider\": \"cloudflare\"}.
+    slug. Example: {"dns_provider": "cloudflare"}.
 
     Spec 490: DNS Provider Catalog
 
@@ -191,7 +191,7 @@ def sync(
     | ParseErrorResponse
     | None
 ):
-    r"""List supported DNS providers
+    """List supported DNS providers
 
      Returns the list of DNS providers enabled on this system (configured via
     SystemConfig.dns_supported_providers). Each provider entry includes the Lexicon slug, a human-
@@ -199,7 +199,7 @@ def sync(
     metadata) are required or optional for that provider.
 
     To associate a Credential with a DNS provider, set Credential.metadata.dns_provider to the provider
-    slug. Example: {\"dns_provider\": \"cloudflare\"}.
+    slug. Example: {"dns_provider": "cloudflare"}.
 
     Spec 490: DNS Provider Catalog
 
@@ -232,7 +232,7 @@ async def asyncio_detailed(
     | ErrorResponse502
     | ParseErrorResponse
 ]:
-    r"""List supported DNS providers
+    """List supported DNS providers
 
      Returns the list of DNS providers enabled on this system (configured via
     SystemConfig.dns_supported_providers). Each provider entry includes the Lexicon slug, a human-
@@ -240,7 +240,7 @@ async def asyncio_detailed(
     metadata) are required or optional for that provider.
 
     To associate a Credential with a DNS provider, set Credential.metadata.dns_provider to the provider
-    slug. Example: {\"dns_provider\": \"cloudflare\"}.
+    slug. Example: {"dns_provider": "cloudflare"}.
 
     Spec 490: DNS Provider Catalog
 
@@ -276,7 +276,7 @@ async def asyncio(
     | ParseErrorResponse
     | None
 ):
-    r"""List supported DNS providers
+    """List supported DNS providers
 
      Returns the list of DNS providers enabled on this system (configured via
     SystemConfig.dns_supported_providers). Each provider entry includes the Lexicon slug, a human-
@@ -284,7 +284,7 @@ async def asyncio(
     metadata) are required or optional for that provider.
 
     To associate a Credential with a DNS provider, set Credential.metadata.dns_provider to the provider
-    slug. Example: {\"dns_provider\": \"cloudflare\"}.
+    slug. Example: {"dns_provider": "cloudflare"}.
 
     Spec 490: DNS Provider Catalog
 

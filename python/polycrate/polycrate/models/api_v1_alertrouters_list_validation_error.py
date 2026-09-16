@@ -61,22 +61,28 @@ class ApiV1AlertroutersListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alertrouters_list_created_by_users_error_component import (
-            ApiV1AlertroutersListCreatedByUsersErrorComponent,
+            ApiV1AlertroutersListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_alertrouters_list_kind_error_component import ApiV1AlertroutersListKindErrorComponent
+        from ..models.api_v1_alertrouters_list_kind_error_component import (
+            ApiV1AlertroutersListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_alertrouters_list_organizations_error_component import (
-            ApiV1AlertroutersListOrganizationsErrorComponent,
+            ApiV1AlertroutersListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_alertrouters_list_search_error_component import ApiV1AlertroutersListSearchErrorComponent
-        from ..models.api_v1_alertrouters_list_state_error_component import ApiV1AlertroutersListStateErrorComponent
+        from ..models.api_v1_alertrouters_list_search_error_component import (
+            ApiV1AlertroutersListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_alertrouters_list_state_error_component import (
+            ApiV1AlertroutersListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_alertrouters_list_state_not_error_component import (
-            ApiV1AlertroutersListStateNotErrorComponent,
+            ApiV1AlertroutersListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_list_time_range_error_component import (
-            ApiV1AlertroutersListTimeRangeErrorComponent,
+            ApiV1AlertroutersListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_list_workspaces_error_component import (
-            ApiV1AlertroutersListWorkspacesErrorComponent,
+            ApiV1AlertroutersListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -119,25 +125,31 @@ class ApiV1AlertroutersListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alertrouters_list_created_by_users_error_component import (
-            ApiV1AlertroutersListCreatedByUsersErrorComponent,
+            ApiV1AlertroutersListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_alertrouters_list_kind_error_component import ApiV1AlertroutersListKindErrorComponent
+        from ..models.api_v1_alertrouters_list_kind_error_component import (
+            ApiV1AlertroutersListKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_alertrouters_list_name_exact_error_component import (
-            ApiV1AlertroutersListNameExactErrorComponent,
+            ApiV1AlertroutersListNameExactErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_list_organizations_error_component import (
-            ApiV1AlertroutersListOrganizationsErrorComponent,
+            ApiV1AlertroutersListOrganizationsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_alertrouters_list_search_error_component import ApiV1AlertroutersListSearchErrorComponent
-        from ..models.api_v1_alertrouters_list_state_error_component import ApiV1AlertroutersListStateErrorComponent
+        from ..models.api_v1_alertrouters_list_search_error_component import (
+            ApiV1AlertroutersListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_alertrouters_list_state_error_component import (
+            ApiV1AlertroutersListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_alertrouters_list_state_not_error_component import (
-            ApiV1AlertroutersListStateNotErrorComponent,
+            ApiV1AlertroutersListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_list_time_range_error_component import (
-            ApiV1AlertroutersListTimeRangeErrorComponent,
+            ApiV1AlertroutersListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertrouters_list_workspaces_error_component import (
-            ApiV1AlertroutersListWorkspacesErrorComponent,
+            ApiV1AlertroutersListWorkspacesErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

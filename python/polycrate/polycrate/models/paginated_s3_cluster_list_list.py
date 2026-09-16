@@ -68,7 +68,7 @@ class PaginatedS3ClusterListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_cluster_list import S3ClusterList
+        from ..models.s3_cluster_list import S3ClusterList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

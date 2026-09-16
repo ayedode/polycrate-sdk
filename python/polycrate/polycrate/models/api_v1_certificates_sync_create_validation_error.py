@@ -52,16 +52,16 @@ class ApiV1CertificatesSyncCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_certificates_sync_create_cert_data_error_component import (
-            ApiV1CertificatesSyncCreateCertDataErrorComponent,
+            ApiV1CertificatesSyncCreateCertDataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_sync_create_k8s_cluster_id_error_component import (
-            ApiV1CertificatesSyncCreateK8SClusterIdErrorComponent,
+            ApiV1CertificatesSyncCreateK8SClusterIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_sync_create_non_field_errors_error_component import (
-            ApiV1CertificatesSyncCreateNonFieldErrorsErrorComponent,
+            ApiV1CertificatesSyncCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_sync_create_organization_id_error_component import (
-            ApiV1CertificatesSyncCreateOrganizationIdErrorComponent,
+            ApiV1CertificatesSyncCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -96,19 +96,19 @@ class ApiV1CertificatesSyncCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_certificates_sync_create_cert_data_error_component import (
-            ApiV1CertificatesSyncCreateCertDataErrorComponent,
+            ApiV1CertificatesSyncCreateCertDataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_sync_create_k8s_cluster_id_error_component import (
-            ApiV1CertificatesSyncCreateK8SClusterIdErrorComponent,
+            ApiV1CertificatesSyncCreateK8SClusterIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_sync_create_non_field_errors_error_component import (
-            ApiV1CertificatesSyncCreateNonFieldErrorsErrorComponent,
+            ApiV1CertificatesSyncCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_sync_create_organization_id_error_component import (
-            ApiV1CertificatesSyncCreateOrganizationIdErrorComponent,
+            ApiV1CertificatesSyncCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_certificates_sync_create_workspace_id_error_component import (
-            ApiV1CertificatesSyncCreateWorkspaceIdErrorComponent,
+            ApiV1CertificatesSyncCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -150,10 +150,10 @@ class ContactGroup:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.contact_group_maintainers_item import ContactGroupMaintainersItem
-        from ..models.contact_group_membership import ContactGroupMembership
-        from ..models.contact_group_owners_item import ContactGroupOwnersItem
-        from ..models.organization import Organization
+        from ..models.contact_group_maintainers_item import ContactGroupMaintainersItem  # noqa: PLC0415
+        from ..models.contact_group_membership import ContactGroupMembership  # noqa: PLC0415
+        from ..models.contact_group_owners_item import ContactGroupOwnersItem  # noqa: PLC0415
+        from ..models.organization import Organization  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

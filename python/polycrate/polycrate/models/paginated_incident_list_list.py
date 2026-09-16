@@ -68,7 +68,7 @@ class PaginatedIncidentListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.incident_list import IncidentList
+        from ..models.incident_list import IncidentList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

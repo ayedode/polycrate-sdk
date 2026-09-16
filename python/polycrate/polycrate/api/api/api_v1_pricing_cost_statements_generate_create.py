@@ -201,9 +201,8 @@ def sync_detailed(
     | ErrorResponse500
     | ErrorResponse502
 ]:
-    r"""Staff-only action: generate a CostStatement for a given organization and period.
-    Body: { \"organization\": \"<uuid>\", \"period_start\": \"YYYY-MM-DD\", \"period_end\": \"YYYY-MM-
-    DD\" }
+    """Staff-only action: generate a CostStatement for a given organization and period.
+    Body: { "organization": "<uuid>", "period_start": "YYYY-MM-DD", "period_end": "YYYY-MM-DD" }
     Spec: .specs/0.13.0/pricing-business-layer.md – CostStatement.generate-Action
 
     Args:
@@ -301,9 +300,8 @@ def sync(
     | ErrorResponse502
     | None
 ):
-    r"""Staff-only action: generate a CostStatement for a given organization and period.
-    Body: { \"organization\": \"<uuid>\", \"period_start\": \"YYYY-MM-DD\", \"period_end\": \"YYYY-MM-
-    DD\" }
+    """Staff-only action: generate a CostStatement for a given organization and period.
+    Body: { "organization": "<uuid>", "period_start": "YYYY-MM-DD", "period_end": "YYYY-MM-DD" }
     Spec: .specs/0.13.0/pricing-business-layer.md – CostStatement.generate-Action
 
     Args:
@@ -395,9 +393,8 @@ async def asyncio_detailed(
     | ErrorResponse500
     | ErrorResponse502
 ]:
-    r"""Staff-only action: generate a CostStatement for a given organization and period.
-    Body: { \"organization\": \"<uuid>\", \"period_start\": \"YYYY-MM-DD\", \"period_end\": \"YYYY-MM-
-    DD\" }
+    """Staff-only action: generate a CostStatement for a given organization and period.
+    Body: { "organization": "<uuid>", "period_start": "YYYY-MM-DD", "period_end": "YYYY-MM-DD" }
     Spec: .specs/0.13.0/pricing-business-layer.md – CostStatement.generate-Action
 
     Args:
@@ -493,9 +490,8 @@ async def asyncio(
     | ErrorResponse502
     | None
 ):
-    r"""Staff-only action: generate a CostStatement for a given organization and period.
-    Body: { \"organization\": \"<uuid>\", \"period_start\": \"YYYY-MM-DD\", \"period_end\": \"YYYY-MM-
-    DD\" }
+    """Staff-only action: generate a CostStatement for a given organization and period.
+    Body: { "organization": "<uuid>", "period_start": "YYYY-MM-DD", "period_end": "YYYY-MM-DD" }
     Spec: .specs/0.13.0/pricing-business-layer.md – CostStatement.generate-Action
 
     Args:

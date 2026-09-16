@@ -48,13 +48,13 @@ class ApiV1S3BucketsObjectsUploadUrlCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1s3_buckets_objects_upload_url_create_content_type_error_component import (
-            ApiV1S3BucketsObjectsUploadUrlCreateContentTypeErrorComponent,
+            ApiV1S3BucketsObjectsUploadUrlCreateContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_objects_upload_url_create_key_error_component import (
-            ApiV1S3BucketsObjectsUploadUrlCreateKeyErrorComponent,
+            ApiV1S3BucketsObjectsUploadUrlCreateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_objects_upload_url_create_non_field_errors_error_component import (
-            ApiV1S3BucketsObjectsUploadUrlCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsObjectsUploadUrlCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -87,16 +87,16 @@ class ApiV1S3BucketsObjectsUploadUrlCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1s3_buckets_objects_upload_url_create_content_type_error_component import (
-            ApiV1S3BucketsObjectsUploadUrlCreateContentTypeErrorComponent,
+            ApiV1S3BucketsObjectsUploadUrlCreateContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_objects_upload_url_create_key_error_component import (
-            ApiV1S3BucketsObjectsUploadUrlCreateKeyErrorComponent,
+            ApiV1S3BucketsObjectsUploadUrlCreateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_objects_upload_url_create_non_field_errors_error_component import (
-            ApiV1S3BucketsObjectsUploadUrlCreateNonFieldErrorsErrorComponent,
+            ApiV1S3BucketsObjectsUploadUrlCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1s3_buckets_objects_upload_url_create_overwrite_error_component import (
-            ApiV1S3BucketsObjectsUploadUrlCreateOverwriteErrorComponent,
+            ApiV1S3BucketsObjectsUploadUrlCreateOverwriteErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

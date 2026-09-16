@@ -227,121 +227,121 @@ class ApiV1DomainsDomainRegistrarsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_domains_domain_registrars_create_annotations_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateAnnotationsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_api_backoff_minutes_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateApiBackoffMinutesErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateApiBackoffMinutesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_api_credential_id_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateApiCredentialIdErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateApiCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_archived_at_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateArchivedAtErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_archived_by_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateArchivedByErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_archived_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateArchivedErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_archived_reason_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateArchivedReasonErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_created_by_component_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateCreatedByComponentErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_criticality_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateCriticalityErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_debug_mode_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateDebugModeErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_default_renewal_mode_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateDefaultRenewalModeErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateDefaultRenewalModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_display_name_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateDisplayNameErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_import_contacts_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateImportContactsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateImportContactsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_import_domains_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateImportDomainsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateImportDomainsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_kind_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateKindErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_labels_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateLabelsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_last_rate_limited_at_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateLastRateLimitedAtErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateLastRateLimitedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_managed_by_content_type_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_managed_by_object_id_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_modified_by_user_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateModifiedByUserErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_name_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateNameErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_non_field_errors_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_ote_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateOteErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateOteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_platform_dns_record_created_error_component import (
-            ApiV1DomainsDomainRegistrarsCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_platform_service_error_component import (
-            ApiV1DomainsDomainRegistrarsCreatePlatformServiceErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_provider_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateProviderErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_provider_id_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateProviderIdErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_provider_info_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateProviderInfoErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateProviderInfoErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_provider_reference_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateProviderReferenceErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_reconciliation_enabled_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_sla_availability_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_sla_target_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSlaTargetErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_sla_window_days_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_slo_availability_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSloAvailabilityErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_slo_target_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSloTargetErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_slo_window_days_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSloWindowDaysErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_target_availability_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_tolerations_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateTolerationsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -448,124 +448,124 @@ class ApiV1DomainsDomainRegistrarsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_domains_domain_registrars_create_annotations_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateAnnotationsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_api_backoff_minutes_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateApiBackoffMinutesErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateApiBackoffMinutesErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_api_credential_id_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateApiCredentialIdErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateApiCredentialIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_archived_at_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateArchivedAtErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_archived_by_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateArchivedByErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_archived_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateArchivedErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_archived_reason_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateArchivedReasonErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_created_by_component_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateCreatedByComponentErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_created_by_user_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateCreatedByUserErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_criticality_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateCriticalityErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_debug_mode_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateDebugModeErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_default_renewal_mode_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateDefaultRenewalModeErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateDefaultRenewalModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_display_name_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateDisplayNameErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_import_contacts_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateImportContactsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateImportContactsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_import_domains_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateImportDomainsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateImportDomainsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_kind_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateKindErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_labels_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateLabelsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_last_rate_limited_at_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateLastRateLimitedAtErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateLastRateLimitedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_managed_by_content_type_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateManagedByContentTypeErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_managed_by_object_id_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateManagedByObjectIdErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_modified_by_user_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateModifiedByUserErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_name_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateNameErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_non_field_errors_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateNonFieldErrorsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_ote_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateOteErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateOteErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_platform_dns_record_created_error_component import (
-            ApiV1DomainsDomainRegistrarsCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_platform_service_error_component import (
-            ApiV1DomainsDomainRegistrarsCreatePlatformServiceErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_provider_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateProviderErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_provider_id_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateProviderIdErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_provider_info_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateProviderInfoErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateProviderInfoErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_provider_reference_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateProviderReferenceErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_reconciliation_enabled_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateReconciliationEnabledErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_sla_availability_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSlaAvailabilityErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_sla_target_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSlaTargetErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_sla_window_days_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSlaWindowDaysErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_slo_availability_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSloAvailabilityErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_slo_target_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSloTargetErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_slo_window_days_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateSloWindowDaysErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_target_availability_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateTargetAvailabilityErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_domains_domain_registrars_create_tolerations_error_component import (
-            ApiV1DomainsDomainRegistrarsCreateTolerationsErrorComponent,
+            ApiV1DomainsDomainRegistrarsCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -69,29 +69,47 @@ class ApiV1NotesListValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.api_v1_notes_list_assigned_to_error_component import ApiV1NotesListAssignedToErrorComponent
+        from ..models.api_v1_notes_list_assigned_to_error_component import (
+            ApiV1NotesListAssignedToErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_list_created_by_users_error_component import (
-            ApiV1NotesListCreatedByUsersErrorComponent,
+            ApiV1NotesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_list_datasource_error_component import ApiV1NotesListDatasourceErrorComponent
+        from ..models.api_v1_notes_list_datasource_error_component import (
+            ApiV1NotesListDatasourceErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_list_has_time_tracked_error_component import (
-            ApiV1NotesListHasTimeTrackedErrorComponent,
+            ApiV1NotesListHasTimeTrackedErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_list_kind_error_component import ApiV1NotesListKindErrorComponent
+        from ..models.api_v1_notes_list_kind_error_component import ApiV1NotesListKindErrorComponent  # noqa: PLC0415
         from ..models.api_v1_notes_list_managed_by_object_id_error_component import (
-            ApiV1NotesListManagedByObjectIdErrorComponent,
+            ApiV1NotesListManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_list_organizations_error_component import ApiV1NotesListOrganizationsErrorComponent
-        from ..models.api_v1_notes_list_parent_note_error_component import ApiV1NotesListParentNoteErrorComponent
-        from ..models.api_v1_notes_list_project_error_component import ApiV1NotesListProjectErrorComponent
-        from ..models.api_v1_notes_list_search_error_component import ApiV1NotesListSearchErrorComponent
-        from ..models.api_v1_notes_list_state_error_component import ApiV1NotesListStateErrorComponent
-        from ..models.api_v1_notes_list_state_not_error_component import ApiV1NotesListStateNotErrorComponent
-        from ..models.api_v1_notes_list_time_range_error_component import ApiV1NotesListTimeRangeErrorComponent
+        from ..models.api_v1_notes_list_organizations_error_component import (
+            ApiV1NotesListOrganizationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_parent_note_error_component import (
+            ApiV1NotesListParentNoteErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_project_error_component import (
+            ApiV1NotesListProjectErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_search_error_component import (
+            ApiV1NotesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_state_error_component import ApiV1NotesListStateErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_notes_list_state_not_error_component import (
+            ApiV1NotesListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_time_range_error_component import (
+            ApiV1NotesListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_list_time_tracked_min_error_component import (
-            ApiV1NotesListTimeTrackedMinErrorComponent,
+            ApiV1NotesListTimeTrackedMinErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_list_workspaces_error_component import ApiV1NotesListWorkspacesErrorComponent
+        from ..models.api_v1_notes_list_workspaces_error_component import (
+            ApiV1NotesListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         type_: str = self.type_
 
@@ -146,30 +164,50 @@ class ApiV1NotesListValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.api_v1_notes_list_assigned_to_error_component import ApiV1NotesListAssignedToErrorComponent
+        from ..models.api_v1_notes_list_assigned_to_error_component import (
+            ApiV1NotesListAssignedToErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_list_created_by_users_error_component import (
-            ApiV1NotesListCreatedByUsersErrorComponent,
+            ApiV1NotesListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_list_datasource_error_component import ApiV1NotesListDatasourceErrorComponent
+        from ..models.api_v1_notes_list_datasource_error_component import (
+            ApiV1NotesListDatasourceErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_list_has_time_tracked_error_component import (
-            ApiV1NotesListHasTimeTrackedErrorComponent,
+            ApiV1NotesListHasTimeTrackedErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_list_kind_error_component import ApiV1NotesListKindErrorComponent
+        from ..models.api_v1_notes_list_kind_error_component import ApiV1NotesListKindErrorComponent  # noqa: PLC0415
         from ..models.api_v1_notes_list_managed_by_object_id_error_component import (
-            ApiV1NotesListManagedByObjectIdErrorComponent,
+            ApiV1NotesListManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_list_name_exact_error_component import ApiV1NotesListNameExactErrorComponent
-        from ..models.api_v1_notes_list_organizations_error_component import ApiV1NotesListOrganizationsErrorComponent
-        from ..models.api_v1_notes_list_parent_note_error_component import ApiV1NotesListParentNoteErrorComponent
-        from ..models.api_v1_notes_list_project_error_component import ApiV1NotesListProjectErrorComponent
-        from ..models.api_v1_notes_list_search_error_component import ApiV1NotesListSearchErrorComponent
-        from ..models.api_v1_notes_list_state_error_component import ApiV1NotesListStateErrorComponent
-        from ..models.api_v1_notes_list_state_not_error_component import ApiV1NotesListStateNotErrorComponent
-        from ..models.api_v1_notes_list_time_range_error_component import ApiV1NotesListTimeRangeErrorComponent
+        from ..models.api_v1_notes_list_name_exact_error_component import (
+            ApiV1NotesListNameExactErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_organizations_error_component import (
+            ApiV1NotesListOrganizationsErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_parent_note_error_component import (
+            ApiV1NotesListParentNoteErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_project_error_component import (
+            ApiV1NotesListProjectErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_search_error_component import (
+            ApiV1NotesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_state_error_component import ApiV1NotesListStateErrorComponent  # noqa: PLC0415
+        from ..models.api_v1_notes_list_state_not_error_component import (
+            ApiV1NotesListStateNotErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_notes_list_time_range_error_component import (
+            ApiV1NotesListTimeRangeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_notes_list_time_tracked_min_error_component import (
-            ApiV1NotesListTimeTrackedMinErrorComponent,
+            ApiV1NotesListTimeTrackedMinErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_notes_list_workspaces_error_component import ApiV1NotesListWorkspacesErrorComponent
+        from ..models.api_v1_notes_list_workspaces_error_component import (
+            ApiV1NotesListWorkspacesErrorComponent,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         type_ = check_validation_error_enum(d.pop("type"))

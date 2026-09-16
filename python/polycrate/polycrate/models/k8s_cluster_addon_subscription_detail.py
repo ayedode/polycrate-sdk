@@ -226,25 +226,25 @@ class K8SClusterAddonSubscriptionDetail:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.k8s_cluster_addon_subscription_detail_addon_detail_type_0 import (
-            K8SClusterAddonSubscriptionDetailAddonDetailType0,
+            K8SClusterAddonSubscriptionDetailAddonDetailType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_block_type_0 import (
-            K8SClusterAddonSubscriptionDetailBlockType0,
+            K8SClusterAddonSubscriptionDetailBlockType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_deleted_by_user_type_0 import (
-            K8SClusterAddonSubscriptionDetailDeletedByUserType0,
+            K8SClusterAddonSubscriptionDetailDeletedByUserType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_k8s_cluster_detail_type_0 import (
-            K8SClusterAddonSubscriptionDetailK8SClusterDetailType0,
+            K8SClusterAddonSubscriptionDetailK8SClusterDetailType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_last_action_run_type_0 import (
-            K8SClusterAddonSubscriptionDetailLastActionRunType0,
+            K8SClusterAddonSubscriptionDetailLastActionRunType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_organization_type_0 import (
-            K8SClusterAddonSubscriptionDetailOrganizationType0,
+            K8SClusterAddonSubscriptionDetailOrganizationType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_workspace_type_0 import (
-            K8SClusterAddonSubscriptionDetailWorkspaceType0,
+            K8SClusterAddonSubscriptionDetailWorkspaceType0,  # noqa: PLC0415
         )
 
         id = str(self.id)
@@ -593,26 +593,28 @@ class K8SClusterAddonSubscriptionDetail:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.k8s_cluster_addon_subscription_detail_addon_detail_type_0 import (
-            K8SClusterAddonSubscriptionDetailAddonDetailType0,
+            K8SClusterAddonSubscriptionDetailAddonDetailType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_block_type_0 import (
-            K8SClusterAddonSubscriptionDetailBlockType0,
+            K8SClusterAddonSubscriptionDetailBlockType0,  # noqa: PLC0415
         )
-        from ..models.k8s_cluster_addon_subscription_detail_created import K8SClusterAddonSubscriptionDetailCreated
+        from ..models.k8s_cluster_addon_subscription_detail_created import (
+            K8SClusterAddonSubscriptionDetailCreated,  # noqa: PLC0415
+        )
         from ..models.k8s_cluster_addon_subscription_detail_deleted_by_user_type_0 import (
-            K8SClusterAddonSubscriptionDetailDeletedByUserType0,
+            K8SClusterAddonSubscriptionDetailDeletedByUserType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_k8s_cluster_detail_type_0 import (
-            K8SClusterAddonSubscriptionDetailK8SClusterDetailType0,
+            K8SClusterAddonSubscriptionDetailK8SClusterDetailType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_last_action_run_type_0 import (
-            K8SClusterAddonSubscriptionDetailLastActionRunType0,
+            K8SClusterAddonSubscriptionDetailLastActionRunType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_organization_type_0 import (
-            K8SClusterAddonSubscriptionDetailOrganizationType0,
+            K8SClusterAddonSubscriptionDetailOrganizationType0,  # noqa: PLC0415
         )
         from ..models.k8s_cluster_addon_subscription_detail_workspace_type_0 import (
-            K8SClusterAddonSubscriptionDetailWorkspaceType0,
+            K8SClusterAddonSubscriptionDetailWorkspaceType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

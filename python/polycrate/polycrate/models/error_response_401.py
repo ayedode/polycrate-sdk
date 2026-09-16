@@ -48,7 +48,7 @@ class ErrorResponse401:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.error_401 import Error401
+        from ..models.error_401 import Error401  # noqa: PLC0415
 
         d = dict(src_dict)
         type_ = check_client_error_enum(d.pop("type"))

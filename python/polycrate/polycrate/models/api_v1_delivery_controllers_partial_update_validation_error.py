@@ -188,97 +188,97 @@ class ApiV1DeliveryControllersPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_delivery_controllers_partial_update_annotations_error_component import (
-            ApiV1DeliveryControllersPartialUpdateAnnotationsErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_applications_degraded_error_component import (
-            ApiV1DeliveryControllersPartialUpdateApplicationsDegradedErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateApplicationsDegradedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_applications_out_of_sync_error_component import (
-            ApiV1DeliveryControllersPartialUpdateApplicationsOutOfSyncErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateApplicationsOutOfSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_applications_synced_error_component import (
-            ApiV1DeliveryControllersPartialUpdateApplicationsSyncedErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateApplicationsSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_applications_total_error_component import (
-            ApiV1DeliveryControllersPartialUpdateApplicationsTotalErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateApplicationsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_archived_at_error_component import (
-            ApiV1DeliveryControllersPartialUpdateArchivedAtErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_archived_error_component import (
-            ApiV1DeliveryControllersPartialUpdateArchivedErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_archived_reason_error_component import (
-            ApiV1DeliveryControllersPartialUpdateArchivedReasonErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_controller_app_version_error_component import (
-            ApiV1DeliveryControllersPartialUpdateControllerAppVersionErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateControllerAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_credential_error_component import (
-            ApiV1DeliveryControllersPartialUpdateCredentialErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_criticality_error_component import (
-            ApiV1DeliveryControllersPartialUpdateCriticalityErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_debug_mode_error_component import (
-            ApiV1DeliveryControllersPartialUpdateDebugModeErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_display_name_error_component import (
-            ApiV1DeliveryControllersPartialUpdateDisplayNameErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_hostname_error_component import (
-            ApiV1DeliveryControllersPartialUpdateHostnameErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_k8s_app_error_component import (
-            ApiV1DeliveryControllersPartialUpdateK8SAppErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_k8s_cluster_error_component import (
-            ApiV1DeliveryControllersPartialUpdateK8SClusterErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_kind_error_component import (
-            ApiV1DeliveryControllersPartialUpdateKindErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_labels_error_component import (
-            ApiV1DeliveryControllersPartialUpdateLabelsErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_name_error_component import (
-            ApiV1DeliveryControllersPartialUpdateNameErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_non_field_errors_error_component import (
-            ApiV1DeliveryControllersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_platform_service_error_component import (
-            ApiV1DeliveryControllersPartialUpdatePlatformServiceErrorComponent,
+            ApiV1DeliveryControllersPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_provider_error_component import (
-            ApiV1DeliveryControllersPartialUpdateProviderErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_provider_id_error_component import (
-            ApiV1DeliveryControllersPartialUpdateProviderIdErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_provider_reference_error_component import (
-            ApiV1DeliveryControllersPartialUpdateProviderReferenceErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_reconciliation_enabled_error_component import (
-            ApiV1DeliveryControllersPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_sla_availability_error_component import (
-            ApiV1DeliveryControllersPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_sla_target_error_component import (
-            ApiV1DeliveryControllersPartialUpdateSlaTargetErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_slo_availability_error_component import (
-            ApiV1DeliveryControllersPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_slo_target_error_component import (
-            ApiV1DeliveryControllersPartialUpdateSloTargetErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_target_availability_error_component import (
-            ApiV1DeliveryControllersPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_tolerations_error_component import (
-            ApiV1DeliveryControllersPartialUpdateTolerationsErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -367,100 +367,100 @@ class ApiV1DeliveryControllersPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_delivery_controllers_partial_update_annotations_error_component import (
-            ApiV1DeliveryControllersPartialUpdateAnnotationsErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_applications_degraded_error_component import (
-            ApiV1DeliveryControllersPartialUpdateApplicationsDegradedErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateApplicationsDegradedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_applications_out_of_sync_error_component import (
-            ApiV1DeliveryControllersPartialUpdateApplicationsOutOfSyncErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateApplicationsOutOfSyncErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_applications_synced_error_component import (
-            ApiV1DeliveryControllersPartialUpdateApplicationsSyncedErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateApplicationsSyncedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_applications_total_error_component import (
-            ApiV1DeliveryControllersPartialUpdateApplicationsTotalErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateApplicationsTotalErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_archived_at_error_component import (
-            ApiV1DeliveryControllersPartialUpdateArchivedAtErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_archived_error_component import (
-            ApiV1DeliveryControllersPartialUpdateArchivedErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_archived_reason_error_component import (
-            ApiV1DeliveryControllersPartialUpdateArchivedReasonErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_controller_app_version_error_component import (
-            ApiV1DeliveryControllersPartialUpdateControllerAppVersionErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateControllerAppVersionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_credential_error_component import (
-            ApiV1DeliveryControllersPartialUpdateCredentialErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateCredentialErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_criticality_error_component import (
-            ApiV1DeliveryControllersPartialUpdateCriticalityErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_debug_mode_error_component import (
-            ApiV1DeliveryControllersPartialUpdateDebugModeErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_display_name_error_component import (
-            ApiV1DeliveryControllersPartialUpdateDisplayNameErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_hostname_error_component import (
-            ApiV1DeliveryControllersPartialUpdateHostnameErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_k8s_app_error_component import (
-            ApiV1DeliveryControllersPartialUpdateK8SAppErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_k8s_cluster_error_component import (
-            ApiV1DeliveryControllersPartialUpdateK8SClusterErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_kind_error_component import (
-            ApiV1DeliveryControllersPartialUpdateKindErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_labels_error_component import (
-            ApiV1DeliveryControllersPartialUpdateLabelsErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_metadata_error_component import (
-            ApiV1DeliveryControllersPartialUpdateMetadataErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_name_error_component import (
-            ApiV1DeliveryControllersPartialUpdateNameErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_non_field_errors_error_component import (
-            ApiV1DeliveryControllersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_platform_service_error_component import (
-            ApiV1DeliveryControllersPartialUpdatePlatformServiceErrorComponent,
+            ApiV1DeliveryControllersPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_provider_error_component import (
-            ApiV1DeliveryControllersPartialUpdateProviderErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_provider_id_error_component import (
-            ApiV1DeliveryControllersPartialUpdateProviderIdErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_provider_reference_error_component import (
-            ApiV1DeliveryControllersPartialUpdateProviderReferenceErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_reconciliation_enabled_error_component import (
-            ApiV1DeliveryControllersPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_sla_availability_error_component import (
-            ApiV1DeliveryControllersPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_sla_target_error_component import (
-            ApiV1DeliveryControllersPartialUpdateSlaTargetErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_slo_availability_error_component import (
-            ApiV1DeliveryControllersPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_slo_target_error_component import (
-            ApiV1DeliveryControllersPartialUpdateSloTargetErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_target_availability_error_component import (
-            ApiV1DeliveryControllersPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_delivery_controllers_partial_update_tolerations_error_component import (
-            ApiV1DeliveryControllersPartialUpdateTolerationsErrorComponent,
+            ApiV1DeliveryControllersPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

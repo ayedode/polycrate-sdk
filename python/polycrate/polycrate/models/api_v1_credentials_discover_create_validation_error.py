@@ -171,91 +171,91 @@ class ApiV1CredentialsDiscoverCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_credentials_discover_create_annotations_error_component import (
-            ApiV1CredentialsDiscoverCreateAnnotationsErrorComponent,
+            ApiV1CredentialsDiscoverCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_api_endpoint_error_component import (
-            ApiV1CredentialsDiscoverCreateApiEndpointErrorComponent,
+            ApiV1CredentialsDiscoverCreateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_api_key_error_component import (
-            ApiV1CredentialsDiscoverCreateApiKeyErrorComponent,
+            ApiV1CredentialsDiscoverCreateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_api_user_error_component import (
-            ApiV1CredentialsDiscoverCreateApiUserErrorComponent,
+            ApiV1CredentialsDiscoverCreateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_archived_at_error_component import (
-            ApiV1CredentialsDiscoverCreateArchivedAtErrorComponent,
+            ApiV1CredentialsDiscoverCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_archived_error_component import (
-            ApiV1CredentialsDiscoverCreateArchivedErrorComponent,
+            ApiV1CredentialsDiscoverCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_archived_reason_error_component import (
-            ApiV1CredentialsDiscoverCreateArchivedReasonErrorComponent,
+            ApiV1CredentialsDiscoverCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_criticality_error_component import (
-            ApiV1CredentialsDiscoverCreateCriticalityErrorComponent,
+            ApiV1CredentialsDiscoverCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_debug_mode_error_component import (
-            ApiV1CredentialsDiscoverCreateDebugModeErrorComponent,
+            ApiV1CredentialsDiscoverCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_description_error_component import (
-            ApiV1CredentialsDiscoverCreateDescriptionErrorComponent,
+            ApiV1CredentialsDiscoverCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_display_name_error_component import (
-            ApiV1CredentialsDiscoverCreateDisplayNameErrorComponent,
+            ApiV1CredentialsDiscoverCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_kind_error_component import (
-            ApiV1CredentialsDiscoverCreateKindErrorComponent,
+            ApiV1CredentialsDiscoverCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_kubeconfig_error_component import (
-            ApiV1CredentialsDiscoverCreateKubeconfigErrorComponent,
+            ApiV1CredentialsDiscoverCreateKubeconfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_labels_error_component import (
-            ApiV1CredentialsDiscoverCreateLabelsErrorComponent,
+            ApiV1CredentialsDiscoverCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_name_error_component import (
-            ApiV1CredentialsDiscoverCreateNameErrorComponent,
+            ApiV1CredentialsDiscoverCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_non_field_errors_error_component import (
-            ApiV1CredentialsDiscoverCreateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsDiscoverCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_platform_service_error_component import (
-            ApiV1CredentialsDiscoverCreatePlatformServiceErrorComponent,
+            ApiV1CredentialsDiscoverCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_provider_error_component import (
-            ApiV1CredentialsDiscoverCreateProviderErrorComponent,
+            ApiV1CredentialsDiscoverCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_provider_id_error_component import (
-            ApiV1CredentialsDiscoverCreateProviderIdErrorComponent,
+            ApiV1CredentialsDiscoverCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_provider_reference_error_component import (
-            ApiV1CredentialsDiscoverCreateProviderReferenceErrorComponent,
+            ApiV1CredentialsDiscoverCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_reconciliation_enabled_error_component import (
-            ApiV1CredentialsDiscoverCreateReconciliationEnabledErrorComponent,
+            ApiV1CredentialsDiscoverCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_sla_availability_error_component import (
-            ApiV1CredentialsDiscoverCreateSlaAvailabilityErrorComponent,
+            ApiV1CredentialsDiscoverCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_sla_target_error_component import (
-            ApiV1CredentialsDiscoverCreateSlaTargetErrorComponent,
+            ApiV1CredentialsDiscoverCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_slo_availability_error_component import (
-            ApiV1CredentialsDiscoverCreateSloAvailabilityErrorComponent,
+            ApiV1CredentialsDiscoverCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_slo_target_error_component import (
-            ApiV1CredentialsDiscoverCreateSloTargetErrorComponent,
+            ApiV1CredentialsDiscoverCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_ssh_private_key_error_component import (
-            ApiV1CredentialsDiscoverCreateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsDiscoverCreateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_ssh_public_key_error_component import (
-            ApiV1CredentialsDiscoverCreateSshPublicKeyErrorComponent,
+            ApiV1CredentialsDiscoverCreateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_target_availability_error_component import (
-            ApiV1CredentialsDiscoverCreateTargetAvailabilityErrorComponent,
+            ApiV1CredentialsDiscoverCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_tolerations_error_component import (
-            ApiV1CredentialsDiscoverCreateTolerationsErrorComponent,
+            ApiV1CredentialsDiscoverCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -340,94 +340,94 @@ class ApiV1CredentialsDiscoverCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_credentials_discover_create_annotations_error_component import (
-            ApiV1CredentialsDiscoverCreateAnnotationsErrorComponent,
+            ApiV1CredentialsDiscoverCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_api_endpoint_error_component import (
-            ApiV1CredentialsDiscoverCreateApiEndpointErrorComponent,
+            ApiV1CredentialsDiscoverCreateApiEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_api_key_error_component import (
-            ApiV1CredentialsDiscoverCreateApiKeyErrorComponent,
+            ApiV1CredentialsDiscoverCreateApiKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_api_user_error_component import (
-            ApiV1CredentialsDiscoverCreateApiUserErrorComponent,
+            ApiV1CredentialsDiscoverCreateApiUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_archived_at_error_component import (
-            ApiV1CredentialsDiscoverCreateArchivedAtErrorComponent,
+            ApiV1CredentialsDiscoverCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_archived_error_component import (
-            ApiV1CredentialsDiscoverCreateArchivedErrorComponent,
+            ApiV1CredentialsDiscoverCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_archived_reason_error_component import (
-            ApiV1CredentialsDiscoverCreateArchivedReasonErrorComponent,
+            ApiV1CredentialsDiscoverCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_criticality_error_component import (
-            ApiV1CredentialsDiscoverCreateCriticalityErrorComponent,
+            ApiV1CredentialsDiscoverCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_debug_mode_error_component import (
-            ApiV1CredentialsDiscoverCreateDebugModeErrorComponent,
+            ApiV1CredentialsDiscoverCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_description_error_component import (
-            ApiV1CredentialsDiscoverCreateDescriptionErrorComponent,
+            ApiV1CredentialsDiscoverCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_display_name_error_component import (
-            ApiV1CredentialsDiscoverCreateDisplayNameErrorComponent,
+            ApiV1CredentialsDiscoverCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_kind_error_component import (
-            ApiV1CredentialsDiscoverCreateKindErrorComponent,
+            ApiV1CredentialsDiscoverCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_kubeconfig_error_component import (
-            ApiV1CredentialsDiscoverCreateKubeconfigErrorComponent,
+            ApiV1CredentialsDiscoverCreateKubeconfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_labels_error_component import (
-            ApiV1CredentialsDiscoverCreateLabelsErrorComponent,
+            ApiV1CredentialsDiscoverCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_metadata_error_component import (
-            ApiV1CredentialsDiscoverCreateMetadataErrorComponent,
+            ApiV1CredentialsDiscoverCreateMetadataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_name_error_component import (
-            ApiV1CredentialsDiscoverCreateNameErrorComponent,
+            ApiV1CredentialsDiscoverCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_non_field_errors_error_component import (
-            ApiV1CredentialsDiscoverCreateNonFieldErrorsErrorComponent,
+            ApiV1CredentialsDiscoverCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_platform_service_error_component import (
-            ApiV1CredentialsDiscoverCreatePlatformServiceErrorComponent,
+            ApiV1CredentialsDiscoverCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_provider_error_component import (
-            ApiV1CredentialsDiscoverCreateProviderErrorComponent,
+            ApiV1CredentialsDiscoverCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_provider_id_error_component import (
-            ApiV1CredentialsDiscoverCreateProviderIdErrorComponent,
+            ApiV1CredentialsDiscoverCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_provider_reference_error_component import (
-            ApiV1CredentialsDiscoverCreateProviderReferenceErrorComponent,
+            ApiV1CredentialsDiscoverCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_reconciliation_enabled_error_component import (
-            ApiV1CredentialsDiscoverCreateReconciliationEnabledErrorComponent,
+            ApiV1CredentialsDiscoverCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_sla_availability_error_component import (
-            ApiV1CredentialsDiscoverCreateSlaAvailabilityErrorComponent,
+            ApiV1CredentialsDiscoverCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_sla_target_error_component import (
-            ApiV1CredentialsDiscoverCreateSlaTargetErrorComponent,
+            ApiV1CredentialsDiscoverCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_slo_availability_error_component import (
-            ApiV1CredentialsDiscoverCreateSloAvailabilityErrorComponent,
+            ApiV1CredentialsDiscoverCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_slo_target_error_component import (
-            ApiV1CredentialsDiscoverCreateSloTargetErrorComponent,
+            ApiV1CredentialsDiscoverCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_ssh_private_key_error_component import (
-            ApiV1CredentialsDiscoverCreateSshPrivateKeyErrorComponent,
+            ApiV1CredentialsDiscoverCreateSshPrivateKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_ssh_public_key_error_component import (
-            ApiV1CredentialsDiscoverCreateSshPublicKeyErrorComponent,
+            ApiV1CredentialsDiscoverCreateSshPublicKeyErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_target_availability_error_component import (
-            ApiV1CredentialsDiscoverCreateTargetAvailabilityErrorComponent,
+            ApiV1CredentialsDiscoverCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_credentials_discover_create_tolerations_error_component import (
-            ApiV1CredentialsDiscoverCreateTolerationsErrorComponent,
+            ApiV1CredentialsDiscoverCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

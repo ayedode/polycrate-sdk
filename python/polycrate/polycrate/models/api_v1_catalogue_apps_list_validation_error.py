@@ -22,6 +22,9 @@ if TYPE_CHECKING:
         ApiV1CatalogueAppsListCreatedByUsersErrorComponent,
     )
     from ..models.api_v1_catalogue_apps_list_kind_error_component import ApiV1CatalogueAppsListKindErrorComponent
+    from ..models.api_v1_catalogue_apps_list_maintainer_error_component import (
+        ApiV1CatalogueAppsListMaintainerErrorComponent,
+    )
     from ..models.api_v1_catalogue_apps_list_name_error_component import ApiV1CatalogueAppsListNameErrorComponent
     from ..models.api_v1_catalogue_apps_list_name_exact_error_component import (
         ApiV1CatalogueAppsListNameExactErrorComponent,
@@ -50,11 +53,11 @@ class ApiV1CatalogueAppsListValidationError:
         type_ (ValidationErrorEnum): * `validation_error` - Validation Error
         errors (list[ApiV1CatalogueAppsListArtifactPackageErrorComponent | ApiV1CatalogueAppsListCreatedAtErrorComponent
             | ApiV1CatalogueAppsListCreatedByComponentErrorComponent | ApiV1CatalogueAppsListCreatedByUsersErrorComponent |
-            ApiV1CatalogueAppsListKindErrorComponent | ApiV1CatalogueAppsListNameErrorComponent |
-            ApiV1CatalogueAppsListNameExactErrorComponent | ApiV1CatalogueAppsListScopeErrorComponent |
-            ApiV1CatalogueAppsListSearchErrorComponent | ApiV1CatalogueAppsListStateErrorComponent |
-            ApiV1CatalogueAppsListStateNotErrorComponent | ApiV1CatalogueAppsListTimeRangeErrorComponent |
-            ApiV1CatalogueAppsListUpdatedAtErrorComponent]):
+            ApiV1CatalogueAppsListKindErrorComponent | ApiV1CatalogueAppsListMaintainerErrorComponent |
+            ApiV1CatalogueAppsListNameErrorComponent | ApiV1CatalogueAppsListNameExactErrorComponent |
+            ApiV1CatalogueAppsListScopeErrorComponent | ApiV1CatalogueAppsListSearchErrorComponent |
+            ApiV1CatalogueAppsListStateErrorComponent | ApiV1CatalogueAppsListStateNotErrorComponent |
+            ApiV1CatalogueAppsListTimeRangeErrorComponent | ApiV1CatalogueAppsListUpdatedAtErrorComponent]):
     """
 
     type_: ValidationErrorEnum
@@ -64,6 +67,7 @@ class ApiV1CatalogueAppsListValidationError:
         | ApiV1CatalogueAppsListCreatedByComponentErrorComponent
         | ApiV1CatalogueAppsListCreatedByUsersErrorComponent
         | ApiV1CatalogueAppsListKindErrorComponent
+        | ApiV1CatalogueAppsListMaintainerErrorComponent
         | ApiV1CatalogueAppsListNameErrorComponent
         | ApiV1CatalogueAppsListNameExactErrorComponent
         | ApiV1CatalogueAppsListScopeErrorComponent
@@ -77,32 +81,43 @@ class ApiV1CatalogueAppsListValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_catalogue_apps_list_artifact_package_error_component import (
-            ApiV1CatalogueAppsListArtifactPackageErrorComponent,
+            ApiV1CatalogueAppsListArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_created_at_error_component import (
-            ApiV1CatalogueAppsListCreatedAtErrorComponent,
+            ApiV1CatalogueAppsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_created_by_component_error_component import (
-            ApiV1CatalogueAppsListCreatedByComponentErrorComponent,
+            ApiV1CatalogueAppsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_created_by_users_error_component import (
-            ApiV1CatalogueAppsListCreatedByUsersErrorComponent,
+            ApiV1CatalogueAppsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_catalogue_apps_list_kind_error_component import ApiV1CatalogueAppsListKindErrorComponent
-        from ..models.api_v1_catalogue_apps_list_name_error_component import ApiV1CatalogueAppsListNameErrorComponent
-        from ..models.api_v1_catalogue_apps_list_scope_error_component import ApiV1CatalogueAppsListScopeErrorComponent
+        from ..models.api_v1_catalogue_apps_list_kind_error_component import (
+            ApiV1CatalogueAppsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_catalogue_apps_list_maintainer_error_component import (
+            ApiV1CatalogueAppsListMaintainerErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_catalogue_apps_list_name_error_component import (
+            ApiV1CatalogueAppsListNameErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_catalogue_apps_list_scope_error_component import (
+            ApiV1CatalogueAppsListScopeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_catalogue_apps_list_search_error_component import (
-            ApiV1CatalogueAppsListSearchErrorComponent,
+            ApiV1CatalogueAppsListSearchErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_catalogue_apps_list_state_error_component import ApiV1CatalogueAppsListStateErrorComponent
+        from ..models.api_v1_catalogue_apps_list_state_error_component import (
+            ApiV1CatalogueAppsListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_catalogue_apps_list_state_not_error_component import (
-            ApiV1CatalogueAppsListStateNotErrorComponent,
+            ApiV1CatalogueAppsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_time_range_error_component import (
-            ApiV1CatalogueAppsListTimeRangeErrorComponent,
+            ApiV1CatalogueAppsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_updated_at_error_component import (
-            ApiV1CatalogueAppsListUpdatedAtErrorComponent,
+            ApiV1CatalogueAppsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -132,6 +147,8 @@ class ApiV1CatalogueAppsListValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1CatalogueAppsListArtifactPackageErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1CatalogueAppsListMaintainerErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1CatalogueAppsListStateNotErrorComponent):
                 errors_item = errors_item_data.to_dict()
             else:
@@ -153,35 +170,46 @@ class ApiV1CatalogueAppsListValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_catalogue_apps_list_artifact_package_error_component import (
-            ApiV1CatalogueAppsListArtifactPackageErrorComponent,
+            ApiV1CatalogueAppsListArtifactPackageErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_created_at_error_component import (
-            ApiV1CatalogueAppsListCreatedAtErrorComponent,
+            ApiV1CatalogueAppsListCreatedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_created_by_component_error_component import (
-            ApiV1CatalogueAppsListCreatedByComponentErrorComponent,
+            ApiV1CatalogueAppsListCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_created_by_users_error_component import (
-            ApiV1CatalogueAppsListCreatedByUsersErrorComponent,
+            ApiV1CatalogueAppsListCreatedByUsersErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_catalogue_apps_list_kind_error_component import ApiV1CatalogueAppsListKindErrorComponent
-        from ..models.api_v1_catalogue_apps_list_name_error_component import ApiV1CatalogueAppsListNameErrorComponent
+        from ..models.api_v1_catalogue_apps_list_kind_error_component import (
+            ApiV1CatalogueAppsListKindErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_catalogue_apps_list_maintainer_error_component import (
+            ApiV1CatalogueAppsListMaintainerErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_catalogue_apps_list_name_error_component import (
+            ApiV1CatalogueAppsListNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_catalogue_apps_list_name_exact_error_component import (
-            ApiV1CatalogueAppsListNameExactErrorComponent,
+            ApiV1CatalogueAppsListNameExactErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_catalogue_apps_list_scope_error_component import ApiV1CatalogueAppsListScopeErrorComponent
+        from ..models.api_v1_catalogue_apps_list_scope_error_component import (
+            ApiV1CatalogueAppsListScopeErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_catalogue_apps_list_search_error_component import (
-            ApiV1CatalogueAppsListSearchErrorComponent,
+            ApiV1CatalogueAppsListSearchErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_catalogue_apps_list_state_error_component import ApiV1CatalogueAppsListStateErrorComponent
+        from ..models.api_v1_catalogue_apps_list_state_error_component import (
+            ApiV1CatalogueAppsListStateErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_catalogue_apps_list_state_not_error_component import (
-            ApiV1CatalogueAppsListStateNotErrorComponent,
+            ApiV1CatalogueAppsListStateNotErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_time_range_error_component import (
-            ApiV1CatalogueAppsListTimeRangeErrorComponent,
+            ApiV1CatalogueAppsListTimeRangeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_catalogue_apps_list_updated_at_error_component import (
-            ApiV1CatalogueAppsListUpdatedAtErrorComponent,
+            ApiV1CatalogueAppsListUpdatedAtErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -199,6 +227,7 @@ class ApiV1CatalogueAppsListValidationError:
                 | ApiV1CatalogueAppsListCreatedByComponentErrorComponent
                 | ApiV1CatalogueAppsListCreatedByUsersErrorComponent
                 | ApiV1CatalogueAppsListKindErrorComponent
+                | ApiV1CatalogueAppsListMaintainerErrorComponent
                 | ApiV1CatalogueAppsListNameErrorComponent
                 | ApiV1CatalogueAppsListNameExactErrorComponent
                 | ApiV1CatalogueAppsListScopeErrorComponent
@@ -322,19 +351,29 @@ class ApiV1CatalogueAppsListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_catalogue_apps_list_error_type_11 = (
-                        ApiV1CatalogueAppsListStateNotErrorComponent.from_dict(data)
+                        ApiV1CatalogueAppsListMaintainerErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_catalogue_apps_list_error_type_11
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_catalogue_apps_list_error_type_12 = (
+                        ApiV1CatalogueAppsListStateNotErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_catalogue_apps_list_error_type_12
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_catalogue_apps_list_error_type_12 = (
+                componentsschemas_api_v1_catalogue_apps_list_error_type_13 = (
                     ApiV1CatalogueAppsListNameExactErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_catalogue_apps_list_error_type_12
+                return componentsschemas_api_v1_catalogue_apps_list_error_type_13
 
             errors_item = _parse_errors_item(errors_item_data)
 

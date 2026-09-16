@@ -148,73 +148,73 @@ class ApiV1IdpIdentityprovidersPartialUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_idp_identityproviders_partial_update_annotations_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateAnnotationsErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_archived_at_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateArchivedAtErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_archived_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateArchivedErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_archived_reason_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateArchivedReasonErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_criticality_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateCriticalityErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_debug_mode_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateDebugModeErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_display_name_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateDisplayNameErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_hostname_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateHostnameErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_kind_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateKindErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_labels_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateLabelsErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_name_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateNameErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_non_field_errors_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_platform_service_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdatePlatformServiceErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_provider_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateProviderErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_provider_id_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateProviderIdErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_provider_reference_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateProviderReferenceErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_reconciliation_enabled_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_sla_availability_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_sla_target_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateSlaTargetErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_slo_availability_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_slo_target_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateSloTargetErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_target_availability_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_tolerations_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateTolerationsErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -289,76 +289,76 @@ class ApiV1IdpIdentityprovidersPartialUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_idp_identityproviders_partial_update_annotations_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateAnnotationsErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_archived_at_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateArchivedAtErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_archived_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateArchivedErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_archived_reason_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateArchivedReasonErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_criticality_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateCriticalityErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_debug_mode_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateDebugModeErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_display_name_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateDisplayNameErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_hostname_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateHostnameErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateHostnameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_kind_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateKindErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_labels_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateLabelsErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_name_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateNameErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_non_field_errors_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateNonFieldErrorsErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_platform_service_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdatePlatformServiceErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_provider_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateProviderErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_provider_id_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateProviderIdErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_provider_reference_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateProviderReferenceErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_reconciliation_enabled_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateReconciliationEnabledErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_sla_availability_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateSlaAvailabilityErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_sla_target_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateSlaTargetErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_slo_availability_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateSloAvailabilityErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_slo_target_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateSloTargetErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_sync_mode_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateSyncModeErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateSyncModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_target_availability_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateTargetAvailabilityErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_idp_identityproviders_partial_update_tolerations_error_component import (
-            ApiV1IdpIdentityprovidersPartialUpdateTolerationsErrorComponent,
+            ApiV1IdpIdentityprovidersPartialUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

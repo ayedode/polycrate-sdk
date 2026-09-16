@@ -34,7 +34,7 @@ class LoadbalancerRegionListCreated:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.loadbalancer_region_list_created_created_by_type_0 import (
-            LoadbalancerRegionListCreatedCreatedByType0,
+            LoadbalancerRegionListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         created_at: None | str | Unset
@@ -82,7 +82,7 @@ class LoadbalancerRegionListCreated:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.loadbalancer_region_list_created_created_by_type_0 import (
-            LoadbalancerRegionListCreatedCreatedByType0,
+            LoadbalancerRegionListCreatedCreatedByType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

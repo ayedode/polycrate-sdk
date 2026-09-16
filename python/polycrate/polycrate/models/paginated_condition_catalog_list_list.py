@@ -68,7 +68,7 @@ class PaginatedConditionCatalogListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.condition_catalog_list import ConditionCatalogList
+        from ..models.condition_catalog_list import ConditionCatalogList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

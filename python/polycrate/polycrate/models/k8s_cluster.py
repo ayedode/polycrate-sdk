@@ -262,10 +262,10 @@ class K8SCluster:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_cluster_deleted_by_user_type_0 import K8SClusterDeletedByUserType0
-        from ..models.k8s_cluster_last_action_run_type_0 import K8SClusterLastActionRunType0
-        from ..models.k8s_cluster_organization_type_0 import K8SClusterOrganizationType0
-        from ..models.k8s_cluster_workspace_type_0 import K8SClusterWorkspaceType0
+        from ..models.k8s_cluster_deleted_by_user_type_0 import K8SClusterDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_cluster_last_action_run_type_0 import K8SClusterLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_cluster_organization_type_0 import K8SClusterOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_cluster_workspace_type_0 import K8SClusterWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -736,14 +736,14 @@ class K8SCluster:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.block_simple import BlockSimple
-        from ..models.k8s_app_list import K8SAppList
-        from ..models.k8s_cluster_created import K8SClusterCreated
-        from ..models.k8s_cluster_deleted_by_user_type_0 import K8SClusterDeletedByUserType0
-        from ..models.k8s_cluster_last_action_run_type_0 import K8SClusterLastActionRunType0
-        from ..models.k8s_cluster_organization_type_0 import K8SClusterOrganizationType0
-        from ..models.k8s_cluster_workspace_type_0 import K8SClusterWorkspaceType0
-        from ..models.product_simple import ProductSimple
+        from ..models.block_simple import BlockSimple  # noqa: PLC0415
+        from ..models.k8s_app_list import K8SAppList  # noqa: PLC0415
+        from ..models.k8s_cluster_created import K8SClusterCreated  # noqa: PLC0415
+        from ..models.k8s_cluster_deleted_by_user_type_0 import K8SClusterDeletedByUserType0  # noqa: PLC0415
+        from ..models.k8s_cluster_last_action_run_type_0 import K8SClusterLastActionRunType0  # noqa: PLC0415
+        from ..models.k8s_cluster_organization_type_0 import K8SClusterOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_cluster_workspace_type_0 import K8SClusterWorkspaceType0  # noqa: PLC0415
+        from ..models.product_simple import ProductSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

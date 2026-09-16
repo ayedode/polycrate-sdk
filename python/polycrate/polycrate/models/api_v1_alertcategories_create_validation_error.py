@@ -138,76 +138,76 @@ class ApiV1AlertcategoriesCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_alertcategories_create_annotations_error_component import (
-            ApiV1AlertcategoriesCreateAnnotationsErrorComponent,
+            ApiV1AlertcategoriesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_archived_at_error_component import (
-            ApiV1AlertcategoriesCreateArchivedAtErrorComponent,
+            ApiV1AlertcategoriesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_archived_error_component import (
-            ApiV1AlertcategoriesCreateArchivedErrorComponent,
+            ApiV1AlertcategoriesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_archived_reason_error_component import (
-            ApiV1AlertcategoriesCreateArchivedReasonErrorComponent,
+            ApiV1AlertcategoriesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_criticality_error_component import (
-            ApiV1AlertcategoriesCreateCriticalityErrorComponent,
+            ApiV1AlertcategoriesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_debug_mode_error_component import (
-            ApiV1AlertcategoriesCreateDebugModeErrorComponent,
+            ApiV1AlertcategoriesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_description_error_component import (
-            ApiV1AlertcategoriesCreateDescriptionErrorComponent,
+            ApiV1AlertcategoriesCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_display_name_error_component import (
-            ApiV1AlertcategoriesCreateDisplayNameErrorComponent,
+            ApiV1AlertcategoriesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_kind_error_component import (
-            ApiV1AlertcategoriesCreateKindErrorComponent,
+            ApiV1AlertcategoriesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_labels_error_component import (
-            ApiV1AlertcategoriesCreateLabelsErrorComponent,
+            ApiV1AlertcategoriesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_name_error_component import (
-            ApiV1AlertcategoriesCreateNameErrorComponent,
+            ApiV1AlertcategoriesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_non_field_errors_error_component import (
-            ApiV1AlertcategoriesCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertcategoriesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_platform_service_error_component import (
-            ApiV1AlertcategoriesCreatePlatformServiceErrorComponent,
+            ApiV1AlertcategoriesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_provider_error_component import (
-            ApiV1AlertcategoriesCreateProviderErrorComponent,
+            ApiV1AlertcategoriesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_provider_id_error_component import (
-            ApiV1AlertcategoriesCreateProviderIdErrorComponent,
+            ApiV1AlertcategoriesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_provider_reference_error_component import (
-            ApiV1AlertcategoriesCreateProviderReferenceErrorComponent,
+            ApiV1AlertcategoriesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_reconciliation_enabled_error_component import (
-            ApiV1AlertcategoriesCreateReconciliationEnabledErrorComponent,
+            ApiV1AlertcategoriesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_sla_availability_error_component import (
-            ApiV1AlertcategoriesCreateSlaAvailabilityErrorComponent,
+            ApiV1AlertcategoriesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_sla_target_error_component import (
-            ApiV1AlertcategoriesCreateSlaTargetErrorComponent,
+            ApiV1AlertcategoriesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_slo_availability_error_component import (
-            ApiV1AlertcategoriesCreateSloAvailabilityErrorComponent,
+            ApiV1AlertcategoriesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_slo_target_error_component import (
-            ApiV1AlertcategoriesCreateSloTargetErrorComponent,
+            ApiV1AlertcategoriesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_sort_order_error_component import (
-            ApiV1AlertcategoriesCreateSortOrderErrorComponent,
+            ApiV1AlertcategoriesCreateSortOrderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_target_availability_error_component import (
-            ApiV1AlertcategoriesCreateTargetAvailabilityErrorComponent,
+            ApiV1AlertcategoriesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_tolerations_error_component import (
-            ApiV1AlertcategoriesCreateTolerationsErrorComponent,
+            ApiV1AlertcategoriesCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -282,79 +282,79 @@ class ApiV1AlertcategoriesCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_alertcategories_create_active_error_component import (
-            ApiV1AlertcategoriesCreateActiveErrorComponent,
+            ApiV1AlertcategoriesCreateActiveErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_annotations_error_component import (
-            ApiV1AlertcategoriesCreateAnnotationsErrorComponent,
+            ApiV1AlertcategoriesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_archived_at_error_component import (
-            ApiV1AlertcategoriesCreateArchivedAtErrorComponent,
+            ApiV1AlertcategoriesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_archived_error_component import (
-            ApiV1AlertcategoriesCreateArchivedErrorComponent,
+            ApiV1AlertcategoriesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_archived_reason_error_component import (
-            ApiV1AlertcategoriesCreateArchivedReasonErrorComponent,
+            ApiV1AlertcategoriesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_criticality_error_component import (
-            ApiV1AlertcategoriesCreateCriticalityErrorComponent,
+            ApiV1AlertcategoriesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_debug_mode_error_component import (
-            ApiV1AlertcategoriesCreateDebugModeErrorComponent,
+            ApiV1AlertcategoriesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_description_error_component import (
-            ApiV1AlertcategoriesCreateDescriptionErrorComponent,
+            ApiV1AlertcategoriesCreateDescriptionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_display_name_error_component import (
-            ApiV1AlertcategoriesCreateDisplayNameErrorComponent,
+            ApiV1AlertcategoriesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_kind_error_component import (
-            ApiV1AlertcategoriesCreateKindErrorComponent,
+            ApiV1AlertcategoriesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_labels_error_component import (
-            ApiV1AlertcategoriesCreateLabelsErrorComponent,
+            ApiV1AlertcategoriesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_name_error_component import (
-            ApiV1AlertcategoriesCreateNameErrorComponent,
+            ApiV1AlertcategoriesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_non_field_errors_error_component import (
-            ApiV1AlertcategoriesCreateNonFieldErrorsErrorComponent,
+            ApiV1AlertcategoriesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_platform_service_error_component import (
-            ApiV1AlertcategoriesCreatePlatformServiceErrorComponent,
+            ApiV1AlertcategoriesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_provider_error_component import (
-            ApiV1AlertcategoriesCreateProviderErrorComponent,
+            ApiV1AlertcategoriesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_provider_id_error_component import (
-            ApiV1AlertcategoriesCreateProviderIdErrorComponent,
+            ApiV1AlertcategoriesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_provider_reference_error_component import (
-            ApiV1AlertcategoriesCreateProviderReferenceErrorComponent,
+            ApiV1AlertcategoriesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_reconciliation_enabled_error_component import (
-            ApiV1AlertcategoriesCreateReconciliationEnabledErrorComponent,
+            ApiV1AlertcategoriesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_sla_availability_error_component import (
-            ApiV1AlertcategoriesCreateSlaAvailabilityErrorComponent,
+            ApiV1AlertcategoriesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_sla_target_error_component import (
-            ApiV1AlertcategoriesCreateSlaTargetErrorComponent,
+            ApiV1AlertcategoriesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_slo_availability_error_component import (
-            ApiV1AlertcategoriesCreateSloAvailabilityErrorComponent,
+            ApiV1AlertcategoriesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_slo_target_error_component import (
-            ApiV1AlertcategoriesCreateSloTargetErrorComponent,
+            ApiV1AlertcategoriesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_sort_order_error_component import (
-            ApiV1AlertcategoriesCreateSortOrderErrorComponent,
+            ApiV1AlertcategoriesCreateSortOrderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_target_availability_error_component import (
-            ApiV1AlertcategoriesCreateTargetAvailabilityErrorComponent,
+            ApiV1AlertcategoriesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_alertcategories_create_tolerations_error_component import (
-            ApiV1AlertcategoriesCreateTolerationsErrorComponent,
+            ApiV1AlertcategoriesCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

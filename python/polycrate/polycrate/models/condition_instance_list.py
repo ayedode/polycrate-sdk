@@ -90,8 +90,12 @@ class ConditionInstanceList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.condition_instance_list_organization_type_0 import ConditionInstanceListOrganizationType0
-        from ..models.condition_instance_list_workspace_type_0 import ConditionInstanceListWorkspaceType0
+        from ..models.condition_instance_list_organization_type_0 import (
+            ConditionInstanceListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.condition_instance_list_workspace_type_0 import (
+            ConditionInstanceListWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -203,11 +207,15 @@ class ConditionInstanceList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.condition_instance_list_active_condition_instances_item import (
-            ConditionInstanceListActiveConditionInstancesItem,
+            ConditionInstanceListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.condition_instance_list_created import ConditionInstanceListCreated
-        from ..models.condition_instance_list_organization_type_0 import ConditionInstanceListOrganizationType0
-        from ..models.condition_instance_list_workspace_type_0 import ConditionInstanceListWorkspaceType0
+        from ..models.condition_instance_list_created import ConditionInstanceListCreated  # noqa: PLC0415
+        from ..models.condition_instance_list_organization_type_0 import (
+            ConditionInstanceListOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.condition_instance_list_workspace_type_0 import (
+            ConditionInstanceListWorkspaceType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

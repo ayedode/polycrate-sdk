@@ -209,10 +209,18 @@ class K8SAddonConfigRevision:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_addon_config_revision_deleted_by_user_type_0 import K8SAddonConfigRevisionDeletedByUserType0
-        from ..models.k8s_addon_config_revision_last_action_run_type_0 import K8SAddonConfigRevisionLastActionRunType0
-        from ..models.k8s_addon_config_revision_organization_type_0 import K8SAddonConfigRevisionOrganizationType0
-        from ..models.k8s_addon_config_revision_workspace_type_0 import K8SAddonConfigRevisionWorkspaceType0
+        from ..models.k8s_addon_config_revision_deleted_by_user_type_0 import (
+            K8SAddonConfigRevisionDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_addon_config_revision_last_action_run_type_0 import (
+            K8SAddonConfigRevisionLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_addon_config_revision_organization_type_0 import (
+            K8SAddonConfigRevisionOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_addon_config_revision_workspace_type_0 import (
+            K8SAddonConfigRevisionWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -523,11 +531,19 @@ class K8SAddonConfigRevision:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_addon_config_revision_created import K8SAddonConfigRevisionCreated
-        from ..models.k8s_addon_config_revision_deleted_by_user_type_0 import K8SAddonConfigRevisionDeletedByUserType0
-        from ..models.k8s_addon_config_revision_last_action_run_type_0 import K8SAddonConfigRevisionLastActionRunType0
-        from ..models.k8s_addon_config_revision_organization_type_0 import K8SAddonConfigRevisionOrganizationType0
-        from ..models.k8s_addon_config_revision_workspace_type_0 import K8SAddonConfigRevisionWorkspaceType0
+        from ..models.k8s_addon_config_revision_created import K8SAddonConfigRevisionCreated  # noqa: PLC0415
+        from ..models.k8s_addon_config_revision_deleted_by_user_type_0 import (
+            K8SAddonConfigRevisionDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_addon_config_revision_last_action_run_type_0 import (
+            K8SAddonConfigRevisionLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_addon_config_revision_organization_type_0 import (
+            K8SAddonConfigRevisionOrganizationType0,  # noqa: PLC0415
+        )
+        from ..models.k8s_addon_config_revision_workspace_type_0 import (
+            K8SAddonConfigRevisionWorkspaceType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

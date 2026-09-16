@@ -98,9 +98,11 @@ class PricingCalculatorStateList:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.pricing_calculator_state_list_organization_type_0 import (
-            PricingCalculatorStateListOrganizationType0,
+            PricingCalculatorStateListOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.pricing_calculator_state_list_workspace_type_0 import PricingCalculatorStateListWorkspaceType0
+        from ..models.pricing_calculator_state_list_workspace_type_0 import (
+            PricingCalculatorStateListWorkspaceType0,  # noqa: PLC0415
+        )
 
         id = str(self.id)
 
@@ -200,13 +202,15 @@ class PricingCalculatorStateList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.pricing_calculator_state_list_active_condition_instances_item import (
-            PricingCalculatorStateListActiveConditionInstancesItem,
+            PricingCalculatorStateListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.pricing_calculator_state_list_created import PricingCalculatorStateListCreated
+        from ..models.pricing_calculator_state_list_created import PricingCalculatorStateListCreated  # noqa: PLC0415
         from ..models.pricing_calculator_state_list_organization_type_0 import (
-            PricingCalculatorStateListOrganizationType0,
+            PricingCalculatorStateListOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.pricing_calculator_state_list_workspace_type_0 import PricingCalculatorStateListWorkspaceType0
+        from ..models.pricing_calculator_state_list_workspace_type_0 import (
+            PricingCalculatorStateListWorkspaceType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

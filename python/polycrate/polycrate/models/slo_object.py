@@ -51,7 +51,7 @@ class SloObject:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.slo_downtime_ref import SloDowntimeRef
+        from ..models.slo_downtime_ref import SloDowntimeRef  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -98,9 +98,9 @@ class SloObject:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.slo_downtime_ref import SloDowntimeRef
-        from ..models.slo_organization_ref import SloOrganizationRef
-        from ..models.slo_workspace_ref import SloWorkspaceRef
+        from ..models.slo_downtime_ref import SloDowntimeRef  # noqa: PLC0415
+        from ..models.slo_organization_ref import SloOrganizationRef  # noqa: PLC0415
+        from ..models.slo_workspace_ref import SloWorkspaceRef  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

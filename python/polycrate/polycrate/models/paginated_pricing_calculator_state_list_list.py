@@ -68,7 +68,7 @@ class PaginatedPricingCalculatorStateListList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.pricing_calculator_state_list import PricingCalculatorStateList
+        from ..models.pricing_calculator_state_list import PricingCalculatorStateList  # noqa: PLC0415
 
         d = dict(src_dict)
         count = d.pop("count")

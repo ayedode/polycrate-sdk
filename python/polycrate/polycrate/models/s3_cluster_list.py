@@ -88,8 +88,8 @@ class S3ClusterList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.s3_cluster_list_organization_type_0 import S3ClusterListOrganizationType0
-        from ..models.s3_cluster_list_workspace_type_0 import S3ClusterListWorkspaceType0
+        from ..models.s3_cluster_list_organization_type_0 import S3ClusterListOrganizationType0  # noqa: PLC0415
+        from ..models.s3_cluster_list_workspace_type_0 import S3ClusterListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -185,10 +185,12 @@ class S3ClusterList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_cluster_list_active_condition_instances_item import S3ClusterListActiveConditionInstancesItem
-        from ..models.s3_cluster_list_created import S3ClusterListCreated
-        from ..models.s3_cluster_list_organization_type_0 import S3ClusterListOrganizationType0
-        from ..models.s3_cluster_list_workspace_type_0 import S3ClusterListWorkspaceType0
+        from ..models.s3_cluster_list_active_condition_instances_item import (
+            S3ClusterListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.s3_cluster_list_created import S3ClusterListCreated  # noqa: PLC0415
+        from ..models.s3_cluster_list_organization_type_0 import S3ClusterListOrganizationType0  # noqa: PLC0415
+        from ..models.s3_cluster_list_workspace_type_0 import S3ClusterListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

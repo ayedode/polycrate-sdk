@@ -183,100 +183,100 @@ class ApiV1ArtifactPackagesCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_artifact_packages_create_annotations_error_component import (
-            ApiV1ArtifactPackagesCreateAnnotationsErrorComponent,
+            ApiV1ArtifactPackagesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_archived_at_error_component import (
-            ApiV1ArtifactPackagesCreateArchivedAtErrorComponent,
+            ApiV1ArtifactPackagesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_archived_by_error_component import (
-            ApiV1ArtifactPackagesCreateArchivedByErrorComponent,
+            ApiV1ArtifactPackagesCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_archived_error_component import (
-            ApiV1ArtifactPackagesCreateArchivedErrorComponent,
+            ApiV1ArtifactPackagesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_archived_reason_error_component import (
-            ApiV1ArtifactPackagesCreateArchivedReasonErrorComponent,
+            ApiV1ArtifactPackagesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_created_by_component_error_component import (
-            ApiV1ArtifactPackagesCreateCreatedByComponentErrorComponent,
+            ApiV1ArtifactPackagesCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_criticality_error_component import (
-            ApiV1ArtifactPackagesCreateCriticalityErrorComponent,
+            ApiV1ArtifactPackagesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_debug_mode_error_component import (
-            ApiV1ArtifactPackagesCreateDebugModeErrorComponent,
+            ApiV1ArtifactPackagesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_display_name_error_component import (
-            ApiV1ArtifactPackagesCreateDisplayNameErrorComponent,
+            ApiV1ArtifactPackagesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_kind_error_component import (
-            ApiV1ArtifactPackagesCreateKindErrorComponent,
+            ApiV1ArtifactPackagesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_labels_error_component import (
-            ApiV1ArtifactPackagesCreateLabelsErrorComponent,
+            ApiV1ArtifactPackagesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1ArtifactPackagesCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1ArtifactPackagesCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_managed_by_content_type_error_component import (
-            ApiV1ArtifactPackagesCreateManagedByContentTypeErrorComponent,
+            ApiV1ArtifactPackagesCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_managed_by_object_id_error_component import (
-            ApiV1ArtifactPackagesCreateManagedByObjectIdErrorComponent,
+            ApiV1ArtifactPackagesCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_modified_by_user_error_component import (
-            ApiV1ArtifactPackagesCreateModifiedByUserErrorComponent,
+            ApiV1ArtifactPackagesCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_name_error_component import (
-            ApiV1ArtifactPackagesCreateNameErrorComponent,
+            ApiV1ArtifactPackagesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_non_field_errors_error_component import (
-            ApiV1ArtifactPackagesCreateNonFieldErrorsErrorComponent,
+            ApiV1ArtifactPackagesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_platform_dns_record_created_error_component import (
-            ApiV1ArtifactPackagesCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1ArtifactPackagesCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_platform_service_error_component import (
-            ApiV1ArtifactPackagesCreatePlatformServiceErrorComponent,
+            ApiV1ArtifactPackagesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_provider_error_component import (
-            ApiV1ArtifactPackagesCreateProviderErrorComponent,
+            ApiV1ArtifactPackagesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_provider_id_error_component import (
-            ApiV1ArtifactPackagesCreateProviderIdErrorComponent,
+            ApiV1ArtifactPackagesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_provider_reference_error_component import (
-            ApiV1ArtifactPackagesCreateProviderReferenceErrorComponent,
+            ApiV1ArtifactPackagesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_raw_data_error_component import (
-            ApiV1ArtifactPackagesCreateRawDataErrorComponent,
+            ApiV1ArtifactPackagesCreateRawDataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_reconciliation_enabled_error_component import (
-            ApiV1ArtifactPackagesCreateReconciliationEnabledErrorComponent,
+            ApiV1ArtifactPackagesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_sla_availability_error_component import (
-            ApiV1ArtifactPackagesCreateSlaAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_sla_target_error_component import (
-            ApiV1ArtifactPackagesCreateSlaTargetErrorComponent,
+            ApiV1ArtifactPackagesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_sla_window_days_error_component import (
-            ApiV1ArtifactPackagesCreateSlaWindowDaysErrorComponent,
+            ApiV1ArtifactPackagesCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_slo_availability_error_component import (
-            ApiV1ArtifactPackagesCreateSloAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_slo_target_error_component import (
-            ApiV1ArtifactPackagesCreateSloTargetErrorComponent,
+            ApiV1ArtifactPackagesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_slo_window_days_error_component import (
-            ApiV1ArtifactPackagesCreateSloWindowDaysErrorComponent,
+            ApiV1ArtifactPackagesCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_target_availability_error_component import (
-            ApiV1ArtifactPackagesCreateTargetAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_tolerations_error_component import (
-            ApiV1ArtifactPackagesCreateTolerationsErrorComponent,
+            ApiV1ArtifactPackagesCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -369,103 +369,103 @@ class ApiV1ArtifactPackagesCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_artifact_packages_create_annotations_error_component import (
-            ApiV1ArtifactPackagesCreateAnnotationsErrorComponent,
+            ApiV1ArtifactPackagesCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_archived_at_error_component import (
-            ApiV1ArtifactPackagesCreateArchivedAtErrorComponent,
+            ApiV1ArtifactPackagesCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_archived_by_error_component import (
-            ApiV1ArtifactPackagesCreateArchivedByErrorComponent,
+            ApiV1ArtifactPackagesCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_archived_error_component import (
-            ApiV1ArtifactPackagesCreateArchivedErrorComponent,
+            ApiV1ArtifactPackagesCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_archived_reason_error_component import (
-            ApiV1ArtifactPackagesCreateArchivedReasonErrorComponent,
+            ApiV1ArtifactPackagesCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_created_by_component_error_component import (
-            ApiV1ArtifactPackagesCreateCreatedByComponentErrorComponent,
+            ApiV1ArtifactPackagesCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_created_by_user_error_component import (
-            ApiV1ArtifactPackagesCreateCreatedByUserErrorComponent,
+            ApiV1ArtifactPackagesCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_criticality_error_component import (
-            ApiV1ArtifactPackagesCreateCriticalityErrorComponent,
+            ApiV1ArtifactPackagesCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_debug_mode_error_component import (
-            ApiV1ArtifactPackagesCreateDebugModeErrorComponent,
+            ApiV1ArtifactPackagesCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_display_name_error_component import (
-            ApiV1ArtifactPackagesCreateDisplayNameErrorComponent,
+            ApiV1ArtifactPackagesCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_kind_error_component import (
-            ApiV1ArtifactPackagesCreateKindErrorComponent,
+            ApiV1ArtifactPackagesCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_labels_error_component import (
-            ApiV1ArtifactPackagesCreateLabelsErrorComponent,
+            ApiV1ArtifactPackagesCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1ArtifactPackagesCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1ArtifactPackagesCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_managed_by_content_type_error_component import (
-            ApiV1ArtifactPackagesCreateManagedByContentTypeErrorComponent,
+            ApiV1ArtifactPackagesCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_managed_by_object_id_error_component import (
-            ApiV1ArtifactPackagesCreateManagedByObjectIdErrorComponent,
+            ApiV1ArtifactPackagesCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_modified_by_user_error_component import (
-            ApiV1ArtifactPackagesCreateModifiedByUserErrorComponent,
+            ApiV1ArtifactPackagesCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_name_error_component import (
-            ApiV1ArtifactPackagesCreateNameErrorComponent,
+            ApiV1ArtifactPackagesCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_non_field_errors_error_component import (
-            ApiV1ArtifactPackagesCreateNonFieldErrorsErrorComponent,
+            ApiV1ArtifactPackagesCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_platform_dns_record_created_error_component import (
-            ApiV1ArtifactPackagesCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1ArtifactPackagesCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_platform_service_error_component import (
-            ApiV1ArtifactPackagesCreatePlatformServiceErrorComponent,
+            ApiV1ArtifactPackagesCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_provider_error_component import (
-            ApiV1ArtifactPackagesCreateProviderErrorComponent,
+            ApiV1ArtifactPackagesCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_provider_id_error_component import (
-            ApiV1ArtifactPackagesCreateProviderIdErrorComponent,
+            ApiV1ArtifactPackagesCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_provider_reference_error_component import (
-            ApiV1ArtifactPackagesCreateProviderReferenceErrorComponent,
+            ApiV1ArtifactPackagesCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_raw_data_error_component import (
-            ApiV1ArtifactPackagesCreateRawDataErrorComponent,
+            ApiV1ArtifactPackagesCreateRawDataErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_reconciliation_enabled_error_component import (
-            ApiV1ArtifactPackagesCreateReconciliationEnabledErrorComponent,
+            ApiV1ArtifactPackagesCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_sla_availability_error_component import (
-            ApiV1ArtifactPackagesCreateSlaAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_sla_target_error_component import (
-            ApiV1ArtifactPackagesCreateSlaTargetErrorComponent,
+            ApiV1ArtifactPackagesCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_sla_window_days_error_component import (
-            ApiV1ArtifactPackagesCreateSlaWindowDaysErrorComponent,
+            ApiV1ArtifactPackagesCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_slo_availability_error_component import (
-            ApiV1ArtifactPackagesCreateSloAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_slo_target_error_component import (
-            ApiV1ArtifactPackagesCreateSloTargetErrorComponent,
+            ApiV1ArtifactPackagesCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_slo_window_days_error_component import (
-            ApiV1ArtifactPackagesCreateSloWindowDaysErrorComponent,
+            ApiV1ArtifactPackagesCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_target_availability_error_component import (
-            ApiV1ArtifactPackagesCreateTargetAvailabilityErrorComponent,
+            ApiV1ArtifactPackagesCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_artifact_packages_create_tolerations_error_component import (
-            ApiV1ArtifactPackagesCreateTolerationsErrorComponent,
+            ApiV1ArtifactPackagesCreateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -144,78 +144,82 @@ class ApiV1PricingRulesUpdateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_pricing_rules_update_active_from_error_component import (
-            ApiV1PricingRulesUpdateActiveFromErrorComponent,
+            ApiV1PricingRulesUpdateActiveFromErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_annotations_error_component import (
-            ApiV1PricingRulesUpdateAnnotationsErrorComponent,
+            ApiV1PricingRulesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_archived_at_error_component import (
-            ApiV1PricingRulesUpdateArchivedAtErrorComponent,
+            ApiV1PricingRulesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_archived_error_component import (
-            ApiV1PricingRulesUpdateArchivedErrorComponent,
+            ApiV1PricingRulesUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_archived_reason_error_component import (
-            ApiV1PricingRulesUpdateArchivedReasonErrorComponent,
+            ApiV1PricingRulesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_criticality_error_component import (
-            ApiV1PricingRulesUpdateCriticalityErrorComponent,
+            ApiV1PricingRulesUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_debug_mode_error_component import (
-            ApiV1PricingRulesUpdateDebugModeErrorComponent,
+            ApiV1PricingRulesUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_discount_type_error_component import (
-            ApiV1PricingRulesUpdateDiscountTypeErrorComponent,
+            ApiV1PricingRulesUpdateDiscountTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_discount_value_error_component import (
-            ApiV1PricingRulesUpdateDiscountValueErrorComponent,
+            ApiV1PricingRulesUpdateDiscountValueErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_display_name_error_component import (
-            ApiV1PricingRulesUpdateDisplayNameErrorComponent,
+            ApiV1PricingRulesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pricing_rules_update_kind_error_component import ApiV1PricingRulesUpdateKindErrorComponent
+        from ..models.api_v1_pricing_rules_update_kind_error_component import (
+            ApiV1PricingRulesUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pricing_rules_update_labels_error_component import (
-            ApiV1PricingRulesUpdateLabelsErrorComponent,
+            ApiV1PricingRulesUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pricing_rules_update_name_error_component import ApiV1PricingRulesUpdateNameErrorComponent
+        from ..models.api_v1_pricing_rules_update_name_error_component import (
+            ApiV1PricingRulesUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pricing_rules_update_non_field_errors_error_component import (
-            ApiV1PricingRulesUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingRulesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_platform_service_error_component import (
-            ApiV1PricingRulesUpdatePlatformServiceErrorComponent,
+            ApiV1PricingRulesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_product_kind_error_component import (
-            ApiV1PricingRulesUpdateProductKindErrorComponent,
+            ApiV1PricingRulesUpdateProductKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_provider_error_component import (
-            ApiV1PricingRulesUpdateProviderErrorComponent,
+            ApiV1PricingRulesUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_provider_id_error_component import (
-            ApiV1PricingRulesUpdateProviderIdErrorComponent,
+            ApiV1PricingRulesUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_provider_reference_error_component import (
-            ApiV1PricingRulesUpdateProviderReferenceErrorComponent,
+            ApiV1PricingRulesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_reconciliation_enabled_error_component import (
-            ApiV1PricingRulesUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingRulesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_sla_availability_error_component import (
-            ApiV1PricingRulesUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingRulesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_sla_target_error_component import (
-            ApiV1PricingRulesUpdateSlaTargetErrorComponent,
+            ApiV1PricingRulesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_slo_availability_error_component import (
-            ApiV1PricingRulesUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingRulesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_slo_target_error_component import (
-            ApiV1PricingRulesUpdateSloTargetErrorComponent,
+            ApiV1PricingRulesUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_target_availability_error_component import (
-            ApiV1PricingRulesUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingRulesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_tolerations_error_component import (
-            ApiV1PricingRulesUpdateTolerationsErrorComponent,
+            ApiV1PricingRulesUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -294,81 +298,85 @@ class ApiV1PricingRulesUpdateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_pricing_rules_update_active_from_error_component import (
-            ApiV1PricingRulesUpdateActiveFromErrorComponent,
+            ApiV1PricingRulesUpdateActiveFromErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_active_until_error_component import (
-            ApiV1PricingRulesUpdateActiveUntilErrorComponent,
+            ApiV1PricingRulesUpdateActiveUntilErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_annotations_error_component import (
-            ApiV1PricingRulesUpdateAnnotationsErrorComponent,
+            ApiV1PricingRulesUpdateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_archived_at_error_component import (
-            ApiV1PricingRulesUpdateArchivedAtErrorComponent,
+            ApiV1PricingRulesUpdateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_archived_error_component import (
-            ApiV1PricingRulesUpdateArchivedErrorComponent,
+            ApiV1PricingRulesUpdateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_archived_reason_error_component import (
-            ApiV1PricingRulesUpdateArchivedReasonErrorComponent,
+            ApiV1PricingRulesUpdateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_criticality_error_component import (
-            ApiV1PricingRulesUpdateCriticalityErrorComponent,
+            ApiV1PricingRulesUpdateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_debug_mode_error_component import (
-            ApiV1PricingRulesUpdateDebugModeErrorComponent,
+            ApiV1PricingRulesUpdateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_discount_type_error_component import (
-            ApiV1PricingRulesUpdateDiscountTypeErrorComponent,
+            ApiV1PricingRulesUpdateDiscountTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_discount_value_error_component import (
-            ApiV1PricingRulesUpdateDiscountValueErrorComponent,
+            ApiV1PricingRulesUpdateDiscountValueErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_display_name_error_component import (
-            ApiV1PricingRulesUpdateDisplayNameErrorComponent,
+            ApiV1PricingRulesUpdateDisplayNameErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pricing_rules_update_kind_error_component import ApiV1PricingRulesUpdateKindErrorComponent
+        from ..models.api_v1_pricing_rules_update_kind_error_component import (
+            ApiV1PricingRulesUpdateKindErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pricing_rules_update_labels_error_component import (
-            ApiV1PricingRulesUpdateLabelsErrorComponent,
+            ApiV1PricingRulesUpdateLabelsErrorComponent,  # noqa: PLC0415
         )
-        from ..models.api_v1_pricing_rules_update_name_error_component import ApiV1PricingRulesUpdateNameErrorComponent
+        from ..models.api_v1_pricing_rules_update_name_error_component import (
+            ApiV1PricingRulesUpdateNameErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_pricing_rules_update_non_field_errors_error_component import (
-            ApiV1PricingRulesUpdateNonFieldErrorsErrorComponent,
+            ApiV1PricingRulesUpdateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_platform_service_error_component import (
-            ApiV1PricingRulesUpdatePlatformServiceErrorComponent,
+            ApiV1PricingRulesUpdatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_product_kind_error_component import (
-            ApiV1PricingRulesUpdateProductKindErrorComponent,
+            ApiV1PricingRulesUpdateProductKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_provider_error_component import (
-            ApiV1PricingRulesUpdateProviderErrorComponent,
+            ApiV1PricingRulesUpdateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_provider_id_error_component import (
-            ApiV1PricingRulesUpdateProviderIdErrorComponent,
+            ApiV1PricingRulesUpdateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_provider_reference_error_component import (
-            ApiV1PricingRulesUpdateProviderReferenceErrorComponent,
+            ApiV1PricingRulesUpdateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_reconciliation_enabled_error_component import (
-            ApiV1PricingRulesUpdateReconciliationEnabledErrorComponent,
+            ApiV1PricingRulesUpdateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_sla_availability_error_component import (
-            ApiV1PricingRulesUpdateSlaAvailabilityErrorComponent,
+            ApiV1PricingRulesUpdateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_sla_target_error_component import (
-            ApiV1PricingRulesUpdateSlaTargetErrorComponent,
+            ApiV1PricingRulesUpdateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_slo_availability_error_component import (
-            ApiV1PricingRulesUpdateSloAvailabilityErrorComponent,
+            ApiV1PricingRulesUpdateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_slo_target_error_component import (
-            ApiV1PricingRulesUpdateSloTargetErrorComponent,
+            ApiV1PricingRulesUpdateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_target_availability_error_component import (
-            ApiV1PricingRulesUpdateTargetAvailabilityErrorComponent,
+            ApiV1PricingRulesUpdateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_pricing_rules_update_tolerations_error_component import (
-            ApiV1PricingRulesUpdateTolerationsErrorComponent,
+            ApiV1PricingRulesUpdateTolerationsErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

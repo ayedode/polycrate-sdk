@@ -101,6 +101,9 @@ class Workspace:
             effective_slo_target (float | None):
             effective_sla_target (float | None):
             last_action_run (None | WorkspaceLastActionRunType0):
+            forgejo_repo_id (int | None):
+            forgejo_repo_url (None | str): Forgejo repository HTML URL
+            forgejo_clone_url (None | str): Forgejo HTTPS clone URL
             git_branch (None | str):
             git_commit_short_sha (None | str):
             edge_endpoint_monitor (bool): Auto-set when workspace Region has loadbalancer capability. If true, agent
@@ -184,6 +187,13 @@ class Workspace:
                 (WORKSPACE_BACKUP_SCHEDULE_MISSING, WORKSPACE_BACKUP_SCHEDULE_OVERDUE, WORKSPACE_BACKUP_MISSING). Use when ayedo
                 is not responsible for backups. May later gate related backup features; bucket provisioning stays independent
                 for now.
+            metrics_enabled (bool | Unset): If false, ayedo does not auto-subscribe the VictoriaMetrics agent addon. Use
+                when this workspace must not scrape or send cluster metrics.
+            logs_enabled (bool | Unset): If false, ayedo does not auto-subscribe VictoriaLogs or Kubernetes Event Exporter.
+                Use when this workspace must not scrape or send cluster logs.
+            k8s_addons_enabled (bool | Unset): If false, cluster reconcile does not run K8s addon subscription desired-state
+                (no auto-subscribe, no addon install enqueue, no addon conditions). Subscribe, promote, and the cluster Addons
+                tab are unavailable. Use while this workspace is still git-managed via workspace.poly.
             has_incompatible_kubeconfig (bool | Unset):
             endpoint_monitors (list[UUID] | Unset):
             secrets_poly_raw (None | str | Unset): Content of the secrets.poly file (sensitive data)
@@ -238,6 +248,9 @@ class Workspace:
     effective_slo_target: float | None
     effective_sla_target: float | None
     last_action_run: None | WorkspaceLastActionRunType0
+    forgejo_repo_id: int | None
+    forgejo_repo_url: None | str
+    forgejo_clone_url: None | str
     git_branch: None | str
     git_commit_short_sha: None | str
     edge_endpoint_monitor: bool
@@ -286,6 +299,9 @@ class Workspace:
     global_endpoint_monitor: bool | Unset = UNSET
     notifications_enabled: bool | Unset = UNSET
     backup_enabled: bool | Unset = UNSET
+    metrics_enabled: bool | Unset = UNSET
+    logs_enabled: bool | Unset = UNSET
+    k8s_addons_enabled: bool | Unset = UNSET
     has_incompatible_kubeconfig: bool | Unset = UNSET
     endpoint_monitors: list[UUID] | Unset = UNSET
     secrets_poly_raw: None | str | Unset = UNSET
@@ -299,9 +315,9 @@ class Workspace:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.workspace_deleted_by_user_type_0 import WorkspaceDeletedByUserType0
-        from ..models.workspace_last_action_run_type_0 import WorkspaceLastActionRunType0
-        from ..models.workspace_workspace_type_0 import WorkspaceWorkspaceType0
+        from ..models.workspace_deleted_by_user_type_0 import WorkspaceDeletedByUserType0  # noqa: PLC0415
+        from ..models.workspace_last_action_run_type_0 import WorkspaceLastActionRunType0  # noqa: PLC0415
+        from ..models.workspace_workspace_type_0 import WorkspaceWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -412,6 +428,15 @@ class Workspace:
             last_action_run = self.last_action_run.to_dict()
         else:
             last_action_run = self.last_action_run
+
+        forgejo_repo_id: int | None
+        forgejo_repo_id = self.forgejo_repo_id
+
+        forgejo_repo_url: None | str
+        forgejo_repo_url = self.forgejo_repo_url
+
+        forgejo_clone_url: None | str
+        forgejo_clone_url = self.forgejo_clone_url
 
         git_branch: None | str
         git_branch = self.git_branch
@@ -583,6 +608,12 @@ class Workspace:
 
         backup_enabled = self.backup_enabled
 
+        metrics_enabled = self.metrics_enabled
+
+        logs_enabled = self.logs_enabled
+
+        k8s_addons_enabled = self.k8s_addons_enabled
+
         has_incompatible_kubeconfig = self.has_incompatible_kubeconfig
 
         endpoint_monitors: list[str] | Unset = UNSET
@@ -674,6 +705,9 @@ class Workspace:
                 "effective_slo_target": effective_slo_target,
                 "effective_sla_target": effective_sla_target,
                 "last_action_run": last_action_run,
+                "forgejo_repo_id": forgejo_repo_id,
+                "forgejo_repo_url": forgejo_repo_url,
+                "forgejo_clone_url": forgejo_clone_url,
                 "git_branch": git_branch,
                 "git_commit_short_sha": git_commit_short_sha,
                 "edge_endpoint_monitor": edge_endpoint_monitor,
@@ -754,6 +788,12 @@ class Workspace:
             field_dict["notifications_enabled"] = notifications_enabled
         if backup_enabled is not UNSET:
             field_dict["backup_enabled"] = backup_enabled
+        if metrics_enabled is not UNSET:
+            field_dict["metrics_enabled"] = metrics_enabled
+        if logs_enabled is not UNSET:
+            field_dict["logs_enabled"] = logs_enabled
+        if k8s_addons_enabled is not UNSET:
+            field_dict["k8s_addons_enabled"] = k8s_addons_enabled
         if has_incompatible_kubeconfig is not UNSET:
             field_dict["has_incompatible_kubeconfig"] = has_incompatible_kubeconfig
         if endpoint_monitors is not UNSET:
@@ -779,17 +819,17 @@ class Workspace:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.block_simple import BlockSimple
-        from ..models.organization_membership_simple import OrganizationMembershipSimple
-        from ..models.organization_simple import OrganizationSimple
-        from ..models.pop_simple import PopSimple
-        from ..models.workspace_created import WorkspaceCreated
-        from ..models.workspace_deleted_by_user_type_0 import WorkspaceDeletedByUserType0
-        from ..models.workspace_encryption_credential import WorkspaceEncryptionCredential
-        from ..models.workspace_last_action_run_type_0 import WorkspaceLastActionRunType0
-        from ..models.workspace_simple import WorkspaceSimple
-        from ..models.workspace_snapshot import WorkspaceSnapshot
-        from ..models.workspace_workspace_type_0 import WorkspaceWorkspaceType0
+        from ..models.block_simple import BlockSimple  # noqa: PLC0415
+        from ..models.organization_membership_simple import OrganizationMembershipSimple  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
+        from ..models.pop_simple import PopSimple  # noqa: PLC0415
+        from ..models.workspace_created import WorkspaceCreated  # noqa: PLC0415
+        from ..models.workspace_deleted_by_user_type_0 import WorkspaceDeletedByUserType0  # noqa: PLC0415
+        from ..models.workspace_encryption_credential import WorkspaceEncryptionCredential  # noqa: PLC0415
+        from ..models.workspace_last_action_run_type_0 import WorkspaceLastActionRunType0  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
+        from ..models.workspace_snapshot import WorkspaceSnapshot  # noqa: PLC0415
+        from ..models.workspace_workspace_type_0 import WorkspaceWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -1006,6 +1046,27 @@ class Workspace:
             return cast(None | WorkspaceLastActionRunType0, data)
 
         last_action_run = _parse_last_action_run(d.pop("last_action_run"))
+
+        def _parse_forgejo_repo_id(data: object) -> int | None:
+            if data is None:
+                return data
+            return cast(int | None, data)
+
+        forgejo_repo_id = _parse_forgejo_repo_id(d.pop("forgejo_repo_id"))
+
+        def _parse_forgejo_repo_url(data: object) -> None | str:
+            if data is None:
+                return data
+            return cast(None | str, data)
+
+        forgejo_repo_url = _parse_forgejo_repo_url(d.pop("forgejo_repo_url"))
+
+        def _parse_forgejo_clone_url(data: object) -> None | str:
+            if data is None:
+                return data
+            return cast(None | str, data)
+
+        forgejo_clone_url = _parse_forgejo_clone_url(d.pop("forgejo_clone_url"))
 
         def _parse_git_branch(data: object) -> None | str:
             if data is None:
@@ -1284,6 +1345,12 @@ class Workspace:
 
         backup_enabled = d.pop("backup_enabled", UNSET)
 
+        metrics_enabled = d.pop("metrics_enabled", UNSET)
+
+        logs_enabled = d.pop("logs_enabled", UNSET)
+
+        k8s_addons_enabled = d.pop("k8s_addons_enabled", UNSET)
+
         has_incompatible_kubeconfig = d.pop("has_incompatible_kubeconfig", UNSET)
 
         _endpoint_monitors = d.pop("endpoint_monitors", UNSET)
@@ -1404,6 +1471,9 @@ class Workspace:
             effective_slo_target=effective_slo_target,
             effective_sla_target=effective_sla_target,
             last_action_run=last_action_run,
+            forgejo_repo_id=forgejo_repo_id,
+            forgejo_repo_url=forgejo_repo_url,
+            forgejo_clone_url=forgejo_clone_url,
             git_branch=git_branch,
             git_commit_short_sha=git_commit_short_sha,
             edge_endpoint_monitor=edge_endpoint_monitor,
@@ -1452,6 +1522,9 @@ class Workspace:
             global_endpoint_monitor=global_endpoint_monitor,
             notifications_enabled=notifications_enabled,
             backup_enabled=backup_enabled,
+            metrics_enabled=metrics_enabled,
+            logs_enabled=logs_enabled,
+            k8s_addons_enabled=k8s_addons_enabled,
             has_incompatible_kubeconfig=has_incompatible_kubeconfig,
             endpoint_monitors=endpoint_monitors,
             secrets_poly_raw=secrets_poly_raw,

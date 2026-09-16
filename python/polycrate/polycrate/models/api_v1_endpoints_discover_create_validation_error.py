@@ -269,154 +269,154 @@ class ApiV1EndpointsDiscoverCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_endpoints_discover_create_actual_availability_error_component import (
-            ApiV1EndpointsDiscoverCreateActualAvailabilityErrorComponent,
+            ApiV1EndpointsDiscoverCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_annotations_error_component import (
-            ApiV1EndpointsDiscoverCreateAnnotationsErrorComponent,
+            ApiV1EndpointsDiscoverCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_archived_at_error_component import (
-            ApiV1EndpointsDiscoverCreateArchivedAtErrorComponent,
+            ApiV1EndpointsDiscoverCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_archived_by_error_component import (
-            ApiV1EndpointsDiscoverCreateArchivedByErrorComponent,
+            ApiV1EndpointsDiscoverCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_archived_error_component import (
-            ApiV1EndpointsDiscoverCreateArchivedErrorComponent,
+            ApiV1EndpointsDiscoverCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_archived_reason_error_component import (
-            ApiV1EndpointsDiscoverCreateArchivedReasonErrorComponent,
+            ApiV1EndpointsDiscoverCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_check_result_retention_days_error_component import (
-            ApiV1EndpointsDiscoverCreateCheckResultRetentionDaysErrorComponent,
+            ApiV1EndpointsDiscoverCreateCheckResultRetentionDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_check_results_error_component import (
-            ApiV1EndpointsDiscoverCreateCheckResultsErrorComponent,
+            ApiV1EndpointsDiscoverCreateCheckResultsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_created_by_component_error_component import (
-            ApiV1EndpointsDiscoverCreateCreatedByComponentErrorComponent,
+            ApiV1EndpointsDiscoverCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_created_by_user_error_component import (
-            ApiV1EndpointsDiscoverCreateCreatedByUserErrorComponent,
+            ApiV1EndpointsDiscoverCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_criticality_error_component import (
-            ApiV1EndpointsDiscoverCreateCriticalityErrorComponent,
+            ApiV1EndpointsDiscoverCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_debug_mode_error_component import (
-            ApiV1EndpointsDiscoverCreateDebugModeErrorComponent,
+            ApiV1EndpointsDiscoverCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_discovery_enabled_error_component import (
-            ApiV1EndpointsDiscoverCreateDiscoveryEnabledErrorComponent,
+            ApiV1EndpointsDiscoverCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_display_name_error_component import (
-            ApiV1EndpointsDiscoverCreateDisplayNameErrorComponent,
+            ApiV1EndpointsDiscoverCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_do_not_monitor_error_component import (
-            ApiV1EndpointsDiscoverCreateDoNotMonitorErrorComponent,
+            ApiV1EndpointsDiscoverCreateDoNotMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_k8s_app_error_component import (
-            ApiV1EndpointsDiscoverCreateK8SAppErrorComponent,
+            ApiV1EndpointsDiscoverCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_k8s_cluster_error_component import (
-            ApiV1EndpointsDiscoverCreateK8SClusterErrorComponent,
+            ApiV1EndpointsDiscoverCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_kind_error_component import (
-            ApiV1EndpointsDiscoverCreateKindErrorComponent,
+            ApiV1EndpointsDiscoverCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_labels_error_component import (
-            ApiV1EndpointsDiscoverCreateLabelsErrorComponent,
+            ApiV1EndpointsDiscoverCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_last_agent_metrics_error_component import (
-            ApiV1EndpointsDiscoverCreateLastAgentMetricsErrorComponent,
+            ApiV1EndpointsDiscoverCreateLastAgentMetricsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1EndpointsDiscoverCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1EndpointsDiscoverCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_managed_by_content_type_error_component import (
-            ApiV1EndpointsDiscoverCreateManagedByContentTypeErrorComponent,
+            ApiV1EndpointsDiscoverCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_managed_by_object_id_error_component import (
-            ApiV1EndpointsDiscoverCreateManagedByObjectIdErrorComponent,
+            ApiV1EndpointsDiscoverCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_max_agents_per_endpoint_error_component import (
-            ApiV1EndpointsDiscoverCreateMaxAgentsPerEndpointErrorComponent,
+            ApiV1EndpointsDiscoverCreateMaxAgentsPerEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_modified_by_user_error_component import (
-            ApiV1EndpointsDiscoverCreateModifiedByUserErrorComponent,
+            ApiV1EndpointsDiscoverCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_name_error_component import (
-            ApiV1EndpointsDiscoverCreateNameErrorComponent,
+            ApiV1EndpointsDiscoverCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_non_field_errors_error_component import (
-            ApiV1EndpointsDiscoverCreateNonFieldErrorsErrorComponent,
+            ApiV1EndpointsDiscoverCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_organization_id_error_component import (
-            ApiV1EndpointsDiscoverCreateOrganizationIdErrorComponent,
+            ApiV1EndpointsDiscoverCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_platform_dns_record_created_error_component import (
-            ApiV1EndpointsDiscoverCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1EndpointsDiscoverCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_platform_service_error_component import (
-            ApiV1EndpointsDiscoverCreatePlatformServiceErrorComponent,
+            ApiV1EndpointsDiscoverCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_pop_endpoint_error_component import (
-            ApiV1EndpointsDiscoverCreatePopEndpointErrorComponent,
+            ApiV1EndpointsDiscoverCreatePopEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_provider_error_component import (
-            ApiV1EndpointsDiscoverCreateProviderErrorComponent,
+            ApiV1EndpointsDiscoverCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_provider_id_error_component import (
-            ApiV1EndpointsDiscoverCreateProviderIdErrorComponent,
+            ApiV1EndpointsDiscoverCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_provider_reference_error_component import (
-            ApiV1EndpointsDiscoverCreateProviderReferenceErrorComponent,
+            ApiV1EndpointsDiscoverCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_reconciliation_enabled_error_component import (
-            ApiV1EndpointsDiscoverCreateReconciliationEnabledErrorComponent,
+            ApiV1EndpointsDiscoverCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_region_error_component import (
-            ApiV1EndpointsDiscoverCreateRegionErrorComponent,
+            ApiV1EndpointsDiscoverCreateRegionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_remote_address_error_component import (
-            ApiV1EndpointsDiscoverCreateRemoteAddressErrorComponent,
+            ApiV1EndpointsDiscoverCreateRemoteAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_remote_port_error_component import (
-            ApiV1EndpointsDiscoverCreateRemotePortErrorComponent,
+            ApiV1EndpointsDiscoverCreateRemotePortErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_resolved_ip_error_component import (
-            ApiV1EndpointsDiscoverCreateResolvedIpErrorComponent,
+            ApiV1EndpointsDiscoverCreateResolvedIpErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_s3_cluster_error_component import (
-            ApiV1EndpointsDiscoverCreateS3ClusterErrorComponent,
+            ApiV1EndpointsDiscoverCreateS3ClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_scope_error_component import (
-            ApiV1EndpointsDiscoverCreateScopeErrorComponent,
+            ApiV1EndpointsDiscoverCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_sla_availability_error_component import (
-            ApiV1EndpointsDiscoverCreateSlaAvailabilityErrorComponent,
+            ApiV1EndpointsDiscoverCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_sla_target_error_component import (
-            ApiV1EndpointsDiscoverCreateSlaTargetErrorComponent,
+            ApiV1EndpointsDiscoverCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_sla_window_days_error_component import (
-            ApiV1EndpointsDiscoverCreateSlaWindowDaysErrorComponent,
+            ApiV1EndpointsDiscoverCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_slo_availability_error_component import (
-            ApiV1EndpointsDiscoverCreateSloAvailabilityErrorComponent,
+            ApiV1EndpointsDiscoverCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_slo_target_error_component import (
-            ApiV1EndpointsDiscoverCreateSloTargetErrorComponent,
+            ApiV1EndpointsDiscoverCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_slo_window_days_error_component import (
-            ApiV1EndpointsDiscoverCreateSloWindowDaysErrorComponent,
+            ApiV1EndpointsDiscoverCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_spec_error_component import (
-            ApiV1EndpointsDiscoverCreateSpecErrorComponent,
+            ApiV1EndpointsDiscoverCreateSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_target_availability_error_component import (
-            ApiV1EndpointsDiscoverCreateTargetAvailabilityErrorComponent,
+            ApiV1EndpointsDiscoverCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_workspace_id_error_component import (
-            ApiV1EndpointsDiscoverCreateWorkspaceIdErrorComponent,
+            ApiV1EndpointsDiscoverCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -545,157 +545,157 @@ class ApiV1EndpointsDiscoverCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_endpoints_discover_create_actual_availability_error_component import (
-            ApiV1EndpointsDiscoverCreateActualAvailabilityErrorComponent,
+            ApiV1EndpointsDiscoverCreateActualAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_annotations_error_component import (
-            ApiV1EndpointsDiscoverCreateAnnotationsErrorComponent,
+            ApiV1EndpointsDiscoverCreateAnnotationsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_archived_at_error_component import (
-            ApiV1EndpointsDiscoverCreateArchivedAtErrorComponent,
+            ApiV1EndpointsDiscoverCreateArchivedAtErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_archived_by_error_component import (
-            ApiV1EndpointsDiscoverCreateArchivedByErrorComponent,
+            ApiV1EndpointsDiscoverCreateArchivedByErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_archived_error_component import (
-            ApiV1EndpointsDiscoverCreateArchivedErrorComponent,
+            ApiV1EndpointsDiscoverCreateArchivedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_archived_reason_error_component import (
-            ApiV1EndpointsDiscoverCreateArchivedReasonErrorComponent,
+            ApiV1EndpointsDiscoverCreateArchivedReasonErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_check_result_retention_days_error_component import (
-            ApiV1EndpointsDiscoverCreateCheckResultRetentionDaysErrorComponent,
+            ApiV1EndpointsDiscoverCreateCheckResultRetentionDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_check_results_error_component import (
-            ApiV1EndpointsDiscoverCreateCheckResultsErrorComponent,
+            ApiV1EndpointsDiscoverCreateCheckResultsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_created_by_component_error_component import (
-            ApiV1EndpointsDiscoverCreateCreatedByComponentErrorComponent,
+            ApiV1EndpointsDiscoverCreateCreatedByComponentErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_created_by_user_error_component import (
-            ApiV1EndpointsDiscoverCreateCreatedByUserErrorComponent,
+            ApiV1EndpointsDiscoverCreateCreatedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_criticality_error_component import (
-            ApiV1EndpointsDiscoverCreateCriticalityErrorComponent,
+            ApiV1EndpointsDiscoverCreateCriticalityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_debug_mode_error_component import (
-            ApiV1EndpointsDiscoverCreateDebugModeErrorComponent,
+            ApiV1EndpointsDiscoverCreateDebugModeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_discovery_enabled_error_component import (
-            ApiV1EndpointsDiscoverCreateDiscoveryEnabledErrorComponent,
+            ApiV1EndpointsDiscoverCreateDiscoveryEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_display_name_error_component import (
-            ApiV1EndpointsDiscoverCreateDisplayNameErrorComponent,
+            ApiV1EndpointsDiscoverCreateDisplayNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_do_not_monitor_error_component import (
-            ApiV1EndpointsDiscoverCreateDoNotMonitorErrorComponent,
+            ApiV1EndpointsDiscoverCreateDoNotMonitorErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_k8s_app_error_component import (
-            ApiV1EndpointsDiscoverCreateK8SAppErrorComponent,
+            ApiV1EndpointsDiscoverCreateK8SAppErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_k8s_cluster_error_component import (
-            ApiV1EndpointsDiscoverCreateK8SClusterErrorComponent,
+            ApiV1EndpointsDiscoverCreateK8SClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_kind_error_component import (
-            ApiV1EndpointsDiscoverCreateKindErrorComponent,
+            ApiV1EndpointsDiscoverCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_labels_error_component import (
-            ApiV1EndpointsDiscoverCreateLabelsErrorComponent,
+            ApiV1EndpointsDiscoverCreateLabelsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_last_agent_metrics_error_component import (
-            ApiV1EndpointsDiscoverCreateLastAgentMetricsErrorComponent,
+            ApiV1EndpointsDiscoverCreateLastAgentMetricsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_last_reconciliation_duration_seconds_error_component import (
-            ApiV1EndpointsDiscoverCreateLastReconciliationDurationSecondsErrorComponent,
+            ApiV1EndpointsDiscoverCreateLastReconciliationDurationSecondsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_loadbalancer_instance_error_component import (
-            ApiV1EndpointsDiscoverCreateLoadbalancerInstanceErrorComponent,
+            ApiV1EndpointsDiscoverCreateLoadbalancerInstanceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_managed_by_content_type_error_component import (
-            ApiV1EndpointsDiscoverCreateManagedByContentTypeErrorComponent,
+            ApiV1EndpointsDiscoverCreateManagedByContentTypeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_managed_by_object_id_error_component import (
-            ApiV1EndpointsDiscoverCreateManagedByObjectIdErrorComponent,
+            ApiV1EndpointsDiscoverCreateManagedByObjectIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_max_agents_per_endpoint_error_component import (
-            ApiV1EndpointsDiscoverCreateMaxAgentsPerEndpointErrorComponent,
+            ApiV1EndpointsDiscoverCreateMaxAgentsPerEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_modified_by_user_error_component import (
-            ApiV1EndpointsDiscoverCreateModifiedByUserErrorComponent,
+            ApiV1EndpointsDiscoverCreateModifiedByUserErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_name_error_component import (
-            ApiV1EndpointsDiscoverCreateNameErrorComponent,
+            ApiV1EndpointsDiscoverCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_non_field_errors_error_component import (
-            ApiV1EndpointsDiscoverCreateNonFieldErrorsErrorComponent,
+            ApiV1EndpointsDiscoverCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_organization_id_error_component import (
-            ApiV1EndpointsDiscoverCreateOrganizationIdErrorComponent,
+            ApiV1EndpointsDiscoverCreateOrganizationIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_platform_dns_record_created_error_component import (
-            ApiV1EndpointsDiscoverCreatePlatformDnsRecordCreatedErrorComponent,
+            ApiV1EndpointsDiscoverCreatePlatformDnsRecordCreatedErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_platform_service_error_component import (
-            ApiV1EndpointsDiscoverCreatePlatformServiceErrorComponent,
+            ApiV1EndpointsDiscoverCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_pop_endpoint_error_component import (
-            ApiV1EndpointsDiscoverCreatePopEndpointErrorComponent,
+            ApiV1EndpointsDiscoverCreatePopEndpointErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_provider_error_component import (
-            ApiV1EndpointsDiscoverCreateProviderErrorComponent,
+            ApiV1EndpointsDiscoverCreateProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_provider_id_error_component import (
-            ApiV1EndpointsDiscoverCreateProviderIdErrorComponent,
+            ApiV1EndpointsDiscoverCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_provider_reference_error_component import (
-            ApiV1EndpointsDiscoverCreateProviderReferenceErrorComponent,
+            ApiV1EndpointsDiscoverCreateProviderReferenceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_reconciliation_enabled_error_component import (
-            ApiV1EndpointsDiscoverCreateReconciliationEnabledErrorComponent,
+            ApiV1EndpointsDiscoverCreateReconciliationEnabledErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_region_error_component import (
-            ApiV1EndpointsDiscoverCreateRegionErrorComponent,
+            ApiV1EndpointsDiscoverCreateRegionErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_remote_address_error_component import (
-            ApiV1EndpointsDiscoverCreateRemoteAddressErrorComponent,
+            ApiV1EndpointsDiscoverCreateRemoteAddressErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_remote_port_error_component import (
-            ApiV1EndpointsDiscoverCreateRemotePortErrorComponent,
+            ApiV1EndpointsDiscoverCreateRemotePortErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_resolved_ip_error_component import (
-            ApiV1EndpointsDiscoverCreateResolvedIpErrorComponent,
+            ApiV1EndpointsDiscoverCreateResolvedIpErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_s3_cluster_error_component import (
-            ApiV1EndpointsDiscoverCreateS3ClusterErrorComponent,
+            ApiV1EndpointsDiscoverCreateS3ClusterErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_scope_error_component import (
-            ApiV1EndpointsDiscoverCreateScopeErrorComponent,
+            ApiV1EndpointsDiscoverCreateScopeErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_sla_availability_error_component import (
-            ApiV1EndpointsDiscoverCreateSlaAvailabilityErrorComponent,
+            ApiV1EndpointsDiscoverCreateSlaAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_sla_target_error_component import (
-            ApiV1EndpointsDiscoverCreateSlaTargetErrorComponent,
+            ApiV1EndpointsDiscoverCreateSlaTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_sla_window_days_error_component import (
-            ApiV1EndpointsDiscoverCreateSlaWindowDaysErrorComponent,
+            ApiV1EndpointsDiscoverCreateSlaWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_slo_availability_error_component import (
-            ApiV1EndpointsDiscoverCreateSloAvailabilityErrorComponent,
+            ApiV1EndpointsDiscoverCreateSloAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_slo_target_error_component import (
-            ApiV1EndpointsDiscoverCreateSloTargetErrorComponent,
+            ApiV1EndpointsDiscoverCreateSloTargetErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_slo_window_days_error_component import (
-            ApiV1EndpointsDiscoverCreateSloWindowDaysErrorComponent,
+            ApiV1EndpointsDiscoverCreateSloWindowDaysErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_spec_error_component import (
-            ApiV1EndpointsDiscoverCreateSpecErrorComponent,
+            ApiV1EndpointsDiscoverCreateSpecErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_target_availability_error_component import (
-            ApiV1EndpointsDiscoverCreateTargetAvailabilityErrorComponent,
+            ApiV1EndpointsDiscoverCreateTargetAvailabilityErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_endpoints_discover_create_workspace_id_error_component import (
-            ApiV1EndpointsDiscoverCreateWorkspaceIdErrorComponent,
+            ApiV1EndpointsDiscoverCreateWorkspaceIdErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -12,6 +12,7 @@ from ..models.last_state_enum import LastStateEnum, check_last_state_enum
 
 if TYPE_CHECKING:
     from ..models.k8s_addon_list_active_condition_instances_item import K8SAddonListActiveConditionInstancesItem
+    from ..models.k8s_addon_list_available_versions_item import K8SAddonListAvailableVersionsItem
     from ..models.k8s_addon_list_catalogue_app_type_0 import K8SAddonListCatalogueAppType0
     from ..models.k8s_addon_list_created import K8SAddonListCreated
     from ..models.k8s_addon_list_organization_type_0 import K8SAddonListOrganizationType0
@@ -69,11 +70,15 @@ class K8SAddonList:
             catalogue_app (K8SAddonListCatalogueAppType0 | None):
             block_name (str):
             default_version (str):
+            resolved_default_version (str):
+            available_versions (list[K8SAddonListAvailableVersionsItem]):
             default_block_config_template (str):
             is_default (bool):
             allow_multiple (bool):
             order (int):
             enforcement (str):
+            icon_url (str):
+            is_class_icon (bool):
     """
 
     id: UUID
@@ -94,17 +99,21 @@ class K8SAddonList:
     catalogue_app: K8SAddonListCatalogueAppType0 | None
     block_name: str
     default_version: str
+    resolved_default_version: str
+    available_versions: list[K8SAddonListAvailableVersionsItem]
     default_block_config_template: str
     is_default: bool
     allow_multiple: bool
     order: int
     enforcement: str
+    icon_url: str
+    is_class_icon: bool
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_addon_list_catalogue_app_type_0 import K8SAddonListCatalogueAppType0
-        from ..models.k8s_addon_list_organization_type_0 import K8SAddonListOrganizationType0
-        from ..models.k8s_addon_list_workspace_type_0 import K8SAddonListWorkspaceType0
+        from ..models.k8s_addon_list_catalogue_app_type_0 import K8SAddonListCatalogueAppType0  # noqa: PLC0415
+        from ..models.k8s_addon_list_organization_type_0 import K8SAddonListOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_addon_list_workspace_type_0 import K8SAddonListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -161,6 +170,13 @@ class K8SAddonList:
 
         default_version = self.default_version
 
+        resolved_default_version = self.resolved_default_version
+
+        available_versions = []
+        for available_versions_item_data in self.available_versions:
+            available_versions_item = available_versions_item_data.to_dict()
+            available_versions.append(available_versions_item)
+
         default_block_config_template = self.default_block_config_template
 
         is_default = self.is_default
@@ -170,6 +186,10 @@ class K8SAddonList:
         order = self.order
 
         enforcement = self.enforcement
+
+        icon_url = self.icon_url
+
+        is_class_icon = self.is_class_icon
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -193,11 +213,15 @@ class K8SAddonList:
                 "catalogue_app": catalogue_app,
                 "block_name": block_name,
                 "default_version": default_version,
+                "resolved_default_version": resolved_default_version,
+                "available_versions": available_versions,
                 "default_block_config_template": default_block_config_template,
                 "is_default": is_default,
                 "allow_multiple": allow_multiple,
                 "order": order,
                 "enforcement": enforcement,
+                "icon_url": icon_url,
+                "is_class_icon": is_class_icon,
             }
         )
 
@@ -205,11 +229,14 @@ class K8SAddonList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.k8s_addon_list_active_condition_instances_item import K8SAddonListActiveConditionInstancesItem
-        from ..models.k8s_addon_list_catalogue_app_type_0 import K8SAddonListCatalogueAppType0
-        from ..models.k8s_addon_list_created import K8SAddonListCreated
-        from ..models.k8s_addon_list_organization_type_0 import K8SAddonListOrganizationType0
-        from ..models.k8s_addon_list_workspace_type_0 import K8SAddonListWorkspaceType0
+        from ..models.k8s_addon_list_active_condition_instances_item import (
+            K8SAddonListActiveConditionInstancesItem,  # noqa: PLC0415
+        )
+        from ..models.k8s_addon_list_available_versions_item import K8SAddonListAvailableVersionsItem  # noqa: PLC0415
+        from ..models.k8s_addon_list_catalogue_app_type_0 import K8SAddonListCatalogueAppType0  # noqa: PLC0415
+        from ..models.k8s_addon_list_created import K8SAddonListCreated  # noqa: PLC0415
+        from ..models.k8s_addon_list_organization_type_0 import K8SAddonListOrganizationType0  # noqa: PLC0415
+        from ..models.k8s_addon_list_workspace_type_0 import K8SAddonListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -307,6 +334,15 @@ class K8SAddonList:
 
         default_version = d.pop("default_version")
 
+        resolved_default_version = d.pop("resolved_default_version")
+
+        available_versions = []
+        _available_versions = d.pop("available_versions")
+        for available_versions_item_data in _available_versions:
+            available_versions_item = K8SAddonListAvailableVersionsItem.from_dict(available_versions_item_data)
+
+            available_versions.append(available_versions_item)
+
         default_block_config_template = d.pop("default_block_config_template")
 
         is_default = d.pop("is_default")
@@ -316,6 +352,10 @@ class K8SAddonList:
         order = d.pop("order")
 
         enforcement = d.pop("enforcement")
+
+        icon_url = d.pop("icon_url")
+
+        is_class_icon = d.pop("is_class_icon")
 
         k8s_addon_list = cls(
             id=id,
@@ -336,11 +376,15 @@ class K8SAddonList:
             catalogue_app=catalogue_app,
             block_name=block_name,
             default_version=default_version,
+            resolved_default_version=resolved_default_version,
+            available_versions=available_versions,
             default_block_config_template=default_block_config_template,
             is_default=is_default,
             allow_multiple=allow_multiple,
             order=order,
             enforcement=enforcement,
+            icon_url=icon_url,
+            is_class_icon=is_class_icon,
         )
 
         k8s_addon_list.additional_properties = d

@@ -78,31 +78,31 @@ class ApiV1ConversationsConversationsCreateValidationError:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.api_v1_conversations_conversations_create_conversation_provider_error_component import (
-            ApiV1ConversationsConversationsCreateConversationProviderErrorComponent,
+            ApiV1ConversationsConversationsCreateConversationProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_kind_error_component import (
-            ApiV1ConversationsConversationsCreateKindErrorComponent,
+            ApiV1ConversationsConversationsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_meta_error_component import (
-            ApiV1ConversationsConversationsCreateMetaErrorComponent,
+            ApiV1ConversationsConversationsCreateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_name_error_component import (
-            ApiV1ConversationsConversationsCreateNameErrorComponent,
+            ApiV1ConversationsConversationsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_non_field_errors_error_component import (
-            ApiV1ConversationsConversationsCreateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsConversationsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_organization_error_component import (
-            ApiV1ConversationsConversationsCreateOrganizationErrorComponent,
+            ApiV1ConversationsConversationsCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_platform_service_error_component import (
-            ApiV1ConversationsConversationsCreatePlatformServiceErrorComponent,
+            ApiV1ConversationsConversationsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_provider_id_error_component import (
-            ApiV1ConversationsConversationsCreateProviderIdErrorComponent,
+            ApiV1ConversationsConversationsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_status_error_component import (
-            ApiV1ConversationsConversationsCreateStatusErrorComponent,
+            ApiV1ConversationsConversationsCreateStatusErrorComponent,  # noqa: PLC0415
         )
 
         type_: str = self.type_
@@ -147,34 +147,34 @@ class ApiV1ConversationsConversationsCreateValidationError:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.api_v1_conversations_conversations_create_config_error_component import (
-            ApiV1ConversationsConversationsCreateConfigErrorComponent,
+            ApiV1ConversationsConversationsCreateConfigErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_conversation_provider_error_component import (
-            ApiV1ConversationsConversationsCreateConversationProviderErrorComponent,
+            ApiV1ConversationsConversationsCreateConversationProviderErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_kind_error_component import (
-            ApiV1ConversationsConversationsCreateKindErrorComponent,
+            ApiV1ConversationsConversationsCreateKindErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_meta_error_component import (
-            ApiV1ConversationsConversationsCreateMetaErrorComponent,
+            ApiV1ConversationsConversationsCreateMetaErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_name_error_component import (
-            ApiV1ConversationsConversationsCreateNameErrorComponent,
+            ApiV1ConversationsConversationsCreateNameErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_non_field_errors_error_component import (
-            ApiV1ConversationsConversationsCreateNonFieldErrorsErrorComponent,
+            ApiV1ConversationsConversationsCreateNonFieldErrorsErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_organization_error_component import (
-            ApiV1ConversationsConversationsCreateOrganizationErrorComponent,
+            ApiV1ConversationsConversationsCreateOrganizationErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_platform_service_error_component import (
-            ApiV1ConversationsConversationsCreatePlatformServiceErrorComponent,
+            ApiV1ConversationsConversationsCreatePlatformServiceErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_provider_id_error_component import (
-            ApiV1ConversationsConversationsCreateProviderIdErrorComponent,
+            ApiV1ConversationsConversationsCreateProviderIdErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_conversations_conversations_create_status_error_component import (
-            ApiV1ConversationsConversationsCreateStatusErrorComponent,
+            ApiV1ConversationsConversationsCreateStatusErrorComponent,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

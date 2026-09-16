@@ -99,6 +99,13 @@ class WorkspaceRequest:
                 (WORKSPACE_BACKUP_SCHEDULE_MISSING, WORKSPACE_BACKUP_SCHEDULE_OVERDUE, WORKSPACE_BACKUP_MISSING). Use when ayedo
                 is not responsible for backups. May later gate related backup features; bucket provisioning stays independent
                 for now.
+            metrics_enabled (bool | Unset): If false, ayedo does not auto-subscribe the VictoriaMetrics agent addon. Use
+                when this workspace must not scrape or send cluster metrics.
+            logs_enabled (bool | Unset): If false, ayedo does not auto-subscribe VictoriaLogs or Kubernetes Event Exporter.
+                Use when this workspace must not scrape or send cluster logs.
+            k8s_addons_enabled (bool | Unset): If false, cluster reconcile does not run K8s addon subscription desired-state
+                (no auto-subscribe, no addon install enqueue, no addon conditions). Subscribe, promote, and the cluster Addons
+                tab are unavailable. Use while this workspace is still git-managed via workspace.poly.
             has_incompatible_kubeconfig (bool | Unset):
             endpoint_monitors (list[UUID] | Unset):
             secrets_poly_raw (None | str | Unset): Content of the secrets.poly file (sensitive data)
@@ -154,6 +161,9 @@ class WorkspaceRequest:
     monitoring_workspace_allowlist_ids: list[UUID] | Unset = UNSET
     notifications_enabled: bool | Unset = UNSET
     backup_enabled: bool | Unset = UNSET
+    metrics_enabled: bool | Unset = UNSET
+    logs_enabled: bool | Unset = UNSET
+    k8s_addons_enabled: bool | Unset = UNSET
     has_incompatible_kubeconfig: bool | Unset = UNSET
     endpoint_monitors: list[UUID] | Unset = UNSET
     secrets_poly_raw: None | str | Unset = UNSET
@@ -297,6 +307,12 @@ class WorkspaceRequest:
 
         backup_enabled = self.backup_enabled
 
+        metrics_enabled = self.metrics_enabled
+
+        logs_enabled = self.logs_enabled
+
+        k8s_addons_enabled = self.k8s_addons_enabled
+
         has_incompatible_kubeconfig = self.has_incompatible_kubeconfig
 
         endpoint_monitors: list[str] | Unset = UNSET
@@ -439,6 +455,12 @@ class WorkspaceRequest:
             field_dict["notifications_enabled"] = notifications_enabled
         if backup_enabled is not UNSET:
             field_dict["backup_enabled"] = backup_enabled
+        if metrics_enabled is not UNSET:
+            field_dict["metrics_enabled"] = metrics_enabled
+        if logs_enabled is not UNSET:
+            field_dict["logs_enabled"] = logs_enabled
+        if k8s_addons_enabled is not UNSET:
+            field_dict["k8s_addons_enabled"] = k8s_addons_enabled
         if has_incompatible_kubeconfig is not UNSET:
             field_dict["has_incompatible_kubeconfig"] = has_incompatible_kubeconfig
         if endpoint_monitors is not UNSET:
@@ -608,6 +630,15 @@ class WorkspaceRequest:
 
         if not isinstance(self.backup_enabled, Unset):
             files.append(("backup_enabled", (None, str(self.backup_enabled).encode(), "text/plain")))
+
+        if not isinstance(self.metrics_enabled, Unset):
+            files.append(("metrics_enabled", (None, str(self.metrics_enabled).encode(), "text/plain")))
+
+        if not isinstance(self.logs_enabled, Unset):
+            files.append(("logs_enabled", (None, str(self.logs_enabled).encode(), "text/plain")))
+
+        if not isinstance(self.k8s_addons_enabled, Unset):
+            files.append(("k8s_addons_enabled", (None, str(self.k8s_addons_enabled).encode(), "text/plain")))
 
         if not isinstance(self.has_incompatible_kubeconfig, Unset):
             files.append(
@@ -884,6 +915,12 @@ class WorkspaceRequest:
 
         backup_enabled = d.pop("backup_enabled", UNSET)
 
+        metrics_enabled = d.pop("metrics_enabled", UNSET)
+
+        logs_enabled = d.pop("logs_enabled", UNSET)
+
+        k8s_addons_enabled = d.pop("k8s_addons_enabled", UNSET)
+
         has_incompatible_kubeconfig = d.pop("has_incompatible_kubeconfig", UNSET)
 
         _endpoint_monitors = d.pop("endpoint_monitors", UNSET)
@@ -1037,6 +1074,9 @@ class WorkspaceRequest:
             monitoring_workspace_allowlist_ids=monitoring_workspace_allowlist_ids,
             notifications_enabled=notifications_enabled,
             backup_enabled=backup_enabled,
+            metrics_enabled=metrics_enabled,
+            logs_enabled=logs_enabled,
+            k8s_addons_enabled=k8s_addons_enabled,
             has_incompatible_kubeconfig=has_incompatible_kubeconfig,
             endpoint_monitors=endpoint_monitors,
             secrets_poly_raw=secrets_poly_raw,

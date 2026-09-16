@@ -230,10 +230,10 @@ class BlockRollout:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.block_rollout_deleted_by_user_type_0 import BlockRolloutDeletedByUserType0
-        from ..models.block_rollout_last_action_run_type_0 import BlockRolloutLastActionRunType0
-        from ..models.block_rollout_organization_type_0 import BlockRolloutOrganizationType0
-        from ..models.block_rollout_workspace_type_0 import BlockRolloutWorkspaceType0
+        from ..models.block_rollout_deleted_by_user_type_0 import BlockRolloutDeletedByUserType0  # noqa: PLC0415
+        from ..models.block_rollout_last_action_run_type_0 import BlockRolloutLastActionRunType0  # noqa: PLC0415
+        from ..models.block_rollout_organization_type_0 import BlockRolloutOrganizationType0  # noqa: PLC0415
+        from ..models.block_rollout_workspace_type_0 import BlockRolloutWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -615,11 +615,11 @@ class BlockRollout:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.block_rollout_created import BlockRolloutCreated
-        from ..models.block_rollout_deleted_by_user_type_0 import BlockRolloutDeletedByUserType0
-        from ..models.block_rollout_last_action_run_type_0 import BlockRolloutLastActionRunType0
-        from ..models.block_rollout_organization_type_0 import BlockRolloutOrganizationType0
-        from ..models.block_rollout_workspace_type_0 import BlockRolloutWorkspaceType0
+        from ..models.block_rollout_created import BlockRolloutCreated  # noqa: PLC0415
+        from ..models.block_rollout_deleted_by_user_type_0 import BlockRolloutDeletedByUserType0  # noqa: PLC0415
+        from ..models.block_rollout_last_action_run_type_0 import BlockRolloutLastActionRunType0  # noqa: PLC0415
+        from ..models.block_rollout_organization_type_0 import BlockRolloutOrganizationType0  # noqa: PLC0415
+        from ..models.block_rollout_workspace_type_0 import BlockRolloutWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))

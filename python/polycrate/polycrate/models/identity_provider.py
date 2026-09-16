@@ -197,10 +197,14 @@ class IdentityProvider:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.identity_provider_deleted_by_user_type_0 import IdentityProviderDeletedByUserType0
-        from ..models.identity_provider_last_action_run_type_0 import IdentityProviderLastActionRunType0
-        from ..models.identity_provider_organization_type_0 import IdentityProviderOrganizationType0
-        from ..models.identity_provider_workspace_type_0 import IdentityProviderWorkspaceType0
+        from ..models.identity_provider_deleted_by_user_type_0 import (
+            IdentityProviderDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.identity_provider_last_action_run_type_0 import (
+            IdentityProviderLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.identity_provider_organization_type_0 import IdentityProviderOrganizationType0  # noqa: PLC0415
+        from ..models.identity_provider_workspace_type_0 import IdentityProviderWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -511,11 +515,15 @@ class IdentityProvider:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.identity_provider_created import IdentityProviderCreated
-        from ..models.identity_provider_deleted_by_user_type_0 import IdentityProviderDeletedByUserType0
-        from ..models.identity_provider_last_action_run_type_0 import IdentityProviderLastActionRunType0
-        from ..models.identity_provider_organization_type_0 import IdentityProviderOrganizationType0
-        from ..models.identity_provider_workspace_type_0 import IdentityProviderWorkspaceType0
+        from ..models.identity_provider_created import IdentityProviderCreated  # noqa: PLC0415
+        from ..models.identity_provider_deleted_by_user_type_0 import (
+            IdentityProviderDeletedByUserType0,  # noqa: PLC0415
+        )
+        from ..models.identity_provider_last_action_run_type_0 import (
+            IdentityProviderLastActionRunType0,  # noqa: PLC0415
+        )
+        from ..models.identity_provider_organization_type_0 import IdentityProviderOrganizationType0  # noqa: PLC0415
+        from ..models.identity_provider_workspace_type_0 import IdentityProviderWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
