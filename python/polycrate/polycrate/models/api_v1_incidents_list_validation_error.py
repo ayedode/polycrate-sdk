@@ -9,6 +9,9 @@ from attrs import field as _attrs_field
 from ..models.validation_error_enum import ValidationErrorEnum, check_validation_error_enum
 
 if TYPE_CHECKING:
+    from ..models.api_v1_incidents_list_affected_organization_error_component import (
+        ApiV1IncidentsListAffectedOrganizationErrorComponent,
+    )
     from ..models.api_v1_incidents_list_affected_pops_error_component import (
         ApiV1IncidentsListAffectedPopsErrorComponent,
     )
@@ -46,20 +49,21 @@ class ApiV1IncidentsListValidationError:
     """
     Attributes:
         type_ (ValidationErrorEnum): * `validation_error` - Validation Error
-        errors (list[ApiV1IncidentsListAffectedPopsErrorComponent | ApiV1IncidentsListAffectedWorkspaceErrorComponent |
-            ApiV1IncidentsListCreatedByUsersErrorComponent | ApiV1IncidentsListDowntimesErrorComponent |
-            ApiV1IncidentsListKindErrorComponent | ApiV1IncidentsListNameExactErrorComponent |
-            ApiV1IncidentsListOrganizationsErrorComponent | ApiV1IncidentsListPopErrorComponent |
-            ApiV1IncidentsListSearchErrorComponent | ApiV1IncidentsListSinceErrorComponent |
-            ApiV1IncidentsListStateErrorComponent | ApiV1IncidentsListStateNotErrorComponent |
-            ApiV1IncidentsListStatusErrorComponent | ApiV1IncidentsListTimeRangeErrorComponent |
-            ApiV1IncidentsListUntilErrorComponent | ApiV1IncidentsListVulnerabilityFindingsErrorComponent |
-            ApiV1IncidentsListWorkspacesErrorComponent]):
+        errors (list[ApiV1IncidentsListAffectedOrganizationErrorComponent | ApiV1IncidentsListAffectedPopsErrorComponent
+            | ApiV1IncidentsListAffectedWorkspaceErrorComponent | ApiV1IncidentsListCreatedByUsersErrorComponent |
+            ApiV1IncidentsListDowntimesErrorComponent | ApiV1IncidentsListKindErrorComponent |
+            ApiV1IncidentsListNameExactErrorComponent | ApiV1IncidentsListOrganizationsErrorComponent |
+            ApiV1IncidentsListPopErrorComponent | ApiV1IncidentsListSearchErrorComponent |
+            ApiV1IncidentsListSinceErrorComponent | ApiV1IncidentsListStateErrorComponent |
+            ApiV1IncidentsListStateNotErrorComponent | ApiV1IncidentsListStatusErrorComponent |
+            ApiV1IncidentsListTimeRangeErrorComponent | ApiV1IncidentsListUntilErrorComponent |
+            ApiV1IncidentsListVulnerabilityFindingsErrorComponent | ApiV1IncidentsListWorkspacesErrorComponent]):
     """
 
     type_: ValidationErrorEnum
     errors: list[
-        ApiV1IncidentsListAffectedPopsErrorComponent
+        ApiV1IncidentsListAffectedOrganizationErrorComponent
+        | ApiV1IncidentsListAffectedPopsErrorComponent
         | ApiV1IncidentsListAffectedWorkspaceErrorComponent
         | ApiV1IncidentsListCreatedByUsersErrorComponent
         | ApiV1IncidentsListDowntimesErrorComponent
@@ -80,6 +84,9 @@ class ApiV1IncidentsListValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.api_v1_incidents_list_affected_organization_error_component import (
+            ApiV1IncidentsListAffectedOrganizationErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_incidents_list_affected_pops_error_component import (
             ApiV1IncidentsListAffectedPopsErrorComponent,  # noqa: PLC0415
         )
@@ -160,6 +167,8 @@ class ApiV1IncidentsListValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1IncidentsListAffectedWorkspaceErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1IncidentsListAffectedOrganizationErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1IncidentsListSinceErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1IncidentsListUntilErrorComponent):
@@ -184,6 +193,9 @@ class ApiV1IncidentsListValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.api_v1_incidents_list_affected_organization_error_component import (
+            ApiV1IncidentsListAffectedOrganizationErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_incidents_list_affected_pops_error_component import (
             ApiV1IncidentsListAffectedPopsErrorComponent,  # noqa: PLC0415
         )
@@ -246,7 +258,8 @@ class ApiV1IncidentsListValidationError:
             def _parse_errors_item(
                 data: object,
             ) -> (
-                ApiV1IncidentsListAffectedPopsErrorComponent
+                ApiV1IncidentsListAffectedOrganizationErrorComponent
+                | ApiV1IncidentsListAffectedPopsErrorComponent
                 | ApiV1IncidentsListAffectedWorkspaceErrorComponent
                 | ApiV1IncidentsListCreatedByUsersErrorComponent
                 | ApiV1IncidentsListDowntimesErrorComponent
@@ -398,7 +411,7 @@ class ApiV1IncidentsListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_incidents_list_error_type_13 = (
-                        ApiV1IncidentsListSinceErrorComponent.from_dict(data)
+                        ApiV1IncidentsListAffectedOrganizationErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_incidents_list_error_type_13
@@ -408,7 +421,7 @@ class ApiV1IncidentsListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_incidents_list_error_type_14 = (
-                        ApiV1IncidentsListUntilErrorComponent.from_dict(data)
+                        ApiV1IncidentsListSinceErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_incidents_list_error_type_14
@@ -418,19 +431,29 @@ class ApiV1IncidentsListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_incidents_list_error_type_15 = (
-                        ApiV1IncidentsListStateNotErrorComponent.from_dict(data)
+                        ApiV1IncidentsListUntilErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_incidents_list_error_type_15
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_incidents_list_error_type_16 = (
+                        ApiV1IncidentsListStateNotErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_incidents_list_error_type_16
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_incidents_list_error_type_16 = (
+                componentsschemas_api_v1_incidents_list_error_type_17 = (
                     ApiV1IncidentsListNameExactErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_incidents_list_error_type_16
+                return componentsschemas_api_v1_incidents_list_error_type_17
 
             errors_item = _parse_errors_item(errors_item_data)
 

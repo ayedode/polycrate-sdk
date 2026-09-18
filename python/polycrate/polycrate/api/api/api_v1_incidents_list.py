@@ -32,6 +32,7 @@ from ...types import UNSET, Response, Unset
 
 def _get_kwargs(
     *,
+    affected_organization: UUID | Unset = UNSET,
     affected_pops: UUID | Unset = UNSET,
     affected_workspace: UUID | Unset = UNSET,
     archived: bool | Unset = UNSET,
@@ -58,6 +59,11 @@ def _get_kwargs(
 ) -> dict[str, Any]:
 
     params: dict[str, Any] = {}
+
+    json_affected_organization: str | Unset = UNSET
+    if not isinstance(affected_organization, Unset):
+        json_affected_organization = str(affected_organization)
+    params["affected_organization"] = json_affected_organization
 
     json_affected_pops: str | Unset = UNSET
     if not isinstance(affected_pops, Unset):
@@ -320,6 +326,7 @@ def _build_response(
 def sync_detailed(
     *,
     client: AuthenticatedClient,
+    affected_organization: UUID | Unset = UNSET,
     affected_pops: UUID | Unset = UNSET,
     affected_workspace: UUID | Unset = UNSET,
     archived: bool | Unset = UNSET,
@@ -364,6 +371,7 @@ def sync_detailed(
     Spec 531: non-superusers see their org incidents OR system-wide (organization=NULL).
 
     Args:
+        affected_organization (UUID | Unset):
         affected_pops (UUID | Unset):
         affected_workspace (UUID | Unset):
         archived (bool | Unset):
@@ -397,6 +405,7 @@ def sync_detailed(
     """
 
     kwargs = _get_kwargs(
+        affected_organization=affected_organization,
         affected_pops=affected_pops,
         affected_workspace=affected_workspace,
         archived=archived,
@@ -432,6 +441,7 @@ def sync_detailed(
 def sync(
     *,
     client: AuthenticatedClient,
+    affected_organization: UUID | Unset = UNSET,
     affected_pops: UUID | Unset = UNSET,
     affected_workspace: UUID | Unset = UNSET,
     archived: bool | Unset = UNSET,
@@ -477,6 +487,7 @@ def sync(
     Spec 531: non-superusers see their org incidents OR system-wide (organization=NULL).
 
     Args:
+        affected_organization (UUID | Unset):
         affected_pops (UUID | Unset):
         affected_workspace (UUID | Unset):
         archived (bool | Unset):
@@ -511,6 +522,7 @@ def sync(
 
     return sync_detailed(
         client=client,
+        affected_organization=affected_organization,
         affected_pops=affected_pops,
         affected_workspace=affected_workspace,
         archived=archived,
@@ -540,6 +552,7 @@ def sync(
 async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
+    affected_organization: UUID | Unset = UNSET,
     affected_pops: UUID | Unset = UNSET,
     affected_workspace: UUID | Unset = UNSET,
     archived: bool | Unset = UNSET,
@@ -584,6 +597,7 @@ async def asyncio_detailed(
     Spec 531: non-superusers see their org incidents OR system-wide (organization=NULL).
 
     Args:
+        affected_organization (UUID | Unset):
         affected_pops (UUID | Unset):
         affected_workspace (UUID | Unset):
         archived (bool | Unset):
@@ -617,6 +631,7 @@ async def asyncio_detailed(
     """
 
     kwargs = _get_kwargs(
+        affected_organization=affected_organization,
         affected_pops=affected_pops,
         affected_workspace=affected_workspace,
         archived=archived,
@@ -650,6 +665,7 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: AuthenticatedClient,
+    affected_organization: UUID | Unset = UNSET,
     affected_pops: UUID | Unset = UNSET,
     affected_workspace: UUID | Unset = UNSET,
     archived: bool | Unset = UNSET,
@@ -695,6 +711,7 @@ async def asyncio(
     Spec 531: non-superusers see their org incidents OR system-wide (organization=NULL).
 
     Args:
+        affected_organization (UUID | Unset):
         affected_pops (UUID | Unset):
         affected_workspace (UUID | Unset):
         archived (bool | Unset):
@@ -730,6 +747,7 @@ async def asyncio(
     return (
         await asyncio_detailed(
             client=client,
+            affected_organization=affected_organization,
             affected_pops=affected_pops,
             affected_workspace=affected_workspace,
             archived=archived,

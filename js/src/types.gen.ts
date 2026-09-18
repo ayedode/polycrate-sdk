@@ -23,6 +23,12 @@ export type _DNSProviderCatalogResponse = {
 
 /**
  * * `read` - Read
+ * * `write` - Write
+ */
+export type AccessEnum = 'read' | 'write';
+
+/**
+ * * `read` - Read
  * * `read_write` - Read/Write
  */
 export type AccessModeEnum = 'read' | 'read_write';
@@ -93250,6 +93256,19 @@ export type ApiV1IncidentsCreateWorkspaceIdErrorComponent = {
 
 export type ApiV1IncidentsDestroyErrorResponse400 = ParseErrorResponse;
 
+export type ApiV1IncidentsListAffectedOrganizationErrorComponent = {
+    /**
+     * * `affected_organization` - affected_organization
+     */
+    attr: 'affected_organization';
+    /**
+     * * `invalid` - invalid
+     * * `null_characters_not_allowed` - null_characters_not_allowed
+     */
+    code: 'invalid' | 'null_characters_not_allowed';
+    detail: string;
+};
+
 export type ApiV1IncidentsListAffectedPopsErrorComponent = {
     /**
      * * `affected_pops` - affected_pops
@@ -93303,7 +93322,7 @@ export type ApiV1IncidentsListDowntimesErrorComponent = {
     detail: string;
 };
 
-export type ApiV1IncidentsListError = ApiV1IncidentsListSearchErrorComponent | ApiV1IncidentsListTimeRangeErrorComponent | ApiV1IncidentsListOrganizationsErrorComponent | ApiV1IncidentsListWorkspacesErrorComponent | ApiV1IncidentsListStateErrorComponent | ApiV1IncidentsListKindErrorComponent | ApiV1IncidentsListCreatedByUsersErrorComponent | ApiV1IncidentsListStatusErrorComponent | ApiV1IncidentsListDowntimesErrorComponent | ApiV1IncidentsListAffectedPopsErrorComponent | ApiV1IncidentsListVulnerabilityFindingsErrorComponent | ApiV1IncidentsListPopErrorComponent | ApiV1IncidentsListAffectedWorkspaceErrorComponent | ApiV1IncidentsListSinceErrorComponent | ApiV1IncidentsListUntilErrorComponent | ApiV1IncidentsListStateNotErrorComponent | ApiV1IncidentsListNameExactErrorComponent;
+export type ApiV1IncidentsListError = ApiV1IncidentsListSearchErrorComponent | ApiV1IncidentsListTimeRangeErrorComponent | ApiV1IncidentsListOrganizationsErrorComponent | ApiV1IncidentsListWorkspacesErrorComponent | ApiV1IncidentsListStateErrorComponent | ApiV1IncidentsListKindErrorComponent | ApiV1IncidentsListCreatedByUsersErrorComponent | ApiV1IncidentsListStatusErrorComponent | ApiV1IncidentsListDowntimesErrorComponent | ApiV1IncidentsListAffectedPopsErrorComponent | ApiV1IncidentsListVulnerabilityFindingsErrorComponent | ApiV1IncidentsListPopErrorComponent | ApiV1IncidentsListAffectedWorkspaceErrorComponent | ApiV1IncidentsListAffectedOrganizationErrorComponent | ApiV1IncidentsListSinceErrorComponent | ApiV1IncidentsListUntilErrorComponent | ApiV1IncidentsListStateNotErrorComponent | ApiV1IncidentsListNameExactErrorComponent;
 
 export type ApiV1IncidentsListErrorResponse400 = ApiV1IncidentsListValidationError | ParseErrorResponse;
 
@@ -128381,6 +128400,19 @@ export type ApiV1MaintenancesCreateWorkspaceIdErrorComponent = {
 
 export type ApiV1MaintenancesDestroyErrorResponse400 = ParseErrorResponse;
 
+export type ApiV1MaintenancesListAffectedOrganizationErrorComponent = {
+    /**
+     * * `affected_organization` - affected_organization
+     */
+    attr: 'affected_organization';
+    /**
+     * * `invalid` - invalid
+     * * `null_characters_not_allowed` - null_characters_not_allowed
+     */
+    code: 'invalid' | 'null_characters_not_allowed';
+    detail: string;
+};
+
 export type ApiV1MaintenancesListAffectedPopsErrorComponent = {
     /**
      * * `affected_pops` - affected_pops
@@ -128433,7 +128465,7 @@ export type ApiV1MaintenancesListEndErrorComponent = {
     detail: string;
 };
 
-export type ApiV1MaintenancesListError = ApiV1MaintenancesListSearchErrorComponent | ApiV1MaintenancesListTimeRangeErrorComponent | ApiV1MaintenancesListOrganizationsErrorComponent | ApiV1MaintenancesListWorkspacesErrorComponent | ApiV1MaintenancesListStateErrorComponent | ApiV1MaintenancesListKindErrorComponent | ApiV1MaintenancesListCreatedByUsersErrorComponent | ApiV1MaintenancesListPopErrorComponent | ApiV1MaintenancesListAffectedPopsErrorComponent | ApiV1MaintenancesListPopProviderEntityErrorComponent | ApiV1MaintenancesListProjectErrorComponent | ApiV1MaintenancesListAffectedWorkspaceErrorComponent | ApiV1MaintenancesListStartErrorComponent | ApiV1MaintenancesListEndErrorComponent | ApiV1MaintenancesListSinceErrorComponent | ApiV1MaintenancesListUntilErrorComponent | ApiV1MaintenancesListSourceNoteErrorComponent | ApiV1MaintenancesListSourceDatasourceErrorComponent | ApiV1MaintenancesListStateNotErrorComponent | ApiV1MaintenancesListNameExactErrorComponent;
+export type ApiV1MaintenancesListError = ApiV1MaintenancesListSearchErrorComponent | ApiV1MaintenancesListTimeRangeErrorComponent | ApiV1MaintenancesListOrganizationsErrorComponent | ApiV1MaintenancesListWorkspacesErrorComponent | ApiV1MaintenancesListStateErrorComponent | ApiV1MaintenancesListKindErrorComponent | ApiV1MaintenancesListCreatedByUsersErrorComponent | ApiV1MaintenancesListPopErrorComponent | ApiV1MaintenancesListAffectedPopsErrorComponent | ApiV1MaintenancesListPopProviderEntityErrorComponent | ApiV1MaintenancesListProjectErrorComponent | ApiV1MaintenancesListAffectedWorkspaceErrorComponent | ApiV1MaintenancesListAffectedOrganizationErrorComponent | ApiV1MaintenancesListStartErrorComponent | ApiV1MaintenancesListEndErrorComponent | ApiV1MaintenancesListSinceErrorComponent | ApiV1MaintenancesListUntilErrorComponent | ApiV1MaintenancesListSourceNoteErrorComponent | ApiV1MaintenancesListSourceDatasourceErrorComponent | ApiV1MaintenancesListStateNotErrorComponent | ApiV1MaintenancesListNameExactErrorComponent;
 
 export type ApiV1MaintenancesListErrorResponse400 = ApiV1MaintenancesListValidationError | ParseErrorResponse;
 
@@ -131962,6 +131994,14 @@ export type ApiV1MaintenanceWindowsUpdateValidationError = {
     type: 'validation_error';
     errors: Array<ApiV1MaintenanceWindowsUpdateError>;
 };
+
+export type ApiV1McpAuditEventsListErrorResponse400 = ParseErrorResponse;
+
+export type ApiV1McpAuditEventsRetrieveErrorResponse400 = ParseErrorResponse;
+
+export type ApiV1McpSessionsListErrorResponse400 = ParseErrorResponse;
+
+export type ApiV1McpSessionsRetrieveErrorResponse400 = ParseErrorResponse;
 
 export type ApiV1MetricsQueryRangeRetrieveErrorResponse400 = ParseErrorResponse;
 
@@ -138501,7 +138541,7 @@ export type ApiV1OrganizationsChoicesListEndpointMonitoringModeErrorComponent = 
     detail: string;
 };
 
-export type ApiV1OrganizationsChoicesListError = ApiV1OrganizationsChoicesListSearchErrorComponent | ApiV1OrganizationsChoicesListTimeRangeErrorComponent | ApiV1OrganizationsChoicesListWorkspacesErrorComponent | ApiV1OrganizationsChoicesListStateErrorComponent | ApiV1OrganizationsChoicesListKindErrorComponent | ApiV1OrganizationsChoicesListCreatedByUsersErrorComponent | ApiV1OrganizationsChoicesListLegalNameErrorComponent | ApiV1OrganizationsChoicesListEndpointMonitoringModeErrorComponent | ApiV1OrganizationsChoicesListGrafanaDashboardErrorComponent | ApiV1OrganizationsChoicesListStateNotErrorComponent | ApiV1OrganizationsChoicesListNameExactErrorComponent;
+export type ApiV1OrganizationsChoicesListError = ApiV1OrganizationsChoicesListSearchErrorComponent | ApiV1OrganizationsChoicesListTimeRangeErrorComponent | ApiV1OrganizationsChoicesListWorkspacesErrorComponent | ApiV1OrganizationsChoicesListStateErrorComponent | ApiV1OrganizationsChoicesListKindErrorComponent | ApiV1OrganizationsChoicesListCreatedByUsersErrorComponent | ApiV1OrganizationsChoicesListSlugErrorComponent | ApiV1OrganizationsChoicesListLegalNameErrorComponent | ApiV1OrganizationsChoicesListEndpointMonitoringModeErrorComponent | ApiV1OrganizationsChoicesListGrafanaDashboardErrorComponent | ApiV1OrganizationsChoicesListStateNotErrorComponent | ApiV1OrganizationsChoicesListNameExactErrorComponent;
 
 export type ApiV1OrganizationsChoicesListErrorResponse400 = ApiV1OrganizationsChoicesListValidationError | ParseErrorResponse;
 
@@ -138560,6 +138600,18 @@ export type ApiV1OrganizationsChoicesListSearchErrorComponent = {
      * * `search` - search
      */
     attr: 'search';
+    /**
+     * * `null_characters_not_allowed` - null_characters_not_allowed
+     */
+    code: 'null_characters_not_allowed';
+    detail: string;
+};
+
+export type ApiV1OrganizationsChoicesListSlugErrorComponent = {
+    /**
+     * * `slug` - slug
+     */
+    attr: 'slug';
     /**
      * * `null_characters_not_allowed` - null_characters_not_allowed
      */
@@ -142983,7 +143035,7 @@ export type ApiV1OrganizationsListEndpointMonitoringModeErrorComponent = {
     detail: string;
 };
 
-export type ApiV1OrganizationsListError = ApiV1OrganizationsListSearchErrorComponent | ApiV1OrganizationsListTimeRangeErrorComponent | ApiV1OrganizationsListWorkspacesErrorComponent | ApiV1OrganizationsListStateErrorComponent | ApiV1OrganizationsListKindErrorComponent | ApiV1OrganizationsListCreatedByUsersErrorComponent | ApiV1OrganizationsListLegalNameErrorComponent | ApiV1OrganizationsListEndpointMonitoringModeErrorComponent | ApiV1OrganizationsListGrafanaDashboardErrorComponent | ApiV1OrganizationsListStateNotErrorComponent | ApiV1OrganizationsListNameExactErrorComponent;
+export type ApiV1OrganizationsListError = ApiV1OrganizationsListSearchErrorComponent | ApiV1OrganizationsListTimeRangeErrorComponent | ApiV1OrganizationsListWorkspacesErrorComponent | ApiV1OrganizationsListStateErrorComponent | ApiV1OrganizationsListKindErrorComponent | ApiV1OrganizationsListCreatedByUsersErrorComponent | ApiV1OrganizationsListSlugErrorComponent | ApiV1OrganizationsListLegalNameErrorComponent | ApiV1OrganizationsListEndpointMonitoringModeErrorComponent | ApiV1OrganizationsListGrafanaDashboardErrorComponent | ApiV1OrganizationsListStateNotErrorComponent | ApiV1OrganizationsListNameExactErrorComponent;
 
 export type ApiV1OrganizationsListErrorResponse400 = ApiV1OrganizationsListValidationError | ParseErrorResponse;
 
@@ -143042,6 +143094,18 @@ export type ApiV1OrganizationsListSearchErrorComponent = {
      * * `search` - search
      */
     attr: 'search';
+    /**
+     * * `null_characters_not_allowed` - null_characters_not_allowed
+     */
+    code: 'null_characters_not_allowed';
+    detail: string;
+};
+
+export type ApiV1OrganizationsListSlugErrorComponent = {
+    /**
+     * * `slug` - slug
+     */
+    attr: 'slug';
     /**
      * * `null_characters_not_allowed` - null_characters_not_allowed
      */
@@ -157137,6 +157201,8 @@ export type ApiV1PricingCostStatementsCreateValidationError = {
 };
 
 export type ApiV1PricingCostStatementsDestroyErrorResponse400 = ParseErrorResponse;
+
+export type ApiV1PricingCostStatementsFocusRetrieveErrorResponse400 = ParseErrorResponse;
 
 export type ApiV1PricingCostStatementsGenerateCreateAnnotationsErrorComponent = {
     /**
@@ -228704,9 +228770,38 @@ export type MaintenanceWindowStatus = {
  */
 export type MatchTypeEnum = 'exact' | 'prefix' | 'contains' | 'contains_all';
 
+export type McpAuditEvent = {
+    readonly id: string;
+    readonly session: string;
+    readonly tool: string;
+    readonly access: (AccessEnum);
+    readonly outcome: (OutcomeEnum);
+    readonly detail: string;
+    readonly target_type: string;
+    readonly target_id: string;
+    readonly payload: unknown;
+    readonly actor_label: string;
+    readonly created_at: string;
+};
+
 export type McpCreateErrorResponse400 = ParseErrorResponse;
 
 export type McpRetrieveErrorResponse400 = ParseErrorResponse;
+
+export type McpSession = {
+    readonly id: string;
+    readonly principal_kind: (PrincipalKindEnum);
+    readonly principal_label: string;
+    readonly client: string;
+    readonly prompt: string;
+    readonly started_at: string;
+    readonly ended_at: (string) | null;
+    readonly last_activity_at: string;
+    readonly tool_call_count: number;
+    readonly denied_count: number;
+    readonly error_count: number;
+    readonly is_active: boolean;
+};
 
 /**
  * Add user to another organization with role. Spec 525
@@ -230194,7 +230289,7 @@ export type NotificationSink = {
      */
     is_system_default?: boolean;
     /**
-     * List of model names to send to this sink. Empty = all types. Example: ['k8scluster', 'endpoint']
+     * List of model names to send to this sink. Empty = all types. System default empty excludes Alert unless Alert is listed explicitly.
      */
     enabled_model_types?: unknown;
     /**
@@ -230381,7 +230476,7 @@ export type NotificationSinkRequest = {
      */
     is_system_default?: boolean;
     /**
-     * List of model names to send to this sink. Empty = all types. Example: ['k8scluster', 'endpoint']
+     * List of model names to send to this sink. Empty = all types. System default empty excludes Alert unless Alert is listed explicitly.
      */
     enabled_model_types?: unknown;
 };
@@ -231911,6 +232006,13 @@ export type OrgAPIKeyRequest = {
 };
 
 /**
+ * * `ok` - OK
+ * * `denied` - Denied
+ * * `error` - Error
+ */
+export type OutcomeEnum = 'ok' | 'denied' | 'error';
+
+/**
  * * `HEALTHY` - HEALTHY
  * * `DEGRADED` - DEGRADED
  * * `UNHEALTHY` - UNHEALTHY
@@ -232322,6 +232424,20 @@ export type PaginatedMaintenanceWindowListList = {
     next?: (string) | null;
     previous?: (string) | null;
     results: Array<MaintenanceWindowList>;
+};
+
+export type PaginatedMcpAuditEventList = {
+    count: number;
+    next?: (string) | null;
+    previous?: (string) | null;
+    results: Array<McpAuditEvent>;
+};
+
+export type PaginatedMcpSessionList = {
+    count: number;
+    next?: (string) | null;
+    previous?: (string) | null;
+    results: Array<McpSession>;
 };
 
 export type PaginatedMessageListList = {
@@ -238461,7 +238577,7 @@ export type PatchedNotificationSinkRequest = {
      */
     is_system_default?: boolean;
     /**
-     * List of model names to send to this sink. Empty = all types. Example: ['k8scluster', 'endpoint']
+     * List of model names to send to this sink. Empty = all types. System default empty excludes Alert unless Alert is listed explicitly.
      */
     enabled_model_types?: unknown;
 };
@@ -244501,6 +244617,14 @@ export type PricingRuleList = {
     active_from?: (string) | null;
     active_until?: (string) | null;
 };
+
+/**
+ * * `user` - User
+ * * `system_api_key` - System API key
+ * * `org_api_key` - Organization API key
+ * * `microservice` - Microservice
+ */
+export type PrincipalKindEnum = 'user' | 'system_api_key' | 'org_api_key' | 'microservice';
 
 /**
  * Full detail serializer.
@@ -258894,6 +259018,10 @@ export type ApiV1IdpIdentityprovidersMetricsRetrieveResponse = (unknown);
 
 export type ApiV1IncidentsListData = {
     /**
+     * Affected Organization (UUID)
+     */
+    affectedOrganization?: string;
+    /**
      * Affected PoP
      */
     affectedPops?: string;
@@ -261110,6 +261238,10 @@ export type ApiV1MaintenanceWindowsMetricsRetrieveResponse = (unknown);
 
 export type ApiV1MaintenancesListData = {
     /**
+     * Affected Organization (UUID)
+     */
+    affectedOrganization?: string;
+    /**
      * Affected PoP
      */
     affectedPops?: string;
@@ -261278,6 +261410,66 @@ export type ApiV1MaintenancesMetricsRetrieveData = {
 };
 
 export type ApiV1MaintenancesMetricsRetrieveResponse = (unknown);
+
+export type ApiV1McpAuditEventsListData = {
+    /**
+     * Which field to use when ordering the results.
+     */
+    ordering?: string;
+    /**
+     * A page number within the paginated result set.
+     */
+    page?: number;
+    /**
+     * Number of results to return per page.
+     */
+    pageSize?: number;
+    /**
+     * A search term.
+     */
+    search?: string;
+};
+
+export type ApiV1McpAuditEventsListResponse = (PaginatedMcpAuditEventList);
+
+export type ApiV1McpAuditEventsRetrieveData = {
+    /**
+     * A UUID string identifying this mcp audit event.
+     */
+    id: string;
+};
+
+export type ApiV1McpAuditEventsRetrieveResponse = (McpAuditEvent);
+
+export type ApiV1McpSessionsListData = {
+    /**
+     * Which field to use when ordering the results.
+     */
+    ordering?: string;
+    /**
+     * A page number within the paginated result set.
+     */
+    page?: number;
+    /**
+     * Number of results to return per page.
+     */
+    pageSize?: number;
+    /**
+     * A search term.
+     */
+    search?: string;
+};
+
+export type ApiV1McpSessionsListResponse = (PaginatedMcpSessionList);
+
+export type ApiV1McpSessionsRetrieveData = {
+    /**
+     * A UUID string identifying this mcp session.
+     */
+    id: string;
+};
+
+export type ApiV1McpSessionsRetrieveResponse = (McpSession);
 
 export type ApiV1MediaRetrieveData = {
     /**
@@ -261843,6 +262035,10 @@ export type ApiV1OrganizationsListData = {
      * A search term.
      */
     search?: string;
+    /**
+     * Slug
+     */
+    slug?: string;
     state?: 'OK' | 'WARNING' | 'CRITICAL' | 'READY' | 'DEGRADED' | 'DOWN';
     stateNot?: 'OK' | 'WARNING' | 'CRITICAL' | 'READY' | 'DEGRADED' | 'DOWN';
     /**
@@ -262096,6 +262292,10 @@ export type ApiV1OrganizationsChoicesListData = {
      */
     priority?: boolean;
     search?: string;
+    /**
+     * Slug
+     */
+    slug?: string;
     state?: 'OK' | 'WARNING' | 'CRITICAL' | 'READY' | 'DEGRADED' | 'DOWN';
     stateNot?: 'OK' | 'WARNING' | 'CRITICAL' | 'READY' | 'DEGRADED' | 'DOWN';
     /**
@@ -262832,6 +263032,16 @@ export type ApiV1PricingCostStatementsArchiveCreateData = {
 };
 
 export type ApiV1PricingCostStatementsArchiveCreateResponse = (ArchiveResponse);
+
+export type ApiV1PricingCostStatementsFocusRetrieveData = {
+    format?: 'csv' | 'json';
+    /**
+     * A UUID string identifying this cost statement.
+     */
+    id: string;
+};
+
+export type ApiV1PricingCostStatementsFocusRetrieveResponse = (CostStatementDetail);
 
 export type ApiV1PricingCostStatementsMetricsRetrieveData = {
     /**

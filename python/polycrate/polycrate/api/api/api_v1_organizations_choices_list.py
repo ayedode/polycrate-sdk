@@ -54,6 +54,7 @@ def _get_kwargs(
     platform_service: bool | Unset = UNSET,
     priority: bool | Unset = UNSET,
     search: str | Unset = UNSET,
+    slug: str | Unset = UNSET,
     state: ApiV1OrganizationsChoicesListState | Unset = UNSET,
     state_not: ApiV1OrganizationsChoicesListStateNot | Unset = UNSET,
     time_range: ApiV1OrganizationsChoicesListTimeRange | Unset = UNSET,
@@ -124,6 +125,8 @@ def _get_kwargs(
     params["priority"] = priority
 
     params["search"] = search
+
+    params["slug"] = slug
 
     json_state: str | Unset = UNSET
     if not isinstance(state, Unset):
@@ -314,6 +317,7 @@ def sync_detailed(
     platform_service: bool | Unset = UNSET,
     priority: bool | Unset = UNSET,
     search: str | Unset = UNSET,
+    slug: str | Unset = UNSET,
     state: ApiV1OrganizationsChoicesListState | Unset = UNSET,
     state_not: ApiV1OrganizationsChoicesListStateNot | Unset = UNSET,
     time_range: ApiV1OrganizationsChoicesListTimeRange | Unset = UNSET,
@@ -355,6 +359,7 @@ def sync_detailed(
         platform_service (bool | Unset):
         priority (bool | Unset):
         search (str | Unset):
+        slug (str | Unset):
         state (ApiV1OrganizationsChoicesListState | Unset):
         state_not (ApiV1OrganizationsChoicesListStateNot | Unset):
         time_range (ApiV1OrganizationsChoicesListTimeRange | Unset):
@@ -384,6 +389,7 @@ def sync_detailed(
         platform_service=platform_service,
         priority=priority,
         search=search,
+        slug=slug,
         state=state,
         state_not=state_not,
         time_range=time_range,
@@ -415,6 +421,7 @@ def sync(
     platform_service: bool | Unset = UNSET,
     priority: bool | Unset = UNSET,
     search: str | Unset = UNSET,
+    slug: str | Unset = UNSET,
     state: ApiV1OrganizationsChoicesListState | Unset = UNSET,
     state_not: ApiV1OrganizationsChoicesListStateNot | Unset = UNSET,
     time_range: ApiV1OrganizationsChoicesListTimeRange | Unset = UNSET,
@@ -457,6 +464,7 @@ def sync(
         platform_service (bool | Unset):
         priority (bool | Unset):
         search (str | Unset):
+        slug (str | Unset):
         state (ApiV1OrganizationsChoicesListState | Unset):
         state_not (ApiV1OrganizationsChoicesListStateNot | Unset):
         time_range (ApiV1OrganizationsChoicesListTimeRange | Unset):
@@ -487,6 +495,7 @@ def sync(
         platform_service=platform_service,
         priority=priority,
         search=search,
+        slug=slug,
         state=state,
         state_not=state_not,
         time_range=time_range,
@@ -512,6 +521,7 @@ async def asyncio_detailed(
     platform_service: bool | Unset = UNSET,
     priority: bool | Unset = UNSET,
     search: str | Unset = UNSET,
+    slug: str | Unset = UNSET,
     state: ApiV1OrganizationsChoicesListState | Unset = UNSET,
     state_not: ApiV1OrganizationsChoicesListStateNot | Unset = UNSET,
     time_range: ApiV1OrganizationsChoicesListTimeRange | Unset = UNSET,
@@ -553,6 +563,7 @@ async def asyncio_detailed(
         platform_service (bool | Unset):
         priority (bool | Unset):
         search (str | Unset):
+        slug (str | Unset):
         state (ApiV1OrganizationsChoicesListState | Unset):
         state_not (ApiV1OrganizationsChoicesListStateNot | Unset):
         time_range (ApiV1OrganizationsChoicesListTimeRange | Unset):
@@ -582,6 +593,7 @@ async def asyncio_detailed(
         platform_service=platform_service,
         priority=priority,
         search=search,
+        slug=slug,
         state=state,
         state_not=state_not,
         time_range=time_range,
@@ -611,6 +623,7 @@ async def asyncio(
     platform_service: bool | Unset = UNSET,
     priority: bool | Unset = UNSET,
     search: str | Unset = UNSET,
+    slug: str | Unset = UNSET,
     state: ApiV1OrganizationsChoicesListState | Unset = UNSET,
     state_not: ApiV1OrganizationsChoicesListStateNot | Unset = UNSET,
     time_range: ApiV1OrganizationsChoicesListTimeRange | Unset = UNSET,
@@ -653,6 +666,7 @@ async def asyncio(
         platform_service (bool | Unset):
         priority (bool | Unset):
         search (str | Unset):
+        slug (str | Unset):
         state (ApiV1OrganizationsChoicesListState | Unset):
         state_not (ApiV1OrganizationsChoicesListStateNot | Unset):
         time_range (ApiV1OrganizationsChoicesListTimeRange | Unset):
@@ -684,6 +698,7 @@ async def asyncio(
             platform_service=platform_service,
             priority=priority,
             search=search,
+            slug=slug,
             state=state,
             state_not=state_not,
             time_range=time_range,

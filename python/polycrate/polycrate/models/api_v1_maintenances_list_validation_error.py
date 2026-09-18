@@ -9,6 +9,9 @@ from attrs import field as _attrs_field
 from ..models.validation_error_enum import ValidationErrorEnum, check_validation_error_enum
 
 if TYPE_CHECKING:
+    from ..models.api_v1_maintenances_list_affected_organization_error_component import (
+        ApiV1MaintenancesListAffectedOrganizationErrorComponent,
+    )
     from ..models.api_v1_maintenances_list_affected_pops_error_component import (
         ApiV1MaintenancesListAffectedPopsErrorComponent,
     )
@@ -59,22 +62,23 @@ class ApiV1MaintenancesListValidationError:
     """
     Attributes:
         type_ (ValidationErrorEnum): * `validation_error` - Validation Error
-        errors (list[ApiV1MaintenancesListAffectedPopsErrorComponent |
-            ApiV1MaintenancesListAffectedWorkspaceErrorComponent | ApiV1MaintenancesListCreatedByUsersErrorComponent |
-            ApiV1MaintenancesListEndErrorComponent | ApiV1MaintenancesListKindErrorComponent |
-            ApiV1MaintenancesListNameExactErrorComponent | ApiV1MaintenancesListOrganizationsErrorComponent |
-            ApiV1MaintenancesListPopErrorComponent | ApiV1MaintenancesListPopProviderEntityErrorComponent |
-            ApiV1MaintenancesListProjectErrorComponent | ApiV1MaintenancesListSearchErrorComponent |
-            ApiV1MaintenancesListSinceErrorComponent | ApiV1MaintenancesListSourceDatasourceErrorComponent |
-            ApiV1MaintenancesListSourceNoteErrorComponent | ApiV1MaintenancesListStartErrorComponent |
-            ApiV1MaintenancesListStateErrorComponent | ApiV1MaintenancesListStateNotErrorComponent |
-            ApiV1MaintenancesListTimeRangeErrorComponent | ApiV1MaintenancesListUntilErrorComponent |
-            ApiV1MaintenancesListWorkspacesErrorComponent]):
+        errors (list[ApiV1MaintenancesListAffectedOrganizationErrorComponent |
+            ApiV1MaintenancesListAffectedPopsErrorComponent | ApiV1MaintenancesListAffectedWorkspaceErrorComponent |
+            ApiV1MaintenancesListCreatedByUsersErrorComponent | ApiV1MaintenancesListEndErrorComponent |
+            ApiV1MaintenancesListKindErrorComponent | ApiV1MaintenancesListNameExactErrorComponent |
+            ApiV1MaintenancesListOrganizationsErrorComponent | ApiV1MaintenancesListPopErrorComponent |
+            ApiV1MaintenancesListPopProviderEntityErrorComponent | ApiV1MaintenancesListProjectErrorComponent |
+            ApiV1MaintenancesListSearchErrorComponent | ApiV1MaintenancesListSinceErrorComponent |
+            ApiV1MaintenancesListSourceDatasourceErrorComponent | ApiV1MaintenancesListSourceNoteErrorComponent |
+            ApiV1MaintenancesListStartErrorComponent | ApiV1MaintenancesListStateErrorComponent |
+            ApiV1MaintenancesListStateNotErrorComponent | ApiV1MaintenancesListTimeRangeErrorComponent |
+            ApiV1MaintenancesListUntilErrorComponent | ApiV1MaintenancesListWorkspacesErrorComponent]):
     """
 
     type_: ValidationErrorEnum
     errors: list[
-        ApiV1MaintenancesListAffectedPopsErrorComponent
+        ApiV1MaintenancesListAffectedOrganizationErrorComponent
+        | ApiV1MaintenancesListAffectedPopsErrorComponent
         | ApiV1MaintenancesListAffectedWorkspaceErrorComponent
         | ApiV1MaintenancesListCreatedByUsersErrorComponent
         | ApiV1MaintenancesListEndErrorComponent
@@ -98,6 +102,9 @@ class ApiV1MaintenancesListValidationError:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.api_v1_maintenances_list_affected_organization_error_component import (
+            ApiV1MaintenancesListAffectedOrganizationErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_affected_pops_error_component import (
             ApiV1MaintenancesListAffectedPopsErrorComponent,  # noqa: PLC0415
         )
@@ -185,6 +192,8 @@ class ApiV1MaintenancesListValidationError:
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1MaintenancesListAffectedWorkspaceErrorComponent):
                 errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1MaintenancesListAffectedOrganizationErrorComponent):
+                errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1MaintenancesListStartErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1MaintenancesListEndErrorComponent):
@@ -217,6 +226,9 @@ class ApiV1MaintenancesListValidationError:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.api_v1_maintenances_list_affected_organization_error_component import (
+            ApiV1MaintenancesListAffectedOrganizationErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_maintenances_list_affected_pops_error_component import (
             ApiV1MaintenancesListAffectedPopsErrorComponent,  # noqa: PLC0415
         )
@@ -288,7 +300,8 @@ class ApiV1MaintenancesListValidationError:
             def _parse_errors_item(
                 data: object,
             ) -> (
-                ApiV1MaintenancesListAffectedPopsErrorComponent
+                ApiV1MaintenancesListAffectedOrganizationErrorComponent
+                | ApiV1MaintenancesListAffectedPopsErrorComponent
                 | ApiV1MaintenancesListAffectedWorkspaceErrorComponent
                 | ApiV1MaintenancesListCreatedByUsersErrorComponent
                 | ApiV1MaintenancesListEndErrorComponent
@@ -433,7 +446,7 @@ class ApiV1MaintenancesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_maintenances_list_error_type_12 = (
-                        ApiV1MaintenancesListStartErrorComponent.from_dict(data)
+                        ApiV1MaintenancesListAffectedOrganizationErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_maintenances_list_error_type_12
@@ -443,7 +456,7 @@ class ApiV1MaintenancesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_maintenances_list_error_type_13 = (
-                        ApiV1MaintenancesListEndErrorComponent.from_dict(data)
+                        ApiV1MaintenancesListStartErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_maintenances_list_error_type_13
@@ -453,7 +466,7 @@ class ApiV1MaintenancesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_maintenances_list_error_type_14 = (
-                        ApiV1MaintenancesListSinceErrorComponent.from_dict(data)
+                        ApiV1MaintenancesListEndErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_maintenances_list_error_type_14
@@ -463,7 +476,7 @@ class ApiV1MaintenancesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_maintenances_list_error_type_15 = (
-                        ApiV1MaintenancesListUntilErrorComponent.from_dict(data)
+                        ApiV1MaintenancesListSinceErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_maintenances_list_error_type_15
@@ -473,7 +486,7 @@ class ApiV1MaintenancesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_maintenances_list_error_type_16 = (
-                        ApiV1MaintenancesListSourceNoteErrorComponent.from_dict(data)
+                        ApiV1MaintenancesListUntilErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_maintenances_list_error_type_16
@@ -483,7 +496,7 @@ class ApiV1MaintenancesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_maintenances_list_error_type_17 = (
-                        ApiV1MaintenancesListSourceDatasourceErrorComponent.from_dict(data)
+                        ApiV1MaintenancesListSourceNoteErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_maintenances_list_error_type_17
@@ -493,19 +506,29 @@ class ApiV1MaintenancesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_maintenances_list_error_type_18 = (
-                        ApiV1MaintenancesListStateNotErrorComponent.from_dict(data)
+                        ApiV1MaintenancesListSourceDatasourceErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_maintenances_list_error_type_18
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_maintenances_list_error_type_19 = (
+                        ApiV1MaintenancesListStateNotErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_maintenances_list_error_type_19
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_maintenances_list_error_type_19 = (
+                componentsschemas_api_v1_maintenances_list_error_type_20 = (
                     ApiV1MaintenancesListNameExactErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_maintenances_list_error_type_19
+                return componentsschemas_api_v1_maintenances_list_error_type_20
 
             errors_item = _parse_errors_item(errors_item_data)
 

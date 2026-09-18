@@ -69,8 +69,8 @@ class PatchedNotificationSinkRequest:
         config (Any | Unset): Provider-specific configuration (see Provider Configuration docs)
         is_enabled (bool | Unset): Whether this sink is active
         is_system_default (bool | Unset): Whether this is the system-wide default sink
-        enabled_model_types (Any | Unset): List of model names to send to this sink. Empty = all types. Example:
-            ['k8scluster', 'endpoint']
+        enabled_model_types (Any | Unset): List of model names to send to this sink. Empty = all types. System default
+            empty excludes Alert unless Alert is listed explicitly.
     """
 
     name: str | Unset = UNSET

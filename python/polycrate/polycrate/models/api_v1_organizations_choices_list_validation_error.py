@@ -30,6 +30,9 @@ if TYPE_CHECKING:
     from ..models.api_v1_organizations_choices_list_search_error_component import (
         ApiV1OrganizationsChoicesListSearchErrorComponent,
     )
+    from ..models.api_v1_organizations_choices_list_slug_error_component import (
+        ApiV1OrganizationsChoicesListSlugErrorComponent,
+    )
     from ..models.api_v1_organizations_choices_list_state_error_component import (
         ApiV1OrganizationsChoicesListStateErrorComponent,
     )
@@ -56,9 +59,9 @@ class ApiV1OrganizationsChoicesListValidationError:
             ApiV1OrganizationsChoicesListEndpointMonitoringModeErrorComponent |
             ApiV1OrganizationsChoicesListGrafanaDashboardErrorComponent | ApiV1OrganizationsChoicesListKindErrorComponent |
             ApiV1OrganizationsChoicesListLegalNameErrorComponent | ApiV1OrganizationsChoicesListNameExactErrorComponent |
-            ApiV1OrganizationsChoicesListSearchErrorComponent | ApiV1OrganizationsChoicesListStateErrorComponent |
-            ApiV1OrganizationsChoicesListStateNotErrorComponent | ApiV1OrganizationsChoicesListTimeRangeErrorComponent |
-            ApiV1OrganizationsChoicesListWorkspacesErrorComponent]):
+            ApiV1OrganizationsChoicesListSearchErrorComponent | ApiV1OrganizationsChoicesListSlugErrorComponent |
+            ApiV1OrganizationsChoicesListStateErrorComponent | ApiV1OrganizationsChoicesListStateNotErrorComponent |
+            ApiV1OrganizationsChoicesListTimeRangeErrorComponent | ApiV1OrganizationsChoicesListWorkspacesErrorComponent]):
     """
 
     type_: ValidationErrorEnum
@@ -70,6 +73,7 @@ class ApiV1OrganizationsChoicesListValidationError:
         | ApiV1OrganizationsChoicesListLegalNameErrorComponent
         | ApiV1OrganizationsChoicesListNameExactErrorComponent
         | ApiV1OrganizationsChoicesListSearchErrorComponent
+        | ApiV1OrganizationsChoicesListSlugErrorComponent
         | ApiV1OrganizationsChoicesListStateErrorComponent
         | ApiV1OrganizationsChoicesListStateNotErrorComponent
         | ApiV1OrganizationsChoicesListTimeRangeErrorComponent
@@ -95,6 +99,9 @@ class ApiV1OrganizationsChoicesListValidationError:
         )
         from ..models.api_v1_organizations_choices_list_search_error_component import (
             ApiV1OrganizationsChoicesListSearchErrorComponent,  # noqa: PLC0415
+        )
+        from ..models.api_v1_organizations_choices_list_slug_error_component import (
+            ApiV1OrganizationsChoicesListSlugErrorComponent,  # noqa: PLC0415
         )
         from ..models.api_v1_organizations_choices_list_state_error_component import (
             ApiV1OrganizationsChoicesListStateErrorComponent,  # noqa: PLC0415
@@ -125,6 +132,8 @@ class ApiV1OrganizationsChoicesListValidationError:
             elif isinstance(errors_item_data, ApiV1OrganizationsChoicesListKindErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1OrganizationsChoicesListCreatedByUsersErrorComponent):
+                errors_item = errors_item_data.to_dict()
+            elif isinstance(errors_item_data, ApiV1OrganizationsChoicesListSlugErrorComponent):
                 errors_item = errors_item_data.to_dict()
             elif isinstance(errors_item_data, ApiV1OrganizationsChoicesListLegalNameErrorComponent):
                 errors_item = errors_item_data.to_dict()
@@ -173,6 +182,9 @@ class ApiV1OrganizationsChoicesListValidationError:
         from ..models.api_v1_organizations_choices_list_search_error_component import (
             ApiV1OrganizationsChoicesListSearchErrorComponent,  # noqa: PLC0415
         )
+        from ..models.api_v1_organizations_choices_list_slug_error_component import (
+            ApiV1OrganizationsChoicesListSlugErrorComponent,  # noqa: PLC0415
+        )
         from ..models.api_v1_organizations_choices_list_state_error_component import (
             ApiV1OrganizationsChoicesListStateErrorComponent,  # noqa: PLC0415
         )
@@ -203,6 +215,7 @@ class ApiV1OrganizationsChoicesListValidationError:
                 | ApiV1OrganizationsChoicesListLegalNameErrorComponent
                 | ApiV1OrganizationsChoicesListNameExactErrorComponent
                 | ApiV1OrganizationsChoicesListSearchErrorComponent
+                | ApiV1OrganizationsChoicesListSlugErrorComponent
                 | ApiV1OrganizationsChoicesListStateErrorComponent
                 | ApiV1OrganizationsChoicesListStateNotErrorComponent
                 | ApiV1OrganizationsChoicesListTimeRangeErrorComponent
@@ -272,7 +285,7 @@ class ApiV1OrganizationsChoicesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_organizations_choices_list_error_type_6 = (
-                        ApiV1OrganizationsChoicesListLegalNameErrorComponent.from_dict(data)
+                        ApiV1OrganizationsChoicesListSlugErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_organizations_choices_list_error_type_6
@@ -282,7 +295,7 @@ class ApiV1OrganizationsChoicesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_organizations_choices_list_error_type_7 = (
-                        ApiV1OrganizationsChoicesListEndpointMonitoringModeErrorComponent.from_dict(data)
+                        ApiV1OrganizationsChoicesListLegalNameErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_organizations_choices_list_error_type_7
@@ -292,7 +305,7 @@ class ApiV1OrganizationsChoicesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_organizations_choices_list_error_type_8 = (
-                        ApiV1OrganizationsChoicesListGrafanaDashboardErrorComponent.from_dict(data)
+                        ApiV1OrganizationsChoicesListEndpointMonitoringModeErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_organizations_choices_list_error_type_8
@@ -302,19 +315,29 @@ class ApiV1OrganizationsChoicesListValidationError:
                     if not isinstance(data, dict):
                         raise TypeError()
                     componentsschemas_api_v1_organizations_choices_list_error_type_9 = (
-                        ApiV1OrganizationsChoicesListStateNotErrorComponent.from_dict(data)
+                        ApiV1OrganizationsChoicesListGrafanaDashboardErrorComponent.from_dict(data)
                     )
 
                     return componentsschemas_api_v1_organizations_choices_list_error_type_9
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    componentsschemas_api_v1_organizations_choices_list_error_type_10 = (
+                        ApiV1OrganizationsChoicesListStateNotErrorComponent.from_dict(data)
+                    )
+
+                    return componentsschemas_api_v1_organizations_choices_list_error_type_10
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                componentsschemas_api_v1_organizations_choices_list_error_type_10 = (
+                componentsschemas_api_v1_organizations_choices_list_error_type_11 = (
                     ApiV1OrganizationsChoicesListNameExactErrorComponent.from_dict(data)
                 )
 
-                return componentsschemas_api_v1_organizations_choices_list_error_type_10
+                return componentsschemas_api_v1_organizations_choices_list_error_type_11
 
             errors_item = _parse_errors_item(errors_item_data)
 

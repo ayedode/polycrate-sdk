@@ -803,6 +803,13 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
     required: ['active_condition_instances', 'archived', 'condition_instance_count', 'conditions', 'created', 'effective_criticality', 'grafana_hostname', 'id', 'kind', 'labels', 'name', 'organization', 'organization_priority', 'reconciliation_running', 'state', 'tools_active_count', 'url', 'victoriametrics_hostname', 'workspace']
 } as const;
 
+export const AccessEnumSchema = {
+    enum: ['read', 'write'],
+    type: 'string',
+    description: `* \`read\` - Read
+* \`write\` - Write`
+} as const;
+
 export const AccessModeEnumSchema = {
     enum: ['read', 'read_write'],
     type: 'string',
@@ -182667,6 +182674,27 @@ export const ApiV1IncidentsDestroyErrorResponse400Schema = {
     }
 } as const;
 
+export const ApiV1IncidentsListAffectedOrganizationErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['affected_organization'],
+            type: 'string',
+            description: '* `affected_organization` - affected_organization'
+        },
+        code: {
+            enum: ['invalid', 'null_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null_characters_not_allowed\` - null_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1IncidentsListAffectedPopsErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -182794,6 +182822,9 @@ export const ApiV1IncidentsListErrorSchema = {
             '$ref': '#/components/schemas/ApiV1IncidentsListAffectedWorkspaceErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1IncidentsListAffectedOrganizationErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1IncidentsListSinceErrorComponent'
         },
         {
@@ -182822,6 +182853,7 @@ export const ApiV1IncidentsListErrorSchema = {
             vulnerability_findings: '#/components/schemas/ApiV1IncidentsListVulnerabilityFindingsErrorComponent',
             pop: '#/components/schemas/ApiV1IncidentsListPopErrorComponent',
             affected_workspace: '#/components/schemas/ApiV1IncidentsListAffectedWorkspaceErrorComponent',
+            affected_organization: '#/components/schemas/ApiV1IncidentsListAffectedOrganizationErrorComponent',
             since: '#/components/schemas/ApiV1IncidentsListSinceErrorComponent',
             until: '#/components/schemas/ApiV1IncidentsListUntilErrorComponent',
             state_not: '#/components/schemas/ApiV1IncidentsListStateNotErrorComponent',
@@ -253640,6 +253672,27 @@ export const ApiV1MaintenancesDestroyErrorResponse400Schema = {
     }
 } as const;
 
+export const ApiV1MaintenancesListAffectedOrganizationErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['affected_organization'],
+            type: 'string',
+            description: '* `affected_organization` - affected_organization'
+        },
+        code: {
+            enum: ['invalid', 'null_characters_not_allowed'],
+            type: 'string',
+            description: `* \`invalid\` - invalid
+* \`null_characters_not_allowed\` - null_characters_not_allowed`
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
 export const ApiV1MaintenancesListAffectedPopsErrorComponentSchema = {
     type: 'object',
     properties: {
@@ -253763,6 +253816,9 @@ export const ApiV1MaintenancesListErrorSchema = {
             '$ref': '#/components/schemas/ApiV1MaintenancesListAffectedWorkspaceErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1MaintenancesListAffectedOrganizationErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1MaintenancesListStartErrorComponent'
         },
         {
@@ -253802,6 +253858,7 @@ export const ApiV1MaintenancesListErrorSchema = {
             pop_provider_entity: '#/components/schemas/ApiV1MaintenancesListPopProviderEntityErrorComponent',
             project: '#/components/schemas/ApiV1MaintenancesListProjectErrorComponent',
             affected_workspace: '#/components/schemas/ApiV1MaintenancesListAffectedWorkspaceErrorComponent',
+            affected_organization: '#/components/schemas/ApiV1MaintenancesListAffectedOrganizationErrorComponent',
             start: '#/components/schemas/ApiV1MaintenancesListStartErrorComponent',
             end: '#/components/schemas/ApiV1MaintenancesListEndErrorComponent',
             since: '#/components/schemas/ApiV1MaintenancesListSinceErrorComponent',
@@ -257187,6 +257244,62 @@ export const ApiV1MaintenancesUpdateWorkspaceIdErrorComponentSchema = {
         }
     },
     required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1McpAuditEventsListErrorResponse400Schema = {
+    oneOf: [
+        {
+            '$ref': '#/components/schemas/ParseErrorResponse'
+        }
+    ],
+    discriminator: {
+        propertyName: 'type',
+        mapping: {
+            client_error: '#/components/schemas/ParseErrorResponse'
+        }
+    }
+} as const;
+
+export const ApiV1McpAuditEventsRetrieveErrorResponse400Schema = {
+    oneOf: [
+        {
+            '$ref': '#/components/schemas/ParseErrorResponse'
+        }
+    ],
+    discriminator: {
+        propertyName: 'type',
+        mapping: {
+            client_error: '#/components/schemas/ParseErrorResponse'
+        }
+    }
+} as const;
+
+export const ApiV1McpSessionsListErrorResponse400Schema = {
+    oneOf: [
+        {
+            '$ref': '#/components/schemas/ParseErrorResponse'
+        }
+    ],
+    discriminator: {
+        propertyName: 'type',
+        mapping: {
+            client_error: '#/components/schemas/ParseErrorResponse'
+        }
+    }
+} as const;
+
+export const ApiV1McpSessionsRetrieveErrorResponse400Schema = {
+    oneOf: [
+        {
+            '$ref': '#/components/schemas/ParseErrorResponse'
+        }
+    ],
+    discriminator: {
+        propertyName: 'type',
+        mapping: {
+            client_error: '#/components/schemas/ParseErrorResponse'
+        }
+    }
 } as const;
 
 export const ApiV1MetricsQueryRangeRetrieveErrorResponse400Schema = {
@@ -269887,6 +270000,9 @@ export const ApiV1OrganizationsChoicesListErrorSchema = {
             '$ref': '#/components/schemas/ApiV1OrganizationsChoicesListCreatedByUsersErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1OrganizationsChoicesListSlugErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1OrganizationsChoicesListLegalNameErrorComponent'
         },
         {
@@ -269911,6 +270027,7 @@ export const ApiV1OrganizationsChoicesListErrorSchema = {
             state: '#/components/schemas/ApiV1OrganizationsChoicesListStateErrorComponent',
             kind: '#/components/schemas/ApiV1OrganizationsChoicesListKindErrorComponent',
             created_by_users: '#/components/schemas/ApiV1OrganizationsChoicesListCreatedByUsersErrorComponent',
+            slug: '#/components/schemas/ApiV1OrganizationsChoicesListSlugErrorComponent',
             legal_name: '#/components/schemas/ApiV1OrganizationsChoicesListLegalNameErrorComponent',
             endpoint_monitoring_mode: '#/components/schemas/ApiV1OrganizationsChoicesListEndpointMonitoringModeErrorComponent',
             grafana_dashboard: '#/components/schemas/ApiV1OrganizationsChoicesListGrafanaDashboardErrorComponent',
@@ -270027,6 +270144,26 @@ export const ApiV1OrganizationsChoicesListSearchErrorComponentSchema = {
             enum: ['search'],
             type: 'string',
             description: '* `search` - search'
+        },
+        code: {
+            enum: ['null_characters_not_allowed'],
+            type: 'string',
+            description: '* `null_characters_not_allowed` - null_characters_not_allowed'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1OrganizationsChoicesListSlugErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['slug'],
+            type: 'string',
+            description: '* `slug` - slug'
         },
         code: {
             enum: ['null_characters_not_allowed'],
@@ -278205,6 +278342,9 @@ export const ApiV1OrganizationsListErrorSchema = {
             '$ref': '#/components/schemas/ApiV1OrganizationsListCreatedByUsersErrorComponent'
         },
         {
+            '$ref': '#/components/schemas/ApiV1OrganizationsListSlugErrorComponent'
+        },
+        {
             '$ref': '#/components/schemas/ApiV1OrganizationsListLegalNameErrorComponent'
         },
         {
@@ -278229,6 +278369,7 @@ export const ApiV1OrganizationsListErrorSchema = {
             state: '#/components/schemas/ApiV1OrganizationsListStateErrorComponent',
             kind: '#/components/schemas/ApiV1OrganizationsListKindErrorComponent',
             created_by_users: '#/components/schemas/ApiV1OrganizationsListCreatedByUsersErrorComponent',
+            slug: '#/components/schemas/ApiV1OrganizationsListSlugErrorComponent',
             legal_name: '#/components/schemas/ApiV1OrganizationsListLegalNameErrorComponent',
             endpoint_monitoring_mode: '#/components/schemas/ApiV1OrganizationsListEndpointMonitoringModeErrorComponent',
             grafana_dashboard: '#/components/schemas/ApiV1OrganizationsListGrafanaDashboardErrorComponent',
@@ -278345,6 +278486,26 @@ export const ApiV1OrganizationsListSearchErrorComponentSchema = {
             enum: ['search'],
             type: 'string',
             description: '* `search` - search'
+        },
+        code: {
+            enum: ['null_characters_not_allowed'],
+            type: 'string',
+            description: '* `null_characters_not_allowed` - null_characters_not_allowed'
+        },
+        detail: {
+            type: 'string'
+        }
+    },
+    required: ['attr', 'code', 'detail']
+} as const;
+
+export const ApiV1OrganizationsListSlugErrorComponentSchema = {
+    type: 'object',
+    properties: {
+        attr: {
+            enum: ['slug'],
+            type: 'string',
+            description: '* `slug` - slug'
         },
         code: {
             enum: ['null_characters_not_allowed'],
@@ -305373,6 +305534,20 @@ export const ApiV1PricingCostStatementsCreateValidationErrorSchema = {
 } as const;
 
 export const ApiV1PricingCostStatementsDestroyErrorResponse400Schema = {
+    oneOf: [
+        {
+            '$ref': '#/components/schemas/ParseErrorResponse'
+        }
+    ],
+    discriminator: {
+        propertyName: 'type',
+        mapping: {
+            client_error: '#/components/schemas/ParseErrorResponse'
+        }
+    }
+} as const;
+
+export const ApiV1PricingCostStatementsFocusRetrieveErrorResponse400Schema = {
     oneOf: [
         {
             '$ref': '#/components/schemas/ParseErrorResponse'
@@ -450589,6 +450764,67 @@ export const MatchTypeEnumSchema = {
 * \`contains_all\` - Contains all (AND)`
 } as const;
 
+export const McpAuditEventSchema = {
+    type: 'object',
+    properties: {
+        id: {
+            type: 'string',
+            format: 'uuid',
+            readOnly: true
+        },
+        session: {
+            type: 'string',
+            format: 'uuid',
+            readOnly: true
+        },
+        tool: {
+            type: 'string',
+            readOnly: true
+        },
+        access: {
+            allOf: [
+                {
+                    '$ref': '#/components/schemas/AccessEnum'
+                }
+            ],
+            readOnly: true
+        },
+        outcome: {
+            allOf: [
+                {
+                    '$ref': '#/components/schemas/OutcomeEnum'
+                }
+            ],
+            readOnly: true
+        },
+        detail: {
+            type: 'string',
+            readOnly: true
+        },
+        target_type: {
+            type: 'string',
+            readOnly: true
+        },
+        target_id: {
+            type: 'string',
+            readOnly: true
+        },
+        payload: {
+            readOnly: true
+        },
+        actor_label: {
+            type: 'string',
+            readOnly: true
+        },
+        created_at: {
+            type: 'string',
+            format: 'date-time',
+            readOnly: true
+        }
+    },
+    required: ['access', 'actor_label', 'created_at', 'detail', 'id', 'outcome', 'payload', 'session', 'target_id', 'target_type', 'tool']
+} as const;
+
 export const McpCreateErrorResponse400Schema = {
     oneOf: [
         {
@@ -450615,6 +450851,70 @@ export const McpRetrieveErrorResponse400Schema = {
             client_error: '#/components/schemas/ParseErrorResponse'
         }
     }
+} as const;
+
+export const McpSessionSchema = {
+    type: 'object',
+    properties: {
+        id: {
+            type: 'string',
+            format: 'uuid',
+            readOnly: true
+        },
+        principal_kind: {
+            allOf: [
+                {
+                    '$ref': '#/components/schemas/PrincipalKindEnum'
+                }
+            ],
+            readOnly: true
+        },
+        principal_label: {
+            type: 'string',
+            readOnly: true
+        },
+        client: {
+            type: 'string',
+            readOnly: true
+        },
+        prompt: {
+            type: 'string',
+            readOnly: true
+        },
+        started_at: {
+            type: 'string',
+            format: 'date-time',
+            readOnly: true
+        },
+        ended_at: {
+            type: 'string',
+            format: 'date-time',
+            readOnly: true,
+            nullable: true
+        },
+        last_activity_at: {
+            type: 'string',
+            format: 'date-time',
+            readOnly: true
+        },
+        tool_call_count: {
+            type: 'integer',
+            readOnly: true
+        },
+        denied_count: {
+            type: 'integer',
+            readOnly: true
+        },
+        error_count: {
+            type: 'integer',
+            readOnly: true
+        },
+        is_active: {
+            type: 'boolean',
+            readOnly: true
+        }
+    },
+    required: ['client', 'denied_count', 'ended_at', 'error_count', 'id', 'is_active', 'last_activity_at', 'principal_kind', 'principal_label', 'prompt', 'started_at', 'tool_call_count']
 } as const;
 
 export const MembershipCreateSchema = {
@@ -453652,7 +453952,7 @@ Fällt auf class_icon_url zurück wenn get_icon_url() leer ist.`,
             description: 'Whether this is the system-wide default sink'
         },
         enabled_model_types: {
-            description: "List of model names to send to this sink. Empty = all types. Example: ['k8scluster', 'endpoint']"
+            description: 'List of model names to send to this sink. Empty = all types. System default empty excludes Alert unless Alert is listed explicitly.'
         },
         last_error: {
             type: 'string',
@@ -454038,7 +454338,7 @@ export const NotificationSinkRequestSchema = {
             description: 'Whether this is the system-wide default sink'
         },
         enabled_model_types: {
-            description: "List of model names to send to this sink. Empty = all types. Example: ['k8scluster', 'endpoint']"
+            description: 'List of model names to send to this sink. Empty = all types. System default empty excludes Alert unless Alert is listed explicitly.'
         }
     },
     required: ['kind']
@@ -457270,6 +457570,14 @@ Includes \`url\` field for direct navigation.`,
     required: ['display_name', 'id', 'keycloak_org_id', 'kind', 'legal_name', 'name', 'priority', 'reconciliation_running', 'slug', 'support_pin', 'tenant_id', 'upstream_organization_id', 'upstream_system_id', 'url']
 } as const;
 
+export const OutcomeEnumSchema = {
+    enum: ['ok', 'denied', 'error'],
+    type: 'string',
+    description: `* \`ok\` - OK
+* \`denied\` - Denied
+* \`error\` - Error`
+} as const;
+
 export const OverallStatusEnumSchema = {
     enum: ['HEALTHY', 'DEGRADED', 'UNHEALTHY', 'UNKNOWN'],
     type: 'string',
@@ -458956,6 +459264,64 @@ export const PaginatedMaintenanceWindowListListSchema = {
             type: 'array',
             items: {
                 '$ref': '#/components/schemas/MaintenanceWindowList'
+            }
+        }
+    }
+} as const;
+
+export const PaginatedMcpAuditEventListSchema = {
+    type: 'object',
+    required: ['count', 'results'],
+    properties: {
+        count: {
+            type: 'integer',
+            example: 123
+        },
+        next: {
+            type: 'string',
+            nullable: true,
+            format: 'uri',
+            example: 'http://api.example.org/accounts/?page=4'
+        },
+        previous: {
+            type: 'string',
+            nullable: true,
+            format: 'uri',
+            example: 'http://api.example.org/accounts/?page=2'
+        },
+        results: {
+            type: 'array',
+            items: {
+                '$ref': '#/components/schemas/McpAuditEvent'
+            }
+        }
+    }
+} as const;
+
+export const PaginatedMcpSessionListSchema = {
+    type: 'object',
+    required: ['count', 'results'],
+    properties: {
+        count: {
+            type: 'integer',
+            example: 123
+        },
+        next: {
+            type: 'string',
+            nullable: true,
+            format: 'uri',
+            example: 'http://api.example.org/accounts/?page=4'
+        },
+        previous: {
+            type: 'string',
+            nullable: true,
+            format: 'uri',
+            example: 'http://api.example.org/accounts/?page=2'
+        },
+        results: {
+            type: 'array',
+            items: {
+                '$ref': '#/components/schemas/McpSession'
             }
         }
     }
@@ -470277,7 +470643,7 @@ export const PatchedNotificationSinkRequestSchema = {
             description: 'Whether this is the system-wide default sink'
         },
         enabled_model_types: {
-            description: "List of model names to send to this sink. Empty = all types. Example: ['k8scluster', 'endpoint']"
+            description: 'List of model names to send to this sink. Empty = all types. System default empty excludes Alert unless Alert is listed explicitly.'
         }
     }
 } as const;
@@ -483052,6 +483418,15 @@ Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1
         }
     },
     required: ['active_condition_instances', 'archived', 'condition_instance_count', 'conditions', 'created', 'discount_type', 'discount_value', 'effective_criticality', 'id', 'labels', 'name', 'organization', 'organization_priority', 'product', 'reconciliation_running', 'state', 'url', 'workspace']
+} as const;
+
+export const PrincipalKindEnumSchema = {
+    enum: ['user', 'system_api_key', 'org_api_key', 'microservice'],
+    type: 'string',
+    description: `* \`user\` - User
+* \`system_api_key\` - System API key
+* \`org_api_key\` - Organization API key
+* \`microservice\` - Microservice`
 } as const;
 
 export const ProductDetailSchema = {
