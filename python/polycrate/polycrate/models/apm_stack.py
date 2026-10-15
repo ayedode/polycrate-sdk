@@ -8,13 +8,32 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.apm_stack_kind_enum import APMStackKindEnum, check_apm_stack_kind_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.apm_stack_criticality_type_1 import APMStackCriticalityType1, check_apm_stack_criticality_type_1
+from ..models.apm_stack_criticality_type_2_type_1 import (
+    APMStackCriticalityType2Type1,
+    check_apm_stack_criticality_type_2_type_1,
+)
+from ..models.apm_stack_criticality_type_3_type_1 import (
+    APMStackCriticalityType3Type1,
+    check_apm_stack_criticality_type_3_type_1,
+)
+from ..models.apm_stack_effective_criticality_type_1 import (
+    APMStackEffectiveCriticalityType1,
+    check_apm_stack_effective_criticality_type_1,
+)
+from ..models.apm_stack_effective_criticality_type_2_type_1 import (
+    APMStackEffectiveCriticalityType2Type1,
+    check_apm_stack_effective_criticality_type_2_type_1,
+)
+from ..models.apm_stack_effective_criticality_type_3_type_1 import (
+    APMStackEffectiveCriticalityType3Type1,
+    check_apm_stack_effective_criticality_type_3_type_1,
+)
+from ..models.apm_stack_kind import APMStackKind, check_apm_stack_kind
+from ..models.apm_stack_last_state import APMStackLastState, check_apm_stack_last_state
+from ..models.apm_stack_provider import APMStackProvider, check_apm_stack_provider
+from ..models.apm_stack_scope import APMStackScope, check_apm_stack_scope
+from ..models.apm_stack_state import APMStackState, check_apm_stack_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -40,14 +59,14 @@ class APMStack:
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
         deleted_by_user (APMStackDeletedByUserType0 | None):
-        state (LastStateEnum): * `OK` - Ok
+        state (APMStackState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (APMStackLastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -68,11 +87,14 @@ class APMStack:
         repair_task_id (None | str):
         repair_task_meta (Any): Task metadata for repair progress tracking
         last_repair (datetime.datetime | None):
-        scope (ScopeEnum): * `system` - System
+        scope (APMStackScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+            * `system` - System
             * `user` - User
         conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
             conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (APMStackEffectiveCriticalityType1 | APMStackEffectiveCriticalityType2Type1 |
+            APMStackEffectiveCriticalityType3Type1 | None):
         actual_availability (str): Calculated actual availability as yearly average in %
         organization (APMStackOrganizationType0 | None):
         workspace (APMStackWorkspaceType0 | None):
@@ -92,7 +114,7 @@ class APMStack:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (APMStackProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -109,14 +131,16 @@ class APMStack:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (APMStackKindEnum | Unset): * `generic` - Generic APM Stack
+        kind (APMStackKind | Unset): Type of APM stack (always 'generic' for multi-tool stacks)
+
+            * `generic` - Generic APM Stack
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
             the condition will not be applied.
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (APMStackCriticalityType1 | APMStackCriticalityType2Type1 | APMStackCriticalityType3Type1 | None |
+            Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -148,9 +172,9 @@ class APMStack:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: APMStackDeletedByUserType0 | None
-    state: LastStateEnum
+    state: APMStackState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: APMStackLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -165,9 +189,14 @@ class APMStack:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: APMStackScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        APMStackEffectiveCriticalityType1
+        | APMStackEffectiveCriticalityType2Type1
+        | APMStackEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: APMStackOrganizationType0 | None
     workspace: APMStackWorkspaceType0 | None
@@ -185,17 +214,19 @@ class APMStack:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: APMStackProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: APMStackKindEnum | Unset = UNSET
+    kind: APMStackKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        APMStackCriticalityType1 | APMStackCriticalityType2Type1 | APMStackCriticalityType3Type1 | None | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -303,6 +334,10 @@ class APMStack:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -403,6 +438,8 @@ class APMStack:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -686,7 +723,7 @@ class APMStack:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_apm_stack_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -695,7 +732,7 @@ class APMStack:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_apm_stack_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -792,22 +829,51 @@ class APMStack:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_apm_stack_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            APMStackEffectiveCriticalityType1
+            | APMStackEffectiveCriticalityType2Type1
+            | APMStackEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_apm_stack_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_apm_stack_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_apm_stack_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                APMStackEffectiveCriticalityType1
+                | APMStackEffectiveCriticalityType2Type1
+                | APMStackEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -902,11 +968,11 @@ class APMStack:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: APMStackProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_apm_stack_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -931,11 +997,11 @@ class APMStack:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: APMStackKindEnum | Unset
+        kind: APMStackKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_apm_stack_kind_enum(_kind)
+            kind = check_apm_stack_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -967,7 +1033,9 @@ class APMStack:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> APMStackCriticalityType1 | APMStackCriticalityType2Type1 | APMStackCriticalityType3Type1 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -975,20 +1043,31 @@ class APMStack:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_apm_stack_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_apm_stack_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_apm_stack_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                APMStackCriticalityType1 | APMStackCriticalityType2Type1 | APMStackCriticalityType3Type1 | None | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

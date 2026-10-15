@@ -1,19 +1,11 @@
 from http import HTTPStatus
-from typing import Any, cast
+from typing import Any
 from urllib.parse import quote
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.error_response_401 import ErrorResponse401
-from ...models.error_response_403 import ErrorResponse403
-from ...models.error_response_405 import ErrorResponse405
-from ...models.error_response_406 import ErrorResponse406
-from ...models.error_response_410 import ErrorResponse410
-from ...models.error_response_415 import ErrorResponse415
-from ...models.error_response_500 import ErrorResponse500
-from ...models.parse_error_response import ParseErrorResponse
 from ...types import Response
 
 
@@ -33,79 +25,21 @@ def _get_kwargs(
     return _kwargs
 
 
-def _parse_response(
-    *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> (
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ParseErrorResponse
-    | None
-):
+def _parse_response(*, client: AuthenticatedClient | Client, response: httpx.Response) -> Any | None:
     if response.status_code == 204:
-        response_204 = cast(Any, None)
-        return response_204
-
-    if response.status_code == 400:
-        response_400 = ParseErrorResponse.from_dict(response.json())
-
-        return response_400
-
-    if response.status_code == 401:
-        response_401 = ErrorResponse401.from_dict(response.json())
-
-        return response_401
-
-    if response.status_code == 403:
-        response_403 = ErrorResponse403.from_dict(response.json())
-
-        return response_403
+        return None
 
     if response.status_code == 404:
-        response_404 = cast(Any, None)
-        return response_404
-
-    if response.status_code == 405:
-        response_405 = ErrorResponse405.from_dict(response.json())
-
-        return response_405
-
-    if response.status_code == 406:
-        response_406 = ErrorResponse406.from_dict(response.json())
-
-        return response_406
+        return None
 
     if response.status_code == 409:
-        response_409 = cast(Any, None)
-        return response_409
-
-    if response.status_code == 410:
-        response_410 = ErrorResponse410.from_dict(response.json())
-
-        return response_410
-
-    if response.status_code == 415:
-        response_415 = ErrorResponse415.from_dict(response.json())
-
-        return response_415
-
-    if response.status_code == 500:
-        response_500 = ErrorResponse500.from_dict(response.json())
-
-        return response_500
+        return None
 
     if response.status_code == 502:
-        response_502 = cast(Any, None)
-        return response_502
+        return None
 
     if response.status_code == 503:
-        response_503 = cast(Any, None)
-        return response_503
+        return None
 
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
@@ -113,19 +47,7 @@ def _parse_response(
         return None
 
 
-def _build_response(
-    *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> Response[
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ParseErrorResponse
-]:
+def _build_response(*, client: AuthenticatedClient | Client, response: httpx.Response) -> Response[Any]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -139,17 +61,7 @@ def sync_detailed(
     organization_id: str,
     *,
     client: AuthenticatedClient,
-) -> Response[
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ParseErrorResponse
-]:
+) -> Response[Any]:
     """Remove admin user membership
 
      Remove OrganizationMembership for the given organization_id. Blocking Keycloak org/role-group leave
@@ -165,7 +77,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any | ErrorResponse401 | ErrorResponse403 | ErrorResponse405 | ErrorResponse406 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ParseErrorResponse]
+        Response[Any]
     """
 
     kwargs = _get_kwargs(
@@ -180,64 +92,12 @@ def sync_detailed(
     return _build_response(client=client, response=response)
 
 
-def sync(
-    id: int,
-    organization_id: str,
-    *,
-    client: AuthenticatedClient,
-) -> (
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ParseErrorResponse
-    | None
-):
-    """Remove admin user membership
-
-     Remove OrganizationMembership for the given organization_id. Blocking Keycloak org/role-group leave
-    and Platform Grafana org leave (except system-org members / Spec 494). Idempotent 204. Last owner →
-    409 code=last_owner. Spec 561.
-
-    Args:
-        id (int):
-        organization_id (str):
-
-    Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
-        httpx.TimeoutException: If the request takes longer than Client.timeout.
-
-    Returns:
-        Any | ErrorResponse401 | ErrorResponse403 | ErrorResponse405 | ErrorResponse406 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ParseErrorResponse
-    """
-
-    return sync_detailed(
-        id=id,
-        organization_id=organization_id,
-        client=client,
-    ).parsed
-
-
 async def asyncio_detailed(
     id: int,
     organization_id: str,
     *,
     client: AuthenticatedClient,
-) -> Response[
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ParseErrorResponse
-]:
+) -> Response[Any]:
     """Remove admin user membership
 
      Remove OrganizationMembership for the given organization_id. Blocking Keycloak org/role-group leave
@@ -253,7 +113,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any | ErrorResponse401 | ErrorResponse403 | ErrorResponse405 | ErrorResponse406 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ParseErrorResponse]
+        Response[Any]
     """
 
     kwargs = _get_kwargs(
@@ -264,47 +124,3 @@ async def asyncio_detailed(
     response = await client.get_async_httpx_client().request(**kwargs)
 
     return _build_response(client=client, response=response)
-
-
-async def asyncio(
-    id: int,
-    organization_id: str,
-    *,
-    client: AuthenticatedClient,
-) -> (
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ParseErrorResponse
-    | None
-):
-    """Remove admin user membership
-
-     Remove OrganizationMembership for the given organization_id. Blocking Keycloak org/role-group leave
-    and Platform Grafana org leave (except system-org members / Spec 494). Idempotent 204. Last owner →
-    409 code=last_owner. Spec 561.
-
-    Args:
-        id (int):
-        organization_id (str):
-
-    Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
-        httpx.TimeoutException: If the request takes longer than Client.timeout.
-
-    Returns:
-        Any | ErrorResponse401 | ErrorResponse403 | ErrorResponse405 | ErrorResponse406 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ParseErrorResponse
-    """
-
-    return (
-        await asyncio_detailed(
-            id=id,
-            organization_id=organization_id,
-            client=client,
-        )
-    ).parsed

@@ -10,12 +10,36 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.endpoint_kind_enum import EndpointKindEnum, check_endpoint_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.patched_endpoint_request_created_by_component_type_1 import (
+    PatchedEndpointRequestCreatedByComponentType1,
+    check_patched_endpoint_request_created_by_component_type_1,
+)
+from ..models.patched_endpoint_request_created_by_component_type_2_type_1 import (
+    PatchedEndpointRequestCreatedByComponentType2Type1,
+    check_patched_endpoint_request_created_by_component_type_2_type_1,
+)
+from ..models.patched_endpoint_request_created_by_component_type_3_type_1 import (
+    PatchedEndpointRequestCreatedByComponentType3Type1,
+    check_patched_endpoint_request_created_by_component_type_3_type_1,
+)
+from ..models.patched_endpoint_request_criticality_type_1 import (
+    PatchedEndpointRequestCriticalityType1,
+    check_patched_endpoint_request_criticality_type_1,
+)
+from ..models.patched_endpoint_request_criticality_type_2_type_1 import (
+    PatchedEndpointRequestCriticalityType2Type1,
+    check_patched_endpoint_request_criticality_type_2_type_1,
+)
+from ..models.patched_endpoint_request_criticality_type_3_type_1 import (
+    PatchedEndpointRequestCriticalityType3Type1,
+    check_patched_endpoint_request_criticality_type_3_type_1,
+)
+from ..models.patched_endpoint_request_kind import PatchedEndpointRequestKind, check_patched_endpoint_request_kind
+from ..models.patched_endpoint_request_provider import (
+    PatchedEndpointRequestProvider,
+    check_patched_endpoint_request_provider,
+)
+from ..models.patched_endpoint_request_scope import PatchedEndpointRequestScope, check_patched_endpoint_request_scope
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -46,7 +70,7 @@ class PatchedEndpointRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (PatchedEndpointRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -65,13 +89,17 @@ class PatchedEndpointRequest:
             last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
             discovery_enabled (bool | Unset):
             platform_service (bool | Unset):
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (PatchedEndpointRequestScope | Unset): The scope is used to separate `system` owned objects from `user`
+                owned objects.
+
+                * `system` - System
                 * `user` - User
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (None | PatchedEndpointRequestCreatedByComponentType1 |
+                PatchedEndpointRequestCreatedByComponentType2Type1 | PatchedEndpointRequestCreatedByComponentType3Type1 |
+                Unset): Component that created this object: cli, operator, or api.
 
                 * `cli` - CLI
                 * `operator` - Operator
@@ -85,7 +113,8 @@ class PatchedEndpointRequest:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
+            criticality (None | PatchedEndpointRequestCriticalityType1 | PatchedEndpointRequestCriticalityType2Type1 |
+                PatchedEndpointRequestCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then
                 org. Explicit value overrides inheritance.
 
                 * `high` - High
@@ -93,7 +122,7 @@ class PatchedEndpointRequest:
                 * `low` - Low
             managed_by_object_id (None | str | Unset):
             platform_dns_record_created (bool | Unset):
-            kind (EndpointKindEnum | Unset): * `icmp` - ICMP Endpoint
+            kind (PatchedEndpointRequestKind | Unset): * `icmp` - ICMP Endpoint
                 * `http` - HTTP Endpoint
                 * `tcp` - TCP Endpoint
                 * `dns` - DNS Endpoint
@@ -112,6 +141,7 @@ class PatchedEndpointRequest:
             managed_by_content_type (int | None | Unset):
             modified_by_user (int | None | Unset): The user who last modified the object
             created_by_user (int | None | Unset): The user who created the object
+            product (None | Unset | UUID): Billing product for endpoint monitoring (1 EUR/endpoint/month). Spec 871.
             k8s_cluster (None | Unset | UUID):
             k8s_app (None | Unset | UUID):
             s3_cluster (None | Unset | UUID):
@@ -127,18 +157,24 @@ class PatchedEndpointRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedEndpointRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
+    scope: PatchedEndpointRequestScope | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        None
+        | PatchedEndpointRequestCreatedByComponentType1
+        | PatchedEndpointRequestCreatedByComponentType2Type1
+        | PatchedEndpointRequestCreatedByComponentType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -147,10 +183,16 @@ class PatchedEndpointRequest:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedEndpointRequestCriticalityType1
+        | PatchedEndpointRequestCriticalityType2Type1
+        | PatchedEndpointRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
-    kind: EndpointKindEnum | Unset = UNSET
+    kind: PatchedEndpointRequestKind | Unset = UNSET
     remote_address: str | Unset = UNSET
     remote_port: int | None | Unset = UNSET
     check_results: Any | Unset = UNSET
@@ -164,6 +206,7 @@ class PatchedEndpointRequest:
     managed_by_content_type: int | None | Unset = UNSET
     modified_by_user: int | None | Unset = UNSET
     created_by_user: int | None | Unset = UNSET
+    product: None | Unset | UUID = UNSET
     k8s_cluster: None | Unset | UUID = UNSET
     k8s_app: None | Unset | UUID = UNSET
     s3_cluster: None | Unset | UUID = UNSET
@@ -263,6 +306,8 @@ class PatchedEndpointRequest:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -305,6 +350,8 @@ class PatchedEndpointRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -381,6 +428,14 @@ class PatchedEndpointRequest:
             created_by_user = UNSET
         else:
             created_by_user = self.created_by_user
+
+        product: None | str | Unset
+        if isinstance(self.product, Unset):
+            product = UNSET
+        elif isinstance(self.product, UUID):
+            product = str(self.product)
+        else:
+            product = self.product
 
         k8s_cluster: None | str | Unset
         if isinstance(self.k8s_cluster, Unset):
@@ -515,6 +570,8 @@ class PatchedEndpointRequest:
             field_dict["modified_by_user"] = modified_by_user
         if created_by_user is not UNSET:
             field_dict["created_by_user"] = created_by_user
+        if product is not UNSET:
+            field_dict["product"] = product
         if k8s_cluster is not UNSET:
             field_dict["k8s_cluster"] = k8s_cluster
         if k8s_app is not UNSET:
@@ -623,7 +680,9 @@ class PatchedEndpointRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.created_by_component, Unset):
-            if isinstance(self.created_by_component, str):
+            if self.created_by_component is None:
+                files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
+            elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
             elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
@@ -670,7 +729,9 @@ class PatchedEndpointRequest:
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -772,6 +833,12 @@ class PatchedEndpointRequest:
             else:
                 files.append(("created_by_user", (None, str(self.created_by_user).encode(), "text/plain")))
 
+        if not isinstance(self.product, Unset):
+            if isinstance(self.product, UUID):
+                files.append(("product", (None, str(self.product), "text/plain")))
+            else:
+                files.append(("product", (None, str(self.product).encode(), "text/plain")))
+
         if not isinstance(self.k8s_cluster, Unset):
             if isinstance(self.k8s_cluster, UUID):
                 files.append(("k8s_cluster", (None, str(self.k8s_cluster), "text/plain")))
@@ -871,11 +938,11 @@ class PatchedEndpointRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedEndpointRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_endpoint_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -913,11 +980,11 @@ class PatchedEndpointRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: PatchedEndpointRequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_patched_endpoint_request_scope(_scope)
 
         archived = d.pop("archived", UNSET)
 
@@ -947,7 +1014,15 @@ class PatchedEndpointRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            None
+            | PatchedEndpointRequestCreatedByComponentType1
+            | PatchedEndpointRequestCreatedByComponentType2Type1
+            | PatchedEndpointRequestCreatedByComponentType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -955,20 +1030,39 @@ class PatchedEndpointRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_patched_endpoint_request_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_patched_endpoint_request_created_by_component_type_2_type_1(
+                    data
+                )
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_patched_endpoint_request_created_by_component_type_3_type_1(
+                    data
+                )
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedEndpointRequestCreatedByComponentType1
+                | PatchedEndpointRequestCreatedByComponentType2Type1
+                | PatchedEndpointRequestCreatedByComponentType3Type1
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1023,7 +1117,15 @@ class PatchedEndpointRequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedEndpointRequestCriticalityType1
+            | PatchedEndpointRequestCriticalityType2Type1
+            | PatchedEndpointRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1031,20 +1133,35 @@ class PatchedEndpointRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_endpoint_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_endpoint_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_endpoint_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedEndpointRequestCriticalityType1
+                | PatchedEndpointRequestCriticalityType2Type1
+                | PatchedEndpointRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1060,11 +1177,11 @@ class PatchedEndpointRequest:
         platform_dns_record_created = d.pop("platform_dns_record_created", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: EndpointKindEnum | Unset
+        kind: PatchedEndpointRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_endpoint_kind_enum(_kind)
+            kind = check_patched_endpoint_request_kind(_kind)
 
         remote_address = d.pop("remote_address", UNSET)
 
@@ -1147,6 +1264,23 @@ class PatchedEndpointRequest:
             return cast(int | None | Unset, data)
 
         created_by_user = _parse_created_by_user(d.pop("created_by_user", UNSET))
+
+        def _parse_product(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                product_type_0 = UUID(data)
+
+                return product_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        product = _parse_product(d.pop("product", UNSET))
 
         def _parse_k8s_cluster(data: object) -> None | Unset | UUID:
             if data is None:
@@ -1279,6 +1413,7 @@ class PatchedEndpointRequest:
             managed_by_content_type=managed_by_content_type,
             modified_by_user=modified_by_user,
             created_by_user=created_by_user,
+            product=product,
             k8s_cluster=k8s_cluster,
             k8s_app=k8s_app,
             s3_cluster=s3_cluster,

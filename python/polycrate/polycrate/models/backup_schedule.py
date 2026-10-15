@@ -8,14 +8,36 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.backup_kind_enum import BackupKindEnum, check_backup_kind_enum
-from ..models.backup_provider_enum import BackupProviderEnum, check_backup_provider_enum
-from ..models.backup_schedule_status_enum import BackupScheduleStatusEnum, check_backup_schedule_status_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.backup_schedule_criticality_type_1 import (
+    BackupScheduleCriticalityType1,
+    check_backup_schedule_criticality_type_1,
+)
+from ..models.backup_schedule_criticality_type_2_type_1 import (
+    BackupScheduleCriticalityType2Type1,
+    check_backup_schedule_criticality_type_2_type_1,
+)
+from ..models.backup_schedule_criticality_type_3_type_1 import (
+    BackupScheduleCriticalityType3Type1,
+    check_backup_schedule_criticality_type_3_type_1,
+)
+from ..models.backup_schedule_effective_criticality_type_1 import (
+    BackupScheduleEffectiveCriticalityType1,
+    check_backup_schedule_effective_criticality_type_1,
+)
+from ..models.backup_schedule_effective_criticality_type_2_type_1 import (
+    BackupScheduleEffectiveCriticalityType2Type1,
+    check_backup_schedule_effective_criticality_type_2_type_1,
+)
+from ..models.backup_schedule_effective_criticality_type_3_type_1 import (
+    BackupScheduleEffectiveCriticalityType3Type1,
+    check_backup_schedule_effective_criticality_type_3_type_1,
+)
+from ..models.backup_schedule_kind import BackupScheduleKind, check_backup_schedule_kind
+from ..models.backup_schedule_last_state import BackupScheduleLastState, check_backup_schedule_last_state
+from ..models.backup_schedule_provider import BackupScheduleProvider, check_backup_schedule_provider
+from ..models.backup_schedule_scope import BackupScheduleScope, check_backup_schedule_scope
+from ..models.backup_schedule_state import BackupScheduleState, check_backup_schedule_state
+from ..models.backup_schedule_status import BackupScheduleStatus, check_backup_schedule_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -55,14 +77,14 @@ class BackupSchedule:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (BackupScheduleDeletedByUserType0 | None):
-            state (LastStateEnum): * `OK` - Ok
+            state (BackupScheduleState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (BackupScheduleLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -83,11 +105,14 @@ class BackupSchedule:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (BackupScheduleScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (BackupScheduleEffectiveCriticalityType1 | BackupScheduleEffectiveCriticalityType2Type1 |
+                BackupScheduleEffectiveCriticalityType3Type1 | None):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (BackupScheduleOrganizationType0 | None):
             workspace (BackupScheduleWorkspaceType0 | None):
@@ -106,14 +131,18 @@ class BackupSchedule:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (BackupProviderEnum | Unset): * `velero` - Velero
+            provider (BackupScheduleProvider | Unset): Backup provider/tool that manages this schedule
+
+                * `velero` - Velero
                 * `cloudnativepg` - CloudNativePG
                 * `custom` - Custom Provider
             provider_reference (None | str | Unset):
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (BackupKindEnum | Unset): * `cluster` - Cluster Backup
+            kind (BackupScheduleKind | Unset): Type of backup schedule (cluster, app, database)
+
+                * `cluster` - Cluster Backup
                 * `app` - Application Backup
                 * `database` - Database Backup
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -121,8 +150,9 @@ class BackupSchedule:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (BackupScheduleCriticalityType1 | BackupScheduleCriticalityType2Type1 |
+                BackupScheduleCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then org.
+                Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -135,7 +165,9 @@ class BackupSchedule:
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
             source_namespace (None | str | Unset): Kubernetes namespace of the discovered source schedule (for unique
                 identity with name+provider)
-            status (BackupScheduleStatusEnum | Unset): * `active` - Active
+            status (BackupScheduleStatus | Unset): Normalized schedule status across all providers
+
+                * `active` - Active
                 * `paused` - Paused
                 * `failed` - Failed
                 * `unknown` - Unknown
@@ -154,9 +186,9 @@ class BackupSchedule:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: BackupScheduleDeletedByUserType0 | None
-    state: LastStateEnum
+    state: BackupScheduleState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: BackupScheduleLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -171,9 +203,14 @@ class BackupSchedule:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: BackupScheduleScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        BackupScheduleEffectiveCriticalityType1
+        | BackupScheduleEffectiveCriticalityType2Type1
+        | BackupScheduleEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: BackupScheduleOrganizationType0 | None
     workspace: BackupScheduleWorkspaceType0 | None
@@ -190,24 +227,30 @@ class BackupSchedule:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: BackupProviderEnum | Unset = UNSET
+    provider: BackupScheduleProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: BackupKindEnum | Unset = UNSET
+    kind: BackupScheduleKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        BackupScheduleCriticalityType1
+        | BackupScheduleCriticalityType2Type1
+        | BackupScheduleCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
     source_namespace: None | str | Unset = UNSET
-    status: BackupScheduleStatusEnum | Unset = UNSET
+    status: BackupScheduleStatus | Unset = UNSET
     schedule_cron: None | str | Unset = UNSET
     paused: bool | Unset = UNSET
     retention_policy: None | str | Unset = UNSET
@@ -304,6 +347,10 @@ class BackupSchedule:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -403,6 +450,8 @@ class BackupSchedule:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -621,7 +670,7 @@ class BackupSchedule:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_backup_schedule_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -630,7 +679,7 @@ class BackupSchedule:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_backup_schedule_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -727,22 +776,51 @@ class BackupSchedule:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_backup_schedule_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            BackupScheduleEffectiveCriticalityType1
+            | BackupScheduleEffectiveCriticalityType2Type1
+            | BackupScheduleEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_backup_schedule_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_backup_schedule_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_backup_schedule_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BackupScheduleEffectiveCriticalityType1
+                | BackupScheduleEffectiveCriticalityType2Type1
+                | BackupScheduleEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -835,11 +913,11 @@ class BackupSchedule:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: BackupProviderEnum | Unset
+        provider: BackupScheduleProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_backup_provider_enum(_provider)
+            provider = check_backup_schedule_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -864,11 +942,11 @@ class BackupSchedule:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: BackupKindEnum | Unset
+        kind: BackupScheduleKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_backup_kind_enum(_kind)
+            kind = check_backup_schedule_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -900,7 +978,15 @@ class BackupSchedule:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            BackupScheduleCriticalityType1
+            | BackupScheduleCriticalityType2Type1
+            | BackupScheduleCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -908,20 +994,35 @@ class BackupSchedule:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_backup_schedule_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_backup_schedule_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_backup_schedule_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BackupScheduleCriticalityType1
+                | BackupScheduleCriticalityType2Type1
+                | BackupScheduleCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -966,11 +1067,11 @@ class BackupSchedule:
         source_namespace = _parse_source_namespace(d.pop("source_namespace", UNSET))
 
         _status = d.pop("status", UNSET)
-        status: BackupScheduleStatusEnum | Unset
+        status: BackupScheduleStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_backup_schedule_status_enum(_status)
+            status = check_backup_schedule_status(_status)
 
         def _parse_schedule_cron(data: object) -> None | str | Unset:
             if data is None:

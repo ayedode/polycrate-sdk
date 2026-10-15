@@ -12,19 +12,21 @@ T = TypeVar("T", bound="S3RegionList")
 
 @_attrs_define
 class S3RegionList:
-    """
+    """Catalog of create-capable workspaces.Region rows (Spec 896).
+
     Attributes:
-        id (UUID): workspaces.Region UUID — pass this as `region` in POST /api/v1/s3/buckets/.
-        region (None | str):
-        endpoint (str): $HOSTNAME (without protocol://)
+        id (UUID):
+        region (str):
+        endpoint (None | str):
         name (str):
-        display_name (None | str):
+        display_name (None | str): The display name is used to display the object in the UI. It can be different from
+            the name.
         url (None | str):
     """
 
     id: UUID
-    region: None | str
-    endpoint: str
+    region: str
+    endpoint: None | str
     name: str
     display_name: None | str
     url: None | str
@@ -33,9 +35,9 @@ class S3RegionList:
     def to_dict(self) -> dict[str, Any]:
         id = str(self.id)
 
-        region: None | str
         region = self.region
 
+        endpoint: None | str
         endpoint = self.endpoint
 
         name = self.name
@@ -66,14 +68,14 @@ class S3RegionList:
         d = dict(src_dict)
         id = UUID(d.pop("id"))
 
-        def _parse_region(data: object) -> None | str:
+        region = d.pop("region")
+
+        def _parse_endpoint(data: object) -> None | str:
             if data is None:
                 return data
             return cast(None | str, data)
 
-        region = _parse_region(d.pop("region"))
-
-        endpoint = d.pop("endpoint")
+        endpoint = _parse_endpoint(d.pop("endpoint"))
 
         name = d.pop("name")
 

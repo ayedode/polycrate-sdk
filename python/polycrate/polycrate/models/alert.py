@@ -8,15 +8,30 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.alert_kind_enum import AlertKindEnum, check_alert_kind_enum
-from ..models.alert_status_enum import AlertStatusEnum, check_alert_status_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.category_enum import CategoryEnum, check_category_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.alert_category_slug import AlertCategorySlug, check_alert_category_slug
+from ..models.alert_criticality_type_1 import AlertCriticalityType1, check_alert_criticality_type_1
+from ..models.alert_criticality_type_2_type_1 import AlertCriticalityType2Type1, check_alert_criticality_type_2_type_1
+from ..models.alert_criticality_type_3_type_1 import AlertCriticalityType3Type1, check_alert_criticality_type_3_type_1
+from ..models.alert_effective_criticality_type_1 import (
+    AlertEffectiveCriticalityType1,
+    check_alert_effective_criticality_type_1,
+)
+from ..models.alert_effective_criticality_type_2_type_1 import (
+    AlertEffectiveCriticalityType2Type1,
+    check_alert_effective_criticality_type_2_type_1,
+)
+from ..models.alert_effective_criticality_type_3_type_1 import (
+    AlertEffectiveCriticalityType3Type1,
+    check_alert_effective_criticality_type_3_type_1,
+)
+from ..models.alert_kind import AlertKind, check_alert_kind
+from ..models.alert_last_state import AlertLastState, check_alert_last_state
+from ..models.alert_provider import AlertProvider, check_alert_provider
+from ..models.alert_scope import AlertScope, check_alert_scope
+from ..models.alert_state import AlertState, check_alert_state
+from ..models.alert_status_type_1 import AlertStatusType1, check_alert_status_type_1
+from ..models.alert_status_type_2_type_1 import AlertStatusType2Type1, check_alert_status_type_2_type_1
+from ..models.alert_status_type_3_type_1 import AlertStatusType3Type1, check_alert_status_type_3_type_1
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -44,14 +59,14 @@ class Alert:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (AlertDeletedByUserType0 | None):
-            state (LastStateEnum): * `OK` - Ok
+            state (AlertState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (AlertLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -72,11 +87,14 @@ class Alert:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (AlertScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (AlertEffectiveCriticalityType1 | AlertEffectiveCriticalityType2Type1 |
+                AlertEffectiveCriticalityType3Type1 | None):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (AlertOrganizationType0 | None):
             workspace (AlertWorkspaceType0 | None):
@@ -94,7 +112,7 @@ class Alert:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (AlertProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -111,7 +129,7 @@ class Alert:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (AlertKindEnum | Unset): * `grafana` - Grafana Alert
+            kind (AlertKind | Unset): * `grafana` - Grafana Alert
                 * `generic` - Generic Alert
                 * `checkmk` - CheckMK Alert
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -119,8 +137,8 @@ class Alert:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (AlertCriticalityType1 | AlertCriticalityType2Type1 | AlertCriticalityType3Type1 | None | Unset):
+                Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -131,7 +149,10 @@ class Alert:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            status (AlertStatusEnum | BlankEnum | None | Unset):
+            status (AlertStatusType1 | AlertStatusType2Type1 | AlertStatusType3Type1 | None | Unset): * `firing` - Firing
+                * `silenced` - Silenced
+                * `resolved` - Resolved
+                * `pending` - Pending
             title (None | str | Unset):
             fingerprint (None | str | Unset):
             external_url (None | str | Unset):
@@ -140,22 +161,7 @@ class Alert:
             suppressed (bool | Unset):
             pod (None | str | Unset): Pod name from Grafana labels
             namespace (None | str | Unset): Namespace from Grafana labels
-            category (CategoryEnum | Unset): * `cluster.node` - Cluster / Node
-                * `workload.pod` - Workload / Pod
-                * `storage.volume` - Storage / Volume
-                * `data.cnpg` - Data / CNPG
-                * `data.replication` - Data / Replication
-                * `data.mariadb` - Data / MariaDB
-                * `data.mongodb` - Data / MongoDB
-                * `backup.velero` - Backup / Velero
-                * `observability.metrics` - Observability / Metrics
-                * `security.secrets` - Security / Secrets
-                * `security.access` - Security / Access
-                * `gitops.flux` - GitOps / Flux
-                * `availability.http` - Availability / HTTP
-                * `application.customer` - Application / Customer
-                * `platform.test` - Platform / Test
-                * `unknown` - Unknown
+            category (AlertCategorySlug | Unset): AlertCategory.name slug (Spec 654/674)
             dashboard_url (None | str | Unset):
             panel_url (None | str | Unset):
             silence_url (None | str | Unset):
@@ -174,9 +180,9 @@ class Alert:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: AlertDeletedByUserType0 | None
-    state: LastStateEnum
+    state: AlertState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: AlertLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -191,9 +197,14 @@ class Alert:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: AlertScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        AlertEffectiveCriticalityType1
+        | AlertEffectiveCriticalityType2Type1
+        | AlertEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: AlertOrganizationType0 | None
     workspace: AlertWorkspaceType0 | None
@@ -209,23 +220,23 @@ class Alert:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: AlertProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: AlertKindEnum | Unset = UNSET
+    kind: AlertKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: AlertCriticalityType1 | AlertCriticalityType2Type1 | AlertCriticalityType3Type1 | None | Unset = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    status: AlertStatusEnum | BlankEnum | None | Unset = UNSET
+    status: AlertStatusType1 | AlertStatusType2Type1 | AlertStatusType3Type1 | None | Unset = UNSET
     title: None | str | Unset = UNSET
     fingerprint: None | str | Unset = UNSET
     external_url: None | str | Unset = UNSET
@@ -234,7 +245,7 @@ class Alert:
     suppressed: bool | Unset = UNSET
     pod: None | str | Unset = UNSET
     namespace: None | str | Unset = UNSET
-    category: CategoryEnum | Unset = UNSET
+    category: AlertCategorySlug | Unset = UNSET
     dashboard_url: None | str | Unset = UNSET
     panel_url: None | str | Unset = UNSET
     silence_url: None | str | Unset = UNSET
@@ -332,6 +343,10 @@ class Alert:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -433,6 +448,8 @@ class Alert:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -461,6 +478,8 @@ class Alert:
         status: None | str | Unset
         if isinstance(self.status, Unset):
             status = UNSET
+        elif isinstance(self.status, str):
+            status = self.status
         elif isinstance(self.status, str):
             status = self.status
         elif isinstance(self.status, str):
@@ -754,7 +773,7 @@ class Alert:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_alert_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -763,7 +782,7 @@ class Alert:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_alert_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -860,22 +879,51 @@ class Alert:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_alert_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            AlertEffectiveCriticalityType1
+            | AlertEffectiveCriticalityType2Type1
+            | AlertEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_alert_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_alert_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_alert_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AlertEffectiveCriticalityType1
+                | AlertEffectiveCriticalityType2Type1
+                | AlertEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -966,11 +1014,11 @@ class Alert:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: AlertProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_alert_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -995,11 +1043,11 @@ class Alert:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: AlertKindEnum | Unset
+        kind: AlertKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_alert_kind_enum(_kind)
+            kind = check_alert_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -1031,7 +1079,9 @@ class Alert:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> AlertCriticalityType1 | AlertCriticalityType2Type1 | AlertCriticalityType3Type1 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1039,20 +1089,30 @@ class Alert:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_alert_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_alert_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_alert_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AlertCriticalityType1 | AlertCriticalityType2Type1 | AlertCriticalityType3Type1 | None | Unset, data
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1087,7 +1147,9 @@ class Alert:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_status(data: object) -> AlertStatusEnum | BlankEnum | None | Unset:
+        def _parse_status(
+            data: object,
+        ) -> AlertStatusType1 | AlertStatusType2Type1 | AlertStatusType3Type1 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1095,20 +1157,28 @@ class Alert:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                status_type_0 = check_alert_status_enum(data)
+                status_type_1 = check_alert_status_type_1(data)
 
-                return status_type_0
+                return status_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                status_type_1 = check_blank_enum(data)
+                status_type_2_type_1 = check_alert_status_type_2_type_1(data)
 
-                return status_type_1
+                return status_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(AlertStatusEnum | BlankEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                status_type_3_type_1 = check_alert_status_type_3_type_1(data)
+
+                return status_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(AlertStatusType1 | AlertStatusType2Type1 | AlertStatusType3Type1 | None | Unset, data)
 
         status = _parse_status(d.pop("status", UNSET))
 
@@ -1186,11 +1256,11 @@ class Alert:
         namespace = _parse_namespace(d.pop("namespace", UNSET))
 
         _category = d.pop("category", UNSET)
-        category: CategoryEnum | Unset
+        category: AlertCategorySlug | Unset
         if isinstance(_category, Unset):
             category = UNSET
         else:
-            category = check_category_enum(_category)
+            category = check_alert_category_slug(_category)
 
         def _parse_dashboard_url(data: object) -> None | str | Unset:
             if data is None:

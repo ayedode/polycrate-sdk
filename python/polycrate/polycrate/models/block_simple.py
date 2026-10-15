@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.block_kind_enum import BlockKindEnum, check_block_kind_enum
+from ..models.block_simple_kind import BlockSimpleKind, check_block_simple_kind
 
 if TYPE_CHECKING:
     from ..models.organization_simple import OrganizationSimple
@@ -24,7 +24,7 @@ class BlockSimple:
         id (UUID):
         name (str):
         reconciliation_running (bool):
-        kind (BlockKindEnum): * `dockerapp` - Docker App
+        kind (BlockSimpleKind): * `dockerapp` - Docker App
             * `linuxapp` - Linux App
             * `k8sapp` - Kubernetes App
             * `k8sappinstance` - Kubernetes App Instance
@@ -43,7 +43,7 @@ class BlockSimple:
     id: UUID
     name: str
     reconciliation_running: bool
-    kind: BlockKindEnum
+    kind: BlockSimpleKind
     type_: None | str
     flavor: None | str
     workspace: WorkspaceSimple
@@ -102,7 +102,7 @@ class BlockSimple:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        kind = check_block_kind_enum(d.pop("kind"))
+        kind = check_block_simple_kind(d.pop("kind"))
 
         def _parse_type_(data: object) -> None | str:
             if data is None:

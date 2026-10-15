@@ -8,18 +8,37 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.ip_family_enum import IPFamilyEnum, check_ip_family_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.purpose_ff_5_enum import PurposeFf5Enum, check_purpose_ff_5_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.prefix_criticality_type_1 import PrefixCriticalityType1, check_prefix_criticality_type_1
+from ..models.prefix_criticality_type_2_type_1 import (
+    PrefixCriticalityType2Type1,
+    check_prefix_criticality_type_2_type_1,
+)
+from ..models.prefix_criticality_type_3_type_1 import (
+    PrefixCriticalityType3Type1,
+    check_prefix_criticality_type_3_type_1,
+)
+from ..models.prefix_effective_criticality_type_1 import (
+    PrefixEffectiveCriticalityType1,
+    check_prefix_effective_criticality_type_1,
+)
+from ..models.prefix_effective_criticality_type_2_type_1 import (
+    PrefixEffectiveCriticalityType2Type1,
+    check_prefix_effective_criticality_type_2_type_1,
+)
+from ..models.prefix_effective_criticality_type_3_type_1 import (
+    PrefixEffectiveCriticalityType3Type1,
+    check_prefix_effective_criticality_type_3_type_1,
+)
+from ..models.prefix_kind import PrefixKind, check_prefix_kind
+from ..models.prefix_last_state import PrefixLastState, check_prefix_last_state
+from ..models.prefix_provider import PrefixProvider, check_prefix_provider
+from ..models.prefix_purpose import PrefixPurpose, check_prefix_purpose
+from ..models.prefix_scope import PrefixScope, check_prefix_scope
+from ..models.prefix_state import PrefixState, check_prefix_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.credential import Credential
+    from ..models.credential_simple import CredentialSimple
     from ..models.prefix_created import PrefixCreated
     from ..models.prefix_deleted_by_user_type_0 import PrefixDeletedByUserType0
     from ..models.prefix_last_action_run_type_0 import PrefixLastActionRunType0
@@ -45,14 +64,14 @@ class Prefix:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (None | PrefixDeletedByUserType0):
-            state (LastStateEnum): * `OK` - Ok
+            state (PrefixState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (PrefixLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -73,11 +92,14 @@ class Prefix:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (PrefixScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | PrefixEffectiveCriticalityType1 | PrefixEffectiveCriticalityType2Type1 |
+                PrefixEffectiveCriticalityType3Type1):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (None | PrefixOrganizationType0):
             workspace (None | PrefixWorkspaceType0):
@@ -90,7 +112,7 @@ class Prefix:
             effective_sla_target (float | None):
             last_action_run (None | PrefixLastActionRunType0):
             region (RegionSimple):
-            credential (Credential): Full serializer for Credential detail views.
+            credential (CredentialSimple): Simple serializer for embedding Credential in other serializers.
             provider_entity (ProviderSimple): Compact serializer for embedding Provider in other serializers (FK/M2M).
             kind_display (str):
             state_display (str):
@@ -104,7 +126,7 @@ class Prefix:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (PrefixProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -122,15 +144,17 @@ class Prefix:
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset): When True, this prefix may be used by organizations other than its owner
                 (cross-org API/usage gate). Orthogonal to region scoping.
-            kind (IPFamilyEnum | Unset): * `ipv4` - IPv4
+            kind (PrefixKind | Unset): Type of prefix
+
+                * `ipv4` - IPv4
                 * `ipv6` - IPv6
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | PrefixCriticalityType1 | PrefixCriticalityType2Type1 | PrefixCriticalityType3Type1 | Unset):
+                Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -141,7 +165,9 @@ class Prefix:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            purpose (PurposeFf5Enum | Unset): * `loadbalancer` - Load Balancer
+            purpose (PrefixPurpose | Unset): Purpose of prefix (i.e. what it is used for)
+
+                * `loadbalancer` - Load Balancer
                 * `controlplane` - Controlplane
             description (str | Unset): Description of the prefix
     """
@@ -152,9 +178,9 @@ class Prefix:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: None | PrefixDeletedByUserType0
-    state: LastStateEnum
+    state: PrefixState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: PrefixLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -169,9 +195,14 @@ class Prefix:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: PrefixScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | PrefixEffectiveCriticalityType1
+        | PrefixEffectiveCriticalityType2Type1
+        | PrefixEffectiveCriticalityType3Type1
+    )
     actual_availability: str
     organization: None | PrefixOrganizationType0
     workspace: None | PrefixWorkspaceType0
@@ -183,7 +214,7 @@ class Prefix:
     effective_sla_target: float | None
     last_action_run: None | PrefixLastActionRunType0
     region: RegionSimple
-    credential: Credential
+    credential: CredentialSimple
     provider_entity: ProviderSimple
     kind_display: str
     state_display: str
@@ -196,23 +227,25 @@ class Prefix:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PrefixProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: IPFamilyEnum | Unset = UNSET
+    kind: PrefixKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: None | PrefixCriticalityType1 | PrefixCriticalityType2Type1 | PrefixCriticalityType3Type1 | Unset = (
+        UNSET
+    )
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    purpose: PurposeFf5Enum | Unset = UNSET
+    purpose: PrefixPurpose | Unset = UNSET
     description: str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -302,6 +335,10 @@ class Prefix:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -417,6 +454,8 @@ class Prefix:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -554,7 +593,7 @@ class Prefix:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential import Credential  # noqa: PLC0415
+        from ..models.credential_simple import CredentialSimple  # noqa: PLC0415
         from ..models.prefix_created import PrefixCreated  # noqa: PLC0415
         from ..models.prefix_deleted_by_user_type_0 import PrefixDeletedByUserType0  # noqa: PLC0415
         from ..models.prefix_last_action_run_type_0 import PrefixLastActionRunType0  # noqa: PLC0415
@@ -602,7 +641,7 @@ class Prefix:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_prefix_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -611,7 +650,7 @@ class Prefix:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_prefix_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -708,22 +747,51 @@ class Prefix:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_prefix_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | PrefixEffectiveCriticalityType1
+            | PrefixEffectiveCriticalityType2Type1
+            | PrefixEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_prefix_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_prefix_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_prefix_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PrefixEffectiveCriticalityType1
+                | PrefixEffectiveCriticalityType2Type1
+                | PrefixEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -798,7 +866,7 @@ class Prefix:
 
         region = RegionSimple.from_dict(d.pop("region"))
 
-        credential = Credential.from_dict(d.pop("credential"))
+        credential = CredentialSimple.from_dict(d.pop("credential"))
 
         provider_entity = ProviderSimple.from_dict(d.pop("provider_entity"))
 
@@ -832,11 +900,11 @@ class Prefix:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PrefixProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_prefix_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -861,11 +929,11 @@ class Prefix:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: IPFamilyEnum | Unset
+        kind: PrefixKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_ip_family_enum(_kind)
+            kind = check_prefix_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -897,7 +965,9 @@ class Prefix:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> None | PrefixCriticalityType1 | PrefixCriticalityType2Type1 | PrefixCriticalityType3Type1 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -905,20 +975,30 @@ class Prefix:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_prefix_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_prefix_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_prefix_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PrefixCriticalityType1 | PrefixCriticalityType2Type1 | PrefixCriticalityType3Type1 | Unset, data
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -954,11 +1034,11 @@ class Prefix:
         sla_availability = d.pop("sla_availability", UNSET)
 
         _purpose = d.pop("purpose", UNSET)
-        purpose: PurposeFf5Enum | Unset
+        purpose: PrefixPurpose | Unset
         if isinstance(_purpose, Unset):
             purpose = UNSET
         else:
-            purpose = check_purpose_ff_5_enum(_purpose)
+            purpose = check_prefix_purpose(_purpose)
 
         description = d.pop("description", UNSET)
 

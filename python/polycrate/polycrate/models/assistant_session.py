@@ -8,15 +8,37 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.assistant_session_status_enum import AssistantSessionStatusEnum, check_assistant_session_status_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.turn_status_enum import TurnStatusEnum, check_turn_status_enum
+from ..models.assistant_session_criticality_type_1 import (
+    AssistantSessionCriticalityType1,
+    check_assistant_session_criticality_type_1,
+)
+from ..models.assistant_session_criticality_type_2_type_1 import (
+    AssistantSessionCriticalityType2Type1,
+    check_assistant_session_criticality_type_2_type_1,
+)
+from ..models.assistant_session_criticality_type_3_type_1 import (
+    AssistantSessionCriticalityType3Type1,
+    check_assistant_session_criticality_type_3_type_1,
+)
+from ..models.assistant_session_effective_criticality_type_1 import (
+    AssistantSessionEffectiveCriticalityType1,
+    check_assistant_session_effective_criticality_type_1,
+)
+from ..models.assistant_session_effective_criticality_type_2_type_1 import (
+    AssistantSessionEffectiveCriticalityType2Type1,
+    check_assistant_session_effective_criticality_type_2_type_1,
+)
+from ..models.assistant_session_effective_criticality_type_3_type_1 import (
+    AssistantSessionEffectiveCriticalityType3Type1,
+    check_assistant_session_effective_criticality_type_3_type_1,
+)
+from ..models.assistant_session_kind import AssistantSessionKind, check_assistant_session_kind
+from ..models.assistant_session_last_state import AssistantSessionLastState, check_assistant_session_last_state
+from ..models.assistant_session_provider import AssistantSessionProvider, check_assistant_session_provider
+from ..models.assistant_session_scope import AssistantSessionScope, check_assistant_session_scope
+from ..models.assistant_session_state import AssistantSessionState, check_assistant_session_state
+from ..models.assistant_session_status import AssistantSessionStatus, check_assistant_session_status
+from ..models.assistant_session_turn_status import AssistantSessionTurnStatus, check_assistant_session_turn_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -42,14 +64,14 @@ class AssistantSession:
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
         deleted_by_user (AssistantSessionDeletedByUserType0 | None):
-        state (LastStateEnum): * `OK` - Ok
+        state (AssistantSessionState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (AssistantSessionLastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -70,11 +92,14 @@ class AssistantSession:
         repair_task_id (None | str):
         repair_task_meta (Any): Task metadata for repair progress tracking
         last_repair (datetime.datetime | None):
-        scope (ScopeEnum): * `system` - System
+        scope (AssistantSessionScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+            * `system` - System
             * `user` - User
         conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
             conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (AssistantSessionEffectiveCriticalityType1 |
+            AssistantSessionEffectiveCriticalityType2Type1 | AssistantSessionEffectiveCriticalityType3Type1 | None):
         actual_availability (str): Calculated actual availability as yearly average in %
         organization (AssistantSessionOrganizationType0 | None):
         workspace (str):
@@ -86,7 +111,7 @@ class AssistantSession:
         effective_slo_target (float | None):
         effective_sla_target (float | None):
         last_action_run (AssistantSessionLastActionRunType0 | None):
-        turn_status (TurnStatusEnum): * `idle` - Idle
+        turn_status (AssistantSessionTurnStatus): * `idle` - Idle
             * `running` - Running
             * `queued` - Queued
         product (str):
@@ -103,7 +128,7 @@ class AssistantSession:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (AssistantSessionProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -120,13 +145,14 @@ class AssistantSession:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+        kind (AssistantSessionKind | Unset): * `generic` - Generic
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
             the condition will not be applied.
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
+        criticality (AssistantSessionCriticalityType1 | AssistantSessionCriticalityType2Type1 |
+            AssistantSessionCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then
             org. Explicit value overrides inheritance.
 
             * `high` - High
@@ -138,7 +164,7 @@ class AssistantSession:
         slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-        status (AssistantSessionStatusEnum | Unset): * `open` - Open
+        status (AssistantSessionStatus | Unset): * `open` - Open
             * `closed` - Closed
     """
 
@@ -148,9 +174,9 @@ class AssistantSession:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: AssistantSessionDeletedByUserType0 | None
-    state: LastStateEnum
+    state: AssistantSessionState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: AssistantSessionLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -165,9 +191,14 @@ class AssistantSession:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: AssistantSessionScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        AssistantSessionEffectiveCriticalityType1
+        | AssistantSessionEffectiveCriticalityType2Type1
+        | AssistantSessionEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: AssistantSessionOrganizationType0 | None
     workspace: str
@@ -178,7 +209,7 @@ class AssistantSession:
     effective_slo_target: float | None
     effective_sla_target: float | None
     last_action_run: AssistantSessionLastActionRunType0 | None
-    turn_status: TurnStatusEnum
+    turn_status: AssistantSessionTurnStatus
     product: str
     provider_account: str
     model_snapshot: Any
@@ -192,32 +223,34 @@ class AssistantSession:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: AssistantSessionProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: AssistantSessionKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        AssistantSessionCriticalityType1
+        | AssistantSessionCriticalityType2Type1
+        | AssistantSessionCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    status: AssistantSessionStatusEnum | Unset = UNSET
+    status: AssistantSessionStatus | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.assistant_session_deleted_by_user_type_0 import (
-            AssistantSessionDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.assistant_session_last_action_run_type_0 import (
-            AssistantSessionLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.assistant_session_deleted_by_user_type_0 import AssistantSessionDeletedByUserType0  # noqa: PLC0415
+        from ..models.assistant_session_last_action_run_type_0 import AssistantSessionLastActionRunType0  # noqa: PLC0415
         from ..models.assistant_session_organization_type_0 import AssistantSessionOrganizationType0  # noqa: PLC0415
 
         id = str(self.id)
@@ -300,6 +333,10 @@ class AssistantSession:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -415,6 +452,8 @@ class AssistantSession:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -549,12 +588,8 @@ class AssistantSession:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.assistant_session_created import AssistantSessionCreated  # noqa: PLC0415
-        from ..models.assistant_session_deleted_by_user_type_0 import (
-            AssistantSessionDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.assistant_session_last_action_run_type_0 import (
-            AssistantSessionLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.assistant_session_deleted_by_user_type_0 import AssistantSessionDeletedByUserType0  # noqa: PLC0415
+        from ..models.assistant_session_last_action_run_type_0 import AssistantSessionLastActionRunType0  # noqa: PLC0415
         from ..models.assistant_session_organization_type_0 import AssistantSessionOrganizationType0  # noqa: PLC0415
         from ..models.assistant_session_participants_item import AssistantSessionParticipantsItem  # noqa: PLC0415
 
@@ -597,7 +632,7 @@ class AssistantSession:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_assistant_session_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -606,7 +641,7 @@ class AssistantSession:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_assistant_session_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -703,22 +738,51 @@ class AssistantSession:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_assistant_session_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            AssistantSessionEffectiveCriticalityType1
+            | AssistantSessionEffectiveCriticalityType2Type1
+            | AssistantSessionEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_assistant_session_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_assistant_session_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_assistant_session_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AssistantSessionEffectiveCriticalityType1
+                | AssistantSessionEffectiveCriticalityType2Type1
+                | AssistantSessionEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -778,7 +842,7 @@ class AssistantSession:
 
         last_action_run = _parse_last_action_run(d.pop("last_action_run"))
 
-        turn_status = check_turn_status_enum(d.pop("turn_status"))
+        turn_status = check_assistant_session_turn_status(d.pop("turn_status"))
 
         product = d.pop("product")
 
@@ -824,11 +888,11 @@ class AssistantSession:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: AssistantSessionProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_assistant_session_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -853,11 +917,11 @@ class AssistantSession:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: AssistantSessionKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_assistant_session_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -889,7 +953,15 @@ class AssistantSession:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            AssistantSessionCriticalityType1
+            | AssistantSessionCriticalityType2Type1
+            | AssistantSessionCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -897,20 +969,35 @@ class AssistantSession:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_assistant_session_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_assistant_session_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_assistant_session_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AssistantSessionCriticalityType1
+                | AssistantSessionCriticalityType2Type1
+                | AssistantSessionCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -946,11 +1033,11 @@ class AssistantSession:
         sla_availability = d.pop("sla_availability", UNSET)
 
         _status = d.pop("status", UNSET)
-        status: AssistantSessionStatusEnum | Unset
+        status: AssistantSessionStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_assistant_session_status_enum(_status)
+            status = check_assistant_session_status(_status)
 
         assistant_session = cls(
             id=id,

@@ -8,15 +8,15 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.contact_group_kind_enum import ContactGroupKindEnum, check_contact_group_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.contact_group_kind import ContactGroupKind, check_contact_group_kind
+from ..models.contact_group_state import ContactGroupState, check_contact_group_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.contact_group_maintainers_item import ContactGroupMaintainersItem
     from ..models.contact_group_membership import ContactGroupMembership
     from ..models.contact_group_owners_item import ContactGroupOwnersItem
-    from ..models.organization import Organization
+    from ..models.organization_simple import OrganizationSimple
 
 
 T = TypeVar("T", bound="ContactGroup")
@@ -33,7 +33,7 @@ class ContactGroup:
             name (str):
             created_at (datetime.datetime):
             updated_at (datetime.datetime):
-            state (LastStateEnum): * `OK` - Ok
+            state (ContactGroupState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -41,12 +41,16 @@ class ContactGroup:
                 * `DOWN` - Down
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            organization (Organization):
+            organization (OrganizationSimple): Simple Organization serializer for nested representations.
+
+                Includes `url` field for direct navigation.
             member_count (int):
             owners (list[ContactGroupOwnersItem]):
             maintainers (list[ContactGroupMaintainersItem]):
             memberships (list[ContactGroupMembership]):
-            kind (ContactGroupKindEnum | Unset): * `generic` - Generic
+            kind (ContactGroupKind | Unset): Type of contact group
+
+                * `generic` - Generic
                 * `dynamic` - Dynamic
             email (None | str | Unset): Group email address for notifications
             dynamic_rules (Any | Unset): Rules for dynamic group membership (JSON format)
@@ -57,14 +61,14 @@ class ContactGroup:
     name: str
     created_at: datetime.datetime
     updated_at: datetime.datetime
-    state: LastStateEnum
+    state: ContactGroupState
     conditions: Any
-    organization: Organization
+    organization: OrganizationSimple
     member_count: int
     owners: list[ContactGroupOwnersItem]
     maintainers: list[ContactGroupMaintainersItem]
     memberships: list[ContactGroupMembership]
-    kind: ContactGroupKindEnum | Unset = UNSET
+    kind: ContactGroupKind | Unset = UNSET
     email: None | str | Unset = UNSET
     dynamic_rules: Any | Unset = UNSET
     keycloak_group_id: None | str | Unset = UNSET
@@ -153,7 +157,7 @@ class ContactGroup:
         from ..models.contact_group_maintainers_item import ContactGroupMaintainersItem  # noqa: PLC0415
         from ..models.contact_group_membership import ContactGroupMembership  # noqa: PLC0415
         from ..models.contact_group_owners_item import ContactGroupOwnersItem  # noqa: PLC0415
-        from ..models.organization import Organization  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -164,11 +168,11 @@ class ContactGroup:
 
         updated_at = datetime.datetime.fromisoformat(d.pop("updated_at"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_contact_group_state(d.pop("state"))
 
         conditions = d.pop("conditions")
 
-        organization = Organization.from_dict(d.pop("organization"))
+        organization = OrganizationSimple.from_dict(d.pop("organization"))
 
         member_count = d.pop("member_count")
 
@@ -194,11 +198,11 @@ class ContactGroup:
             memberships.append(memberships_item)
 
         _kind = d.pop("kind", UNSET)
-        kind: ContactGroupKindEnum | Unset
+        kind: ContactGroupKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_contact_group_kind_enum(_kind)
+            kind = check_contact_group_kind(_kind)
 
         def _parse_email(data: object) -> None | str | Unset:
             if data is None:

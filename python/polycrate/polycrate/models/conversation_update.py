@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.conversation_status_enum import ConversationStatusEnum, check_conversation_status_enum
+from ..models.conversation_update_status import ConversationUpdateStatus, check_conversation_update_status
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ConversationUpdate")
@@ -23,7 +23,9 @@ class ConversationUpdate:
             name (str):
             organization (None | UUID): Organization that owns this conversation
             conversation_provider (None | UUID): Provider that manages this conversation
-            status (ConversationStatusEnum | Unset): * `closed` - Closed
+            status (ConversationUpdateStatus | Unset): Current status of the conversation
+
+                * `closed` - Closed
                 * `waiting_for_operator` - Waiting for Operator
                 * `waiting_for_user` - Waiting for User
                 * `deleted` - Deleted
@@ -36,7 +38,7 @@ class ConversationUpdate:
     name: str
     organization: None | UUID
     conversation_provider: None | UUID
-    status: ConversationStatusEnum | Unset = UNSET
+    status: ConversationUpdateStatus | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     meta: Any | Unset = UNSET
     config: Any | Unset = UNSET
@@ -132,11 +134,11 @@ class ConversationUpdate:
         conversation_provider = _parse_conversation_provider(d.pop("conversation_provider"))
 
         _status = d.pop("status", UNSET)
-        status: ConversationStatusEnum | Unset
+        status: ConversationUpdateStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_conversation_status_enum(_status)
+            status = check_conversation_update_status(_status)
 
         def _parse_provider_id(data: object) -> None | str | Unset:
             if data is None:

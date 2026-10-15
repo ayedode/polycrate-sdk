@@ -1,9 +1,10 @@
 from typing import Literal
 
-ApiV1DomainsDomainRegistrarsListKind = Literal["centralnic"]
+ApiV1DomainsDomainRegistrarsListKind = Literal["centralnic", "openprovider"]
 
 API_V1_DOMAINS_DOMAIN_REGISTRARS_LIST_KIND_VALUES: set[ApiV1DomainsDomainRegistrarsListKind] = {
     "centralnic",
+    "openprovider",
 }
 
 

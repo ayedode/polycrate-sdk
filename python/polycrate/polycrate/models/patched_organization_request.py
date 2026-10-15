@@ -9,16 +9,46 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.organization_endpoint_monitoring_mode_enum import (
-    OrganizationEndpointMonitoringModeEnum,
-    check_organization_endpoint_monitoring_mode_enum,
+from ..models.patched_organization_request_created_by_component_type_1 import (
+    PatchedOrganizationRequestCreatedByComponentType1,
+    check_patched_organization_request_created_by_component_type_1,
 )
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.patched_organization_request_created_by_component_type_2_type_1 import (
+    PatchedOrganizationRequestCreatedByComponentType2Type1,
+    check_patched_organization_request_created_by_component_type_2_type_1,
+)
+from ..models.patched_organization_request_created_by_component_type_3_type_1 import (
+    PatchedOrganizationRequestCreatedByComponentType3Type1,
+    check_patched_organization_request_created_by_component_type_3_type_1,
+)
+from ..models.patched_organization_request_criticality_type_1 import (
+    PatchedOrganizationRequestCriticalityType1,
+    check_patched_organization_request_criticality_type_1,
+)
+from ..models.patched_organization_request_criticality_type_2_type_1 import (
+    PatchedOrganizationRequestCriticalityType2Type1,
+    check_patched_organization_request_criticality_type_2_type_1,
+)
+from ..models.patched_organization_request_criticality_type_3_type_1 import (
+    PatchedOrganizationRequestCriticalityType3Type1,
+    check_patched_organization_request_criticality_type_3_type_1,
+)
+from ..models.patched_organization_request_endpoint_monitoring_mode import (
+    PatchedOrganizationRequestEndpointMonitoringMode,
+    check_patched_organization_request_endpoint_monitoring_mode,
+)
+from ..models.patched_organization_request_kind import (
+    PatchedOrganizationRequestKind,
+    check_patched_organization_request_kind,
+)
+from ..models.patched_organization_request_provider import (
+    PatchedOrganizationRequestProvider,
+    check_patched_organization_request_provider,
+)
+from ..models.patched_organization_request_scope import (
+    PatchedOrganizationRequestScope,
+    check_patched_organization_request_scope,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedOrganizationRequest")
@@ -30,13 +60,14 @@ class PatchedOrganizationRequest:
     Attributes:
         owner_id (int | None | Unset):
         workspace_default_owner_id (int | None | Unset):
+        default_domain_contact_id (None | Unset | UUID):
         name (str | Unset):
         display_name (None | str | Unset): The display name is used to display the object in the UI. It can be different
             from the name.
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (PatchedOrganizationRequestProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -55,14 +86,18 @@ class PatchedOrganizationRequest:
         last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
         discovery_enabled (bool | Unset):
         platform_service (bool | Unset):
-        scope (ScopeEnum | Unset): * `system` - System
+        scope (PatchedOrganizationRequestScope | Unset): The scope is used to separate `system` owned objects from
+            `user` owned objects.
+
+            * `system` - System
             * `user` - User
-        kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+        kind (PatchedOrganizationRequestKind | Unset): * `generic` - Generic
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-            cli, operator, or api.
+        created_by_component (None | PatchedOrganizationRequestCreatedByComponentType1 |
+            PatchedOrganizationRequestCreatedByComponentType2Type1 | PatchedOrganizationRequestCreatedByComponentType3Type1
+            | Unset): Component that created this object: cli, operator, or api.
 
             * `cli` - CLI
             * `operator` - Operator
@@ -76,8 +111,9 @@ class PatchedOrganizationRequest:
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | PatchedOrganizationRequestCriticalityType1 | PatchedOrganizationRequestCriticalityType2Type1
+            | PatchedOrganizationRequestCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace,
+            then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -104,7 +140,7 @@ class PatchedOrganizationRequest:
         grafana_org_id (None | str | Unset):
         gitlab_group_id (int | None | Unset):
         gitlab_group_url (None | str | Unset): GitLab group URL (e.g., https://gitlab.com/group)
-        endpoint_monitoring_mode (OrganizationEndpointMonitoringModeEnum | Unset): * `auto` - AUTO
+        endpoint_monitoring_mode (PatchedOrganizationRequestEndpointMonitoringMode | Unset): * `auto` - AUTO
             * `manual` - MANUAL
         color (None | str | Unset): RGB color in hex format (e.g., #ff6b6b)
         priority (bool | Unset): High priority organization flag
@@ -128,14 +164,18 @@ class PatchedOrganizationRequest:
         apm_vmuser_manifest_last_applied_sha256 (None | str | Unset): SHA-256 (hex) of the last successfully applied
             unified APM VMUser manifest (canonical JSON). Spec: polycrate spec inspect 172.
         observability_metrics (Any | Unset): Observability metrics for billing (logs ingested, active metric series)
-        cached_s3_storage_bytes (int | Unset): Total S3 storage in bytes across all buckets
+        cached_s3_storage_bytes (int | Unset): Total S3 storage in bytes across owned plus Loopback-delegated buckets
+            after exclude_archived (Spec 825 / 864)
         cached_lb_traffic_30d_bytes (int | Unset): Total 30-day loadbalancer traffic in bytes; COALESCE
             traffic.*.30d_total then bytes.*.30d_total
         cached_logs_30d (int | Unset): Total log ingestion count in last 30 days
         cached_metrics_30d_avg (int | Unset): Average active metric series in last 30 days
         cached_metrics_updated_at (datetime.datetime | None | Unset): Last time cached metrics were updated
-        cached_s3_bucket_count (int | Unset): Cached S3 bucket count
-        cached_s3_object_count (int | Unset): Cached total S3 object count across all buckets
+        cached_s3_bucket_count (int | Unset): Cached S3 bucket count after exclude_archived (owned plus Loopback-
+            delegated; Spec 825 / 864)
+        cached_s3_object_count (int | Unset): Cached S3 object count after exclude_archived (owned plus Loopback-
+            delegated; Spec 825 / 864)
+        cached_s3_by_region (Any | Unset): Cached S3 rollups per effective region (S3Bucket.region_id; Spec 865 / 896)
         cached_lb_count (int | Unset): Cached loadbalancer instance count
         cached_lb_traffic_30d_in_bytes (int | Unset): Cached inbound 30-day loadbalancer traffic in bytes; COALESCE
             traffic.in.30d_total then bytes.in.30d_total
@@ -164,29 +204,35 @@ class PatchedOrganizationRequest:
         created_by_user (int | None | Unset): The user who created the object
         unified_harbor_credential (None | Unset | UUID): Auto-generated unified Harbor registry credential (robot
             token).
-        endpoint_monitors (list[UUID] | Unset):
     """
 
     owner_id: int | None | Unset = UNSET
     workspace_default_owner_id: int | None | Unset = UNSET
+    default_domain_contact_id: None | Unset | UUID = UNSET
     name: str | Unset = UNSET
     display_name: None | str | Unset = UNSET
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedOrganizationRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: PatchedOrganizationRequestScope | Unset = UNSET
+    kind: PatchedOrganizationRequestKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        None
+        | PatchedOrganizationRequestCreatedByComponentType1
+        | PatchedOrganizationRequestCreatedByComponentType2Type1
+        | PatchedOrganizationRequestCreatedByComponentType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -195,7 +241,13 @@ class PatchedOrganizationRequest:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedOrganizationRequestCriticalityType1
+        | PatchedOrganizationRequestCriticalityType2Type1
+        | PatchedOrganizationRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
     legal_name: str | Unset = UNSET
@@ -217,7 +269,7 @@ class PatchedOrganizationRequest:
     grafana_org_id: None | str | Unset = UNSET
     gitlab_group_id: int | None | Unset = UNSET
     gitlab_group_url: None | str | Unset = UNSET
-    endpoint_monitoring_mode: OrganizationEndpointMonitoringModeEnum | Unset = UNSET
+    endpoint_monitoring_mode: PatchedOrganizationRequestEndpointMonitoringMode | Unset = UNSET
     color: None | str | Unset = UNSET
     priority: bool | Unset = UNSET
     upstream_organization_id: None | str | Unset = UNSET
@@ -241,6 +293,7 @@ class PatchedOrganizationRequest:
     cached_metrics_updated_at: datetime.datetime | None | Unset = UNSET
     cached_s3_bucket_count: int | Unset = UNSET
     cached_s3_object_count: int | Unset = UNSET
+    cached_s3_by_region: Any | Unset = UNSET
     cached_lb_count: int | Unset = UNSET
     cached_lb_traffic_30d_in_bytes: int | Unset = UNSET
     cached_lb_traffic_30d_out_bytes: int | Unset = UNSET
@@ -263,7 +316,6 @@ class PatchedOrganizationRequest:
     modified_by_user: int | None | Unset = UNSET
     created_by_user: int | None | Unset = UNSET
     unified_harbor_credential: None | Unset | UUID = UNSET
-    endpoint_monitors: list[UUID] | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -278,6 +330,14 @@ class PatchedOrganizationRequest:
             workspace_default_owner_id = UNSET
         else:
             workspace_default_owner_id = self.workspace_default_owner_id
+
+        default_domain_contact_id: None | str | Unset
+        if isinstance(self.default_domain_contact_id, Unset):
+            default_domain_contact_id = UNSET
+        elif isinstance(self.default_domain_contact_id, UUID):
+            default_domain_contact_id = str(self.default_domain_contact_id)
+        else:
+            default_domain_contact_id = self.default_domain_contact_id
 
         name = self.name
 
@@ -352,6 +412,8 @@ class PatchedOrganizationRequest:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -394,6 +456,8 @@ class PatchedOrganizationRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -605,6 +669,8 @@ class PatchedOrganizationRequest:
 
         cached_s3_object_count = self.cached_s3_object_count
 
+        cached_s3_by_region = self.cached_s3_by_region
+
         cached_lb_count = self.cached_lb_count
 
         cached_lb_traffic_30d_in_bytes = self.cached_lb_traffic_30d_in_bytes
@@ -681,13 +747,6 @@ class PatchedOrganizationRequest:
         else:
             unified_harbor_credential = self.unified_harbor_credential
 
-        endpoint_monitors: list[str] | Unset = UNSET
-        if not isinstance(self.endpoint_monitors, Unset):
-            endpoint_monitors = []
-            for endpoint_monitors_item_data in self.endpoint_monitors:
-                endpoint_monitors_item = str(endpoint_monitors_item_data)
-                endpoint_monitors.append(endpoint_monitors_item)
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -695,6 +754,8 @@ class PatchedOrganizationRequest:
             field_dict["owner_id"] = owner_id
         if workspace_default_owner_id is not UNSET:
             field_dict["workspace_default_owner_id"] = workspace_default_owner_id
+        if default_domain_contact_id is not UNSET:
+            field_dict["default_domain_contact_id"] = default_domain_contact_id
         if name is not UNSET:
             field_dict["name"] = name
         if display_name is not UNSET:
@@ -839,6 +900,8 @@ class PatchedOrganizationRequest:
             field_dict["cached_s3_bucket_count"] = cached_s3_bucket_count
         if cached_s3_object_count is not UNSET:
             field_dict["cached_s3_object_count"] = cached_s3_object_count
+        if cached_s3_by_region is not UNSET:
+            field_dict["cached_s3_by_region"] = cached_s3_by_region
         if cached_lb_count is not UNSET:
             field_dict["cached_lb_count"] = cached_lb_count
         if cached_lb_traffic_30d_in_bytes is not UNSET:
@@ -883,8 +946,6 @@ class PatchedOrganizationRequest:
             field_dict["created_by_user"] = created_by_user
         if unified_harbor_credential is not UNSET:
             field_dict["unified_harbor_credential"] = unified_harbor_credential
-        if endpoint_monitors is not UNSET:
-            field_dict["endpoint_monitors"] = endpoint_monitors
 
         return field_dict
 
@@ -905,6 +966,14 @@ class PatchedOrganizationRequest:
             else:
                 files.append(
                     ("workspace_default_owner_id", (None, str(self.workspace_default_owner_id).encode(), "text/plain"))
+                )
+
+        if not isinstance(self.default_domain_contact_id, Unset):
+            if isinstance(self.default_domain_contact_id, UUID):
+                files.append(("default_domain_contact_id", (None, str(self.default_domain_contact_id), "text/plain")))
+            else:
+                files.append(
+                    ("default_domain_contact_id", (None, str(self.default_domain_contact_id).encode(), "text/plain"))
                 )
 
         if not isinstance(self.name, Unset):
@@ -987,7 +1056,9 @@ class PatchedOrganizationRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.created_by_component, Unset):
-            if isinstance(self.created_by_component, str):
+            if self.created_by_component is None:
+                files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
+            elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
             elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
@@ -1034,7 +1105,9 @@ class PatchedOrganizationRequest:
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -1325,6 +1398,9 @@ class PatchedOrganizationRequest:
         if not isinstance(self.cached_s3_object_count, Unset):
             files.append(("cached_s3_object_count", (None, str(self.cached_s3_object_count).encode(), "text/plain")))
 
+        if not isinstance(self.cached_s3_by_region, Unset):
+            files.append(("cached_s3_by_region", (None, str(self.cached_s3_by_region).encode(), "text/plain")))
+
         if not isinstance(self.cached_lb_count, Unset):
             files.append(("cached_lb_count", (None, str(self.cached_lb_count).encode(), "text/plain")))
 
@@ -1464,10 +1540,6 @@ class PatchedOrganizationRequest:
                     ("unified_harbor_credential", (None, str(self.unified_harbor_credential).encode(), "text/plain"))
                 )
 
-        if not isinstance(self.endpoint_monitors, Unset):
-            for endpoint_monitors_item_element in self.endpoint_monitors:
-                files.append(("endpoint_monitors", (None, str(endpoint_monitors_item_element), "text/plain")))
-
         for prop_name, prop in self.additional_properties.items():
             files.append((prop_name, (None, str(prop).encode(), "text/plain")))
 
@@ -1495,6 +1567,23 @@ class PatchedOrganizationRequest:
 
         workspace_default_owner_id = _parse_workspace_default_owner_id(d.pop("workspace_default_owner_id", UNSET))
 
+        def _parse_default_domain_contact_id(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                default_domain_contact_id_type_0 = UUID(data)
+
+                return default_domain_contact_id_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        default_domain_contact_id = _parse_default_domain_contact_id(d.pop("default_domain_contact_id", UNSET))
+
         name = d.pop("name", UNSET)
 
         def _parse_display_name(data: object) -> None | str | Unset:
@@ -1513,11 +1602,11 @@ class PatchedOrganizationRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedOrganizationRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_organization_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1555,18 +1644,18 @@ class PatchedOrganizationRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: PatchedOrganizationRequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_patched_organization_request_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: PatchedOrganizationRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_patched_organization_request_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -1596,7 +1685,15 @@ class PatchedOrganizationRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            None
+            | PatchedOrganizationRequestCreatedByComponentType1
+            | PatchedOrganizationRequestCreatedByComponentType2Type1
+            | PatchedOrganizationRequestCreatedByComponentType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1604,20 +1701,39 @@ class PatchedOrganizationRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_patched_organization_request_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = (
+                    check_patched_organization_request_created_by_component_type_2_type_1(data)
+                )
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = (
+                    check_patched_organization_request_created_by_component_type_3_type_1(data)
+                )
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedOrganizationRequestCreatedByComponentType1
+                | PatchedOrganizationRequestCreatedByComponentType2Type1
+                | PatchedOrganizationRequestCreatedByComponentType3Type1
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1672,7 +1788,15 @@ class PatchedOrganizationRequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedOrganizationRequestCriticalityType1
+            | PatchedOrganizationRequestCriticalityType2Type1
+            | PatchedOrganizationRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1680,20 +1804,35 @@ class PatchedOrganizationRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_organization_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_organization_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_organization_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedOrganizationRequestCriticalityType1
+                | PatchedOrganizationRequestCriticalityType2Type1
+                | PatchedOrganizationRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1853,11 +1992,13 @@ class PatchedOrganizationRequest:
         gitlab_group_url = _parse_gitlab_group_url(d.pop("gitlab_group_url", UNSET))
 
         _endpoint_monitoring_mode = d.pop("endpoint_monitoring_mode", UNSET)
-        endpoint_monitoring_mode: OrganizationEndpointMonitoringModeEnum | Unset
+        endpoint_monitoring_mode: PatchedOrganizationRequestEndpointMonitoringMode | Unset
         if isinstance(_endpoint_monitoring_mode, Unset):
             endpoint_monitoring_mode = UNSET
         else:
-            endpoint_monitoring_mode = check_organization_endpoint_monitoring_mode_enum(_endpoint_monitoring_mode)
+            endpoint_monitoring_mode = check_patched_organization_request_endpoint_monitoring_mode(
+                _endpoint_monitoring_mode
+            )
 
         def _parse_color(data: object) -> None | str | Unset:
             if data is None:
@@ -2001,6 +2142,8 @@ class PatchedOrganizationRequest:
 
         cached_s3_object_count = d.pop("cached_s3_object_count", UNSET)
 
+        cached_s3_by_region = d.pop("cached_s3_by_region", UNSET)
+
         cached_lb_count = d.pop("cached_lb_count", UNSET)
 
         cached_lb_traffic_30d_in_bytes = d.pop("cached_lb_traffic_30d_in_bytes", UNSET)
@@ -2112,18 +2255,10 @@ class PatchedOrganizationRequest:
 
         unified_harbor_credential = _parse_unified_harbor_credential(d.pop("unified_harbor_credential", UNSET))
 
-        _endpoint_monitors = d.pop("endpoint_monitors", UNSET)
-        endpoint_monitors: list[UUID] | Unset = UNSET
-        if _endpoint_monitors is not UNSET:
-            endpoint_monitors = []
-            for endpoint_monitors_item_data in _endpoint_monitors:
-                endpoint_monitors_item = UUID(endpoint_monitors_item_data)
-
-                endpoint_monitors.append(endpoint_monitors_item)
-
         patched_organization_request = cls(
             owner_id=owner_id,
             workspace_default_owner_id=workspace_default_owner_id,
+            default_domain_contact_id=default_domain_contact_id,
             name=name,
             display_name=display_name,
             labels=labels,
@@ -2196,6 +2331,7 @@ class PatchedOrganizationRequest:
             cached_metrics_updated_at=cached_metrics_updated_at,
             cached_s3_bucket_count=cached_s3_bucket_count,
             cached_s3_object_count=cached_s3_object_count,
+            cached_s3_by_region=cached_s3_by_region,
             cached_lb_count=cached_lb_count,
             cached_lb_traffic_30d_in_bytes=cached_lb_traffic_30d_in_bytes,
             cached_lb_traffic_30d_out_bytes=cached_lb_traffic_30d_out_bytes,
@@ -2218,7 +2354,6 @@ class PatchedOrganizationRequest:
             modified_by_user=modified_by_user,
             created_by_user=created_by_user,
             unified_harbor_credential=unified_harbor_credential,
-            endpoint_monitors=endpoint_monitors,
         )
 
         patched_organization_request.additional_properties = d

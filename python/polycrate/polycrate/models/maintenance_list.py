@@ -8,8 +8,19 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.maintenance_list_effective_criticality_type_1 import (
+    MaintenanceListEffectiveCriticalityType1,
+    check_maintenance_list_effective_criticality_type_1,
+)
+from ..models.maintenance_list_effective_criticality_type_2_type_1 import (
+    MaintenanceListEffectiveCriticalityType2Type1,
+    check_maintenance_list_effective_criticality_type_2_type_1,
+)
+from ..models.maintenance_list_effective_criticality_type_3_type_1 import (
+    MaintenanceListEffectiveCriticalityType3Type1,
+    check_maintenance_list_effective_criticality_type_3_type_1,
+)
+from ..models.maintenance_list_state import MaintenanceListState, check_maintenance_list_state
 
 if TYPE_CHECKING:
     from ..models.maintenance_list_active_condition_instances_item import MaintenanceListActiveConditionInstancesItem
@@ -31,7 +42,7 @@ class MaintenanceList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (MaintenanceListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -49,7 +60,8 @@ class MaintenanceList:
             created (MaintenanceListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (MaintenanceListEffectiveCriticalityType1 | MaintenanceListEffectiveCriticalityType2Type1
+                | MaintenanceListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             start (datetime.datetime):
             end (datetime.datetime):
@@ -61,7 +73,7 @@ class MaintenanceList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: MaintenanceListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -72,7 +84,12 @@ class MaintenanceList:
     created: MaintenanceListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        MaintenanceListEffectiveCriticalityType1
+        | MaintenanceListEffectiveCriticalityType2Type1
+        | MaintenanceListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     start: datetime.datetime
     end: datetime.datetime
@@ -120,6 +137,10 @@ class MaintenanceList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -183,7 +204,7 @@ class MaintenanceList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_maintenance_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -225,18 +246,47 @@ class MaintenanceList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            MaintenanceListEffectiveCriticalityType1
+            | MaintenanceListEffectiveCriticalityType2Type1
+            | MaintenanceListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_maintenance_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_maintenance_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_maintenance_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                MaintenanceListEffectiveCriticalityType1
+                | MaintenanceListEffectiveCriticalityType2Type1
+                | MaintenanceListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

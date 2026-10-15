@@ -8,8 +8,22 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.pricing_calculator_state_list_effective_criticality_type_1 import (
+    PricingCalculatorStateListEffectiveCriticalityType1,
+    check_pricing_calculator_state_list_effective_criticality_type_1,
+)
+from ..models.pricing_calculator_state_list_effective_criticality_type_2_type_1 import (
+    PricingCalculatorStateListEffectiveCriticalityType2Type1,
+    check_pricing_calculator_state_list_effective_criticality_type_2_type_1,
+)
+from ..models.pricing_calculator_state_list_effective_criticality_type_3_type_1 import (
+    PricingCalculatorStateListEffectiveCriticalityType3Type1,
+    check_pricing_calculator_state_list_effective_criticality_type_3_type_1,
+)
+from ..models.pricing_calculator_state_list_state import (
+    PricingCalculatorStateListState,
+    check_pricing_calculator_state_list_state,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -49,7 +63,7 @@ class PricingCalculatorStateList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (PricingCalculatorStateListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -67,7 +81,9 @@ class PricingCalculatorStateList:
             created (PricingCalculatorStateListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | PricingCalculatorStateListEffectiveCriticalityType1 |
+                PricingCalculatorStateListEffectiveCriticalityType2Type1 |
+                PricingCalculatorStateListEffectiveCriticalityType3Type1):
             url (str): Gibt die absolute URL zum Object zurück.
             total_price (None | str | Unset):
             last_access (datetime.datetime | None | Unset):
@@ -77,7 +93,7 @@ class PricingCalculatorStateList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: PricingCalculatorStateListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -88,7 +104,12 @@ class PricingCalculatorStateList:
     created: PricingCalculatorStateListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | PricingCalculatorStateListEffectiveCriticalityType1
+        | PricingCalculatorStateListEffectiveCriticalityType2Type1
+        | PricingCalculatorStateListEffectiveCriticalityType3Type1
+    )
     url: str
     total_price: None | str | Unset = UNSET
     last_access: datetime.datetime | None | Unset = UNSET
@@ -100,9 +121,7 @@ class PricingCalculatorStateList:
         from ..models.pricing_calculator_state_list_organization_type_0 import (
             PricingCalculatorStateListOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.pricing_calculator_state_list_workspace_type_0 import (
-            PricingCalculatorStateListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.pricing_calculator_state_list_workspace_type_0 import PricingCalculatorStateListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -143,6 +162,10 @@ class PricingCalculatorStateList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -208,16 +231,14 @@ class PricingCalculatorStateList:
         from ..models.pricing_calculator_state_list_organization_type_0 import (
             PricingCalculatorStateListOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.pricing_calculator_state_list_workspace_type_0 import (
-            PricingCalculatorStateListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.pricing_calculator_state_list_workspace_type_0 import PricingCalculatorStateListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_pricing_calculator_state_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -272,18 +293,51 @@ class PricingCalculatorStateList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | PricingCalculatorStateListEffectiveCriticalityType1
+            | PricingCalculatorStateListEffectiveCriticalityType2Type1
+            | PricingCalculatorStateListEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_pricing_calculator_state_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = (
+                    check_pricing_calculator_state_list_effective_criticality_type_2_type_1(data)
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = (
+                    check_pricing_calculator_state_list_effective_criticality_type_3_type_1(data)
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PricingCalculatorStateListEffectiveCriticalityType1
+                | PricingCalculatorStateListEffectiveCriticalityType2Type1
+                | PricingCalculatorStateListEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

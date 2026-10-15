@@ -8,9 +8,9 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.content_kind_enum import ContentKindEnum, check_content_kind_enum
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
-from ..models.message_status_enum import MessageStatusEnum, check_message_status_enum
+from ..models.message_list_content_kind import MessageListContentKind, check_message_list_content_kind
+from ..models.message_list_kind import MessageListKind, check_message_list_kind
+from ..models.message_list_status import MessageListStatus, check_message_list_status
 
 if TYPE_CHECKING:
     from ..models.conversation_simple import ConversationSimple
@@ -28,20 +28,26 @@ class MessageList:
         Attributes:
             id (UUID):
             name (str):
-            kind (ConversationKindEnum): * `generic` - Generic
+            kind (MessageListKind): Type of message
+
+                * `generic` - Generic
                 * `zammad` - Zammad
                 * `slack` - Slack
                 * `discord` - Discord
                 * `telegram` - Telegram
                 * `msteams` - Microsoft Teams
                 * `email` - Email
-            status (MessageStatusEnum): * `pending` - Pending
+            status (MessageListStatus): Current status of the message
+
+                * `pending` - Pending
                 * `requested` - Requested
                 * `delivered` - Delivered
                 * `error` - Error
                 * `deleted` - Deleted
             content (str): The actual message content
-            content_kind (ContentKindEnum): * `text` - Text
+            content_kind (MessageListContentKind): Type of content (text, markdown, html, json, yaml)
+
+                * `text` - Text
                 * `markdown` - Markdown
                 * `html` - HTML
                 * `json` - JSON
@@ -58,10 +64,10 @@ class MessageList:
 
     id: UUID
     name: str
-    kind: ConversationKindEnum
-    status: MessageStatusEnum
+    kind: MessageListKind
+    status: MessageListStatus
     content: str
-    content_kind: ContentKindEnum
+    content_kind: MessageListContentKind
     organization: OrganizationSimple
     conversation: ConversationSimple
     meta: Any
@@ -126,13 +132,13 @@ class MessageList:
 
         name = d.pop("name")
 
-        kind = check_conversation_kind_enum(d.pop("kind"))
+        kind = check_message_list_kind(d.pop("kind"))
 
-        status = check_message_status_enum(d.pop("status"))
+        status = check_message_list_status(d.pop("status"))
 
         content = d.pop("content")
 
-        content_kind = check_content_kind_enum(d.pop("content_kind"))
+        content_kind = check_message_list_content_kind(d.pop("content_kind"))
 
         organization = OrganizationSimple.from_dict(d.pop("organization"))
 

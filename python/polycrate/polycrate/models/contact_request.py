@@ -9,8 +9,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.contact_role_enum import ContactRoleEnum, check_contact_role_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
+from ..models.contact_request_contact_role import ContactRequestContactRole, check_contact_request_contact_role
+from ..models.contact_request_kind import ContactRequestKind, check_contact_request_kind
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ContactRequest")
@@ -28,7 +28,9 @@ class ContactRequest:
             firstname (str): First name of the contact
             lastname (str): Last name of the contact
             email (str): Email address of the contact
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (ContactRequestKind | Unset): Type of contact
+
+                * `generic` - Generic
             credential_id (None | Unset | UUID):
             phone (None | str | Unset): Phone number of the contact
             address (None | str | Unset): Address of the contact
@@ -36,7 +38,9 @@ class ContactRequest:
             country (None | str | Unset): Country of the contact
             zipcode (None | str | Unset): Zipcode of the contact
             note (None | str | Unset): Note about the contact
-            contact_role (ContactRoleEnum | Unset): * `developer` - Developer
+            contact_role (ContactRequestContactRole | Unset): Role of the contact (Developer, Admin, Billing, Viewer)
+
+                * `developer` - Developer
                 * `admin` - Admin
                 * `billing` - Billing
                 * `viewer` - Viewer
@@ -52,7 +56,7 @@ class ContactRequest:
     firstname: str
     lastname: str
     email: str
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: ContactRequestKind | Unset = UNSET
     credential_id: None | Unset | UUID = UNSET
     phone: None | str | Unset = UNSET
     address: None | str | Unset = UNSET
@@ -60,7 +64,7 @@ class ContactRequest:
     country: None | str | Unset = UNSET
     zipcode: None | str | Unset = UNSET
     note: None | str | Unset = UNSET
-    contact_role: ContactRoleEnum | Unset = UNSET
+    contact_role: ContactRequestContactRole | Unset = UNSET
     is_maintenance_contact: bool | Unset = UNSET
     is_billing_contact: bool | Unset = UNSET
     keycloak_user_id: None | str | Unset = UNSET
@@ -301,11 +305,11 @@ class ContactRequest:
         email = d.pop("email")
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: ContactRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_contact_request_kind(_kind)
 
         def _parse_credential_id(data: object) -> None | Unset | UUID:
             if data is None:
@@ -379,11 +383,11 @@ class ContactRequest:
         note = _parse_note(d.pop("note", UNSET))
 
         _contact_role = d.pop("contact_role", UNSET)
-        contact_role: ContactRoleEnum | Unset
+        contact_role: ContactRequestContactRole | Unset
         if isinstance(_contact_role, Unset):
             contact_role = UNSET
         else:
-            contact_role = check_contact_role_enum(_contact_role)
+            contact_role = check_contact_request_contact_role(_contact_role)
 
         is_maintenance_contact = d.pop("is_maintenance_contact", UNSET)
 

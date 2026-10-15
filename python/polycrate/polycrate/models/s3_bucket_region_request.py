@@ -17,13 +17,9 @@ T = TypeVar("T", bound="S3BucketRegionRequest")
 class S3BucketRegionRequest:
     """Serializer für Bucket-Erstellung mit Region-UUID.
 
-    Accepts `region` as a workspaces.Region UUID (write-only) — resolves via
-    region.legacy_s3_cluster to the backing S3Cluster. The bucket's region FK
-    is NOT set at creation time; it is populated lazily by ensure_region() in
-    reconciliation (Spec 333 Phase 2b).
-    Falls back to SystemConfig.default_s3_bucket_cluster when region is omitted.
-    Agent tokens: workspace/organization auto-assigned via perform_create().
-    Regular users: workspace/organization required in request body.
+    Accepts `region` as a workspaces.Region UUID (write-only). Create writes
+    the Region FK only — no S3Cluster resolve (Spec 896). Falls back to
+    SystemConfig.default_s3_region when region is omitted.
 
         Attributes:
             name (str):

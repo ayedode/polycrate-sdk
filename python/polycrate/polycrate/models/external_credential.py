@@ -8,7 +8,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.credential_kind_enum import CredentialKindEnum, check_credential_kind_enum
+from ..models.external_credential_kind import ExternalCredentialKind, check_external_credential_kind
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ExternalCredential")
@@ -29,7 +29,7 @@ class ExternalCredential:
             organization_id (UUID): UUID of the Organization this credential belongs to. Required. Org API Key users can
                 only set their own organization.
             created_at (datetime.datetime):
-            kind (CredentialKindEnum | Unset): * `api-key` - API Key
+            kind (ExternalCredentialKind | Unset): * `api-key` - API Key
                 * `kubeconfig` - Kubeconfig
                 * `s3-credential` - S3 Credential
                 * `ssh-keys` - SSH Keys
@@ -58,7 +58,7 @@ class ExternalCredential:
     name: str
     organization_id: UUID
     created_at: datetime.datetime
-    kind: CredentialKindEnum | Unset = UNSET
+    kind: ExternalCredentialKind | Unset = UNSET
     api_user: None | str | Unset = UNSET
     metadata: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -115,11 +115,11 @@ class ExternalCredential:
         created_at = datetime.datetime.fromisoformat(d.pop("created_at"))
 
         _kind = d.pop("kind", UNSET)
-        kind: CredentialKindEnum | Unset
+        kind: ExternalCredentialKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_credential_kind_enum(_kind)
+            kind = check_external_credential_kind(_kind)
 
         def _parse_api_user(data: object) -> None | str | Unset:
             if data is None:

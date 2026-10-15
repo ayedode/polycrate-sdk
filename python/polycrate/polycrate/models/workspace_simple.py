@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.workspace_kind_enum import WorkspaceKindEnum, check_workspace_kind_enum
+from ..models.workspace_simple_kind import WorkspaceSimpleKind, check_workspace_simple_kind
 
 if TYPE_CHECKING:
     from ..models.organization_simple import OrganizationSimple
@@ -25,7 +25,7 @@ class WorkspaceSimple:
         display_name (None | str): The display name is used to display the object in the UI. It can be different from
             the name.
         reconciliation_running (bool):
-        kind (WorkspaceKindEnum): * `polycrate` - Polycrate
+        kind (WorkspaceSimpleKind): * `polycrate` - Polycrate
             * `generic` - Generic
         organization (OrganizationSimple): Simple Organization serializer for nested representations.
 
@@ -39,7 +39,7 @@ class WorkspaceSimple:
     name: str
     display_name: None | str
     reconciliation_running: bool
-    kind: WorkspaceKindEnum
+    kind: WorkspaceSimpleKind
     organization: OrganizationSimple
     legacy: bool
     url: str
@@ -98,7 +98,7 @@ class WorkspaceSimple:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        kind = check_workspace_kind_enum(d.pop("kind"))
+        kind = check_workspace_simple_kind(d.pop("kind"))
 
         organization = OrganizationSimple.from_dict(d.pop("organization"))
 

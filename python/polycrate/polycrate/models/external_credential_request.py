@@ -8,7 +8,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.credential_kind_enum import CredentialKindEnum, check_credential_kind_enum
+from ..models.external_credential_request_kind import (
+    ExternalCredentialRequestKind,
+    check_external_credential_request_kind,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ExternalCredentialRequest")
@@ -27,7 +30,7 @@ class ExternalCredentialRequest:
             name (str):
             organization_id (UUID): UUID of the Organization this credential belongs to. Required. Org API Key users can
                 only set their own organization.
-            kind (CredentialKindEnum | Unset): * `api-key` - API Key
+            kind (ExternalCredentialRequestKind | Unset): * `api-key` - API Key
                 * `kubeconfig` - Kubeconfig
                 * `s3-credential` - S3 Credential
                 * `ssh-keys` - SSH Keys
@@ -55,7 +58,7 @@ class ExternalCredentialRequest:
 
     name: str
     organization_id: UUID
-    kind: CredentialKindEnum | Unset = UNSET
+    kind: ExternalCredentialRequestKind | Unset = UNSET
     api_key: None | str | Unset = UNSET
     api_user: None | str | Unset = UNSET
     metadata: Any | Unset = UNSET
@@ -141,11 +144,11 @@ class ExternalCredentialRequest:
         organization_id = UUID(d.pop("organization_id"))
 
         _kind = d.pop("kind", UNSET)
-        kind: CredentialKindEnum | Unset
+        kind: ExternalCredentialRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_credential_kind_enum(_kind)
+            kind = check_external_credential_request_kind(_kind)
 
         def _parse_api_key(data: object) -> None | str | Unset:
             if data is None:

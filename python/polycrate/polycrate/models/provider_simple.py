@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.pop_provider_kind_enum import PopProviderKindEnum, check_pop_provider_kind_enum
+from ..models.provider_simple_kind import ProviderSimpleKind, check_provider_simple_kind
 
 T = TypeVar("T", bound="ProviderSimple")
 
@@ -21,7 +21,9 @@ class ProviderSimple:
         name (str):
         display_name (None | str): The display name is used to display the object in the UI. It can be different from
             the name.
-        kind (PopProviderKindEnum): * `infrastructure` - Infrastructure
+        kind (ProviderSimpleKind): Type of provider (infrastructure, hardware, software)
+
+            * `infrastructure` - Infrastructure
             * `hardware` - Hardware
             * `software` - Software
         active (bool): When false, hidden from new PoP/DataSource/workspace PoP assignments.
@@ -32,7 +34,7 @@ class ProviderSimple:
     id: UUID
     name: str
     display_name: None | str
-    kind: PopProviderKindEnum
+    kind: ProviderSimpleKind
     active: bool
     icon_url: str
     url: str
@@ -84,7 +86,7 @@ class ProviderSimple:
 
         display_name = _parse_display_name(d.pop("display_name"))
 
-        kind = check_pop_provider_kind_enum(d.pop("kind"))
+        kind = check_provider_simple_kind(d.pop("kind"))
 
         active = d.pop("active")
 

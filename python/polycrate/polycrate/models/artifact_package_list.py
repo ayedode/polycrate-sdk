@@ -7,8 +7,19 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.artifact_package_list_effective_criticality_type_1 import (
+    ArtifactPackageListEffectiveCriticalityType1,
+    check_artifact_package_list_effective_criticality_type_1,
+)
+from ..models.artifact_package_list_effective_criticality_type_2_type_1 import (
+    ArtifactPackageListEffectiveCriticalityType2Type1,
+    check_artifact_package_list_effective_criticality_type_2_type_1,
+)
+from ..models.artifact_package_list_effective_criticality_type_3_type_1 import (
+    ArtifactPackageListEffectiveCriticalityType3Type1,
+    check_artifact_package_list_effective_criticality_type_3_type_1,
+)
+from ..models.artifact_package_list_state import ArtifactPackageListState, check_artifact_package_list_state
 
 if TYPE_CHECKING:
     from ..models.artifact_package_list_active_condition_instances_item import (
@@ -30,7 +41,7 @@ class ArtifactPackageList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (ArtifactPackageListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -48,7 +59,8 @@ class ArtifactPackageList:
             created (ArtifactPackageListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (ArtifactPackageListEffectiveCriticalityType1 |
+                ArtifactPackageListEffectiveCriticalityType2Type1 | ArtifactPackageListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             kind (str):
             artifact_repository (ArtifactPackageListArtifactRepositoryType0 | None):
@@ -57,7 +69,7 @@ class ArtifactPackageList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: ArtifactPackageListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -68,7 +80,12 @@ class ArtifactPackageList:
     created: ArtifactPackageListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        ArtifactPackageListEffectiveCriticalityType1
+        | ArtifactPackageListEffectiveCriticalityType2Type1
+        | ArtifactPackageListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     kind: str
     artifact_repository: ArtifactPackageListArtifactRepositoryType0 | None
@@ -76,9 +93,7 @@ class ArtifactPackageList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.artifact_package_list_artifact_repository_type_0 import (
-            ArtifactPackageListArtifactRepositoryType0,  # noqa: PLC0415
-        )
+        from ..models.artifact_package_list_artifact_repository_type_0 import ArtifactPackageListArtifactRepositoryType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -113,6 +128,10 @@ class ArtifactPackageList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -161,9 +180,7 @@ class ArtifactPackageList:
         from ..models.artifact_package_list_active_condition_instances_item import (
             ArtifactPackageListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.artifact_package_list_artifact_repository_type_0 import (
-            ArtifactPackageListArtifactRepositoryType0,  # noqa: PLC0415
-        )
+        from ..models.artifact_package_list_artifact_repository_type_0 import ArtifactPackageListArtifactRepositoryType0  # noqa: PLC0415
         from ..models.artifact_package_list_created import ArtifactPackageListCreated  # noqa: PLC0415
 
         d = dict(src_dict)
@@ -171,7 +188,7 @@ class ArtifactPackageList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_artifact_package_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -210,18 +227,51 @@ class ArtifactPackageList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            ArtifactPackageListEffectiveCriticalityType1
+            | ArtifactPackageListEffectiveCriticalityType2Type1
+            | ArtifactPackageListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_artifact_package_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_artifact_package_list_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_artifact_package_list_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ArtifactPackageListEffectiveCriticalityType1
+                | ArtifactPackageListEffectiveCriticalityType2Type1
+                | ArtifactPackageListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

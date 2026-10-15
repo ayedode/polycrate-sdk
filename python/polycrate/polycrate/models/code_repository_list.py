@@ -7,8 +7,19 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.code_repository_list_effective_criticality_type_1 import (
+    CodeRepositoryListEffectiveCriticalityType1,
+    check_code_repository_list_effective_criticality_type_1,
+)
+from ..models.code_repository_list_effective_criticality_type_2_type_1 import (
+    CodeRepositoryListEffectiveCriticalityType2Type1,
+    check_code_repository_list_effective_criticality_type_2_type_1,
+)
+from ..models.code_repository_list_effective_criticality_type_3_type_1 import (
+    CodeRepositoryListEffectiveCriticalityType3Type1,
+    check_code_repository_list_effective_criticality_type_3_type_1,
+)
+from ..models.code_repository_list_state import CodeRepositoryListState, check_code_repository_list_state
 
 if TYPE_CHECKING:
     from ..models.code_repository_list_active_condition_instances_item import (
@@ -30,7 +41,7 @@ class CodeRepositoryList:
     Attributes:
         id (UUID):
         name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-        state (LastStateEnum): * `OK` - Ok
+        state (CodeRepositoryListState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -48,7 +59,8 @@ class CodeRepositoryList:
         created (CodeRepositoryListCreated):
         archived (bool): Archived objects are not shown in the UI and are not managed by the API.
         reconciliation_running (bool):
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (CodeRepositoryListEffectiveCriticalityType1 |
+            CodeRepositoryListEffectiveCriticalityType2Type1 | CodeRepositoryListEffectiveCriticalityType3Type1 | None):
         url (str): Gibt die absolute URL zum Object zurück.
         kind (str):
         hostname (str):
@@ -59,7 +71,7 @@ class CodeRepositoryList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: CodeRepositoryListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -70,7 +82,12 @@ class CodeRepositoryList:
     created: CodeRepositoryListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        CodeRepositoryListEffectiveCriticalityType1
+        | CodeRepositoryListEffectiveCriticalityType2Type1
+        | CodeRepositoryListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     kind: str
     hostname: str
@@ -80,9 +97,7 @@ class CodeRepositoryList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.code_repository_list_organization_type_0 import (
-            CodeRepositoryListOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.code_repository_list_organization_type_0 import CodeRepositoryListOrganizationType0  # noqa: PLC0415
         from ..models.code_repository_list_workspace_type_0 import CodeRepositoryListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
@@ -124,6 +139,10 @@ class CodeRepositoryList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -176,9 +195,7 @@ class CodeRepositoryList:
         )
         from ..models.code_repository_list_created import CodeRepositoryListCreated  # noqa: PLC0415
         from ..models.code_repository_list_k8s_cluster import CodeRepositoryListK8SCluster  # noqa: PLC0415
-        from ..models.code_repository_list_organization_type_0 import (
-            CodeRepositoryListOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.code_repository_list_organization_type_0 import CodeRepositoryListOrganizationType0  # noqa: PLC0415
         from ..models.code_repository_list_workspace_type_0 import CodeRepositoryListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
@@ -186,7 +203,7 @@ class CodeRepositoryList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_code_repository_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -241,18 +258,51 @@ class CodeRepositoryList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            CodeRepositoryListEffectiveCriticalityType1
+            | CodeRepositoryListEffectiveCriticalityType2Type1
+            | CodeRepositoryListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_code_repository_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_code_repository_list_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_code_repository_list_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CodeRepositoryListEffectiveCriticalityType1
+                | CodeRepositoryListEffectiveCriticalityType2Type1
+                | CodeRepositoryListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

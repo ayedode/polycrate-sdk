@@ -7,10 +7,21 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.block_kind_enum import BlockKindEnum, check_block_kind_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.installation_status_enum import InstallationStatusEnum, check_installation_status_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.block_list_effective_criticality_type_1 import (
+    BlockListEffectiveCriticalityType1,
+    check_block_list_effective_criticality_type_1,
+)
+from ..models.block_list_effective_criticality_type_2_type_1 import (
+    BlockListEffectiveCriticalityType2Type1,
+    check_block_list_effective_criticality_type_2_type_1,
+)
+from ..models.block_list_effective_criticality_type_3_type_1 import (
+    BlockListEffectiveCriticalityType3Type1,
+    check_block_list_effective_criticality_type_3_type_1,
+)
+from ..models.block_list_installation_status import BlockListInstallationStatus, check_block_list_installation_status
+from ..models.block_list_kind import BlockListKind, check_block_list_kind
+from ..models.block_list_state import BlockListState, check_block_list_state
 
 if TYPE_CHECKING:
     from ..models.block_list_active_condition_instances_item import BlockListActiveConditionInstancesItem
@@ -38,7 +49,7 @@ class BlockList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (BlockListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -56,9 +67,10 @@ class BlockList:
             created (BlockListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (BlockListEffectiveCriticalityType1 | BlockListEffectiveCriticalityType2Type1 |
+                BlockListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
-            kind (BlockKindEnum): * `dockerapp` - Docker App
+            kind (BlockListKind): * `dockerapp` - Docker App
                 * `linuxapp` - Linux App
                 * `k8sapp` - Kubernetes App
                 * `k8sappinstance` - Kubernetes App Instance
@@ -74,7 +86,9 @@ class BlockList:
             latest_stable (None | str):
             template (bool):  Default: False.
             installed (bool): True if the block is currently installed
-            installation_status (InstallationStatusEnum): * `idle` - Idle
+            installation_status (BlockListInstallationStatus): Current installation state of the block
+
+                * `idle` - Idle
                 * `installing` - Installing
                 * `uninstalling` - Uninstalling
                 * `install_failed` - Install Failed
@@ -85,7 +99,7 @@ class BlockList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: BlockListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -96,9 +110,14 @@ class BlockList:
     created: BlockListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        BlockListEffectiveCriticalityType1
+        | BlockListEffectiveCriticalityType2Type1
+        | BlockListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
-    kind: BlockKindEnum
+    kind: BlockListKind
     type_: None | str
     flavor: None | str
     version: None | str
@@ -107,7 +126,7 @@ class BlockList:
     is_behind_stable: bool
     latest_stable: None | str
     installed: bool
-    installation_status: InstallationStatusEnum
+    installation_status: BlockListInstallationStatus
     installed_version: None | str
     update_needed: bool
     template: bool = False
@@ -156,6 +175,10 @@ class BlockList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -233,9 +256,7 @@ class BlockList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.block_list_active_condition_instances_item import (
-            BlockListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.block_list_active_condition_instances_item import BlockListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.block_list_created import BlockListCreated  # noqa: PLC0415
         from ..models.block_list_organization_type_0 import BlockListOrganizationType0  # noqa: PLC0415
         from ..models.block_list_workspace_type_0 import BlockListWorkspaceType0  # noqa: PLC0415
@@ -246,7 +267,7 @@ class BlockList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_block_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -301,24 +322,53 @@ class BlockList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            BlockListEffectiveCriticalityType1
+            | BlockListEffectiveCriticalityType2Type1
+            | BlockListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_block_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_block_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_block_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BlockListEffectiveCriticalityType1
+                | BlockListEffectiveCriticalityType2Type1
+                | BlockListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
         url = d.pop("url")
 
-        kind = check_block_kind_enum(d.pop("kind"))
+        kind = check_block_list_kind(d.pop("kind"))
 
         def _parse_type_(data: object) -> None | str:
             if data is None:
@@ -363,7 +413,7 @@ class BlockList:
 
         installed = d.pop("installed")
 
-        installation_status = check_installation_status_enum(d.pop("installation_status"))
+        installation_status = check_block_list_installation_status(d.pop("installation_status"))
 
         def _parse_installed_version(data: object) -> None | str:
             if data is None:

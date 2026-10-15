@@ -9,11 +9,27 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.assistant_session_status_enum import AssistantSessionStatusEnum, check_assistant_session_status_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.assistant_session_request_criticality_type_1 import (
+    AssistantSessionRequestCriticalityType1,
+    check_assistant_session_request_criticality_type_1,
+)
+from ..models.assistant_session_request_criticality_type_2_type_1 import (
+    AssistantSessionRequestCriticalityType2Type1,
+    check_assistant_session_request_criticality_type_2_type_1,
+)
+from ..models.assistant_session_request_criticality_type_3_type_1 import (
+    AssistantSessionRequestCriticalityType3Type1,
+    check_assistant_session_request_criticality_type_3_type_1,
+)
+from ..models.assistant_session_request_kind import AssistantSessionRequestKind, check_assistant_session_request_kind
+from ..models.assistant_session_request_provider import (
+    AssistantSessionRequestProvider,
+    check_assistant_session_request_provider,
+)
+from ..models.assistant_session_request_status import (
+    AssistantSessionRequestStatus,
+    check_assistant_session_request_status,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="AssistantSessionRequest")
@@ -31,7 +47,7 @@ class AssistantSessionRequest:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (AssistantSessionRequestProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -48,14 +64,15 @@ class AssistantSessionRequest:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+        kind (AssistantSessionRequestKind | Unset): * `generic` - Generic
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
             the condition will not be applied.
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (AssistantSessionRequestCriticalityType1 | AssistantSessionRequestCriticalityType2Type1 |
+            AssistantSessionRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace,
+            then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -66,7 +83,7 @@ class AssistantSessionRequest:
         slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-        status (AssistantSessionStatusEnum | Unset): * `open` - Open
+        status (AssistantSessionRequestStatus | Unset): * `open` - Open
             * `closed` - Closed
     """
 
@@ -76,23 +93,29 @@ class AssistantSessionRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: AssistantSessionRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: AssistantSessionRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        AssistantSessionRequestCriticalityType1
+        | AssistantSessionRequestCriticalityType2Type1
+        | AssistantSessionRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    status: AssistantSessionStatusEnum | Unset = UNSET
+    status: AssistantSessionRequestStatus | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -157,6 +180,8 @@ class AssistantSessionRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -310,7 +335,9 @@ class AssistantSessionRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -372,11 +399,11 @@ class AssistantSessionRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: AssistantSessionRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_assistant_session_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -401,11 +428,11 @@ class AssistantSessionRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: AssistantSessionRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_assistant_session_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -437,7 +464,15 @@ class AssistantSessionRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            AssistantSessionRequestCriticalityType1
+            | AssistantSessionRequestCriticalityType2Type1
+            | AssistantSessionRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -445,20 +480,35 @@ class AssistantSessionRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_assistant_session_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_assistant_session_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_assistant_session_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AssistantSessionRequestCriticalityType1
+                | AssistantSessionRequestCriticalityType2Type1
+                | AssistantSessionRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -494,11 +544,11 @@ class AssistantSessionRequest:
         sla_availability = d.pop("sla_availability", UNSET)
 
         _status = d.pop("status", UNSET)
-        status: AssistantSessionStatusEnum | Unset
+        status: AssistantSessionRequestStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_assistant_session_status_enum(_status)
+            status = check_assistant_session_request_status(_status)
 
         assistant_session_request = cls(
             workspace_id=workspace_id,

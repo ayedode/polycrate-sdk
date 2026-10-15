@@ -7,8 +7,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.credential_kind_enum import CredentialKindEnum, check_credential_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.credential_simple_kind import CredentialSimpleKind, check_credential_simple_kind
+from ..models.credential_simple_provider import CredentialSimpleProvider, check_credential_simple_provider
 
 T = TypeVar("T", bound="CredentialSimple")
 
@@ -21,7 +21,7 @@ class CredentialSimple:
         id (UUID):
         name (str):
         reconciliation_running (bool):
-        kind (CredentialKindEnum): * `api-key` - API Key
+        kind (CredentialSimpleKind): * `api-key` - API Key
             * `kubeconfig` - Kubeconfig
             * `s3-credential` - S3 Credential
             * `ssh-keys` - SSH Keys
@@ -42,7 +42,7 @@ class CredentialSimple:
             * `org_api_key` - Org API Key
             * `controlplane-token` - Controlplane Token
             * `provider-account` - Provider Account
-        provider (ProviderEnum): * `loopback` - Loopback
+        provider (CredentialSimpleProvider): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -61,8 +61,8 @@ class CredentialSimple:
     id: UUID
     name: str
     reconciliation_running: bool
-    kind: CredentialKindEnum
-    provider: ProviderEnum
+    kind: CredentialSimpleKind
+    provider: CredentialSimpleProvider
     url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -103,9 +103,9 @@ class CredentialSimple:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        kind = check_credential_kind_enum(d.pop("kind"))
+        kind = check_credential_simple_kind(d.pop("kind"))
 
-        provider = check_provider_enum(d.pop("provider"))
+        provider = check_credential_simple_provider(d.pop("provider"))
 
         url = d.pop("url")
 

@@ -9,11 +9,21 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.backup_kind_enum import BackupKindEnum, check_backup_kind_enum
-from ..models.backup_provider_enum import BackupProviderEnum, check_backup_provider_enum
-from ..models.backup_status_enum import BackupStatusEnum, check_backup_status_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
+from ..models.patched_backup_request_criticality_type_1 import (
+    PatchedBackupRequestCriticalityType1,
+    check_patched_backup_request_criticality_type_1,
+)
+from ..models.patched_backup_request_criticality_type_2_type_1 import (
+    PatchedBackupRequestCriticalityType2Type1,
+    check_patched_backup_request_criticality_type_2_type_1,
+)
+from ..models.patched_backup_request_criticality_type_3_type_1 import (
+    PatchedBackupRequestCriticalityType3Type1,
+    check_patched_backup_request_criticality_type_3_type_1,
+)
+from ..models.patched_backup_request_kind import PatchedBackupRequestKind, check_patched_backup_request_kind
+from ..models.patched_backup_request_provider import PatchedBackupRequestProvider, check_patched_backup_request_provider
+from ..models.patched_backup_request_status import PatchedBackupRequestStatus, check_patched_backup_request_status
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedBackupRequest")
@@ -45,14 +55,18 @@ class PatchedBackupRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (BackupProviderEnum | Unset): * `velero` - Velero
+            provider (PatchedBackupRequestProvider | Unset): Backup provider/tool that created this backup
+
+                * `velero` - Velero
                 * `cloudnativepg` - CloudNativePG
                 * `custom` - Custom Provider
             provider_reference (None | str | Unset):
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (BackupKindEnum | Unset): * `cluster` - Cluster Backup
+            kind (PatchedBackupRequestKind | Unset): Type of backup (cluster, app, database)
+
+                * `cluster` - Cluster Backup
                 * `app` - Application Backup
                 * `database` - Database Backup
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -60,8 +74,9 @@ class PatchedBackupRequest:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | PatchedBackupRequestCriticalityType1 | PatchedBackupRequestCriticalityType2Type1 |
+                PatchedBackupRequestCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then org.
+                Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -74,7 +89,9 @@ class PatchedBackupRequest:
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
             source_namespace (None | str | Unset): Kubernetes namespace of the discovered source backup (for unique identity
                 with name+provider)
-            status (BackupStatusEnum | Unset): * `pending` - Pending
+            status (PatchedBackupRequestStatus | Unset): Normalized backup status across all providers
+
+                * `pending` - Pending
                 * `running` - Running
                 * `completed` - Completed
                 * `failed` - Failed
@@ -98,24 +115,30 @@ class PatchedBackupRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: BackupProviderEnum | Unset = UNSET
+    provider: PatchedBackupRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: BackupKindEnum | Unset = UNSET
+    kind: PatchedBackupRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedBackupRequestCriticalityType1
+        | PatchedBackupRequestCriticalityType2Type1
+        | PatchedBackupRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
     source_namespace: None | str | Unset = UNSET
-    status: BackupStatusEnum | Unset = UNSET
+    status: PatchedBackupRequestStatus | Unset = UNSET
     k8s_cluster: UUID | Unset = UNSET
     schedule: None | Unset | UUID = UNSET
     started_at: datetime.datetime | None | Unset = UNSET
@@ -187,6 +210,8 @@ class PatchedBackupRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -416,7 +441,9 @@ class PatchedBackupRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -530,11 +557,11 @@ class PatchedBackupRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: BackupProviderEnum | Unset
+        provider: PatchedBackupRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_backup_provider_enum(_provider)
+            provider = check_patched_backup_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -559,11 +586,11 @@ class PatchedBackupRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: BackupKindEnum | Unset
+        kind: PatchedBackupRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_backup_kind_enum(_kind)
+            kind = check_patched_backup_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -595,7 +622,15 @@ class PatchedBackupRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedBackupRequestCriticalityType1
+            | PatchedBackupRequestCriticalityType2Type1
+            | PatchedBackupRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -603,20 +638,35 @@ class PatchedBackupRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_backup_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_backup_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_backup_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedBackupRequestCriticalityType1
+                | PatchedBackupRequestCriticalityType2Type1
+                | PatchedBackupRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -661,11 +711,11 @@ class PatchedBackupRequest:
         source_namespace = _parse_source_namespace(d.pop("source_namespace", UNSET))
 
         _status = d.pop("status", UNSET)
-        status: BackupStatusEnum | Unset
+        status: PatchedBackupRequestStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_backup_status_enum(_status)
+            status = check_patched_backup_request_status(_status)
 
         _k8s_cluster = d.pop("k8s_cluster", UNSET)
         k8s_cluster: UUID | Unset

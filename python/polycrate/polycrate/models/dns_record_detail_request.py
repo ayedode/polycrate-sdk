@@ -9,12 +9,36 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.dns_record_type_enum import DNSRecordTypeEnum, check_dns_record_type_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.dns_record_detail_request_created_by_component_type_1 import (
+    DNSRecordDetailRequestCreatedByComponentType1,
+    check_dns_record_detail_request_created_by_component_type_1,
+)
+from ..models.dns_record_detail_request_created_by_component_type_2_type_1 import (
+    DNSRecordDetailRequestCreatedByComponentType2Type1,
+    check_dns_record_detail_request_created_by_component_type_2_type_1,
+)
+from ..models.dns_record_detail_request_created_by_component_type_3_type_1 import (
+    DNSRecordDetailRequestCreatedByComponentType3Type1,
+    check_dns_record_detail_request_created_by_component_type_3_type_1,
+)
+from ..models.dns_record_detail_request_criticality_type_1 import (
+    DNSRecordDetailRequestCriticalityType1,
+    check_dns_record_detail_request_criticality_type_1,
+)
+from ..models.dns_record_detail_request_criticality_type_2_type_1 import (
+    DNSRecordDetailRequestCriticalityType2Type1,
+    check_dns_record_detail_request_criticality_type_2_type_1,
+)
+from ..models.dns_record_detail_request_criticality_type_3_type_1 import (
+    DNSRecordDetailRequestCriticalityType3Type1,
+    check_dns_record_detail_request_criticality_type_3_type_1,
+)
+from ..models.dns_record_detail_request_kind import DNSRecordDetailRequestKind, check_dns_record_detail_request_kind
+from ..models.dns_record_detail_request_provider import (
+    DNSRecordDetailRequestProvider,
+    check_dns_record_detail_request_provider,
+)
+from ..models.dns_record_detail_request_type import DNSRecordDetailRequestType, check_dns_record_detail_request_type
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DNSRecordDetailRequest")
@@ -49,7 +73,7 @@ class DNSRecordDetailRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (DNSRecordDetailRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -67,14 +91,15 @@ class DNSRecordDetailRequest:
             reconciliation_enabled (bool | Unset):
             last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
             platform_service (bool | Unset):
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (DNSRecordDetailRequestKind | Unset): * `generic` - Generic
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (DNSRecordDetailRequestCreatedByComponentType1 |
+                DNSRecordDetailRequestCreatedByComponentType2Type1 | DNSRecordDetailRequestCreatedByComponentType3Type1 | None |
+                Unset): Component that created this object: cli, operator, or api.
 
                 * `cli` - CLI
                 * `operator` - Operator
@@ -87,15 +112,16 @@ class DNSRecordDetailRequest:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (DNSRecordDetailRequestCriticalityType1 | DNSRecordDetailRequestCriticalityType2Type1 |
+                DNSRecordDetailRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace,
+                then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
                 * `low` - Low
             managed_by_object_id (None | str | Unset):
             platform_dns_record_created (bool | Unset):
-            type_ (DNSRecordTypeEnum | Unset): * `A` - A
+            type_ (DNSRecordDetailRequestType | Unset): * `A` - A
                 * `AAAA` - AAAA
                 * `CNAME` - CNAME
                 * `MX` - MX
@@ -125,18 +151,24 @@ class DNSRecordDetailRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: DNSRecordDetailRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: DNSRecordDetailRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        DNSRecordDetailRequestCreatedByComponentType1
+        | DNSRecordDetailRequestCreatedByComponentType2Type1
+        | DNSRecordDetailRequestCreatedByComponentType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_window_days: int | None | Unset = UNSET
@@ -144,10 +176,16 @@ class DNSRecordDetailRequest:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        DNSRecordDetailRequestCriticalityType1
+        | DNSRecordDetailRequestCriticalityType2Type1
+        | DNSRecordDetailRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
-    type_: DNSRecordTypeEnum | Unset = "A"
+    type_: DNSRecordDetailRequestType | Unset = "A"
     ttl: int | Unset = UNSET
     priority: int | None | Unset = UNSET
     archived_by: int | None | Unset = UNSET
@@ -230,6 +268,8 @@ class DNSRecordDetailRequest:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -270,6 +310,8 @@ class DNSRecordDetailRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -484,7 +526,9 @@ class DNSRecordDetailRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.created_by_component, Unset):
-            if isinstance(self.created_by_component, str):
+            if self.created_by_component is None:
+                files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
+            elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
             elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
@@ -528,7 +572,9 @@ class DNSRecordDetailRequest:
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -616,11 +662,11 @@ class DNSRecordDetailRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: DNSRecordDetailRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_dns_record_detail_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -656,11 +702,11 @@ class DNSRecordDetailRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: DNSRecordDetailRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_dns_record_detail_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -692,7 +738,15 @@ class DNSRecordDetailRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            DNSRecordDetailRequestCreatedByComponentType1
+            | DNSRecordDetailRequestCreatedByComponentType2Type1
+            | DNSRecordDetailRequestCreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -700,20 +754,39 @@ class DNSRecordDetailRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_dns_record_detail_request_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_dns_record_detail_request_created_by_component_type_2_type_1(
+                    data
+                )
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_dns_record_detail_request_created_by_component_type_3_type_1(
+                    data
+                )
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DNSRecordDetailRequestCreatedByComponentType1
+                | DNSRecordDetailRequestCreatedByComponentType2Type1
+                | DNSRecordDetailRequestCreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -766,7 +839,15 @@ class DNSRecordDetailRequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            DNSRecordDetailRequestCriticalityType1
+            | DNSRecordDetailRequestCriticalityType2Type1
+            | DNSRecordDetailRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -774,20 +855,35 @@ class DNSRecordDetailRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_dns_record_detail_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_dns_record_detail_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_dns_record_detail_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DNSRecordDetailRequestCriticalityType1
+                | DNSRecordDetailRequestCriticalityType2Type1
+                | DNSRecordDetailRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -803,11 +899,11 @@ class DNSRecordDetailRequest:
         platform_dns_record_created = d.pop("platform_dns_record_created", UNSET)
 
         _type_ = d.pop("type", UNSET)
-        type_: DNSRecordTypeEnum | Unset
+        type_: DNSRecordDetailRequestType | Unset
         if isinstance(_type_, Unset):
             type_ = UNSET
         else:
-            type_ = check_dns_record_type_enum(_type_)
+            type_ = check_dns_record_detail_request_type(_type_)
 
         ttl = d.pop("ttl", UNSET)
 

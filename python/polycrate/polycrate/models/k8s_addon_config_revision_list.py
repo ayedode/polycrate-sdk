@@ -7,8 +7,22 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.k8s_addon_config_revision_list_effective_criticality_type_1 import (
+    K8SAddonConfigRevisionListEffectiveCriticalityType1,
+    check_k8s_addon_config_revision_list_effective_criticality_type_1,
+)
+from ..models.k8s_addon_config_revision_list_effective_criticality_type_2_type_1 import (
+    K8SAddonConfigRevisionListEffectiveCriticalityType2Type1,
+    check_k8s_addon_config_revision_list_effective_criticality_type_2_type_1,
+)
+from ..models.k8s_addon_config_revision_list_effective_criticality_type_3_type_1 import (
+    K8SAddonConfigRevisionListEffectiveCriticalityType3Type1,
+    check_k8s_addon_config_revision_list_effective_criticality_type_3_type_1,
+)
+from ..models.k8s_addon_config_revision_list_state import (
+    K8SAddonConfigRevisionListState,
+    check_k8s_addon_config_revision_list_state,
+)
 
 if TYPE_CHECKING:
     from ..models.k8s_addon_config_revision_list_active_condition_instances_item import (
@@ -48,7 +62,7 @@ class K8SAddonConfigRevisionList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (K8SAddonConfigRevisionListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -66,7 +80,9 @@ class K8SAddonConfigRevisionList:
             created (K8SAddonConfigRevisionListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (K8SAddonConfigRevisionListEffectiveCriticalityType1 |
+                K8SAddonConfigRevisionListEffectiveCriticalityType2Type1 |
+                K8SAddonConfigRevisionListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             addon (K8SAddonConfigRevisionListAddonType0 | None):
             version (str):
@@ -74,7 +90,7 @@ class K8SAddonConfigRevisionList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: K8SAddonConfigRevisionListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -85,22 +101,23 @@ class K8SAddonConfigRevisionList:
     created: K8SAddonConfigRevisionListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        K8SAddonConfigRevisionListEffectiveCriticalityType1
+        | K8SAddonConfigRevisionListEffectiveCriticalityType2Type1
+        | K8SAddonConfigRevisionListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     addon: K8SAddonConfigRevisionListAddonType0 | None
     version: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.k8s_addon_config_revision_list_addon_type_0 import (
-            K8SAddonConfigRevisionListAddonType0,  # noqa: PLC0415
-        )
+        from ..models.k8s_addon_config_revision_list_addon_type_0 import K8SAddonConfigRevisionListAddonType0  # noqa: PLC0415
         from ..models.k8s_addon_config_revision_list_organization_type_0 import (
             K8SAddonConfigRevisionListOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.k8s_addon_config_revision_list_workspace_type_0 import (
-            K8SAddonConfigRevisionListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.k8s_addon_config_revision_list_workspace_type_0 import K8SAddonConfigRevisionListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -141,6 +158,10 @@ class K8SAddonConfigRevisionList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -186,23 +207,19 @@ class K8SAddonConfigRevisionList:
         from ..models.k8s_addon_config_revision_list_active_condition_instances_item import (
             K8SAddonConfigRevisionListActiveConditionInstancesItem,  # noqa: PLC0415
         )
-        from ..models.k8s_addon_config_revision_list_addon_type_0 import (
-            K8SAddonConfigRevisionListAddonType0,  # noqa: PLC0415
-        )
+        from ..models.k8s_addon_config_revision_list_addon_type_0 import K8SAddonConfigRevisionListAddonType0  # noqa: PLC0415
         from ..models.k8s_addon_config_revision_list_created import K8SAddonConfigRevisionListCreated  # noqa: PLC0415
         from ..models.k8s_addon_config_revision_list_organization_type_0 import (
             K8SAddonConfigRevisionListOrganizationType0,  # noqa: PLC0415
         )
-        from ..models.k8s_addon_config_revision_list_workspace_type_0 import (
-            K8SAddonConfigRevisionListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.k8s_addon_config_revision_list_workspace_type_0 import K8SAddonConfigRevisionListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_k8s_addon_config_revision_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -257,18 +274,51 @@ class K8SAddonConfigRevisionList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            K8SAddonConfigRevisionListEffectiveCriticalityType1
+            | K8SAddonConfigRevisionListEffectiveCriticalityType2Type1
+            | K8SAddonConfigRevisionListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_k8s_addon_config_revision_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = (
+                    check_k8s_addon_config_revision_list_effective_criticality_type_2_type_1(data)
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = (
+                    check_k8s_addon_config_revision_list_effective_criticality_type_3_type_1(data)
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                K8SAddonConfigRevisionListEffectiveCriticalityType1
+                | K8SAddonConfigRevisionListEffectiveCriticalityType2Type1
+                | K8SAddonConfigRevisionListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

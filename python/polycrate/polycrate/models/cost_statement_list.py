@@ -8,9 +8,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.cost_statement_status_enum import CostStatementStatusEnum, check_cost_statement_status_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.cost_statement_list_effective_criticality_type_1 import (
+    CostStatementListEffectiveCriticalityType1,
+    check_cost_statement_list_effective_criticality_type_1,
+)
+from ..models.cost_statement_list_effective_criticality_type_2_type_1 import (
+    CostStatementListEffectiveCriticalityType2Type1,
+    check_cost_statement_list_effective_criticality_type_2_type_1,
+)
+from ..models.cost_statement_list_effective_criticality_type_3_type_1 import (
+    CostStatementListEffectiveCriticalityType3Type1,
+    check_cost_statement_list_effective_criticality_type_3_type_1,
+)
+from ..models.cost_statement_list_state import CostStatementListState, check_cost_statement_list_state
+from ..models.cost_statement_list_status import CostStatementListStatus, check_cost_statement_list_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -50,7 +61,7 @@ class CostStatementList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (CostStatementListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -68,11 +79,12 @@ class CostStatementList:
             created (CostStatementListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (CostStatementListEffectiveCriticalityType1 |
+                CostStatementListEffectiveCriticalityType2Type1 | CostStatementListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             period_start (datetime.datetime):
             period_end (datetime.datetime):
-            status (CostStatementStatusEnum | Unset): * `draft` - Draft
+            status (CostStatementListStatus | Unset): * `draft` - Draft
                 * `final` - Final
                 * `voided` - Voided
             total_net (str | Unset):
@@ -83,7 +95,7 @@ class CostStatementList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: CostStatementListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -94,11 +106,16 @@ class CostStatementList:
     created: CostStatementListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        CostStatementListEffectiveCriticalityType1
+        | CostStatementListEffectiveCriticalityType2Type1
+        | CostStatementListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     period_start: datetime.datetime
     period_end: datetime.datetime
-    status: CostStatementStatusEnum | Unset = UNSET
+    status: CostStatementListStatus | Unset = UNSET
     total_net: str | Unset = UNSET
     currency: str | Unset = UNSET
     is_manual: bool | Unset = UNSET
@@ -148,6 +165,10 @@ class CostStatementList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -226,7 +247,7 @@ class CostStatementList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_cost_statement_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -281,18 +302,51 @@ class CostStatementList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            CostStatementListEffectiveCriticalityType1
+            | CostStatementListEffectiveCriticalityType2Type1
+            | CostStatementListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_cost_statement_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_cost_statement_list_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_cost_statement_list_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CostStatementListEffectiveCriticalityType1
+                | CostStatementListEffectiveCriticalityType2Type1
+                | CostStatementListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -303,11 +357,11 @@ class CostStatementList:
         period_end = datetime.datetime.fromisoformat(d.pop("period_end"))
 
         _status = d.pop("status", UNSET)
-        status: CostStatementStatusEnum | Unset
+        status: CostStatementListStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_cost_statement_status_enum(_status)
+            status = check_cost_statement_list_status(_status)
 
         total_net = d.pop("total_net", UNSET)
 

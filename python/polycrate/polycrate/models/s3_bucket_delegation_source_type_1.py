@@ -1,0 +1,14 @@
+from typing import Literal
+
+S3BucketDelegationSourceType1 = Literal["loopback_lb", "loopback_object_store"]
+
+S3_BUCKET_DELEGATION_SOURCE_TYPE_1_VALUES: set[S3BucketDelegationSourceType1] = {
+    "loopback_lb",
+    "loopback_object_store",
+}
+
+
+def check_s3_bucket_delegation_source_type_1(value: str) -> S3BucketDelegationSourceType1:
+    if value in S3_BUCKET_DELEGATION_SOURCE_TYPE_1_VALUES:
+        return value
+    raise TypeError(f"Unexpected value {value!r}. Expected one of {S3_BUCKET_DELEGATION_SOURCE_TYPE_1_VALUES!r}")

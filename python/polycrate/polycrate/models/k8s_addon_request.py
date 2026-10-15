@@ -9,12 +9,22 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.enforcement_enum import EnforcementEnum, check_enforcement_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.k8s_addon_request_criticality_type_1 import (
+    K8SAddonRequestCriticalityType1,
+    check_k8s_addon_request_criticality_type_1,
+)
+from ..models.k8s_addon_request_criticality_type_2_type_1 import (
+    K8SAddonRequestCriticalityType2Type1,
+    check_k8s_addon_request_criticality_type_2_type_1,
+)
+from ..models.k8s_addon_request_criticality_type_3_type_1 import (
+    K8SAddonRequestCriticalityType3Type1,
+    check_k8s_addon_request_criticality_type_3_type_1,
+)
+from ..models.k8s_addon_request_enforcement import K8SAddonRequestEnforcement, check_k8s_addon_request_enforcement
+from ..models.k8s_addon_request_kind import K8SAddonRequestKind, check_k8s_addon_request_kind
+from ..models.k8s_addon_request_provider import K8SAddonRequestProvider, check_k8s_addon_request_provider
+from ..models.k8s_addon_request_scope import K8SAddonRequestScope, check_k8s_addon_request_scope
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="K8SAddonRequest")
@@ -34,7 +44,7 @@ class K8SAddonRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (K8SAddonRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -52,13 +62,17 @@ class K8SAddonRequest:
             reconciliation_enabled (bool | Unset):
             discovery_enabled (bool | Unset):
             platform_service (bool | Unset):
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (K8SAddonRequestScope | Unset): The scope is used to separate `system` owned objects from `user` owned
+                objects.
+
+                * `system` - System
                 * `user` - User
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (K8SAddonRequestKind | Unset): * `generic` - Generic
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
+            criticality (K8SAddonRequestCriticalityType1 | K8SAddonRequestCriticalityType2Type1 |
+                K8SAddonRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then
                 org. Explicit value overrides inheritance.
 
                 * `high` - High
@@ -80,7 +94,7 @@ class K8SAddonRequest:
             allow_multiple (bool | Unset): When true, a cluster may subscribe this addon more than once (one workspace block
                 per subscription).
             order (int | Unset): BRI creation order (ascending).
-            enforcement (EnforcementEnum | Unset): * `optional` - Optional
+            enforcement (K8SAddonRequestEnforcement | Unset): * `optional` - Optional
                 * `recommended` - Recommended
                 * `required` - Required
     """
@@ -92,18 +106,24 @@ class K8SAddonRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: K8SAddonRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: K8SAddonRequestScope | Unset = UNSET
+    kind: K8SAddonRequestKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        K8SAddonRequestCriticalityType1
+        | K8SAddonRequestCriticalityType2Type1
+        | K8SAddonRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -117,7 +137,7 @@ class K8SAddonRequest:
     is_default: bool | Unset = UNSET
     allow_multiple: bool | Unset = UNSET
     order: int | Unset = UNSET
-    enforcement: EnforcementEnum | Unset = UNSET
+    enforcement: K8SAddonRequestEnforcement | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -188,6 +208,8 @@ class K8SAddonRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -381,7 +403,9 @@ class K8SAddonRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -474,11 +498,11 @@ class K8SAddonRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: K8SAddonRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_k8s_addon_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -505,18 +529,18 @@ class K8SAddonRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: K8SAddonRequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_k8s_addon_request_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: K8SAddonRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_k8s_addon_request_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -546,7 +570,15 @@ class K8SAddonRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            K8SAddonRequestCriticalityType1
+            | K8SAddonRequestCriticalityType2Type1
+            | K8SAddonRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -554,20 +586,35 @@ class K8SAddonRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_k8s_addon_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_k8s_addon_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_k8s_addon_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                K8SAddonRequestCriticalityType1
+                | K8SAddonRequestCriticalityType2Type1
+                | K8SAddonRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -619,11 +666,11 @@ class K8SAddonRequest:
         order = d.pop("order", UNSET)
 
         _enforcement = d.pop("enforcement", UNSET)
-        enforcement: EnforcementEnum | Unset
+        enforcement: K8SAddonRequestEnforcement | Unset
         if isinstance(_enforcement, Unset):
             enforcement = UNSET
         else:
-            enforcement = check_enforcement_enum(_enforcement)
+            enforcement = check_k8s_addon_request_enforcement(_enforcement)
 
         k8s_addon_request = cls(
             catalogue_app=catalogue_app,

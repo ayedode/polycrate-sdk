@@ -8,9 +8,9 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.organization_cached_metrics_message_kind_enum import (
-    OrganizationCachedMetricsMessageKindEnum,
-    check_organization_cached_metrics_message_kind_enum,
+from ..models.organization_cached_metrics_message_kind import (
+    OrganizationCachedMetricsMessageKind,
+    check_organization_cached_metrics_message_kind,
 )
 
 T = TypeVar("T", bound="OrganizationCachedMetricsMessage")
@@ -21,7 +21,7 @@ class OrganizationCachedMetricsMessage:
     """Live ops message row for the portal dashboard (Spec 630).
 
     Attributes:
-        kind (OrganizationCachedMetricsMessageKindEnum): * `maintenance` - maintenance
+        kind (OrganizationCachedMetricsMessageKind): * `maintenance` - maintenance
             * `incident` - incident
             * `downtime` - downtime
         id (UUID):
@@ -32,7 +32,7 @@ class OrganizationCachedMetricsMessage:
         system_wide (bool): True when organization is null (platform-wide maintenance/incident)
     """
 
-    kind: OrganizationCachedMetricsMessageKindEnum
+    kind: OrganizationCachedMetricsMessageKind
     id: UUID
     title: str
     severity: None | str
@@ -84,7 +84,7 @@ class OrganizationCachedMetricsMessage:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        kind = check_organization_cached_metrics_message_kind_enum(d.pop("kind"))
+        kind = check_organization_cached_metrics_message_kind(d.pop("kind"))
 
         id = UUID(d.pop("id"))
 

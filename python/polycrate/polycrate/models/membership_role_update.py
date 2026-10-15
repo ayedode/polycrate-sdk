@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.user_role_enum import UserRoleEnum, check_user_role_enum
+from ..models.membership_role_update_role import MembershipRoleUpdateRole, check_membership_role_update_role
 
 T = TypeVar("T", bound="MembershipRoleUpdate")
 
@@ -18,7 +18,9 @@ class MembershipRoleUpdate:
 
     Attributes:
         organization_id (UUID): Polycrate organization UUID of the membership to update
-        role (UserRoleEnum): * `admin` - Admin
+        role (MembershipRoleUpdateRole): New organization-scoped role: admin, developer, billing, viewer, or owner
+
+            * `admin` - Admin
             * `developer` - Developer
             * `billing` - Billing
             * `viewer` - Viewer
@@ -26,7 +28,7 @@ class MembershipRoleUpdate:
     """
 
     organization_id: UUID
-    role: UserRoleEnum
+    role: MembershipRoleUpdateRole
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -50,7 +52,7 @@ class MembershipRoleUpdate:
         d = dict(src_dict)
         organization_id = UUID(d.pop("organization_id"))
 
-        role = check_user_role_enum(d.pop("role"))
+        role = check_membership_role_update_role(d.pop("role"))
 
         membership_role_update = cls(
             organization_id=organization_id,

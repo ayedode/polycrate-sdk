@@ -8,7 +8,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.workspace_template_state import WorkspaceTemplateState, check_workspace_template_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -28,7 +28,7 @@ class WorkspaceTemplate:
         organization (OrganizationSimple): Simple Organization serializer for nested representations.
 
             Includes `url` field for direct navigation.
-        state (LastStateEnum): * `OK` - Ok
+        state (WorkspaceTemplateState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -51,7 +51,7 @@ class WorkspaceTemplate:
     id: UUID
     name: str
     organization: OrganizationSimple
-    state: LastStateEnum
+    state: WorkspaceTemplateState
     conditions: Any
     workspaces_count: int
     created_at: datetime.datetime
@@ -148,7 +148,7 @@ class WorkspaceTemplate:
 
         organization = OrganizationSimple.from_dict(d.pop("organization"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_workspace_template_state(d.pop("state"))
 
         conditions = d.pop("conditions")
 

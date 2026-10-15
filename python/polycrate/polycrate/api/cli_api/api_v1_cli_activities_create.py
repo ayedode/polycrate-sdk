@@ -7,13 +7,6 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.cli_activity_submission_request_request import CLIActivitySubmissionRequestRequest
 from ...models.cli_activity_submission_response import CLIActivitySubmissionResponse
-from ...models.error_response_405 import ErrorResponse405
-from ...models.error_response_406 import ErrorResponse406
-from ...models.error_response_409 import ErrorResponse409
-from ...models.error_response_410 import ErrorResponse410
-from ...models.error_response_415 import ErrorResponse415
-from ...models.error_response_500 import ErrorResponse500
-from ...models.error_response_502 import ErrorResponse502
 from ...types import UNSET, Response
 
 
@@ -49,18 +42,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> (
-    Any
-    | CLIActivitySubmissionResponse
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | None
-):
+) -> Any | CLIActivitySubmissionResponse | None:
     if response.status_code == 201:
         response_201 = CLIActivitySubmissionResponse.from_dict(response.json())
 
@@ -82,41 +64,6 @@ def _parse_response(
         response_404 = cast(Any, None)
         return response_404
 
-    if response.status_code == 405:
-        response_405 = ErrorResponse405.from_dict(response.json())
-
-        return response_405
-
-    if response.status_code == 406:
-        response_406 = ErrorResponse406.from_dict(response.json())
-
-        return response_406
-
-    if response.status_code == 409:
-        response_409 = ErrorResponse409.from_dict(response.json())
-
-        return response_409
-
-    if response.status_code == 410:
-        response_410 = ErrorResponse410.from_dict(response.json())
-
-        return response_410
-
-    if response.status_code == 415:
-        response_415 = ErrorResponse415.from_dict(response.json())
-
-        return response_415
-
-    if response.status_code == 500:
-        response_500 = ErrorResponse500.from_dict(response.json())
-
-        return response_500
-
-    if response.status_code == 502:
-        response_502 = ErrorResponse502.from_dict(response.json())
-
-        return response_502
-
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
     else:
@@ -125,17 +72,7 @@ def _parse_response(
 
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> Response[
-    Any
-    | CLIActivitySubmissionResponse
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-]:
+) -> Response[Any | CLIActivitySubmissionResponse]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -151,17 +88,7 @@ def sync_detailed(
     | CLIActivitySubmissionRequestRequest
     | CLIActivitySubmissionRequestRequest
     | Unset = UNSET,
-) -> Response[
-    Any
-    | CLIActivitySubmissionResponse
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-]:
+) -> Response[Any | CLIActivitySubmissionResponse]:
     """Create CLI activity (ssh-session, workspace-sync)
 
 
@@ -181,7 +108,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any | CLIActivitySubmissionResponse | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502]
+        Response[Any | CLIActivitySubmissionResponse]
     """
 
     kwargs = _get_kwargs(
@@ -202,18 +129,7 @@ def sync(
     | CLIActivitySubmissionRequestRequest
     | CLIActivitySubmissionRequestRequest
     | Unset = UNSET,
-) -> (
-    Any
-    | CLIActivitySubmissionResponse
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | None
-):
+) -> Any | CLIActivitySubmissionResponse | None:
     """Create CLI activity (ssh-session, workspace-sync)
 
 
@@ -233,7 +149,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Any | CLIActivitySubmissionResponse | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502
+        Any | CLIActivitySubmissionResponse
     """
 
     return sync_detailed(
@@ -249,17 +165,7 @@ async def asyncio_detailed(
     | CLIActivitySubmissionRequestRequest
     | CLIActivitySubmissionRequestRequest
     | Unset = UNSET,
-) -> Response[
-    Any
-    | CLIActivitySubmissionResponse
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-]:
+) -> Response[Any | CLIActivitySubmissionResponse]:
     """Create CLI activity (ssh-session, workspace-sync)
 
 
@@ -279,7 +185,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any | CLIActivitySubmissionResponse | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502]
+        Response[Any | CLIActivitySubmissionResponse]
     """
 
     kwargs = _get_kwargs(
@@ -298,18 +204,7 @@ async def asyncio(
     | CLIActivitySubmissionRequestRequest
     | CLIActivitySubmissionRequestRequest
     | Unset = UNSET,
-) -> (
-    Any
-    | CLIActivitySubmissionResponse
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | None
-):
+) -> Any | CLIActivitySubmissionResponse | None:
     """Create CLI activity (ssh-session, workspace-sync)
 
 
@@ -329,7 +224,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Any | CLIActivitySubmissionResponse | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502
+        Any | CLIActivitySubmissionResponse
     """
 
     return (

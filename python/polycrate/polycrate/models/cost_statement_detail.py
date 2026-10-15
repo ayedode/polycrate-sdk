@@ -8,14 +8,39 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.cost_statement_status_enum import CostStatementStatusEnum, check_cost_statement_status_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.cost_statement_detail_criticality_type_1 import (
+    CostStatementDetailCriticalityType1,
+    check_cost_statement_detail_criticality_type_1,
+)
+from ..models.cost_statement_detail_criticality_type_2_type_1 import (
+    CostStatementDetailCriticalityType2Type1,
+    check_cost_statement_detail_criticality_type_2_type_1,
+)
+from ..models.cost_statement_detail_criticality_type_3_type_1 import (
+    CostStatementDetailCriticalityType3Type1,
+    check_cost_statement_detail_criticality_type_3_type_1,
+)
+from ..models.cost_statement_detail_effective_criticality_type_1 import (
+    CostStatementDetailEffectiveCriticalityType1,
+    check_cost_statement_detail_effective_criticality_type_1,
+)
+from ..models.cost_statement_detail_effective_criticality_type_2_type_1 import (
+    CostStatementDetailEffectiveCriticalityType2Type1,
+    check_cost_statement_detail_effective_criticality_type_2_type_1,
+)
+from ..models.cost_statement_detail_effective_criticality_type_3_type_1 import (
+    CostStatementDetailEffectiveCriticalityType3Type1,
+    check_cost_statement_detail_effective_criticality_type_3_type_1,
+)
+from ..models.cost_statement_detail_kind import CostStatementDetailKind, check_cost_statement_detail_kind
+from ..models.cost_statement_detail_last_state import (
+    CostStatementDetailLastState,
+    check_cost_statement_detail_last_state,
+)
+from ..models.cost_statement_detail_provider import CostStatementDetailProvider, check_cost_statement_detail_provider
+from ..models.cost_statement_detail_scope import CostStatementDetailScope, check_cost_statement_detail_scope
+from ..models.cost_statement_detail_state import CostStatementDetailState, check_cost_statement_detail_state
+from ..models.cost_statement_detail_status import CostStatementDetailStatus, check_cost_statement_detail_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -58,14 +83,14 @@ class CostStatementDetail:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (CostStatementDetailDeletedByUserType0 | None):
-            state (LastStateEnum): * `OK` - Ok
+            state (CostStatementDetailState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (CostStatementDetailLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -86,11 +111,15 @@ class CostStatementDetail:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (CostStatementDetailScope): The scope is used to separate `system` owned objects from `user` owned
+                objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (CostStatementDetailEffectiveCriticalityType1 |
+                CostStatementDetailEffectiveCriticalityType2Type1 | CostStatementDetailEffectiveCriticalityType3Type1 | None):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (CostStatementDetailOrganizationType0 | None):
             workspace (CostStatementDetailWorkspaceType0 | None):
@@ -111,7 +140,7 @@ class CostStatementDetail:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (CostStatementDetailProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -128,13 +157,14 @@ class CostStatementDetail:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (CostStatementDetailKind | Unset): * `generic` - Generic
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
+            criticality (CostStatementDetailCriticalityType1 | CostStatementDetailCriticalityType2Type1 |
+                CostStatementDetailCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then
                 org. Explicit value overrides inheritance.
 
                 * `high` - High
@@ -146,7 +176,7 @@ class CostStatementDetail:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            status (CostStatementStatusEnum | Unset): * `draft` - Draft
+            status (CostStatementDetailStatus | Unset): * `draft` - Draft
                 * `final` - Final
                 * `voided` - Voided
             total_net (str | Unset):
@@ -163,9 +193,9 @@ class CostStatementDetail:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: CostStatementDetailDeletedByUserType0 | None
-    state: LastStateEnum
+    state: CostStatementDetailState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: CostStatementDetailLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -180,9 +210,14 @@ class CostStatementDetail:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: CostStatementDetailScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        CostStatementDetailEffectiveCriticalityType1
+        | CostStatementDetailEffectiveCriticalityType2Type1
+        | CostStatementDetailEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: CostStatementDetailOrganizationType0 | None
     workspace: CostStatementDetailWorkspaceType0 | None
@@ -201,23 +236,29 @@ class CostStatementDetail:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: CostStatementDetailProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: CostStatementDetailKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        CostStatementDetailCriticalityType1
+        | CostStatementDetailCriticalityType2Type1
+        | CostStatementDetailCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    status: CostStatementStatusEnum | Unset = UNSET
+    status: CostStatementDetailStatus | Unset = UNSET
     total_net: str | Unset = UNSET
     currency: str | Unset = UNSET
     external_invoice_id: str | Unset = UNSET
@@ -227,15 +268,9 @@ class CostStatementDetail:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.cost_statement_detail_deleted_by_user_type_0 import (
-            CostStatementDetailDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.cost_statement_detail_last_action_run_type_0 import (
-            CostStatementDetailLastActionRunType0,  # noqa: PLC0415
-        )
-        from ..models.cost_statement_detail_organization_type_0 import (
-            CostStatementDetailOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.cost_statement_detail_deleted_by_user_type_0 import CostStatementDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.cost_statement_detail_last_action_run_type_0 import CostStatementDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.cost_statement_detail_organization_type_0 import CostStatementDetailOrganizationType0  # noqa: PLC0415
         from ..models.cost_statement_detail_workspace_type_0 import CostStatementDetailWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
@@ -318,6 +353,10 @@ class CostStatementDetail:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -424,6 +463,8 @@ class CostStatementDetail:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -586,15 +627,9 @@ class CostStatementDetail:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.cost_statement_detail_created import CostStatementDetailCreated  # noqa: PLC0415
-        from ..models.cost_statement_detail_deleted_by_user_type_0 import (
-            CostStatementDetailDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.cost_statement_detail_last_action_run_type_0 import (
-            CostStatementDetailLastActionRunType0,  # noqa: PLC0415
-        )
-        from ..models.cost_statement_detail_organization_type_0 import (
-            CostStatementDetailOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.cost_statement_detail_deleted_by_user_type_0 import CostStatementDetailDeletedByUserType0  # noqa: PLC0415
+        from ..models.cost_statement_detail_last_action_run_type_0 import CostStatementDetailLastActionRunType0  # noqa: PLC0415
+        from ..models.cost_statement_detail_organization_type_0 import CostStatementDetailOrganizationType0  # noqa: PLC0415
         from ..models.cost_statement_detail_workspace_type_0 import CostStatementDetailWorkspaceType0  # noqa: PLC0415
         from ..models.cost_statement_line_item import CostStatementLineItem  # noqa: PLC0415
 
@@ -637,7 +672,7 @@ class CostStatementDetail:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_cost_statement_detail_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -646,7 +681,7 @@ class CostStatementDetail:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_cost_statement_detail_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -743,22 +778,55 @@ class CostStatementDetail:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_cost_statement_detail_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            CostStatementDetailEffectiveCriticalityType1
+            | CostStatementDetailEffectiveCriticalityType2Type1
+            | CostStatementDetailEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_cost_statement_detail_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_cost_statement_detail_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_cost_statement_detail_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CostStatementDetailEffectiveCriticalityType1
+                | CostStatementDetailEffectiveCriticalityType2Type1
+                | CostStatementDetailEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -860,11 +928,11 @@ class CostStatementDetail:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: CostStatementDetailProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_cost_statement_detail_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -889,11 +957,11 @@ class CostStatementDetail:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: CostStatementDetailKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_cost_statement_detail_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -925,7 +993,15 @@ class CostStatementDetail:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            CostStatementDetailCriticalityType1
+            | CostStatementDetailCriticalityType2Type1
+            | CostStatementDetailCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -933,20 +1009,35 @@ class CostStatementDetail:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_cost_statement_detail_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_cost_statement_detail_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_cost_statement_detail_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CostStatementDetailCriticalityType1
+                | CostStatementDetailCriticalityType2Type1
+                | CostStatementDetailCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -982,11 +1073,11 @@ class CostStatementDetail:
         sla_availability = d.pop("sla_availability", UNSET)
 
         _status = d.pop("status", UNSET)
-        status: CostStatementStatusEnum | Unset
+        status: CostStatementDetailStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_cost_statement_status_enum(_status)
+            status = check_cost_statement_detail_status(_status)
 
         total_net = d.pop("total_net", UNSET)
 

@@ -10,11 +10,38 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.catalogue_app_detail_request_created_by_component_type_1 import (
+    CatalogueAppDetailRequestCreatedByComponentType1,
+    check_catalogue_app_detail_request_created_by_component_type_1,
+)
+from ..models.catalogue_app_detail_request_created_by_component_type_2_type_1 import (
+    CatalogueAppDetailRequestCreatedByComponentType2Type1,
+    check_catalogue_app_detail_request_created_by_component_type_2_type_1,
+)
+from ..models.catalogue_app_detail_request_created_by_component_type_3_type_1 import (
+    CatalogueAppDetailRequestCreatedByComponentType3Type1,
+    check_catalogue_app_detail_request_created_by_component_type_3_type_1,
+)
+from ..models.catalogue_app_detail_request_criticality_type_1 import (
+    CatalogueAppDetailRequestCriticalityType1,
+    check_catalogue_app_detail_request_criticality_type_1,
+)
+from ..models.catalogue_app_detail_request_criticality_type_2_type_1 import (
+    CatalogueAppDetailRequestCriticalityType2Type1,
+    check_catalogue_app_detail_request_criticality_type_2_type_1,
+)
+from ..models.catalogue_app_detail_request_criticality_type_3_type_1 import (
+    CatalogueAppDetailRequestCriticalityType3Type1,
+    check_catalogue_app_detail_request_criticality_type_3_type_1,
+)
+from ..models.catalogue_app_detail_request_kind import (
+    CatalogueAppDetailRequestKind,
+    check_catalogue_app_detail_request_kind,
+)
+from ..models.catalogue_app_detail_request_provider import (
+    CatalogueAppDetailRequestProvider,
+    check_catalogue_app_detail_request_provider,
+)
 from ..types import UNSET, File, FileTypes, Unset
 
 T = TypeVar("T", bound="CatalogueAppDetailRequest")
@@ -36,7 +63,7 @@ class CatalogueAppDetailRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (CatalogueAppDetailRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -54,14 +81,15 @@ class CatalogueAppDetailRequest:
             reconciliation_enabled (bool | Unset):
             last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
             platform_service (bool | Unset):
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (CatalogueAppDetailRequestKind | Unset): * `generic` - Generic
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (CatalogueAppDetailRequestCreatedByComponentType1 |
+                CatalogueAppDetailRequestCreatedByComponentType2Type1 | CatalogueAppDetailRequestCreatedByComponentType3Type1 |
+                None | Unset): Component that created this object: cli, operator, or api.
 
                 * `cli` - CLI
                 * `operator` - Operator
@@ -74,8 +102,9 @@ class CatalogueAppDetailRequest:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (CatalogueAppDetailRequestCriticalityType1 | CatalogueAppDetailRequestCriticalityType2Type1 |
+                CatalogueAppDetailRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from
+                workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -115,18 +144,24 @@ class CatalogueAppDetailRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: CatalogueAppDetailRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: CatalogueAppDetailRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        CatalogueAppDetailRequestCreatedByComponentType1
+        | CatalogueAppDetailRequestCreatedByComponentType2Type1
+        | CatalogueAppDetailRequestCreatedByComponentType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_window_days: int | None | Unset = UNSET
@@ -134,7 +169,13 @@ class CatalogueAppDetailRequest:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        CatalogueAppDetailRequestCriticalityType1
+        | CatalogueAppDetailRequestCriticalityType2Type1
+        | CatalogueAppDetailRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
     short_description: None | str | Unset = UNSET
@@ -251,6 +292,8 @@ class CatalogueAppDetailRequest:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -291,6 +334,8 @@ class CatalogueAppDetailRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -606,7 +651,9 @@ class CatalogueAppDetailRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.created_by_component, Unset):
-            if isinstance(self.created_by_component, str):
+            if self.created_by_component is None:
+                files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
+            elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
             elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
@@ -650,7 +697,9 @@ class CatalogueAppDetailRequest:
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -834,11 +883,11 @@ class CatalogueAppDetailRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: CatalogueAppDetailRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_catalogue_app_detail_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -874,11 +923,11 @@ class CatalogueAppDetailRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: CatalogueAppDetailRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_catalogue_app_detail_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -910,7 +959,15 @@ class CatalogueAppDetailRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            CatalogueAppDetailRequestCreatedByComponentType1
+            | CatalogueAppDetailRequestCreatedByComponentType2Type1
+            | CatalogueAppDetailRequestCreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -918,20 +975,39 @@ class CatalogueAppDetailRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_catalogue_app_detail_request_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = (
+                    check_catalogue_app_detail_request_created_by_component_type_2_type_1(data)
+                )
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = (
+                    check_catalogue_app_detail_request_created_by_component_type_3_type_1(data)
+                )
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CatalogueAppDetailRequestCreatedByComponentType1
+                | CatalogueAppDetailRequestCreatedByComponentType2Type1
+                | CatalogueAppDetailRequestCreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -984,7 +1060,15 @@ class CatalogueAppDetailRequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            CatalogueAppDetailRequestCriticalityType1
+            | CatalogueAppDetailRequestCriticalityType2Type1
+            | CatalogueAppDetailRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -992,20 +1076,35 @@ class CatalogueAppDetailRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_catalogue_app_detail_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_catalogue_app_detail_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_catalogue_app_detail_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CatalogueAppDetailRequestCriticalityType1
+                | CatalogueAppDetailRequestCriticalityType2Type1
+                | CatalogueAppDetailRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

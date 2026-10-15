@@ -7,9 +7,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.endpoint_kind_enum import EndpointKindEnum, check_endpoint_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.endpoint_list_effective_criticality_type_1 import (
+    EndpointListEffectiveCriticalityType1,
+    check_endpoint_list_effective_criticality_type_1,
+)
+from ..models.endpoint_list_effective_criticality_type_2_type_1 import (
+    EndpointListEffectiveCriticalityType2Type1,
+    check_endpoint_list_effective_criticality_type_2_type_1,
+)
+from ..models.endpoint_list_effective_criticality_type_3_type_1 import (
+    EndpointListEffectiveCriticalityType3Type1,
+    check_endpoint_list_effective_criticality_type_3_type_1,
+)
+from ..models.endpoint_list_kind import EndpointListKind, check_endpoint_list_kind
+from ..models.endpoint_list_state import EndpointListState, check_endpoint_list_state
 
 if TYPE_CHECKING:
     from ..models.endpoint_list_active_condition_instances_item import EndpointListActiveConditionInstancesItem
@@ -41,7 +52,7 @@ class EndpointList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (EndpointListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -59,13 +70,15 @@ class EndpointList:
             created (EndpointListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (EndpointListEffectiveCriticalityType1 | EndpointListEffectiveCriticalityType2Type1 |
+                EndpointListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
-            kind (EndpointKindEnum): * `icmp` - ICMP Endpoint
+            kind (EndpointListKind): * `icmp` - ICMP Endpoint
                 * `http` - HTTP Endpoint
                 * `tcp` - TCP Endpoint
                 * `dns` - DNS Endpoint
             remote_address (str):
+            product (None | UUID): Billing product for endpoint monitoring (1 EUR/endpoint/month). Spec 871.
             slo_availability (None | str):
             sla_availability (None | str):
             slo_status (str):
@@ -74,7 +87,7 @@ class EndpointList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: EndpointListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -85,10 +98,16 @@ class EndpointList:
     created: EndpointListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        EndpointListEffectiveCriticalityType1
+        | EndpointListEffectiveCriticalityType2Type1
+        | EndpointListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
-    kind: EndpointKindEnum
+    kind: EndpointListKind
     remote_address: str
+    product: None | UUID
     slo_availability: None | str
     sla_availability: None | str
     slo_status: str
@@ -139,6 +158,10 @@ class EndpointList:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -147,6 +170,12 @@ class EndpointList:
         kind: str = self.kind
 
         remote_address = self.remote_address
+
+        product: None | str
+        if isinstance(self.product, UUID):
+            product = str(self.product)
+        else:
+            product = self.product
 
         slo_availability: None | str
         slo_availability = self.slo_availability
@@ -179,6 +208,7 @@ class EndpointList:
                 "url": url,
                 "kind": kind,
                 "remote_address": remote_address,
+                "product": product,
                 "slo_availability": slo_availability,
                 "sla_availability": sla_availability,
                 "slo_status": slo_status,
@@ -190,9 +220,7 @@ class EndpointList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.endpoint_list_active_condition_instances_item import (
-            EndpointListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.endpoint_list_active_condition_instances_item import EndpointListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.endpoint_list_created import EndpointListCreated  # noqa: PLC0415
         from ..models.endpoint_list_organization_type_0 import EndpointListOrganizationType0  # noqa: PLC0415
         from ..models.endpoint_list_workspace_type_0 import EndpointListWorkspaceType0  # noqa: PLC0415
@@ -202,7 +230,7 @@ class EndpointList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_endpoint_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -257,26 +285,70 @@ class EndpointList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            EndpointListEffectiveCriticalityType1
+            | EndpointListEffectiveCriticalityType2Type1
+            | EndpointListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_endpoint_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_endpoint_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_endpoint_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                EndpointListEffectiveCriticalityType1
+                | EndpointListEffectiveCriticalityType2Type1
+                | EndpointListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
         url = d.pop("url")
 
-        kind = check_endpoint_kind_enum(d.pop("kind"))
+        kind = check_endpoint_list_kind(d.pop("kind"))
 
         remote_address = d.pop("remote_address")
+
+        def _parse_product(data: object) -> None | UUID:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                product_type_0 = UUID(data)
+
+                return product_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | UUID, data)
+
+        product = _parse_product(d.pop("product"))
 
         def _parse_slo_availability(data: object) -> None | str:
             if data is None:
@@ -314,6 +386,7 @@ class EndpointList:
             url=url,
             kind=kind,
             remote_address=remote_address,
+            product=product,
             slo_availability=slo_availability,
             sla_availability=sla_availability,
             slo_status=slo_status,

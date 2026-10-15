@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.s3_bucket_region_response_state import S3BucketRegionResponseState, check_s3_bucket_region_response_state
 
 if TYPE_CHECKING:
     from ..models.organization_simple import OrganizationSimple
@@ -37,7 +37,7 @@ class S3BucketRegionResponse:
         user_id (None | str):
         credential (None | S3BucketRegionResponseCredentialType0):
         access_keys (list[S3Credential]):
-        state (LastStateEnum): * `OK` - Ok
+        state (S3BucketRegionResponseState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -62,7 +62,7 @@ class S3BucketRegionResponse:
     user_id: None | str
     credential: None | S3BucketRegionResponseCredentialType0
     access_keys: list[S3Credential]
-    state: LastStateEnum
+    state: S3BucketRegionResponseState
     conditions: Any
     reconciliation_running: bool
     provider_reference: None | str
@@ -72,9 +72,7 @@ class S3BucketRegionResponse:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.s3_bucket_region_response_credential_type_0 import (
-            S3BucketRegionResponseCredentialType0,  # noqa: PLC0415
-        )
+        from ..models.s3_bucket_region_response_credential_type_0 import S3BucketRegionResponseCredentialType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -149,9 +147,7 @@ class S3BucketRegionResponse:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
         from ..models.region_simple import RegionSimple  # noqa: PLC0415
-        from ..models.s3_bucket_region_response_credential_type_0 import (
-            S3BucketRegionResponseCredentialType0,  # noqa: PLC0415
-        )
+        from ..models.s3_bucket_region_response_credential_type_0 import S3BucketRegionResponseCredentialType0  # noqa: PLC0415
         from ..models.s3_credential import S3Credential  # noqa: PLC0415
         from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
@@ -199,7 +195,7 @@ class S3BucketRegionResponse:
 
             access_keys.append(access_keys_item)
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_s3_bucket_region_response_state(d.pop("state"))
 
         conditions = d.pop("conditions")
 

@@ -22,7 +22,8 @@ class RegionSimple:
         name (str):
         display_name (None | str): The display name is used to display the object in the UI. It can be different from
             the name.
-        platform_features (list[str]): Active platform services: 's3', 'loadbalancer', 'apm', 'dns', 'controlplane'
+        platform_features (list[str]): Active platform services: 's3', 'loadbalancer', 'apm', 'dns', 'controlplane',
+            'compute', 'iaas'
         platform_service (bool): If True: managed by system owner org, available platform-wide to all organizations.
         workspace (WorkspaceSimple):
         url (str):

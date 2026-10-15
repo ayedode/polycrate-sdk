@@ -9,16 +9,37 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.purpose_f3b_enum import PurposeF3BEnum, check_purpose_f3b_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.workspace_endpoint_monitoring_mode_enum import (
-    WorkspaceEndpointMonitoringModeEnum,
-    check_workspace_endpoint_monitoring_mode_enum,
+from ..models.workspace_request_criticality_type_1 import (
+    WorkspaceRequestCriticalityType1,
+    check_workspace_request_criticality_type_1,
 )
-from ..models.workspace_kind_enum import WorkspaceKindEnum, check_workspace_kind_enum
+from ..models.workspace_request_criticality_type_2_type_1 import (
+    WorkspaceRequestCriticalityType2Type1,
+    check_workspace_request_criticality_type_2_type_1,
+)
+from ..models.workspace_request_criticality_type_3_type_1 import (
+    WorkspaceRequestCriticalityType3Type1,
+    check_workspace_request_criticality_type_3_type_1,
+)
+from ..models.workspace_request_endpoint_monitoring_mode import (
+    WorkspaceRequestEndpointMonitoringMode,
+    check_workspace_request_endpoint_monitoring_mode,
+)
+from ..models.workspace_request_kind import WorkspaceRequestKind, check_workspace_request_kind
+from ..models.workspace_request_provider import WorkspaceRequestProvider, check_workspace_request_provider
+from ..models.workspace_request_purpose_type_1 import (
+    WorkspaceRequestPurposeType1,
+    check_workspace_request_purpose_type_1,
+)
+from ..models.workspace_request_purpose_type_2_type_1 import (
+    WorkspaceRequestPurposeType2Type1,
+    check_workspace_request_purpose_type_2_type_1,
+)
+from ..models.workspace_request_purpose_type_3_type_1 import (
+    WorkspaceRequestPurposeType3Type1,
+    check_workspace_request_purpose_type_3_type_1,
+)
+from ..models.workspace_request_scope import WorkspaceRequestScope, check_workspace_request_scope
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="WorkspaceRequest")
@@ -42,7 +63,7 @@ class WorkspaceRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (WorkspaceRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -60,15 +81,19 @@ class WorkspaceRequest:
             reconciliation_enabled (bool | Unset):
             discovery_enabled (bool | Unset):
             platform_service (bool | Unset):
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (WorkspaceRequestScope | Unset): The scope is used to separate `system` owned objects from `user` owned
+                objects.
+
+                * `system` - System
                 * `user` - User
-            kind (WorkspaceKindEnum | Unset): * `polycrate` - Polycrate
+            kind (WorkspaceRequestKind | Unset): * `polycrate` - Polycrate
                 * `generic` - Generic
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | Unset | WorkspaceRequestCriticalityType1 | WorkspaceRequestCriticalityType2Type1 |
+                WorkspaceRequestCriticalityType3Type1): Criticality level. Null = inherit from workspace, then org. Explicit
+                value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -86,7 +111,10 @@ class WorkspaceRequest:
                 from ayedo infrastructure. Endpoints in this workspace will only be monitored by the workspace's own agent —
                 external global monitors are excluded. Also disables K8sCluster API server reachability checks for clusters in
                 this workspace.
-            endpoint_monitoring_mode (WorkspaceEndpointMonitoringModeEnum | Unset): * `auto` - AUTO - Monitor everything
+            endpoint_monitoring_mode (WorkspaceRequestEndpointMonitoringMode | Unset): Defines which endpoints the workspace
+                agent is allowed to monitor (Reach-Out scope)
+
+                * `auto` - AUTO - Monitor everything
                 * `organization_only` - ORGANIZATION_ONLY - Only monitor endpoints from same organization
                 * `workspace_only` - WORKSPACE_ONLY - Only monitor endpoints from same workspace
                 * `pop_only` - POP_ONLY - Only monitor endpoints from same pop
@@ -114,8 +142,9 @@ class WorkspaceRequest:
             encrypted (bool | Unset): Indicates if workspace is encrypted (contains .workspace-encrypted file)
             template (None | str | Unset): Name of the workspace template to use (write-only)
             description (None | str | Unset): Short free-text description of this workspace
-            purpose (BlankEnum | None | PurposeF3BEnum | Unset): Purpose of this workspace (production, development,
-                staging, qa, infrastructure, platform)
+            purpose (None | Unset | WorkspaceRequestPurposeType1 | WorkspaceRequestPurposeType2Type1 |
+                WorkspaceRequestPurposeType3Type1): Purpose of this workspace (production, development, staging, qa,
+                infrastructure, platform)
 
                 * `production` - Production
                 * `development` - Development
@@ -135,18 +164,24 @@ class WorkspaceRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: WorkspaceRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: WorkspaceKindEnum | Unset = UNSET
+    scope: WorkspaceRequestScope | Unset = UNSET
+    kind: WorkspaceRequestKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | Unset
+        | WorkspaceRequestCriticalityType1
+        | WorkspaceRequestCriticalityType2Type1
+        | WorkspaceRequestCriticalityType3Type1
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -156,7 +191,7 @@ class WorkspaceRequest:
     gitlab_project_id: int | None | Unset = UNSET
     gitlab_project_url: None | str | Unset = UNSET
     on_premise: bool | Unset = UNSET
-    endpoint_monitoring_mode: WorkspaceEndpointMonitoringModeEnum | Unset = UNSET
+    endpoint_monitoring_mode: WorkspaceRequestEndpointMonitoringMode | Unset = UNSET
     global_endpoint_monitor: bool | Unset = UNSET
     monitoring_workspace_allowlist_ids: list[UUID] | Unset = UNSET
     notifications_enabled: bool | Unset = UNSET
@@ -172,7 +207,13 @@ class WorkspaceRequest:
     encrypted: bool | Unset = UNSET
     template: None | str | Unset = UNSET
     description: None | str | Unset = UNSET
-    purpose: BlankEnum | None | PurposeF3BEnum | Unset = UNSET
+    purpose: (
+        None
+        | Unset
+        | WorkspaceRequestPurposeType1
+        | WorkspaceRequestPurposeType2Type1
+        | WorkspaceRequestPurposeType3Type1
+    ) = UNSET
     urls: Any | Unset = UNSET
     owner_id: int | None | Unset = UNSET
     readme_md: None | str | Unset = UNSET
@@ -245,6 +286,8 @@ class WorkspaceRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -359,6 +402,8 @@ class WorkspaceRequest:
         purpose: None | str | Unset
         if isinstance(self.purpose, Unset):
             purpose = UNSET
+        elif isinstance(self.purpose, str):
+            purpose = self.purpose
         elif isinstance(self.purpose, str):
             purpose = self.purpose
         elif isinstance(self.purpose, str):
@@ -559,7 +604,9 @@ class WorkspaceRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -687,7 +734,9 @@ class WorkspaceRequest:
                 files.append(("description", (None, str(self.description).encode(), "text/plain")))
 
         if not isinstance(self.purpose, Unset):
-            if isinstance(self.purpose, str):
+            if self.purpose is None:
+                files.append(("purpose", (None, str(self.purpose).encode(), "text/plain")))
+            elif isinstance(self.purpose, str):
                 files.append(("purpose", (None, str(self.purpose).encode(), "text/plain")))
             elif isinstance(self.purpose, str):
                 files.append(("purpose", (None, str(self.purpose).encode(), "text/plain")))
@@ -743,11 +792,11 @@ class WorkspaceRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: WorkspaceRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_workspace_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -774,18 +823,18 @@ class WorkspaceRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: WorkspaceRequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_workspace_request_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: WorkspaceKindEnum | Unset
+        kind: WorkspaceRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_workspace_kind_enum(_kind)
+            kind = check_workspace_request_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -815,7 +864,15 @@ class WorkspaceRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | Unset
+            | WorkspaceRequestCriticalityType1
+            | WorkspaceRequestCriticalityType2Type1
+            | WorkspaceRequestCriticalityType3Type1
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -823,20 +880,35 @@ class WorkspaceRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_workspace_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_workspace_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_workspace_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | Unset
+                | WorkspaceRequestCriticalityType1
+                | WorkspaceRequestCriticalityType2Type1
+                | WorkspaceRequestCriticalityType3Type1,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -894,11 +966,11 @@ class WorkspaceRequest:
         on_premise = d.pop("on_premise", UNSET)
 
         _endpoint_monitoring_mode = d.pop("endpoint_monitoring_mode", UNSET)
-        endpoint_monitoring_mode: WorkspaceEndpointMonitoringModeEnum | Unset
+        endpoint_monitoring_mode: WorkspaceRequestEndpointMonitoringMode | Unset
         if isinstance(_endpoint_monitoring_mode, Unset):
             endpoint_monitoring_mode = UNSET
         else:
-            endpoint_monitoring_mode = check_workspace_endpoint_monitoring_mode_enum(_endpoint_monitoring_mode)
+            endpoint_monitoring_mode = check_workspace_request_endpoint_monitoring_mode(_endpoint_monitoring_mode)
 
         global_endpoint_monitor = d.pop("global_endpoint_monitor", UNSET)
 
@@ -987,7 +1059,15 @@ class WorkspaceRequest:
 
         description = _parse_description(d.pop("description", UNSET))
 
-        def _parse_purpose(data: object) -> BlankEnum | None | PurposeF3BEnum | Unset:
+        def _parse_purpose(
+            data: object,
+        ) -> (
+            None
+            | Unset
+            | WorkspaceRequestPurposeType1
+            | WorkspaceRequestPurposeType2Type1
+            | WorkspaceRequestPurposeType3Type1
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -995,20 +1075,35 @@ class WorkspaceRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                purpose_type_0 = check_purpose_f3b_enum(data)
+                purpose_type_1 = check_workspace_request_purpose_type_1(data)
 
-                return purpose_type_0
+                return purpose_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                purpose_type_1 = check_blank_enum(data)
+                purpose_type_2_type_1 = check_workspace_request_purpose_type_2_type_1(data)
 
-                return purpose_type_1
+                return purpose_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | None | PurposeF3BEnum | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                purpose_type_3_type_1 = check_workspace_request_purpose_type_3_type_1(data)
+
+                return purpose_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | Unset
+                | WorkspaceRequestPurposeType1
+                | WorkspaceRequestPurposeType2Type1
+                | WorkspaceRequestPurposeType3Type1,
+                data,
+            )
 
         purpose = _parse_purpose(d.pop("purpose", UNSET))
 

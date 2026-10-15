@@ -8,8 +8,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.agent_kind_enum import AgentKindEnum, check_agent_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.agent_kind import AgentKind, check_agent_kind
+from ..models.agent_state import AgentState, check_agent_state
 
 if TYPE_CHECKING:
     from ..models.organization_simple import OrganizationSimple
@@ -27,7 +27,7 @@ class Agent:
     Attributes:
         id (UUID):
         name (str):
-        state (LastStateEnum): * `OK` - Ok
+        state (AgentState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -37,7 +37,10 @@ class Agent:
 
             Includes `url` field for direct navigation.
         workspace (WorkspaceSimple):
-        kind (AgentKindEnum): * `agent` - Agent
+        kind (AgentKind): Type of agent: 'agent' for standalone CLI agents, 'operator' for Kubernetes operators with
+            discovery capabilities
+
+            * `agent` - Agent
             * `operator` - Operator
         version (None | str): Version of the agent software
         is_active (bool): Whether this agent is considered active
@@ -54,10 +57,10 @@ class Agent:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: AgentState
     organization: OrganizationSimple
     workspace: WorkspaceSimple
-    kind: AgentKindEnum
+    kind: AgentKind
     version: None | str
     is_active: bool
     last_seen: datetime.datetime | None
@@ -150,13 +153,13 @@ class Agent:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_agent_state(d.pop("state"))
 
         organization = OrganizationSimple.from_dict(d.pop("organization"))
 
         workspace = WorkspaceSimple.from_dict(d.pop("workspace"))
 
-        kind = check_agent_kind_enum(d.pop("kind"))
+        kind = check_agent_kind(d.pop("kind"))
 
         def _parse_version(data: object) -> None | str:
             if data is None:

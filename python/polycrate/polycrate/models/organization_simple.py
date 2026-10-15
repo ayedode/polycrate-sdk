@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
+from ..models.organization_simple_kind import OrganizationSimpleKind, check_organization_simple_kind
 
 T = TypeVar("T", bound="OrganizationSimple")
 
@@ -25,7 +25,7 @@ class OrganizationSimple:
                 the name.
             slug (None | str):
             reconciliation_running (bool):
-            kind (GenericObjectKindEnum): * `generic` - Generic
+            kind (OrganizationSimpleKind): * `generic` - Generic
             legal_name (str):
             tenant_id (None | str): 3-8 digit numeric tenant identifier
             support_pin (None | str): 8-digit numeric PIN for support authentication
@@ -41,7 +41,7 @@ class OrganizationSimple:
     display_name: None | str
     slug: None | str
     reconciliation_running: bool
-    kind: GenericObjectKindEnum
+    kind: OrganizationSimpleKind
     legal_name: str
     tenant_id: None | str
     support_pin: None | str
@@ -134,7 +134,7 @@ class OrganizationSimple:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        kind = check_generic_object_kind_enum(d.pop("kind"))
+        kind = check_organization_simple_kind(d.pop("kind"))
 
         legal_name = d.pop("legal_name")
 

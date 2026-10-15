@@ -7,8 +7,19 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.maintenance_window_list_effective_criticality_type_1 import (
+    MaintenanceWindowListEffectiveCriticalityType1,
+    check_maintenance_window_list_effective_criticality_type_1,
+)
+from ..models.maintenance_window_list_effective_criticality_type_2_type_1 import (
+    MaintenanceWindowListEffectiveCriticalityType2Type1,
+    check_maintenance_window_list_effective_criticality_type_2_type_1,
+)
+from ..models.maintenance_window_list_effective_criticality_type_3_type_1 import (
+    MaintenanceWindowListEffectiveCriticalityType3Type1,
+    check_maintenance_window_list_effective_criticality_type_3_type_1,
+)
+from ..models.maintenance_window_list_state import MaintenanceWindowListState, check_maintenance_window_list_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -31,7 +42,7 @@ class MaintenanceWindowList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (MaintenanceWindowListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -49,7 +60,9 @@ class MaintenanceWindowList:
             created (MaintenanceWindowListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (MaintenanceWindowListEffectiveCriticalityType1 |
+                MaintenanceWindowListEffectiveCriticalityType2Type1 | MaintenanceWindowListEffectiveCriticalityType3Type1 |
+                None):
             url (str): Gibt die absolute URL zum Object zurück.
             is_system_default (bool | Unset):
             lead_time_days (int | Unset):
@@ -59,7 +72,7 @@ class MaintenanceWindowList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: MaintenanceWindowListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -70,7 +83,12 @@ class MaintenanceWindowList:
     created: MaintenanceWindowListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        MaintenanceWindowListEffectiveCriticalityType1
+        | MaintenanceWindowListEffectiveCriticalityType2Type1
+        | MaintenanceWindowListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     is_system_default: bool | Unset = UNSET
     lead_time_days: int | Unset = UNSET
@@ -79,12 +97,8 @@ class MaintenanceWindowList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.maintenance_window_list_organization_type_0 import (
-            MaintenanceWindowListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.maintenance_window_list_workspace_type_0 import (
-            MaintenanceWindowListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.maintenance_window_list_organization_type_0 import MaintenanceWindowListOrganizationType0  # noqa: PLC0415
+        from ..models.maintenance_window_list_workspace_type_0 import MaintenanceWindowListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -125,6 +139,10 @@ class MaintenanceWindowList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -177,19 +195,15 @@ class MaintenanceWindowList:
             MaintenanceWindowListActiveConditionInstancesItem,  # noqa: PLC0415
         )
         from ..models.maintenance_window_list_created import MaintenanceWindowListCreated  # noqa: PLC0415
-        from ..models.maintenance_window_list_organization_type_0 import (
-            MaintenanceWindowListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.maintenance_window_list_workspace_type_0 import (
-            MaintenanceWindowListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.maintenance_window_list_organization_type_0 import MaintenanceWindowListOrganizationType0  # noqa: PLC0415
+        from ..models.maintenance_window_list_workspace_type_0 import MaintenanceWindowListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_maintenance_window_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -244,18 +258,51 @@ class MaintenanceWindowList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            MaintenanceWindowListEffectiveCriticalityType1
+            | MaintenanceWindowListEffectiveCriticalityType2Type1
+            | MaintenanceWindowListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_maintenance_window_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_maintenance_window_list_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_maintenance_window_list_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                MaintenanceWindowListEffectiveCriticalityType1
+                | MaintenanceWindowListEffectiveCriticalityType2Type1
+                | MaintenanceWindowListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

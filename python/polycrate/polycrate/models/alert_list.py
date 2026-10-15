@@ -7,12 +7,34 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.alert_kind_enum import AlertKindEnum, check_alert_kind_enum
-from ..models.alert_status_enum import AlertStatusEnum, check_alert_status_enum
-from ..models.category_enum import CategoryEnum, check_category_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.alert_category_slug import AlertCategorySlug, check_alert_category_slug
+from ..models.alert_list_criticality_type_1 import AlertListCriticalityType1, check_alert_list_criticality_type_1
+from ..models.alert_list_criticality_type_2_type_1 import (
+    AlertListCriticalityType2Type1,
+    check_alert_list_criticality_type_2_type_1,
+)
+from ..models.alert_list_criticality_type_3_type_1 import (
+    AlertListCriticalityType3Type1,
+    check_alert_list_criticality_type_3_type_1,
+)
+from ..models.alert_list_effective_criticality_type_1 import (
+    AlertListEffectiveCriticalityType1,
+    check_alert_list_effective_criticality_type_1,
+)
+from ..models.alert_list_effective_criticality_type_2_type_1 import (
+    AlertListEffectiveCriticalityType2Type1,
+    check_alert_list_effective_criticality_type_2_type_1,
+)
+from ..models.alert_list_effective_criticality_type_3_type_1 import (
+    AlertListEffectiveCriticalityType3Type1,
+    check_alert_list_effective_criticality_type_3_type_1,
+)
+from ..models.alert_list_kind import AlertListKind, check_alert_list_kind
+from ..models.alert_list_state import AlertListState, check_alert_list_state
+from ..models.alert_list_status_type_1 import AlertListStatusType1, check_alert_list_status_type_1
+from ..models.alert_list_status_type_2_type_1 import AlertListStatusType2Type1, check_alert_list_status_type_2_type_1
+from ..models.alert_list_status_type_3_type_1 import AlertListStatusType3Type1, check_alert_list_status_type_3_type_1
+from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.alert_list_active_condition_instances_item import AlertListActiveConditionInstancesItem
@@ -49,7 +71,7 @@ class AlertList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (AlertListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -67,40 +89,30 @@ class AlertList:
             created (AlertListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (AlertListEffectiveCriticalityType1 | AlertListEffectiveCriticalityType2Type1 |
+                AlertListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
-            kind (AlertKindEnum): * `grafana` - Grafana Alert
+            kind (AlertListKind): * `grafana` - Grafana Alert
                 * `generic` - Generic Alert
                 * `checkmk` - CheckMK Alert
-            status (AlertStatusEnum | None):
-            criticality (CriticalityEnum | None): Criticality level. Null = inherit from workspace, then org. Explicit value
-                overrides inheritance.
+            status (AlertListStatusType1 | AlertListStatusType2Type1 | AlertListStatusType3Type1 | None): * `firing` -
+                Firing
+                * `silenced` - Silenced
+                * `resolved` - Resolved
+                * `pending` - Pending
+            criticality (AlertListCriticalityType1 | AlertListCriticalityType2Type1 | AlertListCriticalityType3Type1 |
+                None): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
                 * `low` - Low
-            category (CategoryEnum): * `cluster.node` - Cluster / Node
-                * `workload.pod` - Workload / Pod
-                * `storage.volume` - Storage / Volume
-                * `data.cnpg` - Data / CNPG
-                * `data.replication` - Data / Replication
-                * `data.mariadb` - Data / MariaDB
-                * `data.mongodb` - Data / MongoDB
-                * `backup.velero` - Backup / Velero
-                * `observability.metrics` - Observability / Metrics
-                * `security.secrets` - Security / Secrets
-                * `security.access` - Security / Access
-                * `gitops.flux` - GitOps / Flux
-                * `availability.http` - Availability / HTTP
-                * `application.customer` - Application / Customer
-                * `platform.test` - Platform / Test
-                * `unknown` - Unknown
             title (None | str):
+            category (AlertCategorySlug | Unset): AlertCategory.name slug (Spec 654/674)
     """
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: AlertListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -111,13 +123,18 @@ class AlertList:
     created: AlertListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        AlertListEffectiveCriticalityType1
+        | AlertListEffectiveCriticalityType2Type1
+        | AlertListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
-    kind: AlertKindEnum
-    status: AlertStatusEnum | None
-    criticality: CriticalityEnum | None
-    category: CategoryEnum
+    kind: AlertListKind
+    status: AlertListStatusType1 | AlertListStatusType2Type1 | AlertListStatusType3Type1 | None
+    criticality: AlertListCriticalityType1 | AlertListCriticalityType2Type1 | AlertListCriticalityType3Type1 | None
     title: None | str
+    category: AlertCategorySlug | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -164,6 +181,10 @@ class AlertList:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -174,19 +195,29 @@ class AlertList:
         status: None | str
         if isinstance(self.status, str):
             status = self.status
+        elif isinstance(self.status, str):
+            status = self.status
+        elif isinstance(self.status, str):
+            status = self.status
         else:
             status = self.status
 
         criticality: None | str
         if isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
-        category: str = self.category
-
         title: None | str
         title = self.title
+
+        category: str | Unset = UNSET
+        if not isinstance(self.category, Unset):
+            category = self.category
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -210,18 +241,17 @@ class AlertList:
                 "kind": kind,
                 "status": status,
                 "criticality": criticality,
-                "category": category,
                 "title": title,
             }
         )
+        if category is not UNSET:
+            field_dict["category"] = category
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.alert_list_active_condition_instances_item import (
-            AlertListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.alert_list_active_condition_instances_item import AlertListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.alert_list_created import AlertListCreated  # noqa: PLC0415
         from ..models.alert_list_organization_type_0 import AlertListOrganizationType0  # noqa: PLC0415
         from ..models.alert_list_workspace_type_0 import AlertListWorkspaceType0  # noqa: PLC0415
@@ -231,7 +261,7 @@ class AlertList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_alert_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -286,56 +316,121 @@ class AlertList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            AlertListEffectiveCriticalityType1
+            | AlertListEffectiveCriticalityType2Type1
+            | AlertListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_alert_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_alert_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_alert_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AlertListEffectiveCriticalityType1
+                | AlertListEffectiveCriticalityType2Type1
+                | AlertListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
         url = d.pop("url")
 
-        kind = check_alert_kind_enum(d.pop("kind"))
+        kind = check_alert_list_kind(d.pop("kind"))
 
-        def _parse_status(data: object) -> AlertStatusEnum | None:
+        def _parse_status(
+            data: object,
+        ) -> AlertListStatusType1 | AlertListStatusType2Type1 | AlertListStatusType3Type1 | None:
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                status_type_0 = check_alert_status_enum(data)
+                status_type_1 = check_alert_list_status_type_1(data)
 
-                return status_type_0
+                return status_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(AlertStatusEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                status_type_2_type_1 = check_alert_list_status_type_2_type_1(data)
+
+                return status_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                status_type_3_type_1 = check_alert_list_status_type_3_type_1(data)
+
+                return status_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(AlertListStatusType1 | AlertListStatusType2Type1 | AlertListStatusType3Type1 | None, data)
 
         status = _parse_status(d.pop("status"))
 
-        def _parse_criticality(data: object) -> CriticalityEnum | None:
+        def _parse_criticality(
+            data: object,
+        ) -> AlertListCriticalityType1 | AlertListCriticalityType2Type1 | AlertListCriticalityType3Type1 | None:
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_alert_list_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(CriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_2_type_1 = check_alert_list_criticality_type_2_type_1(data)
+
+                return criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_alert_list_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AlertListCriticalityType1 | AlertListCriticalityType2Type1 | AlertListCriticalityType3Type1 | None, data
+            )
 
         criticality = _parse_criticality(d.pop("criticality"))
-
-        category = check_category_enum(d.pop("category"))
 
         def _parse_title(data: object) -> None | str:
             if data is None:
@@ -343,6 +438,13 @@ class AlertList:
             return cast(None | str, data)
 
         title = _parse_title(d.pop("title"))
+
+        _category = d.pop("category", UNSET)
+        category: AlertCategorySlug | Unset
+        if isinstance(_category, Unset):
+            category = UNSET
+        else:
+            category = check_alert_category_slug(_category)
 
         alert_list = cls(
             id=id,
@@ -363,8 +465,8 @@ class AlertList:
             kind=kind,
             status=status,
             criticality=criticality,
-            category=category,
             title=title,
+            category=category,
         )
 
         alert_list.additional_properties = d

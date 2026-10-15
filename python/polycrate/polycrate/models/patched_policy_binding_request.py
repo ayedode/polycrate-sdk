@@ -8,7 +8,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.patched_policy_binding_request_scope import (
+    PatchedPolicyBindingRequestScope,
+    check_patched_policy_binding_request_scope,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedPolicyBindingRequest")
@@ -23,7 +26,9 @@ class PatchedPolicyBindingRequest:
         Attributes:
             policy_id (UUID | Unset):
             enabled (bool | Unset): Whether this binding is active
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (PatchedPolicyBindingRequestScope | Unset): System = auto-assigned, User = manually assigned
+
+                * `system` - System
                 * `user` - User
             applied (bool | Unset): Whether policy was successfully applied
             execution_log (Any | Unset): List of actions performed/logged during last execution
@@ -31,7 +36,7 @@ class PatchedPolicyBindingRequest:
 
     policy_id: UUID | Unset = UNSET
     enabled: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
+    scope: PatchedPolicyBindingRequestScope | Unset = UNSET
     applied: bool | Unset = UNSET
     execution_log: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -103,11 +108,11 @@ class PatchedPolicyBindingRequest:
         enabled = d.pop("enabled", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: PatchedPolicyBindingRequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_patched_policy_binding_request_scope(_scope)
 
         applied = d.pop("applied", UNSET)
 

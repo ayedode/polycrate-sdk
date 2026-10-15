@@ -7,8 +7,19 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.k8s_controlplane_list_effective_criticality_type_1 import (
+    K8SControlplaneListEffectiveCriticalityType1,
+    check_k8s_controlplane_list_effective_criticality_type_1,
+)
+from ..models.k8s_controlplane_list_effective_criticality_type_2_type_1 import (
+    K8SControlplaneListEffectiveCriticalityType2Type1,
+    check_k8s_controlplane_list_effective_criticality_type_2_type_1,
+)
+from ..models.k8s_controlplane_list_effective_criticality_type_3_type_1 import (
+    K8SControlplaneListEffectiveCriticalityType3Type1,
+    check_k8s_controlplane_list_effective_criticality_type_3_type_1,
+)
+from ..models.k8s_controlplane_list_state import K8SControlplaneListState, check_k8s_controlplane_list_state
 
 if TYPE_CHECKING:
     from ..models.k8s_controlplane_list_active_condition_instances_item import (
@@ -50,7 +61,7 @@ class K8SControlplaneList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (K8SControlplaneListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -68,7 +79,8 @@ class K8SControlplaneList:
             created (K8SControlplaneListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (K8SControlplaneListEffectiveCriticalityType1 |
+                K8SControlplaneListEffectiveCriticalityType2Type1 | K8SControlplaneListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             region (K8SControlplaneListRegionType0 | None):
             block (K8SControlplaneListBlockType0 | None):
@@ -85,7 +97,7 @@ class K8SControlplaneList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: K8SControlplaneListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -96,7 +108,12 @@ class K8SControlplaneList:
     created: K8SControlplaneListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        K8SControlplaneListEffectiveCriticalityType1
+        | K8SControlplaneListEffectiveCriticalityType2Type1
+        | K8SControlplaneListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     region: K8SControlplaneListRegionType0 | None
     block: K8SControlplaneListBlockType0 | None
@@ -113,12 +130,8 @@ class K8SControlplaneList:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.k8s_controlplane_list_block_type_0 import K8SControlplaneListBlockType0  # noqa: PLC0415
-        from ..models.k8s_controlplane_list_k8s_cluster_type_0 import (
-            K8SControlplaneListK8SClusterType0,  # noqa: PLC0415
-        )
-        from ..models.k8s_controlplane_list_organization_type_0 import (
-            K8SControlplaneListOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.k8s_controlplane_list_k8s_cluster_type_0 import K8SControlplaneListK8SClusterType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_list_organization_type_0 import K8SControlplaneListOrganizationType0  # noqa: PLC0415
         from ..models.k8s_controlplane_list_region_type_0 import K8SControlplaneListRegionType0  # noqa: PLC0415
         from ..models.k8s_controlplane_list_workspace_type_0 import K8SControlplaneListWorkspaceType0  # noqa: PLC0415
 
@@ -161,6 +174,10 @@ class K8SControlplaneList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -247,12 +264,8 @@ class K8SControlplaneList:
         )
         from ..models.k8s_controlplane_list_block_type_0 import K8SControlplaneListBlockType0  # noqa: PLC0415
         from ..models.k8s_controlplane_list_created import K8SControlplaneListCreated  # noqa: PLC0415
-        from ..models.k8s_controlplane_list_k8s_cluster_type_0 import (
-            K8SControlplaneListK8SClusterType0,  # noqa: PLC0415
-        )
-        from ..models.k8s_controlplane_list_organization_type_0 import (
-            K8SControlplaneListOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.k8s_controlplane_list_k8s_cluster_type_0 import K8SControlplaneListK8SClusterType0  # noqa: PLC0415
+        from ..models.k8s_controlplane_list_organization_type_0 import K8SControlplaneListOrganizationType0  # noqa: PLC0415
         from ..models.k8s_controlplane_list_region_type_0 import K8SControlplaneListRegionType0  # noqa: PLC0415
         from ..models.k8s_controlplane_list_workspace_type_0 import K8SControlplaneListWorkspaceType0  # noqa: PLC0415
 
@@ -261,7 +274,7 @@ class K8SControlplaneList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_k8s_controlplane_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -316,18 +329,51 @@ class K8SControlplaneList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            K8SControlplaneListEffectiveCriticalityType1
+            | K8SControlplaneListEffectiveCriticalityType2Type1
+            | K8SControlplaneListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_k8s_controlplane_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_k8s_controlplane_list_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_k8s_controlplane_list_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                K8SControlplaneListEffectiveCriticalityType1
+                | K8SControlplaneListEffectiveCriticalityType2Type1
+                | K8SControlplaneListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

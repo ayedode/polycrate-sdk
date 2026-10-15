@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.block_rollout_status_enum import BlockRolloutStatusEnum, check_block_rollout_status_enum
+from ..models.block_rollout_simple_status import BlockRolloutSimpleStatus, check_block_rollout_simple_status
 
 T = TypeVar("T", bound="BlockRolloutSimple")
 
@@ -19,7 +19,7 @@ class BlockRolloutSimple:
         id (UUID):
         name (str):
         batch_identifier (str):
-        status (BlockRolloutStatusEnum): * `active` - Active
+        status (BlockRolloutSimpleStatus): * `active` - Active
             * `paused` - Paused
             * `blocked` - Blocked
             * `completed` - Completed
@@ -33,7 +33,7 @@ class BlockRolloutSimple:
     id: UUID
     name: str
     batch_identifier: str
-    status: BlockRolloutStatusEnum
+    status: BlockRolloutSimpleStatus
     total_items: int
     completed_items: int
     failed_items: int
@@ -83,7 +83,7 @@ class BlockRolloutSimple:
 
         batch_identifier = d.pop("batch_identifier")
 
-        status = check_block_rollout_status_enum(d.pop("status"))
+        status = check_block_rollout_simple_status(d.pop("status"))
 
         total_items = d.pop("total_items")
 

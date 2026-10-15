@@ -7,8 +7,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.severity_401_enum import Severity401Enum, check_severity_401_enum
-from ..models.status_a85_enum import StatusA85Enum, check_status_a85_enum
+from ..models.cve_simple_severity import CVESimpleSeverity, check_cve_simple_severity
+from ..models.cve_simple_status import CVESimpleStatus, check_cve_simple_status
 
 T = TypeVar("T", bound="CVESimple")
 
@@ -24,13 +24,17 @@ class CVESimple:
             the name.
         cve_id (str): Canonical CVE identifier, e.g. CVE-2024-12345
         title (str): Short human-readable title/summary
-        severity (Severity401Enum): * `critical` - Critical
+        severity (CVESimpleSeverity): Normalized severity bucket derived from cvss_score
+
+            * `critical` - Critical
             * `high` - High
             * `medium` - Medium
             * `low` - Low
             * `none` - None
             * `unknown` - Unknown
-        status (StatusA85Enum): * `open` - Open
+        status (CVESimpleStatus): Lifecycle status of the CVE record
+
+            * `open` - Open
             * `disputed` - Disputed
             * `rejected` - Rejected
             * `reserved` - Reserved
@@ -43,8 +47,8 @@ class CVESimple:
     display_name: None | str
     cve_id: str
     title: str
-    severity: Severity401Enum
-    status: StatusA85Enum
+    severity: CVESimpleSeverity
+    status: CVESimpleStatus
     cvss_score: None | str
     url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -106,9 +110,9 @@ class CVESimple:
 
         title = d.pop("title")
 
-        severity = check_severity_401_enum(d.pop("severity"))
+        severity = check_cve_simple_severity(d.pop("severity"))
 
-        status = check_status_a85_enum(d.pop("status"))
+        status = check_cve_simple_status(d.pop("status"))
 
         def _parse_cvss_score(data: object) -> None | str:
             if data is None:

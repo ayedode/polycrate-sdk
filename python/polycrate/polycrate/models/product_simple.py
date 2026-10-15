@@ -7,8 +7,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.billing_interval_enum import BillingIntervalEnum, check_billing_interval_enum
-from ..models.product_kind_enum import ProductKindEnum, check_product_kind_enum
+from ..models.product_simple_billing_interval import ProductSimpleBillingInterval, check_product_simple_billing_interval
+from ..models.product_simple_kind import ProductSimpleKind, check_product_simple_kind
 
 T = TypeVar("T", bound="ProductSimple")
 
@@ -22,7 +22,7 @@ class ProductSimple:
         name (str):
         display_name (None | str): The display name is used to display the object in the UI. It can be different from
             the name.
-        kind (ProductKindEnum): * `host` - Host
+        kind (ProductSimpleKind): * `host` - Host
             * `k8scluster` - K8s Cluster
             * `k8sapp` - K8s App
             * `support` - Support
@@ -32,7 +32,11 @@ class ProductSimple:
             * `project` - Project
             * `dnszone` - DNS Zone
             * `assistant` - Assistant
-        billing_interval (BillingIntervalEnum): * `second` - Second
+            * `registry-storage` - Registry Storage
+            * `secrets-namespace` - Secrets Namespace
+            * `endpoint-monitor` - Endpoint Monitor
+            * `domain` - Domain
+        billing_interval (ProductSimpleBillingInterval): * `second` - Second
             * `minute` - Minute
             * `hour` - Hour
             * `day` - Day
@@ -45,8 +49,8 @@ class ProductSimple:
     id: UUID
     name: str
     display_name: None | str
-    kind: ProductKindEnum
-    billing_interval: BillingIntervalEnum
+    kind: ProductSimpleKind
+    billing_interval: ProductSimpleBillingInterval
     price_per_unit: None | str
     url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -98,9 +102,9 @@ class ProductSimple:
 
         display_name = _parse_display_name(d.pop("display_name"))
 
-        kind = check_product_kind_enum(d.pop("kind"))
+        kind = check_product_simple_kind(d.pop("kind"))
 
-        billing_interval = check_billing_interval_enum(d.pop("billing_interval"))
+        billing_interval = check_product_simple_billing_interval(d.pop("billing_interval"))
 
         def _parse_price_per_unit(data: object) -> None | str:
             if data is None:

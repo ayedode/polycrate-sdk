@@ -8,7 +8,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
+from ..models.conversation_provider_request_kind import (
+    ConversationProviderRequestKind,
+    check_conversation_provider_request_kind,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -26,7 +29,9 @@ class ConversationProviderRequest:
         Attributes:
             meta (Any): Provider metadata as JSON object
             config (Any): Provider configuration as JSON object
-            kind (ConversationKindEnum | Unset): * `generic` - Generic
+            kind (ConversationProviderRequestKind | Unset): Type of conversation provider
+
+                * `generic` - Generic
                 * `zammad` - Zammad
                 * `slack` - Slack
                 * `discord` - Discord
@@ -39,14 +44,12 @@ class ConversationProviderRequest:
 
     meta: Any
     config: Any
-    kind: ConversationKindEnum | Unset = UNSET
+    kind: ConversationProviderRequestKind | Unset = UNSET
     secrets: ConversationProviderRequestSecretsType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.conversation_provider_request_secrets_type_0 import (
-            ConversationProviderRequestSecretsType0,  # noqa: PLC0415
-        )
+        from ..models.conversation_provider_request_secrets_type_0 import ConversationProviderRequestSecretsType0  # noqa: PLC0415
 
         meta = self.meta
 
@@ -80,9 +83,7 @@ class ConversationProviderRequest:
         return field_dict
 
     def to_multipart(self) -> types.RequestFiles:
-        from ..models.conversation_provider_request_secrets_type_0 import (
-            ConversationProviderRequestSecretsType0,  # noqa: PLC0415
-        )
+        from ..models.conversation_provider_request_secrets_type_0 import ConversationProviderRequestSecretsType0  # noqa: PLC0415
 
         files: types.RequestFiles = []
 
@@ -106,9 +107,7 @@ class ConversationProviderRequest:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversation_provider_request_secrets_type_0 import (
-            ConversationProviderRequestSecretsType0,  # noqa: PLC0415
-        )
+        from ..models.conversation_provider_request_secrets_type_0 import ConversationProviderRequestSecretsType0  # noqa: PLC0415
 
         d = dict(src_dict)
         meta = d.pop("meta")
@@ -116,11 +115,11 @@ class ConversationProviderRequest:
         config = d.pop("config")
 
         _kind = d.pop("kind", UNSET)
-        kind: ConversationKindEnum | Unset
+        kind: ConversationProviderRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_conversation_kind_enum(_kind)
+            kind = check_conversation_provider_request_kind(_kind)
 
         def _parse_secrets(data: object) -> ConversationProviderRequestSecretsType0 | None | Unset:
             if data is None:

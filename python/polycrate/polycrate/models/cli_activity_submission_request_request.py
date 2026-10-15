@@ -8,9 +8,9 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.cli_activity_submission_request_kind_enum import (
-    CLIActivitySubmissionRequestKindEnum,
-    check_cli_activity_submission_request_kind_enum,
+from ..models.cli_activity_submission_request_request_kind import (
+    CLIActivitySubmissionRequestRequestKind,
+    check_cli_activity_submission_request_request_kind,
 )
 from ..types import UNSET, Unset
 
@@ -25,7 +25,7 @@ T = TypeVar("T", bound="CLIActivitySubmissionRequestRequest")
 class CLIActivitySubmissionRequestRequest:
     """
     Attributes:
-        kind (CLIActivitySubmissionRequestKindEnum): * `ssh-session` - ssh-session
+        kind (CLIActivitySubmissionRequestRequestKind): * `ssh-session` - ssh-session
             * `workspace-sync` - workspace-sync
         name (str): Slug-format identifier (required)
         organization (str): Organization name
@@ -37,7 +37,7 @@ class CLIActivitySubmissionRequestRequest:
         metadata (CLIActivitySubmissionRequestRequestMetadata | Unset): Additional metadata
     """
 
-    kind: CLIActivitySubmissionRequestKindEnum
+    kind: CLIActivitySubmissionRequestRequestKind
     name: str
     organization: str
     workspace: str
@@ -130,7 +130,7 @@ class CLIActivitySubmissionRequestRequest:
         )
 
         d = dict(src_dict)
-        kind = check_cli_activity_submission_request_kind_enum(d.pop("kind"))
+        kind = check_cli_activity_submission_request_request_kind(d.pop("kind"))
 
         name = d.pop("name")
 

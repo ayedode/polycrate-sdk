@@ -7,8 +7,19 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.region_list_effective_criticality_type_1 import (
+    RegionListEffectiveCriticalityType1,
+    check_region_list_effective_criticality_type_1,
+)
+from ..models.region_list_effective_criticality_type_2_type_1 import (
+    RegionListEffectiveCriticalityType2Type1,
+    check_region_list_effective_criticality_type_2_type_1,
+)
+from ..models.region_list_effective_criticality_type_3_type_1 import (
+    RegionListEffectiveCriticalityType3Type1,
+    check_region_list_effective_criticality_type_3_type_1,
+)
+from ..models.region_list_state import RegionListState, check_region_list_state
 
 if TYPE_CHECKING:
     from ..models.region_list_active_condition_instances_item import RegionListActiveConditionInstancesItem
@@ -28,7 +39,7 @@ class RegionList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (RegionListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -46,15 +57,17 @@ class RegionList:
             created (RegionListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | RegionListEffectiveCriticalityType1 | RegionListEffectiveCriticalityType2Type1 |
+                RegionListEffectiveCriticalityType3Type1):
             url (str): Gibt die absolute URL zum Object zurück.
-            platform_features (list[str]): Active platform services: 's3', 'loadbalancer', 'apm', 'dns', 'controlplane'
+            platform_features (list[str]): Active platform services: 's3', 'loadbalancer', 'apm', 'dns', 'controlplane',
+                'compute', 'iaas'
             platform_service (bool): If True: managed by system owner org, available platform-wide to all organizations.
     """
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: RegionListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -65,7 +78,12 @@ class RegionList:
     created: RegionListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | RegionListEffectiveCriticalityType1
+        | RegionListEffectiveCriticalityType2Type1
+        | RegionListEffectiveCriticalityType3Type1
+    )
     url: str
     platform_features: list[str]
     platform_service: bool
@@ -110,6 +128,10 @@ class RegionList:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -147,9 +169,7 @@ class RegionList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.region_list_active_condition_instances_item import (
-            RegionListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.region_list_active_condition_instances_item import RegionListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.region_list_created import RegionListCreated  # noqa: PLC0415
         from ..models.region_list_organization_type_0 import RegionListOrganizationType0  # noqa: PLC0415
         from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
@@ -159,7 +179,7 @@ class RegionList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_region_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -201,18 +221,47 @@ class RegionList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | RegionListEffectiveCriticalityType1
+            | RegionListEffectiveCriticalityType2Type1
+            | RegionListEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_region_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_region_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_region_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | RegionListEffectiveCriticalityType1
+                | RegionListEffectiveCriticalityType2Type1
+                | RegionListEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

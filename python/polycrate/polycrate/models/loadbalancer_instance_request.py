@@ -1,20 +1,55 @@
 from __future__ import annotations
 
 import datetime
+import json
 from collections.abc import Mapping
-from typing import Any, TypeVar, cast
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.deployment_strategy_enum import DeploymentStrategyEnum, check_deployment_strategy_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.session_affinity_enum import SessionAffinityEnum, check_session_affinity_enum
+from ..models.loadbalancer_instance_request_criticality_type_1 import (
+    LoadbalancerInstanceRequestCriticalityType1,
+    check_loadbalancer_instance_request_criticality_type_1,
+)
+from ..models.loadbalancer_instance_request_criticality_type_2_type_1 import (
+    LoadbalancerInstanceRequestCriticalityType2Type1,
+    check_loadbalancer_instance_request_criticality_type_2_type_1,
+)
+from ..models.loadbalancer_instance_request_criticality_type_3_type_1 import (
+    LoadbalancerInstanceRequestCriticalityType3Type1,
+    check_loadbalancer_instance_request_criticality_type_3_type_1,
+)
+from ..models.loadbalancer_instance_request_deployment_strategy import (
+    LoadbalancerInstanceRequestDeploymentStrategy,
+    check_loadbalancer_instance_request_deployment_strategy,
+)
+from ..models.loadbalancer_instance_request_engine_version import (
+    LoadbalancerInstanceRequestEngineVersion,
+    check_loadbalancer_instance_request_engine_version,
+)
+from ..models.loadbalancer_instance_request_kind import (
+    LoadbalancerInstanceRequestKind,
+    check_loadbalancer_instance_request_kind,
+)
+from ..models.loadbalancer_instance_request_provider import (
+    LoadbalancerInstanceRequestProvider,
+    check_loadbalancer_instance_request_provider,
+)
+from ..models.loadbalancer_instance_request_proxy_placement import (
+    LoadbalancerInstanceRequestProxyPlacement,
+    check_loadbalancer_instance_request_proxy_placement,
+)
+from ..models.loadbalancer_instance_request_session_affinity import (
+    LoadbalancerInstanceRequestSessionAffinity,
+    check_loadbalancer_instance_request_session_affinity,
+)
 from ..types import UNSET, Unset
+
+if TYPE_CHECKING:
+    from ..models.lbi_v2_spec_request import LbiV2SpecRequest
+
 
 T = TypeVar("T", bound="LoadbalancerInstanceRequest")
 
@@ -31,7 +66,7 @@ class LoadbalancerInstanceRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (LoadbalancerInstanceRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -48,12 +83,13 @@ class LoadbalancerInstanceRequest:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (LoadbalancerInstanceRequestKind | Unset): * `generic` - Generic
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (LoadbalancerInstanceRequestCriticalityType1 | LoadbalancerInstanceRequestCriticalityType2Type1 |
+                LoadbalancerInstanceRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from
+                workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -71,15 +107,26 @@ class LoadbalancerInstanceRequest:
             ssl_redirect (bool | Unset):
             enable_websockets (bool | Unset):
             enable_grpc (bool | Unset):
-            session_affinity (SessionAffinityEnum | Unset): * `none` - None
+            session_affinity (LoadbalancerInstanceRequestSessionAffinity | Unset): * `none` - None
                 * `cookie` - Cookie-based
                 * `ip` - Client IP
-            deployment_strategy (DeploymentStrategyEnum | Unset): * `rolling` - Rolling Update
+            deployment_strategy (LoadbalancerInstanceRequestDeploymentStrategy | Unset): * `rolling` - Rolling Update
                 * `blue_green` - Blue-Green
                 * `canary` - Canary
             last_deployment (datetime.datetime | None | Unset):
             metrics_data (Any | Unset): Metrics data from VictoriaMetrics: connections, bytes in/out with medians for 1h,
                 24h, 30d
+            engine_version (LoadbalancerInstanceRequestEngineVersion | Unset): 1 = HAProxy BlockRollout, 2 = Envoy Gateway
+                API SSA. Spec 705.
+
+                * `1` - HAProxy (v1)
+                * `2` - Envoy / Gateway API (v2)
+            spec (LbiV2SpecRequest | None | Unset):
+            proxy_placement (LoadbalancerInstanceRequestProxyPlacement | Unset): v2 placement. shared is rejected until a
+                later spec.
+
+                * `dedicated` - Dedicated
+                * `shared` - Shared
     """
 
     name: str | Unset = UNSET
@@ -87,16 +134,22 @@ class LoadbalancerInstanceRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: LoadbalancerInstanceRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: LoadbalancerInstanceRequestKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        LoadbalancerInstanceRequestCriticalityType1
+        | LoadbalancerInstanceRequestCriticalityType2Type1
+        | LoadbalancerInstanceRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -109,13 +162,18 @@ class LoadbalancerInstanceRequest:
     ssl_redirect: bool | Unset = UNSET
     enable_websockets: bool | Unset = UNSET
     enable_grpc: bool | Unset = UNSET
-    session_affinity: SessionAffinityEnum | Unset = UNSET
-    deployment_strategy: DeploymentStrategyEnum | Unset = UNSET
+    session_affinity: LoadbalancerInstanceRequestSessionAffinity | Unset = UNSET
+    deployment_strategy: LoadbalancerInstanceRequestDeploymentStrategy | Unset = UNSET
     last_deployment: datetime.datetime | None | Unset = UNSET
     metrics_data: Any | Unset = UNSET
+    engine_version: LoadbalancerInstanceRequestEngineVersion | Unset = UNSET
+    spec: LbiV2SpecRequest | None | Unset = UNSET
+    proxy_placement: LoadbalancerInstanceRequestProxyPlacement | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.lbi_v2_spec_request import LbiV2SpecRequest  # noqa: PLC0415
+
         name = self.name
 
         display_name: None | str | Unset
@@ -177,6 +235,8 @@ class LoadbalancerInstanceRequest:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -233,6 +293,22 @@ class LoadbalancerInstanceRequest:
             last_deployment = self.last_deployment
 
         metrics_data = self.metrics_data
+
+        engine_version: int | Unset = UNSET
+        if not isinstance(self.engine_version, Unset):
+            engine_version = self.engine_version
+
+        spec: dict[str, Any] | None | Unset
+        if isinstance(self.spec, Unset):
+            spec = UNSET
+        elif isinstance(self.spec, LbiV2SpecRequest):
+            spec = self.spec.to_dict()
+        else:
+            spec = self.spec
+
+        proxy_placement: str | Unset = UNSET
+        if not isinstance(self.proxy_placement, Unset):
+            proxy_placement = self.proxy_placement
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -299,6 +375,12 @@ class LoadbalancerInstanceRequest:
             field_dict["last_deployment"] = last_deployment
         if metrics_data is not UNSET:
             field_dict["metrics_data"] = metrics_data
+        if engine_version is not UNSET:
+            field_dict["engine_version"] = engine_version
+        if spec is not UNSET:
+            field_dict["spec"] = spec
+        if proxy_placement is not UNSET:
+            field_dict["proxy_placement"] = proxy_placement
 
         return field_dict
 
@@ -363,7 +445,9 @@ class LoadbalancerInstanceRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -430,6 +514,18 @@ class LoadbalancerInstanceRequest:
         if not isinstance(self.metrics_data, Unset):
             files.append(("metrics_data", (None, str(self.metrics_data).encode(), "text/plain")))
 
+        if not isinstance(self.engine_version, Unset):
+            files.append(("engine_version", (None, str(self.engine_version).encode(), "text/plain")))
+
+        if not isinstance(self.spec, Unset):
+            if self.spec is None:
+                files.append(("spec", (None, str(self.spec).encode(), "text/plain")))
+            else:
+                files.append(("spec", (None, json.dumps(self.spec.to_dict()).encode(), "application/json")))
+
+        if not isinstance(self.proxy_placement, Unset):
+            files.append(("proxy_placement", (None, str(self.proxy_placement).encode(), "text/plain")))
+
         for prop_name, prop in self.additional_properties.items():
             files.append((prop_name, (None, str(prop).encode(), "text/plain")))
 
@@ -437,6 +533,8 @@ class LoadbalancerInstanceRequest:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.lbi_v2_spec_request import LbiV2SpecRequest  # noqa: PLC0415
+
         d = dict(src_dict)
         name = d.pop("name", UNSET)
 
@@ -456,11 +554,11 @@ class LoadbalancerInstanceRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: LoadbalancerInstanceRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_loadbalancer_instance_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -485,11 +583,11 @@ class LoadbalancerInstanceRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: LoadbalancerInstanceRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_loadbalancer_instance_request_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -519,7 +617,15 @@ class LoadbalancerInstanceRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            LoadbalancerInstanceRequestCriticalityType1
+            | LoadbalancerInstanceRequestCriticalityType2Type1
+            | LoadbalancerInstanceRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -527,20 +633,35 @@ class LoadbalancerInstanceRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_loadbalancer_instance_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_loadbalancer_instance_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_loadbalancer_instance_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LoadbalancerInstanceRequestCriticalityType1
+                | LoadbalancerInstanceRequestCriticalityType2Type1
+                | LoadbalancerInstanceRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -590,18 +711,18 @@ class LoadbalancerInstanceRequest:
         enable_grpc = d.pop("enable_grpc", UNSET)
 
         _session_affinity = d.pop("session_affinity", UNSET)
-        session_affinity: SessionAffinityEnum | Unset
+        session_affinity: LoadbalancerInstanceRequestSessionAffinity | Unset
         if isinstance(_session_affinity, Unset):
             session_affinity = UNSET
         else:
-            session_affinity = check_session_affinity_enum(_session_affinity)
+            session_affinity = check_loadbalancer_instance_request_session_affinity(_session_affinity)
 
         _deployment_strategy = d.pop("deployment_strategy", UNSET)
-        deployment_strategy: DeploymentStrategyEnum | Unset
+        deployment_strategy: LoadbalancerInstanceRequestDeploymentStrategy | Unset
         if isinstance(_deployment_strategy, Unset):
             deployment_strategy = UNSET
         else:
-            deployment_strategy = check_deployment_strategy_enum(_deployment_strategy)
+            deployment_strategy = check_loadbalancer_instance_request_deployment_strategy(_deployment_strategy)
 
         def _parse_last_deployment(data: object) -> datetime.datetime | None | Unset:
             if data is None:
@@ -621,6 +742,37 @@ class LoadbalancerInstanceRequest:
         last_deployment = _parse_last_deployment(d.pop("last_deployment", UNSET))
 
         metrics_data = d.pop("metrics_data", UNSET)
+
+        _engine_version = d.pop("engine_version", UNSET)
+        engine_version: LoadbalancerInstanceRequestEngineVersion | Unset
+        if isinstance(_engine_version, Unset):
+            engine_version = UNSET
+        else:
+            engine_version = check_loadbalancer_instance_request_engine_version(_engine_version)
+
+        def _parse_spec(data: object) -> LbiV2SpecRequest | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                spec_type_1 = LbiV2SpecRequest.from_dict(data)
+
+                return spec_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(LbiV2SpecRequest | None | Unset, data)
+
+        spec = _parse_spec(d.pop("spec", UNSET))
+
+        _proxy_placement = d.pop("proxy_placement", UNSET)
+        proxy_placement: LoadbalancerInstanceRequestProxyPlacement | Unset
+        if isinstance(_proxy_placement, Unset):
+            proxy_placement = UNSET
+        else:
+            proxy_placement = check_loadbalancer_instance_request_proxy_placement(_proxy_placement)
 
         loadbalancer_instance_request = cls(
             name=name,
@@ -654,6 +806,9 @@ class LoadbalancerInstanceRequest:
             deployment_strategy=deployment_strategy,
             last_deployment=last_deployment,
             metrics_data=metrics_data,
+            engine_version=engine_version,
+            spec=spec,
+            proxy_placement=proxy_placement,
         )
 
         loadbalancer_instance_request.additional_properties = d

@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.pop_kind_enum import PopKindEnum, check_pop_kind_enum
+from ..models.pop_simple_kind import PopSimpleKind, check_pop_simple_kind
 
 T = TypeVar("T", bound="PopSimple")
 
@@ -20,7 +20,7 @@ class PopSimple:
         id (UUID):
         name (str):
         reconciliation_running (bool):
-        kind (PopKindEnum): * `datacenter` - Datacenter
+        kind (PopSimpleKind): * `datacenter` - Datacenter
             * `datacenter-park` - Datacenter Park
             * `region` - Region
         url (str):
@@ -29,7 +29,7 @@ class PopSimple:
     id: UUID
     name: str
     reconciliation_running: bool
-    kind: PopKindEnum
+    kind: PopSimpleKind
     url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -67,7 +67,7 @@ class PopSimple:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        kind = check_pop_kind_enum(d.pop("kind"))
+        kind = check_pop_simple_kind(d.pop("kind"))
 
         url = d.pop("url")
 

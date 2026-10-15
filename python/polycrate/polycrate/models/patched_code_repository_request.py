@@ -9,10 +9,26 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.code_repository_kind_enum import CodeRepositoryKindEnum, check_code_repository_kind_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.patched_code_repository_request_criticality_type_1 import (
+    PatchedCodeRepositoryRequestCriticalityType1,
+    check_patched_code_repository_request_criticality_type_1,
+)
+from ..models.patched_code_repository_request_criticality_type_2_type_1 import (
+    PatchedCodeRepositoryRequestCriticalityType2Type1,
+    check_patched_code_repository_request_criticality_type_2_type_1,
+)
+from ..models.patched_code_repository_request_criticality_type_3_type_1 import (
+    PatchedCodeRepositoryRequestCriticalityType3Type1,
+    check_patched_code_repository_request_criticality_type_3_type_1,
+)
+from ..models.patched_code_repository_request_kind import (
+    PatchedCodeRepositoryRequestKind,
+    check_patched_code_repository_request_kind,
+)
+from ..models.patched_code_repository_request_provider import (
+    PatchedCodeRepositoryRequestProvider,
+    check_patched_code_repository_request_provider,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedCodeRepositoryRequest")
@@ -29,7 +45,7 @@ class PatchedCodeRepositoryRequest:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (PatchedCodeRepositoryRequestProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -46,7 +62,9 @@ class PatchedCodeRepositoryRequest:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (CodeRepositoryKindEnum | Unset): * `generic` - Generic
+        kind (PatchedCodeRepositoryRequestKind | Unset): Type of code repository
+
+            * `generic` - Generic
             * `gitlab` - GitLab
             * `gitea` - Gitea
             * `forgejo` - Forgejo
@@ -55,8 +73,9 @@ class PatchedCodeRepositoryRequest:
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | PatchedCodeRepositoryRequestCriticalityType1 |
+            PatchedCodeRepositoryRequestCriticalityType2Type1 | PatchedCodeRepositoryRequestCriticalityType3Type1 | Unset):
+            Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -83,17 +102,23 @@ class PatchedCodeRepositoryRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedCodeRepositoryRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: CodeRepositoryKindEnum | Unset = UNSET
+    kind: PatchedCodeRepositoryRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedCodeRepositoryRequestCriticalityType1
+        | PatchedCodeRepositoryRequestCriticalityType2Type1
+        | PatchedCodeRepositoryRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -170,6 +195,8 @@ class PatchedCodeRepositoryRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -369,7 +396,9 @@ class PatchedCodeRepositoryRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -465,11 +494,11 @@ class PatchedCodeRepositoryRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedCodeRepositoryRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_code_repository_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -494,11 +523,11 @@ class PatchedCodeRepositoryRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: CodeRepositoryKindEnum | Unset
+        kind: PatchedCodeRepositoryRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_code_repository_kind_enum(_kind)
+            kind = check_patched_code_repository_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -530,7 +559,15 @@ class PatchedCodeRepositoryRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedCodeRepositoryRequestCriticalityType1
+            | PatchedCodeRepositoryRequestCriticalityType2Type1
+            | PatchedCodeRepositoryRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -538,20 +575,35 @@ class PatchedCodeRepositoryRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_code_repository_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_code_repository_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_code_repository_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedCodeRepositoryRequestCriticalityType1
+                | PatchedCodeRepositoryRequestCriticalityType2Type1
+                | PatchedCodeRepositoryRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

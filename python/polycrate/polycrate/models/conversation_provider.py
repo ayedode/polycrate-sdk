@@ -8,13 +8,13 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
+from ..models.conversation_provider_kind import ConversationProviderKind, check_conversation_provider_kind
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.conversation_list import ConversationList
     from ..models.conversation_provider_secrets_type_0 import ConversationProviderSecretsType0
-    from ..models.credential import Credential
+    from ..models.credential_simple import CredentialSimple
     from ..models.organization_simple import OrganizationSimple
 
 
@@ -32,13 +32,15 @@ class ConversationProvider:
             organization (OrganizationSimple): Simple Organization serializer for nested representations.
 
                 Includes `url` field for direct navigation.
-            credential (Credential): Full serializer for Credential detail views.
+            credential (CredentialSimple): Simple serializer for embedding Credential in other serializers.
             conversations (list[ConversationList]):
             meta (Any): Provider metadata as JSON object
             config (Any): Provider configuration as JSON object
             created_at (datetime.datetime):
             updated_at (datetime.datetime):
-            kind (ConversationKindEnum | Unset): * `generic` - Generic
+            kind (ConversationProviderKind | Unset): Type of conversation provider
+
+                * `generic` - Generic
                 * `zammad` - Zammad
                 * `slack` - Slack
                 * `discord` - Discord
@@ -52,13 +54,13 @@ class ConversationProvider:
     id: UUID
     name: str
     organization: OrganizationSimple
-    credential: Credential
+    credential: CredentialSimple
     conversations: list[ConversationList]
     meta: Any
     config: Any
     created_at: datetime.datetime
     updated_at: datetime.datetime
-    kind: ConversationKindEnum | Unset = UNSET
+    kind: ConversationProviderKind | Unset = UNSET
     secrets: ConversationProviderSecretsType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -124,7 +126,7 @@ class ConversationProvider:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.conversation_list import ConversationList  # noqa: PLC0415
         from ..models.conversation_provider_secrets_type_0 import ConversationProviderSecretsType0  # noqa: PLC0415
-        from ..models.credential import Credential  # noqa: PLC0415
+        from ..models.credential_simple import CredentialSimple  # noqa: PLC0415
         from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
 
         d = dict(src_dict)
@@ -134,7 +136,7 @@ class ConversationProvider:
 
         organization = OrganizationSimple.from_dict(d.pop("organization"))
 
-        credential = Credential.from_dict(d.pop("credential"))
+        credential = CredentialSimple.from_dict(d.pop("credential"))
 
         conversations = []
         _conversations = d.pop("conversations")
@@ -152,11 +154,11 @@ class ConversationProvider:
         updated_at = datetime.datetime.fromisoformat(d.pop("updated_at"))
 
         _kind = d.pop("kind", UNSET)
-        kind: ConversationKindEnum | Unset
+        kind: ConversationProviderKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_conversation_kind_enum(_kind)
+            kind = check_conversation_provider_kind(_kind)
 
         def _parse_secrets(data: object) -> ConversationProviderSecretsType0 | None | Unset:
             if data is None:

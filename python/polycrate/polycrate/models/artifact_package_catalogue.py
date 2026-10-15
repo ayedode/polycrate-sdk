@@ -8,7 +8,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.artifact_kind_enum import ArtifactKindEnum, check_artifact_kind_enum
+from ..models.artifact_package_catalogue_kind import ArtifactPackageCatalogueKind, check_artifact_package_catalogue_kind
 
 if TYPE_CHECKING:
     from ..models.artifact_package_catalogue_latest_changelog_parsed import (
@@ -37,7 +37,7 @@ class ArtifactPackageCatalogue:
             name (str):
             display_name (None | str): The display name is used to display the object in the UI. It can be different from
                 the name.
-            kind (ArtifactKindEnum): * `helm` - Helm
+            kind (ArtifactPackageCatalogueKind): * `helm` - Helm
                 * `docker` - Docker
                 * `polycrate` - Polycrate
                 * `oci` - OCI
@@ -63,7 +63,7 @@ class ArtifactPackageCatalogue:
     id: UUID
     name: str
     display_name: None | str
-    kind: ArtifactKindEnum
+    kind: ArtifactPackageCatalogueKind
     url: str
     icon_url: None | str
     artifact_repository: ArtifactRepositorySimple
@@ -155,9 +155,7 @@ class ArtifactPackageCatalogue:
         from ..models.artifact_package_catalogue_latest_changelog_parsed import (
             ArtifactPackageCatalogueLatestChangelogParsed,  # noqa: PLC0415
         )
-        from ..models.artifact_package_catalogue_latest_source_urls import (
-            ArtifactPackageCatalogueLatestSourceUrls,  # noqa: PLC0415
-        )
+        from ..models.artifact_package_catalogue_latest_source_urls import ArtifactPackageCatalogueLatestSourceUrls  # noqa: PLC0415
         from ..models.artifact_repository_simple import ArtifactRepositorySimple  # noqa: PLC0415
 
         d = dict(src_dict)
@@ -172,7 +170,7 @@ class ArtifactPackageCatalogue:
 
         display_name = _parse_display_name(d.pop("display_name"))
 
-        kind = check_artifact_kind_enum(d.pop("kind"))
+        kind = check_artifact_package_catalogue_kind(d.pop("kind"))
 
         url = d.pop("url")
 

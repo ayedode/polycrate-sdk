@@ -9,13 +9,50 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.block_rollout_config_kind_enum import BlockRolloutConfigKindEnum, check_block_rollout_config_kind_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.trigger_type_enum import TriggerTypeEnum, check_trigger_type_enum
+from ..models.block_rollout_config_request_criticality_type_1 import (
+    BlockRolloutConfigRequestCriticalityType1,
+    check_block_rollout_config_request_criticality_type_1,
+)
+from ..models.block_rollout_config_request_criticality_type_2_type_1 import (
+    BlockRolloutConfigRequestCriticalityType2Type1,
+    check_block_rollout_config_request_criticality_type_2_type_1,
+)
+from ..models.block_rollout_config_request_criticality_type_3_type_1 import (
+    BlockRolloutConfigRequestCriticalityType3Type1,
+    check_block_rollout_config_request_criticality_type_3_type_1,
+)
+from ..models.block_rollout_config_request_kind import (
+    BlockRolloutConfigRequestKind,
+    check_block_rollout_config_request_kind,
+)
+from ..models.block_rollout_config_request_last_state import (
+    BlockRolloutConfigRequestLastState,
+    check_block_rollout_config_request_last_state,
+)
+from ..models.block_rollout_config_request_provider import (
+    BlockRolloutConfigRequestProvider,
+    check_block_rollout_config_request_provider,
+)
+from ..models.block_rollout_config_request_scope import (
+    BlockRolloutConfigRequestScope,
+    check_block_rollout_config_request_scope,
+)
+from ..models.block_rollout_config_request_state import (
+    BlockRolloutConfigRequestState,
+    check_block_rollout_config_request_state,
+)
+from ..models.block_rollout_config_request_trigger_type_type_1 import (
+    BlockRolloutConfigRequestTriggerTypeType1,
+    check_block_rollout_config_request_trigger_type_type_1,
+)
+from ..models.block_rollout_config_request_trigger_type_type_2_type_1 import (
+    BlockRolloutConfigRequestTriggerTypeType2Type1,
+    check_block_rollout_config_request_trigger_type_type_2_type_1,
+)
+from ..models.block_rollout_config_request_trigger_type_type_3_type_1 import (
+    BlockRolloutConfigRequestTriggerTypeType3Type1,
+    check_block_rollout_config_request_trigger_type_type_3_type_1,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="BlockRolloutConfigRequest")
@@ -48,7 +85,7 @@ class BlockRolloutConfigRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (BlockRolloutConfigRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -63,14 +100,14 @@ class BlockRolloutConfigRequest:
                 * `system` - System
             provider_reference (None | str | Unset):
             provider_id (None | str | Unset):
-            state (LastStateEnum | Unset): * `OK` - Ok
+            state (BlockRolloutConfigRequestState | Unset): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str | Unset):
-            last_state (LastStateEnum | Unset): * `OK` - Ok
+            last_state (BlockRolloutConfigRequestLastState | Unset): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -90,9 +127,12 @@ class BlockRolloutConfigRequest:
             platform_service (bool | Unset):
             repair_task_id (None | str | Unset):
             repair_task_meta (Any | Unset): Task metadata for repair progress tracking
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (BlockRolloutConfigRequestScope | Unset): The scope is used to separate `system` owned objects from `user`
+                owned objects.
+
+                * `system` - System
                 * `user` - User
-            kind (BlockRolloutConfigKindEnum | Unset): * `trigger` - Trigger
+            kind (BlockRolloutConfigRequestKind | Unset): * `trigger` - Trigger
                 * `config` - Config Default: 'config'.
             conditions (Any | Unset): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
@@ -101,8 +141,9 @@ class BlockRolloutConfigRequest:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (BlockRolloutConfigRequestCriticalityType1 | BlockRolloutConfigRequestCriticalityType2Type1 |
+                BlockRolloutConfigRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from
+                workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -117,7 +158,9 @@ class BlockRolloutConfigRequest:
             block_name (None | str | Unset):
             active (bool | Unset):
             is_system_config (bool | Unset):  Default: False.
-            trigger_type (BlankEnum | None | TriggerTypeEnum | Unset):
+            trigger_type (BlockRolloutConfigRequestTriggerTypeType1 | BlockRolloutConfigRequestTriggerTypeType2Type1 |
+                BlockRolloutConfigRequestTriggerTypeType3Type1 | None | Unset): * `reconciliation` - Reconciliation
+                * `schedule` - Schedule
             cron_expression (None | str | Unset):
             action_name (None | str | Unset):
             target_version (None | str | Unset):
@@ -148,12 +191,12 @@ class BlockRolloutConfigRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: BlockRolloutConfigRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
-    state: LastStateEnum | Unset = UNSET
+    state: BlockRolloutConfigRequestState | Unset = UNSET
     state_reason: None | str | Unset = UNSET
-    last_state: LastStateEnum | Unset = UNSET
+    last_state: BlockRolloutConfigRequestLastState | Unset = UNSET
     last_state_change: datetime.datetime | None | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     reconciliation_running: bool | Unset = UNSET
@@ -167,14 +210,20 @@ class BlockRolloutConfigRequest:
     platform_service: bool | Unset = UNSET
     repair_task_id: None | str | Unset = UNSET
     repair_task_meta: Any | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: BlockRolloutConfigKindEnum | Unset = "config"
+    scope: BlockRolloutConfigRequestScope | Unset = UNSET
+    kind: BlockRolloutConfigRequestKind | Unset = "config"
     conditions: Any | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        BlockRolloutConfigRequestCriticalityType1
+        | BlockRolloutConfigRequestCriticalityType2Type1
+        | BlockRolloutConfigRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -184,7 +233,13 @@ class BlockRolloutConfigRequest:
     block_name: None | str | Unset = UNSET
     active: bool | Unset = UNSET
     is_system_config: bool | Unset = False
-    trigger_type: BlankEnum | None | TriggerTypeEnum | Unset = UNSET
+    trigger_type: (
+        BlockRolloutConfigRequestTriggerTypeType1
+        | BlockRolloutConfigRequestTriggerTypeType2Type1
+        | BlockRolloutConfigRequestTriggerTypeType3Type1
+        | None
+        | Unset
+    ) = UNSET
     cron_expression: None | str | Unset = UNSET
     action_name: None | str | Unset = UNSET
     target_version: None | str | Unset = UNSET
@@ -328,6 +383,8 @@ class BlockRolloutConfigRequest:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -368,6 +425,8 @@ class BlockRolloutConfigRequest:
         trigger_type: None | str | Unset
         if isinstance(self.trigger_type, Unset):
             trigger_type = UNSET
+        elif isinstance(self.trigger_type, str):
+            trigger_type = self.trigger_type
         elif isinstance(self.trigger_type, str):
             trigger_type = self.trigger_type
         elif isinstance(self.trigger_type, str):
@@ -706,7 +765,9 @@ class BlockRolloutConfigRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -753,7 +814,9 @@ class BlockRolloutConfigRequest:
             files.append(("is_system_config", (None, str(self.is_system_config).encode(), "text/plain")))
 
         if not isinstance(self.trigger_type, Unset):
-            if isinstance(self.trigger_type, str):
+            if self.trigger_type is None:
+                files.append(("trigger_type", (None, str(self.trigger_type).encode(), "text/plain")))
+            elif isinstance(self.trigger_type, str):
                 files.append(("trigger_type", (None, str(self.trigger_type).encode(), "text/plain")))
             elif isinstance(self.trigger_type, str):
                 files.append(("trigger_type", (None, str(self.trigger_type).encode(), "text/plain")))
@@ -869,11 +932,11 @@ class BlockRolloutConfigRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: BlockRolloutConfigRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_block_rollout_config_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -894,11 +957,11 @@ class BlockRolloutConfigRequest:
         provider_id = _parse_provider_id(d.pop("provider_id", UNSET))
 
         _state = d.pop("state", UNSET)
-        state: LastStateEnum | Unset
+        state: BlockRolloutConfigRequestState | Unset
         if isinstance(_state, Unset):
             state = UNSET
         else:
-            state = check_last_state_enum(_state)
+            state = check_block_rollout_config_request_state(_state)
 
         def _parse_state_reason(data: object) -> None | str | Unset:
             if data is None:
@@ -910,11 +973,11 @@ class BlockRolloutConfigRequest:
         state_reason = _parse_state_reason(d.pop("state_reason", UNSET))
 
         _last_state = d.pop("last_state", UNSET)
-        last_state: LastStateEnum | Unset
+        last_state: BlockRolloutConfigRequestLastState | Unset
         if isinstance(_last_state, Unset):
             last_state = UNSET
         else:
-            last_state = check_last_state_enum(_last_state)
+            last_state = check_block_rollout_config_request_last_state(_last_state)
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None | Unset:
             if data is None:
@@ -979,18 +1042,18 @@ class BlockRolloutConfigRequest:
         repair_task_meta = d.pop("repair_task_meta", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: BlockRolloutConfigRequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_block_rollout_config_request_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: BlockRolloutConfigKindEnum | Unset
+        kind: BlockRolloutConfigRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_block_rollout_config_kind_enum(_kind)
+            kind = check_block_rollout_config_request_kind(_kind)
 
         conditions = d.pop("conditions", UNSET)
 
@@ -1024,7 +1087,15 @@ class BlockRolloutConfigRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            BlockRolloutConfigRequestCriticalityType1
+            | BlockRolloutConfigRequestCriticalityType2Type1
+            | BlockRolloutConfigRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1032,20 +1103,35 @@ class BlockRolloutConfigRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_block_rollout_config_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_block_rollout_config_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_block_rollout_config_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BlockRolloutConfigRequestCriticalityType1
+                | BlockRolloutConfigRequestCriticalityType2Type1
+                | BlockRolloutConfigRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1095,7 +1181,15 @@ class BlockRolloutConfigRequest:
 
         is_system_config = d.pop("is_system_config", UNSET)
 
-        def _parse_trigger_type(data: object) -> BlankEnum | None | TriggerTypeEnum | Unset:
+        def _parse_trigger_type(
+            data: object,
+        ) -> (
+            BlockRolloutConfigRequestTriggerTypeType1
+            | BlockRolloutConfigRequestTriggerTypeType2Type1
+            | BlockRolloutConfigRequestTriggerTypeType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1103,20 +1197,35 @@ class BlockRolloutConfigRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                trigger_type_type_0 = check_trigger_type_enum(data)
+                trigger_type_type_1 = check_block_rollout_config_request_trigger_type_type_1(data)
 
-                return trigger_type_type_0
+                return trigger_type_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                trigger_type_type_1 = check_blank_enum(data)
+                trigger_type_type_2_type_1 = check_block_rollout_config_request_trigger_type_type_2_type_1(data)
 
-                return trigger_type_type_1
+                return trigger_type_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | None | TriggerTypeEnum | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                trigger_type_type_3_type_1 = check_block_rollout_config_request_trigger_type_type_3_type_1(data)
+
+                return trigger_type_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BlockRolloutConfigRequestTriggerTypeType1
+                | BlockRolloutConfigRequestTriggerTypeType2Type1
+                | BlockRolloutConfigRequestTriggerTypeType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         trigger_type = _parse_trigger_type(d.pop("trigger_type", UNSET))
 

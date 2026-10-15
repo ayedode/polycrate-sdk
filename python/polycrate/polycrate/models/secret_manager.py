@@ -8,14 +8,47 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.secret_manager_kind_enum import SecretManagerKindEnum, check_secret_manager_kind_enum
-from ..models.vault_mode_enum import VaultModeEnum, check_vault_mode_enum
+from ..models.secret_manager_criticality_type_1 import (
+    SecretManagerCriticalityType1,
+    check_secret_manager_criticality_type_1,
+)
+from ..models.secret_manager_criticality_type_2_type_1 import (
+    SecretManagerCriticalityType2Type1,
+    check_secret_manager_criticality_type_2_type_1,
+)
+from ..models.secret_manager_criticality_type_3_type_1 import (
+    SecretManagerCriticalityType3Type1,
+    check_secret_manager_criticality_type_3_type_1,
+)
+from ..models.secret_manager_effective_criticality_type_1 import (
+    SecretManagerEffectiveCriticalityType1,
+    check_secret_manager_effective_criticality_type_1,
+)
+from ..models.secret_manager_effective_criticality_type_2_type_1 import (
+    SecretManagerEffectiveCriticalityType2Type1,
+    check_secret_manager_effective_criticality_type_2_type_1,
+)
+from ..models.secret_manager_effective_criticality_type_3_type_1 import (
+    SecretManagerEffectiveCriticalityType3Type1,
+    check_secret_manager_effective_criticality_type_3_type_1,
+)
+from ..models.secret_manager_kind import SecretManagerKind, check_secret_manager_kind
+from ..models.secret_manager_last_state import SecretManagerLastState, check_secret_manager_last_state
+from ..models.secret_manager_provider import SecretManagerProvider, check_secret_manager_provider
+from ..models.secret_manager_scope import SecretManagerScope, check_secret_manager_scope
+from ..models.secret_manager_state import SecretManagerState, check_secret_manager_state
+from ..models.secret_manager_vault_mode_type_1 import (
+    SecretManagerVaultModeType1,
+    check_secret_manager_vault_mode_type_1,
+)
+from ..models.secret_manager_vault_mode_type_2_type_1 import (
+    SecretManagerVaultModeType2Type1,
+    check_secret_manager_vault_mode_type_2_type_1,
+)
+from ..models.secret_manager_vault_mode_type_3_type_1 import (
+    SecretManagerVaultModeType3Type1,
+    check_secret_manager_vault_mode_type_3_type_1,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -41,14 +74,14 @@ class SecretManager:
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
         deleted_by_user (None | SecretManagerDeletedByUserType0):
-        state (LastStateEnum): * `OK` - Ok
+        state (SecretManagerState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (SecretManagerLastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -69,11 +102,14 @@ class SecretManager:
         repair_task_id (None | str):
         repair_task_meta (Any): Task metadata for repair progress tracking
         last_repair (datetime.datetime | None):
-        scope (ScopeEnum): * `system` - System
+        scope (SecretManagerScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+            * `system` - System
             * `user` - User
         conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
             conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (None | SecretManagerEffectiveCriticalityType1 |
+            SecretManagerEffectiveCriticalityType2Type1 | SecretManagerEffectiveCriticalityType3Type1):
         actual_availability (str): Calculated actual availability as yearly average in %
         organization (None | SecretManagerOrganizationType0):
         workspace (None | SecretManagerWorkspaceType0):
@@ -92,7 +128,7 @@ class SecretManager:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (SecretManagerProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -109,14 +145,17 @@ class SecretManager:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (SecretManagerKindEnum | Unset): * `vault` - Vault
+        kind (SecretManagerKind | Unset): Type of secret manager
+
+            * `vault` - Vault
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
             the condition will not be applied.
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | SecretManagerCriticalityType1 | SecretManagerCriticalityType2Type1 |
+            SecretManagerCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then org.
+            Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -128,7 +167,8 @@ class SecretManager:
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
         hostname (None | str | Unset): Hostname/URL where this secret manager is accessible
-        vault_mode (BlankEnum | None | Unset | VaultModeEnum): Vault deployment mode
+        vault_mode (None | SecretManagerVaultModeType1 | SecretManagerVaultModeType2Type1 |
+            SecretManagerVaultModeType3Type1 | Unset): Vault deployment mode
 
             * `standalone` - Standalone
             * `ha` - High Availability
@@ -150,9 +190,9 @@ class SecretManager:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: None | SecretManagerDeletedByUserType0
-    state: LastStateEnum
+    state: SecretManagerState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: SecretManagerLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -167,9 +207,14 @@ class SecretManager:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: SecretManagerScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | SecretManagerEffectiveCriticalityType1
+        | SecretManagerEffectiveCriticalityType2Type1
+        | SecretManagerEffectiveCriticalityType3Type1
+    )
     actual_availability: str
     organization: None | SecretManagerOrganizationType0
     workspace: None | SecretManagerWorkspaceType0
@@ -186,24 +231,32 @@ class SecretManager:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: SecretManagerProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: SecretManagerKindEnum | Unset = UNSET
+    kind: SecretManagerKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | SecretManagerCriticalityType1
+        | SecretManagerCriticalityType2Type1
+        | SecretManagerCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
     hostname: None | str | Unset = UNSET
-    vault_mode: BlankEnum | None | Unset | VaultModeEnum = UNSET
+    vault_mode: (
+        None | SecretManagerVaultModeType1 | SecretManagerVaultModeType2Type1 | SecretManagerVaultModeType3Type1 | Unset
+    ) = UNSET
     is_sealed: bool | Unset = UNSET
     is_initialized: bool | Unset = UNSET
     secrets_engines_count: int | Unset = UNSET
@@ -301,6 +354,10 @@ class SecretManager:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -404,6 +461,8 @@ class SecretManager:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -438,6 +497,8 @@ class SecretManager:
         vault_mode: None | str | Unset
         if isinstance(self.vault_mode, Unset):
             vault_mode = UNSET
+        elif isinstance(self.vault_mode, str):
+            vault_mode = self.vault_mode
         elif isinstance(self.vault_mode, str):
             vault_mode = self.vault_mode
         elif isinstance(self.vault_mode, str):
@@ -636,7 +697,7 @@ class SecretManager:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_secret_manager_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -645,7 +706,7 @@ class SecretManager:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_secret_manager_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -742,22 +803,51 @@ class SecretManager:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_secret_manager_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | SecretManagerEffectiveCriticalityType1
+            | SecretManagerEffectiveCriticalityType2Type1
+            | SecretManagerEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_secret_manager_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_secret_manager_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_secret_manager_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | SecretManagerEffectiveCriticalityType1
+                | SecretManagerEffectiveCriticalityType2Type1
+                | SecretManagerEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -850,11 +940,11 @@ class SecretManager:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: SecretManagerProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_secret_manager_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -879,11 +969,11 @@ class SecretManager:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: SecretManagerKindEnum | Unset
+        kind: SecretManagerKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_secret_manager_kind_enum(_kind)
+            kind = check_secret_manager_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -915,7 +1005,15 @@ class SecretManager:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | SecretManagerCriticalityType1
+            | SecretManagerCriticalityType2Type1
+            | SecretManagerCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -923,20 +1021,35 @@ class SecretManager:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_secret_manager_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_secret_manager_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_secret_manager_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | SecretManagerCriticalityType1
+                | SecretManagerCriticalityType2Type1
+                | SecretManagerCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -980,7 +1093,15 @@ class SecretManager:
 
         hostname = _parse_hostname(d.pop("hostname", UNSET))
 
-        def _parse_vault_mode(data: object) -> BlankEnum | None | Unset | VaultModeEnum:
+        def _parse_vault_mode(
+            data: object,
+        ) -> (
+            None
+            | SecretManagerVaultModeType1
+            | SecretManagerVaultModeType2Type1
+            | SecretManagerVaultModeType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -988,20 +1109,35 @@ class SecretManager:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                vault_mode_type_0 = check_vault_mode_enum(data)
+                vault_mode_type_1 = check_secret_manager_vault_mode_type_1(data)
 
-                return vault_mode_type_0
+                return vault_mode_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                vault_mode_type_1 = check_blank_enum(data)
+                vault_mode_type_2_type_1 = check_secret_manager_vault_mode_type_2_type_1(data)
 
-                return vault_mode_type_1
+                return vault_mode_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | None | Unset | VaultModeEnum, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                vault_mode_type_3_type_1 = check_secret_manager_vault_mode_type_3_type_1(data)
+
+                return vault_mode_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | SecretManagerVaultModeType1
+                | SecretManagerVaultModeType2Type1
+                | SecretManagerVaultModeType3Type1
+                | Unset,
+                data,
+            )
 
         vault_mode = _parse_vault_mode(d.pop("vault_mode", UNSET))
 

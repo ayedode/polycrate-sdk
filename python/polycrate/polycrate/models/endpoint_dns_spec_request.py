@@ -6,7 +6,10 @@ from typing import Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.protocol_enum import ProtocolEnum, check_protocol_enum
+from ..models.endpoint_dns_spec_request_protocol import (
+    EndpointDNSSpecRequestProtocol,
+    check_endpoint_dns_spec_request_protocol,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="EndpointDNSSpecRequest")
@@ -20,7 +23,7 @@ class EndpointDNSSpecRequest:
         interval (int | Unset):  Default: 60.
         record_name (str | Unset):  Default: ''.
         record_type (str | Unset):  Default: 'A'.
-        protocol (ProtocolEnum | Unset): * `udp` - udp
+        protocol (EndpointDNSSpecRequestProtocol | Unset): * `udp` - udp
             * `tcp` - tcp Default: 'udp'.
         expected_results (list[str] | Unset):
         expected_rcode (str | Unset):  Default: ''.
@@ -33,7 +36,7 @@ class EndpointDNSSpecRequest:
     interval: int | Unset = 60
     record_name: str | Unset = ""
     record_type: str | Unset = "A"
-    protocol: ProtocolEnum | Unset = "udp"
+    protocol: EndpointDNSSpecRequestProtocol | Unset = "udp"
     expected_results: list[str] | Unset = UNSET
     expected_rcode: str | Unset = ""
     tls_enabled: bool | Unset = False
@@ -104,11 +107,11 @@ class EndpointDNSSpecRequest:
         record_type = d.pop("record_type", UNSET)
 
         _protocol = d.pop("protocol", UNSET)
-        protocol: ProtocolEnum | Unset
+        protocol: EndpointDNSSpecRequestProtocol | Unset
         if isinstance(_protocol, Unset):
             protocol = UNSET
         else:
-            protocol = check_protocol_enum(_protocol)
+            protocol = check_endpoint_dns_spec_request_protocol(_protocol)
 
         expected_results = cast(list[str], d.pop("expected_results", UNSET))
 

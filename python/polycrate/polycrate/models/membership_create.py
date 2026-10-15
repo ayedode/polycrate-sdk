@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.user_role_enum import UserRoleEnum, check_user_role_enum
+from ..models.membership_create_role import MembershipCreateRole, check_membership_create_role
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="MembershipCreate")
@@ -19,7 +19,9 @@ class MembershipCreate:
 
     Attributes:
         organization_id (UUID): Polycrate organization UUID to add the user to
-        role (UserRoleEnum | Unset): * `admin` - Admin
+        role (MembershipCreateRole | Unset): Organization-scoped role (default: viewer)
+
+            * `admin` - Admin
             * `developer` - Developer
             * `billing` - Billing
             * `viewer` - Viewer
@@ -27,7 +29,7 @@ class MembershipCreate:
     """
 
     organization_id: UUID
-    role: UserRoleEnum | Unset = "viewer"
+    role: MembershipCreateRole | Unset = "viewer"
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -55,11 +57,11 @@ class MembershipCreate:
         organization_id = UUID(d.pop("organization_id"))
 
         _role = d.pop("role", UNSET)
-        role: UserRoleEnum | Unset
+        role: MembershipCreateRole | Unset
         if isinstance(_role, Unset):
             role = UNSET
         else:
-            role = check_user_role_enum(_role)
+            role = check_membership_create_role(_role)
 
         membership_create = cls(
             organization_id=organization_id,

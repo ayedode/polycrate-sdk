@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.dns_zone_kind_enum import DNSZoneKindEnum, check_dns_zone_kind_enum
+from ..models.dns_zone_simple_kind import DNSZoneSimpleKind, check_dns_zone_simple_kind
 
 T = TypeVar("T", bound="DNSZoneSimple")
 
@@ -19,8 +19,11 @@ class DNSZoneSimple:
         id (UUID):
         name (str): Zone name without trailing dot. May be a registered domain (e.g. 'example.com') or a delegated
             subdomain (e.g. 'project.example.com').
-        kind (DNSZoneKindEnum): * `internal` - Internal
-            * `external` - External
+        kind (DNSZoneSimpleKind): Zone backend: 'internal' (PowerDNS) or 'external' (third-party provider via python-
+            lexicon). Immutable after creation.
+
+            * `internal` - Internal
+            * `external` - External Default: 'internal'.
         provider (None | str): Lexicon provider name (e.g. 'cloudflare', 'hetzner', 'route53'). Required for
             kind='external'. Immutable after creation.
         primary_zone (bool): When multiple external DNS zones share the same name in an organization (different
@@ -30,10 +33,10 @@ class DNSZoneSimple:
 
     id: UUID
     name: str
-    kind: DNSZoneKindEnum
     provider: None | str
     primary_zone: bool
     url: str
+    kind: DNSZoneSimpleKind = "internal"
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -72,7 +75,7 @@ class DNSZoneSimple:
 
         name = d.pop("name")
 
-        kind = check_dns_zone_kind_enum(d.pop("kind"))
+        kind = check_dns_zone_simple_kind(d.pop("kind"))
 
         def _parse_provider(data: object) -> None | str:
             if data is None:

@@ -134,9 +134,7 @@ class OrganizationCachedMetrics:
         from ..models.organization_cached_metrics_alerts import OrganizationCachedMetricsAlerts  # noqa: PLC0415
         from ..models.organization_cached_metrics_costs import OrganizationCachedMetricsCosts  # noqa: PLC0415
         from ..models.organization_cached_metrics_endpoints import OrganizationCachedMetricsEndpoints  # noqa: PLC0415
-        from ..models.organization_cached_metrics_loadbalancers import (
-            OrganizationCachedMetricsLoadbalancers,  # noqa: PLC0415
-        )
+        from ..models.organization_cached_metrics_loadbalancers import OrganizationCachedMetricsLoadbalancers  # noqa: PLC0415
         from ..models.organization_cached_metrics_members import OrganizationCachedMetricsMembers  # noqa: PLC0415
         from ..models.organization_cached_metrics_message import OrganizationCachedMetricsMessage  # noqa: PLC0415
         from ..models.organization_cached_metrics_open import OrganizationCachedMetricsOpen  # noqa: PLC0415

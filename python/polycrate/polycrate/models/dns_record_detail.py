@@ -7,22 +7,54 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.dns_record_type_enum import DNSRecordTypeEnum, check_dns_record_type_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.dns_record_detail_created_by_component_type_1 import (
+    DNSRecordDetailCreatedByComponentType1,
+    check_dns_record_detail_created_by_component_type_1,
+)
+from ..models.dns_record_detail_created_by_component_type_2_type_1 import (
+    DNSRecordDetailCreatedByComponentType2Type1,
+    check_dns_record_detail_created_by_component_type_2_type_1,
+)
+from ..models.dns_record_detail_created_by_component_type_3_type_1 import (
+    DNSRecordDetailCreatedByComponentType3Type1,
+    check_dns_record_detail_created_by_component_type_3_type_1,
+)
+from ..models.dns_record_detail_criticality_type_1 import (
+    DNSRecordDetailCriticalityType1,
+    check_dns_record_detail_criticality_type_1,
+)
+from ..models.dns_record_detail_criticality_type_2_type_1 import (
+    DNSRecordDetailCriticalityType2Type1,
+    check_dns_record_detail_criticality_type_2_type_1,
+)
+from ..models.dns_record_detail_criticality_type_3_type_1 import (
+    DNSRecordDetailCriticalityType3Type1,
+    check_dns_record_detail_criticality_type_3_type_1,
+)
+from ..models.dns_record_detail_effective_criticality_type_1 import (
+    DNSRecordDetailEffectiveCriticalityType1,
+    check_dns_record_detail_effective_criticality_type_1,
+)
+from ..models.dns_record_detail_effective_criticality_type_2_type_1 import (
+    DNSRecordDetailEffectiveCriticalityType2Type1,
+    check_dns_record_detail_effective_criticality_type_2_type_1,
+)
+from ..models.dns_record_detail_effective_criticality_type_3_type_1 import (
+    DNSRecordDetailEffectiveCriticalityType3Type1,
+    check_dns_record_detail_effective_criticality_type_3_type_1,
+)
+from ..models.dns_record_detail_kind import DNSRecordDetailKind, check_dns_record_detail_kind
+from ..models.dns_record_detail_last_state import DNSRecordDetailLastState, check_dns_record_detail_last_state
+from ..models.dns_record_detail_provider import DNSRecordDetailProvider, check_dns_record_detail_provider
+from ..models.dns_record_detail_scope import DNSRecordDetailScope, check_dns_record_detail_scope
+from ..models.dns_record_detail_state import DNSRecordDetailState, check_dns_record_detail_state
+from ..models.dns_record_detail_type import DNSRecordDetailType, check_dns_record_detail_type
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.dns_record_detail_created import DNSRecordDetailCreated
     from ..models.dns_record_detail_deleted_by_user_type_0 import DNSRecordDetailDeletedByUserType0
     from ..models.dns_record_detail_last_action_run_type_0 import DNSRecordDetailLastActionRunType0
-    from ..models.dns_record_detail_organization_type_0 import DNSRecordDetailOrganizationType0
     from ..models.dns_record_detail_workspace_type_0 import DNSRecordDetailWorkspaceType0
     from ..models.dns_zone_simple import DNSZoneSimple
 
@@ -54,7 +86,7 @@ class DNSRecordDetail:
             id (str): Record identifier. Internal zones: UUID of the DNSRecord DB row. External zones: opaque composite
                 '<zone_uuid>::<provider_assigned_id>' as returned by the list endpoint. Do not treat this field as UUID-only.
             created (DNSRecordDetailCreated):
-            organization (DNSRecordDetailOrganizationType0 | None):
+            organization (str):
             workspace (DNSRecordDetailWorkspaceType0 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             icon_url (str): Gibt die Icon-URL des Objects zurück (für Dashboard Component Header).
@@ -62,7 +94,8 @@ class DNSRecordDetail:
             is_class_icon (bool):
             effective_slo_target (float | None):
             effective_sla_target (float | None):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (DNSRecordDetailEffectiveCriticalityType1 | DNSRecordDetailEffectiveCriticalityType2Type1
+                | DNSRecordDetailEffectiveCriticalityType3Type1 | None):
             last_action_run (DNSRecordDetailLastActionRunType0 | None):
             deleted_by_user (DNSRecordDetailDeletedByUserType0 | None):
             dns_zone (DNSZoneSimple):
@@ -71,14 +104,14 @@ class DNSRecordDetail:
             deleted_at (datetime.datetime | None): Timestamp when this object was soft-deleted. Null if not deleted.
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
-            state (LastStateEnum): * `OK` - Ok
+            state (DNSRecordDetailState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (DNSRecordDetailLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -99,7 +132,9 @@ class DNSRecordDetail:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (DNSRecordDetailScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
@@ -111,7 +146,7 @@ class DNSRecordDetail:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (DNSRecordDetailProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -129,14 +164,15 @@ class DNSRecordDetail:
             reconciliation_enabled (bool | Unset):
             last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
             platform_service (bool | Unset):
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (DNSRecordDetailKind | Unset): * `generic` - Generic
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (DNSRecordDetailCreatedByComponentType1 | DNSRecordDetailCreatedByComponentType2Type1 |
+                DNSRecordDetailCreatedByComponentType3Type1 | None | Unset): Component that created this object: cli, operator,
+                or api.
 
                 * `cli` - CLI
                 * `operator` - Operator
@@ -149,7 +185,8 @@ class DNSRecordDetail:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
+            criticality (DNSRecordDetailCriticalityType1 | DNSRecordDetailCriticalityType2Type1 |
+                DNSRecordDetailCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then
                 org. Explicit value overrides inheritance.
 
                 * `high` - High
@@ -157,7 +194,7 @@ class DNSRecordDetail:
                 * `low` - Low
             managed_by_object_id (None | str | Unset):
             platform_dns_record_created (bool | Unset):
-            type_ (DNSRecordTypeEnum | Unset): * `A` - A
+            type_ (DNSRecordDetailType | Unset): * `A` - A
                 * `AAAA` - AAAA
                 * `CNAME` - CNAME
                 * `MX` - MX
@@ -182,14 +219,19 @@ class DNSRecordDetail:
 
     id: str
     created: DNSRecordDetailCreated
-    organization: DNSRecordDetailOrganizationType0 | None
+    organization: str
     workspace: DNSRecordDetailWorkspaceType0 | None
     url: str
     icon_url: str
     is_class_icon: bool
     effective_slo_target: float | None
     effective_sla_target: float | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        DNSRecordDetailEffectiveCriticalityType1
+        | DNSRecordDetailEffectiveCriticalityType2Type1
+        | DNSRecordDetailEffectiveCriticalityType3Type1
+        | None
+    )
     last_action_run: DNSRecordDetailLastActionRunType0 | None
     deleted_by_user: DNSRecordDetailDeletedByUserType0 | None
     dns_zone: DNSZoneSimple
@@ -197,9 +239,9 @@ class DNSRecordDetail:
     updated_at: datetime.datetime
     deleted_at: datetime.datetime | None
     is_deleted: bool
-    state: LastStateEnum
+    state: DNSRecordDetailState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: DNSRecordDetailLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -214,7 +256,7 @@ class DNSRecordDetail:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: DNSRecordDetailScope
     conditions: Any
     actual_availability: str
     content: str
@@ -223,18 +265,24 @@ class DNSRecordDetail:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: DNSRecordDetailProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: DNSRecordDetailKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        DNSRecordDetailCreatedByComponentType1
+        | DNSRecordDetailCreatedByComponentType2Type1
+        | DNSRecordDetailCreatedByComponentType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_window_days: int | None | Unset = UNSET
@@ -242,10 +290,16 @@ class DNSRecordDetail:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        DNSRecordDetailCriticalityType1
+        | DNSRecordDetailCriticalityType2Type1
+        | DNSRecordDetailCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
-    type_: DNSRecordTypeEnum | Unset = "A"
+    type_: DNSRecordDetailType | Unset = "A"
     ttl: int | Unset = UNSET
     priority: int | None | Unset = UNSET
     archived_by: int | None | Unset = UNSET
@@ -257,18 +311,13 @@ class DNSRecordDetail:
     def to_dict(self) -> dict[str, Any]:
         from ..models.dns_record_detail_deleted_by_user_type_0 import DNSRecordDetailDeletedByUserType0  # noqa: PLC0415
         from ..models.dns_record_detail_last_action_run_type_0 import DNSRecordDetailLastActionRunType0  # noqa: PLC0415
-        from ..models.dns_record_detail_organization_type_0 import DNSRecordDetailOrganizationType0  # noqa: PLC0415
         from ..models.dns_record_detail_workspace_type_0 import DNSRecordDetailWorkspaceType0  # noqa: PLC0415
 
         id = self.id
 
         created = self.created.to_dict()
 
-        organization: dict[str, Any] | None
-        if isinstance(self.organization, DNSRecordDetailOrganizationType0):
-            organization = self.organization.to_dict()
-        else:
-            organization = self.organization
+        organization = self.organization
 
         workspace: dict[str, Any] | None
         if isinstance(self.workspace, DNSRecordDetailWorkspaceType0):
@@ -290,6 +339,10 @@ class DNSRecordDetail:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -451,6 +504,8 @@ class DNSRecordDetail:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -491,6 +546,8 @@ class DNSRecordDetail:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -662,7 +719,6 @@ class DNSRecordDetail:
         from ..models.dns_record_detail_created import DNSRecordDetailCreated  # noqa: PLC0415
         from ..models.dns_record_detail_deleted_by_user_type_0 import DNSRecordDetailDeletedByUserType0  # noqa: PLC0415
         from ..models.dns_record_detail_last_action_run_type_0 import DNSRecordDetailLastActionRunType0  # noqa: PLC0415
-        from ..models.dns_record_detail_organization_type_0 import DNSRecordDetailOrganizationType0  # noqa: PLC0415
         from ..models.dns_record_detail_workspace_type_0 import DNSRecordDetailWorkspaceType0  # noqa: PLC0415
         from ..models.dns_zone_simple import DNSZoneSimple  # noqa: PLC0415
 
@@ -671,20 +727,7 @@ class DNSRecordDetail:
 
         created = DNSRecordDetailCreated.from_dict(d.pop("created"))
 
-        def _parse_organization(data: object) -> DNSRecordDetailOrganizationType0 | None:
-            if data is None:
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                organization_type_0 = DNSRecordDetailOrganizationType0.from_dict(data)
-
-                return organization_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(DNSRecordDetailOrganizationType0 | None, data)
-
-        organization = _parse_organization(d.pop("organization"))
+        organization = d.pop("organization")
 
         def _parse_workspace(data: object) -> DNSRecordDetailWorkspaceType0 | None:
             if data is None:
@@ -721,18 +764,47 @@ class DNSRecordDetail:
 
         effective_sla_target = _parse_effective_sla_target(d.pop("effective_sla_target"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            DNSRecordDetailEffectiveCriticalityType1
+            | DNSRecordDetailEffectiveCriticalityType2Type1
+            | DNSRecordDetailEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_dns_record_detail_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_dns_record_detail_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_dns_record_detail_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DNSRecordDetailEffectiveCriticalityType1
+                | DNSRecordDetailEffectiveCriticalityType2Type1
+                | DNSRecordDetailEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -789,7 +861,7 @@ class DNSRecordDetail:
 
         is_deleted = d.pop("is_deleted")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_dns_record_detail_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -798,7 +870,7 @@ class DNSRecordDetail:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_dns_record_detail_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -895,7 +967,7 @@ class DNSRecordDetail:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_dns_record_detail_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
@@ -921,11 +993,11 @@ class DNSRecordDetail:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: DNSRecordDetailProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_dns_record_detail_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -961,11 +1033,11 @@ class DNSRecordDetail:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: DNSRecordDetailKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_dns_record_detail_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -997,7 +1069,15 @@ class DNSRecordDetail:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            DNSRecordDetailCreatedByComponentType1
+            | DNSRecordDetailCreatedByComponentType2Type1
+            | DNSRecordDetailCreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1005,20 +1085,35 @@ class DNSRecordDetail:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_dns_record_detail_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_dns_record_detail_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_dns_record_detail_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DNSRecordDetailCreatedByComponentType1
+                | DNSRecordDetailCreatedByComponentType2Type1
+                | DNSRecordDetailCreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1071,7 +1166,15 @@ class DNSRecordDetail:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            DNSRecordDetailCriticalityType1
+            | DNSRecordDetailCriticalityType2Type1
+            | DNSRecordDetailCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1079,20 +1182,35 @@ class DNSRecordDetail:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_dns_record_detail_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_dns_record_detail_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_dns_record_detail_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DNSRecordDetailCriticalityType1
+                | DNSRecordDetailCriticalityType2Type1
+                | DNSRecordDetailCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1108,11 +1226,11 @@ class DNSRecordDetail:
         platform_dns_record_created = d.pop("platform_dns_record_created", UNSET)
 
         _type_ = d.pop("type", UNSET)
-        type_: DNSRecordTypeEnum | Unset
+        type_: DNSRecordDetailType | Unset
         if isinstance(_type_, Unset):
             type_ = UNSET
         else:
-            type_ = check_dns_record_type_enum(_type_)
+            type_ = check_dns_record_detail_type(_type_)
 
         ttl = d.pop("ttl", UNSET)
 

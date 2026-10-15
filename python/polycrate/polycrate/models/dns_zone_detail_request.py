@@ -9,11 +9,35 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.dns_zone_kind_enum import DNSZoneKindEnum, check_dns_zone_kind_enum
-from ..models.dnssec_algorithm_enum import DnssecAlgorithmEnum, check_dnssec_algorithm_enum
+from ..models.dns_zone_detail_request_created_by_component_type_1 import (
+    DNSZoneDetailRequestCreatedByComponentType1,
+    check_dns_zone_detail_request_created_by_component_type_1,
+)
+from ..models.dns_zone_detail_request_created_by_component_type_2_type_1 import (
+    DNSZoneDetailRequestCreatedByComponentType2Type1,
+    check_dns_zone_detail_request_created_by_component_type_2_type_1,
+)
+from ..models.dns_zone_detail_request_created_by_component_type_3_type_1 import (
+    DNSZoneDetailRequestCreatedByComponentType3Type1,
+    check_dns_zone_detail_request_created_by_component_type_3_type_1,
+)
+from ..models.dns_zone_detail_request_criticality_type_1 import (
+    DNSZoneDetailRequestCriticalityType1,
+    check_dns_zone_detail_request_criticality_type_1,
+)
+from ..models.dns_zone_detail_request_criticality_type_2_type_1 import (
+    DNSZoneDetailRequestCriticalityType2Type1,
+    check_dns_zone_detail_request_criticality_type_2_type_1,
+)
+from ..models.dns_zone_detail_request_criticality_type_3_type_1 import (
+    DNSZoneDetailRequestCriticalityType3Type1,
+    check_dns_zone_detail_request_criticality_type_3_type_1,
+)
+from ..models.dns_zone_detail_request_dnssec_algorithm import (
+    DNSZoneDetailRequestDnssecAlgorithm,
+    check_dns_zone_detail_request_dnssec_algorithm,
+)
+from ..models.dns_zone_detail_request_kind import DNSZoneDetailRequestKind, check_dns_zone_detail_request_kind
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DNSZoneDetailRequest")
@@ -59,8 +83,9 @@ class DNSZoneDetailRequest:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (DNSZoneDetailRequestCreatedByComponentType1 |
+                DNSZoneDetailRequestCreatedByComponentType2Type1 | DNSZoneDetailRequestCreatedByComponentType3Type1 | None |
+                Unset): Component that created this object: cli, operator, or api.
 
                 * `cli` - CLI
                 * `operator` - Operator
@@ -73,15 +98,19 @@ class DNSZoneDetailRequest:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (DNSZoneDetailRequestCriticalityType1 | DNSZoneDetailRequestCriticalityType2Type1 |
+                DNSZoneDetailRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace,
+                then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
                 * `low` - Low
             managed_by_object_id (None | str | Unset):
             platform_dns_record_created (bool | Unset):
-            kind (DNSZoneKindEnum | Unset): * `internal` - Internal
+            kind (DNSZoneDetailRequestKind | Unset): Zone backend: 'internal' (PowerDNS) or 'external' (third-party provider
+                via python-lexicon). Immutable after creation.
+
+                * `internal` - Internal
                 * `external` - External Default: 'internal'.
             provider (None | str | Unset): Lexicon provider name (e.g. 'cloudflare', 'hetzner', 'route53'). Required for
                 kind='external'. Immutable after creation.
@@ -91,7 +120,7 @@ class DNSZoneDetailRequest:
             powerdns_metadata (Any | Unset): Zone metadata as returned by the PowerDNS API (rrsets excluded).
             default_ttl (int | Unset): Default TTL (in seconds) applied to new DNS records in this zone.
             dnssec_enabled (bool | Unset): Whether DNSSEC is enabled for this zone (internal zones only).
-            dnssec_algorithm (BlankEnum | DnssecAlgorithmEnum | Unset): DNSSEC signing algorithm. Only relevant when
+            dnssec_algorithm (DNSZoneDetailRequestDnssecAlgorithm | Unset): DNSSEC signing algorithm. Only relevant when
                 dnssec_enabled=True.
 
                 * `ecdsa256` - ECDSA P-256 / SHA-256 (recommended)
@@ -131,7 +160,13 @@ class DNSZoneDetailRequest:
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        DNSZoneDetailRequestCreatedByComponentType1
+        | DNSZoneDetailRequestCreatedByComponentType2Type1
+        | DNSZoneDetailRequestCreatedByComponentType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_window_days: int | None | Unset = UNSET
@@ -139,16 +174,22 @@ class DNSZoneDetailRequest:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        DNSZoneDetailRequestCriticalityType1
+        | DNSZoneDetailRequestCriticalityType2Type1
+        | DNSZoneDetailRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
-    kind: DNSZoneKindEnum | Unset = "internal"
+    kind: DNSZoneDetailRequestKind | Unset = "internal"
     provider: None | str | Unset = UNSET
     primary_zone: bool | Unset = True
     powerdns_metadata: Any | Unset = UNSET
     default_ttl: int | Unset = UNSET
     dnssec_enabled: bool | Unset = UNSET
-    dnssec_algorithm: BlankEnum | DnssecAlgorithmEnum | Unset = UNSET
+    dnssec_algorithm: DNSZoneDetailRequestDnssecAlgorithm | Unset = UNSET
     dnssec_nsec3: bool | Unset = UNSET
     dnssec_ds_records: Any | Unset = UNSET
     dnssec_cryptokeys: Any | Unset = UNSET
@@ -233,6 +274,8 @@ class DNSZoneDetailRequest:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -277,6 +320,8 @@ class DNSZoneDetailRequest:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -306,12 +351,8 @@ class DNSZoneDetailRequest:
 
         dnssec_enabled = self.dnssec_enabled
 
-        dnssec_algorithm: str | Unset
-        if isinstance(self.dnssec_algorithm, Unset):
-            dnssec_algorithm = UNSET
-        elif isinstance(self.dnssec_algorithm, str):
-            dnssec_algorithm = self.dnssec_algorithm
-        else:
+        dnssec_algorithm: str | Unset = UNSET
+        if not isinstance(self.dnssec_algorithm, Unset):
             dnssec_algorithm = self.dnssec_algorithm
 
         dnssec_nsec3 = self.dnssec_nsec3
@@ -534,7 +575,9 @@ class DNSZoneDetailRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.created_by_component, Unset):
-            if isinstance(self.created_by_component, str):
+            if self.created_by_component is None:
+                files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
+            elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
             elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
@@ -578,7 +621,9 @@ class DNSZoneDetailRequest:
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -618,10 +663,7 @@ class DNSZoneDetailRequest:
             files.append(("dnssec_enabled", (None, str(self.dnssec_enabled).encode(), "text/plain")))
 
         if not isinstance(self.dnssec_algorithm, Unset):
-            if isinstance(self.dnssec_algorithm, str):
-                files.append(("dnssec_algorithm", (None, str(self.dnssec_algorithm).encode(), "text/plain")))
-            else:
-                files.append(("dnssec_algorithm", (None, str(self.dnssec_algorithm).encode(), "text/plain")))
+            files.append(("dnssec_algorithm", (None, str(self.dnssec_algorithm).encode(), "text/plain")))
 
         if not isinstance(self.dnssec_nsec3, Unset):
             files.append(("dnssec_nsec3", (None, str(self.dnssec_nsec3).encode(), "text/plain")))
@@ -779,7 +821,15 @@ class DNSZoneDetailRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            DNSZoneDetailRequestCreatedByComponentType1
+            | DNSZoneDetailRequestCreatedByComponentType2Type1
+            | DNSZoneDetailRequestCreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -787,20 +837,39 @@ class DNSZoneDetailRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_dns_zone_detail_request_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_dns_zone_detail_request_created_by_component_type_2_type_1(
+                    data
+                )
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_dns_zone_detail_request_created_by_component_type_3_type_1(
+                    data
+                )
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DNSZoneDetailRequestCreatedByComponentType1
+                | DNSZoneDetailRequestCreatedByComponentType2Type1
+                | DNSZoneDetailRequestCreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -853,7 +922,15 @@ class DNSZoneDetailRequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            DNSZoneDetailRequestCriticalityType1
+            | DNSZoneDetailRequestCriticalityType2Type1
+            | DNSZoneDetailRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -861,20 +938,35 @@ class DNSZoneDetailRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_dns_zone_detail_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_dns_zone_detail_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_dns_zone_detail_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DNSZoneDetailRequestCriticalityType1
+                | DNSZoneDetailRequestCriticalityType2Type1
+                | DNSZoneDetailRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -890,11 +982,11 @@ class DNSZoneDetailRequest:
         platform_dns_record_created = d.pop("platform_dns_record_created", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: DNSZoneKindEnum | Unset
+        kind: DNSZoneDetailRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_dns_zone_kind_enum(_kind)
+            kind = check_dns_zone_detail_request_kind(_kind)
 
         def _parse_provider(data: object) -> None | str | Unset:
             if data is None:
@@ -913,24 +1005,12 @@ class DNSZoneDetailRequest:
 
         dnssec_enabled = d.pop("dnssec_enabled", UNSET)
 
-        def _parse_dnssec_algorithm(data: object) -> BlankEnum | DnssecAlgorithmEnum | Unset:
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                dnssec_algorithm_type_0 = check_dnssec_algorithm_enum(data)
-
-                return dnssec_algorithm_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            if not isinstance(data, str):
-                raise TypeError()
-            dnssec_algorithm_type_1 = check_blank_enum(data)
-
-            return dnssec_algorithm_type_1
-
-        dnssec_algorithm = _parse_dnssec_algorithm(d.pop("dnssec_algorithm", UNSET))
+        _dnssec_algorithm = d.pop("dnssec_algorithm", UNSET)
+        dnssec_algorithm: DNSZoneDetailRequestDnssecAlgorithm | Unset
+        if isinstance(_dnssec_algorithm, Unset):
+            dnssec_algorithm = UNSET
+        else:
+            dnssec_algorithm = check_dns_zone_detail_request_dnssec_algorithm(_dnssec_algorithm)
 
         dnssec_nsec3 = d.pop("dnssec_nsec3", UNSET)
 

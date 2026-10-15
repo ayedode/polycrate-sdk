@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.pop_reachability_endpoint_state import PopReachabilityEndpointState, check_pop_reachability_endpoint_state
 
 T = TypeVar("T", bound="PopReachabilityEndpoint")
 
@@ -20,7 +20,7 @@ class PopReachabilityEndpoint:
         id (UUID):
         name (str):
         url (str):
-        state (LastStateEnum): * `OK` - Ok
+        state (PopReachabilityEndpointState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -31,7 +31,7 @@ class PopReachabilityEndpoint:
     id: UUID
     name: str
     url: str
-    state: LastStateEnum
+    state: PopReachabilityEndpointState
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -65,7 +65,7 @@ class PopReachabilityEndpoint:
 
         url = d.pop("url")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_pop_reachability_endpoint_state(d.pop("state"))
 
         pop_reachability_endpoint = cls(
             id=id,

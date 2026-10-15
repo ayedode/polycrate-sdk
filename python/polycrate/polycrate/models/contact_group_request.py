@@ -8,7 +8,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.contact_group_kind_enum import ContactGroupKindEnum, check_contact_group_kind_enum
+from ..models.contact_group_request_kind import ContactGroupRequestKind, check_contact_group_request_kind
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ContactGroupRequest")
@@ -23,7 +23,9 @@ class ContactGroupRequest:
         Attributes:
             name (str):
             organization_id (UUID):
-            kind (ContactGroupKindEnum | Unset): * `generic` - Generic
+            kind (ContactGroupRequestKind | Unset): Type of contact group
+
+                * `generic` - Generic
                 * `dynamic` - Dynamic
             email (None | str | Unset): Group email address for notifications
             dynamic_rules (Any | Unset): Rules for dynamic group membership (JSON format)
@@ -32,7 +34,7 @@ class ContactGroupRequest:
 
     name: str
     organization_id: UUID
-    kind: ContactGroupKindEnum | Unset = UNSET
+    kind: ContactGroupRequestKind | Unset = UNSET
     email: None | str | Unset = UNSET
     dynamic_rules: Any | Unset = UNSET
     keycloak_group_id: None | str | Unset = UNSET
@@ -118,11 +120,11 @@ class ContactGroupRequest:
         organization_id = UUID(d.pop("organization_id"))
 
         _kind = d.pop("kind", UNSET)
-        kind: ContactGroupKindEnum | Unset
+        kind: ContactGroupRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_contact_group_kind_enum(_kind)
+            kind = check_contact_group_request_kind(_kind)
 
         def _parse_email(data: object) -> None | str | Unset:
             if data is None:

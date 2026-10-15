@@ -8,14 +8,44 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.s3_cluster_kind_enum import S3ClusterKindEnum, check_s3_cluster_kind_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.s3_cluster_created_by_component_type_1 import (
+    S3ClusterCreatedByComponentType1,
+    check_s3_cluster_created_by_component_type_1,
+)
+from ..models.s3_cluster_created_by_component_type_2_type_1 import (
+    S3ClusterCreatedByComponentType2Type1,
+    check_s3_cluster_created_by_component_type_2_type_1,
+)
+from ..models.s3_cluster_created_by_component_type_3_type_1 import (
+    S3ClusterCreatedByComponentType3Type1,
+    check_s3_cluster_created_by_component_type_3_type_1,
+)
+from ..models.s3_cluster_criticality_type_1 import S3ClusterCriticalityType1, check_s3_cluster_criticality_type_1
+from ..models.s3_cluster_criticality_type_2_type_1 import (
+    S3ClusterCriticalityType2Type1,
+    check_s3_cluster_criticality_type_2_type_1,
+)
+from ..models.s3_cluster_criticality_type_3_type_1 import (
+    S3ClusterCriticalityType3Type1,
+    check_s3_cluster_criticality_type_3_type_1,
+)
+from ..models.s3_cluster_effective_criticality_type_1 import (
+    S3ClusterEffectiveCriticalityType1,
+    check_s3_cluster_effective_criticality_type_1,
+)
+from ..models.s3_cluster_effective_criticality_type_2_type_1 import (
+    S3ClusterEffectiveCriticalityType2Type1,
+    check_s3_cluster_effective_criticality_type_2_type_1,
+)
+from ..models.s3_cluster_effective_criticality_type_3_type_1 import (
+    S3ClusterEffectiveCriticalityType3Type1,
+    check_s3_cluster_effective_criticality_type_3_type_1,
+)
+from ..models.s3_cluster_kind import S3ClusterKind, check_s3_cluster_kind
+from ..models.s3_cluster_last_state import S3ClusterLastState, check_s3_cluster_last_state
+from ..models.s3_cluster_provider import S3ClusterProvider, check_s3_cluster_provider
+from ..models.s3_cluster_scope import S3ClusterScope, check_s3_cluster_scope
+from ..models.s3_cluster_state import S3ClusterState, check_s3_cluster_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -47,7 +77,8 @@ class S3Cluster:
         is_class_icon (bool):
         effective_slo_target (float | None):
         effective_sla_target (float | None):
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (None | S3ClusterEffectiveCriticalityType1 | S3ClusterEffectiveCriticalityType2Type1 |
+            S3ClusterEffectiveCriticalityType3Type1):
         last_action_run (None | S3ClusterLastActionRunType0):
         deleted_by_user (None | S3ClusterDeletedByUserType0):
         s3_buckets (list[S3BucketList]):
@@ -58,14 +89,14 @@ class S3Cluster:
         deleted_at (datetime.datetime | None): Timestamp when this object was soft-deleted. Null if not deleted.
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
-        state (LastStateEnum): * `OK` - Ok
+        state (S3ClusterState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (S3ClusterLastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -96,7 +127,7 @@ class S3Cluster:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (S3ClusterProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -114,13 +145,15 @@ class S3Cluster:
         reconciliation_enabled (bool | Unset):
         last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
         discovery_enabled (bool | Unset):
-        scope (ScopeEnum | Unset): * `system` - System
+        scope (S3ClusterScope | Unset): The scope is used to separate `system` owned objects from `user` owned objects.
+
+            * `system` - System
             * `user` - User
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-            cli, operator, or api.
+        created_by_component (None | S3ClusterCreatedByComponentType1 | S3ClusterCreatedByComponentType2Type1 |
+            S3ClusterCreatedByComponentType3Type1 | Unset): Component that created this object: cli, operator, or api.
 
             * `cli` - CLI
             * `operator` - Operator
@@ -134,8 +167,8 @@ class S3Cluster:
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | S3ClusterCriticalityType1 | S3ClusterCriticalityType2Type1 | S3ClusterCriticalityType3Type1
+            | Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -147,7 +180,7 @@ class S3Cluster:
         endpoint_secure (bool | Unset): Whether the endpoint is secure (https)
         admin_endpoint (None | str | Unset): https://$HOSTNAME (including protocol://)
         admin_endpoint_secure (bool | Unset): Whether the admin endpoint is secure (https)
-        kind (S3ClusterKindEnum | Unset): * `rook-ceph` - Rook CEPH
+        kind (S3ClusterKind | Unset): * `rook-ceph` - Rook CEPH
             * `minio` - Minio Default: 'rook-ceph'.
         description (None | str | Unset):
         active (bool | Unset):
@@ -191,7 +224,12 @@ class S3Cluster:
     is_class_icon: bool
     effective_slo_target: float | None
     effective_sla_target: float | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | S3ClusterEffectiveCriticalityType1
+        | S3ClusterEffectiveCriticalityType2Type1
+        | S3ClusterEffectiveCriticalityType3Type1
+    )
     last_action_run: None | S3ClusterLastActionRunType0
     deleted_by_user: None | S3ClusterDeletedByUserType0
     s3_buckets: list[S3BucketList]
@@ -201,9 +239,9 @@ class S3Cluster:
     updated_at: datetime.datetime
     deleted_at: datetime.datetime | None
     is_deleted: bool
-    state: LastStateEnum
+    state: S3ClusterState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: S3ClusterLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -225,17 +263,23 @@ class S3Cluster:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: S3ClusterProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
+    scope: S3ClusterScope | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        None
+        | S3ClusterCreatedByComponentType1
+        | S3ClusterCreatedByComponentType2Type1
+        | S3ClusterCreatedByComponentType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -244,7 +288,9 @@ class S3Cluster:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None | S3ClusterCriticalityType1 | S3ClusterCriticalityType2Type1 | S3ClusterCriticalityType3Type1 | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
     slug: None | str | Unset = UNSET
@@ -252,7 +298,7 @@ class S3Cluster:
     endpoint_secure: bool | Unset = UNSET
     admin_endpoint: None | str | Unset = UNSET
     admin_endpoint_secure: bool | Unset = UNSET
-    kind: S3ClusterKindEnum | Unset = "rook-ceph"
+    kind: S3ClusterKind | Unset = "rook-ceph"
     description: None | str | Unset = UNSET
     active: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
@@ -308,6 +354,10 @@ class S3Cluster:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -472,6 +522,8 @@ class S3Cluster:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -514,6 +566,8 @@ class S3Cluster:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -877,18 +931,47 @@ class S3Cluster:
 
         effective_sla_target = _parse_effective_sla_target(d.pop("effective_sla_target"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | S3ClusterEffectiveCriticalityType1
+            | S3ClusterEffectiveCriticalityType2Type1
+            | S3ClusterEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_s3_cluster_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_s3_cluster_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_s3_cluster_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | S3ClusterEffectiveCriticalityType1
+                | S3ClusterEffectiveCriticalityType2Type1
+                | S3ClusterEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -964,7 +1047,7 @@ class S3Cluster:
 
         is_deleted = d.pop("is_deleted")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_s3_cluster_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -973,7 +1056,7 @@ class S3Cluster:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_s3_cluster_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -1092,11 +1175,11 @@ class S3Cluster:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: S3ClusterProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_s3_cluster_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1132,11 +1215,11 @@ class S3Cluster:
         discovery_enabled = d.pop("discovery_enabled", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: S3ClusterScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_s3_cluster_scope(_scope)
 
         archived = d.pop("archived", UNSET)
 
@@ -1166,7 +1249,15 @@ class S3Cluster:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            None
+            | S3ClusterCreatedByComponentType1
+            | S3ClusterCreatedByComponentType2Type1
+            | S3ClusterCreatedByComponentType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1174,20 +1265,35 @@ class S3Cluster:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_s3_cluster_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_s3_cluster_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_s3_cluster_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | S3ClusterCreatedByComponentType1
+                | S3ClusterCreatedByComponentType2Type1
+                | S3ClusterCreatedByComponentType3Type1
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1242,7 +1348,9 @@ class S3Cluster:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> None | S3ClusterCriticalityType1 | S3ClusterCriticalityType2Type1 | S3ClusterCriticalityType3Type1 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1250,20 +1358,35 @@ class S3Cluster:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_s3_cluster_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_s3_cluster_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_s3_cluster_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | S3ClusterCriticalityType1
+                | S3ClusterCriticalityType2Type1
+                | S3ClusterCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1310,11 +1433,11 @@ class S3Cluster:
         admin_endpoint_secure = d.pop("admin_endpoint_secure", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: S3ClusterKindEnum | Unset
+        kind: S3ClusterKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_s3_cluster_kind_enum(_kind)
+            kind = check_s3_cluster_kind(_kind)
 
         def _parse_description(data: object) -> None | str | Unset:
             if data is None:

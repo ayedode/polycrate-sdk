@@ -4,12 +4,16 @@ ApiV1PricingOrganizationProductsListProductKind = Literal[
     "assistant",
     "block-storage",
     "dnszone",
+    "domain",
+    "endpoint-monitor",
     "host",
     "k8sapp",
     "k8scluster",
     "loadbalancer",
     "object-storage",
     "project",
+    "registry-storage",
+    "secrets-namespace",
     "support",
 ]
 
@@ -17,12 +21,16 @@ API_V1_PRICING_ORGANIZATION_PRODUCTS_LIST_PRODUCT_KIND_VALUES: set[ApiV1PricingO
     "assistant",
     "block-storage",
     "dnszone",
+    "domain",
+    "endpoint-monitor",
     "host",
     "k8sapp",
     "k8scluster",
     "loadbalancer",
     "object-storage",
     "project",
+    "registry-storage",
+    "secrets-namespace",
     "support",
 }
 

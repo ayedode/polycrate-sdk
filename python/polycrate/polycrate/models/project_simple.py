@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.project_kind_enum import ProjectKindEnum, check_project_kind_enum
+from ..models.project_simple_kind import ProjectSimpleKind, check_project_simple_kind
 
 T = TypeVar("T", bound="ProjectSimple")
 
@@ -21,7 +21,9 @@ class ProjectSimple:
         name (str):
         display_name (None | str): The display name is used to display the object in the UI. It can be different from
             the name.
-        kind (ProjectKindEnum): * `onboarding` - Onboarding
+        kind (ProjectSimpleKind): Project lifecycle phase
+
+            * `onboarding` - Onboarding
             * `offboarding` - Offboarding
             * `ongoing` - Ongoing
         active (bool): Whether this project is currently active
@@ -31,7 +33,7 @@ class ProjectSimple:
     id: UUID
     name: str
     display_name: None | str
-    kind: ProjectKindEnum
+    kind: ProjectSimpleKind
     active: bool
     url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -79,7 +81,7 @@ class ProjectSimple:
 
         display_name = _parse_display_name(d.pop("display_name"))
 
-        kind = check_project_kind_enum(d.pop("kind"))
+        kind = check_project_simple_kind(d.pop("kind"))
 
         active = d.pop("active")
 

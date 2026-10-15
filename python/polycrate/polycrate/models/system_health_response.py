@@ -7,7 +7,10 @@ from typing import TYPE_CHECKING, Any, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.overall_status_enum import OverallStatusEnum, check_overall_status_enum
+from ..models.system_health_response_overall_status import (
+    SystemHealthResponseOverallStatus,
+    check_system_health_response_overall_status,
+)
 
 if TYPE_CHECKING:
     from ..models.system_health_response_services import SystemHealthResponseServices
@@ -21,7 +24,7 @@ class SystemHealthResponse:
     """
     Attributes:
         timestamp (datetime.datetime):
-        overall_status (OverallStatusEnum): * `HEALTHY` - HEALTHY
+        overall_status (SystemHealthResponseOverallStatus): * `HEALTHY` - HEALTHY
             * `DEGRADED` - DEGRADED
             * `UNHEALTHY` - UNHEALTHY
             * `UNKNOWN` - UNKNOWN
@@ -29,7 +32,7 @@ class SystemHealthResponse:
     """
 
     timestamp: datetime.datetime
-    overall_status: OverallStatusEnum
+    overall_status: SystemHealthResponseOverallStatus
     services: SystemHealthResponseServices
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -59,7 +62,7 @@ class SystemHealthResponse:
         d = dict(src_dict)
         timestamp = datetime.datetime.fromisoformat(d.pop("timestamp"))
 
-        overall_status = check_overall_status_enum(d.pop("overall_status"))
+        overall_status = check_system_health_response_overall_status(d.pop("overall_status"))
 
         services = SystemHealthResponseServices.from_dict(d.pop("services"))
 

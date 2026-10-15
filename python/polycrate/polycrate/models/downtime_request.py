@@ -8,8 +8,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.downtime_kind_enum import DowntimeKindEnum, check_downtime_kind_enum
-from ..models.downtime_severity_enum import DowntimeSeverityEnum, check_downtime_severity_enum
+from ..models.downtime_request_kind import DowntimeRequestKind, check_downtime_request_kind
+from ..models.downtime_request_severity import DowntimeRequestSeverity, check_downtime_request_severity
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DowntimeRequest")
@@ -27,14 +27,18 @@ class DowntimeRequest:
         annotations (Any | Unset):
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
             the condition will not be applied.
-        kind (DowntimeKindEnum | Unset): * `generic` - Generic
+        kind (DowntimeRequestKind | Unset): Type of downtime. Determines if it counts towards SLA.
+
+            * `generic` - Generic
             * `planned-maintenance` - Planned Maintenance
             * `emergency-maintenance` - Emergency Maintenance
             * `customer-caused` - Customer Caused
             * `upstream-provider` - Upstream Provider Issue
             * `force-majeure` - Force Majeure
             * `false-positive` - False Positive
-        severity (DowntimeSeverityEnum | Unset): * `minor` - Minor
+        severity (DowntimeRequestSeverity | Unset): Severity of the downtime
+
+            * `minor` - Minor
             * `major` - Major
             * `critical` - Critical
         is_active (bool | Unset): Whether the downtime is active and should be reconciled
@@ -52,8 +56,8 @@ class DowntimeRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     tolerations: Any | Unset = UNSET
-    kind: DowntimeKindEnum | Unset = UNSET
-    severity: DowntimeSeverityEnum | Unset = UNSET
+    kind: DowntimeRequestKind | Unset = UNSET
+    severity: DowntimeRequestSeverity | Unset = UNSET
     is_active: bool | Unset = UNSET
     counts_towards_sla: bool | Unset = UNSET
     excluded_reason: None | str | Unset = UNSET
@@ -215,18 +219,18 @@ class DowntimeRequest:
         tolerations = d.pop("tolerations", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: DowntimeKindEnum | Unset
+        kind: DowntimeRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_downtime_kind_enum(_kind)
+            kind = check_downtime_request_kind(_kind)
 
         _severity = d.pop("severity", UNSET)
-        severity: DowntimeSeverityEnum | Unset
+        severity: DowntimeRequestSeverity | Unset
         if isinstance(_severity, Unset):
             severity = UNSET
         else:
-            severity = check_downtime_severity_enum(_severity)
+            severity = check_downtime_request_severity(_severity)
 
         is_active = d.pop("is_active", UNSET)
 

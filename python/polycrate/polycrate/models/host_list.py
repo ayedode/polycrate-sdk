@@ -7,10 +7,21 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.bootstrap_status_enum import BootstrapStatusEnum, check_bootstrap_status_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.role_28f_enum import Role28FEnum, check_role_28f_enum
+from ..models.host_list_bootstrap_status import HostListBootstrapStatus, check_host_list_bootstrap_status
+from ..models.host_list_effective_criticality_type_1 import (
+    HostListEffectiveCriticalityType1,
+    check_host_list_effective_criticality_type_1,
+)
+from ..models.host_list_effective_criticality_type_2_type_1 import (
+    HostListEffectiveCriticalityType2Type1,
+    check_host_list_effective_criticality_type_2_type_1,
+)
+from ..models.host_list_effective_criticality_type_3_type_1 import (
+    HostListEffectiveCriticalityType3Type1,
+    check_host_list_effective_criticality_type_3_type_1,
+)
+from ..models.host_list_role import HostListRole, check_host_list_role
+from ..models.host_list_state import HostListState, check_host_list_state
 
 if TYPE_CHECKING:
     from ..models.host_list_active_condition_instances_item import HostListActiveConditionInstancesItem
@@ -47,7 +58,7 @@ class HostList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (HostListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -65,12 +76,17 @@ class HostList:
             created (HostListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (HostListEffectiveCriticalityType1 | HostListEffectiveCriticalityType2Type1 |
+                HostListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
-            role (Role28FEnum): * `k8s-worker` - Kubernetes Worker
+            role (HostListRole): Host role (e.g. k8s-worker). Spec: polycrate spec inspect 729.
+
+                * `k8s-worker` - Kubernetes Worker
                 * `k8s-controlplane` - Kubernetes Controlplane
                 * `generic` - Generic
-            bootstrap_status (BootstrapStatusEnum): * `pending` - Pending
+            bootstrap_status (HostListBootstrapStatus): IaaS/machine bootstrap lifecycle. Spec: polycrate spec inspect 729.
+
+                * `pending` - Pending
                 * `provisioning` - Provisioning
                 * `ready` - Ready
                 * `joining` - Joining
@@ -82,7 +98,7 @@ class HostList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: HostListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -93,10 +109,15 @@ class HostList:
     created: HostListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        HostListEffectiveCriticalityType1
+        | HostListEffectiveCriticalityType2Type1
+        | HostListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
-    role: Role28FEnum
-    bootstrap_status: BootstrapStatusEnum
+    role: HostListRole
+    bootstrap_status: HostListBootstrapStatus
     provider_account: None | UUID
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -144,6 +165,10 @@ class HostList:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -188,9 +213,7 @@ class HostList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.host_list_active_condition_instances_item import (
-            HostListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.host_list_active_condition_instances_item import HostListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.host_list_created import HostListCreated  # noqa: PLC0415
         from ..models.host_list_organization_type_0 import HostListOrganizationType0  # noqa: PLC0415
         from ..models.host_list_workspace_type_0 import HostListWorkspaceType0  # noqa: PLC0415
@@ -200,7 +223,7 @@ class HostList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_host_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -255,26 +278,55 @@ class HostList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            HostListEffectiveCriticalityType1
+            | HostListEffectiveCriticalityType2Type1
+            | HostListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_host_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_host_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_host_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                HostListEffectiveCriticalityType1
+                | HostListEffectiveCriticalityType2Type1
+                | HostListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
         url = d.pop("url")
 
-        role = check_role_28f_enum(d.pop("role"))
+        role = check_host_list_role(d.pop("role"))
 
-        bootstrap_status = check_bootstrap_status_enum(d.pop("bootstrap_status"))
+        bootstrap_status = check_host_list_bootstrap_status(d.pop("bootstrap_status"))
 
         def _parse_provider_account(data: object) -> None | UUID:
             if data is None:

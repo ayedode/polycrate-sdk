@@ -9,12 +9,46 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.certificate_kind_enum import CertificateKindEnum, check_certificate_kind_enum
-from ..models.certificate_status_enum import CertificateStatusEnum, check_certificate_status_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.issuer_kind_enum import IssuerKindEnum, check_issuer_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.patched_certificate_request_certificate_status import (
+    PatchedCertificateRequestCertificateStatus,
+    check_patched_certificate_request_certificate_status,
+)
+from ..models.patched_certificate_request_criticality_type_1 import (
+    PatchedCertificateRequestCriticalityType1,
+    check_patched_certificate_request_criticality_type_1,
+)
+from ..models.patched_certificate_request_criticality_type_2_type_1 import (
+    PatchedCertificateRequestCriticalityType2Type1,
+    check_patched_certificate_request_criticality_type_2_type_1,
+)
+from ..models.patched_certificate_request_criticality_type_3_type_1 import (
+    PatchedCertificateRequestCriticalityType3Type1,
+    check_patched_certificate_request_criticality_type_3_type_1,
+)
+from ..models.patched_certificate_request_issuer_kind_type_1 import (
+    PatchedCertificateRequestIssuerKindType1,
+    check_patched_certificate_request_issuer_kind_type_1,
+)
+from ..models.patched_certificate_request_issuer_kind_type_2_type_1 import (
+    PatchedCertificateRequestIssuerKindType2Type1,
+    check_patched_certificate_request_issuer_kind_type_2_type_1,
+)
+from ..models.patched_certificate_request_issuer_kind_type_3_type_1 import (
+    PatchedCertificateRequestIssuerKindType3Type1,
+    check_patched_certificate_request_issuer_kind_type_3_type_1,
+)
+from ..models.patched_certificate_request_kind import (
+    PatchedCertificateRequestKind,
+    check_patched_certificate_request_kind,
+)
+from ..models.patched_certificate_request_provider import (
+    PatchedCertificateRequestProvider,
+    check_patched_certificate_request_provider,
+)
+from ..models.patched_certificate_request_source import (
+    PatchedCertificateRequestSource,
+    check_patched_certificate_request_source,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedCertificateRequest")
@@ -33,7 +67,7 @@ class PatchedCertificateRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (PatchedCertificateRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -50,14 +84,17 @@ class PatchedCertificateRequest:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (CertificateKindEnum | Unset): * `tls` - TLS
+            kind (PatchedCertificateRequestKind | Unset): TLS or mTLS certificate
+
+                * `tls` - TLS
                 * `mtls` - mTLS
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
+            criticality (None | PatchedCertificateRequestCriticalityType1 | PatchedCertificateRequestCriticalityType2Type1 |
+                PatchedCertificateRequestCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then
                 org. Explicit value overrides inheritance.
 
                 * `high` - High
@@ -69,12 +106,17 @@ class PatchedCertificateRequest:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
+            source (PatchedCertificateRequestSource | Unset): discovered = cluster import; issued = API ACME lifecycle
+
+                * `discovered` - Discovered
+                * `issued` - Issued Default: 'discovered'.
             secret_name (str | Unset): Name of the Kubernetes Secret containing the certificate
             namespace (str | Unset): Kubernetes namespace where the certificate/secret exists
             dns_names (Any | Unset): List of DNS names covered by this certificate
             ip_addresses (Any | Unset): List of IP addresses covered by this certificate
             issuer_name (None | str | Unset): Name of the Issuer or ClusterIssuer
-            issuer_kind (BlankEnum | IssuerKindEnum | None | Unset): Kind of the issuer (Issuer or ClusterIssuer)
+            issuer_kind (None | PatchedCertificateRequestIssuerKindType1 | PatchedCertificateRequestIssuerKindType2Type1 |
+                PatchedCertificateRequestIssuerKindType3Type1 | Unset): Kind of the issuer (Issuer or ClusterIssuer)
 
                 * `issuer` - Issuer
                 * `clusterissuer` - ClusterIssuer
@@ -82,7 +124,9 @@ class PatchedCertificateRequest:
             not_before (datetime.datetime | None | Unset): Certificate valid from
             not_after (datetime.datetime | None | Unset): Certificate expires at
             renewal_time (datetime.datetime | None | Unset): When the certificate should be renewed
-            certificate_status (CertificateStatusEnum | Unset): * `ready` - Ready
+            certificate_status (PatchedCertificateRequestCertificateStatus | Unset): Current status of the certificate
+
+                * `ready` - Ready
                 * `pending` - Pending
                 * `failed` - Failed
                 * `expired` - Expired
@@ -96,7 +140,7 @@ class PatchedCertificateRequest:
             last_synced_from_cluster (datetime.datetime | None | Unset): Last time this certificate was synced from the
                 cluster
             cert_manager_status (Any | Unset): Raw status from cert-manager Certificate CR
-            k8s_cluster (UUID | Unset): Kubernetes cluster where this certificate exists
+            k8s_cluster (None | Unset | UUID): Kubernetes cluster for discovered certificates; empty for issued
             metadata (Any | Unset): Additional metadata
     """
 
@@ -105,33 +149,46 @@ class PatchedCertificateRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedCertificateRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: CertificateKindEnum | Unset = UNSET
+    kind: PatchedCertificateRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedCertificateRequestCriticalityType1
+        | PatchedCertificateRequestCriticalityType2Type1
+        | PatchedCertificateRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
+    source: PatchedCertificateRequestSource | Unset = "discovered"
     secret_name: str | Unset = UNSET
     namespace: str | Unset = UNSET
     dns_names: Any | Unset = UNSET
     ip_addresses: Any | Unset = UNSET
     issuer_name: None | str | Unset = UNSET
-    issuer_kind: BlankEnum | IssuerKindEnum | None | Unset = UNSET
+    issuer_kind: (
+        None
+        | PatchedCertificateRequestIssuerKindType1
+        | PatchedCertificateRequestIssuerKindType2Type1
+        | PatchedCertificateRequestIssuerKindType3Type1
+        | Unset
+    ) = UNSET
     issuer_group: str | Unset = UNSET
     not_before: datetime.datetime | None | Unset = UNSET
     not_after: datetime.datetime | None | Unset = UNSET
     renewal_time: datetime.datetime | None | Unset = UNSET
-    certificate_status: CertificateStatusEnum | Unset = UNSET
+    certificate_status: PatchedCertificateRequestCertificateStatus | Unset = UNSET
     is_ready: bool | Unset = UNSET
     current_challenge_type: None | str | Unset = UNSET
     current_challenge_status: None | str | Unset = UNSET
@@ -140,7 +197,7 @@ class PatchedCertificateRequest:
     failure_reason: None | str | Unset = UNSET
     last_synced_from_cluster: datetime.datetime | None | Unset = UNSET
     cert_manager_status: Any | Unset = UNSET
-    k8s_cluster: UUID | Unset = UNSET
+    k8s_cluster: None | Unset | UUID = UNSET
     metadata: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -208,6 +265,8 @@ class PatchedCertificateRequest:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -233,6 +292,10 @@ class PatchedCertificateRequest:
 
         sla_availability = self.sla_availability
 
+        source: str | Unset = UNSET
+        if not isinstance(self.source, Unset):
+            source = self.source
+
         secret_name = self.secret_name
 
         namespace = self.namespace
@@ -250,6 +313,8 @@ class PatchedCertificateRequest:
         issuer_kind: None | str | Unset
         if isinstance(self.issuer_kind, Unset):
             issuer_kind = UNSET
+        elif isinstance(self.issuer_kind, str):
+            issuer_kind = self.issuer_kind
         elif isinstance(self.issuer_kind, str):
             issuer_kind = self.issuer_kind
         elif isinstance(self.issuer_kind, str):
@@ -331,9 +396,13 @@ class PatchedCertificateRequest:
 
         cert_manager_status = self.cert_manager_status
 
-        k8s_cluster: str | Unset = UNSET
-        if not isinstance(self.k8s_cluster, Unset):
+        k8s_cluster: None | str | Unset
+        if isinstance(self.k8s_cluster, Unset):
+            k8s_cluster = UNSET
+        elif isinstance(self.k8s_cluster, UUID):
             k8s_cluster = str(self.k8s_cluster)
+        else:
+            k8s_cluster = self.k8s_cluster
 
         metadata = self.metadata
 
@@ -382,6 +451,8 @@ class PatchedCertificateRequest:
             field_dict["sla_target"] = sla_target
         if sla_availability is not UNSET:
             field_dict["sla_availability"] = sla_availability
+        if source is not UNSET:
+            field_dict["source"] = source
         if secret_name is not UNSET:
             field_dict["secret_name"] = secret_name
         if namespace is not UNSET:
@@ -491,7 +562,9 @@ class PatchedCertificateRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -522,6 +595,9 @@ class PatchedCertificateRequest:
         if not isinstance(self.sla_availability, Unset):
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
+        if not isinstance(self.source, Unset):
+            files.append(("source", (None, str(self.source).encode(), "text/plain")))
+
         if not isinstance(self.secret_name, Unset):
             files.append(("secret_name", (None, str(self.secret_name).encode(), "text/plain")))
 
@@ -541,7 +617,9 @@ class PatchedCertificateRequest:
                 files.append(("issuer_name", (None, str(self.issuer_name).encode(), "text/plain")))
 
         if not isinstance(self.issuer_kind, Unset):
-            if isinstance(self.issuer_kind, str):
+            if self.issuer_kind is None:
+                files.append(("issuer_kind", (None, str(self.issuer_kind).encode(), "text/plain")))
+            elif isinstance(self.issuer_kind, str):
                 files.append(("issuer_kind", (None, str(self.issuer_kind).encode(), "text/plain")))
             elif isinstance(self.issuer_kind, str):
                 files.append(("issuer_kind", (None, str(self.issuer_kind).encode(), "text/plain")))
@@ -630,7 +708,10 @@ class PatchedCertificateRequest:
             files.append(("cert_manager_status", (None, str(self.cert_manager_status).encode(), "text/plain")))
 
         if not isinstance(self.k8s_cluster, Unset):
-            files.append(("k8s_cluster", (None, str(self.k8s_cluster), "text/plain")))
+            if isinstance(self.k8s_cluster, UUID):
+                files.append(("k8s_cluster", (None, str(self.k8s_cluster), "text/plain")))
+            else:
+                files.append(("k8s_cluster", (None, str(self.k8s_cluster).encode(), "text/plain")))
 
         if not isinstance(self.metadata, Unset):
             files.append(("metadata", (None, str(self.metadata).encode(), "text/plain")))
@@ -661,11 +742,11 @@ class PatchedCertificateRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedCertificateRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_certificate_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -690,11 +771,11 @@ class PatchedCertificateRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: CertificateKindEnum | Unset
+        kind: PatchedCertificateRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_certificate_kind_enum(_kind)
+            kind = check_patched_certificate_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -726,7 +807,15 @@ class PatchedCertificateRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedCertificateRequestCriticalityType1
+            | PatchedCertificateRequestCriticalityType2Type1
+            | PatchedCertificateRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -734,20 +823,35 @@ class PatchedCertificateRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_certificate_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_certificate_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_certificate_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedCertificateRequestCriticalityType1
+                | PatchedCertificateRequestCriticalityType2Type1
+                | PatchedCertificateRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -782,6 +886,13 @@ class PatchedCertificateRequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
+        _source = d.pop("source", UNSET)
+        source: PatchedCertificateRequestSource | Unset
+        if isinstance(_source, Unset):
+            source = UNSET
+        else:
+            source = check_patched_certificate_request_source(_source)
+
         secret_name = d.pop("secret_name", UNSET)
 
         namespace = d.pop("namespace", UNSET)
@@ -799,7 +910,15 @@ class PatchedCertificateRequest:
 
         issuer_name = _parse_issuer_name(d.pop("issuer_name", UNSET))
 
-        def _parse_issuer_kind(data: object) -> BlankEnum | IssuerKindEnum | None | Unset:
+        def _parse_issuer_kind(
+            data: object,
+        ) -> (
+            None
+            | PatchedCertificateRequestIssuerKindType1
+            | PatchedCertificateRequestIssuerKindType2Type1
+            | PatchedCertificateRequestIssuerKindType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -807,20 +926,35 @@ class PatchedCertificateRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                issuer_kind_type_0 = check_issuer_kind_enum(data)
+                issuer_kind_type_1 = check_patched_certificate_request_issuer_kind_type_1(data)
 
-                return issuer_kind_type_0
+                return issuer_kind_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                issuer_kind_type_1 = check_blank_enum(data)
+                issuer_kind_type_2_type_1 = check_patched_certificate_request_issuer_kind_type_2_type_1(data)
 
-                return issuer_kind_type_1
+                return issuer_kind_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | IssuerKindEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                issuer_kind_type_3_type_1 = check_patched_certificate_request_issuer_kind_type_3_type_1(data)
+
+                return issuer_kind_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedCertificateRequestIssuerKindType1
+                | PatchedCertificateRequestIssuerKindType2Type1
+                | PatchedCertificateRequestIssuerKindType3Type1
+                | Unset,
+                data,
+            )
 
         issuer_kind = _parse_issuer_kind(d.pop("issuer_kind", UNSET))
 
@@ -878,11 +1012,11 @@ class PatchedCertificateRequest:
         renewal_time = _parse_renewal_time(d.pop("renewal_time", UNSET))
 
         _certificate_status = d.pop("certificate_status", UNSET)
-        certificate_status: CertificateStatusEnum | Unset
+        certificate_status: PatchedCertificateRequestCertificateStatus | Unset
         if isinstance(_certificate_status, Unset):
             certificate_status = UNSET
         else:
-            certificate_status = check_certificate_status_enum(_certificate_status)
+            certificate_status = check_patched_certificate_request_certificate_status(_certificate_status)
 
         is_ready = d.pop("is_ready", UNSET)
 
@@ -958,12 +1092,22 @@ class PatchedCertificateRequest:
 
         cert_manager_status = d.pop("cert_manager_status", UNSET)
 
-        _k8s_cluster = d.pop("k8s_cluster", UNSET)
-        k8s_cluster: UUID | Unset
-        if isinstance(_k8s_cluster, Unset):
-            k8s_cluster = UNSET
-        else:
-            k8s_cluster = UUID(_k8s_cluster)
+        def _parse_k8s_cluster(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                k8s_cluster_type_0 = UUID(data)
+
+                return k8s_cluster_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        k8s_cluster = _parse_k8s_cluster(d.pop("k8s_cluster", UNSET))
 
         metadata = d.pop("metadata", UNSET)
 
@@ -989,6 +1133,7 @@ class PatchedCertificateRequest:
             slo_availability=slo_availability,
             sla_target=sla_target,
             sla_availability=sla_availability,
+            source=source,
             secret_name=secret_name,
             namespace=namespace,
             dns_names=dns_names,

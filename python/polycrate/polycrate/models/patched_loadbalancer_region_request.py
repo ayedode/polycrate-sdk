@@ -8,11 +8,30 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.external_traffic_policy_enum import ExternalTrafficPolicyEnum, check_external_traffic_policy_enum
-from ..models.loadbalancer_region_kind_enum import LoadbalancerRegionKindEnum, check_loadbalancer_region_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.patched_loadbalancer_region_request_criticality_type_1 import (
+    PatchedLoadbalancerRegionRequestCriticalityType1,
+    check_patched_loadbalancer_region_request_criticality_type_1,
+)
+from ..models.patched_loadbalancer_region_request_criticality_type_2_type_1 import (
+    PatchedLoadbalancerRegionRequestCriticalityType2Type1,
+    check_patched_loadbalancer_region_request_criticality_type_2_type_1,
+)
+from ..models.patched_loadbalancer_region_request_criticality_type_3_type_1 import (
+    PatchedLoadbalancerRegionRequestCriticalityType3Type1,
+    check_patched_loadbalancer_region_request_criticality_type_3_type_1,
+)
+from ..models.patched_loadbalancer_region_request_external_traffic_policy import (
+    PatchedLoadbalancerRegionRequestExternalTrafficPolicy,
+    check_patched_loadbalancer_region_request_external_traffic_policy,
+)
+from ..models.patched_loadbalancer_region_request_kind import (
+    PatchedLoadbalancerRegionRequestKind,
+    check_patched_loadbalancer_region_request_kind,
+)
+from ..models.patched_loadbalancer_region_request_provider import (
+    PatchedLoadbalancerRegionRequestProvider,
+    check_patched_loadbalancer_region_request_provider,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedLoadbalancerRegionRequest")
@@ -30,7 +49,7 @@ class PatchedLoadbalancerRegionRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (PatchedLoadbalancerRegionRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -47,13 +66,14 @@ class PatchedLoadbalancerRegionRequest:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset): Makes this region available for the whole platform
-            kind (LoadbalancerRegionKindEnum | Unset): * `cilium` - Cilium
+            kind (PatchedLoadbalancerRegionRequestKind | Unset): * `cilium` - Cilium
                 * `metallb` - MetalLB
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | PatchedLoadbalancerRegionRequestCriticalityType1 |
+                PatchedLoadbalancerRegionRequestCriticalityType2Type1 | PatchedLoadbalancerRegionRequestCriticalityType3Type1 |
+                Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -71,7 +91,11 @@ class PatchedLoadbalancerRegionRequest:
             region_config (Any | Unset): Region JSON. HAProxy instances: optional `haproxy` object with workload_kind
                 (deployment|daemonset), deployment.replica, daemonset.use_host_network, daemonset.use_host_port, daemonset.ports
                 (name to port number).
-            external_traffic_policy (ExternalTrafficPolicyEnum | Unset): * `Local` - Local
+            external_traffic_policy (PatchedLoadbalancerRegionRequestExternalTrafficPolicy | Unset): Kubernetes Service
+                externalTrafficPolicy: Local (preserve client IP) or Cluster (K8s load-balanced). With Cilium direct routing,
+                Real IP works with either.
+
+                * `Local` - Local
                 * `Cluster` - Cluster
     """
 
@@ -80,16 +104,22 @@ class PatchedLoadbalancerRegionRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedLoadbalancerRegionRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: LoadbalancerRegionKindEnum | Unset = UNSET
+    kind: PatchedLoadbalancerRegionRequestKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedLoadbalancerRegionRequestCriticalityType1
+        | PatchedLoadbalancerRegionRequestCriticalityType2Type1
+        | PatchedLoadbalancerRegionRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -100,7 +130,7 @@ class PatchedLoadbalancerRegionRequest:
     active: bool | Unset = UNSET
     description: None | str | Unset = UNSET
     region_config: Any | Unset = UNSET
-    external_traffic_policy: ExternalTrafficPolicyEnum | Unset = UNSET
+    external_traffic_policy: PatchedLoadbalancerRegionRequestExternalTrafficPolicy | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -161,6 +191,8 @@ class PatchedLoadbalancerRegionRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -331,7 +363,9 @@ class PatchedLoadbalancerRegionRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -412,11 +446,11 @@ class PatchedLoadbalancerRegionRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedLoadbalancerRegionRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_loadbalancer_region_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -441,11 +475,11 @@ class PatchedLoadbalancerRegionRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: LoadbalancerRegionKindEnum | Unset
+        kind: PatchedLoadbalancerRegionRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_loadbalancer_region_kind_enum(_kind)
+            kind = check_patched_loadbalancer_region_request_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -475,7 +509,15 @@ class PatchedLoadbalancerRegionRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedLoadbalancerRegionRequestCriticalityType1
+            | PatchedLoadbalancerRegionRequestCriticalityType2Type1
+            | PatchedLoadbalancerRegionRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -483,20 +525,35 @@ class PatchedLoadbalancerRegionRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_loadbalancer_region_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_loadbalancer_region_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_loadbalancer_region_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedLoadbalancerRegionRequestCriticalityType1
+                | PatchedLoadbalancerRegionRequestCriticalityType2Type1
+                | PatchedLoadbalancerRegionRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -556,11 +613,13 @@ class PatchedLoadbalancerRegionRequest:
         region_config = d.pop("region_config", UNSET)
 
         _external_traffic_policy = d.pop("external_traffic_policy", UNSET)
-        external_traffic_policy: ExternalTrafficPolicyEnum | Unset
+        external_traffic_policy: PatchedLoadbalancerRegionRequestExternalTrafficPolicy | Unset
         if isinstance(_external_traffic_policy, Unset):
             external_traffic_policy = UNSET
         else:
-            external_traffic_policy = check_external_traffic_policy_enum(_external_traffic_policy)
+            external_traffic_policy = check_patched_loadbalancer_region_request_external_traffic_policy(
+                _external_traffic_policy
+            )
 
         patched_loadbalancer_region_request = cls(
             name=name,

@@ -7,9 +7,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.s3_cluster_kind_enum import S3ClusterKindEnum, check_s3_cluster_kind_enum
+from ..models.s3_cluster_list_effective_criticality_type_1 import (
+    S3ClusterListEffectiveCriticalityType1,
+    check_s3_cluster_list_effective_criticality_type_1,
+)
+from ..models.s3_cluster_list_effective_criticality_type_2_type_1 import (
+    S3ClusterListEffectiveCriticalityType2Type1,
+    check_s3_cluster_list_effective_criticality_type_2_type_1,
+)
+from ..models.s3_cluster_list_effective_criticality_type_3_type_1 import (
+    S3ClusterListEffectiveCriticalityType3Type1,
+    check_s3_cluster_list_effective_criticality_type_3_type_1,
+)
+from ..models.s3_cluster_list_kind import S3ClusterListKind, check_s3_cluster_list_kind
+from ..models.s3_cluster_list_state import S3ClusterListState, check_s3_cluster_list_state
 
 if TYPE_CHECKING:
     from ..models.s3_cluster_list_active_condition_instances_item import S3ClusterListActiveConditionInstancesItem
@@ -31,7 +42,7 @@ class S3ClusterList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (S3ClusterListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -49,9 +60,10 @@ class S3ClusterList:
             created (S3ClusterListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | S3ClusterListEffectiveCriticalityType1 |
+                S3ClusterListEffectiveCriticalityType2Type1 | S3ClusterListEffectiveCriticalityType3Type1):
             url (str): Gibt die absolute URL zum Object zurück.
-            kind (S3ClusterKindEnum): * `rook-ceph` - Rook CEPH
+            kind (S3ClusterListKind): * `rook-ceph` - Rook CEPH
                 * `minio` - Minio
             endpoint (str): $HOSTNAME (without protocol://)
             platform_service (bool): Makes this cluster available for the whole platform instead of a single organization
@@ -65,7 +77,7 @@ class S3ClusterList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: S3ClusterListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -76,9 +88,14 @@ class S3ClusterList:
     created: S3ClusterListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | S3ClusterListEffectiveCriticalityType1
+        | S3ClusterListEffectiveCriticalityType2Type1
+        | S3ClusterListEffectiveCriticalityType3Type1
+    )
     url: str
-    kind: S3ClusterKindEnum
+    kind: S3ClusterListKind
     endpoint: str
     platform_service: bool
     allow_new_buckets: bool
@@ -130,6 +147,10 @@ class S3ClusterList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -185,9 +206,7 @@ class S3ClusterList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_cluster_list_active_condition_instances_item import (
-            S3ClusterListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.s3_cluster_list_active_condition_instances_item import S3ClusterListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.s3_cluster_list_created import S3ClusterListCreated  # noqa: PLC0415
         from ..models.s3_cluster_list_organization_type_0 import S3ClusterListOrganizationType0  # noqa: PLC0415
         from ..models.s3_cluster_list_workspace_type_0 import S3ClusterListWorkspaceType0  # noqa: PLC0415
@@ -197,7 +216,7 @@ class S3ClusterList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_s3_cluster_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -252,24 +271,53 @@ class S3ClusterList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | S3ClusterListEffectiveCriticalityType1
+            | S3ClusterListEffectiveCriticalityType2Type1
+            | S3ClusterListEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_s3_cluster_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_s3_cluster_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_s3_cluster_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | S3ClusterListEffectiveCriticalityType1
+                | S3ClusterListEffectiveCriticalityType2Type1
+                | S3ClusterListEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
         url = d.pop("url")
 
-        kind = check_s3_cluster_kind_enum(d.pop("kind"))
+        kind = check_s3_cluster_list_kind(d.pop("kind"))
 
         endpoint = d.pop("endpoint")
 

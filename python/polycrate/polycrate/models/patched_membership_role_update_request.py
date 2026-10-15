@@ -8,7 +8,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.user_role_enum import UserRoleEnum, check_user_role_enum
+from ..models.patched_membership_role_update_request_role import (
+    PatchedMembershipRoleUpdateRequestRole,
+    check_patched_membership_role_update_request_role,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedMembershipRoleUpdateRequest")
@@ -20,7 +23,10 @@ class PatchedMembershipRoleUpdateRequest:
 
     Attributes:
         organization_id (UUID | Unset): Polycrate organization UUID of the membership to update
-        role (UserRoleEnum | Unset): * `admin` - Admin
+        role (PatchedMembershipRoleUpdateRequestRole | Unset): New organization-scoped role: admin, developer, billing,
+            viewer, or owner
+
+            * `admin` - Admin
             * `developer` - Developer
             * `billing` - Billing
             * `viewer` - Viewer
@@ -28,7 +34,7 @@ class PatchedMembershipRoleUpdateRequest:
     """
 
     organization_id: UUID | Unset = UNSET
-    role: UserRoleEnum | Unset = UNSET
+    role: PatchedMembershipRoleUpdateRequestRole | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -75,11 +81,11 @@ class PatchedMembershipRoleUpdateRequest:
             organization_id = UUID(_organization_id)
 
         _role = d.pop("role", UNSET)
-        role: UserRoleEnum | Unset
+        role: PatchedMembershipRoleUpdateRequestRole | Unset
         if isinstance(_role, Unset):
             role = UNSET
         else:
-            role = check_user_role_enum(_role)
+            role = check_patched_membership_role_update_request_role(_role)
 
         patched_membership_role_update_request = cls(
             organization_id=organization_id,

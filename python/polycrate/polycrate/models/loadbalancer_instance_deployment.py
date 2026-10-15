@@ -7,7 +7,10 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.deployment_status_enum import DeploymentStatusEnum, check_deployment_status_enum
+from ..models.loadbalancer_instance_deployment_deployment_status import (
+    LoadbalancerInstanceDeploymentDeploymentStatus,
+    check_loadbalancer_instance_deployment_deployment_status,
+)
 
 if TYPE_CHECKING:
     from ..models.region_simple import RegionSimple
@@ -20,21 +23,21 @@ T = TypeVar("T", bound="LoadbalancerInstanceDeployment")
 class LoadbalancerInstanceDeployment:
     """
     Attributes:
-        deployment_status (DeploymentStatusEnum): * `pending` - Pending
+        deployment_status (LoadbalancerInstanceDeploymentDeploymentStatus): * `pending` - Pending
             * `deploying` - Deploying
             * `deployed` - Deployed
             * `failed` - Failed
             * `removing` - Removing
         last_deployment_attempt (datetime.datetime | None):
         deployment_error (None | str):
-        loadbalancer_region (str):
+        loadbalancer_region (None | str):
         region (RegionSimple):
     """
 
-    deployment_status: DeploymentStatusEnum
+    deployment_status: LoadbalancerInstanceDeploymentDeploymentStatus
     last_deployment_attempt: datetime.datetime | None
     deployment_error: None | str
-    loadbalancer_region: str
+    loadbalancer_region: None | str
     region: RegionSimple
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -50,6 +53,7 @@ class LoadbalancerInstanceDeployment:
         deployment_error: None | str
         deployment_error = self.deployment_error
 
+        loadbalancer_region: None | str
         loadbalancer_region = self.loadbalancer_region
 
         region = self.region.to_dict()
@@ -73,7 +77,7 @@ class LoadbalancerInstanceDeployment:
         from ..models.region_simple import RegionSimple  # noqa: PLC0415
 
         d = dict(src_dict)
-        deployment_status = check_deployment_status_enum(d.pop("deployment_status"))
+        deployment_status = check_loadbalancer_instance_deployment_deployment_status(d.pop("deployment_status"))
 
         def _parse_last_deployment_attempt(data: object) -> datetime.datetime | None:
             if data is None:
@@ -97,7 +101,12 @@ class LoadbalancerInstanceDeployment:
 
         deployment_error = _parse_deployment_error(d.pop("deployment_error"))
 
-        loadbalancer_region = d.pop("loadbalancer_region")
+        def _parse_loadbalancer_region(data: object) -> None | str:
+            if data is None:
+                return data
+            return cast(None | str, data)
+
+        loadbalancer_region = _parse_loadbalancer_region(d.pop("loadbalancer_region"))
 
         region = RegionSimple.from_dict(d.pop("region"))
 

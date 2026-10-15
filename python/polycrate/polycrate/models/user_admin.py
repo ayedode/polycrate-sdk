@@ -8,7 +8,9 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.user_role_enum import UserRoleEnum, check_user_role_enum
+from ..models.user_admin_role_type_1 import UserAdminRoleType1, check_user_admin_role_type_1
+from ..models.user_admin_role_type_2_type_1 import UserAdminRoleType2Type1, check_user_admin_role_type_2_type_1
+from ..models.user_admin_role_type_3_type_1 import UserAdminRoleType3Type1, check_user_admin_role_type_3_type_1
 
 if TYPE_CHECKING:
     from ..models.user_admin_organizations import UserAdminOrganizations
@@ -32,8 +34,9 @@ class UserAdmin:
             is_active (bool):
             is_staff (bool):
             is_superuser (bool): Designates that this user has all permissions without explicitly assigning them.
-            role (None | UserRoleEnum): Legacy system-wide role (developer, admin, billing, viewer, owner). Prefer
-                OrganizationMembership.role for org-scoped portal roles (Spec 525).
+            role (None | UserAdminRoleType1 | UserAdminRoleType2Type1 | UserAdminRoleType3Type1): Legacy system-wide role
+                (developer, admin, billing, viewer, owner). Prefer OrganizationMembership.role for org-scoped portal roles (Spec
+                525).
 
                 * `developer` - Developer
                 * `admin` - Admin
@@ -65,7 +68,7 @@ class UserAdmin:
     is_active: bool
     is_staff: bool
     is_superuser: bool
-    role: None | UserRoleEnum
+    role: None | UserAdminRoleType1 | UserAdminRoleType2Type1 | UserAdminRoleType3Type1
     keycloak_user_id: None | str
     grafana_user_id: int | None
     forgejo_user_id: int | None
@@ -101,6 +104,10 @@ class UserAdmin:
 
         role: None | str
         if isinstance(self.role, str):
+            role = self.role
+        elif isinstance(self.role, str):
+            role = self.role
+        elif isinstance(self.role, str):
             role = self.role
         else:
             role = self.role
@@ -194,18 +201,34 @@ class UserAdmin:
 
         is_superuser = d.pop("is_superuser")
 
-        def _parse_role(data: object) -> None | UserRoleEnum:
+        def _parse_role(data: object) -> None | UserAdminRoleType1 | UserAdminRoleType2Type1 | UserAdminRoleType3Type1:
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                role_type_0 = check_user_role_enum(data)
+                role_type_1 = check_user_admin_role_type_1(data)
 
-                return role_type_0
+                return role_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(None | UserRoleEnum, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                role_type_2_type_1 = check_user_admin_role_type_2_type_1(data)
+
+                return role_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                role_type_3_type_1 = check_user_admin_role_type_3_type_1(data)
+
+                return role_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | UserAdminRoleType1 | UserAdminRoleType2Type1 | UserAdminRoleType3Type1, data)
 
         role = _parse_role(d.pop("role"))
 

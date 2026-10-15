@@ -9,11 +9,24 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.backup_kind_enum import BackupKindEnum, check_backup_kind_enum
-from ..models.backup_provider_enum import BackupProviderEnum, check_backup_provider_enum
-from ..models.backup_schedule_status_enum import BackupScheduleStatusEnum, check_backup_schedule_status_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
+from ..models.backup_schedule_request_criticality_type_1 import (
+    BackupScheduleRequestCriticalityType1,
+    check_backup_schedule_request_criticality_type_1,
+)
+from ..models.backup_schedule_request_criticality_type_2_type_1 import (
+    BackupScheduleRequestCriticalityType2Type1,
+    check_backup_schedule_request_criticality_type_2_type_1,
+)
+from ..models.backup_schedule_request_criticality_type_3_type_1 import (
+    BackupScheduleRequestCriticalityType3Type1,
+    check_backup_schedule_request_criticality_type_3_type_1,
+)
+from ..models.backup_schedule_request_kind import BackupScheduleRequestKind, check_backup_schedule_request_kind
+from ..models.backup_schedule_request_provider import (
+    BackupScheduleRequestProvider,
+    check_backup_schedule_request_provider,
+)
+from ..models.backup_schedule_request_status import BackupScheduleRequestStatus, check_backup_schedule_request_status
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="BackupScheduleRequest")
@@ -44,14 +57,18 @@ class BackupScheduleRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (BackupProviderEnum | Unset): * `velero` - Velero
+            provider (BackupScheduleRequestProvider | Unset): Backup provider/tool that manages this schedule
+
+                * `velero` - Velero
                 * `cloudnativepg` - CloudNativePG
                 * `custom` - Custom Provider
             provider_reference (None | str | Unset):
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (BackupKindEnum | Unset): * `cluster` - Cluster Backup
+            kind (BackupScheduleRequestKind | Unset): Type of backup schedule (cluster, app, database)
+
+                * `cluster` - Cluster Backup
                 * `app` - Application Backup
                 * `database` - Database Backup
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -59,8 +76,9 @@ class BackupScheduleRequest:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (BackupScheduleRequestCriticalityType1 | BackupScheduleRequestCriticalityType2Type1 |
+                BackupScheduleRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace,
+                then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -73,7 +91,9 @@ class BackupScheduleRequest:
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
             source_namespace (None | str | Unset): Kubernetes namespace of the discovered source schedule (for unique
                 identity with name+provider)
-            status (BackupScheduleStatusEnum | Unset): * `active` - Active
+            status (BackupScheduleRequestStatus | Unset): Normalized schedule status across all providers
+
+                * `active` - Active
                 * `paused` - Paused
                 * `failed` - Failed
                 * `unknown` - Unknown
@@ -91,24 +111,30 @@ class BackupScheduleRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: BackupProviderEnum | Unset = UNSET
+    provider: BackupScheduleRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: BackupKindEnum | Unset = UNSET
+    kind: BackupScheduleRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        BackupScheduleRequestCriticalityType1
+        | BackupScheduleRequestCriticalityType2Type1
+        | BackupScheduleRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
     source_namespace: None | str | Unset = UNSET
-    status: BackupScheduleStatusEnum | Unset = UNSET
+    status: BackupScheduleRequestStatus | Unset = UNSET
     schedule_cron: None | str | Unset = UNSET
     paused: bool | Unset = UNSET
     retention_policy: None | str | Unset = UNSET
@@ -179,6 +205,8 @@ class BackupScheduleRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -376,7 +404,9 @@ class BackupScheduleRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -471,11 +501,11 @@ class BackupScheduleRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: BackupProviderEnum | Unset
+        provider: BackupScheduleRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_backup_provider_enum(_provider)
+            provider = check_backup_schedule_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -500,11 +530,11 @@ class BackupScheduleRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: BackupKindEnum | Unset
+        kind: BackupScheduleRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_backup_kind_enum(_kind)
+            kind = check_backup_schedule_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -536,7 +566,15 @@ class BackupScheduleRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            BackupScheduleRequestCriticalityType1
+            | BackupScheduleRequestCriticalityType2Type1
+            | BackupScheduleRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -544,20 +582,35 @@ class BackupScheduleRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_backup_schedule_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_backup_schedule_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_backup_schedule_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BackupScheduleRequestCriticalityType1
+                | BackupScheduleRequestCriticalityType2Type1
+                | BackupScheduleRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -602,11 +655,11 @@ class BackupScheduleRequest:
         source_namespace = _parse_source_namespace(d.pop("source_namespace", UNSET))
 
         _status = d.pop("status", UNSET)
-        status: BackupScheduleStatusEnum | Unset
+        status: BackupScheduleRequestStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_backup_schedule_status_enum(_status)
+            status = check_backup_schedule_request_status(_status)
 
         def _parse_schedule_cron(data: object) -> None | str | Unset:
             if data is None:

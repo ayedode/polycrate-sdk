@@ -7,7 +7,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.permissions_enum import PermissionsEnum, check_permissions_enum
+from ..models.s3_credential_create_request_permissions import (
+    S3CredentialCreateRequestPermissions,
+    check_s3_credential_create_request_permissions,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="S3CredentialCreateRequest")
@@ -19,14 +22,17 @@ class S3CredentialCreateRequest:
 
     Attributes:
         description (str): Beschreibung für den Access Key
-        permissions (PermissionsEnum | Unset): * `read` - read
+        permissions (S3CredentialCreateRequestPermissions | Unset): Berechtigungen für den Access Key
+            (read/write/readwrite/full)
+
+            * `read` - read
             * `write` - write
             * `readwrite` - readwrite
             * `full` - full Default: 'full'.
     """
 
     description: str
-    permissions: PermissionsEnum | Unset = "full"
+    permissions: S3CredentialCreateRequestPermissions | Unset = "full"
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -67,11 +73,11 @@ class S3CredentialCreateRequest:
         description = d.pop("description")
 
         _permissions = d.pop("permissions", UNSET)
-        permissions: PermissionsEnum | Unset
+        permissions: S3CredentialCreateRequestPermissions | Unset
         if isinstance(_permissions, Unset):
             permissions = UNSET
         else:
-            permissions = check_permissions_enum(_permissions)
+            permissions = check_s3_credential_create_request_permissions(_permissions)
 
         s3_credential_create_request = cls(
             description=description,

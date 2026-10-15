@@ -9,11 +9,30 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.billing_interval_enum import BillingIntervalEnum, check_billing_interval_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.product_kind_enum import ProductKindEnum, check_product_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.patched_product_detail_request_billing_interval import (
+    PatchedProductDetailRequestBillingInterval,
+    check_patched_product_detail_request_billing_interval,
+)
+from ..models.patched_product_detail_request_criticality_type_1 import (
+    PatchedProductDetailRequestCriticalityType1,
+    check_patched_product_detail_request_criticality_type_1,
+)
+from ..models.patched_product_detail_request_criticality_type_2_type_1 import (
+    PatchedProductDetailRequestCriticalityType2Type1,
+    check_patched_product_detail_request_criticality_type_2_type_1,
+)
+from ..models.patched_product_detail_request_criticality_type_3_type_1 import (
+    PatchedProductDetailRequestCriticalityType3Type1,
+    check_patched_product_detail_request_criticality_type_3_type_1,
+)
+from ..models.patched_product_detail_request_kind import (
+    PatchedProductDetailRequestKind,
+    check_patched_product_detail_request_kind,
+)
+from ..models.patched_product_detail_request_provider import (
+    PatchedProductDetailRequestProvider,
+    check_patched_product_detail_request_provider,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedProductDetailRequest")
@@ -30,7 +49,7 @@ class PatchedProductDetailRequest:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (PatchedProductDetailRequestProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -47,7 +66,7 @@ class PatchedProductDetailRequest:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (ProductKindEnum | Unset): * `host` - Host
+        kind (PatchedProductDetailRequestKind | Unset): * `host` - Host
             * `k8scluster` - K8s Cluster
             * `k8sapp` - K8s App
             * `support` - Support
@@ -57,13 +76,18 @@ class PatchedProductDetailRequest:
             * `project` - Project
             * `dnszone` - DNS Zone
             * `assistant` - Assistant
+            * `registry-storage` - Registry Storage
+            * `secrets-namespace` - Secrets Namespace
+            * `endpoint-monitor` - Endpoint Monitor
+            * `domain` - Domain
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
             the condition will not be applied.
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | PatchedProductDetailRequestCriticalityType1 |
+            PatchedProductDetailRequestCriticalityType2Type1 | PatchedProductDetailRequestCriticalityType3Type1 | Unset):
+            Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -74,7 +98,7 @@ class PatchedProductDetailRequest:
         slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-        billing_interval (BillingIntervalEnum | Unset): * `second` - Second
+        billing_interval (PatchedProductDetailRequestBillingInterval | Unset): * `second` - Second
             * `minute` - Minute
             * `hour` - Hour
             * `day` - Day
@@ -84,6 +108,8 @@ class PatchedProductDetailRequest:
         cost_per_unit (None | str | Unset):
         provider_entity (None | Unset | UUID):
         pop (None | Unset | UUID): Concrete IaaS location (e.g. hetzner-fsn1). Location slug is the PoP name suffix.
+        region (None | Unset | UUID): Platform Region for broker Host SKUs (Spec 938). Location from
+            region.workspace.pop.
         provider_type_id (None | str | Unset):
         config (Any | Unset):
     """
@@ -93,27 +119,34 @@ class PatchedProductDetailRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedProductDetailRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: ProductKindEnum | Unset = UNSET
+    kind: PatchedProductDetailRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedProductDetailRequestCriticalityType1
+        | PatchedProductDetailRequestCriticalityType2Type1
+        | PatchedProductDetailRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    billing_interval: BillingIntervalEnum | Unset = UNSET
+    billing_interval: PatchedProductDetailRequestBillingInterval | Unset = UNSET
     price_per_unit: None | str | Unset = UNSET
     cost_per_unit: None | str | Unset = UNSET
     provider_entity: None | Unset | UUID = UNSET
     pop: None | Unset | UUID = UNSET
+    region: None | Unset | UUID = UNSET
     provider_type_id: None | str | Unset = UNSET
     config: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -182,6 +215,8 @@ class PatchedProductDetailRequest:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -238,6 +273,14 @@ class PatchedProductDetailRequest:
             pop = str(self.pop)
         else:
             pop = self.pop
+
+        region: None | str | Unset
+        if isinstance(self.region, Unset):
+            region = UNSET
+        elif isinstance(self.region, UUID):
+            region = str(self.region)
+        else:
+            region = self.region
 
         provider_type_id: None | str | Unset
         if isinstance(self.provider_type_id, Unset):
@@ -302,6 +345,8 @@ class PatchedProductDetailRequest:
             field_dict["provider_entity"] = provider_entity
         if pop is not UNSET:
             field_dict["pop"] = pop
+        if region is not UNSET:
+            field_dict["region"] = region
         if provider_type_id is not UNSET:
             field_dict["provider_type_id"] = provider_type_id
         if config is not UNSET:
@@ -373,7 +418,9 @@ class PatchedProductDetailRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -431,6 +478,12 @@ class PatchedProductDetailRequest:
             else:
                 files.append(("pop", (None, str(self.pop).encode(), "text/plain")))
 
+        if not isinstance(self.region, Unset):
+            if isinstance(self.region, UUID):
+                files.append(("region", (None, str(self.region), "text/plain")))
+            else:
+                files.append(("region", (None, str(self.region).encode(), "text/plain")))
+
         if not isinstance(self.provider_type_id, Unset):
             if isinstance(self.provider_type_id, str):
                 files.append(("provider_type_id", (None, str(self.provider_type_id).encode(), "text/plain")))
@@ -466,11 +519,11 @@ class PatchedProductDetailRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedProductDetailRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_product_detail_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -495,11 +548,11 @@ class PatchedProductDetailRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: ProductKindEnum | Unset
+        kind: PatchedProductDetailRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_product_kind_enum(_kind)
+            kind = check_patched_product_detail_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -531,7 +584,15 @@ class PatchedProductDetailRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedProductDetailRequestCriticalityType1
+            | PatchedProductDetailRequestCriticalityType2Type1
+            | PatchedProductDetailRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -539,20 +600,35 @@ class PatchedProductDetailRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_product_detail_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_product_detail_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_product_detail_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedProductDetailRequestCriticalityType1
+                | PatchedProductDetailRequestCriticalityType2Type1
+                | PatchedProductDetailRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -588,11 +664,11 @@ class PatchedProductDetailRequest:
         sla_availability = d.pop("sla_availability", UNSET)
 
         _billing_interval = d.pop("billing_interval", UNSET)
-        billing_interval: BillingIntervalEnum | Unset
+        billing_interval: PatchedProductDetailRequestBillingInterval | Unset
         if isinstance(_billing_interval, Unset):
             billing_interval = UNSET
         else:
-            billing_interval = check_billing_interval_enum(_billing_interval)
+            billing_interval = check_patched_product_detail_request_billing_interval(_billing_interval)
 
         def _parse_price_per_unit(data: object) -> None | str | Unset:
             if data is None:
@@ -646,6 +722,23 @@ class PatchedProductDetailRequest:
 
         pop = _parse_pop(d.pop("pop", UNSET))
 
+        def _parse_region(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                region_type_0 = UUID(data)
+
+                return region_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        region = _parse_region(d.pop("region", UNSET))
+
         def _parse_provider_type_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -684,6 +777,7 @@ class PatchedProductDetailRequest:
             cost_per_unit=cost_per_unit,
             provider_entity=provider_entity,
             pop=pop,
+            region=region,
             provider_type_id=provider_type_id,
             config=config,
         )

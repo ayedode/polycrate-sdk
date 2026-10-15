@@ -7,10 +7,32 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.block_rollout_config_kind_enum import BlockRolloutConfigKindEnum, check_block_rollout_config_kind_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.trigger_type_enum import TriggerTypeEnum, check_trigger_type_enum
+from ..models.block_rollout_config_list_effective_criticality_type_1 import (
+    BlockRolloutConfigListEffectiveCriticalityType1,
+    check_block_rollout_config_list_effective_criticality_type_1,
+)
+from ..models.block_rollout_config_list_effective_criticality_type_2_type_1 import (
+    BlockRolloutConfigListEffectiveCriticalityType2Type1,
+    check_block_rollout_config_list_effective_criticality_type_2_type_1,
+)
+from ..models.block_rollout_config_list_effective_criticality_type_3_type_1 import (
+    BlockRolloutConfigListEffectiveCriticalityType3Type1,
+    check_block_rollout_config_list_effective_criticality_type_3_type_1,
+)
+from ..models.block_rollout_config_list_kind import BlockRolloutConfigListKind, check_block_rollout_config_list_kind
+from ..models.block_rollout_config_list_state import BlockRolloutConfigListState, check_block_rollout_config_list_state
+from ..models.block_rollout_config_list_trigger_type_type_1 import (
+    BlockRolloutConfigListTriggerTypeType1,
+    check_block_rollout_config_list_trigger_type_type_1,
+)
+from ..models.block_rollout_config_list_trigger_type_type_2_type_1 import (
+    BlockRolloutConfigListTriggerTypeType2Type1,
+    check_block_rollout_config_list_trigger_type_type_2_type_1,
+)
+from ..models.block_rollout_config_list_trigger_type_type_3_type_1 import (
+    BlockRolloutConfigListTriggerTypeType3Type1,
+    check_block_rollout_config_list_trigger_type_type_3_type_1,
+)
 
 if TYPE_CHECKING:
     from ..models.block_rollout_config_list_active_condition_instances_item import (
@@ -49,7 +71,7 @@ class BlockRolloutConfigList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (BlockRolloutConfigListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -67,14 +89,18 @@ class BlockRolloutConfigList:
             created (BlockRolloutConfigListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (BlockRolloutConfigListEffectiveCriticalityType1 |
+                BlockRolloutConfigListEffectiveCriticalityType2Type1 | BlockRolloutConfigListEffectiveCriticalityType3Type1 |
+                None):
             url (str): Gibt die absolute URL zum Object zurück.
-            kind (BlockRolloutConfigKindEnum): * `trigger` - Trigger
+            kind (BlockRolloutConfigListKind): * `trigger` - Trigger
                 * `config` - Config Default: 'config'.
             block_name (None | str):
             active (bool):
             is_system_config (bool):  Default: False.
-            trigger_type (None | TriggerTypeEnum):
+            trigger_type (BlockRolloutConfigListTriggerTypeType1 | BlockRolloutConfigListTriggerTypeType2Type1 |
+                BlockRolloutConfigListTriggerTypeType3Type1 | None): * `reconciliation` - Reconciliation
+                * `schedule` - Schedule
             target_version (None | str):
             template_block (None | str):
             rendered_target_version (str): Renders target_version with system_config context for UI display.
@@ -88,7 +114,7 @@ class BlockRolloutConfigList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: BlockRolloutConfigListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -99,11 +125,21 @@ class BlockRolloutConfigList:
     created: BlockRolloutConfigListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        BlockRolloutConfigListEffectiveCriticalityType1
+        | BlockRolloutConfigListEffectiveCriticalityType2Type1
+        | BlockRolloutConfigListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     block_name: None | str
     active: bool
-    trigger_type: None | TriggerTypeEnum
+    trigger_type: (
+        BlockRolloutConfigListTriggerTypeType1
+        | BlockRolloutConfigListTriggerTypeType2Type1
+        | BlockRolloutConfigListTriggerTypeType3Type1
+        | None
+    )
     target_version: None | str
     template_block: None | str
     rendered_target_version: str
@@ -111,17 +147,13 @@ class BlockRolloutConfigList:
     max_concurrent_percent: int
     failure_threshold_percent: int
     max_retries: int
-    kind: BlockRolloutConfigKindEnum = "config"
+    kind: BlockRolloutConfigListKind = "config"
     is_system_config: bool = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.block_rollout_config_list_organization_type_0 import (
-            BlockRolloutConfigListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.block_rollout_config_list_workspace_type_0 import (
-            BlockRolloutConfigListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.block_rollout_config_list_organization_type_0 import BlockRolloutConfigListOrganizationType0  # noqa: PLC0415
+        from ..models.block_rollout_config_list_workspace_type_0 import BlockRolloutConfigListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -163,6 +195,10 @@ class BlockRolloutConfigList:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -179,6 +215,10 @@ class BlockRolloutConfigList:
 
         trigger_type: None | str
         if isinstance(self.trigger_type, str):
+            trigger_type = self.trigger_type
+        elif isinstance(self.trigger_type, str):
+            trigger_type = self.trigger_type
+        elif isinstance(self.trigger_type, str):
             trigger_type = self.trigger_type
         else:
             trigger_type = self.trigger_type
@@ -241,19 +281,15 @@ class BlockRolloutConfigList:
             BlockRolloutConfigListActiveConditionInstancesItem,  # noqa: PLC0415
         )
         from ..models.block_rollout_config_list_created import BlockRolloutConfigListCreated  # noqa: PLC0415
-        from ..models.block_rollout_config_list_organization_type_0 import (
-            BlockRolloutConfigListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.block_rollout_config_list_workspace_type_0 import (
-            BlockRolloutConfigListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.block_rollout_config_list_organization_type_0 import BlockRolloutConfigListOrganizationType0  # noqa: PLC0415
+        from ..models.block_rollout_config_list_workspace_type_0 import BlockRolloutConfigListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_block_rollout_config_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -308,24 +344,57 @@ class BlockRolloutConfigList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            BlockRolloutConfigListEffectiveCriticalityType1
+            | BlockRolloutConfigListEffectiveCriticalityType2Type1
+            | BlockRolloutConfigListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_block_rollout_config_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = (
+                    check_block_rollout_config_list_effective_criticality_type_2_type_1(data)
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = (
+                    check_block_rollout_config_list_effective_criticality_type_3_type_1(data)
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BlockRolloutConfigListEffectiveCriticalityType1
+                | BlockRolloutConfigListEffectiveCriticalityType2Type1
+                | BlockRolloutConfigListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
         url = d.pop("url")
 
-        kind = check_block_rollout_config_kind_enum(d.pop("kind"))
+        kind = check_block_rollout_config_list_kind(d.pop("kind"))
 
         def _parse_block_name(data: object) -> None | str:
             if data is None:
@@ -338,18 +407,47 @@ class BlockRolloutConfigList:
 
         is_system_config = d.pop("is_system_config")
 
-        def _parse_trigger_type(data: object) -> None | TriggerTypeEnum:
+        def _parse_trigger_type(
+            data: object,
+        ) -> (
+            BlockRolloutConfigListTriggerTypeType1
+            | BlockRolloutConfigListTriggerTypeType2Type1
+            | BlockRolloutConfigListTriggerTypeType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                trigger_type_type_0 = check_trigger_type_enum(data)
+                trigger_type_type_1 = check_block_rollout_config_list_trigger_type_type_1(data)
 
-                return trigger_type_type_0
+                return trigger_type_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(None | TriggerTypeEnum, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                trigger_type_type_2_type_1 = check_block_rollout_config_list_trigger_type_type_2_type_1(data)
+
+                return trigger_type_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                trigger_type_type_3_type_1 = check_block_rollout_config_list_trigger_type_type_3_type_1(data)
+
+                return trigger_type_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BlockRolloutConfigListTriggerTypeType1
+                | BlockRolloutConfigListTriggerTypeType2Type1
+                | BlockRolloutConfigListTriggerTypeType3Type1
+                | None,
+                data,
+            )
 
         trigger_type = _parse_trigger_type(d.pop("trigger_type"))
 

@@ -8,8 +8,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
-from ..models.conversation_status_enum import ConversationStatusEnum, check_conversation_status_enum
+from ..models.conversation_list_kind import ConversationListKind, check_conversation_list_kind
+from ..models.conversation_list_status import ConversationListStatus, check_conversation_list_status
 
 if TYPE_CHECKING:
     from ..models.conversation_provider_simple import ConversationProviderSimple
@@ -27,14 +27,18 @@ class ConversationList:
         Attributes:
             id (UUID):
             name (str):
-            kind (ConversationKindEnum): * `generic` - Generic
+            kind (ConversationListKind): Type of conversation
+
+                * `generic` - Generic
                 * `zammad` - Zammad
                 * `slack` - Slack
                 * `discord` - Discord
                 * `telegram` - Telegram
                 * `msteams` - Microsoft Teams
                 * `email` - Email
-            status (ConversationStatusEnum): * `closed` - Closed
+            status (ConversationListStatus): Current status of the conversation
+
+                * `closed` - Closed
                 * `waiting_for_operator` - Waiting for Operator
                 * `waiting_for_user` - Waiting for User
                 * `deleted` - Deleted
@@ -49,8 +53,8 @@ class ConversationList:
 
     id: UUID
     name: str
-    kind: ConversationKindEnum
-    status: ConversationStatusEnum
+    kind: ConversationListKind
+    status: ConversationListStatus
     organization: OrganizationSimple
     conversation_provider: ConversationProviderSimple
     created_at: datetime.datetime
@@ -106,9 +110,9 @@ class ConversationList:
 
         name = d.pop("name")
 
-        kind = check_conversation_kind_enum(d.pop("kind"))
+        kind = check_conversation_list_kind(d.pop("kind"))
 
-        status = check_conversation_status_enum(d.pop("status"))
+        status = check_conversation_list_status(d.pop("status"))
 
         organization = OrganizationSimple.from_dict(d.pop("organization"))
 

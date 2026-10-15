@@ -7,9 +7,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.activity_kind_enum import ActivityKindEnum, check_activity_kind_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.activity_list_effective_criticality_type_1 import (
+    ActivityListEffectiveCriticalityType1,
+    check_activity_list_effective_criticality_type_1,
+)
+from ..models.activity_list_effective_criticality_type_2_type_1 import (
+    ActivityListEffectiveCriticalityType2Type1,
+    check_activity_list_effective_criticality_type_2_type_1,
+)
+from ..models.activity_list_effective_criticality_type_3_type_1 import (
+    ActivityListEffectiveCriticalityType3Type1,
+    check_activity_list_effective_criticality_type_3_type_1,
+)
+from ..models.activity_list_kind import ActivityListKind, check_activity_list_kind
+from ..models.activity_list_state import ActivityListState, check_activity_list_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -32,7 +43,7 @@ class ActivityList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (ActivityListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -52,14 +63,17 @@ class ActivityList:
             created (ActivityListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (ActivityListEffectiveCriticalityType1 | ActivityListEffectiveCriticalityType2Type1 |
+                ActivityListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             kind_display (str):
             icon_category (str): Visual category (down|up|notification|neutral) for timeline icon rendering.
             user (ActivityListUserType0 | None):
             user_email (None | str):
             object_icon_url (str): Deterministic class icon of the referenced object, derived from object_type. Spec 484.
-            kind (ActivityKindEnum | Unset): * `generic` - Generic
+            kind (ActivityListKind | Unset): Type of activity
+
+                * `generic` - Generic
                 * `creation` - Creation
                 * `update` - Update
                 * `deletion` - Deletion
@@ -110,6 +124,10 @@ class ActivityList:
                 * `note_reminder` - Note Reminder
                 * `ssh-session` - SSH Session
                 * `workspace-sync` - Workspace Sync
+                * `domain_registered` - Domain Registered
+                * `domain_transferred_in` - Domain Transferred In
+                * `domain_transferred_out` - Domain Transferred Out
+                * `domain_deleted` - Domain Deleted
             message (None | str | Unset): Human-readable activity description
             object_type (None | str | Unset): Type of the object this activity relates to
             object_name (None | str | Unset): Name of the object this activity relates to
@@ -118,7 +136,7 @@ class ActivityList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: ActivityListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -129,14 +147,19 @@ class ActivityList:
     created: ActivityListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        ActivityListEffectiveCriticalityType1
+        | ActivityListEffectiveCriticalityType2Type1
+        | ActivityListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     kind_display: str
     icon_category: str
     user: ActivityListUserType0 | None
     user_email: None | str
     object_icon_url: str
-    kind: ActivityKindEnum | Unset = UNSET
+    kind: ActivityListKind | Unset = UNSET
     message: None | str | Unset = UNSET
     object_type: None | str | Unset = UNSET
     object_name: None | str | Unset = UNSET
@@ -177,6 +200,10 @@ class ActivityList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -267,9 +294,7 @@ class ActivityList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.activity_list_active_condition_instances_item import (
-            ActivityListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.activity_list_active_condition_instances_item import ActivityListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.activity_list_created import ActivityListCreated  # noqa: PLC0415
         from ..models.activity_list_user_type_0 import ActivityListUserType0  # noqa: PLC0415
         from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
@@ -280,7 +305,7 @@ class ActivityList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_activity_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -309,18 +334,47 @@ class ActivityList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            ActivityListEffectiveCriticalityType1
+            | ActivityListEffectiveCriticalityType2Type1
+            | ActivityListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_activity_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_activity_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_activity_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ActivityListEffectiveCriticalityType1
+                | ActivityListEffectiveCriticalityType2Type1
+                | ActivityListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -355,11 +409,11 @@ class ActivityList:
         object_icon_url = d.pop("object_icon_url")
 
         _kind = d.pop("kind", UNSET)
-        kind: ActivityKindEnum | Unset
+        kind: ActivityListKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_activity_kind_enum(_kind)
+            kind = check_activity_list_kind(_kind)
 
         def _parse_message(data: object) -> None | str | Unset:
             if data is None:

@@ -8,13 +8,33 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.action_run_status_enum import ActionRunStatusEnum, check_action_run_status_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.action_run_criticality_type_1 import ActionRunCriticalityType1, check_action_run_criticality_type_1
+from ..models.action_run_criticality_type_2_type_1 import (
+    ActionRunCriticalityType2Type1,
+    check_action_run_criticality_type_2_type_1,
+)
+from ..models.action_run_criticality_type_3_type_1 import (
+    ActionRunCriticalityType3Type1,
+    check_action_run_criticality_type_3_type_1,
+)
+from ..models.action_run_effective_criticality_type_1 import (
+    ActionRunEffectiveCriticalityType1,
+    check_action_run_effective_criticality_type_1,
+)
+from ..models.action_run_effective_criticality_type_2_type_1 import (
+    ActionRunEffectiveCriticalityType2Type1,
+    check_action_run_effective_criticality_type_2_type_1,
+)
+from ..models.action_run_effective_criticality_type_3_type_1 import (
+    ActionRunEffectiveCriticalityType3Type1,
+    check_action_run_effective_criticality_type_3_type_1,
+)
+from ..models.action_run_kind import ActionRunKind, check_action_run_kind
+from ..models.action_run_last_state import ActionRunLastState, check_action_run_last_state
+from ..models.action_run_provider import ActionRunProvider, check_action_run_provider
+from ..models.action_run_scope import ActionRunScope, check_action_run_scope
+from ..models.action_run_state import ActionRunState, check_action_run_state
+from ..models.action_run_status import ActionRunStatus, check_action_run_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -48,7 +68,7 @@ class ActionRun:
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (ActionRunDeletedByUserType0 | None):
             debug_mode (bool): Persists all Object Logs in the database
-            provider (ProviderEnum): * `loopback` - Loopback
+            provider (ActionRunProvider): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -63,14 +83,14 @@ class ActionRun:
                 * `system` - System
             provider_reference (None | str):
             provider_id (None | str):
-            state (LastStateEnum): * `OK` - Ok
+            state (ActionRunState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (ActionRunLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -93,9 +113,11 @@ class ActionRun:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (ActionRunScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
-            kind (GenericObjectKindEnum): * `generic` - Generic
+            kind (ActionRunKind): * `generic` - Generic
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             tolerations (Any): Tolerations match conditions. If a toleration for a condition exists for an object, the
@@ -103,13 +125,14 @@ class ActionRun:
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None):
             archived_reason (None | str): The reason why the object was archived
-            criticality (CriticalityEnum | None): Criticality level. Null = inherit from workspace, then org. Explicit value
-                overrides inheritance.
+            criticality (ActionRunCriticalityType1 | ActionRunCriticalityType2Type1 | ActionRunCriticalityType3Type1 |
+                None): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
                 * `low` - Low
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (ActionRunEffectiveCriticalityType1 | ActionRunEffectiveCriticalityType2Type1 |
+                ActionRunEffectiveCriticalityType3Type1 | None):
             target_availability (None | str): Target availability in % (overrides SystemConfig default). Null = use
                 SystemConfig DEFAULT_TARGET_AVAILABILITY.
             actual_availability (str): Calculated actual availability as yearly average in %
@@ -127,7 +150,7 @@ class ActionRun:
             effective_slo_target (float | None):
             effective_sla_target (float | None):
             last_action_run (ActionRunLastActionRunType0 | None):
-            status (ActionRunStatusEnum): * `pending` - Pending
+            status (ActionRunStatus): * `pending` - Pending
                 * `running` - Running
                 * `success` - Success
                 * `failed` - Failed
@@ -164,12 +187,12 @@ class ActionRun:
     is_deleted: bool
     deleted_by_user: ActionRunDeletedByUserType0 | None
     debug_mode: bool
-    provider: ProviderEnum
+    provider: ActionRunProvider
     provider_reference: None | str
     provider_id: None | str
-    state: LastStateEnum
+    state: ActionRunState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: ActionRunLastState
     last_state_change: datetime.datetime | None
     reconciliation_enabled: bool
     reconciliation_running: bool
@@ -186,15 +209,20 @@ class ActionRun:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
-    kind: GenericObjectKindEnum
+    scope: ActionRunScope
+    kind: ActionRunKind
     conditions: Any
     tolerations: Any
     archived: bool
     archived_at: datetime.datetime | None
     archived_reason: None | str
-    criticality: CriticalityEnum | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    criticality: ActionRunCriticalityType1 | ActionRunCriticalityType2Type1 | ActionRunCriticalityType3Type1 | None
+    effective_criticality: (
+        ActionRunEffectiveCriticalityType1
+        | ActionRunEffectiveCriticalityType2Type1
+        | ActionRunEffectiveCriticalityType3Type1
+        | None
+    )
     target_availability: None | str
     actual_availability: str
     slo_target: None | str
@@ -210,7 +238,7 @@ class ActionRun:
     effective_slo_target: float | None
     effective_sla_target: float | None
     last_action_run: ActionRunLastActionRunType0 | None
-    status: ActionRunStatusEnum
+    status: ActionRunStatus
     status_reason: None | str
     block: BlockSimple
     action: None | str
@@ -356,11 +384,19 @@ class ActionRun:
         criticality: None | str
         if isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -620,7 +656,7 @@ class ActionRun:
 
         debug_mode = d.pop("debug_mode")
 
-        provider = check_provider_enum(d.pop("provider"))
+        provider = check_action_run_provider(d.pop("provider"))
 
         def _parse_provider_reference(data: object) -> None | str:
             if data is None:
@@ -636,7 +672,7 @@ class ActionRun:
 
         provider_id = _parse_provider_id(d.pop("provider_id"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_action_run_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -645,7 +681,7 @@ class ActionRun:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_action_run_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -746,9 +782,9 @@ class ActionRun:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_action_run_scope(d.pop("scope"))
 
-        kind = check_generic_object_kind_enum(d.pop("kind"))
+        kind = check_action_run_kind(d.pop("kind"))
 
         conditions = d.pop("conditions")
 
@@ -778,33 +814,82 @@ class ActionRun:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason"))
 
-        def _parse_criticality(data: object) -> CriticalityEnum | None:
+        def _parse_criticality(
+            data: object,
+        ) -> ActionRunCriticalityType1 | ActionRunCriticalityType2Type1 | ActionRunCriticalityType3Type1 | None:
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_action_run_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(CriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_2_type_1 = check_action_run_criticality_type_2_type_1(data)
+
+                return criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_action_run_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ActionRunCriticalityType1 | ActionRunCriticalityType2Type1 | ActionRunCriticalityType3Type1 | None, data
+            )
 
         criticality = _parse_criticality(d.pop("criticality"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            ActionRunEffectiveCriticalityType1
+            | ActionRunEffectiveCriticalityType2Type1
+            | ActionRunEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_action_run_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_action_run_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_action_run_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ActionRunEffectiveCriticalityType1
+                | ActionRunEffectiveCriticalityType2Type1
+                | ActionRunEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -902,7 +987,7 @@ class ActionRun:
 
         last_action_run = _parse_last_action_run(d.pop("last_action_run"))
 
-        status = check_action_run_status_enum(d.pop("status"))
+        status = check_action_run_status(d.pop("status"))
 
         def _parse_status_reason(data: object) -> None | str:
             if data is None:

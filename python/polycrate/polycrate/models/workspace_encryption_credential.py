@@ -7,8 +7,14 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.credential_kind_enum import CredentialKindEnum, check_credential_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.workspace_encryption_credential_kind import (
+    WorkspaceEncryptionCredentialKind,
+    check_workspace_encryption_credential_kind,
+)
+from ..models.workspace_encryption_credential_state import (
+    WorkspaceEncryptionCredentialState,
+    check_workspace_encryption_credential_state,
+)
 
 T = TypeVar("T", bound="WorkspaceEncryptionCredential")
 
@@ -20,7 +26,7 @@ class WorkspaceEncryptionCredential:
     Attributes:
         id (UUID):
         name (str):
-        kind (CredentialKindEnum): * `api-key` - API Key
+        kind (WorkspaceEncryptionCredentialKind): * `api-key` - API Key
             * `kubeconfig` - Kubeconfig
             * `s3-credential` - S3 Credential
             * `ssh-keys` - SSH Keys
@@ -43,7 +49,7 @@ class WorkspaceEncryptionCredential:
             * `provider-account` - Provider Account
         ssh_private_key (None | str):
         ssh_public_key (None | str):
-        state (LastStateEnum): * `OK` - Ok
+        state (WorkspaceEncryptionCredentialState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -53,10 +59,10 @@ class WorkspaceEncryptionCredential:
 
     id: UUID
     name: str
-    kind: CredentialKindEnum
+    kind: WorkspaceEncryptionCredentialKind
     ssh_private_key: None | str
     ssh_public_key: None | str
-    state: LastStateEnum
+    state: WorkspaceEncryptionCredentialState
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -96,7 +102,7 @@ class WorkspaceEncryptionCredential:
 
         name = d.pop("name")
 
-        kind = check_credential_kind_enum(d.pop("kind"))
+        kind = check_workspace_encryption_credential_kind(d.pop("kind"))
 
         def _parse_ssh_private_key(data: object) -> None | str:
             if data is None:
@@ -112,7 +118,7 @@ class WorkspaceEncryptionCredential:
 
         ssh_public_key = _parse_ssh_public_key(d.pop("ssh_public_key"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_workspace_encryption_credential_state(d.pop("state"))
 
         workspace_encryption_credential = cls(
             id=id,

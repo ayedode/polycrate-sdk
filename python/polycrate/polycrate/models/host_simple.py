@@ -7,10 +7,10 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.bootstrap_status_enum import BootstrapStatusEnum, check_bootstrap_status_enum
-from ..models.host_kind_enum import HostKindEnum, check_host_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.role_28f_enum import Role28FEnum, check_role_28f_enum
+from ..models.host_simple_bootstrap_status import HostSimpleBootstrapStatus, check_host_simple_bootstrap_status
+from ..models.host_simple_kind import HostSimpleKind, check_host_simple_kind
+from ..models.host_simple_provider import HostSimpleProvider, check_host_simple_provider
+from ..models.host_simple_role import HostSimpleRole, check_host_simple_role
 
 if TYPE_CHECKING:
     from ..models.organization_simple import OrganizationSimple
@@ -28,9 +28,9 @@ class HostSimple:
         name (str):
         url (str):
         reconciliation_running (bool):
-        kind (HostKindEnum): * `vm` - Virtual Machine
+        kind (HostSimpleKind): * `vm` - Virtual Machine
             * `bare_metal` - Bare-Metal Machine
-        provider (ProviderEnum): * `loopback` - Loopback
+        provider (HostSimpleProvider): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -49,10 +49,15 @@ class HostSimple:
             Includes `url` field for direct navigation.
         hostname (str):
         credential (None | UUID):
-        role (Role28FEnum): * `k8s-worker` - Kubernetes Worker
+        role (HostSimpleRole): Host role (e.g. k8s-worker). Spec: polycrate spec inspect 729.
+
+            * `k8s-worker` - Kubernetes Worker
             * `k8s-controlplane` - Kubernetes Controlplane
             * `generic` - Generic
-        bootstrap_status (BootstrapStatusEnum): * `pending` - Pending
+        bootstrap_status (HostSimpleBootstrapStatus): IaaS/machine bootstrap lifecycle. Spec: polycrate spec inspect
+            729.
+
+            * `pending` - Pending
             * `provisioning` - Provisioning
             * `ready` - Ready
             * `joining` - Joining
@@ -64,14 +69,14 @@ class HostSimple:
     name: str
     url: str
     reconciliation_running: bool
-    kind: HostKindEnum
-    provider: ProviderEnum
+    kind: HostSimpleKind
+    provider: HostSimpleProvider
     workspace: WorkspaceSimple
     organization: OrganizationSimple
     hostname: str
     credential: None | UUID
-    role: Role28FEnum
-    bootstrap_status: BootstrapStatusEnum
+    role: HostSimpleRole
+    bootstrap_status: HostSimpleBootstrapStatus
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -138,9 +143,9 @@ class HostSimple:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        kind = check_host_kind_enum(d.pop("kind"))
+        kind = check_host_simple_kind(d.pop("kind"))
 
-        provider = check_provider_enum(d.pop("provider"))
+        provider = check_host_simple_provider(d.pop("provider"))
 
         workspace = WorkspaceSimple.from_dict(d.pop("workspace"))
 
@@ -163,9 +168,9 @@ class HostSimple:
 
         credential = _parse_credential(d.pop("credential"))
 
-        role = check_role_28f_enum(d.pop("role"))
+        role = check_host_simple_role(d.pop("role"))
 
-        bootstrap_status = check_bootstrap_status_enum(d.pop("bootstrap_status"))
+        bootstrap_status = check_host_simple_bootstrap_status(d.pop("bootstrap_status"))
 
         host_simple = cls(
             id=id,

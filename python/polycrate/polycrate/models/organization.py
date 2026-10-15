@@ -8,23 +8,43 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.organization_endpoint_monitoring_mode_enum import (
-    OrganizationEndpointMonitoringModeEnum,
-    check_organization_endpoint_monitoring_mode_enum,
+from ..models.organization_created_by_component_type_1 import (
+    OrganizationCreatedByComponentType1,
+    check_organization_created_by_component_type_1,
 )
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.organization_created_by_component_type_2_type_1 import (
+    OrganizationCreatedByComponentType2Type1,
+    check_organization_created_by_component_type_2_type_1,
+)
+from ..models.organization_created_by_component_type_3_type_1 import (
+    OrganizationCreatedByComponentType3Type1,
+    check_organization_created_by_component_type_3_type_1,
+)
+from ..models.organization_criticality_type_1 import OrganizationCriticalityType1, check_organization_criticality_type_1
+from ..models.organization_criticality_type_2_type_1 import (
+    OrganizationCriticalityType2Type1,
+    check_organization_criticality_type_2_type_1,
+)
+from ..models.organization_criticality_type_3_type_1 import (
+    OrganizationCriticalityType3Type1,
+    check_organization_criticality_type_3_type_1,
+)
+from ..models.organization_endpoint_monitoring_mode import (
+    OrganizationEndpointMonitoringMode,
+    check_organization_endpoint_monitoring_mode,
+)
+from ..models.organization_kind import OrganizationKind, check_organization_kind
+from ..models.organization_last_state import OrganizationLastState, check_organization_last_state
+from ..models.organization_provider import OrganizationProvider, check_organization_provider
+from ..models.organization_scope import OrganizationScope, check_organization_scope
+from ..models.organization_state import OrganizationState, check_organization_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
+    from ..models.organization_default_domain_contact_type_0 import OrganizationDefaultDomainContactType0
     from ..models.organization_membership_simple import OrganizationMembershipSimple
     from ..models.organization_product_list import OrganizationProductList
-    from ..models.organization_workspaces_item import OrganizationWorkspacesItem
+    from ..models.workspace_simple import WorkspaceSimple
 
 
 T = TypeVar("T", bound="Organization")
@@ -35,7 +55,7 @@ class Organization:
     """
     Attributes:
         id (UUID):
-        workspaces (list[OrganizationWorkspacesItem]):
+        workspaces (list[WorkspaceSimple]):
         icon_url (None | str):
         has_icon (bool):
         active_support_product (OrganizationProductList): List serializer for V2 table views.
@@ -43,20 +63,21 @@ class Organization:
             workspace/org owner field.
         workspace_default_owner (OrganizationMembershipSimple): Simple read-only serializer for OrganizationMembership —
             used in workspace/org owner field.
+        default_domain_contact (None | OrganizationDefaultDomainContactType0):
         name (str):
         created_at (datetime.datetime):
         updated_at (datetime.datetime):
         deleted_at (datetime.datetime | None): Timestamp when this object was soft-deleted. Null if not deleted.
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
-        state (LastStateEnum): * `OK` - Ok
+        state (OrganizationState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (OrganizationLastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -102,7 +123,7 @@ class Organization:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (OrganizationProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -121,14 +142,17 @@ class Organization:
         last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
         discovery_enabled (bool | Unset):
         platform_service (bool | Unset):
-        scope (ScopeEnum | Unset): * `system` - System
+        scope (OrganizationScope | Unset): The scope is used to separate `system` owned objects from `user` owned
+            objects.
+
+            * `system` - System
             * `user` - User
-        kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+        kind (OrganizationKind | Unset): * `generic` - Generic
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-            cli, operator, or api.
+        created_by_component (None | OrganizationCreatedByComponentType1 | OrganizationCreatedByComponentType2Type1 |
+            OrganizationCreatedByComponentType3Type1 | Unset): Component that created this object: cli, operator, or api.
 
             * `cli` - CLI
             * `operator` - Operator
@@ -142,8 +166,9 @@ class Organization:
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | OrganizationCriticalityType1 | OrganizationCriticalityType2Type1 |
+            OrganizationCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then org. Explicit
+            value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -169,7 +194,7 @@ class Organization:
         grafana_org_id (None | str | Unset):
         gitlab_group_id (int | None | Unset):
         gitlab_group_url (None | str | Unset): GitLab group URL (e.g., https://gitlab.com/group)
-        endpoint_monitoring_mode (OrganizationEndpointMonitoringModeEnum | Unset): * `auto` - AUTO
+        endpoint_monitoring_mode (OrganizationEndpointMonitoringMode | Unset): * `auto` - AUTO
             * `manual` - MANUAL
         color (None | str | Unset): RGB color in hex format (e.g., #ff6b6b)
         priority (bool | Unset): High priority organization flag
@@ -193,14 +218,18 @@ class Organization:
         apm_vmuser_manifest_last_applied_sha256 (None | str | Unset): SHA-256 (hex) of the last successfully applied
             unified APM VMUser manifest (canonical JSON). Spec: polycrate spec inspect 172.
         observability_metrics (Any | Unset): Observability metrics for billing (logs ingested, active metric series)
-        cached_s3_storage_bytes (int | Unset): Total S3 storage in bytes across all buckets
+        cached_s3_storage_bytes (int | Unset): Total S3 storage in bytes across owned plus Loopback-delegated buckets
+            after exclude_archived (Spec 825 / 864)
         cached_lb_traffic_30d_bytes (int | Unset): Total 30-day loadbalancer traffic in bytes; COALESCE
             traffic.*.30d_total then bytes.*.30d_total
         cached_logs_30d (int | Unset): Total log ingestion count in last 30 days
         cached_metrics_30d_avg (int | Unset): Average active metric series in last 30 days
         cached_metrics_updated_at (datetime.datetime | None | Unset): Last time cached metrics were updated
-        cached_s3_bucket_count (int | Unset): Cached S3 bucket count
-        cached_s3_object_count (int | Unset): Cached total S3 object count across all buckets
+        cached_s3_bucket_count (int | Unset): Cached S3 bucket count after exclude_archived (owned plus Loopback-
+            delegated; Spec 825 / 864)
+        cached_s3_object_count (int | Unset): Cached S3 object count after exclude_archived (owned plus Loopback-
+            delegated; Spec 825 / 864)
+        cached_s3_by_region (Any | Unset): Cached S3 rollups per effective region (S3Bucket.region_id; Spec 865 / 896)
         cached_lb_count (int | Unset): Cached loadbalancer instance count
         cached_lb_traffic_30d_in_bytes (int | Unset): Cached inbound 30-day loadbalancer traffic in bytes; COALESCE
             traffic.in.30d_total then bytes.in.30d_total
@@ -229,24 +258,24 @@ class Organization:
         created_by_user (int | None | Unset): The user who created the object
         unified_harbor_credential (None | Unset | UUID): Auto-generated unified Harbor registry credential (robot
             token).
-        endpoint_monitors (list[UUID] | Unset):
     """
 
     id: UUID
-    workspaces: list[OrganizationWorkspacesItem]
+    workspaces: list[WorkspaceSimple]
     icon_url: None | str
     has_icon: bool
     active_support_product: OrganizationProductList
     owner: OrganizationMembershipSimple
     workspace_default_owner: OrganizationMembershipSimple
+    default_domain_contact: None | OrganizationDefaultDomainContactType0
     name: str
     created_at: datetime.datetime
     updated_at: datetime.datetime
     deleted_at: datetime.datetime | None
     is_deleted: bool
-    state: LastStateEnum
+    state: OrganizationState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: OrganizationLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -280,19 +309,25 @@ class Organization:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: OrganizationProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: OrganizationScope | Unset = UNSET
+    kind: OrganizationKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        None
+        | OrganizationCreatedByComponentType1
+        | OrganizationCreatedByComponentType2Type1
+        | OrganizationCreatedByComponentType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -301,7 +336,13 @@ class Organization:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | OrganizationCriticalityType1
+        | OrganizationCriticalityType2Type1
+        | OrganizationCriticalityType3Type1
+        | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
     alias: None | str | Unset = UNSET
@@ -322,7 +363,7 @@ class Organization:
     grafana_org_id: None | str | Unset = UNSET
     gitlab_group_id: int | None | Unset = UNSET
     gitlab_group_url: None | str | Unset = UNSET
-    endpoint_monitoring_mode: OrganizationEndpointMonitoringModeEnum | Unset = UNSET
+    endpoint_monitoring_mode: OrganizationEndpointMonitoringMode | Unset = UNSET
     color: None | str | Unset = UNSET
     priority: bool | Unset = UNSET
     upstream_organization_id: None | str | Unset = UNSET
@@ -346,6 +387,7 @@ class Organization:
     cached_metrics_updated_at: datetime.datetime | None | Unset = UNSET
     cached_s3_bucket_count: int | Unset = UNSET
     cached_s3_object_count: int | Unset = UNSET
+    cached_s3_by_region: Any | Unset = UNSET
     cached_lb_count: int | Unset = UNSET
     cached_lb_traffic_30d_in_bytes: int | Unset = UNSET
     cached_lb_traffic_30d_out_bytes: int | Unset = UNSET
@@ -368,10 +410,11 @@ class Organization:
     modified_by_user: int | None | Unset = UNSET
     created_by_user: int | None | Unset = UNSET
     unified_harbor_credential: None | Unset | UUID = UNSET
-    endpoint_monitors: list[UUID] | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.organization_default_domain_contact_type_0 import OrganizationDefaultDomainContactType0  # noqa: PLC0415
+
         id = str(self.id)
 
         workspaces = []
@@ -389,6 +432,12 @@ class Organization:
         owner = self.owner.to_dict()
 
         workspace_default_owner = self.workspace_default_owner.to_dict()
+
+        default_domain_contact: dict[str, Any] | None
+        if isinstance(self.default_domain_contact, OrganizationDefaultDomainContactType0):
+            default_domain_contact = self.default_domain_contact.to_dict()
+        else:
+            default_domain_contact = self.default_domain_contact
 
         name = self.name
 
@@ -576,6 +625,8 @@ class Organization:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -618,6 +669,8 @@ class Organization:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -827,6 +880,8 @@ class Organization:
 
         cached_s3_object_count = self.cached_s3_object_count
 
+        cached_s3_by_region = self.cached_s3_by_region
+
         cached_lb_count = self.cached_lb_count
 
         cached_lb_traffic_30d_in_bytes = self.cached_lb_traffic_30d_in_bytes
@@ -903,13 +958,6 @@ class Organization:
         else:
             unified_harbor_credential = self.unified_harbor_credential
 
-        endpoint_monitors: list[str] | Unset = UNSET
-        if not isinstance(self.endpoint_monitors, Unset):
-            endpoint_monitors = []
-            for endpoint_monitors_item_data in self.endpoint_monitors:
-                endpoint_monitors_item = str(endpoint_monitors_item_data)
-                endpoint_monitors.append(endpoint_monitors_item)
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -921,6 +969,7 @@ class Organization:
                 "active_support_product": active_support_product,
                 "owner": owner,
                 "workspace_default_owner": workspace_default_owner,
+                "default_domain_contact": default_domain_contact,
                 "name": name,
                 "created_at": created_at,
                 "updated_at": updated_at,
@@ -1100,6 +1149,8 @@ class Organization:
             field_dict["cached_s3_bucket_count"] = cached_s3_bucket_count
         if cached_s3_object_count is not UNSET:
             field_dict["cached_s3_object_count"] = cached_s3_object_count
+        if cached_s3_by_region is not UNSET:
+            field_dict["cached_s3_by_region"] = cached_s3_by_region
         if cached_lb_count is not UNSET:
             field_dict["cached_lb_count"] = cached_lb_count
         if cached_lb_traffic_30d_in_bytes is not UNSET:
@@ -1144,16 +1195,15 @@ class Organization:
             field_dict["created_by_user"] = created_by_user
         if unified_harbor_credential is not UNSET:
             field_dict["unified_harbor_credential"] = unified_harbor_credential
-        if endpoint_monitors is not UNSET:
-            field_dict["endpoint_monitors"] = endpoint_monitors
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.organization_default_domain_contact_type_0 import OrganizationDefaultDomainContactType0  # noqa: PLC0415
         from ..models.organization_membership_simple import OrganizationMembershipSimple  # noqa: PLC0415
         from ..models.organization_product_list import OrganizationProductList  # noqa: PLC0415
-        from ..models.organization_workspaces_item import OrganizationWorkspacesItem  # noqa: PLC0415
+        from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -1161,7 +1211,7 @@ class Organization:
         workspaces = []
         _workspaces = d.pop("workspaces")
         for workspaces_item_data in _workspaces:
-            workspaces_item = OrganizationWorkspacesItem.from_dict(workspaces_item_data)
+            workspaces_item = WorkspaceSimple.from_dict(workspaces_item_data)
 
             workspaces.append(workspaces_item)
 
@@ -1179,6 +1229,21 @@ class Organization:
         owner = OrganizationMembershipSimple.from_dict(d.pop("owner"))
 
         workspace_default_owner = OrganizationMembershipSimple.from_dict(d.pop("workspace_default_owner"))
+
+        def _parse_default_domain_contact(data: object) -> None | OrganizationDefaultDomainContactType0:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                default_domain_contact_type_0 = OrganizationDefaultDomainContactType0.from_dict(data)
+
+                return default_domain_contact_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | OrganizationDefaultDomainContactType0, data)
+
+        default_domain_contact = _parse_default_domain_contact(d.pop("default_domain_contact"))
 
         name = d.pop("name")
 
@@ -1203,7 +1268,7 @@ class Organization:
 
         is_deleted = d.pop("is_deleted")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_organization_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -1212,7 +1277,7 @@ class Organization:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_organization_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -1428,11 +1493,11 @@ class Organization:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: OrganizationProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_organization_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1470,18 +1535,18 @@ class Organization:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: OrganizationScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_organization_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: OrganizationKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_organization_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -1511,7 +1576,15 @@ class Organization:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            None
+            | OrganizationCreatedByComponentType1
+            | OrganizationCreatedByComponentType2Type1
+            | OrganizationCreatedByComponentType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1519,20 +1592,35 @@ class Organization:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_organization_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_organization_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_organization_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | OrganizationCreatedByComponentType1
+                | OrganizationCreatedByComponentType2Type1
+                | OrganizationCreatedByComponentType3Type1
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1587,7 +1675,15 @@ class Organization:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | OrganizationCriticalityType1
+            | OrganizationCriticalityType2Type1
+            | OrganizationCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1595,20 +1691,35 @@ class Organization:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_organization_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_organization_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_organization_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | OrganizationCriticalityType1
+                | OrganizationCriticalityType2Type1
+                | OrganizationCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1766,11 +1877,11 @@ class Organization:
         gitlab_group_url = _parse_gitlab_group_url(d.pop("gitlab_group_url", UNSET))
 
         _endpoint_monitoring_mode = d.pop("endpoint_monitoring_mode", UNSET)
-        endpoint_monitoring_mode: OrganizationEndpointMonitoringModeEnum | Unset
+        endpoint_monitoring_mode: OrganizationEndpointMonitoringMode | Unset
         if isinstance(_endpoint_monitoring_mode, Unset):
             endpoint_monitoring_mode = UNSET
         else:
-            endpoint_monitoring_mode = check_organization_endpoint_monitoring_mode_enum(_endpoint_monitoring_mode)
+            endpoint_monitoring_mode = check_organization_endpoint_monitoring_mode(_endpoint_monitoring_mode)
 
         def _parse_color(data: object) -> None | str | Unset:
             if data is None:
@@ -1914,6 +2025,8 @@ class Organization:
 
         cached_s3_object_count = d.pop("cached_s3_object_count", UNSET)
 
+        cached_s3_by_region = d.pop("cached_s3_by_region", UNSET)
+
         cached_lb_count = d.pop("cached_lb_count", UNSET)
 
         cached_lb_traffic_30d_in_bytes = d.pop("cached_lb_traffic_30d_in_bytes", UNSET)
@@ -2025,15 +2138,6 @@ class Organization:
 
         unified_harbor_credential = _parse_unified_harbor_credential(d.pop("unified_harbor_credential", UNSET))
 
-        _endpoint_monitors = d.pop("endpoint_monitors", UNSET)
-        endpoint_monitors: list[UUID] | Unset = UNSET
-        if _endpoint_monitors is not UNSET:
-            endpoint_monitors = []
-            for endpoint_monitors_item_data in _endpoint_monitors:
-                endpoint_monitors_item = UUID(endpoint_monitors_item_data)
-
-                endpoint_monitors.append(endpoint_monitors_item)
-
         organization = cls(
             id=id,
             workspaces=workspaces,
@@ -2042,6 +2146,7 @@ class Organization:
             active_support_product=active_support_product,
             owner=owner,
             workspace_default_owner=workspace_default_owner,
+            default_domain_contact=default_domain_contact,
             name=name,
             created_at=created_at,
             updated_at=updated_at,
@@ -2149,6 +2254,7 @@ class Organization:
             cached_metrics_updated_at=cached_metrics_updated_at,
             cached_s3_bucket_count=cached_s3_bucket_count,
             cached_s3_object_count=cached_s3_object_count,
+            cached_s3_by_region=cached_s3_by_region,
             cached_lb_count=cached_lb_count,
             cached_lb_traffic_30d_in_bytes=cached_lb_traffic_30d_in_bytes,
             cached_lb_traffic_30d_out_bytes=cached_lb_traffic_30d_out_bytes,
@@ -2171,7 +2277,6 @@ class Organization:
             modified_by_user=modified_by_user,
             created_by_user=created_by_user,
             unified_harbor_credential=unified_harbor_credential,
-            endpoint_monitors=endpoint_monitors,
         )
 
         organization.additional_properties = d

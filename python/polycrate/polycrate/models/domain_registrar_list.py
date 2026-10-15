@@ -7,9 +7,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.domain_registrar_kind_enum import DomainRegistrarKindEnum, check_domain_registrar_kind_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.domain_registrar_list_effective_criticality_type_1 import (
+    DomainRegistrarListEffectiveCriticalityType1,
+    check_domain_registrar_list_effective_criticality_type_1,
+)
+from ..models.domain_registrar_list_effective_criticality_type_2_type_1 import (
+    DomainRegistrarListEffectiveCriticalityType2Type1,
+    check_domain_registrar_list_effective_criticality_type_2_type_1,
+)
+from ..models.domain_registrar_list_effective_criticality_type_3_type_1 import (
+    DomainRegistrarListEffectiveCriticalityType3Type1,
+    check_domain_registrar_list_effective_criticality_type_3_type_1,
+)
+from ..models.domain_registrar_list_kind import DomainRegistrarListKind, check_domain_registrar_list_kind
+from ..models.domain_registrar_list_state import DomainRegistrarListState, check_domain_registrar_list_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -49,7 +60,7 @@ class DomainRegistrarList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (DomainRegistrarListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -67,18 +78,21 @@ class DomainRegistrarList:
             created (DomainRegistrarListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (DomainRegistrarListEffectiveCriticalityType1 |
+                DomainRegistrarListEffectiveCriticalityType2Type1 | DomainRegistrarListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
-            kind (DomainRegistrarKindEnum | Unset): * `centralnic` - CentralNic (RRPProxy)
-            ote (bool | Unset): OTE test mode (CentralNic test environment). False = production.
+            kind (DomainRegistrarListKind | Unset): * `centralnic` - CentralNic (RRPProxy)
+                * `openprovider` - OpenProvider
+            ote (bool | Unset): Non-production / sandbox endpoint (CentralNic OT&E or OpenProvider sandbox). False =
+                production.
             import_domains (bool | Unset): If True: import new domains from the provider during reconciliation. Existing
                 domains are not overwritten.
-            import_contacts (bool | Unset): If True: import contact handles of linked domains as Contact objects.
+            import_contacts (bool | Unset): If True: import contact handles of linked domains as DomainContact objects.
     """
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: DomainRegistrarListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -89,18 +103,21 @@ class DomainRegistrarList:
     created: DomainRegistrarListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        DomainRegistrarListEffectiveCriticalityType1
+        | DomainRegistrarListEffectiveCriticalityType2Type1
+        | DomainRegistrarListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
-    kind: DomainRegistrarKindEnum | Unset = UNSET
+    kind: DomainRegistrarListKind | Unset = UNSET
     ote: bool | Unset = UNSET
     import_domains: bool | Unset = UNSET
     import_contacts: bool | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.domain_registrar_list_organization_type_0 import (
-            DomainRegistrarListOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.domain_registrar_list_organization_type_0 import DomainRegistrarListOrganizationType0  # noqa: PLC0415
         from ..models.domain_registrar_list_workspace_type_0 import DomainRegistrarListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
@@ -142,6 +159,10 @@ class DomainRegistrarList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -196,9 +217,7 @@ class DomainRegistrarList:
             DomainRegistrarListActiveConditionInstancesItem,  # noqa: PLC0415
         )
         from ..models.domain_registrar_list_created import DomainRegistrarListCreated  # noqa: PLC0415
-        from ..models.domain_registrar_list_organization_type_0 import (
-            DomainRegistrarListOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.domain_registrar_list_organization_type_0 import DomainRegistrarListOrganizationType0  # noqa: PLC0415
         from ..models.domain_registrar_list_workspace_type_0 import DomainRegistrarListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
@@ -206,7 +225,7 @@ class DomainRegistrarList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_domain_registrar_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -261,29 +280,62 @@ class DomainRegistrarList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            DomainRegistrarListEffectiveCriticalityType1
+            | DomainRegistrarListEffectiveCriticalityType2Type1
+            | DomainRegistrarListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_domain_registrar_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_domain_registrar_list_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_domain_registrar_list_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DomainRegistrarListEffectiveCriticalityType1
+                | DomainRegistrarListEffectiveCriticalityType2Type1
+                | DomainRegistrarListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
         url = d.pop("url")
 
         _kind = d.pop("kind", UNSET)
-        kind: DomainRegistrarKindEnum | Unset
+        kind: DomainRegistrarListKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_domain_registrar_kind_enum(_kind)
+            kind = check_domain_registrar_list_kind(_kind)
 
         ote = d.pop("ote", UNSET)
 

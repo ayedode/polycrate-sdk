@@ -9,12 +9,30 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.alert_kind_enum import AlertKindEnum, check_alert_kind_enum
-from ..models.alert_status_enum import AlertStatusEnum, check_alert_status_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.category_enum import CategoryEnum, check_category_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.alert_category_slug import AlertCategorySlug, check_alert_category_slug
+from ..models.alert_request_criticality_type_1 import (
+    AlertRequestCriticalityType1,
+    check_alert_request_criticality_type_1,
+)
+from ..models.alert_request_criticality_type_2_type_1 import (
+    AlertRequestCriticalityType2Type1,
+    check_alert_request_criticality_type_2_type_1,
+)
+from ..models.alert_request_criticality_type_3_type_1 import (
+    AlertRequestCriticalityType3Type1,
+    check_alert_request_criticality_type_3_type_1,
+)
+from ..models.alert_request_kind import AlertRequestKind, check_alert_request_kind
+from ..models.alert_request_provider import AlertRequestProvider, check_alert_request_provider
+from ..models.alert_request_status_type_1 import AlertRequestStatusType1, check_alert_request_status_type_1
+from ..models.alert_request_status_type_2_type_1 import (
+    AlertRequestStatusType2Type1,
+    check_alert_request_status_type_2_type_1,
+)
+from ..models.alert_request_status_type_3_type_1 import (
+    AlertRequestStatusType3Type1,
+    check_alert_request_status_type_3_type_1,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="AlertRequest")
@@ -33,7 +51,7 @@ class AlertRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (AlertRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -50,7 +68,7 @@ class AlertRequest:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (AlertKindEnum | Unset): * `grafana` - Grafana Alert
+            kind (AlertRequestKind | Unset): * `grafana` - Grafana Alert
                 * `generic` - Generic Alert
                 * `checkmk` - CheckMK Alert
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -58,8 +76,9 @@ class AlertRequest:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (AlertRequestCriticalityType1 | AlertRequestCriticalityType2Type1 |
+                AlertRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then org.
+                Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -70,7 +89,11 @@ class AlertRequest:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            status (AlertStatusEnum | BlankEnum | None | Unset):
+            status (AlertRequestStatusType1 | AlertRequestStatusType2Type1 | AlertRequestStatusType3Type1 | None | Unset): *
+                `firing` - Firing
+                * `silenced` - Silenced
+                * `resolved` - Resolved
+                * `pending` - Pending
             title (None | str | Unset):
             fingerprint (None | str | Unset):
             external_url (None | str | Unset):
@@ -79,22 +102,7 @@ class AlertRequest:
             suppressed (bool | Unset):
             pod (None | str | Unset): Pod name from Grafana labels
             namespace (None | str | Unset): Namespace from Grafana labels
-            category (CategoryEnum | Unset): * `cluster.node` - Cluster / Node
-                * `workload.pod` - Workload / Pod
-                * `storage.volume` - Storage / Volume
-                * `data.cnpg` - Data / CNPG
-                * `data.replication` - Data / Replication
-                * `data.mariadb` - Data / MariaDB
-                * `data.mongodb` - Data / MongoDB
-                * `backup.velero` - Backup / Velero
-                * `observability.metrics` - Observability / Metrics
-                * `security.secrets` - Security / Secrets
-                * `security.access` - Security / Access
-                * `gitops.flux` - GitOps / Flux
-                * `availability.http` - Availability / HTTP
-                * `application.customer` - Application / Customer
-                * `platform.test` - Platform / Test
-                * `unknown` - Unknown
+            category (AlertCategorySlug | Unset): AlertCategory.name slug (Spec 654/674)
             dashboard_url (None | str | Unset):
             panel_url (None | str | Unset):
             silence_url (None | str | Unset):
@@ -112,23 +120,29 @@ class AlertRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: AlertRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: AlertKindEnum | Unset = UNSET
+    kind: AlertRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        AlertRequestCriticalityType1
+        | AlertRequestCriticalityType2Type1
+        | AlertRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    status: AlertStatusEnum | BlankEnum | None | Unset = UNSET
+    status: AlertRequestStatusType1 | AlertRequestStatusType2Type1 | AlertRequestStatusType3Type1 | None | Unset = UNSET
     title: None | str | Unset = UNSET
     fingerprint: None | str | Unset = UNSET
     external_url: None | str | Unset = UNSET
@@ -137,7 +151,7 @@ class AlertRequest:
     suppressed: bool | Unset = UNSET
     pod: None | str | Unset = UNSET
     namespace: None | str | Unset = UNSET
-    category: CategoryEnum | Unset = UNSET
+    category: AlertCategorySlug | Unset = UNSET
     dashboard_url: None | str | Unset = UNSET
     panel_url: None | str | Unset = UNSET
     silence_url: None | str | Unset = UNSET
@@ -213,6 +227,8 @@ class AlertRequest:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -241,6 +257,8 @@ class AlertRequest:
         status: None | str | Unset
         if isinstance(self.status, Unset):
             status = UNSET
+        elif isinstance(self.status, str):
+            status = self.status
         elif isinstance(self.status, str):
             status = self.status
         elif isinstance(self.status, str):
@@ -512,7 +530,9 @@ class AlertRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -544,7 +564,9 @@ class AlertRequest:
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
         if not isinstance(self.status, Unset):
-            if isinstance(self.status, str):
+            if self.status is None:
+                files.append(("status", (None, str(self.status).encode(), "text/plain")))
+            elif isinstance(self.status, str):
                 files.append(("status", (None, str(self.status).encode(), "text/plain")))
             elif isinstance(self.status, str):
                 files.append(("status", (None, str(self.status).encode(), "text/plain")))
@@ -679,11 +701,11 @@ class AlertRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: AlertRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_alert_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -708,11 +730,11 @@ class AlertRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: AlertKindEnum | Unset
+        kind: AlertRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_alert_kind_enum(_kind)
+            kind = check_alert_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -744,7 +766,15 @@ class AlertRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            AlertRequestCriticalityType1
+            | AlertRequestCriticalityType2Type1
+            | AlertRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -752,20 +782,35 @@ class AlertRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_alert_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_alert_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_alert_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AlertRequestCriticalityType1
+                | AlertRequestCriticalityType2Type1
+                | AlertRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -800,7 +845,9 @@ class AlertRequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_status(data: object) -> AlertStatusEnum | BlankEnum | None | Unset:
+        def _parse_status(
+            data: object,
+        ) -> AlertRequestStatusType1 | AlertRequestStatusType2Type1 | AlertRequestStatusType3Type1 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -808,20 +855,31 @@ class AlertRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                status_type_0 = check_alert_status_enum(data)
+                status_type_1 = check_alert_request_status_type_1(data)
 
-                return status_type_0
+                return status_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                status_type_1 = check_blank_enum(data)
+                status_type_2_type_1 = check_alert_request_status_type_2_type_1(data)
 
-                return status_type_1
+                return status_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(AlertStatusEnum | BlankEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                status_type_3_type_1 = check_alert_request_status_type_3_type_1(data)
+
+                return status_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AlertRequestStatusType1 | AlertRequestStatusType2Type1 | AlertRequestStatusType3Type1 | None | Unset,
+                data,
+            )
 
         status = _parse_status(d.pop("status", UNSET))
 
@@ -899,11 +957,11 @@ class AlertRequest:
         namespace = _parse_namespace(d.pop("namespace", UNSET))
 
         _category = d.pop("category", UNSET)
-        category: CategoryEnum | Unset
+        category: AlertCategorySlug | Unset
         if isinstance(_category, Unset):
             category = UNSET
         else:
-            category = check_category_enum(_category)
+            category = check_alert_category_slug(_category)
 
         def _parse_dashboard_url(data: object) -> None | str | Unset:
             if data is None:

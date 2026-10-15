@@ -9,12 +9,26 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.patched_region_request_criticality_type_1 import (
+    PatchedRegionRequestCriticalityType1,
+    check_patched_region_request_criticality_type_1,
+)
+from ..models.patched_region_request_criticality_type_2_type_1 import (
+    PatchedRegionRequestCriticalityType2Type1,
+    check_patched_region_request_criticality_type_2_type_1,
+)
+from ..models.patched_region_request_criticality_type_3_type_1 import (
+    PatchedRegionRequestCriticalityType3Type1,
+    check_patched_region_request_criticality_type_3_type_1,
+)
+from ..models.patched_region_request_kind import PatchedRegionRequestKind, check_patched_region_request_kind
+from ..models.patched_region_request_last_state import (
+    PatchedRegionRequestLastState,
+    check_patched_region_request_last_state,
+)
+from ..models.patched_region_request_provider import PatchedRegionRequestProvider, check_patched_region_request_provider
+from ..models.patched_region_request_scope import PatchedRegionRequestScope, check_patched_region_request_scope
+from ..models.patched_region_request_state import PatchedRegionRequestState, check_patched_region_request_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -39,7 +53,7 @@ class PatchedRegionRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (PatchedRegionRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -54,14 +68,14 @@ class PatchedRegionRequest:
                 * `system` - System
             provider_reference (None | str | Unset):
             provider_id (None | str | Unset):
-            state (LastStateEnum | Unset): * `OK` - Ok
+            state (PatchedRegionRequestState | Unset): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str | Unset):
-            last_state (LastStateEnum | Unset): * `OK` - Ok
+            last_state (PatchedRegionRequestLastState | Unset): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -82,9 +96,12 @@ class PatchedRegionRequest:
                 organizations.
             repair_task_id (None | str | Unset):
             repair_task_meta (Any | Unset): Task metadata for repair progress tracking
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (PatchedRegionRequestScope | Unset): The scope is used to separate `system` owned objects from `user`
+                owned objects.
+
+                * `system` - System
                 * `user` - User
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (PatchedRegionRequestKind | Unset): * `generic` - Generic
             conditions (Any | Unset): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -92,8 +109,9 @@ class PatchedRegionRequest:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | PatchedRegionRequestCriticalityType1 | PatchedRegionRequestCriticalityType2Type1 |
+                PatchedRegionRequestCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then org.
+                Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -106,7 +124,7 @@ class PatchedRegionRequest:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
             platform_features (list[str] | Unset): Active platform services: 's3', 'loadbalancer', 'apm', 'dns',
-                'controlplane'
+                'controlplane', 'compute', 'iaas'
             config (RegionConfigRequest | Unset):
     """
 
@@ -115,12 +133,12 @@ class PatchedRegionRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedRegionRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
-    state: LastStateEnum | Unset = UNSET
+    state: PatchedRegionRequestState | Unset = UNSET
     state_reason: None | str | Unset = UNSET
-    last_state: LastStateEnum | Unset = UNSET
+    last_state: PatchedRegionRequestLastState | Unset = UNSET
     last_state_change: datetime.datetime | None | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     reconciliation_running: bool | Unset = UNSET
@@ -134,14 +152,20 @@ class PatchedRegionRequest:
     platform_service: bool | Unset = UNSET
     repair_task_id: None | str | Unset = UNSET
     repair_task_meta: Any | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: PatchedRegionRequestScope | Unset = UNSET
+    kind: PatchedRegionRequestKind | Unset = UNSET
     conditions: Any | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedRegionRequestCriticalityType1
+        | PatchedRegionRequestCriticalityType2Type1
+        | PatchedRegionRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -272,6 +296,8 @@ class PatchedRegionRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -530,7 +556,9 @@ class PatchedRegionRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -599,11 +627,11 @@ class PatchedRegionRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedRegionRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_region_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -624,11 +652,11 @@ class PatchedRegionRequest:
         provider_id = _parse_provider_id(d.pop("provider_id", UNSET))
 
         _state = d.pop("state", UNSET)
-        state: LastStateEnum | Unset
+        state: PatchedRegionRequestState | Unset
         if isinstance(_state, Unset):
             state = UNSET
         else:
-            state = check_last_state_enum(_state)
+            state = check_patched_region_request_state(_state)
 
         def _parse_state_reason(data: object) -> None | str | Unset:
             if data is None:
@@ -640,11 +668,11 @@ class PatchedRegionRequest:
         state_reason = _parse_state_reason(d.pop("state_reason", UNSET))
 
         _last_state = d.pop("last_state", UNSET)
-        last_state: LastStateEnum | Unset
+        last_state: PatchedRegionRequestLastState | Unset
         if isinstance(_last_state, Unset):
             last_state = UNSET
         else:
-            last_state = check_last_state_enum(_last_state)
+            last_state = check_patched_region_request_last_state(_last_state)
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None | Unset:
             if data is None:
@@ -709,18 +737,18 @@ class PatchedRegionRequest:
         repair_task_meta = d.pop("repair_task_meta", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: PatchedRegionRequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_patched_region_request_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: PatchedRegionRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_patched_region_request_kind(_kind)
 
         conditions = d.pop("conditions", UNSET)
 
@@ -754,7 +782,15 @@ class PatchedRegionRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedRegionRequestCriticalityType1
+            | PatchedRegionRequestCriticalityType2Type1
+            | PatchedRegionRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -762,20 +798,35 @@ class PatchedRegionRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_region_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_region_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_region_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedRegionRequestCriticalityType1
+                | PatchedRegionRequestCriticalityType2Type1
+                | PatchedRegionRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

@@ -8,7 +8,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.pricing_quote_simple_state import PricingQuoteSimpleState, check_pricing_quote_simple_state
 
 T = TypeVar("T", bound="PricingQuoteSimple")
 
@@ -19,7 +19,7 @@ class PricingQuoteSimple:
     Attributes:
         id (UUID):
         name (str):
-        state (LastStateEnum): * `OK` - Ok
+        state (PricingQuoteSimpleState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -31,7 +31,7 @@ class PricingQuoteSimple:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: PricingQuoteSimpleState
     total_price: None | str
     valid_until: datetime.date | None
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -73,7 +73,7 @@ class PricingQuoteSimple:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_pricing_quote_simple_state(d.pop("state"))
 
         def _parse_total_price(data: object) -> None | str:
             if data is None:

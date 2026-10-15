@@ -1,0 +1,22 @@
+from typing import Literal
+
+PatchedRegistrarTLDPriceDetailRequestCreatedByComponentType2Type1 = Literal["", "api", "cli", "operator"]
+
+PATCHED_REGISTRAR_TLD_PRICE_DETAIL_REQUEST_CREATED_BY_COMPONENT_TYPE_2_TYPE_1_VALUES: set[
+    PatchedRegistrarTLDPriceDetailRequestCreatedByComponentType2Type1
+] = {
+    "",
+    "api",
+    "cli",
+    "operator",
+}
+
+
+def check_patched_registrar_tld_price_detail_request_created_by_component_type_2_type_1(
+    value: str,
+) -> PatchedRegistrarTLDPriceDetailRequestCreatedByComponentType2Type1:
+    if value in PATCHED_REGISTRAR_TLD_PRICE_DETAIL_REQUEST_CREATED_BY_COMPONENT_TYPE_2_TYPE_1_VALUES:
+        return value
+    raise TypeError(
+        f"Unexpected value {value!r}. Expected one of {PATCHED_REGISTRAR_TLD_PRICE_DETAIL_REQUEST_CREATED_BY_COMPONENT_TYPE_2_TYPE_1_VALUES!r}"
+    )

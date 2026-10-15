@@ -8,14 +8,39 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.external_traffic_policy_enum import ExternalTrafficPolicyEnum, check_external_traffic_policy_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.loadbalancer_region_kind_enum import LoadbalancerRegionKindEnum, check_loadbalancer_region_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.loadbalancer_region_criticality_type_1 import (
+    LoadbalancerRegionCriticalityType1,
+    check_loadbalancer_region_criticality_type_1,
+)
+from ..models.loadbalancer_region_criticality_type_2_type_1 import (
+    LoadbalancerRegionCriticalityType2Type1,
+    check_loadbalancer_region_criticality_type_2_type_1,
+)
+from ..models.loadbalancer_region_criticality_type_3_type_1 import (
+    LoadbalancerRegionCriticalityType3Type1,
+    check_loadbalancer_region_criticality_type_3_type_1,
+)
+from ..models.loadbalancer_region_effective_criticality_type_1 import (
+    LoadbalancerRegionEffectiveCriticalityType1,
+    check_loadbalancer_region_effective_criticality_type_1,
+)
+from ..models.loadbalancer_region_effective_criticality_type_2_type_1 import (
+    LoadbalancerRegionEffectiveCriticalityType2Type1,
+    check_loadbalancer_region_effective_criticality_type_2_type_1,
+)
+from ..models.loadbalancer_region_effective_criticality_type_3_type_1 import (
+    LoadbalancerRegionEffectiveCriticalityType3Type1,
+    check_loadbalancer_region_effective_criticality_type_3_type_1,
+)
+from ..models.loadbalancer_region_external_traffic_policy import (
+    LoadbalancerRegionExternalTrafficPolicy,
+    check_loadbalancer_region_external_traffic_policy,
+)
+from ..models.loadbalancer_region_kind import LoadbalancerRegionKind, check_loadbalancer_region_kind
+from ..models.loadbalancer_region_last_state import LoadbalancerRegionLastState, check_loadbalancer_region_last_state
+from ..models.loadbalancer_region_provider import LoadbalancerRegionProvider, check_loadbalancer_region_provider
+from ..models.loadbalancer_region_scope import LoadbalancerRegionScope, check_loadbalancer_region_scope
+from ..models.loadbalancer_region_state import LoadbalancerRegionState, check_loadbalancer_region_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -46,14 +71,14 @@ class LoadbalancerRegion:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (LoadbalancerRegionDeletedByUserType0 | None):
-            state (LastStateEnum): * `OK` - Ok
+            state (LoadbalancerRegionState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (LoadbalancerRegionLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -74,13 +99,16 @@ class LoadbalancerRegion:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (LoadbalancerRegionScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             tolerations (Any): Tolerations match conditions. If a toleration for a condition exists for an object, the
                 condition will not be applied.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (LoadbalancerRegionEffectiveCriticalityType1 |
+                LoadbalancerRegionEffectiveCriticalityType2Type1 | LoadbalancerRegionEffectiveCriticalityType3Type1 | None):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (LoadbalancerRegionOrganizationType0 | None):
             workspace (LoadbalancerRegionWorkspaceType0 | None):
@@ -103,7 +131,7 @@ class LoadbalancerRegion:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (LoadbalancerRegionProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -120,12 +148,13 @@ class LoadbalancerRegion:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset): Makes this region available for the whole platform
-            kind (LoadbalancerRegionKindEnum | Unset): * `cilium` - Cilium
+            kind (LoadbalancerRegionKind | Unset): * `cilium` - Cilium
                 * `metallb` - MetalLB
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
+            criticality (LoadbalancerRegionCriticalityType1 | LoadbalancerRegionCriticalityType2Type1 |
+                LoadbalancerRegionCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then
                 org. Explicit value overrides inheritance.
 
                 * `high` - High
@@ -143,7 +172,11 @@ class LoadbalancerRegion:
             region_config (Any | Unset): Region JSON. HAProxy instances: optional `haproxy` object with workload_kind
                 (deployment|daemonset), deployment.replica, daemonset.use_host_network, daemonset.use_host_port, daemonset.ports
                 (name to port number).
-            external_traffic_policy (ExternalTrafficPolicyEnum | Unset): * `Local` - Local
+            external_traffic_policy (LoadbalancerRegionExternalTrafficPolicy | Unset): Kubernetes Service
+                externalTrafficPolicy: Local (preserve client IP) or Cluster (K8s load-balanced). With Cilium direct routing,
+                Real IP works with either.
+
+                * `Local` - Local
                 * `Cluster` - Cluster
     """
 
@@ -153,9 +186,9 @@ class LoadbalancerRegion:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: LoadbalancerRegionDeletedByUserType0 | None
-    state: LastStateEnum
+    state: LoadbalancerRegionState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: LoadbalancerRegionLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -170,10 +203,15 @@ class LoadbalancerRegion:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: LoadbalancerRegionScope
     conditions: Any
     tolerations: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        LoadbalancerRegionEffectiveCriticalityType1
+        | LoadbalancerRegionEffectiveCriticalityType2Type1
+        | LoadbalancerRegionEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: LoadbalancerRegionOrganizationType0 | None
     workspace: LoadbalancerRegionWorkspaceType0 | None
@@ -194,16 +232,22 @@ class LoadbalancerRegion:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: LoadbalancerRegionProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: LoadbalancerRegionKindEnum | Unset = UNSET
+    kind: LoadbalancerRegionKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        LoadbalancerRegionCriticalityType1
+        | LoadbalancerRegionCriticalityType2Type1
+        | LoadbalancerRegionCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -213,19 +257,13 @@ class LoadbalancerRegion:
     active: bool | Unset = UNSET
     description: None | str | Unset = UNSET
     region_config: Any | Unset = UNSET
-    external_traffic_policy: ExternalTrafficPolicyEnum | Unset = UNSET
+    external_traffic_policy: LoadbalancerRegionExternalTrafficPolicy | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.loadbalancer_region_deleted_by_user_type_0 import (
-            LoadbalancerRegionDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_region_last_action_run_type_0 import (
-            LoadbalancerRegionLastActionRunType0,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_region_organization_type_0 import (
-            LoadbalancerRegionOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_region_deleted_by_user_type_0 import LoadbalancerRegionDeletedByUserType0  # noqa: PLC0415
+        from ..models.loadbalancer_region_last_action_run_type_0 import LoadbalancerRegionLastActionRunType0  # noqa: PLC0415
+        from ..models.loadbalancer_region_organization_type_0 import LoadbalancerRegionOrganizationType0  # noqa: PLC0415
         from ..models.loadbalancer_region_workspace_type_0 import LoadbalancerRegionWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
@@ -310,6 +348,10 @@ class LoadbalancerRegion:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -421,6 +463,8 @@ class LoadbalancerRegion:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -575,22 +619,12 @@ class LoadbalancerRegion:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.k8s_cluster_simple import K8SClusterSimple  # noqa: PLC0415
         from ..models.loadbalancer_region_created import LoadbalancerRegionCreated  # noqa: PLC0415
-        from ..models.loadbalancer_region_deleted_by_user_type_0 import (
-            LoadbalancerRegionDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_region_deployed_instances_item import (
-            LoadbalancerRegionDeployedInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_region_deleted_by_user_type_0 import LoadbalancerRegionDeletedByUserType0  # noqa: PLC0415
+        from ..models.loadbalancer_region_deployed_instances_item import LoadbalancerRegionDeployedInstancesItem  # noqa: PLC0415
         from ..models.loadbalancer_region_haproxy import LoadbalancerRegionHaproxy  # noqa: PLC0415
-        from ..models.loadbalancer_region_instance_deployments_item import (
-            LoadbalancerRegionInstanceDeploymentsItem,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_region_last_action_run_type_0 import (
-            LoadbalancerRegionLastActionRunType0,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_region_organization_type_0 import (
-            LoadbalancerRegionOrganizationType0,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_region_instance_deployments_item import LoadbalancerRegionInstanceDeploymentsItem  # noqa: PLC0415
+        from ..models.loadbalancer_region_last_action_run_type_0 import LoadbalancerRegionLastActionRunType0  # noqa: PLC0415
+        from ..models.loadbalancer_region_organization_type_0 import LoadbalancerRegionOrganizationType0  # noqa: PLC0415
         from ..models.loadbalancer_region_workspace_type_0 import LoadbalancerRegionWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
@@ -632,7 +666,7 @@ class LoadbalancerRegion:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_loadbalancer_region_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -641,7 +675,7 @@ class LoadbalancerRegion:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_loadbalancer_region_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -738,24 +772,57 @@ class LoadbalancerRegion:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_loadbalancer_region_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
         tolerations = d.pop("tolerations")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            LoadbalancerRegionEffectiveCriticalityType1
+            | LoadbalancerRegionEffectiveCriticalityType2Type1
+            | LoadbalancerRegionEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_loadbalancer_region_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_loadbalancer_region_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_loadbalancer_region_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LoadbalancerRegionEffectiveCriticalityType1
+                | LoadbalancerRegionEffectiveCriticalityType2Type1
+                | LoadbalancerRegionEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -868,11 +935,11 @@ class LoadbalancerRegion:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: LoadbalancerRegionProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_loadbalancer_region_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -897,11 +964,11 @@ class LoadbalancerRegion:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: LoadbalancerRegionKindEnum | Unset
+        kind: LoadbalancerRegionKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_loadbalancer_region_kind_enum(_kind)
+            kind = check_loadbalancer_region_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -931,7 +998,15 @@ class LoadbalancerRegion:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            LoadbalancerRegionCriticalityType1
+            | LoadbalancerRegionCriticalityType2Type1
+            | LoadbalancerRegionCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -939,20 +1014,35 @@ class LoadbalancerRegion:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_loadbalancer_region_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_loadbalancer_region_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_loadbalancer_region_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LoadbalancerRegionCriticalityType1
+                | LoadbalancerRegionCriticalityType2Type1
+                | LoadbalancerRegionCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1010,11 +1100,11 @@ class LoadbalancerRegion:
         region_config = d.pop("region_config", UNSET)
 
         _external_traffic_policy = d.pop("external_traffic_policy", UNSET)
-        external_traffic_policy: ExternalTrafficPolicyEnum | Unset
+        external_traffic_policy: LoadbalancerRegionExternalTrafficPolicy | Unset
         if isinstance(_external_traffic_policy, Unset):
             external_traffic_policy = UNSET
         else:
-            external_traffic_policy = check_external_traffic_policy_enum(_external_traffic_policy)
+            external_traffic_policy = check_loadbalancer_region_external_traffic_policy(_external_traffic_policy)
 
         loadbalancer_region = cls(
             id=id,

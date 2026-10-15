@@ -8,11 +8,30 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.condition_severity_enum import ConditionSeverityEnum, check_condition_severity_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.patched_condition_catalog_detail_request_criticality_type_1 import (
+    PatchedConditionCatalogDetailRequestCriticalityType1,
+    check_patched_condition_catalog_detail_request_criticality_type_1,
+)
+from ..models.patched_condition_catalog_detail_request_criticality_type_2_type_1 import (
+    PatchedConditionCatalogDetailRequestCriticalityType2Type1,
+    check_patched_condition_catalog_detail_request_criticality_type_2_type_1,
+)
+from ..models.patched_condition_catalog_detail_request_criticality_type_3_type_1 import (
+    PatchedConditionCatalogDetailRequestCriticalityType3Type1,
+    check_patched_condition_catalog_detail_request_criticality_type_3_type_1,
+)
+from ..models.patched_condition_catalog_detail_request_kind import (
+    PatchedConditionCatalogDetailRequestKind,
+    check_patched_condition_catalog_detail_request_kind,
+)
+from ..models.patched_condition_catalog_detail_request_provider import (
+    PatchedConditionCatalogDetailRequestProvider,
+    check_patched_condition_catalog_detail_request_provider,
+)
+from ..models.patched_condition_catalog_detail_request_severity import (
+    PatchedConditionCatalogDetailRequestSeverity,
+    check_patched_condition_catalog_detail_request_severity,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedConditionCatalogDetailRequest")
@@ -29,7 +48,7 @@ class PatchedConditionCatalogDetailRequest:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (PatchedConditionCatalogDetailRequestProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -46,14 +65,16 @@ class PatchedConditionCatalogDetailRequest:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+        kind (PatchedConditionCatalogDetailRequestKind | Unset): * `generic` - Generic
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
             the condition will not be applied.
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | PatchedConditionCatalogDetailRequestCriticalityType1 |
+            PatchedConditionCatalogDetailRequestCriticalityType2Type1 |
+            PatchedConditionCatalogDetailRequestCriticalityType3Type1 | Unset): Criticality level. Null = inherit from
+            workspace, then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -64,7 +85,7 @@ class PatchedConditionCatalogDetailRequest:
         slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-        severity (ConditionSeverityEnum | Unset): * `info` - Info
+        severity (PatchedConditionCatalogDetailRequestSeverity | Unset): * `info` - Info
             * `warning` - Warning
             * `critical` - Critical
         is_system (bool | Unset): System conditions are seeded automatically and cannot be modified or deleted.
@@ -76,23 +97,29 @@ class PatchedConditionCatalogDetailRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedConditionCatalogDetailRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: PatchedConditionCatalogDetailRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedConditionCatalogDetailRequestCriticalityType1
+        | PatchedConditionCatalogDetailRequestCriticalityType2Type1
+        | PatchedConditionCatalogDetailRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    severity: ConditionSeverityEnum | Unset = UNSET
+    severity: PatchedConditionCatalogDetailRequestSeverity | Unset = UNSET
     is_system: bool | Unset = UNSET
     description: str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -157,6 +184,8 @@ class PatchedConditionCatalogDetailRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -312,7 +341,9 @@ class PatchedConditionCatalogDetailRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -378,11 +409,11 @@ class PatchedConditionCatalogDetailRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedConditionCatalogDetailRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_condition_catalog_detail_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -407,11 +438,11 @@ class PatchedConditionCatalogDetailRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: PatchedConditionCatalogDetailRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_patched_condition_catalog_detail_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -443,7 +474,15 @@ class PatchedConditionCatalogDetailRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedConditionCatalogDetailRequestCriticalityType1
+            | PatchedConditionCatalogDetailRequestCriticalityType2Type1
+            | PatchedConditionCatalogDetailRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -451,20 +490,39 @@ class PatchedConditionCatalogDetailRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_condition_catalog_detail_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_condition_catalog_detail_request_criticality_type_2_type_1(
+                    data
+                )
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_condition_catalog_detail_request_criticality_type_3_type_1(
+                    data
+                )
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedConditionCatalogDetailRequestCriticalityType1
+                | PatchedConditionCatalogDetailRequestCriticalityType2Type1
+                | PatchedConditionCatalogDetailRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -500,11 +558,11 @@ class PatchedConditionCatalogDetailRequest:
         sla_availability = d.pop("sla_availability", UNSET)
 
         _severity = d.pop("severity", UNSET)
-        severity: ConditionSeverityEnum | Unset
+        severity: PatchedConditionCatalogDetailRequestSeverity | Unset
         if isinstance(_severity, Unset):
             severity = UNSET
         else:
-            severity = check_condition_severity_enum(_severity)
+            severity = check_patched_condition_catalog_detail_request_severity(_severity)
 
         is_system = d.pop("is_system", UNSET)
 

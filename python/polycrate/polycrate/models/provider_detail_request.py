@@ -8,10 +8,99 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.pop_provider_kind_enum import PopProviderKindEnum, check_pop_provider_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.provider_detail_request_api_public_docs import (
+    ProviderDetailRequestApiPublicDocs,
+    check_provider_detail_request_api_public_docs,
+)
+from ..models.provider_detail_request_billing_model import (
+    ProviderDetailRequestBillingModel,
+    check_provider_detail_request_billing_model,
+)
+from ..models.provider_detail_request_block_storage_status import (
+    ProviderDetailRequestBlockStorageStatus,
+    check_provider_detail_request_block_storage_status,
+)
+from ..models.provider_detail_request_bsi_grundschutz_status import (
+    ProviderDetailRequestBsiGrundschutzStatus,
+    check_provider_detail_request_bsi_grundschutz_status,
+)
+from ..models.provider_detail_request_c5_status import (
+    ProviderDetailRequestC5Status,
+    check_provider_detail_request_c5_status,
+)
+from ..models.provider_detail_request_cloud_init import (
+    ProviderDetailRequestCloudInit,
+    check_provider_detail_request_cloud_init,
+)
+from ..models.provider_detail_request_criticality_type_1 import (
+    ProviderDetailRequestCriticalityType1,
+    check_provider_detail_request_criticality_type_1,
+)
+from ..models.provider_detail_request_criticality_type_2_type_1 import (
+    ProviderDetailRequestCriticalityType2Type1,
+    check_provider_detail_request_criticality_type_2_type_1,
+)
+from ..models.provider_detail_request_criticality_type_3_type_1 import (
+    ProviderDetailRequestCriticalityType3Type1,
+    check_provider_detail_request_criticality_type_3_type_1,
+)
+from ..models.provider_detail_request_custom_images import (
+    ProviderDetailRequestCustomImages,
+    check_provider_detail_request_custom_images,
+)
+from ..models.provider_detail_request_dedicated_available import (
+    ProviderDetailRequestDedicatedAvailable,
+    check_provider_detail_request_dedicated_available,
+)
+from ..models.provider_detail_request_iso_27001_status import (
+    ProviderDetailRequestIso27001Status,
+    check_provider_detail_request_iso_27001_status,
+)
+from ..models.provider_detail_request_kind import ProviderDetailRequestKind, check_provider_detail_request_kind
+from ..models.provider_detail_request_maintenance_api import (
+    ProviderDetailRequestMaintenanceApi,
+    check_provider_detail_request_maintenance_api,
+)
+from ..models.provider_detail_request_maintenance_scope import (
+    ProviderDetailRequestMaintenanceScope,
+    check_provider_detail_request_maintenance_scope,
+)
+from ..models.provider_detail_request_min_term import (
+    ProviderDetailRequestMinTerm,
+    check_provider_detail_request_min_term,
+)
+from ..models.provider_detail_request_provider import (
+    ProviderDetailRequestProvider,
+    check_provider_detail_request_provider,
+)
+from ..models.provider_detail_request_scoped_api_keys import (
+    ProviderDetailRequestScopedApiKeys,
+    check_provider_detail_request_scoped_api_keys,
+)
+from ..models.provider_detail_request_scs_iaas_status import (
+    ProviderDetailRequestScsIaasStatus,
+    check_provider_detail_request_scs_iaas_status,
+)
+from ..models.provider_detail_request_scs_kaas_status import (
+    ProviderDetailRequestScsKaasStatus,
+    check_provider_detail_request_scs_kaas_status,
+)
+from ..models.provider_detail_request_tenant_segmentation import (
+    ProviderDetailRequestTenantSegmentation,
+    check_provider_detail_request_tenant_segmentation,
+)
+from ..models.provider_detail_request_unified_api_across_locations import (
+    ProviderDetailRequestUnifiedApiAcrossLocations,
+    check_provider_detail_request_unified_api_across_locations,
+)
+from ..models.provider_detail_request_vm_available import (
+    ProviderDetailRequestVmAvailable,
+    check_provider_detail_request_vm_available,
+)
+from ..models.provider_detail_request_volume_discount import (
+    ProviderDetailRequestVolumeDiscount,
+    check_provider_detail_request_volume_discount,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ProviderDetailRequest")
@@ -32,7 +121,7 @@ class ProviderDetailRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (ProviderDetailRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -49,7 +138,9 @@ class ProviderDetailRequest:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (PopProviderKindEnum | Unset): * `infrastructure` - Infrastructure
+            kind (ProviderDetailRequestKind | Unset): Type of provider (infrastructure, hardware, software)
+
+                * `infrastructure` - Infrastructure
                 * `hardware` - Hardware
                 * `software` - Software
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -57,8 +148,9 @@ class ProviderDetailRequest:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | ProviderDetailRequestCriticalityType1 | ProviderDetailRequestCriticalityType2Type1 |
+                ProviderDetailRequestCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then org.
+                Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -87,6 +179,121 @@ class ProviderDetailRequest:
             asn (Any | Unset): List of AS Numbers, e.g. [{"name": "Default", "value": "AS24940"}]
             urls (Any | Unset): List of named URLs, e.g. [{"name": "Support Portal", "url": "https://..."}]
             certifications (Any | Unset): List of certifications held by this provider (e.g. ISO27001, TISAX, SOC2)
+            iso27001_status (ProviderDetailRequestIso27001Status | Unset): ISO 27001 status for this provider.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            c5_status (ProviderDetailRequestC5Status | Unset): BSI C5 status for this provider.
+
+                * `none` - None
+                * `planned` - Planned
+                * `typ1` - Type 1
+                * `typ2` - Type 2
+            bsi_grundschutz_status (ProviderDetailRequestBsiGrundschutzStatus | Unset): BSI IT-Grundschutz status for this
+                provider.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            scs_iaas_status (ProviderDetailRequestScsIaasStatus | Unset): SCS-compatible IaaS status. Public chip only when
+                compatible.
+
+                * `none` - None
+                * `compatible` - Compatible
+                * `listed_not_certified` - Listed, not certified
+            scs_kaas_status (ProviderDetailRequestScsKaasStatus | Unset): SCS-compatible KaaS status. Not the public SCS
+                chip.
+
+                * `none` - None
+                * `compatible` - Compatible
+                * `listed_not_certified` - Listed, not certified
+            unified_api_across_locations (ProviderDetailRequestUnifiedApiAcrossLocations | Unset): Whether the same API
+                applies across this provider's locations.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            vm_available (ProviderDetailRequestVmAvailable | Unset): VM availability.
+
+                * `yes` - Yes
+                * `no` - No
+                * `planned` - Planned
+            dedicated_available (ProviderDetailRequestDedicatedAvailable | Unset): Dedicated server availability.
+
+                * `yes` - Yes
+                * `no` - No
+                * `planned` - Planned
+            cloud_init (ProviderDetailRequestCloudInit | Unset): cloud-init support.
+
+                * `yes` - Yes
+                * `no` - No
+                * `planned` - Planned
+            custom_images (ProviderDetailRequestCustomImages | Unset): Custom image support.
+
+                * `yes` - Yes
+                * `no` - No
+                * `planned` - Planned
+            api_public_docs (ProviderDetailRequestApiPublicDocs | Unset): Public API documentation is available.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            tenant_segmentation (ProviderDetailRequestTenantSegmentation | Unset): Tenant segmentation is available.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            scoped_api_keys (ProviderDetailRequestScopedApiKeys | Unset): Scoped API keys are available.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            maintenance_api (ProviderDetailRequestMaintenanceApi | Unset): Maintenance can be read via API.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            block_storage_status (ProviderDetailRequestBlockStorageStatus | Unset): Block storage is available.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            maintenance_scope (ProviderDetailRequestMaintenanceScope | Unset): Maintenance scope.
+
+                * `system` - System
+                * `object` - Object
+                * `both` - Both
+                * `unknown` - Unknown
+            billing_model (ProviderDetailRequestBillingModel | Unset): Billing model. Not a price.
+
+                * `monthly` - Monthly
+                * `usage` - Usage
+                * `both` - Both
+            min_term (ProviderDetailRequestMinTerm | Unset): Minimum term. Not a price.
+
+                * `none` - None
+                * `3m` - 3 months
+                * `6m` - 6 months
+                * `12m` - 12 months
+                * `custom` - Custom
+            volume_discount (ProviderDetailRequestVolumeDiscount | Unset): Volume discount is offered. Not a price amount.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            uptime_sla (str | Unset): Short uptime SLA text. Not a price.
+            certification_evidence (Any | Unset): HTTPS evidence URLs, e.g. [{"claim": "iso27001_status", "url":
+                "https://..."}].
     """
 
     name: str | Unset = UNSET
@@ -94,17 +301,23 @@ class ProviderDetailRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: ProviderDetailRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: PopProviderKindEnum | Unset = UNSET
+    kind: ProviderDetailRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | ProviderDetailRequestCriticalityType1
+        | ProviderDetailRequestCriticalityType2Type1
+        | ProviderDetailRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -124,6 +337,27 @@ class ProviderDetailRequest:
     asn: Any | Unset = UNSET
     urls: Any | Unset = UNSET
     certifications: Any | Unset = UNSET
+    iso27001_status: ProviderDetailRequestIso27001Status | Unset = UNSET
+    c5_status: ProviderDetailRequestC5Status | Unset = UNSET
+    bsi_grundschutz_status: ProviderDetailRequestBsiGrundschutzStatus | Unset = UNSET
+    scs_iaas_status: ProviderDetailRequestScsIaasStatus | Unset = UNSET
+    scs_kaas_status: ProviderDetailRequestScsKaasStatus | Unset = UNSET
+    unified_api_across_locations: ProviderDetailRequestUnifiedApiAcrossLocations | Unset = UNSET
+    vm_available: ProviderDetailRequestVmAvailable | Unset = UNSET
+    dedicated_available: ProviderDetailRequestDedicatedAvailable | Unset = UNSET
+    cloud_init: ProviderDetailRequestCloudInit | Unset = UNSET
+    custom_images: ProviderDetailRequestCustomImages | Unset = UNSET
+    api_public_docs: ProviderDetailRequestApiPublicDocs | Unset = UNSET
+    tenant_segmentation: ProviderDetailRequestTenantSegmentation | Unset = UNSET
+    scoped_api_keys: ProviderDetailRequestScopedApiKeys | Unset = UNSET
+    maintenance_api: ProviderDetailRequestMaintenanceApi | Unset = UNSET
+    block_storage_status: ProviderDetailRequestBlockStorageStatus | Unset = UNSET
+    maintenance_scope: ProviderDetailRequestMaintenanceScope | Unset = UNSET
+    billing_model: ProviderDetailRequestBillingModel | Unset = UNSET
+    min_term: ProviderDetailRequestMinTerm | Unset = UNSET
+    volume_discount: ProviderDetailRequestVolumeDiscount | Unset = UNSET
+    uptime_sla: str | Unset = UNSET
+    certification_evidence: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -186,6 +420,8 @@ class ProviderDetailRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -275,6 +511,86 @@ class ProviderDetailRequest:
 
         certifications = self.certifications
 
+        iso27001_status: str | Unset = UNSET
+        if not isinstance(self.iso27001_status, Unset):
+            iso27001_status = self.iso27001_status
+
+        c5_status: str | Unset = UNSET
+        if not isinstance(self.c5_status, Unset):
+            c5_status = self.c5_status
+
+        bsi_grundschutz_status: str | Unset = UNSET
+        if not isinstance(self.bsi_grundschutz_status, Unset):
+            bsi_grundschutz_status = self.bsi_grundschutz_status
+
+        scs_iaas_status: str | Unset = UNSET
+        if not isinstance(self.scs_iaas_status, Unset):
+            scs_iaas_status = self.scs_iaas_status
+
+        scs_kaas_status: str | Unset = UNSET
+        if not isinstance(self.scs_kaas_status, Unset):
+            scs_kaas_status = self.scs_kaas_status
+
+        unified_api_across_locations: str | Unset = UNSET
+        if not isinstance(self.unified_api_across_locations, Unset):
+            unified_api_across_locations = self.unified_api_across_locations
+
+        vm_available: str | Unset = UNSET
+        if not isinstance(self.vm_available, Unset):
+            vm_available = self.vm_available
+
+        dedicated_available: str | Unset = UNSET
+        if not isinstance(self.dedicated_available, Unset):
+            dedicated_available = self.dedicated_available
+
+        cloud_init: str | Unset = UNSET
+        if not isinstance(self.cloud_init, Unset):
+            cloud_init = self.cloud_init
+
+        custom_images: str | Unset = UNSET
+        if not isinstance(self.custom_images, Unset):
+            custom_images = self.custom_images
+
+        api_public_docs: str | Unset = UNSET
+        if not isinstance(self.api_public_docs, Unset):
+            api_public_docs = self.api_public_docs
+
+        tenant_segmentation: str | Unset = UNSET
+        if not isinstance(self.tenant_segmentation, Unset):
+            tenant_segmentation = self.tenant_segmentation
+
+        scoped_api_keys: str | Unset = UNSET
+        if not isinstance(self.scoped_api_keys, Unset):
+            scoped_api_keys = self.scoped_api_keys
+
+        maintenance_api: str | Unset = UNSET
+        if not isinstance(self.maintenance_api, Unset):
+            maintenance_api = self.maintenance_api
+
+        block_storage_status: str | Unset = UNSET
+        if not isinstance(self.block_storage_status, Unset):
+            block_storage_status = self.block_storage_status
+
+        maintenance_scope: str | Unset = UNSET
+        if not isinstance(self.maintenance_scope, Unset):
+            maintenance_scope = self.maintenance_scope
+
+        billing_model: str | Unset = UNSET
+        if not isinstance(self.billing_model, Unset):
+            billing_model = self.billing_model
+
+        min_term: str | Unset = UNSET
+        if not isinstance(self.min_term, Unset):
+            min_term = self.min_term
+
+        volume_discount: str | Unset = UNSET
+        if not isinstance(self.volume_discount, Unset):
+            volume_discount = self.volume_discount
+
+        uptime_sla = self.uptime_sla
+
+        certification_evidence = self.certification_evidence
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -348,6 +664,48 @@ class ProviderDetailRequest:
             field_dict["urls"] = urls
         if certifications is not UNSET:
             field_dict["certifications"] = certifications
+        if iso27001_status is not UNSET:
+            field_dict["iso27001_status"] = iso27001_status
+        if c5_status is not UNSET:
+            field_dict["c5_status"] = c5_status
+        if bsi_grundschutz_status is not UNSET:
+            field_dict["bsi_grundschutz_status"] = bsi_grundschutz_status
+        if scs_iaas_status is not UNSET:
+            field_dict["scs_iaas_status"] = scs_iaas_status
+        if scs_kaas_status is not UNSET:
+            field_dict["scs_kaas_status"] = scs_kaas_status
+        if unified_api_across_locations is not UNSET:
+            field_dict["unified_api_across_locations"] = unified_api_across_locations
+        if vm_available is not UNSET:
+            field_dict["vm_available"] = vm_available
+        if dedicated_available is not UNSET:
+            field_dict["dedicated_available"] = dedicated_available
+        if cloud_init is not UNSET:
+            field_dict["cloud_init"] = cloud_init
+        if custom_images is not UNSET:
+            field_dict["custom_images"] = custom_images
+        if api_public_docs is not UNSET:
+            field_dict["api_public_docs"] = api_public_docs
+        if tenant_segmentation is not UNSET:
+            field_dict["tenant_segmentation"] = tenant_segmentation
+        if scoped_api_keys is not UNSET:
+            field_dict["scoped_api_keys"] = scoped_api_keys
+        if maintenance_api is not UNSET:
+            field_dict["maintenance_api"] = maintenance_api
+        if block_storage_status is not UNSET:
+            field_dict["block_storage_status"] = block_storage_status
+        if maintenance_scope is not UNSET:
+            field_dict["maintenance_scope"] = maintenance_scope
+        if billing_model is not UNSET:
+            field_dict["billing_model"] = billing_model
+        if min_term is not UNSET:
+            field_dict["min_term"] = min_term
+        if volume_discount is not UNSET:
+            field_dict["volume_discount"] = volume_discount
+        if uptime_sla is not UNSET:
+            field_dict["uptime_sla"] = uptime_sla
+        if certification_evidence is not UNSET:
+            field_dict["certification_evidence"] = certification_evidence
 
         return field_dict
 
@@ -415,7 +773,9 @@ class ProviderDetailRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -512,6 +872,71 @@ class ProviderDetailRequest:
         if not isinstance(self.certifications, Unset):
             files.append(("certifications", (None, str(self.certifications).encode(), "text/plain")))
 
+        if not isinstance(self.iso27001_status, Unset):
+            files.append(("iso27001_status", (None, str(self.iso27001_status).encode(), "text/plain")))
+
+        if not isinstance(self.c5_status, Unset):
+            files.append(("c5_status", (None, str(self.c5_status).encode(), "text/plain")))
+
+        if not isinstance(self.bsi_grundschutz_status, Unset):
+            files.append(("bsi_grundschutz_status", (None, str(self.bsi_grundschutz_status).encode(), "text/plain")))
+
+        if not isinstance(self.scs_iaas_status, Unset):
+            files.append(("scs_iaas_status", (None, str(self.scs_iaas_status).encode(), "text/plain")))
+
+        if not isinstance(self.scs_kaas_status, Unset):
+            files.append(("scs_kaas_status", (None, str(self.scs_kaas_status).encode(), "text/plain")))
+
+        if not isinstance(self.unified_api_across_locations, Unset):
+            files.append(
+                ("unified_api_across_locations", (None, str(self.unified_api_across_locations).encode(), "text/plain"))
+            )
+
+        if not isinstance(self.vm_available, Unset):
+            files.append(("vm_available", (None, str(self.vm_available).encode(), "text/plain")))
+
+        if not isinstance(self.dedicated_available, Unset):
+            files.append(("dedicated_available", (None, str(self.dedicated_available).encode(), "text/plain")))
+
+        if not isinstance(self.cloud_init, Unset):
+            files.append(("cloud_init", (None, str(self.cloud_init).encode(), "text/plain")))
+
+        if not isinstance(self.custom_images, Unset):
+            files.append(("custom_images", (None, str(self.custom_images).encode(), "text/plain")))
+
+        if not isinstance(self.api_public_docs, Unset):
+            files.append(("api_public_docs", (None, str(self.api_public_docs).encode(), "text/plain")))
+
+        if not isinstance(self.tenant_segmentation, Unset):
+            files.append(("tenant_segmentation", (None, str(self.tenant_segmentation).encode(), "text/plain")))
+
+        if not isinstance(self.scoped_api_keys, Unset):
+            files.append(("scoped_api_keys", (None, str(self.scoped_api_keys).encode(), "text/plain")))
+
+        if not isinstance(self.maintenance_api, Unset):
+            files.append(("maintenance_api", (None, str(self.maintenance_api).encode(), "text/plain")))
+
+        if not isinstance(self.block_storage_status, Unset):
+            files.append(("block_storage_status", (None, str(self.block_storage_status).encode(), "text/plain")))
+
+        if not isinstance(self.maintenance_scope, Unset):
+            files.append(("maintenance_scope", (None, str(self.maintenance_scope).encode(), "text/plain")))
+
+        if not isinstance(self.billing_model, Unset):
+            files.append(("billing_model", (None, str(self.billing_model).encode(), "text/plain")))
+
+        if not isinstance(self.min_term, Unset):
+            files.append(("min_term", (None, str(self.min_term).encode(), "text/plain")))
+
+        if not isinstance(self.volume_discount, Unset):
+            files.append(("volume_discount", (None, str(self.volume_discount).encode(), "text/plain")))
+
+        if not isinstance(self.uptime_sla, Unset):
+            files.append(("uptime_sla", (None, str(self.uptime_sla).encode(), "text/plain")))
+
+        if not isinstance(self.certification_evidence, Unset):
+            files.append(("certification_evidence", (None, str(self.certification_evidence).encode(), "text/plain")))
+
         for prop_name, prop in self.additional_properties.items():
             files.append((prop_name, (None, str(prop).encode(), "text/plain")))
 
@@ -538,11 +963,11 @@ class ProviderDetailRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: ProviderDetailRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_provider_detail_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -567,11 +992,11 @@ class ProviderDetailRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: PopProviderKindEnum | Unset
+        kind: ProviderDetailRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_pop_provider_kind_enum(_kind)
+            kind = check_provider_detail_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -603,7 +1028,15 @@ class ProviderDetailRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | ProviderDetailRequestCriticalityType1
+            | ProviderDetailRequestCriticalityType2Type1
+            | ProviderDetailRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -611,20 +1044,35 @@ class ProviderDetailRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_provider_detail_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_provider_detail_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_provider_detail_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | ProviderDetailRequestCriticalityType1
+                | ProviderDetailRequestCriticalityType2Type1
+                | ProviderDetailRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -743,6 +1191,145 @@ class ProviderDetailRequest:
 
         certifications = d.pop("certifications", UNSET)
 
+        _iso27001_status = d.pop("iso27001_status", UNSET)
+        iso27001_status: ProviderDetailRequestIso27001Status | Unset
+        if isinstance(_iso27001_status, Unset):
+            iso27001_status = UNSET
+        else:
+            iso27001_status = check_provider_detail_request_iso_27001_status(_iso27001_status)
+
+        _c5_status = d.pop("c5_status", UNSET)
+        c5_status: ProviderDetailRequestC5Status | Unset
+        if isinstance(_c5_status, Unset):
+            c5_status = UNSET
+        else:
+            c5_status = check_provider_detail_request_c5_status(_c5_status)
+
+        _bsi_grundschutz_status = d.pop("bsi_grundschutz_status", UNSET)
+        bsi_grundschutz_status: ProviderDetailRequestBsiGrundschutzStatus | Unset
+        if isinstance(_bsi_grundschutz_status, Unset):
+            bsi_grundschutz_status = UNSET
+        else:
+            bsi_grundschutz_status = check_provider_detail_request_bsi_grundschutz_status(_bsi_grundschutz_status)
+
+        _scs_iaas_status = d.pop("scs_iaas_status", UNSET)
+        scs_iaas_status: ProviderDetailRequestScsIaasStatus | Unset
+        if isinstance(_scs_iaas_status, Unset):
+            scs_iaas_status = UNSET
+        else:
+            scs_iaas_status = check_provider_detail_request_scs_iaas_status(_scs_iaas_status)
+
+        _scs_kaas_status = d.pop("scs_kaas_status", UNSET)
+        scs_kaas_status: ProviderDetailRequestScsKaasStatus | Unset
+        if isinstance(_scs_kaas_status, Unset):
+            scs_kaas_status = UNSET
+        else:
+            scs_kaas_status = check_provider_detail_request_scs_kaas_status(_scs_kaas_status)
+
+        _unified_api_across_locations = d.pop("unified_api_across_locations", UNSET)
+        unified_api_across_locations: ProviderDetailRequestUnifiedApiAcrossLocations | Unset
+        if isinstance(_unified_api_across_locations, Unset):
+            unified_api_across_locations = UNSET
+        else:
+            unified_api_across_locations = check_provider_detail_request_unified_api_across_locations(
+                _unified_api_across_locations
+            )
+
+        _vm_available = d.pop("vm_available", UNSET)
+        vm_available: ProviderDetailRequestVmAvailable | Unset
+        if isinstance(_vm_available, Unset):
+            vm_available = UNSET
+        else:
+            vm_available = check_provider_detail_request_vm_available(_vm_available)
+
+        _dedicated_available = d.pop("dedicated_available", UNSET)
+        dedicated_available: ProviderDetailRequestDedicatedAvailable | Unset
+        if isinstance(_dedicated_available, Unset):
+            dedicated_available = UNSET
+        else:
+            dedicated_available = check_provider_detail_request_dedicated_available(_dedicated_available)
+
+        _cloud_init = d.pop("cloud_init", UNSET)
+        cloud_init: ProviderDetailRequestCloudInit | Unset
+        if isinstance(_cloud_init, Unset):
+            cloud_init = UNSET
+        else:
+            cloud_init = check_provider_detail_request_cloud_init(_cloud_init)
+
+        _custom_images = d.pop("custom_images", UNSET)
+        custom_images: ProviderDetailRequestCustomImages | Unset
+        if isinstance(_custom_images, Unset):
+            custom_images = UNSET
+        else:
+            custom_images = check_provider_detail_request_custom_images(_custom_images)
+
+        _api_public_docs = d.pop("api_public_docs", UNSET)
+        api_public_docs: ProviderDetailRequestApiPublicDocs | Unset
+        if isinstance(_api_public_docs, Unset):
+            api_public_docs = UNSET
+        else:
+            api_public_docs = check_provider_detail_request_api_public_docs(_api_public_docs)
+
+        _tenant_segmentation = d.pop("tenant_segmentation", UNSET)
+        tenant_segmentation: ProviderDetailRequestTenantSegmentation | Unset
+        if isinstance(_tenant_segmentation, Unset):
+            tenant_segmentation = UNSET
+        else:
+            tenant_segmentation = check_provider_detail_request_tenant_segmentation(_tenant_segmentation)
+
+        _scoped_api_keys = d.pop("scoped_api_keys", UNSET)
+        scoped_api_keys: ProviderDetailRequestScopedApiKeys | Unset
+        if isinstance(_scoped_api_keys, Unset):
+            scoped_api_keys = UNSET
+        else:
+            scoped_api_keys = check_provider_detail_request_scoped_api_keys(_scoped_api_keys)
+
+        _maintenance_api = d.pop("maintenance_api", UNSET)
+        maintenance_api: ProviderDetailRequestMaintenanceApi | Unset
+        if isinstance(_maintenance_api, Unset):
+            maintenance_api = UNSET
+        else:
+            maintenance_api = check_provider_detail_request_maintenance_api(_maintenance_api)
+
+        _block_storage_status = d.pop("block_storage_status", UNSET)
+        block_storage_status: ProviderDetailRequestBlockStorageStatus | Unset
+        if isinstance(_block_storage_status, Unset):
+            block_storage_status = UNSET
+        else:
+            block_storage_status = check_provider_detail_request_block_storage_status(_block_storage_status)
+
+        _maintenance_scope = d.pop("maintenance_scope", UNSET)
+        maintenance_scope: ProviderDetailRequestMaintenanceScope | Unset
+        if isinstance(_maintenance_scope, Unset):
+            maintenance_scope = UNSET
+        else:
+            maintenance_scope = check_provider_detail_request_maintenance_scope(_maintenance_scope)
+
+        _billing_model = d.pop("billing_model", UNSET)
+        billing_model: ProviderDetailRequestBillingModel | Unset
+        if isinstance(_billing_model, Unset):
+            billing_model = UNSET
+        else:
+            billing_model = check_provider_detail_request_billing_model(_billing_model)
+
+        _min_term = d.pop("min_term", UNSET)
+        min_term: ProviderDetailRequestMinTerm | Unset
+        if isinstance(_min_term, Unset):
+            min_term = UNSET
+        else:
+            min_term = check_provider_detail_request_min_term(_min_term)
+
+        _volume_discount = d.pop("volume_discount", UNSET)
+        volume_discount: ProviderDetailRequestVolumeDiscount | Unset
+        if isinstance(_volume_discount, Unset):
+            volume_discount = UNSET
+        else:
+            volume_discount = check_provider_detail_request_volume_discount(_volume_discount)
+
+        uptime_sla = d.pop("uptime_sla", UNSET)
+
+        certification_evidence = d.pop("certification_evidence", UNSET)
+
         provider_detail_request = cls(
             name=name,
             display_name=display_name,
@@ -779,6 +1366,27 @@ class ProviderDetailRequest:
             asn=asn,
             urls=urls,
             certifications=certifications,
+            iso27001_status=iso27001_status,
+            c5_status=c5_status,
+            bsi_grundschutz_status=bsi_grundschutz_status,
+            scs_iaas_status=scs_iaas_status,
+            scs_kaas_status=scs_kaas_status,
+            unified_api_across_locations=unified_api_across_locations,
+            vm_available=vm_available,
+            dedicated_available=dedicated_available,
+            cloud_init=cloud_init,
+            custom_images=custom_images,
+            api_public_docs=api_public_docs,
+            tenant_segmentation=tenant_segmentation,
+            scoped_api_keys=scoped_api_keys,
+            maintenance_api=maintenance_api,
+            block_storage_status=block_storage_status,
+            maintenance_scope=maintenance_scope,
+            billing_model=billing_model,
+            min_term=min_term,
+            volume_discount=volume_discount,
+            uptime_sla=uptime_sla,
+            certification_evidence=certification_evidence,
         )
 
         provider_detail_request.additional_properties = d

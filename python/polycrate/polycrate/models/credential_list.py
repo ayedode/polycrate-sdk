@@ -7,10 +7,21 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.credential_kind_enum import CredentialKindEnum, check_credential_kind_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.credential_list_effective_criticality_type_1 import (
+    CredentialListEffectiveCriticalityType1,
+    check_credential_list_effective_criticality_type_1,
+)
+from ..models.credential_list_effective_criticality_type_2_type_1 import (
+    CredentialListEffectiveCriticalityType2Type1,
+    check_credential_list_effective_criticality_type_2_type_1,
+)
+from ..models.credential_list_effective_criticality_type_3_type_1 import (
+    CredentialListEffectiveCriticalityType3Type1,
+    check_credential_list_effective_criticality_type_3_type_1,
+)
+from ..models.credential_list_kind import CredentialListKind, check_credential_list_kind
+from ..models.credential_list_provider import CredentialListProvider, check_credential_list_provider
+from ..models.credential_list_state import CredentialListState, check_credential_list_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -31,7 +42,7 @@ class CredentialList:
     Attributes:
         id (UUID):
         name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-        state (LastStateEnum): * `OK` - Ok
+        state (CredentialListState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -51,10 +62,11 @@ class CredentialList:
         created (CredentialListCreated):
         archived (bool): Archived objects are not shown in the UI and are not managed by the API.
         reconciliation_running (bool):
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (CredentialListEffectiveCriticalityType1 | CredentialListEffectiveCriticalityType2Type1 |
+            CredentialListEffectiveCriticalityType3Type1 | None):
         url (str): Gibt die absolute URL zum Object zurück.
         user (CredentialListUserType0 | None):
-        kind (CredentialKindEnum | Unset): * `api-key` - API Key
+        kind (CredentialListKind | Unset): * `api-key` - API Key
             * `kubeconfig` - Kubeconfig
             * `s3-credential` - S3 Credential
             * `ssh-keys` - SSH Keys
@@ -75,7 +87,7 @@ class CredentialList:
             * `org_api_key` - Org API Key
             * `controlplane-token` - Controlplane Token
             * `provider-account` - Provider Account
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (CredentialListProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -92,7 +104,7 @@ class CredentialList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: CredentialListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -103,11 +115,16 @@ class CredentialList:
     created: CredentialListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        CredentialListEffectiveCriticalityType1
+        | CredentialListEffectiveCriticalityType2Type1
+        | CredentialListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     user: CredentialListUserType0 | None
-    kind: CredentialKindEnum | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    kind: CredentialListKind | Unset = UNSET
+    provider: CredentialListProvider | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -144,6 +161,10 @@ class CredentialList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -195,9 +216,7 @@ class CredentialList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential_list_active_condition_instances_item import (
-            CredentialListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.credential_list_active_condition_instances_item import CredentialListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.credential_list_created import CredentialListCreated  # noqa: PLC0415
         from ..models.credential_list_user_type_0 import CredentialListUserType0  # noqa: PLC0415
         from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
@@ -208,7 +227,7 @@ class CredentialList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_credential_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -237,18 +256,47 @@ class CredentialList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            CredentialListEffectiveCriticalityType1
+            | CredentialListEffectiveCriticalityType2Type1
+            | CredentialListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_credential_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_credential_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_credential_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CredentialListEffectiveCriticalityType1
+                | CredentialListEffectiveCriticalityType2Type1
+                | CredentialListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -270,18 +318,18 @@ class CredentialList:
         user = _parse_user(d.pop("user"))
 
         _kind = d.pop("kind", UNSET)
-        kind: CredentialKindEnum | Unset
+        kind: CredentialListKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_credential_kind_enum(_kind)
+            kind = check_credential_list_kind(_kind)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: CredentialListProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_credential_list_provider(_provider)
 
         credential_list = cls(
             id=id,

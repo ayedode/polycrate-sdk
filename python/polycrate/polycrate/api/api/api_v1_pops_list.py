@@ -7,25 +7,30 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
+from ...models.api_v1_pops_list_api_type import ApiV1PopsListApiType
+from ...models.api_v1_pops_list_bgp_status import ApiV1PopsListBgpStatus
+from ...models.api_v1_pops_list_c5_status import ApiV1PopsListC5Status
 from ...models.api_v1_pops_list_created_by_component import (
     ApiV1PopsListCreatedByComponent,
 )
+from ...models.api_v1_pops_list_en_50600_status import (
+    ApiV1PopsListEn50600Status,
+)
+from ...models.api_v1_pops_list_ipv_6_status import ApiV1PopsListIpv6Status
+from ...models.api_v1_pops_list_iso_27001_status import (
+    ApiV1PopsListIso27001Status,
+)
 from ...models.api_v1_pops_list_kind import ApiV1PopsListKind
 from ...models.api_v1_pops_list_scope import ApiV1PopsListScope
+from ...models.api_v1_pops_list_scs_iaas_status import (
+    ApiV1PopsListScsIaasStatus,
+)
+from ...models.api_v1_pops_list_scs_kaas_status import (
+    ApiV1PopsListScsKaasStatus,
+)
 from ...models.api_v1_pops_list_state import ApiV1PopsListState
-from ...models.api_v1_pops_list_validation_error import ApiV1PopsListValidationError
-from ...models.error_response_401 import ErrorResponse401
-from ...models.error_response_403 import ErrorResponse403
-from ...models.error_response_404 import ErrorResponse404
-from ...models.error_response_405 import ErrorResponse405
-from ...models.error_response_406 import ErrorResponse406
-from ...models.error_response_409 import ErrorResponse409
-from ...models.error_response_410 import ErrorResponse410
-from ...models.error_response_415 import ErrorResponse415
-from ...models.error_response_500 import ErrorResponse500
-from ...models.error_response_502 import ErrorResponse502
-from ...models.paginated_pop_list_list import PaginatedPopListList
-from ...models.parse_error_response import ParseErrorResponse
+from ...models.api_v1_pops_list_tier import ApiV1PopsListTier
+from ...models.paginated_pop_catalog_list import PaginatedPopCatalogList
 from ...types import UNSET, Response, Unset
 
 
@@ -33,10 +38,18 @@ def _get_kwargs(
     *,
     affected_incidents: UUID | Unset = UNSET,
     affected_maintenances: UUID | Unset = UNSET,
+    api_type: ApiV1PopsListApiType | Unset = UNSET,
     archived: bool | Unset = UNSET,
+    bgp_status: ApiV1PopsListBgpStatus | Unset = UNSET,
+    c5_status: ApiV1PopsListC5Status | Unset = UNSET,
+    city: str | Unset = UNSET,
+    country: str | Unset = UNSET,
     created_at: datetime.datetime | Unset = UNSET,
     created_by_component: ApiV1PopsListCreatedByComponent | Unset = UNSET,
     debug_mode: bool | Unset = UNSET,
+    en50600_status: ApiV1PopsListEn50600Status | Unset = UNSET,
+    ipv6_status: ApiV1PopsListIpv6Status | Unset = UNSET,
+    iso27001_status: ApiV1PopsListIso27001Status | Unset = UNSET,
     kind: ApiV1PopsListKind | Unset = UNSET,
     name: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -45,8 +58,12 @@ def _get_kwargs(
     provider_entity: UUID | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     scope: ApiV1PopsListScope | Unset = UNSET,
+    scs_iaas_status: ApiV1PopsListScsIaasStatus | Unset = UNSET,
+    scs_kaas_status: ApiV1PopsListScsKaasStatus | Unset = UNSET,
     search: str | Unset = UNSET,
     state: ApiV1PopsListState | Unset = UNSET,
+    technologies: str | Unset = UNSET,
+    tier: ApiV1PopsListTier | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
 ) -> dict[str, Any]:
 
@@ -62,7 +79,29 @@ def _get_kwargs(
         json_affected_maintenances = str(affected_maintenances)
     params["affected_maintenances"] = json_affected_maintenances
 
+    json_api_type: str | Unset = UNSET
+    if not isinstance(api_type, Unset):
+        json_api_type = api_type
+
+    params["api_type"] = json_api_type
+
     params["archived"] = archived
+
+    json_bgp_status: str | Unset = UNSET
+    if not isinstance(bgp_status, Unset):
+        json_bgp_status = bgp_status
+
+    params["bgp_status"] = json_bgp_status
+
+    json_c5_status: str | Unset = UNSET
+    if not isinstance(c5_status, Unset):
+        json_c5_status = c5_status
+
+    params["c5_status"] = json_c5_status
+
+    params["city"] = city
+
+    params["country"] = country
 
     json_created_at: str | Unset = UNSET
     if not isinstance(created_at, Unset):
@@ -76,6 +115,24 @@ def _get_kwargs(
     params["created_by_component"] = json_created_by_component
 
     params["debug_mode"] = debug_mode
+
+    json_en50600_status: str | Unset = UNSET
+    if not isinstance(en50600_status, Unset):
+        json_en50600_status = en50600_status
+
+    params["en50600_status"] = json_en50600_status
+
+    json_ipv6_status: str | Unset = UNSET
+    if not isinstance(ipv6_status, Unset):
+        json_ipv6_status = ipv6_status
+
+    params["ipv6_status"] = json_ipv6_status
+
+    json_iso27001_status: str | Unset = UNSET
+    if not isinstance(iso27001_status, Unset):
+        json_iso27001_status = iso27001_status
+
+    params["iso27001_status"] = json_iso27001_status
 
     json_kind: str | Unset = UNSET
     if not isinstance(kind, Unset):
@@ -104,6 +161,18 @@ def _get_kwargs(
 
     params["scope"] = json_scope
 
+    json_scs_iaas_status: str | Unset = UNSET
+    if not isinstance(scs_iaas_status, Unset):
+        json_scs_iaas_status = scs_iaas_status
+
+    params["scs_iaas_status"] = json_scs_iaas_status
+
+    json_scs_kaas_status: str | Unset = UNSET
+    if not isinstance(scs_kaas_status, Unset):
+        json_scs_kaas_status = scs_kaas_status
+
+    params["scs_kaas_status"] = json_scs_kaas_status
+
     params["search"] = search
 
     json_state: str | Unset = UNSET
@@ -111,6 +180,14 @@ def _get_kwargs(
         json_state = state
 
     params["state"] = json_state
+
+    params["technologies"] = technologies
+
+    json_tier: str | Unset = UNSET
+    if not isinstance(tier, Unset):
+        json_tier = tier
+
+    params["tier"] = json_tier
 
     json_updated_at: str | Unset = UNSET
     if not isinstance(updated_at, Unset):
@@ -130,99 +207,11 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> (
-    ApiV1PopsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedPopListList
-    | None
-):
+) -> PaginatedPopCatalogList | None:
     if response.status_code == 200:
-        response_200 = PaginatedPopListList.from_dict(response.json())
+        response_200 = PaginatedPopCatalogList.from_dict(response.json())
 
         return response_200
-
-    if response.status_code == 400:
-
-        def _parse_response_400(data: object) -> ApiV1PopsListValidationError | ParseErrorResponse:
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                componentsschemas_api_v1_pops_list_error_response_400_type_0 = ApiV1PopsListValidationError.from_dict(
-                    data
-                )
-
-                return componentsschemas_api_v1_pops_list_error_response_400_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            if not isinstance(data, dict):
-                raise TypeError()
-            componentsschemas_api_v1_pops_list_error_response_400_type_1 = ParseErrorResponse.from_dict(data)
-
-            return componentsschemas_api_v1_pops_list_error_response_400_type_1
-
-        response_400 = _parse_response_400(response.json())
-
-        return response_400
-
-    if response.status_code == 401:
-        response_401 = ErrorResponse401.from_dict(response.json())
-
-        return response_401
-
-    if response.status_code == 403:
-        response_403 = ErrorResponse403.from_dict(response.json())
-
-        return response_403
-
-    if response.status_code == 404:
-        response_404 = ErrorResponse404.from_dict(response.json())
-
-        return response_404
-
-    if response.status_code == 405:
-        response_405 = ErrorResponse405.from_dict(response.json())
-
-        return response_405
-
-    if response.status_code == 406:
-        response_406 = ErrorResponse406.from_dict(response.json())
-
-        return response_406
-
-    if response.status_code == 409:
-        response_409 = ErrorResponse409.from_dict(response.json())
-
-        return response_409
-
-    if response.status_code == 410:
-        response_410 = ErrorResponse410.from_dict(response.json())
-
-        return response_410
-
-    if response.status_code == 415:
-        response_415 = ErrorResponse415.from_dict(response.json())
-
-        return response_415
-
-    if response.status_code == 500:
-        response_500 = ErrorResponse500.from_dict(response.json())
-
-        return response_500
-
-    if response.status_code == 502:
-        response_502 = ErrorResponse502.from_dict(response.json())
-
-        return response_502
 
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
@@ -232,21 +221,7 @@ def _parse_response(
 
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> Response[
-    ApiV1PopsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedPopListList
-]:
+) -> Response[PaginatedPopCatalogList]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -260,10 +235,18 @@ def sync_detailed(
     client: AuthenticatedClient,
     affected_incidents: UUID | Unset = UNSET,
     affected_maintenances: UUID | Unset = UNSET,
+    api_type: ApiV1PopsListApiType | Unset = UNSET,
     archived: bool | Unset = UNSET,
+    bgp_status: ApiV1PopsListBgpStatus | Unset = UNSET,
+    c5_status: ApiV1PopsListC5Status | Unset = UNSET,
+    city: str | Unset = UNSET,
+    country: str | Unset = UNSET,
     created_at: datetime.datetime | Unset = UNSET,
     created_by_component: ApiV1PopsListCreatedByComponent | Unset = UNSET,
     debug_mode: bool | Unset = UNSET,
+    en50600_status: ApiV1PopsListEn50600Status | Unset = UNSET,
+    ipv6_status: ApiV1PopsListIpv6Status | Unset = UNSET,
+    iso27001_status: ApiV1PopsListIso27001Status | Unset = UNSET,
     kind: ApiV1PopsListKind | Unset = UNSET,
     name: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -272,24 +255,14 @@ def sync_detailed(
     provider_entity: UUID | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     scope: ApiV1PopsListScope | Unset = UNSET,
+    scs_iaas_status: ApiV1PopsListScsIaasStatus | Unset = UNSET,
+    scs_kaas_status: ApiV1PopsListScsKaasStatus | Unset = UNSET,
     search: str | Unset = UNSET,
     state: ApiV1PopsListState | Unset = UNSET,
+    technologies: str | Unset = UNSET,
+    tier: ApiV1PopsListTier | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
-) -> Response[
-    ApiV1PopsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedPopListList
-]:
+) -> Response[PaginatedPopCatalogList]:
     """API endpoint that allows points of presence to be viewed or edited.
 
     Admin-only resource (global, not org-scoped).
@@ -298,10 +271,18 @@ def sync_detailed(
     Args:
         affected_incidents (UUID | Unset):
         affected_maintenances (UUID | Unset):
+        api_type (ApiV1PopsListApiType | Unset):
         archived (bool | Unset):
+        bgp_status (ApiV1PopsListBgpStatus | Unset):
+        c5_status (ApiV1PopsListC5Status | Unset):
+        city (str | Unset):
+        country (str | Unset):
         created_at (datetime.datetime | Unset):
         created_by_component (ApiV1PopsListCreatedByComponent | Unset):
         debug_mode (bool | Unset):
+        en50600_status (ApiV1PopsListEn50600Status | Unset):
+        ipv6_status (ApiV1PopsListIpv6Status | Unset):
+        iso27001_status (ApiV1PopsListIso27001Status | Unset):
         kind (ApiV1PopsListKind | Unset):
         name (str | Unset):
         ordering (str | Unset):
@@ -310,8 +291,12 @@ def sync_detailed(
         provider_entity (UUID | Unset):
         reconciliation_running (bool | Unset):
         scope (ApiV1PopsListScope | Unset):
+        scs_iaas_status (ApiV1PopsListScsIaasStatus | Unset):
+        scs_kaas_status (ApiV1PopsListScsKaasStatus | Unset):
         search (str | Unset):
         state (ApiV1PopsListState | Unset):
+        technologies (str | Unset):
+        tier (ApiV1PopsListTier | Unset):
         updated_at (datetime.datetime | Unset):
 
     Raises:
@@ -319,16 +304,24 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ApiV1PopsListValidationError | ParseErrorResponse | ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedPopListList]
+        Response[PaginatedPopCatalogList]
     """
 
     kwargs = _get_kwargs(
         affected_incidents=affected_incidents,
         affected_maintenances=affected_maintenances,
+        api_type=api_type,
         archived=archived,
+        bgp_status=bgp_status,
+        c5_status=c5_status,
+        city=city,
+        country=country,
         created_at=created_at,
         created_by_component=created_by_component,
         debug_mode=debug_mode,
+        en50600_status=en50600_status,
+        ipv6_status=ipv6_status,
+        iso27001_status=iso27001_status,
         kind=kind,
         name=name,
         ordering=ordering,
@@ -337,8 +330,12 @@ def sync_detailed(
         provider_entity=provider_entity,
         reconciliation_running=reconciliation_running,
         scope=scope,
+        scs_iaas_status=scs_iaas_status,
+        scs_kaas_status=scs_kaas_status,
         search=search,
         state=state,
+        technologies=technologies,
+        tier=tier,
         updated_at=updated_at,
     )
 
@@ -354,10 +351,18 @@ def sync(
     client: AuthenticatedClient,
     affected_incidents: UUID | Unset = UNSET,
     affected_maintenances: UUID | Unset = UNSET,
+    api_type: ApiV1PopsListApiType | Unset = UNSET,
     archived: bool | Unset = UNSET,
+    bgp_status: ApiV1PopsListBgpStatus | Unset = UNSET,
+    c5_status: ApiV1PopsListC5Status | Unset = UNSET,
+    city: str | Unset = UNSET,
+    country: str | Unset = UNSET,
     created_at: datetime.datetime | Unset = UNSET,
     created_by_component: ApiV1PopsListCreatedByComponent | Unset = UNSET,
     debug_mode: bool | Unset = UNSET,
+    en50600_status: ApiV1PopsListEn50600Status | Unset = UNSET,
+    ipv6_status: ApiV1PopsListIpv6Status | Unset = UNSET,
+    iso27001_status: ApiV1PopsListIso27001Status | Unset = UNSET,
     kind: ApiV1PopsListKind | Unset = UNSET,
     name: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -366,25 +371,14 @@ def sync(
     provider_entity: UUID | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     scope: ApiV1PopsListScope | Unset = UNSET,
+    scs_iaas_status: ApiV1PopsListScsIaasStatus | Unset = UNSET,
+    scs_kaas_status: ApiV1PopsListScsKaasStatus | Unset = UNSET,
     search: str | Unset = UNSET,
     state: ApiV1PopsListState | Unset = UNSET,
+    technologies: str | Unset = UNSET,
+    tier: ApiV1PopsListTier | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
-) -> (
-    ApiV1PopsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedPopListList
-    | None
-):
+) -> PaginatedPopCatalogList | None:
     """API endpoint that allows points of presence to be viewed or edited.
 
     Admin-only resource (global, not org-scoped).
@@ -393,10 +387,18 @@ def sync(
     Args:
         affected_incidents (UUID | Unset):
         affected_maintenances (UUID | Unset):
+        api_type (ApiV1PopsListApiType | Unset):
         archived (bool | Unset):
+        bgp_status (ApiV1PopsListBgpStatus | Unset):
+        c5_status (ApiV1PopsListC5Status | Unset):
+        city (str | Unset):
+        country (str | Unset):
         created_at (datetime.datetime | Unset):
         created_by_component (ApiV1PopsListCreatedByComponent | Unset):
         debug_mode (bool | Unset):
+        en50600_status (ApiV1PopsListEn50600Status | Unset):
+        ipv6_status (ApiV1PopsListIpv6Status | Unset):
+        iso27001_status (ApiV1PopsListIso27001Status | Unset):
         kind (ApiV1PopsListKind | Unset):
         name (str | Unset):
         ordering (str | Unset):
@@ -405,8 +407,12 @@ def sync(
         provider_entity (UUID | Unset):
         reconciliation_running (bool | Unset):
         scope (ApiV1PopsListScope | Unset):
+        scs_iaas_status (ApiV1PopsListScsIaasStatus | Unset):
+        scs_kaas_status (ApiV1PopsListScsKaasStatus | Unset):
         search (str | Unset):
         state (ApiV1PopsListState | Unset):
+        technologies (str | Unset):
+        tier (ApiV1PopsListTier | Unset):
         updated_at (datetime.datetime | Unset):
 
     Raises:
@@ -414,17 +420,25 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ApiV1PopsListValidationError | ParseErrorResponse | ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedPopListList
+        PaginatedPopCatalogList
     """
 
     return sync_detailed(
         client=client,
         affected_incidents=affected_incidents,
         affected_maintenances=affected_maintenances,
+        api_type=api_type,
         archived=archived,
+        bgp_status=bgp_status,
+        c5_status=c5_status,
+        city=city,
+        country=country,
         created_at=created_at,
         created_by_component=created_by_component,
         debug_mode=debug_mode,
+        en50600_status=en50600_status,
+        ipv6_status=ipv6_status,
+        iso27001_status=iso27001_status,
         kind=kind,
         name=name,
         ordering=ordering,
@@ -433,8 +447,12 @@ def sync(
         provider_entity=provider_entity,
         reconciliation_running=reconciliation_running,
         scope=scope,
+        scs_iaas_status=scs_iaas_status,
+        scs_kaas_status=scs_kaas_status,
         search=search,
         state=state,
+        technologies=technologies,
+        tier=tier,
         updated_at=updated_at,
     ).parsed
 
@@ -444,10 +462,18 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     affected_incidents: UUID | Unset = UNSET,
     affected_maintenances: UUID | Unset = UNSET,
+    api_type: ApiV1PopsListApiType | Unset = UNSET,
     archived: bool | Unset = UNSET,
+    bgp_status: ApiV1PopsListBgpStatus | Unset = UNSET,
+    c5_status: ApiV1PopsListC5Status | Unset = UNSET,
+    city: str | Unset = UNSET,
+    country: str | Unset = UNSET,
     created_at: datetime.datetime | Unset = UNSET,
     created_by_component: ApiV1PopsListCreatedByComponent | Unset = UNSET,
     debug_mode: bool | Unset = UNSET,
+    en50600_status: ApiV1PopsListEn50600Status | Unset = UNSET,
+    ipv6_status: ApiV1PopsListIpv6Status | Unset = UNSET,
+    iso27001_status: ApiV1PopsListIso27001Status | Unset = UNSET,
     kind: ApiV1PopsListKind | Unset = UNSET,
     name: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -456,24 +482,14 @@ async def asyncio_detailed(
     provider_entity: UUID | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     scope: ApiV1PopsListScope | Unset = UNSET,
+    scs_iaas_status: ApiV1PopsListScsIaasStatus | Unset = UNSET,
+    scs_kaas_status: ApiV1PopsListScsKaasStatus | Unset = UNSET,
     search: str | Unset = UNSET,
     state: ApiV1PopsListState | Unset = UNSET,
+    technologies: str | Unset = UNSET,
+    tier: ApiV1PopsListTier | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
-) -> Response[
-    ApiV1PopsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedPopListList
-]:
+) -> Response[PaginatedPopCatalogList]:
     """API endpoint that allows points of presence to be viewed or edited.
 
     Admin-only resource (global, not org-scoped).
@@ -482,10 +498,18 @@ async def asyncio_detailed(
     Args:
         affected_incidents (UUID | Unset):
         affected_maintenances (UUID | Unset):
+        api_type (ApiV1PopsListApiType | Unset):
         archived (bool | Unset):
+        bgp_status (ApiV1PopsListBgpStatus | Unset):
+        c5_status (ApiV1PopsListC5Status | Unset):
+        city (str | Unset):
+        country (str | Unset):
         created_at (datetime.datetime | Unset):
         created_by_component (ApiV1PopsListCreatedByComponent | Unset):
         debug_mode (bool | Unset):
+        en50600_status (ApiV1PopsListEn50600Status | Unset):
+        ipv6_status (ApiV1PopsListIpv6Status | Unset):
+        iso27001_status (ApiV1PopsListIso27001Status | Unset):
         kind (ApiV1PopsListKind | Unset):
         name (str | Unset):
         ordering (str | Unset):
@@ -494,8 +518,12 @@ async def asyncio_detailed(
         provider_entity (UUID | Unset):
         reconciliation_running (bool | Unset):
         scope (ApiV1PopsListScope | Unset):
+        scs_iaas_status (ApiV1PopsListScsIaasStatus | Unset):
+        scs_kaas_status (ApiV1PopsListScsKaasStatus | Unset):
         search (str | Unset):
         state (ApiV1PopsListState | Unset):
+        technologies (str | Unset):
+        tier (ApiV1PopsListTier | Unset):
         updated_at (datetime.datetime | Unset):
 
     Raises:
@@ -503,16 +531,24 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ApiV1PopsListValidationError | ParseErrorResponse | ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedPopListList]
+        Response[PaginatedPopCatalogList]
     """
 
     kwargs = _get_kwargs(
         affected_incidents=affected_incidents,
         affected_maintenances=affected_maintenances,
+        api_type=api_type,
         archived=archived,
+        bgp_status=bgp_status,
+        c5_status=c5_status,
+        city=city,
+        country=country,
         created_at=created_at,
         created_by_component=created_by_component,
         debug_mode=debug_mode,
+        en50600_status=en50600_status,
+        ipv6_status=ipv6_status,
+        iso27001_status=iso27001_status,
         kind=kind,
         name=name,
         ordering=ordering,
@@ -521,8 +557,12 @@ async def asyncio_detailed(
         provider_entity=provider_entity,
         reconciliation_running=reconciliation_running,
         scope=scope,
+        scs_iaas_status=scs_iaas_status,
+        scs_kaas_status=scs_kaas_status,
         search=search,
         state=state,
+        technologies=technologies,
+        tier=tier,
         updated_at=updated_at,
     )
 
@@ -536,10 +576,18 @@ async def asyncio(
     client: AuthenticatedClient,
     affected_incidents: UUID | Unset = UNSET,
     affected_maintenances: UUID | Unset = UNSET,
+    api_type: ApiV1PopsListApiType | Unset = UNSET,
     archived: bool | Unset = UNSET,
+    bgp_status: ApiV1PopsListBgpStatus | Unset = UNSET,
+    c5_status: ApiV1PopsListC5Status | Unset = UNSET,
+    city: str | Unset = UNSET,
+    country: str | Unset = UNSET,
     created_at: datetime.datetime | Unset = UNSET,
     created_by_component: ApiV1PopsListCreatedByComponent | Unset = UNSET,
     debug_mode: bool | Unset = UNSET,
+    en50600_status: ApiV1PopsListEn50600Status | Unset = UNSET,
+    ipv6_status: ApiV1PopsListIpv6Status | Unset = UNSET,
+    iso27001_status: ApiV1PopsListIso27001Status | Unset = UNSET,
     kind: ApiV1PopsListKind | Unset = UNSET,
     name: str | Unset = UNSET,
     ordering: str | Unset = UNSET,
@@ -548,25 +596,14 @@ async def asyncio(
     provider_entity: UUID | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     scope: ApiV1PopsListScope | Unset = UNSET,
+    scs_iaas_status: ApiV1PopsListScsIaasStatus | Unset = UNSET,
+    scs_kaas_status: ApiV1PopsListScsKaasStatus | Unset = UNSET,
     search: str | Unset = UNSET,
     state: ApiV1PopsListState | Unset = UNSET,
+    technologies: str | Unset = UNSET,
+    tier: ApiV1PopsListTier | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
-) -> (
-    ApiV1PopsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedPopListList
-    | None
-):
+) -> PaginatedPopCatalogList | None:
     """API endpoint that allows points of presence to be viewed or edited.
 
     Admin-only resource (global, not org-scoped).
@@ -575,10 +612,18 @@ async def asyncio(
     Args:
         affected_incidents (UUID | Unset):
         affected_maintenances (UUID | Unset):
+        api_type (ApiV1PopsListApiType | Unset):
         archived (bool | Unset):
+        bgp_status (ApiV1PopsListBgpStatus | Unset):
+        c5_status (ApiV1PopsListC5Status | Unset):
+        city (str | Unset):
+        country (str | Unset):
         created_at (datetime.datetime | Unset):
         created_by_component (ApiV1PopsListCreatedByComponent | Unset):
         debug_mode (bool | Unset):
+        en50600_status (ApiV1PopsListEn50600Status | Unset):
+        ipv6_status (ApiV1PopsListIpv6Status | Unset):
+        iso27001_status (ApiV1PopsListIso27001Status | Unset):
         kind (ApiV1PopsListKind | Unset):
         name (str | Unset):
         ordering (str | Unset):
@@ -587,8 +632,12 @@ async def asyncio(
         provider_entity (UUID | Unset):
         reconciliation_running (bool | Unset):
         scope (ApiV1PopsListScope | Unset):
+        scs_iaas_status (ApiV1PopsListScsIaasStatus | Unset):
+        scs_kaas_status (ApiV1PopsListScsKaasStatus | Unset):
         search (str | Unset):
         state (ApiV1PopsListState | Unset):
+        technologies (str | Unset):
+        tier (ApiV1PopsListTier | Unset):
         updated_at (datetime.datetime | Unset):
 
     Raises:
@@ -596,7 +645,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ApiV1PopsListValidationError | ParseErrorResponse | ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedPopListList
+        PaginatedPopCatalogList
     """
 
     return (
@@ -604,10 +653,18 @@ async def asyncio(
             client=client,
             affected_incidents=affected_incidents,
             affected_maintenances=affected_maintenances,
+            api_type=api_type,
             archived=archived,
+            bgp_status=bgp_status,
+            c5_status=c5_status,
+            city=city,
+            country=country,
             created_at=created_at,
             created_by_component=created_by_component,
             debug_mode=debug_mode,
+            en50600_status=en50600_status,
+            ipv6_status=ipv6_status,
+            iso27001_status=iso27001_status,
             kind=kind,
             name=name,
             ordering=ordering,
@@ -616,8 +673,12 @@ async def asyncio(
             provider_entity=provider_entity,
             reconciliation_running=reconciliation_running,
             scope=scope,
+            scs_iaas_status=scs_iaas_status,
+            scs_kaas_status=scs_kaas_status,
             search=search,
             state=state,
+            technologies=technologies,
+            tier=tier,
             updated_at=updated_at,
         )
     ).parsed

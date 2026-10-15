@@ -8,16 +8,40 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.bootstrap_status_enum import BootstrapStatusEnum, check_bootstrap_status_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.host_kind_enum import HostKindEnum, check_host_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.role_28f_enum import Role28FEnum, check_role_28f_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.host_bootstrap_status import HostBootstrapStatus, check_host_bootstrap_status
+from ..models.host_created_by_component_type_1 import (
+    HostCreatedByComponentType1,
+    check_host_created_by_component_type_1,
+)
+from ..models.host_created_by_component_type_2_type_1 import (
+    HostCreatedByComponentType2Type1,
+    check_host_created_by_component_type_2_type_1,
+)
+from ..models.host_created_by_component_type_3_type_1 import (
+    HostCreatedByComponentType3Type1,
+    check_host_created_by_component_type_3_type_1,
+)
+from ..models.host_criticality_type_1 import HostCriticalityType1, check_host_criticality_type_1
+from ..models.host_criticality_type_2_type_1 import HostCriticalityType2Type1, check_host_criticality_type_2_type_1
+from ..models.host_criticality_type_3_type_1 import HostCriticalityType3Type1, check_host_criticality_type_3_type_1
+from ..models.host_effective_criticality_type_1 import (
+    HostEffectiveCriticalityType1,
+    check_host_effective_criticality_type_1,
+)
+from ..models.host_effective_criticality_type_2_type_1 import (
+    HostEffectiveCriticalityType2Type1,
+    check_host_effective_criticality_type_2_type_1,
+)
+from ..models.host_effective_criticality_type_3_type_1 import (
+    HostEffectiveCriticalityType3Type1,
+    check_host_effective_criticality_type_3_type_1,
+)
+from ..models.host_kind import HostKind, check_host_kind
+from ..models.host_last_state import HostLastState, check_host_last_state
+from ..models.host_provider import HostProvider, check_host_provider
+from ..models.host_role import HostRole, check_host_role
+from ..models.host_scope import HostScope, check_host_scope
+from ..models.host_state import HostState, check_host_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -64,14 +88,14 @@ class Host:
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (HostDeletedByUserType0 | None):
             provider_id (None | str):
-            state (LastStateEnum): * `OK` - Ok
+            state (HostState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (HostLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -92,11 +116,14 @@ class Host:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (HostScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (HostEffectiveCriticalityType1 | HostEffectiveCriticalityType2Type1 |
+                HostEffectiveCriticalityType3Type1 | None):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (HostOrganizationType0 | None):
             workspace (HostWorkspaceType0 | None):
@@ -116,7 +143,9 @@ class Host:
 
                 Spec: polycrate spec inspect 271
             hostname (str):
-            bootstrap_status (BootstrapStatusEnum): * `pending` - Pending
+            bootstrap_status (HostBootstrapStatus): IaaS/machine bootstrap lifecycle. Spec: polycrate spec inspect 729.
+
+                * `pending` - Pending
                 * `provisioning` - Provisioning
                 * `ready` - Ready
                 * `joining` - Joining
@@ -138,7 +167,7 @@ class Host:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (HostProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -154,15 +183,15 @@ class Host:
             provider_reference (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (HostKindEnum | Unset): * `vm` - Virtual Machine
+            kind (HostKind | Unset): * `vm` - Virtual Machine
                 * `bare_metal` - Bare-Metal Machine
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (HostCriticalityType1 | HostCriticalityType2Type1 | HostCriticalityType3Type1 | None | Unset):
+                Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -173,14 +202,14 @@ class Host:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (HostCreatedByComponentType1 | HostCreatedByComponentType2Type1 |
+                HostCreatedByComponentType3Type1 | None | Unset): Component that created this object: cli, operator, or api.
 
                 * `cli` - CLI
                 * `operator` - Operator
                 * `api` - API
             alias (None | str | Unset):
-            role (BlankEnum | Role28FEnum | Unset): Host role (e.g. k8s-worker). Spec: polycrate spec inspect 729.
+            role (HostRole | Unset): Host role (e.g. k8s-worker). Spec: polycrate spec inspect 729.
 
                 * `k8s-worker` - Kubernetes Worker
                 * `k8s-controlplane` - Kubernetes Controlplane
@@ -212,9 +241,9 @@ class Host:
     is_deleted: bool
     deleted_by_user: HostDeletedByUserType0 | None
     provider_id: None | str
-    state: LastStateEnum
+    state: HostState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: HostLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -229,9 +258,11 @@ class Host:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: HostScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        HostEffectiveCriticalityType1 | HostEffectiveCriticalityType2Type1 | HostEffectiveCriticalityType3Type1 | None
+    )
     actual_availability: str
     organization: HostOrganizationType0 | None
     workspace: HostWorkspaceType0 | None
@@ -243,7 +274,7 @@ class Host:
     effective_sla_target: float | None
     last_action_run: HostLastActionRunType0 | None
     hostname: str
-    bootstrap_status: BootstrapStatusEnum
+    bootstrap_status: HostBootstrapStatus
     cloud_init_hash: str
     default_ipv4_rtt: float | None
     default_ipv4_pl: float | None
@@ -259,24 +290,26 @@ class Host:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: HostProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: HostKindEnum | Unset = UNSET
+    kind: HostKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: HostCriticalityType1 | HostCriticalityType2Type1 | HostCriticalityType3Type1 | None | Unset = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        HostCreatedByComponentType1 | HostCreatedByComponentType2Type1 | HostCreatedByComponentType3Type1 | None | Unset
+    ) = UNSET
     alias: None | str | Unset = UNSET
-    role: BlankEnum | Role28FEnum | Unset = UNSET
+    role: HostRole | Unset = UNSET
     active: bool | Unset = UNSET
     default_ipv4: None | str | Unset = UNSET
     default_ipv6: None | str | Unset = UNSET
@@ -387,6 +420,10 @@ class Host:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -512,6 +549,8 @@ class Host:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -544,6 +583,8 @@ class Host:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -553,12 +594,8 @@ class Host:
         else:
             alias = self.alias
 
-        role: str | Unset
-        if isinstance(self.role, Unset):
-            role = UNSET
-        elif isinstance(self.role, str):
-            role = self.role
-        else:
+        role: str | Unset = UNSET
+        if not isinstance(self.role, Unset):
             role = self.role
 
         active = self.active
@@ -860,7 +897,7 @@ class Host:
 
         provider_id = _parse_provider_id(d.pop("provider_id"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_host_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -869,7 +906,7 @@ class Host:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_host_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -966,22 +1003,51 @@ class Host:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_host_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            HostEffectiveCriticalityType1
+            | HostEffectiveCriticalityType2Type1
+            | HostEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_host_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_host_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_host_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                HostEffectiveCriticalityType1
+                | HostEffectiveCriticalityType2Type1
+                | HostEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -1056,7 +1122,7 @@ class Host:
 
         hostname = d.pop("hostname")
 
-        bootstrap_status = check_bootstrap_status_enum(d.pop("bootstrap_status"))
+        bootstrap_status = check_host_bootstrap_status(d.pop("bootstrap_status"))
 
         cloud_init_hash = d.pop("cloud_init_hash")
 
@@ -1126,11 +1192,11 @@ class Host:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: HostProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_host_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1146,11 +1212,11 @@ class Host:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: HostKindEnum | Unset
+        kind: HostKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_host_kind_enum(_kind)
+            kind = check_host_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -1182,7 +1248,9 @@ class Host:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> HostCriticalityType1 | HostCriticalityType2Type1 | HostCriticalityType3Type1 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1190,20 +1258,30 @@ class Host:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_host_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_host_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_host_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                HostCriticalityType1 | HostCriticalityType2Type1 | HostCriticalityType3Type1 | None | Unset, data
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1238,7 +1316,15 @@ class Host:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            HostCreatedByComponentType1
+            | HostCreatedByComponentType2Type1
+            | HostCreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1246,20 +1332,35 @@ class Host:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_host_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_host_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_host_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                HostCreatedByComponentType1
+                | HostCreatedByComponentType2Type1
+                | HostCreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1272,24 +1373,12 @@ class Host:
 
         alias = _parse_alias(d.pop("alias", UNSET))
 
-        def _parse_role(data: object) -> BlankEnum | Role28FEnum | Unset:
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                role_type_0 = check_role_28f_enum(data)
-
-                return role_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            if not isinstance(data, str):
-                raise TypeError()
-            role_type_1 = check_blank_enum(data)
-
-            return role_type_1
-
-        role = _parse_role(d.pop("role", UNSET))
+        _role = d.pop("role", UNSET)
+        role: HostRole | Unset
+        if isinstance(_role, Unset):
+            role = UNSET
+        else:
+            role = check_host_role(_role)
 
         active = d.pop("active", UNSET)
 

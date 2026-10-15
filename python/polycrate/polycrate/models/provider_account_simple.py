@@ -7,7 +7,10 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.api_kind_enum import ApiKindEnum, check_api_kind_enum
+from ..models.provider_account_simple_api_kind import (
+    ProviderAccountSimpleApiKind,
+    check_provider_account_simple_api_kind,
+)
 
 T = TypeVar("T", bound="ProviderAccountSimple")
 
@@ -20,7 +23,9 @@ class ProviderAccountSimple:
         name (str):
         display_name (None | str): The display name is used to display the object in the UI. It can be different from
             the name.
-        api_kind (ApiKindEnum): * `hetzner_cloud` - Hetzner Cloud
+        api_kind (ProviderAccountSimpleApiKind): Driver / API family key (immutable after create).
+
+            * `hetzner_cloud` - Hetzner Cloud
             * `openstack` - OpenStack
             * `ovhcloud` - OVHcloud
             * `ionos` - IONOS Cloud
@@ -33,7 +38,7 @@ class ProviderAccountSimple:
     id: UUID
     name: str
     display_name: None | str
-    api_kind: ApiKindEnum
+    api_kind: ProviderAccountSimpleApiKind
     url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -77,7 +82,7 @@ class ProviderAccountSimple:
 
         display_name = _parse_display_name(d.pop("display_name"))
 
-        api_kind = check_api_kind_enum(d.pop("api_kind"))
+        api_kind = check_provider_account_simple_api_kind(d.pop("api_kind"))
 
         url = d.pop("url")
 

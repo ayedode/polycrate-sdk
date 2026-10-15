@@ -39,9 +39,7 @@ class S3BucketSettingsResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.s3_bucket_settings_response_provider_metadata import (
-            S3BucketSettingsResponseProviderMetadata,  # noqa: PLC0415
-        )
+        from ..models.s3_bucket_settings_response_provider_metadata import S3BucketSettingsResponseProviderMetadata  # noqa: PLC0415
 
         d = dict(src_dict)
         provider_metadata = S3BucketSettingsResponseProviderMetadata.from_dict(d.pop("provider_metadata"))

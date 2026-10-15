@@ -8,16 +8,37 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.severity_401_enum import Severity401Enum, check_severity_401_enum
-from ..models.status_a85_enum import StatusA85Enum, check_status_a85_enum
+from ..models.cve_created_by_component_type_1 import CVECreatedByComponentType1, check_cve_created_by_component_type_1
+from ..models.cve_created_by_component_type_2_type_1 import (
+    CVECreatedByComponentType2Type1,
+    check_cve_created_by_component_type_2_type_1,
+)
+from ..models.cve_created_by_component_type_3_type_1 import (
+    CVECreatedByComponentType3Type1,
+    check_cve_created_by_component_type_3_type_1,
+)
+from ..models.cve_criticality_type_1 import CVECriticalityType1, check_cve_criticality_type_1
+from ..models.cve_criticality_type_2_type_1 import CVECriticalityType2Type1, check_cve_criticality_type_2_type_1
+from ..models.cve_criticality_type_3_type_1 import CVECriticalityType3Type1, check_cve_criticality_type_3_type_1
+from ..models.cve_effective_criticality_type_1 import (
+    CVEEffectiveCriticalityType1,
+    check_cve_effective_criticality_type_1,
+)
+from ..models.cve_effective_criticality_type_2_type_1 import (
+    CVEEffectiveCriticalityType2Type1,
+    check_cve_effective_criticality_type_2_type_1,
+)
+from ..models.cve_effective_criticality_type_3_type_1 import (
+    CVEEffectiveCriticalityType3Type1,
+    check_cve_effective_criticality_type_3_type_1,
+)
+from ..models.cve_kind import CVEKind, check_cve_kind
+from ..models.cve_last_state import CVELastState, check_cve_last_state
+from ..models.cve_provider import CVEProvider, check_cve_provider
+from ..models.cve_scope import CVEScope, check_cve_scope
+from ..models.cve_severity import CVESeverity, check_cve_severity
+from ..models.cve_state import CVEState, check_cve_state
+from ..models.cve_status import CVEStatus, check_cve_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -46,7 +67,8 @@ class CVE:
         is_class_icon (bool):
         effective_slo_target (float | None):
         effective_sla_target (float | None):
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (CVEEffectiveCriticalityType1 | CVEEffectiveCriticalityType2Type1 |
+            CVEEffectiveCriticalityType3Type1 | None):
         last_action_run (CVELastActionRunType0 | None):
         deleted_by_user (CVEDeletedByUserType0 | None):
         created_at (datetime.datetime):
@@ -54,14 +76,14 @@ class CVE:
         deleted_at (datetime.datetime | None): Timestamp when this object was soft-deleted. Null if not deleted.
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
-        state (LastStateEnum): * `OK` - Ok
+        state (CVEState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (CVELastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -92,7 +114,7 @@ class CVE:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (CVEProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -111,14 +133,16 @@ class CVE:
         last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
         discovery_enabled (bool | Unset):
         platform_service (bool | Unset):
-        scope (ScopeEnum | Unset): * `system` - System
+        scope (CVEScope | Unset): The scope is used to separate `system` owned objects from `user` owned objects.
+
+            * `system` - System
             * `user` - User
-        kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+        kind (CVEKind | Unset): * `generic` - Generic
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-            cli, operator, or api.
+        created_by_component (CVECreatedByComponentType1 | CVECreatedByComponentType2Type1 |
+            CVECreatedByComponentType3Type1 | None | Unset): Component that created this object: cli, operator, or api.
 
             * `cli` - CLI
             * `operator` - Operator
@@ -132,8 +156,8 @@ class CVE:
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (CVECriticalityType1 | CVECriticalityType2Type1 | CVECriticalityType3Type1 | None | Unset):
+            Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -146,13 +170,17 @@ class CVE:
         modified_at (datetime.datetime | None | Unset): When the CVE was last modified upstream
         cvss_score (None | str | Unset): CVSS base score (0.0 - 10.0)
         cvss_vector (None | str | Unset): CVSS vector string, e.g. CVSS:3.1/AV:N/AC:L/...
-        severity (Severity401Enum | Unset): * `critical` - Critical
+        severity (CVESeverity | Unset): Normalized severity bucket derived from cvss_score
+
+            * `critical` - Critical
             * `high` - High
             * `medium` - Medium
             * `low` - Low
             * `none` - None
             * `unknown` - Unknown
-        status (StatusA85Enum | Unset): * `open` - Open
+        status (CVEStatus | Unset): Lifecycle status of the CVE record
+
+            * `open` - Open
             * `disputed` - Disputed
             * `rejected` - Rejected
             * `reserved` - Reserved
@@ -171,16 +199,18 @@ class CVE:
     is_class_icon: bool
     effective_slo_target: float | None
     effective_sla_target: float | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        CVEEffectiveCriticalityType1 | CVEEffectiveCriticalityType2Type1 | CVEEffectiveCriticalityType3Type1 | None
+    )
     last_action_run: CVELastActionRunType0 | None
     deleted_by_user: CVEDeletedByUserType0 | None
     created_at: datetime.datetime
     updated_at: datetime.datetime
     deleted_at: datetime.datetime | None
     is_deleted: bool
-    state: LastStateEnum
+    state: CVEState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: CVELastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -202,19 +232,21 @@ class CVE:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: CVEProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: CVEScope | Unset = UNSET
+    kind: CVEKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        CVECreatedByComponentType1 | CVECreatedByComponentType2Type1 | CVECreatedByComponentType3Type1 | None | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -223,7 +255,7 @@ class CVE:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: CVECriticalityType1 | CVECriticalityType2Type1 | CVECriticalityType3Type1 | None | Unset = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
     title: str | Unset = UNSET
@@ -232,8 +264,8 @@ class CVE:
     modified_at: datetime.datetime | None | Unset = UNSET
     cvss_score: None | str | Unset = UNSET
     cvss_vector: None | str | Unset = UNSET
-    severity: Severity401Enum | Unset = UNSET
-    status: StatusA85Enum | Unset = UNSET
+    severity: CVESeverity | Unset = UNSET
+    status: CVEStatus | Unset = UNSET
     archived_by: int | None | Unset = UNSET
     managed_by_content_type: int | None | Unset = UNSET
     modified_by_user: int | None | Unset = UNSET
@@ -276,6 +308,10 @@ class CVE:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -435,6 +471,8 @@ class CVE:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -477,6 +515,8 @@ class CVE:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -745,18 +785,44 @@ class CVE:
 
         effective_sla_target = _parse_effective_sla_target(d.pop("effective_sla_target"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            CVEEffectiveCriticalityType1 | CVEEffectiveCriticalityType2Type1 | CVEEffectiveCriticalityType3Type1 | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_cve_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_cve_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_cve_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CVEEffectiveCriticalityType1
+                | CVEEffectiveCriticalityType2Type1
+                | CVEEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -811,7 +877,7 @@ class CVE:
 
         is_deleted = d.pop("is_deleted")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_cve_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -820,7 +886,7 @@ class CVE:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_cve_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -939,11 +1005,11 @@ class CVE:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: CVEProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_cve_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -981,18 +1047,18 @@ class CVE:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: CVEScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_cve_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: CVEKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_cve_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -1022,7 +1088,15 @@ class CVE:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            CVECreatedByComponentType1
+            | CVECreatedByComponentType2Type1
+            | CVECreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1030,20 +1104,35 @@ class CVE:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_cve_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_cve_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_cve_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CVECreatedByComponentType1
+                | CVECreatedByComponentType2Type1
+                | CVECreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1098,7 +1187,9 @@ class CVE:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> CVECriticalityType1 | CVECriticalityType2Type1 | CVECriticalityType3Type1 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1106,20 +1197,28 @@ class CVE:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_cve_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_cve_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_cve_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CVECriticalityType1 | CVECriticalityType2Type1 | CVECriticalityType3Type1 | None | Unset, data)
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1191,18 +1290,18 @@ class CVE:
         cvss_vector = _parse_cvss_vector(d.pop("cvss_vector", UNSET))
 
         _severity = d.pop("severity", UNSET)
-        severity: Severity401Enum | Unset
+        severity: CVESeverity | Unset
         if isinstance(_severity, Unset):
             severity = UNSET
         else:
-            severity = check_severity_401_enum(_severity)
+            severity = check_cve_severity(_severity)
 
         _status = d.pop("status", UNSET)
-        status: StatusA85Enum | Unset
+        status: CVEStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_status_a85_enum(_status)
+            status = check_cve_status(_status)
 
         def _parse_archived_by(data: object) -> int | None | Unset:
             if data is None:

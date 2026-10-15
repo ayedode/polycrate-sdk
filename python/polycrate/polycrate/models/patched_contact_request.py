@@ -9,8 +9,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.contact_role_enum import ContactRoleEnum, check_contact_role_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
+from ..models.patched_contact_request_contact_role import (
+    PatchedContactRequestContactRole,
+    check_patched_contact_request_contact_role,
+)
+from ..models.patched_contact_request_kind import PatchedContactRequestKind, check_patched_contact_request_kind
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedContactRequest")
@@ -24,7 +27,9 @@ class PatchedContactRequest:
 
         Attributes:
             name (str | Unset):
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (PatchedContactRequestKind | Unset): Type of contact
+
+                * `generic` - Generic
             organization_id (UUID | Unset):
             credential_id (None | Unset | UUID):
             firstname (str | Unset): First name of the contact
@@ -36,7 +41,9 @@ class PatchedContactRequest:
             country (None | str | Unset): Country of the contact
             zipcode (None | str | Unset): Zipcode of the contact
             note (None | str | Unset): Note about the contact
-            contact_role (ContactRoleEnum | Unset): * `developer` - Developer
+            contact_role (PatchedContactRequestContactRole | Unset): Role of the contact (Developer, Admin, Billing, Viewer)
+
+                * `developer` - Developer
                 * `admin` - Admin
                 * `billing` - Billing
                 * `viewer` - Viewer
@@ -48,7 +55,7 @@ class PatchedContactRequest:
     """
 
     name: str | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: PatchedContactRequestKind | Unset = UNSET
     organization_id: UUID | Unset = UNSET
     credential_id: None | Unset | UUID = UNSET
     firstname: str | Unset = UNSET
@@ -60,7 +67,7 @@ class PatchedContactRequest:
     country: None | str | Unset = UNSET
     zipcode: None | str | Unset = UNSET
     note: None | str | Unset = UNSET
-    contact_role: ContactRoleEnum | Unset = UNSET
+    contact_role: PatchedContactRequestContactRole | Unset = UNSET
     is_maintenance_contact: bool | Unset = UNSET
     is_billing_contact: bool | Unset = UNSET
     keycloak_user_id: None | str | Unset = UNSET
@@ -302,11 +309,11 @@ class PatchedContactRequest:
         name = d.pop("name", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: PatchedContactRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_patched_contact_request_kind(_kind)
 
         _organization_id = d.pop("organization_id", UNSET)
         organization_id: UUID | Unset
@@ -393,11 +400,11 @@ class PatchedContactRequest:
         note = _parse_note(d.pop("note", UNSET))
 
         _contact_role = d.pop("contact_role", UNSET)
-        contact_role: ContactRoleEnum | Unset
+        contact_role: PatchedContactRequestContactRole | Unset
         if isinstance(_contact_role, Unset):
             contact_role = UNSET
         else:
-            contact_role = check_contact_role_enum(_contact_role)
+            contact_role = check_patched_contact_request_contact_role(_contact_role)
 
         is_maintenance_contact = d.pop("is_maintenance_contact", UNSET)
 

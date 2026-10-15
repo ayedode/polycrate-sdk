@@ -7,9 +7,9 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.contact_group_membership_role_enum import (
-    ContactGroupMembershipRoleEnum,
-    check_contact_group_membership_role_enum,
+from ..models.contact_group_membership_request_role import (
+    ContactGroupMembershipRequestRole,
+    check_contact_group_membership_request_role,
 )
 from ..types import UNSET, Unset
 
@@ -24,13 +24,15 @@ class ContactGroupMembershipRequest:
 
         Attributes:
             contact (UUID):
-            role (ContactGroupMembershipRoleEnum | Unset): * `owner` - Owner
+            role (ContactGroupMembershipRequestRole | Unset): Role of the contact in this group
+
+                * `owner` - Owner
                 * `maintainer` - Maintainer
                 * `contributor` - Contributor
     """
 
     contact: UUID
-    role: ContactGroupMembershipRoleEnum | Unset = UNSET
+    role: ContactGroupMembershipRequestRole | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -58,11 +60,11 @@ class ContactGroupMembershipRequest:
         contact = UUID(d.pop("contact"))
 
         _role = d.pop("role", UNSET)
-        role: ContactGroupMembershipRoleEnum | Unset
+        role: ContactGroupMembershipRequestRole | Unset
         if isinstance(_role, Unset):
             role = UNSET
         else:
-            role = check_contact_group_membership_role_enum(_role)
+            role = check_contact_group_membership_request_role(_role)
 
         contact_group_membership_request = cls(
             contact=contact,

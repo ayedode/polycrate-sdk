@@ -8,13 +8,32 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.alert_router_kind_enum import AlertRouterKindEnum, check_alert_router_kind_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.alert_router_criticality_type_1 import AlertRouterCriticalityType1, check_alert_router_criticality_type_1
+from ..models.alert_router_criticality_type_2_type_1 import (
+    AlertRouterCriticalityType2Type1,
+    check_alert_router_criticality_type_2_type_1,
+)
+from ..models.alert_router_criticality_type_3_type_1 import (
+    AlertRouterCriticalityType3Type1,
+    check_alert_router_criticality_type_3_type_1,
+)
+from ..models.alert_router_effective_criticality_type_1 import (
+    AlertRouterEffectiveCriticalityType1,
+    check_alert_router_effective_criticality_type_1,
+)
+from ..models.alert_router_effective_criticality_type_2_type_1 import (
+    AlertRouterEffectiveCriticalityType2Type1,
+    check_alert_router_effective_criticality_type_2_type_1,
+)
+from ..models.alert_router_effective_criticality_type_3_type_1 import (
+    AlertRouterEffectiveCriticalityType3Type1,
+    check_alert_router_effective_criticality_type_3_type_1,
+)
+from ..models.alert_router_kind import AlertRouterKind, check_alert_router_kind
+from ..models.alert_router_last_state import AlertRouterLastState, check_alert_router_last_state
+from ..models.alert_router_provider import AlertRouterProvider, check_alert_router_provider
+from ..models.alert_router_scope import AlertRouterScope, check_alert_router_scope
+from ..models.alert_router_state import AlertRouterState, check_alert_router_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -42,14 +61,14 @@ class AlertRouter:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (AlertRouterDeletedByUserType0 | None):
-            state (LastStateEnum): * `OK` - Ok
+            state (AlertRouterState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (AlertRouterLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -70,11 +89,14 @@ class AlertRouter:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (AlertRouterScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (AlertRouterEffectiveCriticalityType1 | AlertRouterEffectiveCriticalityType2Type1 |
+                AlertRouterEffectiveCriticalityType3Type1 | None):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (AlertRouterOrganizationType0 | None):
             workspace (AlertRouterWorkspaceType0 | None):
@@ -100,7 +122,7 @@ class AlertRouter:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (AlertRouterProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -117,15 +139,15 @@ class AlertRouter:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (AlertRouterKindEnum | Unset): * `generic` - Generic Alert Router
+            kind (AlertRouterKind | Unset): * `generic` - Generic Alert Router
                 * `dummy` - Dummy Alert Router
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (AlertRouterCriticalityType1 | AlertRouterCriticalityType2Type1 | AlertRouterCriticalityType3Type1 |
+                None | Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -150,9 +172,9 @@ class AlertRouter:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: AlertRouterDeletedByUserType0 | None
-    state: LastStateEnum
+    state: AlertRouterState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: AlertRouterLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -167,9 +189,14 @@ class AlertRouter:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: AlertRouterScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        AlertRouterEffectiveCriticalityType1
+        | AlertRouterEffectiveCriticalityType2Type1
+        | AlertRouterEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: AlertRouterOrganizationType0 | None
     workspace: AlertRouterWorkspaceType0 | None
@@ -191,17 +218,19 @@ class AlertRouter:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: AlertRouterProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: AlertRouterKindEnum | Unset = UNSET
+    kind: AlertRouterKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        AlertRouterCriticalityType1 | AlertRouterCriticalityType2Type1 | AlertRouterCriticalityType3Type1 | None | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -301,6 +330,10 @@ class AlertRouter:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -410,6 +443,8 @@ class AlertRouter:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -603,7 +638,7 @@ class AlertRouter:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_alert_router_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -612,7 +647,7 @@ class AlertRouter:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_alert_router_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -709,22 +744,51 @@ class AlertRouter:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_alert_router_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            AlertRouterEffectiveCriticalityType1
+            | AlertRouterEffectiveCriticalityType2Type1
+            | AlertRouterEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_alert_router_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_alert_router_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_alert_router_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AlertRouterEffectiveCriticalityType1
+                | AlertRouterEffectiveCriticalityType2Type1
+                | AlertRouterEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -827,11 +891,11 @@ class AlertRouter:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: AlertRouterProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_alert_router_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -856,11 +920,11 @@ class AlertRouter:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: AlertRouterKindEnum | Unset
+        kind: AlertRouterKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_alert_router_kind_enum(_kind)
+            kind = check_alert_router_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -892,7 +956,15 @@ class AlertRouter:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            AlertRouterCriticalityType1
+            | AlertRouterCriticalityType2Type1
+            | AlertRouterCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -900,20 +972,35 @@ class AlertRouter:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_alert_router_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_alert_router_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_alert_router_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AlertRouterCriticalityType1
+                | AlertRouterCriticalityType2Type1
+                | AlertRouterCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

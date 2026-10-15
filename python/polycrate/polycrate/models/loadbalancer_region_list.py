@@ -7,10 +7,24 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.external_traffic_policy_enum import ExternalTrafficPolicyEnum, check_external_traffic_policy_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.loadbalancer_region_kind_enum import LoadbalancerRegionKindEnum, check_loadbalancer_region_kind_enum
+from ..models.loadbalancer_region_list_effective_criticality_type_1 import (
+    LoadbalancerRegionListEffectiveCriticalityType1,
+    check_loadbalancer_region_list_effective_criticality_type_1,
+)
+from ..models.loadbalancer_region_list_effective_criticality_type_2_type_1 import (
+    LoadbalancerRegionListEffectiveCriticalityType2Type1,
+    check_loadbalancer_region_list_effective_criticality_type_2_type_1,
+)
+from ..models.loadbalancer_region_list_effective_criticality_type_3_type_1 import (
+    LoadbalancerRegionListEffectiveCriticalityType3Type1,
+    check_loadbalancer_region_list_effective_criticality_type_3_type_1,
+)
+from ..models.loadbalancer_region_list_external_traffic_policy import (
+    LoadbalancerRegionListExternalTrafficPolicy,
+    check_loadbalancer_region_list_external_traffic_policy,
+)
+from ..models.loadbalancer_region_list_kind import LoadbalancerRegionListKind, check_loadbalancer_region_list_kind
+from ..models.loadbalancer_region_list_state import LoadbalancerRegionListState, check_loadbalancer_region_list_state
 
 if TYPE_CHECKING:
     from ..models.k8s_cluster_simple import K8SClusterSimple
@@ -38,7 +52,7 @@ class LoadbalancerRegionList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (LoadbalancerRegionListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -56,14 +70,20 @@ class LoadbalancerRegionList:
             created (LoadbalancerRegionListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (LoadbalancerRegionListEffectiveCriticalityType1 |
+                LoadbalancerRegionListEffectiveCriticalityType2Type1 | LoadbalancerRegionListEffectiveCriticalityType3Type1 |
+                None):
             url (str): Gibt die absolute URL zum Object zurück.
             region_name (str):
-            kind (LoadbalancerRegionKindEnum): * `cilium` - Cilium
+            kind (LoadbalancerRegionListKind): * `cilium` - Cilium
                 * `metallb` - MetalLB
             active (bool):
             platform_service (bool): Makes this region available for the whole platform
-            external_traffic_policy (ExternalTrafficPolicyEnum): * `Local` - Local
+            external_traffic_policy (LoadbalancerRegionListExternalTrafficPolicy): Kubernetes Service externalTrafficPolicy:
+                Local (preserve client IP) or Cluster (K8s load-balanced). With Cilium direct routing, Real IP works with
+                either.
+
+                * `Local` - Local
                 * `Cluster` - Cluster
             k8s_cluster (K8SClusterSimple):
             instances_count (int):
@@ -71,7 +91,7 @@ class LoadbalancerRegionList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: LoadbalancerRegionListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -82,24 +102,25 @@ class LoadbalancerRegionList:
     created: LoadbalancerRegionListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        LoadbalancerRegionListEffectiveCriticalityType1
+        | LoadbalancerRegionListEffectiveCriticalityType2Type1
+        | LoadbalancerRegionListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     region_name: str
-    kind: LoadbalancerRegionKindEnum
+    kind: LoadbalancerRegionListKind
     active: bool
     platform_service: bool
-    external_traffic_policy: ExternalTrafficPolicyEnum
+    external_traffic_policy: LoadbalancerRegionListExternalTrafficPolicy
     k8s_cluster: K8SClusterSimple
     instances_count: int
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.loadbalancer_region_list_organization_type_0 import (
-            LoadbalancerRegionListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_region_list_workspace_type_0 import (
-            LoadbalancerRegionListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_region_list_organization_type_0 import LoadbalancerRegionListOrganizationType0  # noqa: PLC0415
+        from ..models.loadbalancer_region_list_workspace_type_0 import LoadbalancerRegionListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -140,6 +161,10 @@ class LoadbalancerRegionList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -198,19 +223,15 @@ class LoadbalancerRegionList:
             LoadbalancerRegionListActiveConditionInstancesItem,  # noqa: PLC0415
         )
         from ..models.loadbalancer_region_list_created import LoadbalancerRegionListCreated  # noqa: PLC0415
-        from ..models.loadbalancer_region_list_organization_type_0 import (
-            LoadbalancerRegionListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_region_list_workspace_type_0 import (
-            LoadbalancerRegionListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_region_list_organization_type_0 import LoadbalancerRegionListOrganizationType0  # noqa: PLC0415
+        from ..models.loadbalancer_region_list_workspace_type_0 import LoadbalancerRegionListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_loadbalancer_region_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -265,18 +286,51 @@ class LoadbalancerRegionList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            LoadbalancerRegionListEffectiveCriticalityType1
+            | LoadbalancerRegionListEffectiveCriticalityType2Type1
+            | LoadbalancerRegionListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_loadbalancer_region_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = (
+                    check_loadbalancer_region_list_effective_criticality_type_2_type_1(data)
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = (
+                    check_loadbalancer_region_list_effective_criticality_type_3_type_1(data)
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LoadbalancerRegionListEffectiveCriticalityType1
+                | LoadbalancerRegionListEffectiveCriticalityType2Type1
+                | LoadbalancerRegionListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -284,13 +338,15 @@ class LoadbalancerRegionList:
 
         region_name = d.pop("region_name")
 
-        kind = check_loadbalancer_region_kind_enum(d.pop("kind"))
+        kind = check_loadbalancer_region_list_kind(d.pop("kind"))
 
         active = d.pop("active")
 
         platform_service = d.pop("platform_service")
 
-        external_traffic_policy = check_external_traffic_policy_enum(d.pop("external_traffic_policy"))
+        external_traffic_policy = check_loadbalancer_region_list_external_traffic_policy(
+            d.pop("external_traffic_policy")
+        )
 
         k8s_cluster = K8SClusterSimple.from_dict(d.pop("k8s_cluster"))
 

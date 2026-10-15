@@ -8,13 +8,32 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.k8s_cluster_kind_enum import K8SClusterKindEnum, check_k8s_cluster_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.k8s_cluster_criticality_type_1 import K8SClusterCriticalityType1, check_k8s_cluster_criticality_type_1
+from ..models.k8s_cluster_criticality_type_2_type_1 import (
+    K8SClusterCriticalityType2Type1,
+    check_k8s_cluster_criticality_type_2_type_1,
+)
+from ..models.k8s_cluster_criticality_type_3_type_1 import (
+    K8SClusterCriticalityType3Type1,
+    check_k8s_cluster_criticality_type_3_type_1,
+)
+from ..models.k8s_cluster_effective_criticality_type_1 import (
+    K8SClusterEffectiveCriticalityType1,
+    check_k8s_cluster_effective_criticality_type_1,
+)
+from ..models.k8s_cluster_effective_criticality_type_2_type_1 import (
+    K8SClusterEffectiveCriticalityType2Type1,
+    check_k8s_cluster_effective_criticality_type_2_type_1,
+)
+from ..models.k8s_cluster_effective_criticality_type_3_type_1 import (
+    K8SClusterEffectiveCriticalityType3Type1,
+    check_k8s_cluster_effective_criticality_type_3_type_1,
+)
+from ..models.k8s_cluster_kind import K8SClusterKind, check_k8s_cluster_kind
+from ..models.k8s_cluster_last_state import K8SClusterLastState, check_k8s_cluster_last_state
+from ..models.k8s_cluster_provider import K8SClusterProvider, check_k8s_cluster_provider
+from ..models.k8s_cluster_scope import K8SClusterScope, check_k8s_cluster_scope
+from ..models.k8s_cluster_state import K8SClusterState, check_k8s_cluster_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -54,14 +73,14 @@ class K8SCluster:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (K8SClusterDeletedByUserType0 | None):
-            state (LastStateEnum): * `OK` - Ok
+            state (K8SClusterState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (K8SClusterLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -81,14 +100,15 @@ class K8SCluster:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            kind (K8SClusterKindEnum): * `polycrate` - Polycrate
+            kind (K8SClusterKind): * `polycrate` - Polycrate
                 * `generic` - Generic
                 * `loopback` - Loopback
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             tolerations (Any): Tolerations match conditions. If a toleration for a condition exists for an object, the
                 condition will not be applied.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (K8SClusterEffectiveCriticalityType1 | K8SClusterEffectiveCriticalityType2Type1 |
+                K8SClusterEffectiveCriticalityType3Type1 | None):
             organization (K8SClusterOrganizationType0 | None):
             workspace (K8SClusterWorkspaceType0 | None):
             created (K8SClusterCreated):
@@ -110,7 +130,7 @@ class K8SCluster:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (K8SClusterProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -128,13 +148,15 @@ class K8SCluster:
             reconciliation_enabled (bool | Unset):
             discovery_enabled (bool | Unset):
             platform_service (bool | Unset):
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (K8SClusterScope | Unset): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (K8SClusterCriticalityType1 | K8SClusterCriticalityType2Type1 | K8SClusterCriticalityType3Type1 |
+                None | Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -180,9 +202,9 @@ class K8SCluster:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: K8SClusterDeletedByUserType0 | None
-    state: LastStateEnum
+    state: K8SClusterState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: K8SClusterLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -196,10 +218,15 @@ class K8SCluster:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    kind: K8SClusterKindEnum
+    kind: K8SClusterKind
     conditions: Any
     tolerations: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        K8SClusterEffectiveCriticalityType1
+        | K8SClusterEffectiveCriticalityType2Type1
+        | K8SClusterEffectiveCriticalityType3Type1
+        | None
+    )
     organization: K8SClusterOrganizationType0 | None
     workspace: K8SClusterWorkspaceType0 | None
     created: K8SClusterCreated
@@ -219,17 +246,19 @@ class K8SCluster:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: K8SClusterProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
+    scope: K8SClusterScope | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        K8SClusterCriticalityType1 | K8SClusterCriticalityType2Type1 | K8SClusterCriticalityType3Type1 | None | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -348,6 +377,10 @@ class K8SCluster:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -456,6 +489,8 @@ class K8SCluster:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -784,7 +819,7 @@ class K8SCluster:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_k8s_cluster_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -793,7 +828,7 @@ class K8SCluster:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_k8s_cluster_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -888,24 +923,53 @@ class K8SCluster:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        kind = check_k8s_cluster_kind_enum(d.pop("kind"))
+        kind = check_k8s_cluster_kind(d.pop("kind"))
 
         conditions = d.pop("conditions")
 
         tolerations = d.pop("tolerations")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            K8SClusterEffectiveCriticalityType1
+            | K8SClusterEffectiveCriticalityType2Type1
+            | K8SClusterEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_k8s_cluster_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_k8s_cluster_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_k8s_cluster_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                K8SClusterEffectiveCriticalityType1
+                | K8SClusterEffectiveCriticalityType2Type1
+                | K8SClusterEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -1014,11 +1078,11 @@ class K8SCluster:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: K8SClusterProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_k8s_cluster_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1045,11 +1109,11 @@ class K8SCluster:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: K8SClusterScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_k8s_cluster_scope(_scope)
 
         archived = d.pop("archived", UNSET)
 
@@ -1079,7 +1143,15 @@ class K8SCluster:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            K8SClusterCriticalityType1
+            | K8SClusterCriticalityType2Type1
+            | K8SClusterCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1087,20 +1159,35 @@ class K8SCluster:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_k8s_cluster_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_k8s_cluster_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_k8s_cluster_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                K8SClusterCriticalityType1
+                | K8SClusterCriticalityType2Type1
+                | K8SClusterCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

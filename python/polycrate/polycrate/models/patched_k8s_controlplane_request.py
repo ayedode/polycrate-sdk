@@ -9,13 +9,38 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.exposure_type_enum import ExposureTypeEnum, check_exposure_type_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.loadbalancer_mode_enum import LoadbalancerModeEnum, check_loadbalancer_mode_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.patched_k8s_controlplane_request_criticality_type_1 import (
+    PatchedK8SControlplaneRequestCriticalityType1,
+    check_patched_k8s_controlplane_request_criticality_type_1,
+)
+from ..models.patched_k8s_controlplane_request_criticality_type_2_type_1 import (
+    PatchedK8SControlplaneRequestCriticalityType2Type1,
+    check_patched_k8s_controlplane_request_criticality_type_2_type_1,
+)
+from ..models.patched_k8s_controlplane_request_criticality_type_3_type_1 import (
+    PatchedK8SControlplaneRequestCriticalityType3Type1,
+    check_patched_k8s_controlplane_request_criticality_type_3_type_1,
+)
+from ..models.patched_k8s_controlplane_request_exposure_type import (
+    PatchedK8SControlplaneRequestExposureType,
+    check_patched_k8s_controlplane_request_exposure_type,
+)
+from ..models.patched_k8s_controlplane_request_kind import (
+    PatchedK8SControlplaneRequestKind,
+    check_patched_k8s_controlplane_request_kind,
+)
+from ..models.patched_k8s_controlplane_request_loadbalancer_mode import (
+    PatchedK8SControlplaneRequestLoadbalancerMode,
+    check_patched_k8s_controlplane_request_loadbalancer_mode,
+)
+from ..models.patched_k8s_controlplane_request_provider import (
+    PatchedK8SControlplaneRequestProvider,
+    check_patched_k8s_controlplane_request_provider,
+)
+from ..models.patched_k8s_controlplane_request_scope import (
+    PatchedK8SControlplaneRequestScope,
+    check_patched_k8s_controlplane_request_scope,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedK8SControlplaneRequest")
@@ -48,7 +73,7 @@ class PatchedK8SControlplaneRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (PatchedK8SControlplaneRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -66,14 +91,18 @@ class PatchedK8SControlplaneRequest:
             reconciliation_enabled (bool | Unset):
             discovery_enabled (bool | Unset):
             platform_service (bool | Unset):
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (PatchedK8SControlplaneRequestScope | Unset): The scope is used to separate `system` owned objects from
+                `user` owned objects.
+
+                * `system` - System
                 * `user` - User
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (PatchedK8SControlplaneRequestKind | Unset): * `generic` - Generic
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | PatchedK8SControlplaneRequestCriticalityType1 |
+                PatchedK8SControlplaneRequestCriticalityType2Type1 | PatchedK8SControlplaneRequestCriticalityType3Type1 |
+                Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -88,10 +117,13 @@ class PatchedK8SControlplaneRequest:
             organization_id (UUID | Unset):
             workspace_id (UUID | Unset):
             region_id (UUID | Unset):
-            loadbalancer_mode (LoadbalancerModeEnum | Unset): * `cluster` - Cluster
+            loadbalancer_mode (PatchedK8SControlplaneRequestLoadbalancerMode | Unset): * `cluster` - Cluster
                 * `external` - External
             loadbalancer_provider (str | Unset):
-            exposure_type (ExposureTypeEnum | Unset): * `gateway` - Gateway API (Envoy)
+            exposure_type (PatchedK8SControlplaneRequestExposureType | Unset): How the controlplane API is exposed on the
+                host cluster.
+
+                * `gateway` - Gateway API (Envoy)
                 * `ingress` - Ingress (nginx)
                 * `loadbalancer` - LoadBalancer
             parent_gateway_name (str | Unset): Platform Gateway to attach TLSRoute to (empty → create own Gateway).
@@ -110,18 +142,24 @@ class PatchedK8SControlplaneRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedK8SControlplaneRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: PatchedK8SControlplaneRequestScope | Unset = UNSET
+    kind: PatchedK8SControlplaneRequestKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedK8SControlplaneRequestCriticalityType1
+        | PatchedK8SControlplaneRequestCriticalityType2Type1
+        | PatchedK8SControlplaneRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -131,9 +169,9 @@ class PatchedK8SControlplaneRequest:
     organization_id: UUID | Unset = UNSET
     workspace_id: UUID | Unset = UNSET
     region_id: UUID | Unset = UNSET
-    loadbalancer_mode: LoadbalancerModeEnum | Unset = UNSET
+    loadbalancer_mode: PatchedK8SControlplaneRequestLoadbalancerMode | Unset = UNSET
     loadbalancer_provider: str | Unset = UNSET
-    exposure_type: ExposureTypeEnum | Unset = UNSET
+    exposure_type: PatchedK8SControlplaneRequestExposureType | Unset = UNSET
     parent_gateway_name: str | Unset = UNSET
     parent_gateway_namespace: str | Unset = UNSET
     parent_gateway_section_name: str | Unset = UNSET
@@ -209,6 +247,8 @@ class PatchedK8SControlplaneRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -429,7 +469,9 @@ class PatchedK8SControlplaneRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -540,11 +582,11 @@ class PatchedK8SControlplaneRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedK8SControlplaneRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_k8s_controlplane_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -571,18 +613,18 @@ class PatchedK8SControlplaneRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: PatchedK8SControlplaneRequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_patched_k8s_controlplane_request_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: PatchedK8SControlplaneRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_patched_k8s_controlplane_request_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -612,7 +654,15 @@ class PatchedK8SControlplaneRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedK8SControlplaneRequestCriticalityType1
+            | PatchedK8SControlplaneRequestCriticalityType2Type1
+            | PatchedK8SControlplaneRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -620,20 +670,35 @@ class PatchedK8SControlplaneRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_k8s_controlplane_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_k8s_controlplane_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_k8s_controlplane_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedK8SControlplaneRequestCriticalityType1
+                | PatchedK8SControlplaneRequestCriticalityType2Type1
+                | PatchedK8SControlplaneRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -692,20 +757,20 @@ class PatchedK8SControlplaneRequest:
             region_id = UUID(_region_id)
 
         _loadbalancer_mode = d.pop("loadbalancer_mode", UNSET)
-        loadbalancer_mode: LoadbalancerModeEnum | Unset
+        loadbalancer_mode: PatchedK8SControlplaneRequestLoadbalancerMode | Unset
         if isinstance(_loadbalancer_mode, Unset):
             loadbalancer_mode = UNSET
         else:
-            loadbalancer_mode = check_loadbalancer_mode_enum(_loadbalancer_mode)
+            loadbalancer_mode = check_patched_k8s_controlplane_request_loadbalancer_mode(_loadbalancer_mode)
 
         loadbalancer_provider = d.pop("loadbalancer_provider", UNSET)
 
         _exposure_type = d.pop("exposure_type", UNSET)
-        exposure_type: ExposureTypeEnum | Unset
+        exposure_type: PatchedK8SControlplaneRequestExposureType | Unset
         if isinstance(_exposure_type, Unset):
             exposure_type = UNSET
         else:
-            exposure_type = check_exposure_type_enum(_exposure_type)
+            exposure_type = check_patched_k8s_controlplane_request_exposure_type(_exposure_type)
 
         parent_gateway_name = d.pop("parent_gateway_name", UNSET)
 

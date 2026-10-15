@@ -8,9 +8,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.note_kind_enum import NoteKindEnum, check_note_kind_enum
+from ..models.note_list_effective_criticality_type_1 import (
+    NoteListEffectiveCriticalityType1,
+    check_note_list_effective_criticality_type_1,
+)
+from ..models.note_list_effective_criticality_type_2_type_1 import (
+    NoteListEffectiveCriticalityType2Type1,
+    check_note_list_effective_criticality_type_2_type_1,
+)
+from ..models.note_list_effective_criticality_type_3_type_1 import (
+    NoteListEffectiveCriticalityType3Type1,
+    check_note_list_effective_criticality_type_3_type_1,
+)
+from ..models.note_list_kind import NoteListKind, check_note_list_kind
+from ..models.note_list_state import NoteListState, check_note_list_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -37,7 +48,7 @@ class NoteList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (NoteListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -54,7 +65,8 @@ class NoteList:
             workspace (WorkspaceSimple):
             created (NoteListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | NoteListEffectiveCriticalityType1 | NoteListEffectiveCriticalityType2Type1 |
+                NoteListEffectiveCriticalityType3Type1):
             url (str): Gibt die absolute URL zum Object zurück.
             kind_display (str):
             content (str): The note content/text (Markdown)
@@ -65,7 +77,9 @@ class NoteList:
             created_by_user (None | NoteListCreatedByUserType0):
             project (None | NoteListProjectType0):
             parent_note (None | NoteListParentNoteType0):
-            kind (NoteKindEnum | Unset): * `info` - Information
+            kind (NoteListKind | Unset): Kind of note
+
+                * `info` - Information
                 * `warning` - Warning
                 * `todo` - Todo
                 * `reminder` - Reminder
@@ -85,7 +99,7 @@ class NoteList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: NoteListState
     labels: Any
     condition_instance_count: int
     active_condition_instances: list[NoteListActiveConditionInstancesItem]
@@ -94,7 +108,12 @@ class NoteList:
     workspace: WorkspaceSimple
     created: NoteListCreated
     archived: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | NoteListEffectiveCriticalityType1
+        | NoteListEffectiveCriticalityType2Type1
+        | NoteListEffectiveCriticalityType3Type1
+    )
     url: str
     kind_display: str
     content: str
@@ -105,7 +124,7 @@ class NoteList:
     created_by_user: None | NoteListCreatedByUserType0
     project: None | NoteListProjectType0
     parent_note: None | NoteListParentNoteType0
-    kind: NoteKindEnum | Unset = UNSET
+    kind: NoteListKind | Unset = UNSET
     resolved: bool | Unset = UNSET
     time_tracked_hours: None | str | Unset = UNSET
     tracked_at: datetime.datetime | None | Unset = UNSET
@@ -144,6 +163,10 @@ class NoteList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -249,9 +272,7 @@ class NoteList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.note_list_active_condition_instances_item import (
-            NoteListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.note_list_active_condition_instances_item import NoteListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.note_list_assignees_item import NoteListAssigneesItem  # noqa: PLC0415
         from ..models.note_list_created import NoteListCreated  # noqa: PLC0415
         from ..models.note_list_created_by_user_type_0 import NoteListCreatedByUserType0  # noqa: PLC0415
@@ -266,7 +287,7 @@ class NoteList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_note_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -291,18 +312,47 @@ class NoteList:
 
         archived = d.pop("archived")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | NoteListEffectiveCriticalityType1
+            | NoteListEffectiveCriticalityType2Type1
+            | NoteListEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_note_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_note_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_note_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | NoteListEffectiveCriticalityType1
+                | NoteListEffectiveCriticalityType2Type1
+                | NoteListEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -389,11 +439,11 @@ class NoteList:
         parent_note = _parse_parent_note(d.pop("parent_note"))
 
         _kind = d.pop("kind", UNSET)
-        kind: NoteKindEnum | Unset
+        kind: NoteListKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_note_kind_enum(_kind)
+            kind = check_note_list_kind(_kind)
 
         resolved = d.pop("resolved", UNSET)
 

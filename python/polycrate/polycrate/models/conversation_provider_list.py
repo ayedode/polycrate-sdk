@@ -8,7 +8,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
+from ..models.conversation_provider_list_kind import ConversationProviderListKind, check_conversation_provider_list_kind
 
 if TYPE_CHECKING:
     from ..models.credential_simple import CredentialSimple
@@ -26,7 +26,9 @@ class ConversationProviderList:
         Attributes:
             id (UUID):
             name (str):
-            kind (ConversationKindEnum): * `generic` - Generic
+            kind (ConversationProviderListKind): Type of conversation provider
+
+                * `generic` - Generic
                 * `zammad` - Zammad
                 * `slack` - Slack
                 * `discord` - Discord
@@ -43,7 +45,7 @@ class ConversationProviderList:
 
     id: UUID
     name: str
-    kind: ConversationKindEnum
+    kind: ConversationProviderListKind
     organization: OrganizationSimple
     credential: CredentialSimple
     created_at: datetime.datetime
@@ -91,7 +93,7 @@ class ConversationProviderList:
 
         name = d.pop("name")
 
-        kind = check_conversation_kind_enum(d.pop("kind"))
+        kind = check_conversation_provider_list_kind(d.pop("kind"))
 
         organization = OrganizationSimple.from_dict(d.pop("organization"))
 

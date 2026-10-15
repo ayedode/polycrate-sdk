@@ -9,12 +9,30 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.host_kind_enum import HostKindEnum, check_host_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.role_28f_enum import Role28FEnum, check_role_28f_enum
+from ..models.host_request_created_by_component_type_1 import (
+    HostRequestCreatedByComponentType1,
+    check_host_request_created_by_component_type_1,
+)
+from ..models.host_request_created_by_component_type_2_type_1 import (
+    HostRequestCreatedByComponentType2Type1,
+    check_host_request_created_by_component_type_2_type_1,
+)
+from ..models.host_request_created_by_component_type_3_type_1 import (
+    HostRequestCreatedByComponentType3Type1,
+    check_host_request_created_by_component_type_3_type_1,
+)
+from ..models.host_request_criticality_type_1 import HostRequestCriticalityType1, check_host_request_criticality_type_1
+from ..models.host_request_criticality_type_2_type_1 import (
+    HostRequestCriticalityType2Type1,
+    check_host_request_criticality_type_2_type_1,
+)
+from ..models.host_request_criticality_type_3_type_1 import (
+    HostRequestCriticalityType3Type1,
+    check_host_request_criticality_type_3_type_1,
+)
+from ..models.host_request_kind import HostRequestKind, check_host_request_kind
+from ..models.host_request_provider import HostRequestProvider, check_host_request_provider
+from ..models.host_request_role import HostRequestRole, check_host_request_role
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="HostRequest")
@@ -48,7 +66,7 @@ class HostRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (HostRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -64,15 +82,15 @@ class HostRequest:
             provider_reference (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (HostKindEnum | Unset): * `vm` - Virtual Machine
+            kind (HostRequestKind | Unset): * `vm` - Virtual Machine
                 * `bare_metal` - Bare-Metal Machine
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (HostRequestCriticalityType1 | HostRequestCriticalityType2Type1 | HostRequestCriticalityType3Type1 |
+                None | Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -83,14 +101,15 @@ class HostRequest:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (HostRequestCreatedByComponentType1 | HostRequestCreatedByComponentType2Type1 |
+                HostRequestCreatedByComponentType3Type1 | None | Unset): Component that created this object: cli, operator, or
+                api.
 
                 * `cli` - CLI
                 * `operator` - Operator
                 * `api` - API
             alias (None | str | Unset):
-            role (BlankEnum | Role28FEnum | Unset): Host role (e.g. k8s-worker). Spec: polycrate spec inspect 729.
+            role (HostRequestRole | Unset): Host role (e.g. k8s-worker). Spec: polycrate spec inspect 729.
 
                 * `k8s-worker` - Kubernetes Worker
                 * `k8s-controlplane` - Kubernetes Controlplane
@@ -112,9 +131,12 @@ class HostRequest:
             provider_account_id (None | Unset | UUID):
             description (None | str | Unset):
             credential (None | Unset | UUID):
-            ssh_keys_id (None | Unset | UUID):
+            ssh_keys_id (None | Unset | UUID): Optional SSH credential to seed on the VM. Default is
+                Workspace.ssh_key_credential.
+            workspace_id (None | Unset | UUID):
             k8s_cluster (None | Unset | UUID):
             product_id (None | Unset | UUID):
+            region_id (None | Unset | UUID):
     """
 
     name: str
@@ -123,24 +145,32 @@ class HostRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: HostRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: HostKindEnum | Unset = UNSET
+    kind: HostRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        HostRequestCriticalityType1 | HostRequestCriticalityType2Type1 | HostRequestCriticalityType3Type1 | None | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        HostRequestCreatedByComponentType1
+        | HostRequestCreatedByComponentType2Type1
+        | HostRequestCreatedByComponentType3Type1
+        | None
+        | Unset
+    ) = UNSET
     alias: None | str | Unset = UNSET
-    role: BlankEnum | Role28FEnum | Unset = UNSET
+    role: HostRequestRole | Unset = UNSET
     active: bool | Unset = UNSET
     default_ipv4: None | str | Unset = UNSET
     default_ipv6: None | str | Unset = UNSET
@@ -159,8 +189,10 @@ class HostRequest:
     description: None | str | Unset = UNSET
     credential: None | Unset | UUID = UNSET
     ssh_keys_id: None | Unset | UUID = UNSET
+    workspace_id: None | Unset | UUID = UNSET
     k8s_cluster: None | Unset | UUID = UNSET
     product_id: None | Unset | UUID = UNSET
+    region_id: None | Unset | UUID = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -223,6 +255,8 @@ class HostRequest:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -255,6 +289,8 @@ class HostRequest:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -264,12 +300,8 @@ class HostRequest:
         else:
             alias = self.alias
 
-        role: str | Unset
-        if isinstance(self.role, Unset):
-            role = UNSET
-        elif isinstance(self.role, str):
-            role = self.role
-        else:
+        role: str | Unset = UNSET
+        if not isinstance(self.role, Unset):
             role = self.role
 
         active = self.active
@@ -382,6 +414,14 @@ class HostRequest:
         else:
             ssh_keys_id = self.ssh_keys_id
 
+        workspace_id: None | str | Unset
+        if isinstance(self.workspace_id, Unset):
+            workspace_id = UNSET
+        elif isinstance(self.workspace_id, UUID):
+            workspace_id = str(self.workspace_id)
+        else:
+            workspace_id = self.workspace_id
+
         k8s_cluster: None | str | Unset
         if isinstance(self.k8s_cluster, Unset):
             k8s_cluster = UNSET
@@ -397,6 +437,14 @@ class HostRequest:
             product_id = str(self.product_id)
         else:
             product_id = self.product_id
+
+        region_id: None | str | Unset
+        if isinstance(self.region_id, Unset):
+            region_id = UNSET
+        elif isinstance(self.region_id, UUID):
+            region_id = str(self.region_id)
+        else:
+            region_id = self.region_id
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -486,10 +534,14 @@ class HostRequest:
             field_dict["credential"] = credential
         if ssh_keys_id is not UNSET:
             field_dict["ssh_keys_id"] = ssh_keys_id
+        if workspace_id is not UNSET:
+            field_dict["workspace_id"] = workspace_id
         if k8s_cluster is not UNSET:
             field_dict["k8s_cluster"] = k8s_cluster
         if product_id is not UNSET:
             field_dict["product_id"] = product_id
+        if region_id is not UNSET:
+            field_dict["region_id"] = region_id
 
         return field_dict
 
@@ -552,7 +604,9 @@ class HostRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -584,7 +638,9 @@ class HostRequest:
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
         if not isinstance(self.created_by_component, Unset):
-            if isinstance(self.created_by_component, str):
+            if self.created_by_component is None:
+                files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
+            elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
             elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
@@ -598,10 +654,7 @@ class HostRequest:
                 files.append(("alias", (None, str(self.alias).encode(), "text/plain")))
 
         if not isinstance(self.role, Unset):
-            if isinstance(self.role, str):
-                files.append(("role", (None, str(self.role).encode(), "text/plain")))
-            else:
-                files.append(("role", (None, str(self.role).encode(), "text/plain")))
+            files.append(("role", (None, str(self.role).encode(), "text/plain")))
 
         if not isinstance(self.active, Unset):
             files.append(("active", (None, str(self.active).encode(), "text/plain")))
@@ -730,6 +783,12 @@ class HostRequest:
             else:
                 files.append(("ssh_keys_id", (None, str(self.ssh_keys_id).encode(), "text/plain")))
 
+        if not isinstance(self.workspace_id, Unset):
+            if isinstance(self.workspace_id, UUID):
+                files.append(("workspace_id", (None, str(self.workspace_id), "text/plain")))
+            else:
+                files.append(("workspace_id", (None, str(self.workspace_id).encode(), "text/plain")))
+
         if not isinstance(self.k8s_cluster, Unset):
             if isinstance(self.k8s_cluster, UUID):
                 files.append(("k8s_cluster", (None, str(self.k8s_cluster), "text/plain")))
@@ -741,6 +800,12 @@ class HostRequest:
                 files.append(("product_id", (None, str(self.product_id), "text/plain")))
             else:
                 files.append(("product_id", (None, str(self.product_id).encode(), "text/plain")))
+
+        if not isinstance(self.region_id, Unset):
+            if isinstance(self.region_id, UUID):
+                files.append(("region_id", (None, str(self.region_id), "text/plain")))
+            else:
+                files.append(("region_id", (None, str(self.region_id).encode(), "text/plain")))
 
         for prop_name, prop in self.additional_properties.items():
             files.append((prop_name, (None, str(prop).encode(), "text/plain")))
@@ -770,11 +835,11 @@ class HostRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: HostRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_host_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -790,11 +855,11 @@ class HostRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: HostKindEnum | Unset
+        kind: HostRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_host_kind_enum(_kind)
+            kind = check_host_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -826,7 +891,15 @@ class HostRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            HostRequestCriticalityType1
+            | HostRequestCriticalityType2Type1
+            | HostRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -834,20 +907,35 @@ class HostRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_host_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_host_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_host_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                HostRequestCriticalityType1
+                | HostRequestCriticalityType2Type1
+                | HostRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -882,7 +970,15 @@ class HostRequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            HostRequestCreatedByComponentType1
+            | HostRequestCreatedByComponentType2Type1
+            | HostRequestCreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -890,20 +986,35 @@ class HostRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_host_request_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_host_request_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_host_request_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                HostRequestCreatedByComponentType1
+                | HostRequestCreatedByComponentType2Type1
+                | HostRequestCreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -916,24 +1027,12 @@ class HostRequest:
 
         alias = _parse_alias(d.pop("alias", UNSET))
 
-        def _parse_role(data: object) -> BlankEnum | Role28FEnum | Unset:
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                role_type_0 = check_role_28f_enum(data)
-
-                return role_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            if not isinstance(data, str):
-                raise TypeError()
-            role_type_1 = check_blank_enum(data)
-
-            return role_type_1
-
-        role = _parse_role(d.pop("role", UNSET))
+        _role = d.pop("role", UNSET)
+        role: HostRequestRole | Unset
+        if isinstance(_role, Unset):
+            role = UNSET
+        else:
+            role = check_host_request_role(_role)
 
         active = d.pop("active", UNSET)
 
@@ -1116,6 +1215,23 @@ class HostRequest:
 
         ssh_keys_id = _parse_ssh_keys_id(d.pop("ssh_keys_id", UNSET))
 
+        def _parse_workspace_id(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                workspace_id_type_0 = UUID(data)
+
+                return workspace_id_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        workspace_id = _parse_workspace_id(d.pop("workspace_id", UNSET))
+
         def _parse_k8s_cluster(data: object) -> None | Unset | UUID:
             if data is None:
                 return data
@@ -1149,6 +1265,23 @@ class HostRequest:
             return cast(None | Unset | UUID, data)
 
         product_id = _parse_product_id(d.pop("product_id", UNSET))
+
+        def _parse_region_id(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                region_id_type_0 = UUID(data)
+
+                return region_id_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        region_id = _parse_region_id(d.pop("region_id", UNSET))
 
         host_request = cls(
             name=name,
@@ -1193,8 +1326,10 @@ class HostRequest:
             description=description,
             credential=credential,
             ssh_keys_id=ssh_keys_id,
+            workspace_id=workspace_id,
             k8s_cluster=k8s_cluster,
             product_id=product_id,
+            region_id=region_id,
         )
 
         host_request.additional_properties = d

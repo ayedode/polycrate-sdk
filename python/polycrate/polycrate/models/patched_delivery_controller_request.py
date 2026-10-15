@@ -9,10 +9,26 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.delivery_controller_kind_enum import DeliveryControllerKindEnum, check_delivery_controller_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.patched_delivery_controller_request_criticality_type_1 import (
+    PatchedDeliveryControllerRequestCriticalityType1,
+    check_patched_delivery_controller_request_criticality_type_1,
+)
+from ..models.patched_delivery_controller_request_criticality_type_2_type_1 import (
+    PatchedDeliveryControllerRequestCriticalityType2Type1,
+    check_patched_delivery_controller_request_criticality_type_2_type_1,
+)
+from ..models.patched_delivery_controller_request_criticality_type_3_type_1 import (
+    PatchedDeliveryControllerRequestCriticalityType3Type1,
+    check_patched_delivery_controller_request_criticality_type_3_type_1,
+)
+from ..models.patched_delivery_controller_request_kind import (
+    PatchedDeliveryControllerRequestKind,
+    check_patched_delivery_controller_request_kind,
+)
+from ..models.patched_delivery_controller_request_provider import (
+    PatchedDeliveryControllerRequestProvider,
+    check_patched_delivery_controller_request_provider,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedDeliveryControllerRequest")
@@ -29,7 +45,7 @@ class PatchedDeliveryControllerRequest:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (PatchedDeliveryControllerRequestProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -46,7 +62,9 @@ class PatchedDeliveryControllerRequest:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (DeliveryControllerKindEnum | Unset): * `generic` - Generic
+        kind (PatchedDeliveryControllerRequestKind | Unset): Type of delivery controller
+
+            * `generic` - Generic
             * `argocd` - ArgoCD
             * `flux` - Flux
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -54,8 +72,9 @@ class PatchedDeliveryControllerRequest:
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | PatchedDeliveryControllerRequestCriticalityType1 |
+            PatchedDeliveryControllerRequestCriticalityType2Type1 | PatchedDeliveryControllerRequestCriticalityType3Type1 |
+            Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -83,17 +102,23 @@ class PatchedDeliveryControllerRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedDeliveryControllerRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: DeliveryControllerKindEnum | Unset = UNSET
+    kind: PatchedDeliveryControllerRequestKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedDeliveryControllerRequestCriticalityType1
+        | PatchedDeliveryControllerRequestCriticalityType2Type1
+        | PatchedDeliveryControllerRequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -171,6 +196,8 @@ class PatchedDeliveryControllerRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -374,7 +401,9 @@ class PatchedDeliveryControllerRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -479,11 +508,11 @@ class PatchedDeliveryControllerRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedDeliveryControllerRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_delivery_controller_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -508,11 +537,11 @@ class PatchedDeliveryControllerRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: DeliveryControllerKindEnum | Unset
+        kind: PatchedDeliveryControllerRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_delivery_controller_kind_enum(_kind)
+            kind = check_patched_delivery_controller_request_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -544,7 +573,15 @@ class PatchedDeliveryControllerRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedDeliveryControllerRequestCriticalityType1
+            | PatchedDeliveryControllerRequestCriticalityType2Type1
+            | PatchedDeliveryControllerRequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -552,20 +589,35 @@ class PatchedDeliveryControllerRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_delivery_controller_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_delivery_controller_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_delivery_controller_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedDeliveryControllerRequestCriticalityType1
+                | PatchedDeliveryControllerRequestCriticalityType2Type1
+                | PatchedDeliveryControllerRequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

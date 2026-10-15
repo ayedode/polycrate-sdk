@@ -8,7 +8,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.contact_group_kind_enum import ContactGroupKindEnum, check_contact_group_kind_enum
+from ..models.patched_contact_group_request_kind import (
+    PatchedContactGroupRequestKind,
+    check_patched_contact_group_request_kind,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedContactGroupRequest")
@@ -22,7 +25,9 @@ class PatchedContactGroupRequest:
 
         Attributes:
             name (str | Unset):
-            kind (ContactGroupKindEnum | Unset): * `generic` - Generic
+            kind (PatchedContactGroupRequestKind | Unset): Type of contact group
+
+                * `generic` - Generic
                 * `dynamic` - Dynamic
             organization_id (UUID | Unset):
             email (None | str | Unset): Group email address for notifications
@@ -31,7 +36,7 @@ class PatchedContactGroupRequest:
     """
 
     name: str | Unset = UNSET
-    kind: ContactGroupKindEnum | Unset = UNSET
+    kind: PatchedContactGroupRequestKind | Unset = UNSET
     organization_id: UUID | Unset = UNSET
     email: None | str | Unset = UNSET
     dynamic_rules: Any | Unset = UNSET
@@ -119,11 +124,11 @@ class PatchedContactGroupRequest:
         name = d.pop("name", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: ContactGroupKindEnum | Unset
+        kind: PatchedContactGroupRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_contact_group_kind_enum(_kind)
+            kind = check_patched_contact_group_request_kind(_kind)
 
         _organization_id = d.pop("organization_id", UNSET)
         organization_id: UUID | Unset

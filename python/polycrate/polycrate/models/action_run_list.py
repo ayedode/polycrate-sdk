@@ -8,9 +8,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.action_run_status_enum import ActionRunStatusEnum, check_action_run_status_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.action_run_list_effective_criticality_type_1 import (
+    ActionRunListEffectiveCriticalityType1,
+    check_action_run_list_effective_criticality_type_1,
+)
+from ..models.action_run_list_effective_criticality_type_2_type_1 import (
+    ActionRunListEffectiveCriticalityType2Type1,
+    check_action_run_list_effective_criticality_type_2_type_1,
+)
+from ..models.action_run_list_effective_criticality_type_3_type_1 import (
+    ActionRunListEffectiveCriticalityType3Type1,
+    check_action_run_list_effective_criticality_type_3_type_1,
+)
+from ..models.action_run_list_state import ActionRunListState, check_action_run_list_state
+from ..models.action_run_list_status import ActionRunListStatus, check_action_run_list_status
 
 if TYPE_CHECKING:
     from ..models.action_run_list_active_condition_instances_item import ActionRunListActiveConditionInstancesItem
@@ -41,7 +52,7 @@ class ActionRunList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (ActionRunListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -59,9 +70,10 @@ class ActionRunList:
             created (ActionRunListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (ActionRunListEffectiveCriticalityType1 | ActionRunListEffectiveCriticalityType2Type1 |
+                ActionRunListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
-            status (ActionRunStatusEnum): * `pending` - Pending
+            status (ActionRunListStatus): * `pending` - Pending
                 * `running` - Running
                 * `success` - Success
                 * `failed` - Failed
@@ -79,7 +91,7 @@ class ActionRunList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: ActionRunListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -90,9 +102,14 @@ class ActionRunList:
     created: ActionRunListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        ActionRunListEffectiveCriticalityType1
+        | ActionRunListEffectiveCriticalityType2Type1
+        | ActionRunListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
-    status: ActionRunStatusEnum
+    status: ActionRunListStatus
     action: None | str
     block: BlockRef
     started_at: datetime.datetime | None
@@ -145,6 +162,10 @@ class ActionRunList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -212,9 +233,7 @@ class ActionRunList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.action_run_list_active_condition_instances_item import (
-            ActionRunListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.action_run_list_active_condition_instances_item import ActionRunListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.action_run_list_created import ActionRunListCreated  # noqa: PLC0415
         from ..models.action_run_list_created_by_user_type_0 import ActionRunListCreatedByUserType0  # noqa: PLC0415
         from ..models.action_run_list_organization_type_0 import ActionRunListOrganizationType0  # noqa: PLC0415
@@ -226,7 +245,7 @@ class ActionRunList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_action_run_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -281,24 +300,53 @@ class ActionRunList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            ActionRunListEffectiveCriticalityType1
+            | ActionRunListEffectiveCriticalityType2Type1
+            | ActionRunListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_action_run_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_action_run_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_action_run_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ActionRunListEffectiveCriticalityType1
+                | ActionRunListEffectiveCriticalityType2Type1
+                | ActionRunListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
         url = d.pop("url")
 
-        status = check_action_run_status_enum(d.pop("status"))
+        status = check_action_run_list_status(d.pop("status"))
 
         def _parse_action(data: object) -> None | str:
             if data is None:

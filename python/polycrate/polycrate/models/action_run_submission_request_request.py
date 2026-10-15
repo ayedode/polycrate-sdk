@@ -183,9 +183,7 @@ class ActionRunSubmissionRequestRequest:
         from ..models.action_run_submission_request_request_block_config_type_0 import (
             ActionRunSubmissionRequestRequestBlockConfigType0,  # noqa: PLC0415
         )
-        from ..models.action_run_submission_request_request_metadata import (
-            ActionRunSubmissionRequestRequestMetadata,  # noqa: PLC0415
-        )
+        from ..models.action_run_submission_request_request_metadata import ActionRunSubmissionRequestRequestMetadata  # noqa: PLC0415
 
         d = dict(src_dict)
         organization = d.pop("organization")

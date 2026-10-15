@@ -8,14 +8,44 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.maintenance_created_by_component_type_1 import (
+    MaintenanceCreatedByComponentType1,
+    check_maintenance_created_by_component_type_1,
+)
+from ..models.maintenance_created_by_component_type_2_type_1 import (
+    MaintenanceCreatedByComponentType2Type1,
+    check_maintenance_created_by_component_type_2_type_1,
+)
+from ..models.maintenance_created_by_component_type_3_type_1 import (
+    MaintenanceCreatedByComponentType3Type1,
+    check_maintenance_created_by_component_type_3_type_1,
+)
+from ..models.maintenance_criticality_type_1 import MaintenanceCriticalityType1, check_maintenance_criticality_type_1
+from ..models.maintenance_criticality_type_2_type_1 import (
+    MaintenanceCriticalityType2Type1,
+    check_maintenance_criticality_type_2_type_1,
+)
+from ..models.maintenance_criticality_type_3_type_1 import (
+    MaintenanceCriticalityType3Type1,
+    check_maintenance_criticality_type_3_type_1,
+)
+from ..models.maintenance_effective_criticality_type_1 import (
+    MaintenanceEffectiveCriticalityType1,
+    check_maintenance_effective_criticality_type_1,
+)
+from ..models.maintenance_effective_criticality_type_2_type_1 import (
+    MaintenanceEffectiveCriticalityType2Type1,
+    check_maintenance_effective_criticality_type_2_type_1,
+)
+from ..models.maintenance_effective_criticality_type_3_type_1 import (
+    MaintenanceEffectiveCriticalityType3Type1,
+    check_maintenance_effective_criticality_type_3_type_1,
+)
+from ..models.maintenance_kind import MaintenanceKind, check_maintenance_kind
+from ..models.maintenance_last_state import MaintenanceLastState, check_maintenance_last_state
+from ..models.maintenance_provider import MaintenanceProvider, check_maintenance_provider
+from ..models.maintenance_scope import MaintenanceScope, check_maintenance_scope
+from ..models.maintenance_state import MaintenanceState, check_maintenance_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -57,7 +87,8 @@ class Maintenance:
             is_class_icon (bool):
             effective_slo_target (float | None):
             effective_sla_target (float | None):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (MaintenanceEffectiveCriticalityType1 | MaintenanceEffectiveCriticalityType2Type1 |
+                MaintenanceEffectiveCriticalityType3Type1 | None):
             last_action_run (MaintenanceLastActionRunType0 | None):
             deleted_by_user (MaintenanceDeletedByUserType0 | None):
             pop (PopSimple): Simple serializer for embedding Pop in other serializers.
@@ -72,14 +103,14 @@ class Maintenance:
             deleted_at (datetime.datetime | None): Timestamp when this object was soft-deleted. Null if not deleted.
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
-            state (LastStateEnum): * `OK` - Ok
+            state (MaintenanceState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (MaintenanceLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -111,7 +142,7 @@ class Maintenance:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (MaintenanceProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -130,14 +161,18 @@ class Maintenance:
             last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
             discovery_enabled (bool | Unset):
             platform_service (bool | Unset):
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (MaintenanceScope | Unset): The scope is used to separate `system` owned objects from `user` owned
+                objects.
+
+                * `system` - System
                 * `user` - User
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (MaintenanceKind | Unset): * `generic` - Generic
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (MaintenanceCreatedByComponentType1 | MaintenanceCreatedByComponentType2Type1 |
+                MaintenanceCreatedByComponentType3Type1 | None | Unset): Component that created this object: cli, operator, or
+                api.
 
                 * `cli` - CLI
                 * `operator` - Operator
@@ -151,8 +186,8 @@ class Maintenance:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (MaintenanceCriticalityType1 | MaintenanceCriticalityType2Type1 | MaintenanceCriticalityType3Type1 |
+                None | Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -190,7 +225,12 @@ class Maintenance:
     is_class_icon: bool
     effective_slo_target: float | None
     effective_sla_target: float | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        MaintenanceEffectiveCriticalityType1
+        | MaintenanceEffectiveCriticalityType2Type1
+        | MaintenanceEffectiveCriticalityType3Type1
+        | None
+    )
     last_action_run: MaintenanceLastActionRunType0 | None
     deleted_by_user: MaintenanceDeletedByUserType0 | None
     pop: PopSimple
@@ -204,9 +244,9 @@ class Maintenance:
     updated_at: datetime.datetime
     deleted_at: datetime.datetime | None
     is_deleted: bool
-    state: LastStateEnum
+    state: MaintenanceState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: MaintenanceLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -229,19 +269,25 @@ class Maintenance:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: MaintenanceProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: MaintenanceScope | Unset = UNSET
+    kind: MaintenanceKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        MaintenanceCreatedByComponentType1
+        | MaintenanceCreatedByComponentType2Type1
+        | MaintenanceCreatedByComponentType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -250,7 +296,9 @@ class Maintenance:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        MaintenanceCriticalityType1 | MaintenanceCriticalityType2Type1 | MaintenanceCriticalityType3Type1 | None | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
     draft: bool | Unset = UNSET
@@ -299,6 +347,10 @@ class Maintenance:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -483,6 +535,8 @@ class Maintenance:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -525,6 +579,8 @@ class Maintenance:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -800,18 +856,47 @@ class Maintenance:
 
         effective_sla_target = _parse_effective_sla_target(d.pop("effective_sla_target"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            MaintenanceEffectiveCriticalityType1
+            | MaintenanceEffectiveCriticalityType2Type1
+            | MaintenanceEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_maintenance_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_maintenance_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_maintenance_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                MaintenanceEffectiveCriticalityType1
+                | MaintenanceEffectiveCriticalityType2Type1
+                | MaintenanceEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -895,7 +980,7 @@ class Maintenance:
 
         is_deleted = d.pop("is_deleted")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_maintenance_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -904,7 +989,7 @@ class Maintenance:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_maintenance_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -1025,11 +1110,11 @@ class Maintenance:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: MaintenanceProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_maintenance_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1067,18 +1152,18 @@ class Maintenance:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: MaintenanceScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_maintenance_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: MaintenanceKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_maintenance_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -1108,7 +1193,15 @@ class Maintenance:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            MaintenanceCreatedByComponentType1
+            | MaintenanceCreatedByComponentType2Type1
+            | MaintenanceCreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1116,20 +1209,35 @@ class Maintenance:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_maintenance_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_maintenance_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_maintenance_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                MaintenanceCreatedByComponentType1
+                | MaintenanceCreatedByComponentType2Type1
+                | MaintenanceCreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1184,7 +1292,15 @@ class Maintenance:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            MaintenanceCriticalityType1
+            | MaintenanceCriticalityType2Type1
+            | MaintenanceCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1192,20 +1308,35 @@ class Maintenance:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_maintenance_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_maintenance_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_maintenance_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                MaintenanceCriticalityType1
+                | MaintenanceCriticalityType2Type1
+                | MaintenanceCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

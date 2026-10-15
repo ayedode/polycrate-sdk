@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.endpoint_kind_enum import EndpointKindEnum, check_endpoint_kind_enum
+from ..models.agent_endpoint_kind import AgentEndpointKind, check_agent_endpoint_kind
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -30,7 +30,7 @@ class AgentEndpoint:
         Attributes:
             id (UUID):
             name (str):
-            kind (EndpointKindEnum): * `icmp` - ICMP Endpoint
+            kind (AgentEndpointKind): * `icmp` - ICMP Endpoint
                 * `http` - HTTP Endpoint
                 * `tcp` - TCP Endpoint
                 * `dns` - DNS Endpoint
@@ -43,7 +43,7 @@ class AgentEndpoint:
 
     id: UUID
     name: str
-    kind: EndpointKindEnum
+    kind: AgentEndpointKind
     remote_address: str
     remote_port: int | None
     workspace: AgentEndpointWorkspaceType0 | None
@@ -116,7 +116,7 @@ class AgentEndpoint:
 
         name = d.pop("name")
 
-        kind = check_endpoint_kind_enum(d.pop("kind"))
+        kind = check_agent_endpoint_kind(d.pop("kind"))
 
         remote_address = d.pop("remote_address")
 

@@ -7,8 +7,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
-from ..models.conversation_status_enum import ConversationStatusEnum, check_conversation_status_enum
+from ..models.conversation_post_kind import ConversationPostKind, check_conversation_post_kind
+from ..models.conversation_post_status import ConversationPostStatus, check_conversation_post_status
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ConversationPost")
@@ -22,14 +22,18 @@ class ConversationPost:
         Attributes:
             id (UUID):
             name (str):
-            kind (ConversationKindEnum | Unset): * `generic` - Generic
+            kind (ConversationPostKind | Unset): Type of conversation
+
+                * `generic` - Generic
                 * `zammad` - Zammad
                 * `slack` - Slack
                 * `discord` - Discord
                 * `telegram` - Telegram
                 * `msteams` - Microsoft Teams
                 * `email` - Email
-            status (ConversationStatusEnum | Unset): * `closed` - Closed
+            status (ConversationPostStatus | Unset): Current status of the conversation
+
+                * `closed` - Closed
                 * `waiting_for_operator` - Waiting for Operator
                 * `waiting_for_user` - Waiting for User
                 * `deleted` - Deleted
@@ -43,8 +47,8 @@ class ConversationPost:
 
     id: UUID
     name: str
-    kind: ConversationKindEnum | Unset = UNSET
-    status: ConversationStatusEnum | Unset = UNSET
+    kind: ConversationPostKind | Unset = UNSET
+    status: ConversationPostStatus | Unset = UNSET
     platform_service: bool | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     organization: None | Unset | UUID = UNSET
@@ -129,18 +133,18 @@ class ConversationPost:
         name = d.pop("name")
 
         _kind = d.pop("kind", UNSET)
-        kind: ConversationKindEnum | Unset
+        kind: ConversationPostKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_conversation_kind_enum(_kind)
+            kind = check_conversation_post_kind(_kind)
 
         _status = d.pop("status", UNSET)
-        status: ConversationStatusEnum | Unset
+        status: ConversationPostStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_conversation_status_enum(_status)
+            status = check_conversation_post_status(_status)
 
         platform_service = d.pop("platform_service", UNSET)
 

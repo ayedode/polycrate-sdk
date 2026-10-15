@@ -8,21 +8,76 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.delegation_source_enum import DelegationSourceEnum, check_delegation_source_enum
-from ..models.deployment_strategy_enum import DeploymentStrategyEnum, check_deployment_strategy_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.protocol_mode_enum import ProtocolModeEnum, check_protocol_mode_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.session_affinity_enum import SessionAffinityEnum, check_session_affinity_enum
+from ..models.loadbalancer_instance_criticality_type_1 import (
+    LoadbalancerInstanceCriticalityType1,
+    check_loadbalancer_instance_criticality_type_1,
+)
+from ..models.loadbalancer_instance_criticality_type_2_type_1 import (
+    LoadbalancerInstanceCriticalityType2Type1,
+    check_loadbalancer_instance_criticality_type_2_type_1,
+)
+from ..models.loadbalancer_instance_criticality_type_3_type_1 import (
+    LoadbalancerInstanceCriticalityType3Type1,
+    check_loadbalancer_instance_criticality_type_3_type_1,
+)
+from ..models.loadbalancer_instance_delegation_source_type_1 import (
+    LoadbalancerInstanceDelegationSourceType1,
+    check_loadbalancer_instance_delegation_source_type_1,
+)
+from ..models.loadbalancer_instance_delegation_source_type_2_type_1 import (
+    LoadbalancerInstanceDelegationSourceType2Type1,
+    check_loadbalancer_instance_delegation_source_type_2_type_1,
+)
+from ..models.loadbalancer_instance_delegation_source_type_3_type_1 import (
+    LoadbalancerInstanceDelegationSourceType3Type1,
+    check_loadbalancer_instance_delegation_source_type_3_type_1,
+)
+from ..models.loadbalancer_instance_deployment_strategy import (
+    LoadbalancerInstanceDeploymentStrategy,
+    check_loadbalancer_instance_deployment_strategy,
+)
+from ..models.loadbalancer_instance_effective_criticality_type_1 import (
+    LoadbalancerInstanceEffectiveCriticalityType1,
+    check_loadbalancer_instance_effective_criticality_type_1,
+)
+from ..models.loadbalancer_instance_effective_criticality_type_2_type_1 import (
+    LoadbalancerInstanceEffectiveCriticalityType2Type1,
+    check_loadbalancer_instance_effective_criticality_type_2_type_1,
+)
+from ..models.loadbalancer_instance_effective_criticality_type_3_type_1 import (
+    LoadbalancerInstanceEffectiveCriticalityType3Type1,
+    check_loadbalancer_instance_effective_criticality_type_3_type_1,
+)
+from ..models.loadbalancer_instance_engine_version import (
+    LoadbalancerInstanceEngineVersion,
+    check_loadbalancer_instance_engine_version,
+)
+from ..models.loadbalancer_instance_kind import LoadbalancerInstanceKind, check_loadbalancer_instance_kind
+from ..models.loadbalancer_instance_last_state import (
+    LoadbalancerInstanceLastState,
+    check_loadbalancer_instance_last_state,
+)
+from ..models.loadbalancer_instance_protocol_mode import (
+    LoadbalancerInstanceProtocolMode,
+    check_loadbalancer_instance_protocol_mode,
+)
+from ..models.loadbalancer_instance_provider import LoadbalancerInstanceProvider, check_loadbalancer_instance_provider
+from ..models.loadbalancer_instance_proxy_placement import (
+    LoadbalancerInstanceProxyPlacement,
+    check_loadbalancer_instance_proxy_placement,
+)
+from ..models.loadbalancer_instance_scope import LoadbalancerInstanceScope, check_loadbalancer_instance_scope
+from ..models.loadbalancer_instance_session_affinity import (
+    LoadbalancerInstanceSessionAffinity,
+    check_loadbalancer_instance_session_affinity,
+)
+from ..models.loadbalancer_instance_state import LoadbalancerInstanceState, check_loadbalancer_instance_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
+    from ..models.certificate_simple import CertificateSimple
     from ..models.ip_address_simple import IPAddressSimple
+    from ..models.lbi_v2_spec import LbiV2Spec
     from ..models.loadbalancer_instance_created import LoadbalancerInstanceCreated
     from ..models.loadbalancer_instance_deleted_by_user_type_0 import LoadbalancerInstanceDeletedByUserType0
     from ..models.loadbalancer_instance_deployment import LoadbalancerInstanceDeployment
@@ -51,14 +106,14 @@ class LoadbalancerInstance:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (LoadbalancerInstanceDeletedByUserType0 | None):
-            state (LastStateEnum): * `OK` - Ok
+            state (LoadbalancerInstanceState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (LoadbalancerInstanceLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -79,13 +134,17 @@ class LoadbalancerInstance:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (LoadbalancerInstanceScope): The scope is used to separate `system` owned objects from `user` owned
+                objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             tolerations (Any): Tolerations match conditions. If a toleration for a condition exists for an object, the
                 condition will not be applied.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (LoadbalancerInstanceEffectiveCriticalityType1 |
+                LoadbalancerInstanceEffectiveCriticalityType2Type1 | LoadbalancerInstanceEffectiveCriticalityType3Type1 | None):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (OrganizationSimple): Simple Organization serializer for nested representations.
 
@@ -114,14 +173,15 @@ class LoadbalancerInstance:
             ip_address_value (None | str):
             product (ProductSimple): Compact serializer for embedding Product as FK reference.
             computed_cost (float):
-            protocol_mode (ProtocolModeEnum): * `tcp` - TCP
+            protocol_mode (LoadbalancerInstanceProtocolMode): * `tcp` - TCP
                 * `http` - HTTP
             delegated_organization (OrganizationSimple): Simple Organization serializer for nested representations.
 
                 Includes `url` field for direct navigation.
             delegated_workspace (WorkspaceSimple):
             loopback_resource_id (None | str): Loopback API entity id (e.g. load-balancer id).
-            delegation_source (DelegationSourceEnum | None): Source of the delegation mapping.
+            delegation_source (LoadbalancerInstanceDelegationSourceType1 | LoadbalancerInstanceDelegationSourceType2Type1 |
+                LoadbalancerInstanceDelegationSourceType3Type1 | None): Source of the delegation mapping.
 
                 * `loopback_lb` - Loopback Load Balancer
                 * `loopback_object_store` - Loopback Object Store
@@ -130,13 +190,14 @@ class LoadbalancerInstance:
             haproxy_defaults (Any): Optional HAProxy defaults overrides: {timeout_client_fin, timeout_server_fin,
                 option_clitcpka, option_srvtcpka}. Empty inherits SystemConfig.
             effective_haproxy_defaults (LoadbalancerInstanceEffectiveHaproxyDefaults):
+            issued_certificate (CertificateSimple): Simple serializer for embedding Certificate in other serializers.
             name (str | Unset): Object name
             display_name (None | str | Unset): The display name is used to display the object in the UI. It can be different
                 from the name.
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (LoadbalancerInstanceProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -153,12 +214,13 @@ class LoadbalancerInstance:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (LoadbalancerInstanceKind | Unset): * `generic` - Generic
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (LoadbalancerInstanceCriticalityType1 | LoadbalancerInstanceCriticalityType2Type1 |
+                LoadbalancerInstanceCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace,
+                then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -176,15 +238,26 @@ class LoadbalancerInstance:
             ssl_redirect (bool | Unset):
             enable_websockets (bool | Unset):
             enable_grpc (bool | Unset):
-            session_affinity (SessionAffinityEnum | Unset): * `none` - None
+            session_affinity (LoadbalancerInstanceSessionAffinity | Unset): * `none` - None
                 * `cookie` - Cookie-based
                 * `ip` - Client IP
-            deployment_strategy (DeploymentStrategyEnum | Unset): * `rolling` - Rolling Update
+            deployment_strategy (LoadbalancerInstanceDeploymentStrategy | Unset): * `rolling` - Rolling Update
                 * `blue_green` - Blue-Green
                 * `canary` - Canary
             last_deployment (datetime.datetime | None | Unset):
             metrics_data (Any | Unset): Metrics data from VictoriaMetrics: connections, bytes in/out with medians for 1h,
                 24h, 30d
+            engine_version (LoadbalancerInstanceEngineVersion | Unset): 1 = HAProxy BlockRollout, 2 = Envoy Gateway API SSA.
+                Spec 705.
+
+                * `1` - HAProxy (v1)
+                * `2` - Envoy / Gateway API (v2)
+            spec (LbiV2Spec | None | Unset):
+            proxy_placement (LoadbalancerInstanceProxyPlacement | Unset): v2 placement. shared is rejected until a later
+                spec.
+
+                * `dedicated` - Dedicated
+                * `shared` - Shared
     """
 
     id: UUID
@@ -193,9 +266,9 @@ class LoadbalancerInstance:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: LoadbalancerInstanceDeletedByUserType0 | None
-    state: LastStateEnum
+    state: LoadbalancerInstanceState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: LoadbalancerInstanceLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -210,10 +283,15 @@ class LoadbalancerInstance:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: LoadbalancerInstanceScope
     conditions: Any
     tolerations: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        LoadbalancerInstanceEffectiveCriticalityType1
+        | LoadbalancerInstanceEffectiveCriticalityType2Type1
+        | LoadbalancerInstanceEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: OrganizationSimple
     workspace: WorkspaceSimple
@@ -232,30 +310,42 @@ class LoadbalancerInstance:
     ip_address_value: None | str
     product: ProductSimple
     computed_cost: float
-    protocol_mode: ProtocolModeEnum
+    protocol_mode: LoadbalancerInstanceProtocolMode
     delegated_organization: OrganizationSimple
     delegated_workspace: WorkspaceSimple
     loopback_resource_id: None | str
-    delegation_source: DelegationSourceEnum | None
+    delegation_source: (
+        LoadbalancerInstanceDelegationSourceType1
+        | LoadbalancerInstanceDelegationSourceType2Type1
+        | LoadbalancerInstanceDelegationSourceType3Type1
+        | None
+    )
     resource_limits: Any
     effective_resources: LoadbalancerInstanceEffectiveResources
     haproxy_defaults: Any
     effective_haproxy_defaults: LoadbalancerInstanceEffectiveHaproxyDefaults
+    issued_certificate: CertificateSimple
     name: str | Unset = UNSET
     display_name: None | str | Unset = UNSET
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: LoadbalancerInstanceProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: LoadbalancerInstanceKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        LoadbalancerInstanceCriticalityType1
+        | LoadbalancerInstanceCriticalityType2Type1
+        | LoadbalancerInstanceCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -268,19 +358,19 @@ class LoadbalancerInstance:
     ssl_redirect: bool | Unset = UNSET
     enable_websockets: bool | Unset = UNSET
     enable_grpc: bool | Unset = UNSET
-    session_affinity: SessionAffinityEnum | Unset = UNSET
-    deployment_strategy: DeploymentStrategyEnum | Unset = UNSET
+    session_affinity: LoadbalancerInstanceSessionAffinity | Unset = UNSET
+    deployment_strategy: LoadbalancerInstanceDeploymentStrategy | Unset = UNSET
     last_deployment: datetime.datetime | None | Unset = UNSET
     metrics_data: Any | Unset = UNSET
+    engine_version: LoadbalancerInstanceEngineVersion | Unset = UNSET
+    spec: LbiV2Spec | None | Unset = UNSET
+    proxy_placement: LoadbalancerInstanceProxyPlacement | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.loadbalancer_instance_deleted_by_user_type_0 import (
-            LoadbalancerInstanceDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_instance_last_action_run_type_0 import (
-            LoadbalancerInstanceLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.lbi_v2_spec import LbiV2Spec  # noqa: PLC0415
+        from ..models.loadbalancer_instance_deleted_by_user_type_0 import LoadbalancerInstanceDeletedByUserType0  # noqa: PLC0415
+        from ..models.loadbalancer_instance_last_action_run_type_0 import LoadbalancerInstanceLastActionRunType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -365,6 +455,10 @@ class LoadbalancerInstance:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -426,6 +520,10 @@ class LoadbalancerInstance:
         delegation_source: None | str
         if isinstance(self.delegation_source, str):
             delegation_source = self.delegation_source
+        elif isinstance(self.delegation_source, str):
+            delegation_source = self.delegation_source
+        elif isinstance(self.delegation_source, str):
+            delegation_source = self.delegation_source
         else:
             delegation_source = self.delegation_source
 
@@ -436,6 +534,8 @@ class LoadbalancerInstance:
         haproxy_defaults = self.haproxy_defaults
 
         effective_haproxy_defaults = self.effective_haproxy_defaults.to_dict()
+
+        issued_certificate = self.issued_certificate.to_dict()
 
         name = self.name
 
@@ -498,6 +598,8 @@ class LoadbalancerInstance:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -554,6 +656,22 @@ class LoadbalancerInstance:
             last_deployment = self.last_deployment
 
         metrics_data = self.metrics_data
+
+        engine_version: int | Unset = UNSET
+        if not isinstance(self.engine_version, Unset):
+            engine_version = self.engine_version
+
+        spec: dict[str, Any] | None | Unset
+        if isinstance(self.spec, Unset):
+            spec = UNSET
+        elif isinstance(self.spec, LbiV2Spec):
+            spec = self.spec.to_dict()
+        else:
+            spec = self.spec
+
+        proxy_placement: str | Unset = UNSET
+        if not isinstance(self.proxy_placement, Unset):
+            proxy_placement = self.proxy_placement
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -613,6 +731,7 @@ class LoadbalancerInstance:
                 "effective_resources": effective_resources,
                 "haproxy_defaults": haproxy_defaults,
                 "effective_haproxy_defaults": effective_haproxy_defaults,
+                "issued_certificate": issued_certificate,
             }
         )
         if name is not UNSET:
@@ -677,29 +796,29 @@ class LoadbalancerInstance:
             field_dict["last_deployment"] = last_deployment
         if metrics_data is not UNSET:
             field_dict["metrics_data"] = metrics_data
+        if engine_version is not UNSET:
+            field_dict["engine_version"] = engine_version
+        if spec is not UNSET:
+            field_dict["spec"] = spec
+        if proxy_placement is not UNSET:
+            field_dict["proxy_placement"] = proxy_placement
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.certificate_simple import CertificateSimple  # noqa: PLC0415
         from ..models.ip_address_simple import IPAddressSimple  # noqa: PLC0415
+        from ..models.lbi_v2_spec import LbiV2Spec  # noqa: PLC0415
         from ..models.loadbalancer_instance_created import LoadbalancerInstanceCreated  # noqa: PLC0415
-        from ..models.loadbalancer_instance_deleted_by_user_type_0 import (
-            LoadbalancerInstanceDeletedByUserType0,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_instance_deleted_by_user_type_0 import LoadbalancerInstanceDeletedByUserType0  # noqa: PLC0415
         from ..models.loadbalancer_instance_deployment import LoadbalancerInstanceDeployment  # noqa: PLC0415
-        from ..models.loadbalancer_instance_deployment_summary import (
-            LoadbalancerInstanceDeploymentSummary,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_instance_deployment_summary import LoadbalancerInstanceDeploymentSummary  # noqa: PLC0415
         from ..models.loadbalancer_instance_effective_haproxy_defaults import (
             LoadbalancerInstanceEffectiveHaproxyDefaults,  # noqa: PLC0415
         )
-        from ..models.loadbalancer_instance_effective_resources import (
-            LoadbalancerInstanceEffectiveResources,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_instance_last_action_run_type_0 import (
-            LoadbalancerInstanceLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_instance_effective_resources import LoadbalancerInstanceEffectiveResources  # noqa: PLC0415
+        from ..models.loadbalancer_instance_last_action_run_type_0 import LoadbalancerInstanceLastActionRunType0  # noqa: PLC0415
         from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
         from ..models.product_simple import ProductSimple  # noqa: PLC0415
         from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
@@ -743,7 +862,7 @@ class LoadbalancerInstance:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_loadbalancer_instance_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -752,7 +871,7 @@ class LoadbalancerInstance:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_loadbalancer_instance_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -849,24 +968,57 @@ class LoadbalancerInstance:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_loadbalancer_instance_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
         tolerations = d.pop("tolerations")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            LoadbalancerInstanceEffectiveCriticalityType1
+            | LoadbalancerInstanceEffectiveCriticalityType2Type1
+            | LoadbalancerInstanceEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_loadbalancer_instance_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_loadbalancer_instance_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_loadbalancer_instance_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LoadbalancerInstanceEffectiveCriticalityType1
+                | LoadbalancerInstanceEffectiveCriticalityType2Type1
+                | LoadbalancerInstanceEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -939,7 +1091,7 @@ class LoadbalancerInstance:
 
         computed_cost = d.pop("computed_cost")
 
-        protocol_mode = check_protocol_mode_enum(d.pop("protocol_mode"))
+        protocol_mode = check_loadbalancer_instance_protocol_mode(d.pop("protocol_mode"))
 
         delegated_organization = OrganizationSimple.from_dict(d.pop("delegated_organization"))
 
@@ -952,18 +1104,47 @@ class LoadbalancerInstance:
 
         loopback_resource_id = _parse_loopback_resource_id(d.pop("loopback_resource_id"))
 
-        def _parse_delegation_source(data: object) -> DelegationSourceEnum | None:
+        def _parse_delegation_source(
+            data: object,
+        ) -> (
+            LoadbalancerInstanceDelegationSourceType1
+            | LoadbalancerInstanceDelegationSourceType2Type1
+            | LoadbalancerInstanceDelegationSourceType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                delegation_source_type_0 = check_delegation_source_enum(data)
+                delegation_source_type_1 = check_loadbalancer_instance_delegation_source_type_1(data)
 
-                return delegation_source_type_0
+                return delegation_source_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(DelegationSourceEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                delegation_source_type_2_type_1 = check_loadbalancer_instance_delegation_source_type_2_type_1(data)
+
+                return delegation_source_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                delegation_source_type_3_type_1 = check_loadbalancer_instance_delegation_source_type_3_type_1(data)
+
+                return delegation_source_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LoadbalancerInstanceDelegationSourceType1
+                | LoadbalancerInstanceDelegationSourceType2Type1
+                | LoadbalancerInstanceDelegationSourceType3Type1
+                | None,
+                data,
+            )
 
         delegation_source = _parse_delegation_source(d.pop("delegation_source"))
 
@@ -976,6 +1157,8 @@ class LoadbalancerInstance:
         effective_haproxy_defaults = LoadbalancerInstanceEffectiveHaproxyDefaults.from_dict(
             d.pop("effective_haproxy_defaults")
         )
+
+        issued_certificate = CertificateSimple.from_dict(d.pop("issued_certificate"))
 
         name = d.pop("name", UNSET)
 
@@ -995,11 +1178,11 @@ class LoadbalancerInstance:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: LoadbalancerInstanceProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_loadbalancer_instance_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1024,11 +1207,11 @@ class LoadbalancerInstance:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: LoadbalancerInstanceKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_loadbalancer_instance_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -1058,7 +1241,15 @@ class LoadbalancerInstance:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            LoadbalancerInstanceCriticalityType1
+            | LoadbalancerInstanceCriticalityType2Type1
+            | LoadbalancerInstanceCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1066,20 +1257,35 @@ class LoadbalancerInstance:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_loadbalancer_instance_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_loadbalancer_instance_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_loadbalancer_instance_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LoadbalancerInstanceCriticalityType1
+                | LoadbalancerInstanceCriticalityType2Type1
+                | LoadbalancerInstanceCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1129,18 +1335,18 @@ class LoadbalancerInstance:
         enable_grpc = d.pop("enable_grpc", UNSET)
 
         _session_affinity = d.pop("session_affinity", UNSET)
-        session_affinity: SessionAffinityEnum | Unset
+        session_affinity: LoadbalancerInstanceSessionAffinity | Unset
         if isinstance(_session_affinity, Unset):
             session_affinity = UNSET
         else:
-            session_affinity = check_session_affinity_enum(_session_affinity)
+            session_affinity = check_loadbalancer_instance_session_affinity(_session_affinity)
 
         _deployment_strategy = d.pop("deployment_strategy", UNSET)
-        deployment_strategy: DeploymentStrategyEnum | Unset
+        deployment_strategy: LoadbalancerInstanceDeploymentStrategy | Unset
         if isinstance(_deployment_strategy, Unset):
             deployment_strategy = UNSET
         else:
-            deployment_strategy = check_deployment_strategy_enum(_deployment_strategy)
+            deployment_strategy = check_loadbalancer_instance_deployment_strategy(_deployment_strategy)
 
         def _parse_last_deployment(data: object) -> datetime.datetime | None | Unset:
             if data is None:
@@ -1160,6 +1366,37 @@ class LoadbalancerInstance:
         last_deployment = _parse_last_deployment(d.pop("last_deployment", UNSET))
 
         metrics_data = d.pop("metrics_data", UNSET)
+
+        _engine_version = d.pop("engine_version", UNSET)
+        engine_version: LoadbalancerInstanceEngineVersion | Unset
+        if isinstance(_engine_version, Unset):
+            engine_version = UNSET
+        else:
+            engine_version = check_loadbalancer_instance_engine_version(_engine_version)
+
+        def _parse_spec(data: object) -> LbiV2Spec | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                spec_type_1 = LbiV2Spec.from_dict(data)
+
+                return spec_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(LbiV2Spec | None | Unset, data)
+
+        spec = _parse_spec(d.pop("spec", UNSET))
+
+        _proxy_placement = d.pop("proxy_placement", UNSET)
+        proxy_placement: LoadbalancerInstanceProxyPlacement | Unset
+        if isinstance(_proxy_placement, Unset):
+            proxy_placement = UNSET
+        else:
+            proxy_placement = check_loadbalancer_instance_proxy_placement(_proxy_placement)
 
         loadbalancer_instance = cls(
             id=id,
@@ -1216,6 +1453,7 @@ class LoadbalancerInstance:
             effective_resources=effective_resources,
             haproxy_defaults=haproxy_defaults,
             effective_haproxy_defaults=effective_haproxy_defaults,
+            issued_certificate=issued_certificate,
             name=name,
             display_name=display_name,
             labels=labels,
@@ -1247,6 +1485,9 @@ class LoadbalancerInstance:
             deployment_strategy=deployment_strategy,
             last_deployment=last_deployment,
             metrics_data=metrics_data,
+            engine_version=engine_version,
+            spec=spec,
+            proxy_placement=proxy_placement,
         )
 
         loadbalancer_instance.additional_properties = d

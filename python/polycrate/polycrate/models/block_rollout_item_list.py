@@ -8,10 +8,21 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.block_rollout_item_status_enum import BlockRolloutItemStatusEnum, check_block_rollout_item_status_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.source_98d_enum import Source98DEnum, check_source_98d_enum
+from ..models.block_rollout_item_list_effective_criticality_type_1 import (
+    BlockRolloutItemListEffectiveCriticalityType1,
+    check_block_rollout_item_list_effective_criticality_type_1,
+)
+from ..models.block_rollout_item_list_effective_criticality_type_2_type_1 import (
+    BlockRolloutItemListEffectiveCriticalityType2Type1,
+    check_block_rollout_item_list_effective_criticality_type_2_type_1,
+)
+from ..models.block_rollout_item_list_effective_criticality_type_3_type_1 import (
+    BlockRolloutItemListEffectiveCriticalityType3Type1,
+    check_block_rollout_item_list_effective_criticality_type_3_type_1,
+)
+from ..models.block_rollout_item_list_source import BlockRolloutItemListSource, check_block_rollout_item_list_source
+from ..models.block_rollout_item_list_state import BlockRolloutItemListState, check_block_rollout_item_list_state
+from ..models.block_rollout_item_list_status import BlockRolloutItemListStatus, check_block_rollout_item_list_status
 
 if TYPE_CHECKING:
     from ..models.block_rollout_item_list_active_condition_instances_item import (
@@ -50,7 +61,7 @@ class BlockRolloutItemList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (BlockRolloutItemListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -68,18 +79,19 @@ class BlockRolloutItemList:
             created (BlockRolloutItemListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (BlockRolloutItemListEffectiveCriticalityType1 |
+                BlockRolloutItemListEffectiveCriticalityType2Type1 | BlockRolloutItemListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             block (UUID):
             block_name (str):
             action_name (str):
-            status (BlockRolloutItemStatusEnum): * `pending` - Pending
+            status (BlockRolloutItemListStatus): * `pending` - Pending
                 * `in_progress` - In Progress
                 * `completed` - Completed
                 * `failed` - Failed
                 * `retrying` - Retrying
-                * `skipped` - Skipped
-            source (Source98DEnum): * `scheduler` - Scheduler
+                * `skipped` - Skipped Default: 'pending'.
+            source (BlockRolloutItemListSource): * `scheduler` - Scheduler
                 * `manual` - Manual
             retry_count (int):
             dispatched_at (datetime.datetime | None):
@@ -89,7 +101,7 @@ class BlockRolloutItemList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: BlockRolloutItemListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -100,26 +112,27 @@ class BlockRolloutItemList:
     created: BlockRolloutItemListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        BlockRolloutItemListEffectiveCriticalityType1
+        | BlockRolloutItemListEffectiveCriticalityType2Type1
+        | BlockRolloutItemListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     block: UUID
     block_name: str
     action_name: str
-    status: BlockRolloutItemStatusEnum
-    source: Source98DEnum
+    source: BlockRolloutItemListSource
     retry_count: int
     dispatched_at: datetime.datetime | None
     completed_at: datetime.datetime | None
     rendered_target_version: None | str
+    status: BlockRolloutItemListStatus = "pending"
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.block_rollout_item_list_organization_type_0 import (
-            BlockRolloutItemListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.block_rollout_item_list_workspace_type_0 import (
-            BlockRolloutItemListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.block_rollout_item_list_organization_type_0 import BlockRolloutItemListOrganizationType0  # noqa: PLC0415
+        from ..models.block_rollout_item_list_workspace_type_0 import BlockRolloutItemListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -160,6 +173,10 @@ class BlockRolloutItemList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -232,19 +249,15 @@ class BlockRolloutItemList:
             BlockRolloutItemListActiveConditionInstancesItem,  # noqa: PLC0415
         )
         from ..models.block_rollout_item_list_created import BlockRolloutItemListCreated  # noqa: PLC0415
-        from ..models.block_rollout_item_list_organization_type_0 import (
-            BlockRolloutItemListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.block_rollout_item_list_workspace_type_0 import (
-            BlockRolloutItemListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.block_rollout_item_list_organization_type_0 import BlockRolloutItemListOrganizationType0  # noqa: PLC0415
+        from ..models.block_rollout_item_list_workspace_type_0 import BlockRolloutItemListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_block_rollout_item_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -299,18 +312,51 @@ class BlockRolloutItemList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            BlockRolloutItemListEffectiveCriticalityType1
+            | BlockRolloutItemListEffectiveCriticalityType2Type1
+            | BlockRolloutItemListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_block_rollout_item_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_block_rollout_item_list_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_block_rollout_item_list_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BlockRolloutItemListEffectiveCriticalityType1
+                | BlockRolloutItemListEffectiveCriticalityType2Type1
+                | BlockRolloutItemListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -322,9 +368,9 @@ class BlockRolloutItemList:
 
         action_name = d.pop("action_name")
 
-        status = check_block_rollout_item_status_enum(d.pop("status"))
+        status = check_block_rollout_item_list_status(d.pop("status"))
 
-        source = check_source_98d_enum(d.pop("source"))
+        source = check_block_rollout_item_list_source(d.pop("source"))
 
         retry_count = d.pop("retry_count")
 

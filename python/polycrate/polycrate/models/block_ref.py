@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.block_kind_enum import BlockKindEnum, check_block_kind_enum
+from ..models.block_ref_kind import BlockRefKind, check_block_ref_kind
 
 T = TypeVar("T", bound="BlockRef")
 
@@ -22,7 +22,7 @@ class BlockRef:
         Attributes:
             id (UUID):
             name (str):
-            kind (BlockKindEnum): * `dockerapp` - Docker App
+            kind (BlockRefKind): * `dockerapp` - Docker App
                 * `linuxapp` - Linux App
                 * `k8sapp` - Kubernetes App
                 * `k8sappinstance` - Kubernetes App Instance
@@ -34,7 +34,7 @@ class BlockRef:
 
     id: UUID
     name: str
-    kind: BlockKindEnum
+    kind: BlockRefKind
     url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -67,7 +67,7 @@ class BlockRef:
 
         name = d.pop("name")
 
-        kind = check_block_kind_enum(d.pop("kind"))
+        kind = check_block_ref_kind(d.pop("kind"))
 
         url = d.pop("url")
 

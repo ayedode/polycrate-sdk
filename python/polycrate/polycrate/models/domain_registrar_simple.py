@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.domain_registrar_kind_enum import DomainRegistrarKindEnum, check_domain_registrar_kind_enum
+from ..models.domain_registrar_simple_kind import DomainRegistrarSimpleKind, check_domain_registrar_simple_kind
 
 T = TypeVar("T", bound="DomainRegistrarSimple")
 
@@ -18,13 +18,14 @@ class DomainRegistrarSimple:
     Attributes:
         id (UUID):
         name (str):
-        kind (DomainRegistrarKindEnum): * `centralnic` - CentralNic (RRPProxy)
+        kind (DomainRegistrarSimpleKind): * `centralnic` - CentralNic (RRPProxy)
+            * `openprovider` - OpenProvider
         url (str):
     """
 
     id: UUID
     name: str
-    kind: DomainRegistrarKindEnum
+    kind: DomainRegistrarSimpleKind
     url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -57,7 +58,7 @@ class DomainRegistrarSimple:
 
         name = d.pop("name")
 
-        kind = check_domain_registrar_kind_enum(d.pop("kind"))
+        kind = check_domain_registrar_simple_kind(d.pop("kind"))
 
         url = d.pop("url")
 

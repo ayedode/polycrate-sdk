@@ -7,8 +7,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.slo_object_type_enum import SloObjectTypeEnum, check_slo_object_type_enum
-from ..models.slo_status_enum import SloStatusEnum, check_slo_status_enum
+from ..models.slo_object_slo_status import SloObjectSloStatus, check_slo_object_slo_status
+from ..models.slo_object_type import SloObjectType, check_slo_object_type
 
 if TYPE_CHECKING:
     from ..models.slo_downtime_ref import SloDowntimeRef
@@ -25,12 +25,12 @@ class SloObject:
     Attributes:
         id (UUID):
         name (str):
-        type_ (SloObjectTypeEnum): * `Endpoint` - Endpoint
+        type_ (SloObjectType): * `Endpoint` - Endpoint
             * `K8sCluster` - K8sCluster
         organization (SloOrganizationRef):
         workspace (SloWorkspaceRef):
         slo_availability (float): Current SLO availability percentage
-        slo_status (SloStatusEnum): * `ok` - ok
+        slo_status (SloObjectSloStatus): * `ok` - ok
             * `at_risk` - at_risk
             * `breach` - breach
         state (str): Current object state (up, down, degraded)
@@ -40,11 +40,11 @@ class SloObject:
 
     id: UUID
     name: str
-    type_: SloObjectTypeEnum
+    type_: SloObjectType
     organization: SloOrganizationRef
     workspace: SloWorkspaceRef
     slo_availability: float
-    slo_status: SloStatusEnum
+    slo_status: SloObjectSloStatus
     state: str
     active_downtime: None | SloDowntimeRef
     url: str
@@ -107,7 +107,7 @@ class SloObject:
 
         name = d.pop("name")
 
-        type_ = check_slo_object_type_enum(d.pop("type"))
+        type_ = check_slo_object_type(d.pop("type"))
 
         organization = SloOrganizationRef.from_dict(d.pop("organization"))
 
@@ -115,7 +115,7 @@ class SloObject:
 
         slo_availability = d.pop("slo_availability")
 
-        slo_status = check_slo_status_enum(d.pop("slo_status"))
+        slo_status = check_slo_object_slo_status(d.pop("slo_status"))
 
         state = d.pop("state")
 

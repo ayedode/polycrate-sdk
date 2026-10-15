@@ -8,8 +8,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
-from ..models.conversation_status_enum import ConversationStatusEnum, check_conversation_status_enum
+from ..models.conversation_kind import ConversationKind, check_conversation_kind
+from ..models.conversation_status import ConversationStatus, check_conversation_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -29,7 +29,9 @@ class Conversation:
         Attributes:
             id (UUID):
             name (str):
-            kind (ConversationKindEnum): * `generic` - Generic
+            kind (ConversationKind): Type of conversation
+
+                * `generic` - Generic
                 * `zammad` - Zammad
                 * `slack` - Slack
                 * `discord` - Discord
@@ -45,7 +47,9 @@ class Conversation:
             config (Any): Conversation configuration as JSON object
             created_at (datetime.datetime):
             updated_at (datetime.datetime):
-            status (ConversationStatusEnum | Unset): * `closed` - Closed
+            status (ConversationStatus | Unset): Current status of the conversation
+
+                * `closed` - Closed
                 * `waiting_for_operator` - Waiting for Operator
                 * `waiting_for_user` - Waiting for User
                 * `deleted` - Deleted
@@ -54,7 +58,7 @@ class Conversation:
 
     id: UUID
     name: str
-    kind: ConversationKindEnum
+    kind: ConversationKind
     organization: OrganizationSimple
     conversation_provider: ConversationProviderSimple
     messages: list[MessageList]
@@ -62,7 +66,7 @@ class Conversation:
     config: Any
     created_at: datetime.datetime
     updated_at: datetime.datetime
-    status: ConversationStatusEnum | Unset = UNSET
+    status: ConversationStatus | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -134,7 +138,7 @@ class Conversation:
 
         name = d.pop("name")
 
-        kind = check_conversation_kind_enum(d.pop("kind"))
+        kind = check_conversation_kind(d.pop("kind"))
 
         organization = OrganizationSimple.from_dict(d.pop("organization"))
 
@@ -156,11 +160,11 @@ class Conversation:
         updated_at = datetime.datetime.fromisoformat(d.pop("updated_at"))
 
         _status = d.pop("status", UNSET)
-        status: ConversationStatusEnum | Unset
+        status: ConversationStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_conversation_status_enum(_status)
+            status = check_conversation_status(_status)
 
         def _parse_provider_id(data: object) -> None | str | Unset:
             if data is None:

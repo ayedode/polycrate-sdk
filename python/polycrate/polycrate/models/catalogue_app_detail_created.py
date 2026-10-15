@@ -33,9 +33,7 @@ class CatalogueAppDetailCreated:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.catalogue_app_detail_created_created_by_type_0 import (
-            CatalogueAppDetailCreatedCreatedByType0,  # noqa: PLC0415
-        )
+        from ..models.catalogue_app_detail_created_created_by_type_0 import CatalogueAppDetailCreatedCreatedByType0  # noqa: PLC0415
 
         created_at: None | str | Unset
         if isinstance(self.created_at, Unset):
@@ -81,9 +79,7 @@ class CatalogueAppDetailCreated:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.catalogue_app_detail_created_created_by_type_0 import (
-            CatalogueAppDetailCreatedCreatedByType0,  # noqa: PLC0415
-        )
+        from ..models.catalogue_app_detail_created_created_by_type_0 import CatalogueAppDetailCreatedCreatedByType0  # noqa: PLC0415
 
         d = dict(src_dict)
 

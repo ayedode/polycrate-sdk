@@ -5,13 +5,6 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.error_response_401 import ErrorResponse401
-from ...models.error_response_403 import ErrorResponse403
-from ...models.error_response_405 import ErrorResponse405
-from ...models.error_response_406 import ErrorResponse406
-from ...models.error_response_410 import ErrorResponse410
-from ...models.error_response_415 import ErrorResponse415
-from ...models.error_response_500 import ErrorResponse500
 from ...models.user_create_request import UserCreateRequest
 from ...models.user_detail import UserDetail
 from ...types import UNSET, Response
@@ -44,20 +37,7 @@ def _get_kwargs(
     return _kwargs
 
 
-def _parse_response(
-    *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> (
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | UserDetail
-    | None
-):
+def _parse_response(*, client: AuthenticatedClient | Client, response: httpx.Response) -> Any | UserDetail | None:
     if response.status_code == 201:
         response_201 = UserDetail.from_dict(response.json())
 
@@ -67,48 +47,13 @@ def _parse_response(
         response_400 = cast(Any, None)
         return response_400
 
-    if response.status_code == 401:
-        response_401 = ErrorResponse401.from_dict(response.json())
-
-        return response_401
-
-    if response.status_code == 403:
-        response_403 = ErrorResponse403.from_dict(response.json())
-
-        return response_403
-
     if response.status_code == 404:
         response_404 = cast(Any, None)
         return response_404
 
-    if response.status_code == 405:
-        response_405 = ErrorResponse405.from_dict(response.json())
-
-        return response_405
-
-    if response.status_code == 406:
-        response_406 = ErrorResponse406.from_dict(response.json())
-
-        return response_406
-
     if response.status_code == 409:
         response_409 = cast(Any, None)
         return response_409
-
-    if response.status_code == 410:
-        response_410 = ErrorResponse410.from_dict(response.json())
-
-        return response_410
-
-    if response.status_code == 415:
-        response_415 = ErrorResponse415.from_dict(response.json())
-
-        return response_415
-
-    if response.status_code == 500:
-        response_500 = ErrorResponse500.from_dict(response.json())
-
-        return response_500
 
     if response.status_code == 502:
         response_502 = cast(Any, None)
@@ -124,19 +69,7 @@ def _parse_response(
         return None
 
 
-def _build_response(
-    *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> Response[
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | UserDetail
-]:
+def _build_response(*, client: AuthenticatedClient | Client, response: httpx.Response) -> Response[Any | UserDetail]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -149,17 +82,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
     body: UserCreateRequest | UserCreateRequest | UserCreateRequest | Unset = UNSET,
-) -> Response[
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | UserDetail
-]:
+) -> Response[Any | UserDetail]:
     """Create user (blocking Keycloak provision)
 
      Create a Polycrate user with an organization membership and provision the Keycloak user + org
@@ -185,7 +108,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any | ErrorResponse401 | ErrorResponse403 | ErrorResponse405 | ErrorResponse406 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | UserDetail]
+        Response[Any | UserDetail]
     """
 
     kwargs = _get_kwargs(
@@ -203,18 +126,7 @@ def sync(
     *,
     client: AuthenticatedClient,
     body: UserCreateRequest | UserCreateRequest | UserCreateRequest | Unset = UNSET,
-) -> (
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | UserDetail
-    | None
-):
+) -> Any | UserDetail | None:
     """Create user (blocking Keycloak provision)
 
      Create a Polycrate user with an organization membership and provision the Keycloak user + org
@@ -240,7 +152,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Any | ErrorResponse401 | ErrorResponse403 | ErrorResponse405 | ErrorResponse406 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | UserDetail
+        Any | UserDetail
     """
 
     return sync_detailed(
@@ -253,17 +165,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
     body: UserCreateRequest | UserCreateRequest | UserCreateRequest | Unset = UNSET,
-) -> Response[
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | UserDetail
-]:
+) -> Response[Any | UserDetail]:
     """Create user (blocking Keycloak provision)
 
      Create a Polycrate user with an organization membership and provision the Keycloak user + org
@@ -289,7 +191,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any | ErrorResponse401 | ErrorResponse403 | ErrorResponse405 | ErrorResponse406 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | UserDetail]
+        Response[Any | UserDetail]
     """
 
     kwargs = _get_kwargs(
@@ -305,18 +207,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
     body: UserCreateRequest | UserCreateRequest | UserCreateRequest | Unset = UNSET,
-) -> (
-    Any
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | UserDetail
-    | None
-):
+) -> Any | UserDetail | None:
     """Create user (blocking Keycloak provision)
 
      Create a Polycrate user with an organization membership and provision the Keycloak user + org
@@ -342,7 +233,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Any | ErrorResponse401 | ErrorResponse403 | ErrorResponse405 | ErrorResponse406 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | UserDetail
+        Any | UserDetail
     """
 
     return (

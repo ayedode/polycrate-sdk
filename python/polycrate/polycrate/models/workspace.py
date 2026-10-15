@@ -8,18 +8,39 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.purpose_f3b_enum import PurposeF3BEnum, check_purpose_f3b_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.workspace_endpoint_monitoring_mode_enum import (
-    WorkspaceEndpointMonitoringModeEnum,
-    check_workspace_endpoint_monitoring_mode_enum,
+from ..models.workspace_criticality_type_1 import WorkspaceCriticalityType1, check_workspace_criticality_type_1
+from ..models.workspace_criticality_type_2_type_1 import (
+    WorkspaceCriticalityType2Type1,
+    check_workspace_criticality_type_2_type_1,
 )
-from ..models.workspace_kind_enum import WorkspaceKindEnum, check_workspace_kind_enum
+from ..models.workspace_criticality_type_3_type_1 import (
+    WorkspaceCriticalityType3Type1,
+    check_workspace_criticality_type_3_type_1,
+)
+from ..models.workspace_effective_criticality_type_1 import (
+    WorkspaceEffectiveCriticalityType1,
+    check_workspace_effective_criticality_type_1,
+)
+from ..models.workspace_effective_criticality_type_2_type_1 import (
+    WorkspaceEffectiveCriticalityType2Type1,
+    check_workspace_effective_criticality_type_2_type_1,
+)
+from ..models.workspace_effective_criticality_type_3_type_1 import (
+    WorkspaceEffectiveCriticalityType3Type1,
+    check_workspace_effective_criticality_type_3_type_1,
+)
+from ..models.workspace_endpoint_monitoring_mode import (
+    WorkspaceEndpointMonitoringMode,
+    check_workspace_endpoint_monitoring_mode,
+)
+from ..models.workspace_kind import WorkspaceKind, check_workspace_kind
+from ..models.workspace_last_state import WorkspaceLastState, check_workspace_last_state
+from ..models.workspace_provider import WorkspaceProvider, check_workspace_provider
+from ..models.workspace_purpose_type_1 import WorkspacePurposeType1, check_workspace_purpose_type_1
+from ..models.workspace_purpose_type_2_type_1 import WorkspacePurposeType2Type1, check_workspace_purpose_type_2_type_1
+from ..models.workspace_purpose_type_3_type_1 import WorkspacePurposeType3Type1, check_workspace_purpose_type_3_type_1
+from ..models.workspace_scope import WorkspaceScope, check_workspace_scope
+from ..models.workspace_state import WorkspaceState, check_workspace_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -32,7 +53,6 @@ if TYPE_CHECKING:
     from ..models.workspace_encryption_credential import WorkspaceEncryptionCredential
     from ..models.workspace_last_action_run_type_0 import WorkspaceLastActionRunType0
     from ..models.workspace_simple import WorkspaceSimple
-    from ..models.workspace_snapshot import WorkspaceSnapshot
     from ..models.workspace_workspace_type_0 import WorkspaceWorkspaceType0
 
 
@@ -57,14 +77,14 @@ class Workspace:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (None | WorkspaceDeletedByUserType0):
-            state (LastStateEnum): * `OK` - Ok
+            state (WorkspaceState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (WorkspaceLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -88,7 +108,8 @@ class Workspace:
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             tolerations (Any): Tolerations match conditions. If a toleration for a condition exists for an object, the
                 condition will not be applied.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | WorkspaceEffectiveCriticalityType1 | WorkspaceEffectiveCriticalityType2Type1 |
+                WorkspaceEffectiveCriticalityType3Type1):
             organization (OrganizationSimple): Simple Organization serializer for nested representations.
 
                 Includes `url` field for direct navigation.
@@ -109,7 +130,6 @@ class Workspace:
             edge_endpoint_monitor (bool): Auto-set when workspace Region has loadbalancer capability. If true, agent
                 monitors PoP reachability ICMP endpoints (Spec 526). Not user-editable.
             monitoring_workspace_allowlist (list[WorkspaceSimple]):
-            snapshot (WorkspaceSnapshot):
             git_web_url (None | str):
             git_http_url (None | str):
             git_ssh_url (None | str):
@@ -131,7 +151,7 @@ class Workspace:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (WorkspaceProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -149,15 +169,18 @@ class Workspace:
             reconciliation_enabled (bool | Unset):
             discovery_enabled (bool | Unset):
             platform_service (bool | Unset):
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (WorkspaceScope | Unset): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
-            kind (WorkspaceKindEnum | Unset): * `polycrate` - Polycrate
+            kind (WorkspaceKind | Unset): * `polycrate` - Polycrate
                 * `generic` - Generic
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | Unset | WorkspaceCriticalityType1 | WorkspaceCriticalityType2Type1 |
+                WorkspaceCriticalityType3Type1): Criticality level. Null = inherit from workspace, then org. Explicit value
+                overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -175,7 +198,10 @@ class Workspace:
                 from ayedo infrastructure. Endpoints in this workspace will only be monitored by the workspace's own agent —
                 external global monitors are excluded. Also disables K8sCluster API server reachability checks for clusters in
                 this workspace.
-            endpoint_monitoring_mode (WorkspaceEndpointMonitoringModeEnum | Unset): * `auto` - AUTO - Monitor everything
+            endpoint_monitoring_mode (WorkspaceEndpointMonitoringMode | Unset): Defines which endpoints the workspace agent
+                is allowed to monitor (Reach-Out scope)
+
+                * `auto` - AUTO - Monitor everything
                 * `organization_only` - ORGANIZATION_ONLY - Only monitor endpoints from same organization
                 * `workspace_only` - WORKSPACE_ONLY - Only monitor endpoints from same workspace
                 * `pop_only` - POP_ONLY - Only monitor endpoints from same pop
@@ -200,8 +226,8 @@ class Workspace:
             workspace_inventory_raw (None | str | Unset):
             encrypted (bool | Unset): Indicates if workspace is encrypted (contains .workspace-encrypted file)
             description (None | str | Unset): Short free-text description of this workspace
-            purpose (BlankEnum | None | PurposeF3BEnum | Unset): Purpose of this workspace (production, development,
-                staging, qa, infrastructure, platform)
+            purpose (None | Unset | WorkspacePurposeType1 | WorkspacePurposeType2Type1 | WorkspacePurposeType3Type1):
+                Purpose of this workspace (production, development, staging, qa, infrastructure, platform)
 
                 * `production` - Production
                 * `development` - Development
@@ -220,9 +246,9 @@ class Workspace:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: None | WorkspaceDeletedByUserType0
-    state: LastStateEnum
+    state: WorkspaceState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: WorkspaceLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -238,7 +264,12 @@ class Workspace:
     last_repair: datetime.datetime | None
     conditions: Any
     tolerations: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | WorkspaceEffectiveCriticalityType1
+        | WorkspaceEffectiveCriticalityType2Type1
+        | WorkspaceEffectiveCriticalityType3Type1
+    )
     organization: OrganizationSimple
     workspace: None | WorkspaceWorkspaceType0
     created: WorkspaceCreated
@@ -255,7 +286,6 @@ class Workspace:
     git_commit_short_sha: None | str
     edge_endpoint_monitor: bool
     monitoring_workspace_allowlist: list[WorkspaceSimple]
-    snapshot: WorkspaceSnapshot
     git_web_url: None | str
     git_http_url: None | str
     git_ssh_url: None | str
@@ -274,18 +304,20 @@ class Workspace:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: WorkspaceProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: WorkspaceKindEnum | Unset = UNSET
+    scope: WorkspaceScope | Unset = UNSET
+    kind: WorkspaceKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None | Unset | WorkspaceCriticalityType1 | WorkspaceCriticalityType2Type1 | WorkspaceCriticalityType3Type1
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -295,7 +327,7 @@ class Workspace:
     gitlab_project_id: int | None | Unset = UNSET
     gitlab_project_url: None | str | Unset = UNSET
     on_premise: bool | Unset = UNSET
-    endpoint_monitoring_mode: WorkspaceEndpointMonitoringModeEnum | Unset = UNSET
+    endpoint_monitoring_mode: WorkspaceEndpointMonitoringMode | Unset = UNSET
     global_endpoint_monitor: bool | Unset = UNSET
     notifications_enabled: bool | Unset = UNSET
     backup_enabled: bool | Unset = UNSET
@@ -308,7 +340,7 @@ class Workspace:
     workspace_inventory_raw: None | str | Unset = UNSET
     encrypted: bool | Unset = UNSET
     description: None | str | Unset = UNSET
-    purpose: BlankEnum | None | PurposeF3BEnum | Unset = UNSET
+    purpose: None | Unset | WorkspacePurposeType1 | WorkspacePurposeType2Type1 | WorkspacePurposeType3Type1 = UNSET
     urls: Any | Unset = UNSET
     readme_md: None | str | Unset = UNSET
     alternative_name: None | str | Unset = UNSET
@@ -398,6 +430,10 @@ class Workspace:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -450,8 +486,6 @@ class Workspace:
         for monitoring_workspace_allowlist_item_data in self.monitoring_workspace_allowlist:
             monitoring_workspace_allowlist_item = monitoring_workspace_allowlist_item_data.to_dict()
             monitoring_workspace_allowlist.append(monitoring_workspace_allowlist_item)
-
-        snapshot = self.snapshot.to_dict()
 
         git_web_url: None | str
         git_web_url = self.git_web_url
@@ -557,6 +591,8 @@ class Workspace:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -650,6 +686,8 @@ class Workspace:
             purpose = self.purpose
         elif isinstance(self.purpose, str):
             purpose = self.purpose
+        elif isinstance(self.purpose, str):
+            purpose = self.purpose
         else:
             purpose = self.purpose
 
@@ -712,7 +750,6 @@ class Workspace:
                 "git_commit_short_sha": git_commit_short_sha,
                 "edge_endpoint_monitor": edge_endpoint_monitor,
                 "monitoring_workspace_allowlist": monitoring_workspace_allowlist,
-                "snapshot": snapshot,
                 "git_web_url": git_web_url,
                 "git_http_url": git_http_url,
                 "git_ssh_url": git_ssh_url,
@@ -828,7 +865,6 @@ class Workspace:
         from ..models.workspace_encryption_credential import WorkspaceEncryptionCredential  # noqa: PLC0415
         from ..models.workspace_last_action_run_type_0 import WorkspaceLastActionRunType0  # noqa: PLC0415
         from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
-        from ..models.workspace_snapshot import WorkspaceSnapshot  # noqa: PLC0415
         from ..models.workspace_workspace_type_0 import WorkspaceWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
@@ -870,7 +906,7 @@ class Workspace:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_workspace_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -879,7 +915,7 @@ class Workspace:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_workspace_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -978,18 +1014,47 @@ class Workspace:
 
         tolerations = d.pop("tolerations")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | WorkspaceEffectiveCriticalityType1
+            | WorkspaceEffectiveCriticalityType2Type1
+            | WorkspaceEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_workspace_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_workspace_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_workspace_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | WorkspaceEffectiveCriticalityType1
+                | WorkspaceEffectiveCriticalityType2Type1
+                | WorkspaceEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -1091,8 +1156,6 @@ class Workspace:
 
             monitoring_workspace_allowlist.append(monitoring_workspace_allowlist_item)
 
-        snapshot = WorkspaceSnapshot.from_dict(d.pop("snapshot"))
-
         def _parse_git_web_url(data: object) -> None | str:
             if data is None:
                 return data
@@ -1182,11 +1245,11 @@ class Workspace:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: WorkspaceProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_workspace_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1213,18 +1276,18 @@ class Workspace:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: WorkspaceScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_workspace_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: WorkspaceKindEnum | Unset
+        kind: WorkspaceKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_workspace_kind_enum(_kind)
+            kind = check_workspace_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -1254,7 +1317,9 @@ class Workspace:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> None | Unset | WorkspaceCriticalityType1 | WorkspaceCriticalityType2Type1 | WorkspaceCriticalityType3Type1:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1262,20 +1327,35 @@ class Workspace:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_workspace_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_workspace_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_workspace_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | Unset
+                | WorkspaceCriticalityType1
+                | WorkspaceCriticalityType2Type1
+                | WorkspaceCriticalityType3Type1,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1333,11 +1413,11 @@ class Workspace:
         on_premise = d.pop("on_premise", UNSET)
 
         _endpoint_monitoring_mode = d.pop("endpoint_monitoring_mode", UNSET)
-        endpoint_monitoring_mode: WorkspaceEndpointMonitoringModeEnum | Unset
+        endpoint_monitoring_mode: WorkspaceEndpointMonitoringMode | Unset
         if isinstance(_endpoint_monitoring_mode, Unset):
             endpoint_monitoring_mode = UNSET
         else:
-            endpoint_monitoring_mode = check_workspace_endpoint_monitoring_mode_enum(_endpoint_monitoring_mode)
+            endpoint_monitoring_mode = check_workspace_endpoint_monitoring_mode(_endpoint_monitoring_mode)
 
         global_endpoint_monitor = d.pop("global_endpoint_monitor", UNSET)
 
@@ -1391,7 +1471,9 @@ class Workspace:
 
         description = _parse_description(d.pop("description", UNSET))
 
-        def _parse_purpose(data: object) -> BlankEnum | None | PurposeF3BEnum | Unset:
+        def _parse_purpose(
+            data: object,
+        ) -> None | Unset | WorkspacePurposeType1 | WorkspacePurposeType2Type1 | WorkspacePurposeType3Type1:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1399,20 +1481,30 @@ class Workspace:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                purpose_type_0 = check_purpose_f3b_enum(data)
+                purpose_type_1 = check_workspace_purpose_type_1(data)
 
-                return purpose_type_0
+                return purpose_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                purpose_type_1 = check_blank_enum(data)
+                purpose_type_2_type_1 = check_workspace_purpose_type_2_type_1(data)
 
-                return purpose_type_1
+                return purpose_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | None | PurposeF3BEnum | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                purpose_type_3_type_1 = check_workspace_purpose_type_3_type_1(data)
+
+                return purpose_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | Unset | WorkspacePurposeType1 | WorkspacePurposeType2Type1 | WorkspacePurposeType3Type1, data
+            )
 
         purpose = _parse_purpose(d.pop("purpose", UNSET))
 
@@ -1478,7 +1570,6 @@ class Workspace:
             git_commit_short_sha=git_commit_short_sha,
             edge_endpoint_monitor=edge_endpoint_monitor,
             monitoring_workspace_allowlist=monitoring_workspace_allowlist,
-            snapshot=snapshot,
             git_web_url=git_web_url,
             git_http_url=git_http_url,
             git_ssh_url=git_ssh_url,

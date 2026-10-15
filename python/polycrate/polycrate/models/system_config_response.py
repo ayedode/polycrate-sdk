@@ -22,13 +22,17 @@ class SystemConfigResponse:
         default_s3_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
         default_assistant_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
         default_loadbalancer_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
+        default_endpoint_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
+        default_registry_storage_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
+        default_secrets_namespace_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
         default_k8s_volume_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
         default_internal_dns_zone_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
         default_external_dns_zone_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
+        default_domain_product (str | Unset): Primary key UUID string, or blank to clear the foreign key.
         system_domain_registrar (str | Unset): Primary key UUID string, or blank to clear the foreign key.
-        default_s3_bucket_cluster (str | Unset): Primary key UUID string, or blank to clear the foreign key.
+        default_s3_region (str | Unset): Primary key UUID string, or blank to clear the foreign key.
         system_default_pop (str | Unset): Primary key UUID string, or blank to clear the foreign key.
-        k8s_cluster_backup_s3_cluster (str | Unset): Primary key UUID string, or blank to clear the foreign key.
+        k8s_cluster_backup_s3_region (str | Unset): Primary key UUID string, or blank to clear the foreign key.
         default_k8s_cluster_dns_zone (str | Unset): Primary key UUID string, or blank to clear the foreign key.
         system_name (str | Unset):
         system_frontend_base_url (str | Unset):
@@ -47,13 +51,17 @@ class SystemConfigResponse:
     default_s3_product: str | Unset = UNSET
     default_assistant_product: str | Unset = UNSET
     default_loadbalancer_product: str | Unset = UNSET
+    default_endpoint_product: str | Unset = UNSET
+    default_registry_storage_product: str | Unset = UNSET
+    default_secrets_namespace_product: str | Unset = UNSET
     default_k8s_volume_product: str | Unset = UNSET
     default_internal_dns_zone_product: str | Unset = UNSET
     default_external_dns_zone_product: str | Unset = UNSET
+    default_domain_product: str | Unset = UNSET
     system_domain_registrar: str | Unset = UNSET
-    default_s3_bucket_cluster: str | Unset = UNSET
+    default_s3_region: str | Unset = UNSET
     system_default_pop: str | Unset = UNSET
-    k8s_cluster_backup_s3_cluster: str | Unset = UNSET
+    k8s_cluster_backup_s3_region: str | Unset = UNSET
     default_k8s_cluster_dns_zone: str | Unset = UNSET
     system_name: str | Unset = UNSET
     system_frontend_base_url: str | Unset = UNSET
@@ -80,19 +88,27 @@ class SystemConfigResponse:
 
         default_loadbalancer_product = self.default_loadbalancer_product
 
+        default_endpoint_product = self.default_endpoint_product
+
+        default_registry_storage_product = self.default_registry_storage_product
+
+        default_secrets_namespace_product = self.default_secrets_namespace_product
+
         default_k8s_volume_product = self.default_k8s_volume_product
 
         default_internal_dns_zone_product = self.default_internal_dns_zone_product
 
         default_external_dns_zone_product = self.default_external_dns_zone_product
 
+        default_domain_product = self.default_domain_product
+
         system_domain_registrar = self.system_domain_registrar
 
-        default_s3_bucket_cluster = self.default_s3_bucket_cluster
+        default_s3_region = self.default_s3_region
 
         system_default_pop = self.system_default_pop
 
-        k8s_cluster_backup_s3_cluster = self.k8s_cluster_backup_s3_cluster
+        k8s_cluster_backup_s3_region = self.k8s_cluster_backup_s3_region
 
         default_k8s_cluster_dns_zone = self.default_k8s_cluster_dns_zone
 
@@ -129,20 +145,28 @@ class SystemConfigResponse:
             field_dict["default_assistant_product"] = default_assistant_product
         if default_loadbalancer_product is not UNSET:
             field_dict["default_loadbalancer_product"] = default_loadbalancer_product
+        if default_endpoint_product is not UNSET:
+            field_dict["default_endpoint_product"] = default_endpoint_product
+        if default_registry_storage_product is not UNSET:
+            field_dict["default_registry_storage_product"] = default_registry_storage_product
+        if default_secrets_namespace_product is not UNSET:
+            field_dict["default_secrets_namespace_product"] = default_secrets_namespace_product
         if default_k8s_volume_product is not UNSET:
             field_dict["default_k8s_volume_product"] = default_k8s_volume_product
         if default_internal_dns_zone_product is not UNSET:
             field_dict["default_internal_dns_zone_product"] = default_internal_dns_zone_product
         if default_external_dns_zone_product is not UNSET:
             field_dict["default_external_dns_zone_product"] = default_external_dns_zone_product
+        if default_domain_product is not UNSET:
+            field_dict["default_domain_product"] = default_domain_product
         if system_domain_registrar is not UNSET:
             field_dict["system_domain_registrar"] = system_domain_registrar
-        if default_s3_bucket_cluster is not UNSET:
-            field_dict["default_s3_bucket_cluster"] = default_s3_bucket_cluster
+        if default_s3_region is not UNSET:
+            field_dict["default_s3_region"] = default_s3_region
         if system_default_pop is not UNSET:
             field_dict["system_default_pop"] = system_default_pop
-        if k8s_cluster_backup_s3_cluster is not UNSET:
-            field_dict["k8s_cluster_backup_s3_cluster"] = k8s_cluster_backup_s3_cluster
+        if k8s_cluster_backup_s3_region is not UNSET:
+            field_dict["k8s_cluster_backup_s3_region"] = k8s_cluster_backup_s3_region
         if default_k8s_cluster_dns_zone is not UNSET:
             field_dict["default_k8s_cluster_dns_zone"] = default_k8s_cluster_dns_zone
         if system_name is not UNSET:
@@ -181,19 +205,27 @@ class SystemConfigResponse:
 
         default_loadbalancer_product = d.pop("default_loadbalancer_product", UNSET)
 
+        default_endpoint_product = d.pop("default_endpoint_product", UNSET)
+
+        default_registry_storage_product = d.pop("default_registry_storage_product", UNSET)
+
+        default_secrets_namespace_product = d.pop("default_secrets_namespace_product", UNSET)
+
         default_k8s_volume_product = d.pop("default_k8s_volume_product", UNSET)
 
         default_internal_dns_zone_product = d.pop("default_internal_dns_zone_product", UNSET)
 
         default_external_dns_zone_product = d.pop("default_external_dns_zone_product", UNSET)
 
+        default_domain_product = d.pop("default_domain_product", UNSET)
+
         system_domain_registrar = d.pop("system_domain_registrar", UNSET)
 
-        default_s3_bucket_cluster = d.pop("default_s3_bucket_cluster", UNSET)
+        default_s3_region = d.pop("default_s3_region", UNSET)
 
         system_default_pop = d.pop("system_default_pop", UNSET)
 
-        k8s_cluster_backup_s3_cluster = d.pop("k8s_cluster_backup_s3_cluster", UNSET)
+        k8s_cluster_backup_s3_region = d.pop("k8s_cluster_backup_s3_region", UNSET)
 
         default_k8s_cluster_dns_zone = d.pop("default_k8s_cluster_dns_zone", UNSET)
 
@@ -221,13 +253,17 @@ class SystemConfigResponse:
             default_s3_product=default_s3_product,
             default_assistant_product=default_assistant_product,
             default_loadbalancer_product=default_loadbalancer_product,
+            default_endpoint_product=default_endpoint_product,
+            default_registry_storage_product=default_registry_storage_product,
+            default_secrets_namespace_product=default_secrets_namespace_product,
             default_k8s_volume_product=default_k8s_volume_product,
             default_internal_dns_zone_product=default_internal_dns_zone_product,
             default_external_dns_zone_product=default_external_dns_zone_product,
+            default_domain_product=default_domain_product,
             system_domain_registrar=system_domain_registrar,
-            default_s3_bucket_cluster=default_s3_bucket_cluster,
+            default_s3_region=default_s3_region,
             system_default_pop=system_default_pop,
-            k8s_cluster_backup_s3_cluster=k8s_cluster_backup_s3_cluster,
+            k8s_cluster_backup_s3_region=k8s_cluster_backup_s3_region,
             default_k8s_cluster_dns_zone=default_k8s_cluster_dns_zone,
             system_name=system_name,
             system_frontend_base_url=system_frontend_base_url,

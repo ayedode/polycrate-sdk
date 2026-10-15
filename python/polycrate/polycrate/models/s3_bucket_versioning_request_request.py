@@ -7,9 +7,9 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.s3_bucket_versioning_request_status_enum import (
-    S3BucketVersioningRequestStatusEnum,
-    check_s3_bucket_versioning_request_status_enum,
+from ..models.s3_bucket_versioning_request_request_status import (
+    S3BucketVersioningRequestRequestStatus,
+    check_s3_bucket_versioning_request_request_status,
 )
 
 T = TypeVar("T", bound="S3BucketVersioningRequestRequest")
@@ -19,11 +19,15 @@ T = TypeVar("T", bound="S3BucketVersioningRequestRequest")
 class S3BucketVersioningRequestRequest:
     """
     Attributes:
-        status (S3BucketVersioningRequestStatusEnum): * `Enabled` - Enabled
+        status (S3BucketVersioningRequestRequestStatus): Target versioning state. 'Enabled' turns on versioning
+            (irreversible — can only be Suspended afterwards). 'Suspended' pauses versioning but preserves all existing
+            versions.
+
+            * `Enabled` - Enabled
             * `Suspended` - Suspended
     """
 
-    status: S3BucketVersioningRequestStatusEnum
+    status: S3BucketVersioningRequestRequestStatus
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -52,7 +56,7 @@ class S3BucketVersioningRequestRequest:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        status = check_s3_bucket_versioning_request_status_enum(d.pop("status"))
+        status = check_s3_bucket_versioning_request_request_status(d.pop("status"))
 
         s3_bucket_versioning_request_request = cls(
             status=status,

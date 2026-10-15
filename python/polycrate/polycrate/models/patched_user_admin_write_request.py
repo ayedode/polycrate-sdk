@@ -7,8 +7,18 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.user_role_enum import UserRoleEnum, check_user_role_enum
+from ..models.patched_user_admin_write_request_role_type_1 import (
+    PatchedUserAdminWriteRequestRoleType1,
+    check_patched_user_admin_write_request_role_type_1,
+)
+from ..models.patched_user_admin_write_request_role_type_2_type_1 import (
+    PatchedUserAdminWriteRequestRoleType2Type1,
+    check_patched_user_admin_write_request_role_type_2_type_1,
+)
+from ..models.patched_user_admin_write_request_role_type_3_type_1 import (
+    PatchedUserAdminWriteRequestRoleType3Type1,
+    check_patched_user_admin_write_request_role_type_3_type_1,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedUserAdminWriteRequest")
@@ -28,7 +38,8 @@ class PatchedUserAdminWriteRequest:
             is_active (bool | Unset): Active flag. Synced to Keycloak enabled on change (blocking). Spec 561.
             is_staff (bool | Unset):
             is_superuser (bool | Unset): Designates that this user has all permissions without explicitly assigning them.
-            role (BlankEnum | None | Unset | UserRoleEnum): Legacy system-wide role (developer, admin, billing, viewer,
+            role (None | PatchedUserAdminWriteRequestRoleType1 | PatchedUserAdminWriteRequestRoleType2Type1 |
+                PatchedUserAdminWriteRequestRoleType3Type1 | Unset): Legacy system-wide role (developer, admin, billing, viewer,
                 owner). Prefer OrganizationMembership.role for org-scoped portal roles (Spec 525).
 
                 * `developer` - Developer
@@ -47,7 +58,13 @@ class PatchedUserAdminWriteRequest:
     is_active: bool | Unset = UNSET
     is_staff: bool | Unset = UNSET
     is_superuser: bool | Unset = UNSET
-    role: BlankEnum | None | Unset | UserRoleEnum = UNSET
+    role: (
+        None
+        | PatchedUserAdminWriteRequestRoleType1
+        | PatchedUserAdminWriteRequestRoleType2Type1
+        | PatchedUserAdminWriteRequestRoleType3Type1
+        | Unset
+    ) = UNSET
     is_maintenance_contact: bool | Unset = UNSET
     is_billing_contact: bool | Unset = UNSET
     email_verified: bool | Unset = UNSET
@@ -69,6 +86,8 @@ class PatchedUserAdminWriteRequest:
         role: None | str | Unset
         if isinstance(self.role, Unset):
             role = UNSET
+        elif isinstance(self.role, str):
+            role = self.role
         elif isinstance(self.role, str):
             role = self.role
         elif isinstance(self.role, str):
@@ -130,7 +149,9 @@ class PatchedUserAdminWriteRequest:
             files.append(("is_superuser", (None, str(self.is_superuser).encode(), "text/plain")))
 
         if not isinstance(self.role, Unset):
-            if isinstance(self.role, str):
+            if self.role is None:
+                files.append(("role", (None, str(self.role).encode(), "text/plain")))
+            elif isinstance(self.role, str):
                 files.append(("role", (None, str(self.role).encode(), "text/plain")))
             elif isinstance(self.role, str):
                 files.append(("role", (None, str(self.role).encode(), "text/plain")))
@@ -166,7 +187,15 @@ class PatchedUserAdminWriteRequest:
 
         is_superuser = d.pop("is_superuser", UNSET)
 
-        def _parse_role(data: object) -> BlankEnum | None | Unset | UserRoleEnum:
+        def _parse_role(
+            data: object,
+        ) -> (
+            None
+            | PatchedUserAdminWriteRequestRoleType1
+            | PatchedUserAdminWriteRequestRoleType2Type1
+            | PatchedUserAdminWriteRequestRoleType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -174,20 +203,35 @@ class PatchedUserAdminWriteRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                role_type_0 = check_user_role_enum(data)
+                role_type_1 = check_patched_user_admin_write_request_role_type_1(data)
 
-                return role_type_0
+                return role_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                role_type_1 = check_blank_enum(data)
+                role_type_2_type_1 = check_patched_user_admin_write_request_role_type_2_type_1(data)
 
-                return role_type_1
+                return role_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | None | Unset | UserRoleEnum, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                role_type_3_type_1 = check_patched_user_admin_write_request_role_type_3_type_1(data)
+
+                return role_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedUserAdminWriteRequestRoleType1
+                | PatchedUserAdminWriteRequestRoleType2Type1
+                | PatchedUserAdminWriteRequestRoleType3Type1
+                | Unset,
+                data,
+            )
 
         role = _parse_role(d.pop("role", UNSET))
 

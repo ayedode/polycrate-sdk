@@ -8,8 +8,15 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.access_mode_enum import AccessModeEnum, check_access_mode_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
+from ..models.org_api_key_access_mode_type_1 import OrgAPIKeyAccessModeType1, check_org_api_key_access_mode_type_1
+from ..models.org_api_key_access_mode_type_2_type_1 import (
+    OrgAPIKeyAccessModeType2Type1,
+    check_org_api_key_access_mode_type_2_type_1,
+)
+from ..models.org_api_key_access_mode_type_3_type_1 import (
+    OrgAPIKeyAccessModeType3Type1,
+    check_org_api_key_access_mode_type_3_type_1,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="OrgAPIKey")
@@ -27,8 +34,8 @@ class OrgAPIKey:
             created_at (datetime.datetime):
             last_used_at (datetime.datetime | None): Timestamp of the last successful authentication using this credential.
             token (None | str): Return raw token only on create (stored in context by view).
-            access_mode (AccessModeEnum | BlankEnum | None | Unset): Access mode for system_api_key and org_api_key
-                credentials. Ignored for other kinds.
+            access_mode (None | OrgAPIKeyAccessModeType1 | OrgAPIKeyAccessModeType2Type1 | OrgAPIKeyAccessModeType3Type1 |
+                Unset): Access mode for system_api_key and org_api_key credentials. Ignored for other kinds.
 
                 * `read` - Read
                 * `read_write` - Read/Write
@@ -39,7 +46,9 @@ class OrgAPIKey:
     created_at: datetime.datetime
     last_used_at: datetime.datetime | None
     token: None | str
-    access_mode: AccessModeEnum | BlankEnum | None | Unset = UNSET
+    access_mode: (
+        None | OrgAPIKeyAccessModeType1 | OrgAPIKeyAccessModeType2Type1 | OrgAPIKeyAccessModeType3Type1 | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -61,6 +70,8 @@ class OrgAPIKey:
         access_mode: None | str | Unset
         if isinstance(self.access_mode, Unset):
             access_mode = UNSET
+        elif isinstance(self.access_mode, str):
+            access_mode = self.access_mode
         elif isinstance(self.access_mode, str):
             access_mode = self.access_mode
         elif isinstance(self.access_mode, str):
@@ -115,7 +126,9 @@ class OrgAPIKey:
 
         token = _parse_token(d.pop("token"))
 
-        def _parse_access_mode(data: object) -> AccessModeEnum | BlankEnum | None | Unset:
+        def _parse_access_mode(
+            data: object,
+        ) -> None | OrgAPIKeyAccessModeType1 | OrgAPIKeyAccessModeType2Type1 | OrgAPIKeyAccessModeType3Type1 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -123,20 +136,31 @@ class OrgAPIKey:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                access_mode_type_0 = check_access_mode_enum(data)
+                access_mode_type_1 = check_org_api_key_access_mode_type_1(data)
 
-                return access_mode_type_0
+                return access_mode_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                access_mode_type_1 = check_blank_enum(data)
+                access_mode_type_2_type_1 = check_org_api_key_access_mode_type_2_type_1(data)
 
-                return access_mode_type_1
+                return access_mode_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(AccessModeEnum | BlankEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                access_mode_type_3_type_1 = check_org_api_key_access_mode_type_3_type_1(data)
+
+                return access_mode_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | OrgAPIKeyAccessModeType1 | OrgAPIKeyAccessModeType2Type1 | OrgAPIKeyAccessModeType3Type1 | Unset,
+                data,
+            )
 
         access_mode = _parse_access_mode(d.pop("access_mode", UNSET))
 

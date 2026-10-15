@@ -8,13 +8,35 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.notification_sink_kind_enum import NotificationSinkKindEnum, check_notification_sink_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.notification_sink_criticality_type_1 import (
+    NotificationSinkCriticalityType1,
+    check_notification_sink_criticality_type_1,
+)
+from ..models.notification_sink_criticality_type_2_type_1 import (
+    NotificationSinkCriticalityType2Type1,
+    check_notification_sink_criticality_type_2_type_1,
+)
+from ..models.notification_sink_criticality_type_3_type_1 import (
+    NotificationSinkCriticalityType3Type1,
+    check_notification_sink_criticality_type_3_type_1,
+)
+from ..models.notification_sink_effective_criticality_type_1 import (
+    NotificationSinkEffectiveCriticalityType1,
+    check_notification_sink_effective_criticality_type_1,
+)
+from ..models.notification_sink_effective_criticality_type_2_type_1 import (
+    NotificationSinkEffectiveCriticalityType2Type1,
+    check_notification_sink_effective_criticality_type_2_type_1,
+)
+from ..models.notification_sink_effective_criticality_type_3_type_1 import (
+    NotificationSinkEffectiveCriticalityType3Type1,
+    check_notification_sink_effective_criticality_type_3_type_1,
+)
+from ..models.notification_sink_kind import NotificationSinkKind, check_notification_sink_kind
+from ..models.notification_sink_last_state import NotificationSinkLastState, check_notification_sink_last_state
+from ..models.notification_sink_provider import NotificationSinkProvider, check_notification_sink_provider
+from ..models.notification_sink_scope import NotificationSinkScope, check_notification_sink_scope
+from ..models.notification_sink_state import NotificationSinkState, check_notification_sink_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -40,14 +62,14 @@ class NotificationSink:
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
         deleted_by_user (None | NotificationSinkDeletedByUserType0):
-        state (LastStateEnum): * `OK` - Ok
+        state (NotificationSinkState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (NotificationSinkLastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -68,15 +90,20 @@ class NotificationSink:
         repair_task_id (None | str):
         repair_task_meta (Any): Task metadata for repair progress tracking
         last_repair (datetime.datetime | None):
-        scope (ScopeEnum): * `system` - System
+        scope (NotificationSinkScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+            * `system` - System
             * `user` - User
-        kind (NotificationSinkKindEnum): * `mattermost` - Mattermost
+        kind (NotificationSinkKind): Kind of notification provider (mattermost, slack, msteams, email)
+
+            * `mattermost` - Mattermost
             * `slack` - Slack
             * `msteams` - Microsoft Teams
             * `email` - Email (SMTP)
         conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
             conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (None | NotificationSinkEffectiveCriticalityType1 |
+            NotificationSinkEffectiveCriticalityType2Type1 | NotificationSinkEffectiveCriticalityType3Type1):
         actual_availability (str): Calculated actual availability as yearly average in %
         organization (None | NotificationSinkOrganizationType0):
         workspace (None | NotificationSinkWorkspaceType0):
@@ -96,7 +123,7 @@ class NotificationSink:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (NotificationSinkProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -118,8 +145,9 @@ class NotificationSink:
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | NotificationSinkCriticalityType1 | NotificationSinkCriticalityType2Type1 |
+            NotificationSinkCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then org.
+            Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -143,9 +171,9 @@ class NotificationSink:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: None | NotificationSinkDeletedByUserType0
-    state: LastStateEnum
+    state: NotificationSinkState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: NotificationSinkLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -160,10 +188,15 @@ class NotificationSink:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
-    kind: NotificationSinkKindEnum
+    scope: NotificationSinkScope
+    kind: NotificationSinkKind
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | NotificationSinkEffectiveCriticalityType1
+        | NotificationSinkEffectiveCriticalityType2Type1
+        | NotificationSinkEffectiveCriticalityType3Type1
+    )
     actual_availability: str
     organization: None | NotificationSinkOrganizationType0
     workspace: None | NotificationSinkWorkspaceType0
@@ -181,7 +214,7 @@ class NotificationSink:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: NotificationSinkProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
@@ -190,7 +223,13 @@ class NotificationSink:
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | NotificationSinkCriticalityType1
+        | NotificationSinkCriticalityType2Type1
+        | NotificationSinkCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -203,12 +242,8 @@ class NotificationSink:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.notification_sink_deleted_by_user_type_0 import (
-            NotificationSinkDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.notification_sink_last_action_run_type_0 import (
-            NotificationSinkLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.notification_sink_deleted_by_user_type_0 import NotificationSinkDeletedByUserType0  # noqa: PLC0415
+        from ..models.notification_sink_last_action_run_type_0 import NotificationSinkLastActionRunType0  # noqa: PLC0415
         from ..models.notification_sink_organization_type_0 import NotificationSinkOrganizationType0  # noqa: PLC0415
         from ..models.notification_sink_workspace_type_0 import NotificationSinkWorkspaceType0  # noqa: PLC0415
 
@@ -294,6 +329,10 @@ class NotificationSink:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -396,6 +435,8 @@ class NotificationSink:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -532,12 +573,8 @@ class NotificationSink:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.notification_sink_created import NotificationSinkCreated  # noqa: PLC0415
-        from ..models.notification_sink_deleted_by_user_type_0 import (
-            NotificationSinkDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.notification_sink_last_action_run_type_0 import (
-            NotificationSinkLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.notification_sink_deleted_by_user_type_0 import NotificationSinkDeletedByUserType0  # noqa: PLC0415
+        from ..models.notification_sink_last_action_run_type_0 import NotificationSinkLastActionRunType0  # noqa: PLC0415
         from ..models.notification_sink_organization_type_0 import NotificationSinkOrganizationType0  # noqa: PLC0415
         from ..models.notification_sink_workspace_type_0 import NotificationSinkWorkspaceType0  # noqa: PLC0415
 
@@ -580,7 +617,7 @@ class NotificationSink:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_notification_sink_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -589,7 +626,7 @@ class NotificationSink:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_notification_sink_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -686,24 +723,53 @@ class NotificationSink:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_notification_sink_scope(d.pop("scope"))
 
-        kind = check_notification_sink_kind_enum(d.pop("kind"))
+        kind = check_notification_sink_kind(d.pop("kind"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | NotificationSinkEffectiveCriticalityType1
+            | NotificationSinkEffectiveCriticalityType2Type1
+            | NotificationSinkEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_notification_sink_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_notification_sink_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_notification_sink_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | NotificationSinkEffectiveCriticalityType1
+                | NotificationSinkEffectiveCriticalityType2Type1
+                | NotificationSinkEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -816,11 +882,11 @@ class NotificationSink:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: NotificationSinkProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_notification_sink_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -874,7 +940,15 @@ class NotificationSink:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | NotificationSinkCriticalityType1
+            | NotificationSinkCriticalityType2Type1
+            | NotificationSinkCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -882,20 +956,35 @@ class NotificationSink:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_notification_sink_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_notification_sink_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_notification_sink_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | NotificationSinkCriticalityType1
+                | NotificationSinkCriticalityType2Type1
+                | NotificationSinkCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

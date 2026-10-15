@@ -8,15 +8,45 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.delegation_source_enum import DelegationSourceEnum, check_delegation_source_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.versioning_status_enum import VersioningStatusEnum, check_versioning_status_enum
+from ..models.s3_bucket_criticality_type_1 import S3BucketCriticalityType1, check_s3_bucket_criticality_type_1
+from ..models.s3_bucket_criticality_type_2_type_1 import (
+    S3BucketCriticalityType2Type1,
+    check_s3_bucket_criticality_type_2_type_1,
+)
+from ..models.s3_bucket_criticality_type_3_type_1 import (
+    S3BucketCriticalityType3Type1,
+    check_s3_bucket_criticality_type_3_type_1,
+)
+from ..models.s3_bucket_delegation_source_type_1 import (
+    S3BucketDelegationSourceType1,
+    check_s3_bucket_delegation_source_type_1,
+)
+from ..models.s3_bucket_delegation_source_type_2_type_1 import (
+    S3BucketDelegationSourceType2Type1,
+    check_s3_bucket_delegation_source_type_2_type_1,
+)
+from ..models.s3_bucket_delegation_source_type_3_type_1 import (
+    S3BucketDelegationSourceType3Type1,
+    check_s3_bucket_delegation_source_type_3_type_1,
+)
+from ..models.s3_bucket_effective_criticality_type_1 import (
+    S3BucketEffectiveCriticalityType1,
+    check_s3_bucket_effective_criticality_type_1,
+)
+from ..models.s3_bucket_effective_criticality_type_2_type_1 import (
+    S3BucketEffectiveCriticalityType2Type1,
+    check_s3_bucket_effective_criticality_type_2_type_1,
+)
+from ..models.s3_bucket_effective_criticality_type_3_type_1 import (
+    S3BucketEffectiveCriticalityType3Type1,
+    check_s3_bucket_effective_criticality_type_3_type_1,
+)
+from ..models.s3_bucket_kind import S3BucketKind, check_s3_bucket_kind
+from ..models.s3_bucket_last_state import S3BucketLastState, check_s3_bucket_last_state
+from ..models.s3_bucket_provider import S3BucketProvider, check_s3_bucket_provider
+from ..models.s3_bucket_scope import S3BucketScope, check_s3_bucket_scope
+from ..models.s3_bucket_state import S3BucketState, check_s3_bucket_state
+from ..models.s3_bucket_versioning_status import S3BucketVersioningStatus, check_s3_bucket_versioning_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -48,14 +78,14 @@ class S3Bucket:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (None | S3BucketDeletedByUserType0):
-            state (LastStateEnum): * `OK` - Ok
+            state (S3BucketState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (S3BucketLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -76,11 +106,14 @@ class S3Bucket:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (S3BucketScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | S3BucketEffectiveCriticalityType1 | S3BucketEffectiveCriticalityType2Type1 |
+                S3BucketEffectiveCriticalityType3Type1):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (None | S3BucketOrganizationType0):
             workspace (None | S3BucketWorkspaceType0):
@@ -122,17 +155,19 @@ class S3Bucket:
             computed_cost (float):
             provider_metadata (Any): Full metadata from provider Admin API (versioning, quota, encryption, etc.), updated
                 during reconciliation
-            versioning_status (None | VersioningStatusEnum):
+            versioning_status (S3BucketVersioningStatus):
             encryption_enabled (bool | None):
             additional_access_keys_supported (bool):
             presigned_upload_supported (bool):
             max_upload_bytes (int):
+            purge_objects_supported (bool):
             delegated_organization (OrganizationSimple): Simple Organization serializer for nested representations.
 
                 Includes `url` field for direct navigation.
             delegated_workspace (WorkspaceSimple):
             loopback_resource_id (None | str): Loopback API entity id (v3 object-store id).
-            delegation_source (DelegationSourceEnum | None): Source of the delegation mapping.
+            delegation_source (None | S3BucketDelegationSourceType1 | S3BucketDelegationSourceType2Type1 |
+                S3BucketDelegationSourceType3Type1): Source of the delegation mapping.
 
                 * `loopback_lb` - Loopback Load Balancer
                 * `loopback_object_store` - Loopback Object Store
@@ -142,7 +177,7 @@ class S3Bucket:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (S3BucketProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -159,14 +194,14 @@ class S3Bucket:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (S3BucketKind | Unset): * `generic` - Generic
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | S3BucketCriticalityType1 | S3BucketCriticalityType2Type1 | S3BucketCriticalityType3Type1 |
+                Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -189,9 +224,9 @@ class S3Bucket:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: None | S3BucketDeletedByUserType0
-    state: LastStateEnum
+    state: S3BucketState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: S3BucketLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -206,9 +241,14 @@ class S3Bucket:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: S3BucketScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | S3BucketEffectiveCriticalityType1
+        | S3BucketEffectiveCriticalityType2Type1
+        | S3BucketEffectiveCriticalityType3Type1
+    )
     actual_availability: str
     organization: None | S3BucketOrganizationType0
     workspace: None | S3BucketWorkspaceType0
@@ -231,31 +271,36 @@ class S3Bucket:
     product: ProductSimple
     computed_cost: float
     provider_metadata: Any
-    versioning_status: None | VersioningStatusEnum
+    versioning_status: S3BucketVersioningStatus
     encryption_enabled: bool | None
     additional_access_keys_supported: bool
     presigned_upload_supported: bool
     max_upload_bytes: int
+    purge_objects_supported: bool
     delegated_organization: OrganizationSimple
     delegated_workspace: WorkspaceSimple
     loopback_resource_id: None | str
-    delegation_source: DelegationSourceEnum | None
+    delegation_source: (
+        None | S3BucketDelegationSourceType1 | S3BucketDelegationSourceType2Type1 | S3BucketDelegationSourceType3Type1
+    )
     name: str | Unset = UNSET
     display_name: None | str | Unset = UNSET
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: S3BucketProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: S3BucketKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None | S3BucketCriticalityType1 | S3BucketCriticalityType2Type1 | S3BucketCriticalityType3Type1 | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -352,6 +397,10 @@ class S3Bucket:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -420,11 +469,7 @@ class S3Bucket:
 
         provider_metadata = self.provider_metadata
 
-        versioning_status: None | str
-        if isinstance(self.versioning_status, str):
-            versioning_status = self.versioning_status
-        else:
-            versioning_status = self.versioning_status
+        versioning_status: str = self.versioning_status
 
         encryption_enabled: bool | None
         encryption_enabled = self.encryption_enabled
@@ -435,6 +480,8 @@ class S3Bucket:
 
         max_upload_bytes = self.max_upload_bytes
 
+        purge_objects_supported = self.purge_objects_supported
+
         delegated_organization = self.delegated_organization.to_dict()
 
         delegated_workspace = self.delegated_workspace.to_dict()
@@ -444,6 +491,10 @@ class S3Bucket:
 
         delegation_source: None | str
         if isinstance(self.delegation_source, str):
+            delegation_source = self.delegation_source
+        elif isinstance(self.delegation_source, str):
+            delegation_source = self.delegation_source
+        elif isinstance(self.delegation_source, str):
             delegation_source = self.delegation_source
         else:
             delegation_source = self.delegation_source
@@ -507,6 +558,8 @@ class S3Bucket:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -597,6 +650,7 @@ class S3Bucket:
                 "additional_access_keys_supported": additional_access_keys_supported,
                 "presigned_upload_supported": presigned_upload_supported,
                 "max_upload_bytes": max_upload_bytes,
+                "purge_objects_supported": purge_objects_supported,
                 "delegated_organization": delegated_organization,
                 "delegated_workspace": delegated_workspace,
                 "loopback_resource_id": loopback_resource_id,
@@ -704,7 +758,7 @@ class S3Bucket:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_s3_bucket_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -713,7 +767,7 @@ class S3Bucket:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_s3_bucket_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -810,22 +864,51 @@ class S3Bucket:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_s3_bucket_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | S3BucketEffectiveCriticalityType1
+            | S3BucketEffectiveCriticalityType2Type1
+            | S3BucketEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_s3_bucket_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_s3_bucket_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_s3_bucket_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | S3BucketEffectiveCriticalityType1
+                | S3BucketEffectiveCriticalityType2Type1
+                | S3BucketEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -947,20 +1030,7 @@ class S3Bucket:
 
         provider_metadata = d.pop("provider_metadata")
 
-        def _parse_versioning_status(data: object) -> None | VersioningStatusEnum:
-            if data is None:
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                versioning_status_type_1 = check_versioning_status_enum(data)
-
-                return versioning_status_type_1
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(None | VersioningStatusEnum, data)
-
-        versioning_status = _parse_versioning_status(d.pop("versioning_status"))
+        versioning_status = check_s3_bucket_versioning_status(d.pop("versioning_status"))
 
         def _parse_encryption_enabled(data: object) -> bool | None:
             if data is None:
@@ -975,6 +1045,8 @@ class S3Bucket:
 
         max_upload_bytes = d.pop("max_upload_bytes")
 
+        purge_objects_supported = d.pop("purge_objects_supported")
+
         delegated_organization = OrganizationSimple.from_dict(d.pop("delegated_organization"))
 
         delegated_workspace = WorkspaceSimple.from_dict(d.pop("delegated_workspace"))
@@ -986,18 +1058,47 @@ class S3Bucket:
 
         loopback_resource_id = _parse_loopback_resource_id(d.pop("loopback_resource_id"))
 
-        def _parse_delegation_source(data: object) -> DelegationSourceEnum | None:
+        def _parse_delegation_source(
+            data: object,
+        ) -> (
+            None
+            | S3BucketDelegationSourceType1
+            | S3BucketDelegationSourceType2Type1
+            | S3BucketDelegationSourceType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                delegation_source_type_0 = check_delegation_source_enum(data)
+                delegation_source_type_1 = check_s3_bucket_delegation_source_type_1(data)
 
-                return delegation_source_type_0
+                return delegation_source_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(DelegationSourceEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                delegation_source_type_2_type_1 = check_s3_bucket_delegation_source_type_2_type_1(data)
+
+                return delegation_source_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                delegation_source_type_3_type_1 = check_s3_bucket_delegation_source_type_3_type_1(data)
+
+                return delegation_source_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | S3BucketDelegationSourceType1
+                | S3BucketDelegationSourceType2Type1
+                | S3BucketDelegationSourceType3Type1,
+                data,
+            )
 
         delegation_source = _parse_delegation_source(d.pop("delegation_source"))
 
@@ -1019,11 +1120,11 @@ class S3Bucket:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: S3BucketProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_s3_bucket_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1048,11 +1149,11 @@ class S3Bucket:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: S3BucketKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_s3_bucket_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -1084,7 +1185,9 @@ class S3Bucket:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> None | S3BucketCriticalityType1 | S3BucketCriticalityType2Type1 | S3BucketCriticalityType3Type1 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1092,20 +1195,31 @@ class S3Bucket:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_s3_bucket_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_s3_bucket_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_s3_bucket_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | S3BucketCriticalityType1 | S3BucketCriticalityType2Type1 | S3BucketCriticalityType3Type1 | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1198,6 +1312,7 @@ class S3Bucket:
             additional_access_keys_supported=additional_access_keys_supported,
             presigned_upload_supported=presigned_upload_supported,
             max_upload_bytes=max_upload_bytes,
+            purge_objects_supported=purge_objects_supported,
             delegated_organization=delegated_organization,
             delegated_workspace=delegated_workspace,
             loopback_resource_id=loopback_resource_id,

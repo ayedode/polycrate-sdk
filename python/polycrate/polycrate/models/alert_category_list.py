@@ -7,8 +7,19 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.alert_category_list_effective_criticality_type_1 import (
+    AlertCategoryListEffectiveCriticalityType1,
+    check_alert_category_list_effective_criticality_type_1,
+)
+from ..models.alert_category_list_effective_criticality_type_2_type_1 import (
+    AlertCategoryListEffectiveCriticalityType2Type1,
+    check_alert_category_list_effective_criticality_type_2_type_1,
+)
+from ..models.alert_category_list_effective_criticality_type_3_type_1 import (
+    AlertCategoryListEffectiveCriticalityType3Type1,
+    check_alert_category_list_effective_criticality_type_3_type_1,
+)
+from ..models.alert_category_list_state import AlertCategoryListState, check_alert_category_list_state
 
 if TYPE_CHECKING:
     from ..models.alert_category_list_active_condition_instances_item import (
@@ -47,7 +58,7 @@ class AlertCategoryList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (AlertCategoryListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -65,7 +76,8 @@ class AlertCategoryList:
             created (AlertCategoryListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (AlertCategoryListEffectiveCriticalityType1 |
+                AlertCategoryListEffectiveCriticalityType2Type1 | AlertCategoryListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             is_system (bool): Seeded catalog rows; system categories cannot be deleted.
             sort_order (int):
@@ -74,7 +86,7 @@ class AlertCategoryList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: AlertCategoryListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -85,7 +97,12 @@ class AlertCategoryList:
     created: AlertCategoryListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        AlertCategoryListEffectiveCriticalityType1
+        | AlertCategoryListEffectiveCriticalityType2Type1
+        | AlertCategoryListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     is_system: bool
     sort_order: int
@@ -135,6 +152,10 @@ class AlertCategoryList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -188,7 +209,7 @@ class AlertCategoryList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_alert_category_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -243,18 +264,51 @@ class AlertCategoryList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            AlertCategoryListEffectiveCriticalityType1
+            | AlertCategoryListEffectiveCriticalityType2Type1
+            | AlertCategoryListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_alert_category_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_alert_category_list_effective_criticality_type_2_type_1(
+                    data
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_alert_category_list_effective_criticality_type_3_type_1(
+                    data
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                AlertCategoryListEffectiveCriticalityType1
+                | AlertCategoryListEffectiveCriticalityType2Type1
+                | AlertCategoryListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

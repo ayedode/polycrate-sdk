@@ -8,14 +8,36 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.block_rollout_status_enum import BlockRolloutStatusEnum, check_block_rollout_status_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.block_rollout_criticality_type_1 import (
+    BlockRolloutCriticalityType1,
+    check_block_rollout_criticality_type_1,
+)
+from ..models.block_rollout_criticality_type_2_type_1 import (
+    BlockRolloutCriticalityType2Type1,
+    check_block_rollout_criticality_type_2_type_1,
+)
+from ..models.block_rollout_criticality_type_3_type_1 import (
+    BlockRolloutCriticalityType3Type1,
+    check_block_rollout_criticality_type_3_type_1,
+)
+from ..models.block_rollout_effective_criticality_type_1 import (
+    BlockRolloutEffectiveCriticalityType1,
+    check_block_rollout_effective_criticality_type_1,
+)
+from ..models.block_rollout_effective_criticality_type_2_type_1 import (
+    BlockRolloutEffectiveCriticalityType2Type1,
+    check_block_rollout_effective_criticality_type_2_type_1,
+)
+from ..models.block_rollout_effective_criticality_type_3_type_1 import (
+    BlockRolloutEffectiveCriticalityType3Type1,
+    check_block_rollout_effective_criticality_type_3_type_1,
+)
+from ..models.block_rollout_kind import BlockRolloutKind, check_block_rollout_kind
+from ..models.block_rollout_last_state import BlockRolloutLastState, check_block_rollout_last_state
+from ..models.block_rollout_provider import BlockRolloutProvider, check_block_rollout_provider
+from ..models.block_rollout_scope import BlockRolloutScope, check_block_rollout_scope
+from ..models.block_rollout_state import BlockRolloutState, check_block_rollout_state
+from ..models.block_rollout_status import BlockRolloutStatus, check_block_rollout_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -60,7 +82,8 @@ class BlockRollout:
             last_reconciliation (datetime.datetime | None):
             last_discovery (datetime.datetime | None):
             last_repair (datetime.datetime | None):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (BlockRolloutEffectiveCriticalityType1 | BlockRolloutEffectiveCriticalityType2Type1 |
+                BlockRolloutEffectiveCriticalityType3Type1 | None):
             organization (BlockRolloutOrganizationType0 | None):
             workspace (BlockRolloutWorkspaceType0 | None):
             created (BlockRolloutCreated):
@@ -81,7 +104,7 @@ class BlockRollout:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (BlockRolloutProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -96,14 +119,14 @@ class BlockRollout:
                 * `system` - System
             provider_reference (None | str | Unset):
             provider_id (None | str | Unset):
-            state (LastStateEnum | Unset): * `OK` - Ok
+            state (BlockRolloutState | Unset): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str | Unset):
-            last_state (LastStateEnum | Unset): * `OK` - Ok
+            last_state (BlockRolloutLastState | Unset): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -123,9 +146,12 @@ class BlockRollout:
             platform_service (bool | Unset):
             repair_task_id (None | str | Unset):
             repair_task_meta (Any | Unset): Task metadata for repair progress tracking
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (BlockRolloutScope | Unset): The scope is used to separate `system` owned objects from `user` owned
+                objects.
+
+                * `system` - System
                 * `user` - User
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (BlockRolloutKind | Unset): * `generic` - Generic
             conditions (Any | Unset): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -133,8 +159,9 @@ class BlockRollout:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (BlockRolloutCriticalityType1 | BlockRolloutCriticalityType2Type1 |
+                BlockRolloutCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then org.
+                Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -146,7 +173,7 @@ class BlockRollout:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            status (BlockRolloutStatusEnum | Unset): * `active` - Active
+            status (BlockRolloutStatus | Unset): * `active` - Active
                 * `paused` - Paused
                 * `blocked` - Blocked
                 * `completed` - Completed
@@ -168,7 +195,12 @@ class BlockRollout:
     last_reconciliation: datetime.datetime | None
     last_discovery: datetime.datetime | None
     last_repair: datetime.datetime | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        BlockRolloutEffectiveCriticalityType1
+        | BlockRolloutEffectiveCriticalityType2Type1
+        | BlockRolloutEffectiveCriticalityType3Type1
+        | None
+    )
     organization: BlockRolloutOrganizationType0 | None
     workspace: BlockRolloutWorkspaceType0 | None
     created: BlockRolloutCreated
@@ -187,12 +219,12 @@ class BlockRollout:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: BlockRolloutProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
-    state: LastStateEnum | Unset = UNSET
+    state: BlockRolloutState | Unset = UNSET
     state_reason: None | str | Unset = UNSET
-    last_state: LastStateEnum | Unset = UNSET
+    last_state: BlockRolloutLastState | Unset = UNSET
     last_state_change: datetime.datetime | None | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     reconciliation_running: bool | Unset = UNSET
@@ -206,21 +238,27 @@ class BlockRollout:
     platform_service: bool | Unset = UNSET
     repair_task_id: None | str | Unset = UNSET
     repair_task_meta: Any | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: BlockRolloutScope | Unset = UNSET
+    kind: BlockRolloutKind | Unset = UNSET
     conditions: Any | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        BlockRolloutCriticalityType1
+        | BlockRolloutCriticalityType2Type1
+        | BlockRolloutCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    status: BlockRolloutStatusEnum | Unset = UNSET
+    status: BlockRolloutStatus | Unset = UNSET
     total_items: int | Unset = UNSET
     dispatched_items: int | Unset = UNSET
     completed_items: int | Unset = UNSET
@@ -275,6 +313,10 @@ class BlockRollout:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -438,6 +480,8 @@ class BlockRollout:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -705,18 +749,47 @@ class BlockRollout:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            BlockRolloutEffectiveCriticalityType1
+            | BlockRolloutEffectiveCriticalityType2Type1
+            | BlockRolloutEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_block_rollout_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_block_rollout_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_block_rollout_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BlockRolloutEffectiveCriticalityType1
+                | BlockRolloutEffectiveCriticalityType2Type1
+                | BlockRolloutEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -813,11 +886,11 @@ class BlockRollout:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: BlockRolloutProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_block_rollout_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -838,11 +911,11 @@ class BlockRollout:
         provider_id = _parse_provider_id(d.pop("provider_id", UNSET))
 
         _state = d.pop("state", UNSET)
-        state: LastStateEnum | Unset
+        state: BlockRolloutState | Unset
         if isinstance(_state, Unset):
             state = UNSET
         else:
-            state = check_last_state_enum(_state)
+            state = check_block_rollout_state(_state)
 
         def _parse_state_reason(data: object) -> None | str | Unset:
             if data is None:
@@ -854,11 +927,11 @@ class BlockRollout:
         state_reason = _parse_state_reason(d.pop("state_reason", UNSET))
 
         _last_state = d.pop("last_state", UNSET)
-        last_state: LastStateEnum | Unset
+        last_state: BlockRolloutLastState | Unset
         if isinstance(_last_state, Unset):
             last_state = UNSET
         else:
-            last_state = check_last_state_enum(_last_state)
+            last_state = check_block_rollout_last_state(_last_state)
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None | Unset:
             if data is None:
@@ -923,18 +996,18 @@ class BlockRollout:
         repair_task_meta = d.pop("repair_task_meta", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: BlockRolloutScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_block_rollout_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: BlockRolloutKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_block_rollout_kind(_kind)
 
         conditions = d.pop("conditions", UNSET)
 
@@ -968,7 +1041,15 @@ class BlockRollout:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            BlockRolloutCriticalityType1
+            | BlockRolloutCriticalityType2Type1
+            | BlockRolloutCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -976,20 +1057,35 @@ class BlockRollout:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_block_rollout_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_block_rollout_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_block_rollout_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                BlockRolloutCriticalityType1
+                | BlockRolloutCriticalityType2Type1
+                | BlockRolloutCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1027,11 +1123,11 @@ class BlockRollout:
         sla_availability = d.pop("sla_availability", UNSET)
 
         _status = d.pop("status", UNSET)
-        status: BlockRolloutStatusEnum | Unset
+        status: BlockRolloutStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_block_rollout_status_enum(_status)
+            status = check_block_rollout_status(_status)
 
         total_items = d.pop("total_items", UNSET)
 

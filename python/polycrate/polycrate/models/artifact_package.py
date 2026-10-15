@@ -8,14 +8,47 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.artifact_kind_enum import ArtifactKindEnum, check_artifact_kind_enum
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.artifact_package_created_by_component_type_1 import (
+    ArtifactPackageCreatedByComponentType1,
+    check_artifact_package_created_by_component_type_1,
+)
+from ..models.artifact_package_created_by_component_type_2_type_1 import (
+    ArtifactPackageCreatedByComponentType2Type1,
+    check_artifact_package_created_by_component_type_2_type_1,
+)
+from ..models.artifact_package_created_by_component_type_3_type_1 import (
+    ArtifactPackageCreatedByComponentType3Type1,
+    check_artifact_package_created_by_component_type_3_type_1,
+)
+from ..models.artifact_package_criticality_type_1 import (
+    ArtifactPackageCriticalityType1,
+    check_artifact_package_criticality_type_1,
+)
+from ..models.artifact_package_criticality_type_2_type_1 import (
+    ArtifactPackageCriticalityType2Type1,
+    check_artifact_package_criticality_type_2_type_1,
+)
+from ..models.artifact_package_criticality_type_3_type_1 import (
+    ArtifactPackageCriticalityType3Type1,
+    check_artifact_package_criticality_type_3_type_1,
+)
+from ..models.artifact_package_effective_criticality_type_1 import (
+    ArtifactPackageEffectiveCriticalityType1,
+    check_artifact_package_effective_criticality_type_1,
+)
+from ..models.artifact_package_effective_criticality_type_2_type_1 import (
+    ArtifactPackageEffectiveCriticalityType2Type1,
+    check_artifact_package_effective_criticality_type_2_type_1,
+)
+from ..models.artifact_package_effective_criticality_type_3_type_1 import (
+    ArtifactPackageEffectiveCriticalityType3Type1,
+    check_artifact_package_effective_criticality_type_3_type_1,
+)
+from ..models.artifact_package_kind import ArtifactPackageKind, check_artifact_package_kind
+from ..models.artifact_package_last_state import ArtifactPackageLastState, check_artifact_package_last_state
+from ..models.artifact_package_provider import ArtifactPackageProvider, check_artifact_package_provider
+from ..models.artifact_package_scope import ArtifactPackageScope, check_artifact_package_scope
+from ..models.artifact_package_state import ArtifactPackageState, check_artifact_package_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -53,7 +86,8 @@ class ArtifactPackage:
             is_class_icon (bool):
             effective_slo_target (float | None):
             effective_sla_target (float | None):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (ArtifactPackageEffectiveCriticalityType1 | ArtifactPackageEffectiveCriticalityType2Type1
+                | ArtifactPackageEffectiveCriticalityType3Type1 | None):
             last_action_run (ArtifactPackageLastActionRunType0 | None):
             deleted_by_user (ArtifactPackageDeletedByUserType0 | None):
             artifact_repository (ArtifactRepositorySimple): Simple serializer for embedding ArtifactRepository in other
@@ -73,14 +107,14 @@ class ArtifactPackage:
             deleted_at (datetime.datetime | None): Timestamp when this object was soft-deleted. Null if not deleted.
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
-            state (LastStateEnum): * `OK` - Ok
+            state (ArtifactPackageState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (ArtifactPackageLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -101,12 +135,14 @@ class ArtifactPackage:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (ArtifactPackageScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             actual_availability (str): Calculated actual availability as yearly average in %
-            kind (ArtifactKindEnum): * `helm` - Helm
+            kind (ArtifactPackageKind): * `helm` - Helm
                 * `docker` - Docker
                 * `polycrate` - Polycrate
                 * `oci` - OCI
@@ -117,7 +153,7 @@ class ArtifactPackage:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (ArtifactPackageProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -140,8 +176,9 @@ class ArtifactPackage:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (ArtifactPackageCreatedByComponentType1 | ArtifactPackageCreatedByComponentType2Type1 |
+                ArtifactPackageCreatedByComponentType3Type1 | None | Unset): Component that created this object: cli, operator,
+                or api.
 
                 * `cli` - CLI
                 * `operator` - Operator
@@ -154,7 +191,8 @@ class ArtifactPackage:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
+            criticality (ArtifactPackageCriticalityType1 | ArtifactPackageCriticalityType2Type1 |
+                ArtifactPackageCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then
                 org. Explicit value overrides inheritance.
 
                 * `high` - High
@@ -178,7 +216,12 @@ class ArtifactPackage:
     is_class_icon: bool
     effective_slo_target: float | None
     effective_sla_target: float | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        ArtifactPackageEffectiveCriticalityType1
+        | ArtifactPackageEffectiveCriticalityType2Type1
+        | ArtifactPackageEffectiveCriticalityType3Type1
+        | None
+    )
     last_action_run: ArtifactPackageLastActionRunType0 | None
     deleted_by_user: ArtifactPackageDeletedByUserType0 | None
     artifact_repository: ArtifactRepositorySimple
@@ -196,9 +239,9 @@ class ArtifactPackage:
     updated_at: datetime.datetime
     deleted_at: datetime.datetime | None
     is_deleted: bool
-    state: LastStateEnum
+    state: ArtifactPackageState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: ArtifactPackageLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -213,16 +256,16 @@ class ArtifactPackage:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: ArtifactPackageScope
     conditions: Any
     actual_availability: str
-    kind: ArtifactKindEnum
+    kind: ArtifactPackageKind
     name: str | Unset = UNSET
     display_name: None | str | Unset = UNSET
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: ArtifactPackageProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
@@ -232,7 +275,13 @@ class ArtifactPackage:
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        ArtifactPackageCreatedByComponentType1
+        | ArtifactPackageCreatedByComponentType2Type1
+        | ArtifactPackageCreatedByComponentType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_window_days: int | None | Unset = UNSET
@@ -240,7 +289,13 @@ class ArtifactPackage:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        ArtifactPackageCriticalityType1
+        | ArtifactPackageCriticalityType2Type1
+        | ArtifactPackageCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
     raw_data: Any | Unset = UNSET
@@ -286,6 +341,10 @@ class ArtifactPackage:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -463,6 +522,8 @@ class ArtifactPackage:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -503,6 +564,8 @@ class ArtifactPackage:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -668,9 +731,7 @@ class ArtifactPackage:
         from ..models.artifact_package_created import ArtifactPackageCreated  # noqa: PLC0415
         from ..models.artifact_package_deleted_by_user_type_0 import ArtifactPackageDeletedByUserType0  # noqa: PLC0415
         from ..models.artifact_package_last_action_run_type_0 import ArtifactPackageLastActionRunType0  # noqa: PLC0415
-        from ..models.artifact_package_latest_changelog_parsed import (
-            ArtifactPackageLatestChangelogParsed,  # noqa: PLC0415
-        )
+        from ..models.artifact_package_latest_changelog_parsed import ArtifactPackageLatestChangelogParsed  # noqa: PLC0415
         from ..models.artifact_package_latest_source_urls import ArtifactPackageLatestSourceUrls  # noqa: PLC0415
         from ..models.artifact_package_organization_type_0 import ArtifactPackageOrganizationType0  # noqa: PLC0415
         from ..models.artifact_package_workspace_type_0 import ArtifactPackageWorkspaceType0  # noqa: PLC0415
@@ -731,18 +792,47 @@ class ArtifactPackage:
 
         effective_sla_target = _parse_effective_sla_target(d.pop("effective_sla_target"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            ArtifactPackageEffectiveCriticalityType1
+            | ArtifactPackageEffectiveCriticalityType2Type1
+            | ArtifactPackageEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_artifact_package_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_artifact_package_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_artifact_package_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ArtifactPackageEffectiveCriticalityType1
+                | ArtifactPackageEffectiveCriticalityType2Type1
+                | ArtifactPackageEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -819,7 +909,7 @@ class ArtifactPackage:
 
         is_deleted = d.pop("is_deleted")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_artifact_package_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -828,7 +918,7 @@ class ArtifactPackage:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_artifact_package_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -925,13 +1015,13 @@ class ArtifactPackage:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_artifact_package_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
         actual_availability = d.pop("actual_availability")
 
-        kind = check_artifact_kind_enum(d.pop("kind"))
+        kind = check_artifact_package_kind(d.pop("kind"))
 
         name = d.pop("name", UNSET)
 
@@ -951,11 +1041,11 @@ class ArtifactPackage:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: ArtifactPackageProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_artifact_package_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1020,7 +1110,15 @@ class ArtifactPackage:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            ArtifactPackageCreatedByComponentType1
+            | ArtifactPackageCreatedByComponentType2Type1
+            | ArtifactPackageCreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1028,20 +1126,35 @@ class ArtifactPackage:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_artifact_package_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_artifact_package_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_artifact_package_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ArtifactPackageCreatedByComponentType1
+                | ArtifactPackageCreatedByComponentType2Type1
+                | ArtifactPackageCreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1094,7 +1207,15 @@ class ArtifactPackage:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            ArtifactPackageCriticalityType1
+            | ArtifactPackageCriticalityType2Type1
+            | ArtifactPackageCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1102,20 +1223,35 @@ class ArtifactPackage:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_artifact_package_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_artifact_package_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_artifact_package_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ArtifactPackageCriticalityType1
+                | ArtifactPackageCriticalityType2Type1
+                | ArtifactPackageCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

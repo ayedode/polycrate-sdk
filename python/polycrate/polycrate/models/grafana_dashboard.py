@@ -8,11 +8,34 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
+from ..models.grafana_dashboard_criticality_type_1 import (
+    GrafanaDashboardCriticalityType1,
+    check_grafana_dashboard_criticality_type_1,
+)
+from ..models.grafana_dashboard_criticality_type_2_type_1 import (
+    GrafanaDashboardCriticalityType2Type1,
+    check_grafana_dashboard_criticality_type_2_type_1,
+)
+from ..models.grafana_dashboard_criticality_type_3_type_1 import (
+    GrafanaDashboardCriticalityType3Type1,
+    check_grafana_dashboard_criticality_type_3_type_1,
+)
+from ..models.grafana_dashboard_effective_criticality_type_1 import (
+    GrafanaDashboardEffectiveCriticalityType1,
+    check_grafana_dashboard_effective_criticality_type_1,
+)
+from ..models.grafana_dashboard_effective_criticality_type_2_type_1 import (
+    GrafanaDashboardEffectiveCriticalityType2Type1,
+    check_grafana_dashboard_effective_criticality_type_2_type_1,
+)
+from ..models.grafana_dashboard_effective_criticality_type_3_type_1 import (
+    GrafanaDashboardEffectiveCriticalityType3Type1,
+    check_grafana_dashboard_effective_criticality_type_3_type_1,
+)
+from ..models.grafana_dashboard_kind import GrafanaDashboardKind, check_grafana_dashboard_kind
+from ..models.grafana_dashboard_last_state import GrafanaDashboardLastState, check_grafana_dashboard_last_state
+from ..models.grafana_dashboard_provider import GrafanaDashboardProvider, check_grafana_dashboard_provider
+from ..models.grafana_dashboard_state import GrafanaDashboardState, check_grafana_dashboard_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -58,7 +81,7 @@ class GrafanaDashboard:
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (GrafanaDashboardDeletedByUserType0 | None):
             debug_mode (bool): Persists all Object Logs in the database
-            provider (ProviderEnum): * `loopback` - Loopback
+            provider (GrafanaDashboardProvider): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -73,14 +96,14 @@ class GrafanaDashboard:
                 * `system` - System
             provider_reference (None | str):
             provider_id (None | str):
-            state (LastStateEnum): * `OK` - Ok
+            state (GrafanaDashboardState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (GrafanaDashboardLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -104,7 +127,7 @@ class GrafanaDashboard:
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
             scope (str):
-            kind (GenericObjectKindEnum): * `generic` - Generic
+            kind (GrafanaDashboardKind): * `generic` - Generic
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             tolerations (Any): Tolerations match conditions. If a toleration for a condition exists for an object, the
@@ -112,13 +135,15 @@ class GrafanaDashboard:
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None):
             archived_reason (None | str): The reason why the object was archived
-            criticality (CriticalityEnum | None): Criticality level. Null = inherit from workspace, then org. Explicit value
-                overrides inheritance.
+            criticality (GrafanaDashboardCriticalityType1 | GrafanaDashboardCriticalityType2Type1 |
+                GrafanaDashboardCriticalityType3Type1 | None): Criticality level. Null = inherit from workspace, then org.
+                Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
                 * `low` - Low
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (GrafanaDashboardEffectiveCriticalityType1 |
+                GrafanaDashboardEffectiveCriticalityType2Type1 | GrafanaDashboardEffectiveCriticalityType3Type1 | None):
             target_availability (None | str): Target availability in % (overrides SystemConfig default). Null = use
                 SystemConfig DEFAULT_TARGET_AVAILABILITY.
             actual_availability (str): Calculated actual availability as yearly average in %
@@ -157,12 +182,12 @@ class GrafanaDashboard:
     is_deleted: bool
     deleted_by_user: GrafanaDashboardDeletedByUserType0 | None
     debug_mode: bool
-    provider: ProviderEnum
+    provider: GrafanaDashboardProvider
     provider_reference: None | str
     provider_id: None | str
-    state: LastStateEnum
+    state: GrafanaDashboardState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: GrafanaDashboardLastState
     last_state_change: datetime.datetime | None
     reconciliation_enabled: bool
     reconciliation_running: bool
@@ -180,14 +205,24 @@ class GrafanaDashboard:
     repair_task_meta: Any
     last_repair: datetime.datetime | None
     scope: str
-    kind: GenericObjectKindEnum
+    kind: GrafanaDashboardKind
     conditions: Any
     tolerations: Any
     archived: bool
     archived_at: datetime.datetime | None
     archived_reason: None | str
-    criticality: CriticalityEnum | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    criticality: (
+        GrafanaDashboardCriticalityType1
+        | GrafanaDashboardCriticalityType2Type1
+        | GrafanaDashboardCriticalityType3Type1
+        | None
+    )
+    effective_criticality: (
+        GrafanaDashboardEffectiveCriticalityType1
+        | GrafanaDashboardEffectiveCriticalityType2Type1
+        | GrafanaDashboardEffectiveCriticalityType3Type1
+        | None
+    )
     target_availability: None | str
     actual_availability: str
     slo_target: None | str
@@ -214,12 +249,8 @@ class GrafanaDashboard:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.grafana_dashboard_deleted_by_user_type_0 import (
-            GrafanaDashboardDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.grafana_dashboard_last_action_run_type_0 import (
-            GrafanaDashboardLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.grafana_dashboard_deleted_by_user_type_0 import GrafanaDashboardDeletedByUserType0  # noqa: PLC0415
+        from ..models.grafana_dashboard_last_action_run_type_0 import GrafanaDashboardLastActionRunType0  # noqa: PLC0415
         from ..models.grafana_dashboard_organization_type_0 import GrafanaDashboardOrganizationType0  # noqa: PLC0415
         from ..models.grafana_dashboard_workspace_type_0 import GrafanaDashboardWorkspaceType0  # noqa: PLC0415
 
@@ -337,11 +368,19 @@ class GrafanaDashboard:
         criticality: None | str
         if isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -495,12 +534,8 @@ class GrafanaDashboard:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.grafana_dashboard_created import GrafanaDashboardCreated  # noqa: PLC0415
-        from ..models.grafana_dashboard_deleted_by_user_type_0 import (
-            GrafanaDashboardDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.grafana_dashboard_last_action_run_type_0 import (
-            GrafanaDashboardLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.grafana_dashboard_deleted_by_user_type_0 import GrafanaDashboardDeletedByUserType0  # noqa: PLC0415
+        from ..models.grafana_dashboard_last_action_run_type_0 import GrafanaDashboardLastActionRunType0  # noqa: PLC0415
         from ..models.grafana_dashboard_organization_type_0 import GrafanaDashboardOrganizationType0  # noqa: PLC0415
         from ..models.grafana_dashboard_revision import GrafanaDashboardRevision  # noqa: PLC0415
         from ..models.grafana_dashboard_workspace_type_0 import GrafanaDashboardWorkspaceType0  # noqa: PLC0415
@@ -550,7 +585,7 @@ class GrafanaDashboard:
 
         debug_mode = d.pop("debug_mode")
 
-        provider = check_provider_enum(d.pop("provider"))
+        provider = check_grafana_dashboard_provider(d.pop("provider"))
 
         def _parse_provider_reference(data: object) -> None | str:
             if data is None:
@@ -566,7 +601,7 @@ class GrafanaDashboard:
 
         provider_id = _parse_provider_id(d.pop("provider_id"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_grafana_dashboard_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -575,7 +610,7 @@ class GrafanaDashboard:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_grafana_dashboard_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -678,7 +713,7 @@ class GrafanaDashboard:
 
         scope = d.pop("scope")
 
-        kind = check_generic_object_kind_enum(d.pop("kind"))
+        kind = check_grafana_dashboard_kind(d.pop("kind"))
 
         conditions = d.pop("conditions")
 
@@ -708,33 +743,91 @@ class GrafanaDashboard:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason"))
 
-        def _parse_criticality(data: object) -> CriticalityEnum | None:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            GrafanaDashboardCriticalityType1
+            | GrafanaDashboardCriticalityType2Type1
+            | GrafanaDashboardCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_grafana_dashboard_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(CriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_2_type_1 = check_grafana_dashboard_criticality_type_2_type_1(data)
+
+                return criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_grafana_dashboard_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                GrafanaDashboardCriticalityType1
+                | GrafanaDashboardCriticalityType2Type1
+                | GrafanaDashboardCriticalityType3Type1
+                | None,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            GrafanaDashboardEffectiveCriticalityType1
+            | GrafanaDashboardEffectiveCriticalityType2Type1
+            | GrafanaDashboardEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_grafana_dashboard_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_grafana_dashboard_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_grafana_dashboard_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                GrafanaDashboardEffectiveCriticalityType1
+                | GrafanaDashboardEffectiveCriticalityType2Type1
+                | GrafanaDashboardEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

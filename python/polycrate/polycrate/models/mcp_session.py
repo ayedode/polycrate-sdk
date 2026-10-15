@@ -8,7 +8,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.principal_kind_enum import PrincipalKindEnum, check_principal_kind_enum
+from ..models.mcp_session_principal_kind import McpSessionPrincipalKind, check_mcp_session_principal_kind
 
 T = TypeVar("T", bound="McpSession")
 
@@ -18,7 +18,7 @@ class McpSession:
     """
     Attributes:
         id (UUID):
-        principal_kind (PrincipalKindEnum): * `user` - User
+        principal_kind (McpSessionPrincipalKind): * `user` - User
             * `system_api_key` - System API key
             * `org_api_key` - Organization API key
             * `microservice` - Microservice
@@ -35,7 +35,7 @@ class McpSession:
     """
 
     id: UUID
-    principal_kind: PrincipalKindEnum
+    principal_kind: McpSessionPrincipalKind
     principal_label: str
     client: str
     prompt: str
@@ -103,7 +103,7 @@ class McpSession:
         d = dict(src_dict)
         id = UUID(d.pop("id"))
 
-        principal_kind = check_principal_kind_enum(d.pop("principal_kind"))
+        principal_kind = check_mcp_session_principal_kind(d.pop("principal_kind"))
 
         principal_label = d.pop("principal_label")
 

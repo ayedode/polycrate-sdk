@@ -7,9 +7,9 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.content_kind_enum import ContentKindEnum, check_content_kind_enum
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
-from ..models.message_status_enum import MessageStatusEnum, check_message_status_enum
+from ..models.message_request_content_kind import MessageRequestContentKind, check_message_request_content_kind
+from ..models.message_request_kind import MessageRequestKind, check_message_request_kind
+from ..models.message_request_status import MessageRequestStatus, check_message_request_status
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="MessageRequest")
@@ -24,20 +24,26 @@ class MessageRequest:
             name (str):
             meta (Any): Message metadata as JSON object
             config (Any): Message configuration as JSON object
-            kind (ConversationKindEnum | Unset): * `generic` - Generic
+            kind (MessageRequestKind | Unset): Type of message
+
+                * `generic` - Generic
                 * `zammad` - Zammad
                 * `slack` - Slack
                 * `discord` - Discord
                 * `telegram` - Telegram
                 * `msteams` - Microsoft Teams
                 * `email` - Email
-            status (MessageStatusEnum | Unset): * `pending` - Pending
+            status (MessageRequestStatus | Unset): Current status of the message
+
+                * `pending` - Pending
                 * `requested` - Requested
                 * `delivered` - Delivered
                 * `error` - Error
                 * `deleted` - Deleted
             content (str | Unset): The actual message content
-            content_kind (ContentKindEnum | Unset): * `text` - Text
+            content_kind (MessageRequestContentKind | Unset): Type of content (text, markdown, html, json, yaml)
+
+                * `text` - Text
                 * `markdown` - Markdown
                 * `html` - HTML
                 * `json` - JSON
@@ -48,10 +54,10 @@ class MessageRequest:
     name: str
     meta: Any
     config: Any
-    kind: ConversationKindEnum | Unset = UNSET
-    status: MessageStatusEnum | Unset = UNSET
+    kind: MessageRequestKind | Unset = UNSET
+    status: MessageRequestStatus | Unset = UNSET
     content: str | Unset = UNSET
-    content_kind: ContentKindEnum | Unset = UNSET
+    content_kind: MessageRequestContentKind | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -146,27 +152,27 @@ class MessageRequest:
         config = d.pop("config")
 
         _kind = d.pop("kind", UNSET)
-        kind: ConversationKindEnum | Unset
+        kind: MessageRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_conversation_kind_enum(_kind)
+            kind = check_message_request_kind(_kind)
 
         _status = d.pop("status", UNSET)
-        status: MessageStatusEnum | Unset
+        status: MessageRequestStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_message_status_enum(_status)
+            status = check_message_request_status(_status)
 
         content = d.pop("content", UNSET)
 
         _content_kind = d.pop("content_kind", UNSET)
-        content_kind: ContentKindEnum | Unset
+        content_kind: MessageRequestContentKind | Unset
         if isinstance(_content_kind, Unset):
             content_kind = UNSET
         else:
-            content_kind = check_content_kind_enum(_content_kind)
+            content_kind = check_message_request_content_kind(_content_kind)
 
         def _parse_provider_id(data: object) -> None | str | Unset:
             if data is None:

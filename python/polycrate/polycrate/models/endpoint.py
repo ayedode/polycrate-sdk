@@ -8,14 +8,44 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.endpoint_kind_enum import EndpointKindEnum, check_endpoint_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.endpoint_created_by_component_type_1 import (
+    EndpointCreatedByComponentType1,
+    check_endpoint_created_by_component_type_1,
+)
+from ..models.endpoint_created_by_component_type_2_type_1 import (
+    EndpointCreatedByComponentType2Type1,
+    check_endpoint_created_by_component_type_2_type_1,
+)
+from ..models.endpoint_created_by_component_type_3_type_1 import (
+    EndpointCreatedByComponentType3Type1,
+    check_endpoint_created_by_component_type_3_type_1,
+)
+from ..models.endpoint_criticality_type_1 import EndpointCriticalityType1, check_endpoint_criticality_type_1
+from ..models.endpoint_criticality_type_2_type_1 import (
+    EndpointCriticalityType2Type1,
+    check_endpoint_criticality_type_2_type_1,
+)
+from ..models.endpoint_criticality_type_3_type_1 import (
+    EndpointCriticalityType3Type1,
+    check_endpoint_criticality_type_3_type_1,
+)
+from ..models.endpoint_effective_criticality_type_1 import (
+    EndpointEffectiveCriticalityType1,
+    check_endpoint_effective_criticality_type_1,
+)
+from ..models.endpoint_effective_criticality_type_2_type_1 import (
+    EndpointEffectiveCriticalityType2Type1,
+    check_endpoint_effective_criticality_type_2_type_1,
+)
+from ..models.endpoint_effective_criticality_type_3_type_1 import (
+    EndpointEffectiveCriticalityType3Type1,
+    check_endpoint_effective_criticality_type_3_type_1,
+)
+from ..models.endpoint_kind import EndpointKind, check_endpoint_kind
+from ..models.endpoint_last_state import EndpointLastState, check_endpoint_last_state
+from ..models.endpoint_provider import EndpointProvider, check_endpoint_provider
+from ..models.endpoint_scope import EndpointScope, check_endpoint_scope
+from ..models.endpoint_state import EndpointState, check_endpoint_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -54,7 +84,8 @@ class Endpoint:
             is_class_icon (bool):
             effective_slo_target (float | None):
             effective_sla_target (float | None):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (EndpointEffectiveCriticalityType1 | EndpointEffectiveCriticalityType2Type1 |
+                EndpointEffectiveCriticalityType3Type1 | None):
             last_action_run (EndpointLastActionRunType0 | None): Gibt den letzten ActionRun für das Objekt zurück (für
                 Dashboard Footer).
 
@@ -70,14 +101,14 @@ class Endpoint:
             deleted_at (datetime.datetime | None): Timestamp when this object was soft-deleted. Null if not deleted.
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
-            state (LastStateEnum): * `OK` - Ok
+            state (EndpointState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (EndpointLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -109,7 +140,7 @@ class Endpoint:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (EndpointProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -128,13 +159,15 @@ class Endpoint:
             last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
             discovery_enabled (bool | Unset):
             platform_service (bool | Unset):
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (EndpointScope | Unset): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-                cli, operator, or api.
+            created_by_component (EndpointCreatedByComponentType1 | EndpointCreatedByComponentType2Type1 |
+                EndpointCreatedByComponentType3Type1 | None | Unset): Component that created this object: cli, operator, or api.
 
                 * `cli` - CLI
                 * `operator` - Operator
@@ -148,15 +181,15 @@ class Endpoint:
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (EndpointCriticalityType1 | EndpointCriticalityType2Type1 | EndpointCriticalityType3Type1 | None |
+                Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
                 * `low` - Low
             managed_by_object_id (None | str | Unset):
             platform_dns_record_created (bool | Unset):
-            kind (EndpointKindEnum | Unset): * `icmp` - ICMP Endpoint
+            kind (EndpointKind | Unset): * `icmp` - ICMP Endpoint
                 * `http` - HTTP Endpoint
                 * `tcp` - TCP Endpoint
                 * `dns` - DNS Endpoint
@@ -174,6 +207,7 @@ class Endpoint:
             managed_by_content_type (int | None | Unset):
             modified_by_user (int | None | Unset): The user who last modified the object
             created_by_user (int | None | Unset): The user who created the object
+            product (None | Unset | UUID): Billing product for endpoint monitoring (1 EUR/endpoint/month). Spec 871.
             k8s_cluster (None | Unset | UUID):
             k8s_app (None | Unset | UUID):
             s3_cluster (None | Unset | UUID):
@@ -191,7 +225,12 @@ class Endpoint:
     is_class_icon: bool
     effective_slo_target: float | None
     effective_sla_target: float | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        EndpointEffectiveCriticalityType1
+        | EndpointEffectiveCriticalityType2Type1
+        | EndpointEffectiveCriticalityType3Type1
+        | None
+    )
     last_action_run: EndpointLastActionRunType0 | None
     deleted_by_user: EndpointDeletedByUserType0 | None
     endpoint_monitors: list[EndpointMonitorRegistration]
@@ -199,9 +238,9 @@ class Endpoint:
     updated_at: datetime.datetime
     deleted_at: datetime.datetime | None
     is_deleted: bool
-    state: LastStateEnum
+    state: EndpointState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: EndpointLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -224,18 +263,24 @@ class Endpoint:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: EndpointProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
+    scope: EndpointScope | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        EndpointCreatedByComponentType1
+        | EndpointCreatedByComponentType2Type1
+        | EndpointCreatedByComponentType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -244,10 +289,12 @@ class Endpoint:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        EndpointCriticalityType1 | EndpointCriticalityType2Type1 | EndpointCriticalityType3Type1 | None | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
-    kind: EndpointKindEnum | Unset = UNSET
+    kind: EndpointKind | Unset = UNSET
     remote_port: int | None | Unset = UNSET
     check_results: Any | Unset = UNSET
     do_not_monitor: bool | Unset = UNSET
@@ -260,6 +307,7 @@ class Endpoint:
     managed_by_content_type: int | None | Unset = UNSET
     modified_by_user: int | None | Unset = UNSET
     created_by_user: int | None | Unset = UNSET
+    product: None | Unset | UUID = UNSET
     k8s_cluster: None | Unset | UUID = UNSET
     k8s_app: None | Unset | UUID = UNSET
     s3_cluster: None | Unset | UUID = UNSET
@@ -296,6 +344,10 @@ class Endpoint:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -467,6 +519,8 @@ class Endpoint:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -509,6 +563,8 @@ class Endpoint:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -583,6 +639,14 @@ class Endpoint:
             created_by_user = UNSET
         else:
             created_by_user = self.created_by_user
+
+        product: None | str | Unset
+        if isinstance(self.product, Unset):
+            product = UNSET
+        elif isinstance(self.product, UUID):
+            product = str(self.product)
+        else:
+            product = self.product
 
         k8s_cluster: None | str | Unset
         if isinstance(self.k8s_cluster, Unset):
@@ -750,6 +814,8 @@ class Endpoint:
             field_dict["modified_by_user"] = modified_by_user
         if created_by_user is not UNSET:
             field_dict["created_by_user"] = created_by_user
+        if product is not UNSET:
+            field_dict["product"] = product
         if k8s_cluster is not UNSET:
             field_dict["k8s_cluster"] = k8s_cluster
         if k8s_app is not UNSET:
@@ -804,18 +870,47 @@ class Endpoint:
 
         effective_sla_target = _parse_effective_sla_target(d.pop("effective_sla_target"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            EndpointEffectiveCriticalityType1
+            | EndpointEffectiveCriticalityType2Type1
+            | EndpointEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_endpoint_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_endpoint_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_endpoint_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                EndpointEffectiveCriticalityType1
+                | EndpointEffectiveCriticalityType2Type1
+                | EndpointEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -877,7 +972,7 @@ class Endpoint:
 
         is_deleted = d.pop("is_deleted")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_endpoint_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -886,7 +981,7 @@ class Endpoint:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_endpoint_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -1027,11 +1122,11 @@ class Endpoint:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: EndpointProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_endpoint_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -1069,11 +1164,11 @@ class Endpoint:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: EndpointScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_endpoint_scope(_scope)
 
         archived = d.pop("archived", UNSET)
 
@@ -1103,7 +1198,15 @@ class Endpoint:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            EndpointCreatedByComponentType1
+            | EndpointCreatedByComponentType2Type1
+            | EndpointCreatedByComponentType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1111,20 +1214,35 @@ class Endpoint:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_endpoint_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_endpoint_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_endpoint_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                EndpointCreatedByComponentType1
+                | EndpointCreatedByComponentType2Type1
+                | EndpointCreatedByComponentType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -1179,7 +1297,9 @@ class Endpoint:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> EndpointCriticalityType1 | EndpointCriticalityType2Type1 | EndpointCriticalityType3Type1 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1187,20 +1307,31 @@ class Endpoint:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_endpoint_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_endpoint_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_endpoint_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                EndpointCriticalityType1 | EndpointCriticalityType2Type1 | EndpointCriticalityType3Type1 | None | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1216,11 +1347,11 @@ class Endpoint:
         platform_dns_record_created = d.pop("platform_dns_record_created", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: EndpointKindEnum | Unset
+        kind: EndpointKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_endpoint_kind_enum(_kind)
+            kind = check_endpoint_kind(_kind)
 
         def _parse_remote_port(data: object) -> int | None | Unset:
             if data is None:
@@ -1301,6 +1432,23 @@ class Endpoint:
             return cast(int | None | Unset, data)
 
         created_by_user = _parse_created_by_user(d.pop("created_by_user", UNSET))
+
+        def _parse_product(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                product_type_0 = UUID(data)
+
+                return product_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        product = _parse_product(d.pop("product", UNSET))
 
         def _parse_k8s_cluster(data: object) -> None | Unset | UUID:
             if data is None:
@@ -1467,6 +1615,7 @@ class Endpoint:
             managed_by_content_type=managed_by_content_type,
             modified_by_user=modified_by_user,
             created_by_user=created_by_user,
+            product=product,
             k8s_cluster=k8s_cluster,
             k8s_app=k8s_app,
             s3_cluster=s3_cluster,

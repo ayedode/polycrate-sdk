@@ -8,9 +8,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.renewal_mode_enum import RenewalModeEnum, check_renewal_mode_enum
+from ..models.domain_list_effective_criticality_type_1 import (
+    DomainListEffectiveCriticalityType1,
+    check_domain_list_effective_criticality_type_1,
+)
+from ..models.domain_list_effective_criticality_type_2_type_1 import (
+    DomainListEffectiveCriticalityType2Type1,
+    check_domain_list_effective_criticality_type_2_type_1,
+)
+from ..models.domain_list_effective_criticality_type_3_type_1 import (
+    DomainListEffectiveCriticalityType3Type1,
+    check_domain_list_effective_criticality_type_3_type_1,
+)
+from ..models.domain_list_renewal_mode import DomainListRenewalMode, check_domain_list_renewal_mode
+from ..models.domain_list_state import DomainListState, check_domain_list_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -50,7 +61,7 @@ class DomainList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (DomainListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -68,19 +79,22 @@ class DomainList:
             created (DomainListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (DomainListEffectiveCriticalityType1 | DomainListEffectiveCriticalityType2Type1 |
+                DomainListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             registrar (DomainRegistrarSimple):
             dns_zone (DNSZoneSimple):
             provider_status (None | str | Unset): Raw domain status string as returned by the registrar.
-            renewal_mode (RenewalModeEnum | Unset): * `AUTORENEW` - Auto Renew — domain renews automatically
+            renewal_mode (DomainListRenewalMode | Unset): * `AUTORENEW` - Auto Renew — domain renews automatically
                 * `AUTODELETE` - Auto Delete — domain deleted at expiry
             expiry_date (datetime.datetime | None | Unset): Domain expiry / renewal date.
+            deletion_date (datetime.datetime | None | Unset): Scheduled deletion date at the registrar (own field, not
+                expiry_date).
     """
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: DomainListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -91,13 +105,19 @@ class DomainList:
     created: DomainListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        DomainListEffectiveCriticalityType1
+        | DomainListEffectiveCriticalityType2Type1
+        | DomainListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     registrar: DomainRegistrarSimple
     dns_zone: DNSZoneSimple
     provider_status: None | str | Unset = UNSET
-    renewal_mode: RenewalModeEnum | Unset = UNSET
+    renewal_mode: DomainListRenewalMode | Unset = UNSET
     expiry_date: datetime.datetime | None | Unset = UNSET
+    deletion_date: datetime.datetime | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -144,6 +164,10 @@ class DomainList:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -170,6 +194,14 @@ class DomainList:
             expiry_date = self.expiry_date.isoformat()
         else:
             expiry_date = self.expiry_date
+
+        deletion_date: None | str | Unset
+        if isinstance(self.deletion_date, Unset):
+            deletion_date = UNSET
+        elif isinstance(self.deletion_date, datetime.datetime):
+            deletion_date = self.deletion_date.isoformat()
+        else:
+            deletion_date = self.deletion_date
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -200,15 +232,15 @@ class DomainList:
             field_dict["renewal_mode"] = renewal_mode
         if expiry_date is not UNSET:
             field_dict["expiry_date"] = expiry_date
+        if deletion_date is not UNSET:
+            field_dict["deletion_date"] = deletion_date
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.dns_zone_simple import DNSZoneSimple  # noqa: PLC0415
-        from ..models.domain_list_active_condition_instances_item import (
-            DomainListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.domain_list_active_condition_instances_item import DomainListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.domain_list_created import DomainListCreated  # noqa: PLC0415
         from ..models.domain_list_organization_type_0 import DomainListOrganizationType0  # noqa: PLC0415
         from ..models.domain_list_workspace_type_0 import DomainListWorkspaceType0  # noqa: PLC0415
@@ -219,7 +251,7 @@ class DomainList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_domain_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -274,18 +306,47 @@ class DomainList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            DomainListEffectiveCriticalityType1
+            | DomainListEffectiveCriticalityType2Type1
+            | DomainListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_domain_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_domain_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_domain_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DomainListEffectiveCriticalityType1
+                | DomainListEffectiveCriticalityType2Type1
+                | DomainListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -305,11 +366,11 @@ class DomainList:
         provider_status = _parse_provider_status(d.pop("provider_status", UNSET))
 
         _renewal_mode = d.pop("renewal_mode", UNSET)
-        renewal_mode: RenewalModeEnum | Unset
+        renewal_mode: DomainListRenewalMode | Unset
         if isinstance(_renewal_mode, Unset):
             renewal_mode = UNSET
         else:
-            renewal_mode = check_renewal_mode_enum(_renewal_mode)
+            renewal_mode = check_domain_list_renewal_mode(_renewal_mode)
 
         def _parse_expiry_date(data: object) -> datetime.datetime | None | Unset:
             if data is None:
@@ -327,6 +388,23 @@ class DomainList:
             return cast(datetime.datetime | None | Unset, data)
 
         expiry_date = _parse_expiry_date(d.pop("expiry_date", UNSET))
+
+        def _parse_deletion_date(data: object) -> datetime.datetime | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                deletion_date_type_0 = datetime.datetime.fromisoformat(data)
+
+                return deletion_date_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(datetime.datetime | None | Unset, data)
+
+        deletion_date = _parse_deletion_date(d.pop("deletion_date", UNSET))
 
         domain_list = cls(
             id=id,
@@ -349,6 +427,7 @@ class DomainList:
             provider_status=provider_status,
             renewal_mode=renewal_mode,
             expiry_date=expiry_date,
+            deletion_date=deletion_date,
         )
 
         domain_list.additional_properties = d

@@ -8,9 +8,42 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.delegation_source_enum import DelegationSourceEnum, check_delegation_source_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.loadbalancer_instance_list_delegation_source_type_1 import (
+    LoadbalancerInstanceListDelegationSourceType1,
+    check_loadbalancer_instance_list_delegation_source_type_1,
+)
+from ..models.loadbalancer_instance_list_delegation_source_type_2_type_1 import (
+    LoadbalancerInstanceListDelegationSourceType2Type1,
+    check_loadbalancer_instance_list_delegation_source_type_2_type_1,
+)
+from ..models.loadbalancer_instance_list_delegation_source_type_3_type_1 import (
+    LoadbalancerInstanceListDelegationSourceType3Type1,
+    check_loadbalancer_instance_list_delegation_source_type_3_type_1,
+)
+from ..models.loadbalancer_instance_list_effective_criticality_type_1 import (
+    LoadbalancerInstanceListEffectiveCriticalityType1,
+    check_loadbalancer_instance_list_effective_criticality_type_1,
+)
+from ..models.loadbalancer_instance_list_effective_criticality_type_2_type_1 import (
+    LoadbalancerInstanceListEffectiveCriticalityType2Type1,
+    check_loadbalancer_instance_list_effective_criticality_type_2_type_1,
+)
+from ..models.loadbalancer_instance_list_effective_criticality_type_3_type_1 import (
+    LoadbalancerInstanceListEffectiveCriticalityType3Type1,
+    check_loadbalancer_instance_list_effective_criticality_type_3_type_1,
+)
+from ..models.loadbalancer_instance_list_engine_version import (
+    LoadbalancerInstanceListEngineVersion,
+    check_loadbalancer_instance_list_engine_version,
+)
+from ..models.loadbalancer_instance_list_proxy_placement import (
+    LoadbalancerInstanceListProxyPlacement,
+    check_loadbalancer_instance_list_proxy_placement,
+)
+from ..models.loadbalancer_instance_list_state import (
+    LoadbalancerInstanceListState,
+    check_loadbalancer_instance_list_state,
+)
 
 if TYPE_CHECKING:
     from ..models.ip_address_simple import IPAddressSimple
@@ -44,7 +77,7 @@ class LoadbalancerInstanceList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (LoadbalancerInstanceListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -62,7 +95,9 @@ class LoadbalancerInstanceList:
             created (LoadbalancerInstanceListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (LoadbalancerInstanceListEffectiveCriticalityType1 |
+                LoadbalancerInstanceListEffectiveCriticalityType2Type1 | LoadbalancerInstanceListEffectiveCriticalityType3Type1
+                | None):
             url (str): Gibt die absolute URL zum Object zurück.
             ip_address (IPAddressSimple): Simple serializer for IPAddress references in LoadBalancer context
             ip_address_value (None | str):
@@ -85,15 +120,26 @@ class LoadbalancerInstanceList:
                 Includes `url` field for direct navigation.
             delegated_workspace (WorkspaceSimple):
             loopback_resource_id (None | str): Loopback API entity id (e.g. load-balancer id).
-            delegation_source (DelegationSourceEnum | None): Source of the delegation mapping.
+            delegation_source (LoadbalancerInstanceListDelegationSourceType1 |
+                LoadbalancerInstanceListDelegationSourceType2Type1 | LoadbalancerInstanceListDelegationSourceType3Type1 | None):
+                Source of the delegation mapping.
 
                 * `loopback_lb` - Loopback Load Balancer
                 * `loopback_object_store` - Loopback Object Store
+            engine_version (LoadbalancerInstanceListEngineVersion): 1 = HAProxy BlockRollout, 2 = Envoy Gateway API SSA.
+                Spec 705.
+
+                * `1` - HAProxy (v1)
+                * `2` - Envoy / Gateway API (v2)
+            proxy_placement (LoadbalancerInstanceListProxyPlacement): v2 placement. shared is rejected until a later spec.
+
+                * `dedicated` - Dedicated
+                * `shared` - Shared
     """
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: LoadbalancerInstanceListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -104,7 +150,12 @@ class LoadbalancerInstanceList:
     created: LoadbalancerInstanceListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        LoadbalancerInstanceListEffectiveCriticalityType1
+        | LoadbalancerInstanceListEffectiveCriticalityType2Type1
+        | LoadbalancerInstanceListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     ip_address: IPAddressSimple
     ip_address_value: None | str
@@ -124,16 +175,19 @@ class LoadbalancerInstanceList:
     delegated_organization: OrganizationSimple
     delegated_workspace: WorkspaceSimple
     loopback_resource_id: None | str
-    delegation_source: DelegationSourceEnum | None
+    delegation_source: (
+        LoadbalancerInstanceListDelegationSourceType1
+        | LoadbalancerInstanceListDelegationSourceType2Type1
+        | LoadbalancerInstanceListDelegationSourceType3Type1
+        | None
+    )
+    engine_version: LoadbalancerInstanceListEngineVersion
+    proxy_placement: LoadbalancerInstanceListProxyPlacement
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.loadbalancer_instance_list_organization_type_0 import (
-            LoadbalancerInstanceListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_instance_list_workspace_type_0 import (
-            LoadbalancerInstanceListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_instance_list_organization_type_0 import LoadbalancerInstanceListOrganizationType0  # noqa: PLC0415
+        from ..models.loadbalancer_instance_list_workspace_type_0 import LoadbalancerInstanceListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -174,6 +228,10 @@ class LoadbalancerInstanceList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -229,8 +287,16 @@ class LoadbalancerInstanceList:
         delegation_source: None | str
         if isinstance(self.delegation_source, str):
             delegation_source = self.delegation_source
+        elif isinstance(self.delegation_source, str):
+            delegation_source = self.delegation_source
+        elif isinstance(self.delegation_source, str):
+            delegation_source = self.delegation_source
         else:
             delegation_source = self.delegation_source
+
+        engine_version: int = self.engine_version
+
+        proxy_placement: str = self.proxy_placement
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -270,6 +336,8 @@ class LoadbalancerInstanceList:
                 "delegated_workspace": delegated_workspace,
                 "loopback_resource_id": loopback_resource_id,
                 "delegation_source": delegation_source,
+                "engine_version": engine_version,
+                "proxy_placement": proxy_placement,
             }
         )
 
@@ -282,15 +350,9 @@ class LoadbalancerInstanceList:
             LoadbalancerInstanceListActiveConditionInstancesItem,  # noqa: PLC0415
         )
         from ..models.loadbalancer_instance_list_created import LoadbalancerInstanceListCreated  # noqa: PLC0415
-        from ..models.loadbalancer_instance_list_deployment_summary import (
-            LoadbalancerInstanceListDeploymentSummary,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_instance_list_organization_type_0 import (
-            LoadbalancerInstanceListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.loadbalancer_instance_list_workspace_type_0 import (
-            LoadbalancerInstanceListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.loadbalancer_instance_list_deployment_summary import LoadbalancerInstanceListDeploymentSummary  # noqa: PLC0415
+        from ..models.loadbalancer_instance_list_organization_type_0 import LoadbalancerInstanceListOrganizationType0  # noqa: PLC0415
+        from ..models.loadbalancer_instance_list_workspace_type_0 import LoadbalancerInstanceListWorkspaceType0  # noqa: PLC0415
         from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
         from ..models.workspace_simple import WorkspaceSimple  # noqa: PLC0415
 
@@ -299,7 +361,7 @@ class LoadbalancerInstanceList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_loadbalancer_instance_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -354,18 +416,51 @@ class LoadbalancerInstanceList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            LoadbalancerInstanceListEffectiveCriticalityType1
+            | LoadbalancerInstanceListEffectiveCriticalityType2Type1
+            | LoadbalancerInstanceListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_loadbalancer_instance_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = (
+                    check_loadbalancer_instance_list_effective_criticality_type_2_type_1(data)
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = (
+                    check_loadbalancer_instance_list_effective_criticality_type_3_type_1(data)
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LoadbalancerInstanceListEffectiveCriticalityType1
+                | LoadbalancerInstanceListEffectiveCriticalityType2Type1
+                | LoadbalancerInstanceListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -443,20 +538,53 @@ class LoadbalancerInstanceList:
 
         loopback_resource_id = _parse_loopback_resource_id(d.pop("loopback_resource_id"))
 
-        def _parse_delegation_source(data: object) -> DelegationSourceEnum | None:
+        def _parse_delegation_source(
+            data: object,
+        ) -> (
+            LoadbalancerInstanceListDelegationSourceType1
+            | LoadbalancerInstanceListDelegationSourceType2Type1
+            | LoadbalancerInstanceListDelegationSourceType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                delegation_source_type_0 = check_delegation_source_enum(data)
+                delegation_source_type_1 = check_loadbalancer_instance_list_delegation_source_type_1(data)
 
-                return delegation_source_type_0
+                return delegation_source_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(DelegationSourceEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                delegation_source_type_2_type_1 = check_loadbalancer_instance_list_delegation_source_type_2_type_1(data)
+
+                return delegation_source_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                delegation_source_type_3_type_1 = check_loadbalancer_instance_list_delegation_source_type_3_type_1(data)
+
+                return delegation_source_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LoadbalancerInstanceListDelegationSourceType1
+                | LoadbalancerInstanceListDelegationSourceType2Type1
+                | LoadbalancerInstanceListDelegationSourceType3Type1
+                | None,
+                data,
+            )
 
         delegation_source = _parse_delegation_source(d.pop("delegation_source"))
+
+        engine_version = check_loadbalancer_instance_list_engine_version(d.pop("engine_version"))
+
+        proxy_placement = check_loadbalancer_instance_list_proxy_placement(d.pop("proxy_placement"))
 
         loadbalancer_instance_list = cls(
             id=id,
@@ -493,6 +621,8 @@ class LoadbalancerInstanceList:
             delegated_workspace=delegated_workspace,
             loopback_resource_id=loopback_resource_id,
             delegation_source=delegation_source,
+            engine_version=engine_version,
+            proxy_placement=proxy_placement,
         )
 
         loadbalancer_instance_list.additional_properties = d

@@ -8,10 +8,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.contact_group_membership_role_enum import (
-    ContactGroupMembershipRoleEnum,
-    check_contact_group_membership_role_enum,
-)
+from ..models.contact_group_membership_role import ContactGroupMembershipRole, check_contact_group_membership_role
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ContactGroupMembership")
@@ -30,7 +27,9 @@ class ContactGroupMembership:
             contact_email (str):
             created_at (datetime.datetime):
             updated_at (datetime.datetime):
-            role (ContactGroupMembershipRoleEnum | Unset): * `owner` - Owner
+            role (ContactGroupMembershipRole | Unset): Role of the contact in this group
+
+                * `owner` - Owner
                 * `maintainer` - Maintainer
                 * `contributor` - Contributor
     """
@@ -41,7 +40,7 @@ class ContactGroupMembership:
     contact_email: str
     created_at: datetime.datetime
     updated_at: datetime.datetime
-    role: ContactGroupMembershipRoleEnum | Unset = UNSET
+    role: ContactGroupMembershipRole | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -94,11 +93,11 @@ class ContactGroupMembership:
         updated_at = datetime.datetime.fromisoformat(d.pop("updated_at"))
 
         _role = d.pop("role", UNSET)
-        role: ContactGroupMembershipRoleEnum | Unset
+        role: ContactGroupMembershipRole | Unset
         if isinstance(_role, Unset):
             role = UNSET
         else:
-            role = check_contact_group_membership_role_enum(_role)
+            role = check_contact_group_membership_role(_role)
 
         contact_group_membership = cls(
             id=id,

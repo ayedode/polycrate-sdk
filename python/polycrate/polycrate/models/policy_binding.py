@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.policy_binding_scope import PolicyBindingScope, check_policy_binding_scope
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -36,7 +36,9 @@ class PolicyBinding:
             assigned_at (datetime.datetime):
             last_applied_at (datetime.datetime | None):
             enabled (bool | Unset): Whether this binding is active
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (PolicyBindingScope | Unset): System = auto-assigned, User = manually assigned
+
+                * `system` - System
                 * `user` - User
             applied (bool | Unset): Whether policy was successfully applied
             execution_log (Any | Unset): List of actions performed/logged during last execution
@@ -52,7 +54,7 @@ class PolicyBinding:
     assigned_at: datetime.datetime
     last_applied_at: datetime.datetime | None
     enabled: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
+    scope: PolicyBindingScope | Unset = UNSET
     applied: bool | Unset = UNSET
     execution_log: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -167,11 +169,11 @@ class PolicyBinding:
         enabled = d.pop("enabled", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: PolicyBindingScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_policy_binding_scope(_scope)
 
         applied = d.pop("applied", UNSET)
 

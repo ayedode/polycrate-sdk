@@ -9,7 +9,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
+from ..models.conversation_provider_post_request_kind import (
+    ConversationProviderPostRequestKind,
+    check_conversation_provider_post_request_kind,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -26,7 +29,9 @@ class ConversationProviderPostRequest:
 
         Attributes:
             name (str):
-            kind (ConversationKindEnum | Unset): * `generic` - Generic
+            kind (ConversationProviderPostRequestKind | Unset): Type of conversation provider
+
+                * `generic` - Generic
                 * `zammad` - Zammad
                 * `slack` - Slack
                 * `discord` - Discord
@@ -42,7 +47,7 @@ class ConversationProviderPostRequest:
     """
 
     name: str
-    kind: ConversationKindEnum | Unset = UNSET
+    kind: ConversationProviderPostRequestKind | Unset = UNSET
     organization: None | Unset | UUID = UNSET
     credential: None | Unset | UUID = UNSET
     meta: Any | Unset = UNSET
@@ -162,11 +167,11 @@ class ConversationProviderPostRequest:
         name = d.pop("name")
 
         _kind = d.pop("kind", UNSET)
-        kind: ConversationKindEnum | Unset
+        kind: ConversationProviderPostRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_conversation_kind_enum(_kind)
+            kind = check_conversation_provider_post_request_kind(_kind)
 
         def _parse_organization(data: object) -> None | Unset | UUID:
             if data is None:

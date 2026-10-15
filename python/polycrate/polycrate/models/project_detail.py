@@ -8,15 +8,59 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.budgeted_hours_interval_enum import BudgetedHoursIntervalEnum, check_budgeted_hours_interval_enum
-from ..models.budgeted_hours_mode_enum import BudgetedHoursModeEnum, check_budgeted_hours_mode_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.project_kind_enum import ProjectKindEnum, check_project_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.project_detail_budgeted_hours_interval_type_1 import (
+    ProjectDetailBudgetedHoursIntervalType1,
+    check_project_detail_budgeted_hours_interval_type_1,
+)
+from ..models.project_detail_budgeted_hours_interval_type_2_type_1 import (
+    ProjectDetailBudgetedHoursIntervalType2Type1,
+    check_project_detail_budgeted_hours_interval_type_2_type_1,
+)
+from ..models.project_detail_budgeted_hours_interval_type_3_type_1 import (
+    ProjectDetailBudgetedHoursIntervalType3Type1,
+    check_project_detail_budgeted_hours_interval_type_3_type_1,
+)
+from ..models.project_detail_budgeted_hours_mode_type_1 import (
+    ProjectDetailBudgetedHoursModeType1,
+    check_project_detail_budgeted_hours_mode_type_1,
+)
+from ..models.project_detail_budgeted_hours_mode_type_2_type_1 import (
+    ProjectDetailBudgetedHoursModeType2Type1,
+    check_project_detail_budgeted_hours_mode_type_2_type_1,
+)
+from ..models.project_detail_budgeted_hours_mode_type_3_type_1 import (
+    ProjectDetailBudgetedHoursModeType3Type1,
+    check_project_detail_budgeted_hours_mode_type_3_type_1,
+)
+from ..models.project_detail_criticality_type_1 import (
+    ProjectDetailCriticalityType1,
+    check_project_detail_criticality_type_1,
+)
+from ..models.project_detail_criticality_type_2_type_1 import (
+    ProjectDetailCriticalityType2Type1,
+    check_project_detail_criticality_type_2_type_1,
+)
+from ..models.project_detail_criticality_type_3_type_1 import (
+    ProjectDetailCriticalityType3Type1,
+    check_project_detail_criticality_type_3_type_1,
+)
+from ..models.project_detail_effective_criticality_type_1 import (
+    ProjectDetailEffectiveCriticalityType1,
+    check_project_detail_effective_criticality_type_1,
+)
+from ..models.project_detail_effective_criticality_type_2_type_1 import (
+    ProjectDetailEffectiveCriticalityType2Type1,
+    check_project_detail_effective_criticality_type_2_type_1,
+)
+from ..models.project_detail_effective_criticality_type_3_type_1 import (
+    ProjectDetailEffectiveCriticalityType3Type1,
+    check_project_detail_effective_criticality_type_3_type_1,
+)
+from ..models.project_detail_kind import ProjectDetailKind, check_project_detail_kind
+from ..models.project_detail_last_state import ProjectDetailLastState, check_project_detail_last_state
+from ..models.project_detail_provider import ProjectDetailProvider, check_project_detail_provider
+from ..models.project_detail_scope import ProjectDetailScope, check_project_detail_scope
+from ..models.project_detail_state import ProjectDetailState, check_project_detail_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -44,14 +88,14 @@ class ProjectDetail:
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
         deleted_by_user (None | ProjectDetailDeletedByUserType0):
-        state (LastStateEnum): * `OK` - Ok
+        state (ProjectDetailState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (ProjectDetailLastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -72,11 +116,14 @@ class ProjectDetail:
         repair_task_id (None | str):
         repair_task_meta (Any): Task metadata for repair progress tracking
         last_repair (datetime.datetime | None):
-        scope (ScopeEnum): * `system` - System
+        scope (ProjectDetailScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+            * `system` - System
             * `user` - User
         conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
             conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (None | ProjectDetailEffectiveCriticalityType1 |
+            ProjectDetailEffectiveCriticalityType2Type1 | ProjectDetailEffectiveCriticalityType3Type1):
         actual_availability (str): Calculated actual availability as yearly average in %
         organization (OrganizationSimple): Simple Organization serializer for nested representations.
 
@@ -103,7 +150,7 @@ class ProjectDetail:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (ProjectDetailProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -120,7 +167,9 @@ class ProjectDetail:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (ProjectKindEnum | Unset): * `onboarding` - Onboarding
+        kind (ProjectDetailKind | Unset): Project lifecycle phase
+
+            * `onboarding` - Onboarding
             * `offboarding` - Offboarding
             * `ongoing` - Ongoing
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -128,8 +177,9 @@ class ProjectDetail:
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | ProjectDetailCriticalityType1 | ProjectDetailCriticalityType2Type1 |
+            ProjectDetailCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then org.
+            Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -145,8 +195,9 @@ class ProjectDetail:
         end_date (datetime.date | None | Unset): Project end date
         urls (Any | Unset): List of named URLs relevant to this project, e.g. [{'name': 'Board', 'url': 'https://...'}]
         budgeted_hours (None | str | Unset): Total hours budgeted for this project (per interval)
-        budgeted_hours_interval (BlankEnum | BudgetedHoursIntervalEnum | None | Unset): Period over which budgeted_hours
-            applies
+        budgeted_hours_interval (None | ProjectDetailBudgetedHoursIntervalType1 |
+            ProjectDetailBudgetedHoursIntervalType2Type1 | ProjectDetailBudgetedHoursIntervalType3Type1 | Unset): Period
+            over which budgeted_hours applies
 
             * `second` - Second
             * `minute` - Minute
@@ -155,8 +206,9 @@ class ProjectDetail:
             * `month` - Month
             * `year` - Year
             * `project` - Project Lifetime
-        budgeted_hours_mode (BlankEnum | BudgetedHoursModeEnum | None | Unset): Retainer: full budget charged regardless
-            of usage. T&M: only tracked hours charged.
+        budgeted_hours_mode (None | ProjectDetailBudgetedHoursModeType1 | ProjectDetailBudgetedHoursModeType2Type1 |
+            ProjectDetailBudgetedHoursModeType3Type1 | Unset): Retainer: full budget charged regardless of usage. T&M: only
+            tracked hours charged.
 
             * `retainer` - Retainer
             * `tm` - Time & Material
@@ -168,9 +220,9 @@ class ProjectDetail:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: None | ProjectDetailDeletedByUserType0
-    state: LastStateEnum
+    state: ProjectDetailState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: ProjectDetailLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -185,9 +237,14 @@ class ProjectDetail:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: ProjectDetailScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | ProjectDetailEffectiveCriticalityType1
+        | ProjectDetailEffectiveCriticalityType2Type1
+        | ProjectDetailEffectiveCriticalityType3Type1
+    )
     actual_availability: str
     organization: OrganizationSimple
     workspace: None | ProjectDetailWorkspaceType0
@@ -210,17 +267,23 @@ class ProjectDetail:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: ProjectDetailProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: ProjectKindEnum | Unset = UNSET
+    kind: ProjectDetailKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | ProjectDetailCriticalityType1
+        | ProjectDetailCriticalityType2Type1
+        | ProjectDetailCriticalityType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -231,8 +294,20 @@ class ProjectDetail:
     end_date: datetime.date | None | Unset = UNSET
     urls: Any | Unset = UNSET
     budgeted_hours: None | str | Unset = UNSET
-    budgeted_hours_interval: BlankEnum | BudgetedHoursIntervalEnum | None | Unset = UNSET
-    budgeted_hours_mode: BlankEnum | BudgetedHoursModeEnum | None | Unset = UNSET
+    budgeted_hours_interval: (
+        None
+        | ProjectDetailBudgetedHoursIntervalType1
+        | ProjectDetailBudgetedHoursIntervalType2Type1
+        | ProjectDetailBudgetedHoursIntervalType3Type1
+        | Unset
+    ) = UNSET
+    budgeted_hours_mode: (
+        None
+        | ProjectDetailBudgetedHoursModeType1
+        | ProjectDetailBudgetedHoursModeType2Type1
+        | ProjectDetailBudgetedHoursModeType3Type1
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -321,6 +396,10 @@ class ProjectDetail:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -440,6 +519,8 @@ class ProjectDetail:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -498,12 +579,16 @@ class ProjectDetail:
             budgeted_hours_interval = self.budgeted_hours_interval
         elif isinstance(self.budgeted_hours_interval, str):
             budgeted_hours_interval = self.budgeted_hours_interval
+        elif isinstance(self.budgeted_hours_interval, str):
+            budgeted_hours_interval = self.budgeted_hours_interval
         else:
             budgeted_hours_interval = self.budgeted_hours_interval
 
         budgeted_hours_mode: None | str | Unset
         if isinstance(self.budgeted_hours_mode, Unset):
             budgeted_hours_mode = UNSET
+        elif isinstance(self.budgeted_hours_mode, str):
+            budgeted_hours_mode = self.budgeted_hours_mode
         elif isinstance(self.budgeted_hours_mode, str):
             budgeted_hours_mode = self.budgeted_hours_mode
         elif isinstance(self.budgeted_hours_mode, str):
@@ -668,7 +753,7 @@ class ProjectDetail:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_project_detail_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -677,7 +762,7 @@ class ProjectDetail:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_project_detail_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -774,22 +859,51 @@ class ProjectDetail:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_project_detail_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | ProjectDetailEffectiveCriticalityType1
+            | ProjectDetailEffectiveCriticalityType2Type1
+            | ProjectDetailEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_project_detail_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_project_detail_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_project_detail_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | ProjectDetailEffectiveCriticalityType1
+                | ProjectDetailEffectiveCriticalityType2Type1
+                | ProjectDetailEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -914,11 +1028,11 @@ class ProjectDetail:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: ProjectDetailProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_project_detail_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -943,11 +1057,11 @@ class ProjectDetail:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: ProjectKindEnum | Unset
+        kind: ProjectDetailKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_project_kind_enum(_kind)
+            kind = check_project_detail_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -979,7 +1093,15 @@ class ProjectDetail:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | ProjectDetailCriticalityType1
+            | ProjectDetailCriticalityType2Type1
+            | ProjectDetailCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -987,20 +1109,35 @@ class ProjectDetail:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_project_detail_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_project_detail_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_project_detail_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | ProjectDetailCriticalityType1
+                | ProjectDetailCriticalityType2Type1
+                | ProjectDetailCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1082,7 +1219,15 @@ class ProjectDetail:
 
         budgeted_hours = _parse_budgeted_hours(d.pop("budgeted_hours", UNSET))
 
-        def _parse_budgeted_hours_interval(data: object) -> BlankEnum | BudgetedHoursIntervalEnum | None | Unset:
+        def _parse_budgeted_hours_interval(
+            data: object,
+        ) -> (
+            None
+            | ProjectDetailBudgetedHoursIntervalType1
+            | ProjectDetailBudgetedHoursIntervalType2Type1
+            | ProjectDetailBudgetedHoursIntervalType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1090,24 +1235,47 @@ class ProjectDetail:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                budgeted_hours_interval_type_0 = check_budgeted_hours_interval_enum(data)
-
-                return budgeted_hours_interval_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                budgeted_hours_interval_type_1 = check_blank_enum(data)
+                budgeted_hours_interval_type_1 = check_project_detail_budgeted_hours_interval_type_1(data)
 
                 return budgeted_hours_interval_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | BudgetedHoursIntervalEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                budgeted_hours_interval_type_2_type_1 = check_project_detail_budgeted_hours_interval_type_2_type_1(data)
+
+                return budgeted_hours_interval_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                budgeted_hours_interval_type_3_type_1 = check_project_detail_budgeted_hours_interval_type_3_type_1(data)
+
+                return budgeted_hours_interval_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | ProjectDetailBudgetedHoursIntervalType1
+                | ProjectDetailBudgetedHoursIntervalType2Type1
+                | ProjectDetailBudgetedHoursIntervalType3Type1
+                | Unset,
+                data,
+            )
 
         budgeted_hours_interval = _parse_budgeted_hours_interval(d.pop("budgeted_hours_interval", UNSET))
 
-        def _parse_budgeted_hours_mode(data: object) -> BlankEnum | BudgetedHoursModeEnum | None | Unset:
+        def _parse_budgeted_hours_mode(
+            data: object,
+        ) -> (
+            None
+            | ProjectDetailBudgetedHoursModeType1
+            | ProjectDetailBudgetedHoursModeType2Type1
+            | ProjectDetailBudgetedHoursModeType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1115,20 +1283,35 @@ class ProjectDetail:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                budgeted_hours_mode_type_0 = check_budgeted_hours_mode_enum(data)
+                budgeted_hours_mode_type_1 = check_project_detail_budgeted_hours_mode_type_1(data)
 
-                return budgeted_hours_mode_type_0
+                return budgeted_hours_mode_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                budgeted_hours_mode_type_1 = check_blank_enum(data)
+                budgeted_hours_mode_type_2_type_1 = check_project_detail_budgeted_hours_mode_type_2_type_1(data)
 
-                return budgeted_hours_mode_type_1
+                return budgeted_hours_mode_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | BudgetedHoursModeEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                budgeted_hours_mode_type_3_type_1 = check_project_detail_budgeted_hours_mode_type_3_type_1(data)
+
+                return budgeted_hours_mode_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | ProjectDetailBudgetedHoursModeType1
+                | ProjectDetailBudgetedHoursModeType2Type1
+                | ProjectDetailBudgetedHoursModeType3Type1
+                | Unset,
+                data,
+            )
 
         budgeted_hours_mode = _parse_budgeted_hours_mode(d.pop("budgeted_hours_mode", UNSET))
 

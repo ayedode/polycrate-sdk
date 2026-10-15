@@ -8,14 +8,35 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.created_by_component_enum import CreatedByComponentEnum, check_created_by_component_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.severity_401_enum import Severity401Enum, check_severity_401_enum
-from ..models.status_a85_enum import StatusA85Enum, check_status_a85_enum
+from ..models.patched_cve_request_created_by_component_type_1 import (
+    PatchedCVERequestCreatedByComponentType1,
+    check_patched_cve_request_created_by_component_type_1,
+)
+from ..models.patched_cve_request_created_by_component_type_2_type_1 import (
+    PatchedCVERequestCreatedByComponentType2Type1,
+    check_patched_cve_request_created_by_component_type_2_type_1,
+)
+from ..models.patched_cve_request_created_by_component_type_3_type_1 import (
+    PatchedCVERequestCreatedByComponentType3Type1,
+    check_patched_cve_request_created_by_component_type_3_type_1,
+)
+from ..models.patched_cve_request_criticality_type_1 import (
+    PatchedCVERequestCriticalityType1,
+    check_patched_cve_request_criticality_type_1,
+)
+from ..models.patched_cve_request_criticality_type_2_type_1 import (
+    PatchedCVERequestCriticalityType2Type1,
+    check_patched_cve_request_criticality_type_2_type_1,
+)
+from ..models.patched_cve_request_criticality_type_3_type_1 import (
+    PatchedCVERequestCriticalityType3Type1,
+    check_patched_cve_request_criticality_type_3_type_1,
+)
+from ..models.patched_cve_request_kind import PatchedCVERequestKind, check_patched_cve_request_kind
+from ..models.patched_cve_request_provider import PatchedCVERequestProvider, check_patched_cve_request_provider
+from ..models.patched_cve_request_scope import PatchedCVERequestScope, check_patched_cve_request_scope
+from ..models.patched_cve_request_severity import PatchedCVERequestSeverity, check_patched_cve_request_severity
+from ..models.patched_cve_request_status import PatchedCVERequestStatus, check_patched_cve_request_status
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedCVERequest")
@@ -32,7 +53,7 @@ class PatchedCVERequest:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (PatchedCVERequestProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -51,14 +72,18 @@ class PatchedCVERequest:
         last_reconciliation_duration_seconds (float | None | Unset): Duration of the last reconciliation in seconds
         discovery_enabled (bool | Unset):
         platform_service (bool | Unset):
-        scope (ScopeEnum | Unset): * `system` - System
+        scope (PatchedCVERequestScope | Unset): The scope is used to separate `system` owned objects from `user` owned
+            objects.
+
+            * `system` - System
             * `user` - User
-        kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+        kind (PatchedCVERequestKind | Unset): * `generic` - Generic
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        created_by_component (BlankEnum | CreatedByComponentEnum | None | Unset): Component that created this object:
-            cli, operator, or api.
+        created_by_component (None | PatchedCVERequestCreatedByComponentType1 |
+            PatchedCVERequestCreatedByComponentType2Type1 | PatchedCVERequestCreatedByComponentType3Type1 | Unset):
+            Component that created this object: cli, operator, or api.
 
             * `cli` - CLI
             * `operator` - Operator
@@ -72,8 +97,9 @@ class PatchedCVERequest:
         sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
         sla_window_days (int | None | Unset): SLA window in days. Null = use SystemConfig DEFAULT_SLA_WINDOW_DAYS (365)
         sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (None | PatchedCVERequestCriticalityType1 | PatchedCVERequestCriticalityType2Type1 |
+            PatchedCVERequestCriticalityType3Type1 | Unset): Criticality level. Null = inherit from workspace, then org.
+            Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -87,13 +113,17 @@ class PatchedCVERequest:
         modified_at (datetime.datetime | None | Unset): When the CVE was last modified upstream
         cvss_score (None | str | Unset): CVSS base score (0.0 - 10.0)
         cvss_vector (None | str | Unset): CVSS vector string, e.g. CVSS:3.1/AV:N/AC:L/...
-        severity (Severity401Enum | Unset): * `critical` - Critical
+        severity (PatchedCVERequestSeverity | Unset): Normalized severity bucket derived from cvss_score
+
+            * `critical` - Critical
             * `high` - High
             * `medium` - Medium
             * `low` - Low
             * `none` - None
             * `unknown` - Unknown
-        status (StatusA85Enum | Unset): * `open` - Open
+        status (PatchedCVERequestStatus | Unset): Lifecycle status of the CVE record
+
+            * `open` - Open
             * `disputed` - Disputed
             * `rejected` - Rejected
             * `reserved` - Reserved
@@ -108,19 +138,25 @@ class PatchedCVERequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PatchedCVERequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     last_reconciliation_duration_seconds: float | None | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: PatchedCVERequestScope | Unset = UNSET
+    kind: PatchedCVERequestKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    created_by_component: BlankEnum | CreatedByComponentEnum | None | Unset = UNSET
+    created_by_component: (
+        None
+        | PatchedCVERequestCreatedByComponentType1
+        | PatchedCVERequestCreatedByComponentType2Type1
+        | PatchedCVERequestCreatedByComponentType3Type1
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -129,7 +165,13 @@ class PatchedCVERequest:
     sla_target: None | str | Unset = UNSET
     sla_window_days: int | None | Unset = UNSET
     sla_availability: str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        None
+        | PatchedCVERequestCriticalityType1
+        | PatchedCVERequestCriticalityType2Type1
+        | PatchedCVERequestCriticalityType3Type1
+        | Unset
+    ) = UNSET
     managed_by_object_id: None | str | Unset = UNSET
     platform_dns_record_created: bool | Unset = UNSET
     cve_id: str | Unset = UNSET
@@ -139,8 +181,8 @@ class PatchedCVERequest:
     modified_at: datetime.datetime | None | Unset = UNSET
     cvss_score: None | str | Unset = UNSET
     cvss_vector: None | str | Unset = UNSET
-    severity: Severity401Enum | Unset = UNSET
-    status: StatusA85Enum | Unset = UNSET
+    severity: PatchedCVERequestSeverity | Unset = UNSET
+    status: PatchedCVERequestStatus | Unset = UNSET
     archived_by: int | None | Unset = UNSET
     managed_by_content_type: int | None | Unset = UNSET
     modified_by_user: int | None | Unset = UNSET
@@ -221,6 +263,8 @@ class PatchedCVERequest:
             created_by_component = self.created_by_component
         elif isinstance(self.created_by_component, str):
             created_by_component = self.created_by_component
+        elif isinstance(self.created_by_component, str):
+            created_by_component = self.created_by_component
         else:
             created_by_component = self.created_by_component
 
@@ -263,6 +307,8 @@ class PatchedCVERequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -517,7 +563,9 @@ class PatchedCVERequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.created_by_component, Unset):
-            if isinstance(self.created_by_component, str):
+            if self.created_by_component is None:
+                files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
+            elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
             elif isinstance(self.created_by_component, str):
                 files.append(("created_by_component", (None, str(self.created_by_component).encode(), "text/plain")))
@@ -564,7 +612,9 @@ class PatchedCVERequest:
             files.append(("sla_availability", (None, str(self.sla_availability).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -675,11 +725,11 @@ class PatchedCVERequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PatchedCVERequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_patched_cve_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -717,18 +767,18 @@ class PatchedCVERequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: PatchedCVERequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_patched_cve_request_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: PatchedCVERequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_patched_cve_request_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -758,7 +808,15 @@ class PatchedCVERequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_created_by_component(data: object) -> BlankEnum | CreatedByComponentEnum | None | Unset:
+        def _parse_created_by_component(
+            data: object,
+        ) -> (
+            None
+            | PatchedCVERequestCreatedByComponentType1
+            | PatchedCVERequestCreatedByComponentType2Type1
+            | PatchedCVERequestCreatedByComponentType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -766,20 +824,35 @@ class PatchedCVERequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_0 = check_created_by_component_enum(data)
+                created_by_component_type_1 = check_patched_cve_request_created_by_component_type_1(data)
 
-                return created_by_component_type_0
+                return created_by_component_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                created_by_component_type_1 = check_blank_enum(data)
+                created_by_component_type_2_type_1 = check_patched_cve_request_created_by_component_type_2_type_1(data)
 
-                return created_by_component_type_1
+                return created_by_component_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CreatedByComponentEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_by_component_type_3_type_1 = check_patched_cve_request_created_by_component_type_3_type_1(data)
+
+                return created_by_component_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedCVERequestCreatedByComponentType1
+                | PatchedCVERequestCreatedByComponentType2Type1
+                | PatchedCVERequestCreatedByComponentType3Type1
+                | Unset,
+                data,
+            )
 
         created_by_component = _parse_created_by_component(d.pop("created_by_component", UNSET))
 
@@ -834,7 +907,15 @@ class PatchedCVERequest:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            None
+            | PatchedCVERequestCriticalityType1
+            | PatchedCVERequestCriticalityType2Type1
+            | PatchedCVERequestCriticalityType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -842,20 +923,35 @@ class PatchedCVERequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_patched_cve_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_patched_cve_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_patched_cve_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PatchedCVERequestCriticalityType1
+                | PatchedCVERequestCriticalityType2Type1
+                | PatchedCVERequestCriticalityType3Type1
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -929,18 +1025,18 @@ class PatchedCVERequest:
         cvss_vector = _parse_cvss_vector(d.pop("cvss_vector", UNSET))
 
         _severity = d.pop("severity", UNSET)
-        severity: Severity401Enum | Unset
+        severity: PatchedCVERequestSeverity | Unset
         if isinstance(_severity, Unset):
             severity = UNSET
         else:
-            severity = check_severity_401_enum(_severity)
+            severity = check_patched_cve_request_severity(_severity)
 
         _status = d.pop("status", UNSET)
-        status: StatusA85Enum | Unset
+        status: PatchedCVERequestStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_status_a85_enum(_status)
+            status = check_patched_cve_request_status(_status)
 
         def _parse_archived_by(data: object) -> int | None | Unset:
             if data is None:

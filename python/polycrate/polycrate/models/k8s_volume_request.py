@@ -9,14 +9,27 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.phase_enum import PhaseEnum, check_phase_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.reclaim_policy_enum import ReclaimPolicyEnum, check_reclaim_policy_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
-from ..models.volume_mode_enum import VolumeModeEnum, check_volume_mode_enum
+from ..models.k8s_volume_request_criticality_type_1 import (
+    K8SVolumeRequestCriticalityType1,
+    check_k8s_volume_request_criticality_type_1,
+)
+from ..models.k8s_volume_request_criticality_type_2_type_1 import (
+    K8SVolumeRequestCriticalityType2Type1,
+    check_k8s_volume_request_criticality_type_2_type_1,
+)
+from ..models.k8s_volume_request_criticality_type_3_type_1 import (
+    K8SVolumeRequestCriticalityType3Type1,
+    check_k8s_volume_request_criticality_type_3_type_1,
+)
+from ..models.k8s_volume_request_kind import K8SVolumeRequestKind, check_k8s_volume_request_kind
+from ..models.k8s_volume_request_phase import K8SVolumeRequestPhase, check_k8s_volume_request_phase
+from ..models.k8s_volume_request_provider import K8SVolumeRequestProvider, check_k8s_volume_request_provider
+from ..models.k8s_volume_request_reclaim_policy import (
+    K8SVolumeRequestReclaimPolicy,
+    check_k8s_volume_request_reclaim_policy,
+)
+from ..models.k8s_volume_request_scope import K8SVolumeRequestScope, check_k8s_volume_request_scope
+from ..models.k8s_volume_request_volume_mode import K8SVolumeRequestVolumeMode, check_k8s_volume_request_volume_mode
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="K8SVolumeRequest")
@@ -41,7 +54,7 @@ class K8SVolumeRequest:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (K8SVolumeRequestProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -59,13 +72,17 @@ class K8SVolumeRequest:
             reconciliation_enabled (bool | Unset):
             discovery_enabled (bool | Unset):
             platform_service (bool | Unset):
-            scope (ScopeEnum | Unset): * `system` - System
+            scope (K8SVolumeRequestScope | Unset): The scope is used to separate `system` owned objects from `user` owned
+                objects.
+
+                * `system` - System
                 * `user` - User
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (K8SVolumeRequestKind | Unset): * `generic` - Generic
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
+            criticality (K8SVolumeRequestCriticalityType1 | K8SVolumeRequestCriticalityType2Type1 |
+                K8SVolumeRequestCriticalityType3Type1 | None | Unset): Criticality level. Null = inherit from workspace, then
                 org. Explicit value overrides inheritance.
 
                 * `high` - High
@@ -88,16 +105,16 @@ class K8SVolumeRequest:
             storage_class (None | str | Unset):
             capacity_bytes (int | None | Unset):
             capacity_string (None | str | Unset): Original k8s Quantity string e.g. '10Gi', '500Mi'
-            phase (PhaseEnum | Unset): * `Bound` - Bound
+            phase (K8SVolumeRequestPhase | Unset): * `Bound` - Bound
                 * `Released` - Released
                 * `Available` - Available
                 * `Failed` - Failed
                 * `Pending` - Pending
                 * `Unknown` - Unknown
             access_modes (Any | Unset):
-            volume_mode (VolumeModeEnum | Unset): * `Filesystem` - Filesystem
+            volume_mode (K8SVolumeRequestVolumeMode | Unset): * `Filesystem` - Filesystem
                 * `Block` - Block
-            reclaim_policy (ReclaimPolicyEnum | Unset): * `Retain` - Retain
+            reclaim_policy (K8SVolumeRequestReclaimPolicy | Unset): * `Retain` - Retain
                 * `Delete` - Delete
                 * `Recycle` - Recycle
             pvc_name (None | str | Unset):
@@ -113,18 +130,24 @@ class K8SVolumeRequest:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: K8SVolumeRequestProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     discovery_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
-    kind: GenericObjectKindEnum | Unset = UNSET
+    scope: K8SVolumeRequestScope | Unset = UNSET
+    kind: K8SVolumeRequestKind | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        K8SVolumeRequestCriticalityType1
+        | K8SVolumeRequestCriticalityType2Type1
+        | K8SVolumeRequestCriticalityType3Type1
+        | None
+        | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     actual_availability: str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
@@ -139,10 +162,10 @@ class K8SVolumeRequest:
     storage_class: None | str | Unset = UNSET
     capacity_bytes: int | None | Unset = UNSET
     capacity_string: None | str | Unset = UNSET
-    phase: PhaseEnum | Unset = UNSET
+    phase: K8SVolumeRequestPhase | Unset = UNSET
     access_modes: Any | Unset = UNSET
-    volume_mode: VolumeModeEnum | Unset = UNSET
-    reclaim_policy: ReclaimPolicyEnum | Unset = UNSET
+    volume_mode: K8SVolumeRequestVolumeMode | Unset = UNSET
+    reclaim_policy: K8SVolumeRequestReclaimPolicy | Unset = UNSET
     pvc_name: None | str | Unset = UNSET
     pvc_namespace: None | str | Unset = UNSET
     node_affinity: Any | Unset = UNSET
@@ -216,6 +239,8 @@ class K8SVolumeRequest:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -496,7 +521,9 @@ class K8SVolumeRequest:
                 files.append(("archived_reason", (None, str(self.archived_reason).encode(), "text/plain")))
 
         if not isinstance(self.criticality, Unset):
-            if isinstance(self.criticality, str):
+            if self.criticality is None:
+                files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
+            elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
             elif isinstance(self.criticality, str):
                 files.append(("criticality", (None, str(self.criticality).encode(), "text/plain")))
@@ -653,11 +680,11 @@ class K8SVolumeRequest:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: K8SVolumeRequestProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_k8s_volume_request_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -684,18 +711,18 @@ class K8SVolumeRequest:
         platform_service = d.pop("platform_service", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: K8SVolumeRequestScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_k8s_volume_request_scope(_scope)
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: K8SVolumeRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_k8s_volume_request_kind(_kind)
 
         archived = d.pop("archived", UNSET)
 
@@ -725,7 +752,15 @@ class K8SVolumeRequest:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            K8SVolumeRequestCriticalityType1
+            | K8SVolumeRequestCriticalityType2Type1
+            | K8SVolumeRequestCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -733,20 +768,35 @@ class K8SVolumeRequest:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_k8s_volume_request_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_k8s_volume_request_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_k8s_volume_request_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                K8SVolumeRequestCriticalityType1
+                | K8SVolumeRequestCriticalityType2Type1
+                | K8SVolumeRequestCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -864,27 +914,27 @@ class K8SVolumeRequest:
         capacity_string = _parse_capacity_string(d.pop("capacity_string", UNSET))
 
         _phase = d.pop("phase", UNSET)
-        phase: PhaseEnum | Unset
+        phase: K8SVolumeRequestPhase | Unset
         if isinstance(_phase, Unset):
             phase = UNSET
         else:
-            phase = check_phase_enum(_phase)
+            phase = check_k8s_volume_request_phase(_phase)
 
         access_modes = d.pop("access_modes", UNSET)
 
         _volume_mode = d.pop("volume_mode", UNSET)
-        volume_mode: VolumeModeEnum | Unset
+        volume_mode: K8SVolumeRequestVolumeMode | Unset
         if isinstance(_volume_mode, Unset):
             volume_mode = UNSET
         else:
-            volume_mode = check_volume_mode_enum(_volume_mode)
+            volume_mode = check_k8s_volume_request_volume_mode(_volume_mode)
 
         _reclaim_policy = d.pop("reclaim_policy", UNSET)
-        reclaim_policy: ReclaimPolicyEnum | Unset
+        reclaim_policy: K8SVolumeRequestReclaimPolicy | Unset
         if isinstance(_reclaim_policy, Unset):
             reclaim_policy = UNSET
         else:
-            reclaim_policy = check_reclaim_policy_enum(_reclaim_policy)
+            reclaim_policy = check_k8s_volume_request_reclaim_policy(_reclaim_policy)
 
         def _parse_pvc_name(data: object) -> None | str | Unset:
             if data is None:

@@ -8,15 +8,43 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.certificate_kind_enum import CertificateKindEnum, check_certificate_kind_enum
-from ..models.certificate_status_enum import CertificateStatusEnum, check_certificate_status_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.issuer_kind_enum import IssuerKindEnum, check_issuer_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.certificate_certificate_status import CertificateCertificateStatus, check_certificate_certificate_status
+from ..models.certificate_criticality_type_1 import CertificateCriticalityType1, check_certificate_criticality_type_1
+from ..models.certificate_criticality_type_2_type_1 import (
+    CertificateCriticalityType2Type1,
+    check_certificate_criticality_type_2_type_1,
+)
+from ..models.certificate_criticality_type_3_type_1 import (
+    CertificateCriticalityType3Type1,
+    check_certificate_criticality_type_3_type_1,
+)
+from ..models.certificate_effective_criticality_type_1 import (
+    CertificateEffectiveCriticalityType1,
+    check_certificate_effective_criticality_type_1,
+)
+from ..models.certificate_effective_criticality_type_2_type_1 import (
+    CertificateEffectiveCriticalityType2Type1,
+    check_certificate_effective_criticality_type_2_type_1,
+)
+from ..models.certificate_effective_criticality_type_3_type_1 import (
+    CertificateEffectiveCriticalityType3Type1,
+    check_certificate_effective_criticality_type_3_type_1,
+)
+from ..models.certificate_issuer_kind_type_1 import CertificateIssuerKindType1, check_certificate_issuer_kind_type_1
+from ..models.certificate_issuer_kind_type_2_type_1 import (
+    CertificateIssuerKindType2Type1,
+    check_certificate_issuer_kind_type_2_type_1,
+)
+from ..models.certificate_issuer_kind_type_3_type_1 import (
+    CertificateIssuerKindType3Type1,
+    check_certificate_issuer_kind_type_3_type_1,
+)
+from ..models.certificate_kind import CertificateKind, check_certificate_kind
+from ..models.certificate_last_state import CertificateLastState, check_certificate_last_state
+from ..models.certificate_provider import CertificateProvider, check_certificate_provider
+from ..models.certificate_scope import CertificateScope, check_certificate_scope
+from ..models.certificate_source import CertificateSource, check_certificate_source
+from ..models.certificate_state import CertificateState, check_certificate_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -45,14 +73,14 @@ class Certificate:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (CertificateDeletedByUserType0 | None):
-            state (LastStateEnum): * `OK` - Ok
+            state (CertificateState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (CertificateLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -73,11 +101,14 @@ class Certificate:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (CertificateScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (CertificateEffectiveCriticalityType1 | CertificateEffectiveCriticalityType2Type1 |
+                CertificateEffectiveCriticalityType3Type1 | None):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (CertificateOrganizationType0 | None):
             workspace (CertificateWorkspaceType0 | None):
@@ -94,13 +125,12 @@ class Certificate:
             days_until_expiry (int):
             is_expired (bool):
             is_expiring_soon (bool):
-            k8s_cluster (UUID): Kubernetes cluster where this certificate exists
             display_name (None | str | Unset): The display name is used to display the object in the UI. It can be different
                 from the name.
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (CertificateProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -117,15 +147,17 @@ class Certificate:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (CertificateKindEnum | Unset): * `tls` - TLS
+            kind (CertificateKind | Unset): TLS or mTLS certificate
+
+                * `tls` - TLS
                 * `mtls` - mTLS
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
                 the condition will not be applied.
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (CertificateCriticalityType1 | CertificateCriticalityType2Type1 | CertificateCriticalityType3Type1 |
+                None | Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -136,10 +168,15 @@ class Certificate:
             slo_availability (str | Unset): Calculated SLO availability in % (updated in reconcile)
             sla_target (None | str | Unset): Contractual SLA target in %. Null = use SystemConfig DEFAULT_SLA_TARGET
             sla_availability (str | Unset): Calculated SLA availability in % (updated in reconcile)
+            source (CertificateSource | Unset): discovered = cluster import; issued = API ACME lifecycle
+
+                * `discovered` - Discovered
+                * `issued` - Issued Default: 'discovered'.
             dns_names (Any | Unset): List of DNS names covered by this certificate
             ip_addresses (Any | Unset): List of IP addresses covered by this certificate
             issuer_name (None | str | Unset): Name of the Issuer or ClusterIssuer
-            issuer_kind (BlankEnum | IssuerKindEnum | None | Unset): Kind of the issuer (Issuer or ClusterIssuer)
+            issuer_kind (CertificateIssuerKindType1 | CertificateIssuerKindType2Type1 | CertificateIssuerKindType3Type1 |
+                None | Unset): Kind of the issuer (Issuer or ClusterIssuer)
 
                 * `issuer` - Issuer
                 * `clusterissuer` - ClusterIssuer
@@ -147,7 +184,9 @@ class Certificate:
             not_before (datetime.datetime | None | Unset): Certificate valid from
             not_after (datetime.datetime | None | Unset): Certificate expires at
             renewal_time (datetime.datetime | None | Unset): When the certificate should be renewed
-            certificate_status (CertificateStatusEnum | Unset): * `ready` - Ready
+            certificate_status (CertificateCertificateStatus | Unset): Current status of the certificate
+
+                * `ready` - Ready
                 * `pending` - Pending
                 * `failed` - Failed
                 * `expired` - Expired
@@ -161,6 +200,7 @@ class Certificate:
             last_synced_from_cluster (datetime.datetime | None | Unset): Last time this certificate was synced from the
                 cluster
             cert_manager_status (Any | Unset): Raw status from cert-manager Certificate CR
+            k8s_cluster (None | Unset | UUID): Kubernetes cluster for discovered certificates; empty for issued
             metadata (Any | Unset): Additional metadata
     """
 
@@ -171,9 +211,9 @@ class Certificate:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: CertificateDeletedByUserType0 | None
-    state: LastStateEnum
+    state: CertificateState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: CertificateLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -188,9 +228,14 @@ class Certificate:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: CertificateScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        CertificateEffectiveCriticalityType1
+        | CertificateEffectiveCriticalityType2Type1
+        | CertificateEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: CertificateOrganizationType0 | None
     workspace: CertificateWorkspaceType0 | None
@@ -206,36 +251,40 @@ class Certificate:
     days_until_expiry: int
     is_expired: bool
     is_expiring_soon: bool
-    k8s_cluster: UUID
     display_name: None | str | Unset = UNSET
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: CertificateProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: CertificateKindEnum | Unset = UNSET
+    kind: CertificateKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        CertificateCriticalityType1 | CertificateCriticalityType2Type1 | CertificateCriticalityType3Type1 | None | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
     sla_target: None | str | Unset = UNSET
     sla_availability: str | Unset = UNSET
+    source: CertificateSource | Unset = "discovered"
     dns_names: Any | Unset = UNSET
     ip_addresses: Any | Unset = UNSET
     issuer_name: None | str | Unset = UNSET
-    issuer_kind: BlankEnum | IssuerKindEnum | None | Unset = UNSET
+    issuer_kind: (
+        CertificateIssuerKindType1 | CertificateIssuerKindType2Type1 | CertificateIssuerKindType3Type1 | None | Unset
+    ) = UNSET
     issuer_group: str | Unset = UNSET
     not_before: datetime.datetime | None | Unset = UNSET
     not_after: datetime.datetime | None | Unset = UNSET
     renewal_time: datetime.datetime | None | Unset = UNSET
-    certificate_status: CertificateStatusEnum | Unset = UNSET
+    certificate_status: CertificateCertificateStatus | Unset = UNSET
     is_ready: bool | Unset = UNSET
     current_challenge_type: None | str | Unset = UNSET
     current_challenge_status: None | str | Unset = UNSET
@@ -244,6 +293,7 @@ class Certificate:
     failure_reason: None | str | Unset = UNSET
     last_synced_from_cluster: datetime.datetime | None | Unset = UNSET
     cert_manager_status: Any | Unset = UNSET
+    k8s_cluster: None | Unset | UUID = UNSET
     metadata: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -336,6 +386,10 @@ class Certificate:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -382,8 +436,6 @@ class Certificate:
         is_expired = self.is_expired
 
         is_expiring_soon = self.is_expiring_soon
-
-        k8s_cluster = str(self.k8s_cluster)
 
         display_name: None | str | Unset
         if isinstance(self.display_name, Unset):
@@ -446,6 +498,8 @@ class Certificate:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -471,6 +525,10 @@ class Certificate:
 
         sla_availability = self.sla_availability
 
+        source: str | Unset = UNSET
+        if not isinstance(self.source, Unset):
+            source = self.source
+
         dns_names = self.dns_names
 
         ip_addresses = self.ip_addresses
@@ -484,6 +542,8 @@ class Certificate:
         issuer_kind: None | str | Unset
         if isinstance(self.issuer_kind, Unset):
             issuer_kind = UNSET
+        elif isinstance(self.issuer_kind, str):
+            issuer_kind = self.issuer_kind
         elif isinstance(self.issuer_kind, str):
             issuer_kind = self.issuer_kind
         elif isinstance(self.issuer_kind, str):
@@ -565,6 +625,14 @@ class Certificate:
 
         cert_manager_status = self.cert_manager_status
 
+        k8s_cluster: None | str | Unset
+        if isinstance(self.k8s_cluster, Unset):
+            k8s_cluster = UNSET
+        elif isinstance(self.k8s_cluster, UUID):
+            k8s_cluster = str(self.k8s_cluster)
+        else:
+            k8s_cluster = self.k8s_cluster
+
         metadata = self.metadata
 
         field_dict: dict[str, Any] = {}
@@ -613,7 +681,6 @@ class Certificate:
                 "days_until_expiry": days_until_expiry,
                 "is_expired": is_expired,
                 "is_expiring_soon": is_expiring_soon,
-                "k8s_cluster": k8s_cluster,
             }
         )
         if display_name is not UNSET:
@@ -656,6 +723,8 @@ class Certificate:
             field_dict["sla_target"] = sla_target
         if sla_availability is not UNSET:
             field_dict["sla_availability"] = sla_availability
+        if source is not UNSET:
+            field_dict["source"] = source
         if dns_names is not UNSET:
             field_dict["dns_names"] = dns_names
         if ip_addresses is not UNSET:
@@ -690,6 +759,8 @@ class Certificate:
             field_dict["last_synced_from_cluster"] = last_synced_from_cluster
         if cert_manager_status is not UNSET:
             field_dict["cert_manager_status"] = cert_manager_status
+        if k8s_cluster is not UNSET:
+            field_dict["k8s_cluster"] = k8s_cluster
         if metadata is not UNSET:
             field_dict["metadata"] = metadata
 
@@ -744,7 +815,7 @@ class Certificate:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_certificate_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -753,7 +824,7 @@ class Certificate:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_certificate_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -850,22 +921,51 @@ class Certificate:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_certificate_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            CertificateEffectiveCriticalityType1
+            | CertificateEffectiveCriticalityType2Type1
+            | CertificateEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_certificate_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_certificate_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_certificate_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CertificateEffectiveCriticalityType1
+                | CertificateEffectiveCriticalityType2Type1
+                | CertificateEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -948,8 +1048,6 @@ class Certificate:
 
         is_expiring_soon = d.pop("is_expiring_soon")
 
-        k8s_cluster = UUID(d.pop("k8s_cluster"))
-
         def _parse_display_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -966,11 +1064,11 @@ class Certificate:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: CertificateProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_certificate_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -995,11 +1093,11 @@ class Certificate:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: CertificateKindEnum | Unset
+        kind: CertificateKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_certificate_kind_enum(_kind)
+            kind = check_certificate_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -1031,7 +1129,15 @@ class Certificate:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            CertificateCriticalityType1
+            | CertificateCriticalityType2Type1
+            | CertificateCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1039,20 +1145,35 @@ class Certificate:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_certificate_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_certificate_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_certificate_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CertificateCriticalityType1
+                | CertificateCriticalityType2Type1
+                | CertificateCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1087,6 +1208,13 @@ class Certificate:
 
         sla_availability = d.pop("sla_availability", UNSET)
 
+        _source = d.pop("source", UNSET)
+        source: CertificateSource | Unset
+        if isinstance(_source, Unset):
+            source = UNSET
+        else:
+            source = check_certificate_source(_source)
+
         dns_names = d.pop("dns_names", UNSET)
 
         ip_addresses = d.pop("ip_addresses", UNSET)
@@ -1100,7 +1228,15 @@ class Certificate:
 
         issuer_name = _parse_issuer_name(d.pop("issuer_name", UNSET))
 
-        def _parse_issuer_kind(data: object) -> BlankEnum | IssuerKindEnum | None | Unset:
+        def _parse_issuer_kind(
+            data: object,
+        ) -> (
+            CertificateIssuerKindType1
+            | CertificateIssuerKindType2Type1
+            | CertificateIssuerKindType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1108,20 +1244,35 @@ class Certificate:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                issuer_kind_type_0 = check_issuer_kind_enum(data)
+                issuer_kind_type_1 = check_certificate_issuer_kind_type_1(data)
 
-                return issuer_kind_type_0
+                return issuer_kind_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                issuer_kind_type_1 = check_blank_enum(data)
+                issuer_kind_type_2_type_1 = check_certificate_issuer_kind_type_2_type_1(data)
 
-                return issuer_kind_type_1
+                return issuer_kind_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | IssuerKindEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                issuer_kind_type_3_type_1 = check_certificate_issuer_kind_type_3_type_1(data)
+
+                return issuer_kind_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CertificateIssuerKindType1
+                | CertificateIssuerKindType2Type1
+                | CertificateIssuerKindType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         issuer_kind = _parse_issuer_kind(d.pop("issuer_kind", UNSET))
 
@@ -1179,11 +1330,11 @@ class Certificate:
         renewal_time = _parse_renewal_time(d.pop("renewal_time", UNSET))
 
         _certificate_status = d.pop("certificate_status", UNSET)
-        certificate_status: CertificateStatusEnum | Unset
+        certificate_status: CertificateCertificateStatus | Unset
         if isinstance(_certificate_status, Unset):
             certificate_status = UNSET
         else:
-            certificate_status = check_certificate_status_enum(_certificate_status)
+            certificate_status = check_certificate_certificate_status(_certificate_status)
 
         is_ready = d.pop("is_ready", UNSET)
 
@@ -1259,6 +1410,23 @@ class Certificate:
 
         cert_manager_status = d.pop("cert_manager_status", UNSET)
 
+        def _parse_k8s_cluster(data: object) -> None | Unset | UUID:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                k8s_cluster_type_0 = UUID(data)
+
+                return k8s_cluster_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UUID, data)
+
+        k8s_cluster = _parse_k8s_cluster(d.pop("k8s_cluster", UNSET))
+
         metadata = d.pop("metadata", UNSET)
 
         certificate = cls(
@@ -1304,7 +1472,6 @@ class Certificate:
             days_until_expiry=days_until_expiry,
             is_expired=is_expired,
             is_expiring_soon=is_expiring_soon,
-            k8s_cluster=k8s_cluster,
             display_name=display_name,
             labels=labels,
             annotations=annotations,
@@ -1325,6 +1492,7 @@ class Certificate:
             slo_availability=slo_availability,
             sla_target=sla_target,
             sla_availability=sla_availability,
+            source=source,
             dns_names=dns_names,
             ip_addresses=ip_addresses,
             issuer_name=issuer_name,
@@ -1342,6 +1510,7 @@ class Certificate:
             failure_reason=failure_reason,
             last_synced_from_cluster=last_synced_from_cluster,
             cert_manager_status=cert_manager_status,
+            k8s_cluster=k8s_cluster,
             metadata=metadata,
         )
 

@@ -1,0 +1,18 @@
+from typing import Literal
+
+S3BucketListState = Literal["CRITICAL", "DEGRADED", "DOWN", "OK", "READY", "WARNING"]
+
+S3_BUCKET_LIST_STATE_VALUES: set[S3BucketListState] = {
+    "CRITICAL",
+    "DEGRADED",
+    "DOWN",
+    "OK",
+    "READY",
+    "WARNING",
+}
+
+
+def check_s3_bucket_list_state(value: str) -> S3BucketListState:
+    if value in S3_BUCKET_LIST_STATE_VALUES:
+        return value
+    raise TypeError(f"Unexpected value {value!r}. Expected one of {S3_BUCKET_LIST_STATE_VALUES!r}")

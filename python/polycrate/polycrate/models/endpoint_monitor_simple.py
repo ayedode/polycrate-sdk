@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.endpoint_monitor_kind_enum import EndpointMonitorKindEnum, check_endpoint_monitor_kind_enum
+from ..models.endpoint_monitor_simple_kind import EndpointMonitorSimpleKind, check_endpoint_monitor_simple_kind
 
 T = TypeVar("T", bound="EndpointMonitorSimple")
 
@@ -19,7 +19,7 @@ class EndpointMonitorSimple:
         id (UUID):
         name (str):
         reconciliation_running (bool):
-        kind (EndpointMonitorKindEnum): * `uptime-kuma` - Uptime Kuma
+        kind (EndpointMonitorSimpleKind): * `uptime-kuma` - Uptime Kuma
         managed_by_content_type (int | None):
         managed_by_object_id (None | str):
     """
@@ -27,7 +27,7 @@ class EndpointMonitorSimple:
     id: UUID
     name: str
     reconciliation_running: bool
-    kind: EndpointMonitorKindEnum
+    kind: EndpointMonitorSimpleKind
     managed_by_content_type: int | None
     managed_by_object_id: None | str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -71,7 +71,7 @@ class EndpointMonitorSimple:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        kind = check_endpoint_monitor_kind_enum(d.pop("kind"))
+        kind = check_endpoint_monitor_simple_kind(d.pop("kind"))
 
         def _parse_managed_by_content_type(data: object) -> int | None:
             if data is None:

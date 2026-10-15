@@ -8,13 +8,32 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.credential_kind_enum import CredentialKindEnum, check_credential_kind_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.credential_criticality_type_1 import CredentialCriticalityType1, check_credential_criticality_type_1
+from ..models.credential_criticality_type_2_type_1 import (
+    CredentialCriticalityType2Type1,
+    check_credential_criticality_type_2_type_1,
+)
+from ..models.credential_criticality_type_3_type_1 import (
+    CredentialCriticalityType3Type1,
+    check_credential_criticality_type_3_type_1,
+)
+from ..models.credential_effective_criticality_type_1 import (
+    CredentialEffectiveCriticalityType1,
+    check_credential_effective_criticality_type_1,
+)
+from ..models.credential_effective_criticality_type_2_type_1 import (
+    CredentialEffectiveCriticalityType2Type1,
+    check_credential_effective_criticality_type_2_type_1,
+)
+from ..models.credential_effective_criticality_type_3_type_1 import (
+    CredentialEffectiveCriticalityType3Type1,
+    check_credential_effective_criticality_type_3_type_1,
+)
+from ..models.credential_kind import CredentialKind, check_credential_kind
+from ..models.credential_last_state import CredentialLastState, check_credential_last_state
+from ..models.credential_provider import CredentialProvider, check_credential_provider
+from ..models.credential_scope import CredentialScope, check_credential_scope
+from ..models.credential_state import CredentialState, check_credential_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -42,14 +61,14 @@ class Credential:
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
         deleted_by_user (CredentialDeletedByUserType0 | None):
-        state (LastStateEnum): * `OK` - Ok
+        state (CredentialState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (CredentialLastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -70,11 +89,12 @@ class Credential:
         repair_task_id (None | str):
         repair_task_meta (Any): Task metadata for repair progress tracking
         last_repair (datetime.datetime | None):
-        scope (ScopeEnum): * `system` - System
+        scope (CredentialScope): * `system` - System
             * `user` - User
         conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
             conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (CredentialEffectiveCriticalityType1 | CredentialEffectiveCriticalityType2Type1 |
+            CredentialEffectiveCriticalityType3Type1 | None):
         actual_availability (str): Calculated actual availability as yearly average in %
         organization (OrganizationSimple): Simple Organization serializer for nested representations.
 
@@ -104,7 +124,7 @@ class Credential:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (CredentialProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -121,7 +141,7 @@ class Credential:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (CredentialKindEnum | Unset): * `api-key` - API Key
+        kind (CredentialKind | Unset): * `api-key` - API Key
             * `kubeconfig` - Kubeconfig
             * `s3-credential` - S3 Credential
             * `ssh-keys` - SSH Keys
@@ -147,8 +167,8 @@ class Credential:
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (CredentialCriticalityType1 | CredentialCriticalityType2Type1 | CredentialCriticalityType3Type1 |
+            None | Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -176,9 +196,9 @@ class Credential:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: CredentialDeletedByUserType0 | None
-    state: LastStateEnum
+    state: CredentialState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: CredentialLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -193,9 +213,14 @@ class Credential:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: CredentialScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        CredentialEffectiveCriticalityType1
+        | CredentialEffectiveCriticalityType2Type1
+        | CredentialEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: OrganizationSimple
     workspace: WorkspaceSimple
@@ -212,17 +237,19 @@ class Credential:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: CredentialProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: CredentialKindEnum | Unset = "generic"
+    kind: CredentialKind | Unset = "generic"
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        CredentialCriticalityType1 | CredentialCriticalityType2Type1 | CredentialCriticalityType3Type1 | None | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -326,6 +353,10 @@ class Credential:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -420,6 +451,8 @@ class Credential:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -656,7 +689,7 @@ class Credential:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_credential_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -665,7 +698,7 @@ class Credential:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_credential_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -762,22 +795,51 @@ class Credential:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_credential_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            CredentialEffectiveCriticalityType1
+            | CredentialEffectiveCriticalityType2Type1
+            | CredentialEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_credential_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_credential_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_credential_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CredentialEffectiveCriticalityType1
+                | CredentialEffectiveCriticalityType2Type1
+                | CredentialEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -857,11 +919,11 @@ class Credential:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: CredentialProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_credential_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -886,11 +948,11 @@ class Credential:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: CredentialKindEnum | Unset
+        kind: CredentialKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_credential_kind_enum(_kind)
+            kind = check_credential_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -922,7 +984,15 @@ class Credential:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            CredentialCriticalityType1
+            | CredentialCriticalityType2Type1
+            | CredentialCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -930,20 +1000,35 @@ class Credential:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_credential_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_credential_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_credential_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CredentialCriticalityType1
+                | CredentialCriticalityType2Type1
+                | CredentialCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

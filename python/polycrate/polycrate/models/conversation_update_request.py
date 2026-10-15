@@ -7,7 +7,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.conversation_status_enum import ConversationStatusEnum, check_conversation_status_enum
+from ..models.conversation_update_request_status import (
+    ConversationUpdateRequestStatus,
+    check_conversation_update_request_status,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ConversationUpdateRequest")
@@ -19,7 +22,9 @@ class ConversationUpdateRequest:
     Following S3 pattern with restricted update fields.
 
         Attributes:
-            status (ConversationStatusEnum | Unset): * `closed` - Closed
+            status (ConversationUpdateRequestStatus | Unset): Current status of the conversation
+
+                * `closed` - Closed
                 * `waiting_for_operator` - Waiting for Operator
                 * `waiting_for_user` - Waiting for User
                 * `deleted` - Deleted
@@ -28,7 +33,7 @@ class ConversationUpdateRequest:
             config (Any | Unset): Conversation configuration as JSON object
     """
 
-    status: ConversationStatusEnum | Unset = UNSET
+    status: ConversationUpdateRequestStatus | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     meta: Any | Unset = UNSET
     config: Any | Unset = UNSET
@@ -90,11 +95,11 @@ class ConversationUpdateRequest:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         _status = d.pop("status", UNSET)
-        status: ConversationStatusEnum | Unset
+        status: ConversationUpdateRequestStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_conversation_status_enum(_status)
+            status = check_conversation_update_request_status(_status)
 
         def _parse_provider_id(data: object) -> None | str | Unset:
             if data is None:

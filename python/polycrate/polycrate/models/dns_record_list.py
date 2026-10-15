@@ -6,15 +6,25 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.dns_record_type_enum import DNSRecordTypeEnum, check_dns_record_type_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.dns_record_list_effective_criticality_type_1 import (
+    DNSRecordListEffectiveCriticalityType1,
+    check_dns_record_list_effective_criticality_type_1,
+)
+from ..models.dns_record_list_effective_criticality_type_2_type_1 import (
+    DNSRecordListEffectiveCriticalityType2Type1,
+    check_dns_record_list_effective_criticality_type_2_type_1,
+)
+from ..models.dns_record_list_effective_criticality_type_3_type_1 import (
+    DNSRecordListEffectiveCriticalityType3Type1,
+    check_dns_record_list_effective_criticality_type_3_type_1,
+)
+from ..models.dns_record_list_state import DNSRecordListState, check_dns_record_list_state
+from ..models.dns_record_list_type import DNSRecordListType, check_dns_record_list_type
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.dns_record_list_active_condition_instances_item import DNSRecordListActiveConditionInstancesItem
     from ..models.dns_record_list_created import DNSRecordListCreated
-    from ..models.dns_record_list_organization_type_0 import DNSRecordListOrganizationType0
     from ..models.dns_record_list_workspace_type_0 import DNSRecordListWorkspaceType0
     from ..models.dns_zone_simple import DNSZoneSimple
 
@@ -48,7 +58,7 @@ class DNSRecordList:
             id (str): Record identifier. Internal zones: UUID of the DNSRecord DB row. External zones: opaque composite
                 '<zone_uuid>::<provider_assigned_id>' as returned by the list endpoint. Do not treat this field as UUID-only.
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (DNSRecordListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -60,17 +70,18 @@ class DNSRecordList:
             condition_instance_count (int): Number of active ConditionInstances linked to this object (Spec 419).
                 Uses prefetched data (_prefetched_active_conditions) when available to avoid N+1.
             active_condition_instances (list[DNSRecordListActiveConditionInstancesItem]):
-            organization (DNSRecordListOrganizationType0 | None):
+            organization (str):
             organization_priority (bool): True when the object's organization has priority=True.
             workspace (DNSRecordListWorkspaceType0 | None):
             created (DNSRecordListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (DNSRecordListEffectiveCriticalityType1 | DNSRecordListEffectiveCriticalityType2Type1 |
+                DNSRecordListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             dns_zone (DNSZoneSimple):
             content (str): Record content: IP address, hostname, TXT string, …
-            type_ (DNSRecordTypeEnum | Unset): * `A` - A
+            type_ (DNSRecordListType | Unset): * `A` - A
                 * `AAAA` - AAAA
                 * `CNAME` - CNAME
                 * `MX` - MX
@@ -91,28 +102,32 @@ class DNSRecordList:
 
     id: str
     name: str
-    state: LastStateEnum
+    state: DNSRecordListState
     labels: Any
     conditions: Any
     condition_instance_count: int
     active_condition_instances: list[DNSRecordListActiveConditionInstancesItem]
-    organization: DNSRecordListOrganizationType0 | None
+    organization: str
     organization_priority: bool
     workspace: DNSRecordListWorkspaceType0 | None
     created: DNSRecordListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        DNSRecordListEffectiveCriticalityType1
+        | DNSRecordListEffectiveCriticalityType2Type1
+        | DNSRecordListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     dns_zone: DNSZoneSimple
     content: str
-    type_: DNSRecordTypeEnum | Unset = UNSET
+    type_: DNSRecordListType | Unset = UNSET
     ttl: int | Unset = UNSET
     priority: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.dns_record_list_organization_type_0 import DNSRecordListOrganizationType0  # noqa: PLC0415
         from ..models.dns_record_list_workspace_type_0 import DNSRecordListWorkspaceType0  # noqa: PLC0415
 
         id = self.id
@@ -132,11 +147,7 @@ class DNSRecordList:
             active_condition_instances_item = active_condition_instances_item_data.to_dict()
             active_condition_instances.append(active_condition_instances_item)
 
-        organization: dict[str, Any] | None
-        if isinstance(self.organization, DNSRecordListOrganizationType0):
-            organization = self.organization.to_dict()
-        else:
-            organization = self.organization
+        organization = self.organization
 
         organization_priority = self.organization_priority
 
@@ -154,6 +165,10 @@ class DNSRecordList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -210,11 +225,8 @@ class DNSRecordList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.dns_record_list_active_condition_instances_item import (
-            DNSRecordListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.dns_record_list_active_condition_instances_item import DNSRecordListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.dns_record_list_created import DNSRecordListCreated  # noqa: PLC0415
-        from ..models.dns_record_list_organization_type_0 import DNSRecordListOrganizationType0  # noqa: PLC0415
         from ..models.dns_record_list_workspace_type_0 import DNSRecordListWorkspaceType0  # noqa: PLC0415
         from ..models.dns_zone_simple import DNSZoneSimple  # noqa: PLC0415
 
@@ -223,7 +235,7 @@ class DNSRecordList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_dns_record_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -240,20 +252,7 @@ class DNSRecordList:
 
             active_condition_instances.append(active_condition_instances_item)
 
-        def _parse_organization(data: object) -> DNSRecordListOrganizationType0 | None:
-            if data is None:
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                organization_type_0 = DNSRecordListOrganizationType0.from_dict(data)
-
-                return organization_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(DNSRecordListOrganizationType0 | None, data)
-
-        organization = _parse_organization(d.pop("organization"))
+        organization = d.pop("organization")
 
         organization_priority = d.pop("organization_priority")
 
@@ -278,18 +277,47 @@ class DNSRecordList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            DNSRecordListEffectiveCriticalityType1
+            | DNSRecordListEffectiveCriticalityType2Type1
+            | DNSRecordListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_dns_record_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_dns_record_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_dns_record_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DNSRecordListEffectiveCriticalityType1
+                | DNSRecordListEffectiveCriticalityType2Type1
+                | DNSRecordListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -300,11 +328,11 @@ class DNSRecordList:
         content = d.pop("content")
 
         _type_ = d.pop("type", UNSET)
-        type_: DNSRecordTypeEnum | Unset
+        type_: DNSRecordListType | Unset
         if isinstance(_type_, Unset):
             type_ = UNSET
         else:
-            type_ = check_dns_record_type_enum(_type_)
+            type_ = check_dns_record_list_type(_type_)
 
         ttl = d.pop("ttl", UNSET)
 

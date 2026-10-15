@@ -17,19 +17,7 @@ from ...models.api_v1s3_buckets_list_state_not import ApiV1S3BucketsListStateNot
 from ...models.api_v1s3_buckets_list_time_range import (
     ApiV1S3BucketsListTimeRange,
 )
-from ...models.api_v1s3_buckets_list_validation_error import ApiV1S3BucketsListValidationError
-from ...models.error_response_401 import ErrorResponse401
-from ...models.error_response_403 import ErrorResponse403
-from ...models.error_response_404 import ErrorResponse404
-from ...models.error_response_405 import ErrorResponse405
-from ...models.error_response_406 import ErrorResponse406
-from ...models.error_response_409 import ErrorResponse409
-from ...models.error_response_410 import ErrorResponse410
-from ...models.error_response_415 import ErrorResponse415
-from ...models.error_response_500 import ErrorResponse500
-from ...models.error_response_502 import ErrorResponse502
 from ...models.paginated_s3_bucket_list_list import PaginatedS3BucketListList
-from ...models.parse_error_response import ParseErrorResponse
 from ...types import UNSET, Response, Unset
 
 
@@ -52,6 +40,7 @@ def _get_kwargs(
     platform_service: bool | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     region: UUID | Unset = UNSET,
+    regions: list[str] | Unset = UNSET,
     s3_cluster: UUID | Unset = UNSET,
     scope: ApiV1S3BucketsListScope | Unset = UNSET,
     search: str | Unset = UNSET,
@@ -135,6 +124,12 @@ def _get_kwargs(
         json_region = str(region)
     params["region"] = json_region
 
+    json_regions: list[str] | Unset = UNSET
+    if not isinstance(regions, Unset):
+        json_regions = regions
+
+    params["regions"] = json_regions
+
     json_s3_cluster: str | Unset = UNSET
     if not isinstance(s3_cluster, Unset):
         json_s3_cluster = str(s3_cluster)
@@ -199,99 +194,11 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> (
-    ApiV1S3BucketsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedS3BucketListList
-    | None
-):
+) -> PaginatedS3BucketListList | None:
     if response.status_code == 200:
         response_200 = PaginatedS3BucketListList.from_dict(response.json())
 
         return response_200
-
-    if response.status_code == 400:
-
-        def _parse_response_400(data: object) -> ApiV1S3BucketsListValidationError | ParseErrorResponse:
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                componentsschemas_api_v1s3_buckets_list_error_response_400_type_0 = (
-                    ApiV1S3BucketsListValidationError.from_dict(data)
-                )
-
-                return componentsschemas_api_v1s3_buckets_list_error_response_400_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            if not isinstance(data, dict):
-                raise TypeError()
-            componentsschemas_api_v1s3_buckets_list_error_response_400_type_1 = ParseErrorResponse.from_dict(data)
-
-            return componentsschemas_api_v1s3_buckets_list_error_response_400_type_1
-
-        response_400 = _parse_response_400(response.json())
-
-        return response_400
-
-    if response.status_code == 401:
-        response_401 = ErrorResponse401.from_dict(response.json())
-
-        return response_401
-
-    if response.status_code == 403:
-        response_403 = ErrorResponse403.from_dict(response.json())
-
-        return response_403
-
-    if response.status_code == 404:
-        response_404 = ErrorResponse404.from_dict(response.json())
-
-        return response_404
-
-    if response.status_code == 405:
-        response_405 = ErrorResponse405.from_dict(response.json())
-
-        return response_405
-
-    if response.status_code == 406:
-        response_406 = ErrorResponse406.from_dict(response.json())
-
-        return response_406
-
-    if response.status_code == 409:
-        response_409 = ErrorResponse409.from_dict(response.json())
-
-        return response_409
-
-    if response.status_code == 410:
-        response_410 = ErrorResponse410.from_dict(response.json())
-
-        return response_410
-
-    if response.status_code == 415:
-        response_415 = ErrorResponse415.from_dict(response.json())
-
-        return response_415
-
-    if response.status_code == 500:
-        response_500 = ErrorResponse500.from_dict(response.json())
-
-        return response_500
-
-    if response.status_code == 502:
-        response_502 = ErrorResponse502.from_dict(response.json())
-
-        return response_502
 
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
@@ -301,21 +208,7 @@ def _parse_response(
 
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> Response[
-    ApiV1S3BucketsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedS3BucketListList
-]:
+) -> Response[PaginatedS3BucketListList]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -344,6 +237,7 @@ def sync_detailed(
     platform_service: bool | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     region: UUID | Unset = UNSET,
+    regions: list[str] | Unset = UNSET,
     s3_cluster: UUID | Unset = UNSET,
     scope: ApiV1S3BucketsListScope | Unset = UNSET,
     search: str | Unset = UNSET,
@@ -353,21 +247,7 @@ def sync_detailed(
     time_range: ApiV1S3BucketsListTimeRange | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
     workspaces: list[list[UUID]] | Unset = UNSET,
-) -> Response[
-    ApiV1S3BucketsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedS3BucketListList
-]:
+) -> Response[PaginatedS3BucketListList]:
     """API endpoint that allows S3 Buckets to be viewed or edited.
 
     Archived filter, user permissions, and query optimizations
@@ -391,6 +271,7 @@ def sync_detailed(
         platform_service (bool | Unset):
         reconciliation_running (bool | Unset):
         region (UUID | Unset):
+        regions (list[str] | Unset):
         s3_cluster (UUID | Unset):
         scope (ApiV1S3BucketsListScope | Unset):
         search (str | Unset):
@@ -406,7 +287,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ApiV1S3BucketsListValidationError | ParseErrorResponse | ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedS3BucketListList]
+        Response[PaginatedS3BucketListList]
     """
 
     kwargs = _get_kwargs(
@@ -427,6 +308,7 @@ def sync_detailed(
         platform_service=platform_service,
         reconciliation_running=reconciliation_running,
         region=region,
+        regions=regions,
         s3_cluster=s3_cluster,
         scope=scope,
         search=search,
@@ -465,6 +347,7 @@ def sync(
     platform_service: bool | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     region: UUID | Unset = UNSET,
+    regions: list[str] | Unset = UNSET,
     s3_cluster: UUID | Unset = UNSET,
     scope: ApiV1S3BucketsListScope | Unset = UNSET,
     search: str | Unset = UNSET,
@@ -474,22 +357,7 @@ def sync(
     time_range: ApiV1S3BucketsListTimeRange | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
     workspaces: list[list[UUID]] | Unset = UNSET,
-) -> (
-    ApiV1S3BucketsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedS3BucketListList
-    | None
-):
+) -> PaginatedS3BucketListList | None:
     """API endpoint that allows S3 Buckets to be viewed or edited.
 
     Archived filter, user permissions, and query optimizations
@@ -513,6 +381,7 @@ def sync(
         platform_service (bool | Unset):
         reconciliation_running (bool | Unset):
         region (UUID | Unset):
+        regions (list[str] | Unset):
         s3_cluster (UUID | Unset):
         scope (ApiV1S3BucketsListScope | Unset):
         search (str | Unset):
@@ -528,7 +397,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ApiV1S3BucketsListValidationError | ParseErrorResponse | ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedS3BucketListList
+        PaginatedS3BucketListList
     """
 
     return sync_detailed(
@@ -550,6 +419,7 @@ def sync(
         platform_service=platform_service,
         reconciliation_running=reconciliation_running,
         region=region,
+        regions=regions,
         s3_cluster=s3_cluster,
         scope=scope,
         search=search,
@@ -582,6 +452,7 @@ async def asyncio_detailed(
     platform_service: bool | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     region: UUID | Unset = UNSET,
+    regions: list[str] | Unset = UNSET,
     s3_cluster: UUID | Unset = UNSET,
     scope: ApiV1S3BucketsListScope | Unset = UNSET,
     search: str | Unset = UNSET,
@@ -591,21 +462,7 @@ async def asyncio_detailed(
     time_range: ApiV1S3BucketsListTimeRange | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
     workspaces: list[list[UUID]] | Unset = UNSET,
-) -> Response[
-    ApiV1S3BucketsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedS3BucketListList
-]:
+) -> Response[PaginatedS3BucketListList]:
     """API endpoint that allows S3 Buckets to be viewed or edited.
 
     Archived filter, user permissions, and query optimizations
@@ -629,6 +486,7 @@ async def asyncio_detailed(
         platform_service (bool | Unset):
         reconciliation_running (bool | Unset):
         region (UUID | Unset):
+        regions (list[str] | Unset):
         s3_cluster (UUID | Unset):
         scope (ApiV1S3BucketsListScope | Unset):
         search (str | Unset):
@@ -644,7 +502,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ApiV1S3BucketsListValidationError | ParseErrorResponse | ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedS3BucketListList]
+        Response[PaginatedS3BucketListList]
     """
 
     kwargs = _get_kwargs(
@@ -665,6 +523,7 @@ async def asyncio_detailed(
         platform_service=platform_service,
         reconciliation_running=reconciliation_running,
         region=region,
+        regions=regions,
         s3_cluster=s3_cluster,
         scope=scope,
         search=search,
@@ -701,6 +560,7 @@ async def asyncio(
     platform_service: bool | Unset = UNSET,
     reconciliation_running: bool | Unset = UNSET,
     region: UUID | Unset = UNSET,
+    regions: list[str] | Unset = UNSET,
     s3_cluster: UUID | Unset = UNSET,
     scope: ApiV1S3BucketsListScope | Unset = UNSET,
     search: str | Unset = UNSET,
@@ -710,22 +570,7 @@ async def asyncio(
     time_range: ApiV1S3BucketsListTimeRange | Unset = UNSET,
     updated_at: datetime.datetime | Unset = UNSET,
     workspaces: list[list[UUID]] | Unset = UNSET,
-) -> (
-    ApiV1S3BucketsListValidationError
-    | ParseErrorResponse
-    | ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedS3BucketListList
-    | None
-):
+) -> PaginatedS3BucketListList | None:
     """API endpoint that allows S3 Buckets to be viewed or edited.
 
     Archived filter, user permissions, and query optimizations
@@ -749,6 +594,7 @@ async def asyncio(
         platform_service (bool | Unset):
         reconciliation_running (bool | Unset):
         region (UUID | Unset):
+        regions (list[str] | Unset):
         s3_cluster (UUID | Unset):
         scope (ApiV1S3BucketsListScope | Unset):
         search (str | Unset):
@@ -764,7 +610,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ApiV1S3BucketsListValidationError | ParseErrorResponse | ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedS3BucketListList
+        PaginatedS3BucketListList
     """
 
     return (
@@ -787,6 +633,7 @@ async def asyncio(
             platform_service=platform_service,
             reconciliation_running=reconciliation_running,
             region=region,
+            regions=regions,
             s3_cluster=s3_cluster,
             scope=scope,
             search=search,

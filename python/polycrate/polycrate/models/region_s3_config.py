@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.region_s3_config_kind_enum import RegionS3ConfigKindEnum, check_region_s3_config_kind_enum
+from ..models.region_s3_config_kind import RegionS3ConfigKind, check_region_s3_config_kind
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -21,7 +21,7 @@ T = TypeVar("T", bound="RegionS3Config")
 class RegionS3Config:
     """
     Attributes:
-        kind (RegionS3ConfigKindEnum | Unset): * `rook-ceph` - rook-ceph
+        kind (RegionS3ConfigKind | Unset): * `rook-ceph` - rook-ceph
             * `minio` - minio Default: 'rook-ceph'.
         endpoint (None | str | Unset):
         endpoint_secure (bool | Unset):  Default: True.
@@ -37,7 +37,7 @@ class RegionS3Config:
         include_in_cost_statement (bool | Unset):  Default: True.
     """
 
-    kind: RegionS3ConfigKindEnum | Unset = "rook-ceph"
+    kind: RegionS3ConfigKind | Unset = "rook-ceph"
     endpoint: None | str | Unset = UNSET
     endpoint_secure: bool | Unset = True
     admin_endpoint: None | str | Unset = UNSET
@@ -149,11 +149,11 @@ class RegionS3Config:
 
         d = dict(src_dict)
         _kind = d.pop("kind", UNSET)
-        kind: RegionS3ConfigKindEnum | Unset
+        kind: RegionS3ConfigKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_region_s3_config_kind_enum(_kind)
+            kind = check_region_s3_config_kind(_kind)
 
         def _parse_endpoint(data: object) -> None | str | Unset:
             if data is None:

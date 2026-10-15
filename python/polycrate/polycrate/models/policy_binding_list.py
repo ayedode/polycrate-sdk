@@ -8,7 +8,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.policy_binding_list_scope import PolicyBindingListScope, check_policy_binding_list_scope
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PolicyBindingList")
@@ -24,7 +24,9 @@ class PolicyBindingList:
         assigned_at (datetime.datetime):
         cached_policy_name (str | Unset): Cached policy display_name
         enabled (bool | Unset): Whether this binding is active
-        scope (ScopeEnum | Unset): * `system` - System
+        scope (PolicyBindingListScope | Unset): System = auto-assigned, User = manually assigned
+
+            * `system` - System
             * `user` - User
         applied (bool | Unset): Whether policy was successfully applied
     """
@@ -34,7 +36,7 @@ class PolicyBindingList:
     assigned_at: datetime.datetime
     cached_policy_name: str | Unset = UNSET
     enabled: bool | Unset = UNSET
-    scope: ScopeEnum | Unset = UNSET
+    scope: PolicyBindingListScope | Unset = UNSET
     applied: bool | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -89,11 +91,11 @@ class PolicyBindingList:
         enabled = d.pop("enabled", UNSET)
 
         _scope = d.pop("scope", UNSET)
-        scope: ScopeEnum | Unset
+        scope: PolicyBindingListScope | Unset
         if isinstance(_scope, Unset):
             scope = UNSET
         else:
-            scope = check_scope_enum(_scope)
+            scope = check_policy_binding_list_scope(_scope)
 
         applied = d.pop("applied", UNSET)
 

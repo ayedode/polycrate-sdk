@@ -8,9 +8,9 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.cli_activity_update_request_status_enum import (
-    CLIActivityUpdateRequestStatusEnum,
-    check_cli_activity_update_request_status_enum,
+from ..models.patched_cli_activity_update_request_request_status import (
+    PatchedCLIActivityUpdateRequestRequestStatus,
+    check_patched_cli_activity_update_request_request_status,
 )
 from ..types import UNSET, Unset
 
@@ -24,14 +24,14 @@ class PatchedCLIActivityUpdateRequestRequest:
         exit_code (int | Unset):
         finished_at (datetime.datetime | Unset):
         duration_seconds (float | Unset):
-        status (CLIActivityUpdateRequestStatusEnum | Unset): * `success` - success
+        status (PatchedCLIActivityUpdateRequestRequestStatus | Unset): * `success` - success
             * `failed` - failed
     """
 
     exit_code: int | Unset = UNSET
     finished_at: datetime.datetime | Unset = UNSET
     duration_seconds: float | Unset = UNSET
-    status: CLIActivityUpdateRequestStatusEnum | Unset = UNSET
+    status: PatchedCLIActivityUpdateRequestRequestStatus | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -96,11 +96,11 @@ class PatchedCLIActivityUpdateRequestRequest:
         duration_seconds = d.pop("duration_seconds", UNSET)
 
         _status = d.pop("status", UNSET)
-        status: CLIActivityUpdateRequestStatusEnum | Unset
+        status: PatchedCLIActivityUpdateRequestRequestStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_cli_activity_update_request_status_enum(_status)
+            status = check_patched_cli_activity_update_request_request_status(_status)
 
         patched_cli_activity_update_request_request = cls(
             exit_code=exit_code,

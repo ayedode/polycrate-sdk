@@ -7,10 +7,29 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.purpose_f3b_enum import PurposeF3BEnum, check_purpose_f3b_enum
-from ..models.workspace_kind_enum import WorkspaceKindEnum, check_workspace_kind_enum
+from ..models.workspace_list_effective_criticality_type_1 import (
+    WorkspaceListEffectiveCriticalityType1,
+    check_workspace_list_effective_criticality_type_1,
+)
+from ..models.workspace_list_effective_criticality_type_2_type_1 import (
+    WorkspaceListEffectiveCriticalityType2Type1,
+    check_workspace_list_effective_criticality_type_2_type_1,
+)
+from ..models.workspace_list_effective_criticality_type_3_type_1 import (
+    WorkspaceListEffectiveCriticalityType3Type1,
+    check_workspace_list_effective_criticality_type_3_type_1,
+)
+from ..models.workspace_list_kind import WorkspaceListKind, check_workspace_list_kind
+from ..models.workspace_list_purpose_type_1 import WorkspaceListPurposeType1, check_workspace_list_purpose_type_1
+from ..models.workspace_list_purpose_type_2_type_1 import (
+    WorkspaceListPurposeType2Type1,
+    check_workspace_list_purpose_type_2_type_1,
+)
+from ..models.workspace_list_purpose_type_3_type_1 import (
+    WorkspaceListPurposeType3Type1,
+    check_workspace_list_purpose_type_3_type_1,
+)
+from ..models.workspace_list_state import WorkspaceListState, check_workspace_list_state
 
 if TYPE_CHECKING:
     from ..models.pop_simple import PopSimple
@@ -40,7 +59,7 @@ class WorkspaceList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (WorkspaceListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -58,9 +77,10 @@ class WorkspaceList:
             created (WorkspaceListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | WorkspaceListEffectiveCriticalityType1 |
+                WorkspaceListEffectiveCriticalityType2Type1 | WorkspaceListEffectiveCriticalityType3Type1):
             url (str): Gibt die absolute URL zum Object zurück.
-            kind (WorkspaceKindEnum): * `polycrate` - Polycrate
+            kind (WorkspaceListKind): * `polycrate` - Polycrate
                 * `generic` - Generic
             legacy (bool): Legacy workspaces have Git-Repos, non-legacy workspaces work only with Block-Infos from Polycrate
                 API/UI
@@ -84,8 +104,8 @@ class WorkspaceList:
             workspace_version (None | str):
             workspace_app_version (None | str):
             description (None | str): Short free-text description of this workspace
-            purpose (None | PurposeF3BEnum): Purpose of this workspace (production, development, staging, qa,
-                infrastructure, platform)
+            purpose (None | WorkspaceListPurposeType1 | WorkspaceListPurposeType2Type1 | WorkspaceListPurposeType3Type1):
+                Purpose of this workspace (production, development, staging, qa, infrastructure, platform)
 
                 * `production` - Production
                 * `development` - Development
@@ -97,7 +117,7 @@ class WorkspaceList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: WorkspaceListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -108,9 +128,14 @@ class WorkspaceList:
     created: WorkspaceListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | WorkspaceListEffectiveCriticalityType1
+        | WorkspaceListEffectiveCriticalityType2Type1
+        | WorkspaceListEffectiveCriticalityType3Type1
+    )
     url: str
-    kind: WorkspaceKindEnum
+    kind: WorkspaceListKind
     legacy: bool
     git_commit_short_sha: None | str
     notifications_enabled: bool
@@ -125,7 +150,7 @@ class WorkspaceList:
     workspace_version: None | str
     workspace_app_version: None | str
     description: None | str
-    purpose: None | PurposeF3BEnum
+    purpose: None | WorkspaceListPurposeType1 | WorkspaceListPurposeType2Type1 | WorkspaceListPurposeType3Type1
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -172,6 +197,10 @@ class WorkspaceList:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -216,6 +245,10 @@ class WorkspaceList:
 
         purpose: None | str
         if isinstance(self.purpose, str):
+            purpose = self.purpose
+        elif isinstance(self.purpose, str):
+            purpose = self.purpose
+        elif isinstance(self.purpose, str):
             purpose = self.purpose
         else:
             purpose = self.purpose
@@ -263,9 +296,7 @@ class WorkspaceList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.pop_simple import PopSimple  # noqa: PLC0415
-        from ..models.workspace_list_active_condition_instances_item import (
-            WorkspaceListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.workspace_list_active_condition_instances_item import WorkspaceListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.workspace_list_created import WorkspaceListCreated  # noqa: PLC0415
         from ..models.workspace_list_organization_type_0 import WorkspaceListOrganizationType0  # noqa: PLC0415
         from ..models.workspace_list_workspace_type_0 import WorkspaceListWorkspaceType0  # noqa: PLC0415
@@ -275,7 +306,7 @@ class WorkspaceList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_workspace_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -330,24 +361,53 @@ class WorkspaceList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | WorkspaceListEffectiveCriticalityType1
+            | WorkspaceListEffectiveCriticalityType2Type1
+            | WorkspaceListEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_workspace_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_workspace_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_workspace_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | WorkspaceListEffectiveCriticalityType1
+                | WorkspaceListEffectiveCriticalityType2Type1
+                | WorkspaceListEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
         url = d.pop("url")
 
-        kind = check_workspace_kind_enum(d.pop("kind"))
+        kind = check_workspace_list_kind(d.pop("kind"))
 
         legacy = d.pop("legacy")
 
@@ -412,18 +472,38 @@ class WorkspaceList:
 
         description = _parse_description(d.pop("description"))
 
-        def _parse_purpose(data: object) -> None | PurposeF3BEnum:
+        def _parse_purpose(
+            data: object,
+        ) -> None | WorkspaceListPurposeType1 | WorkspaceListPurposeType2Type1 | WorkspaceListPurposeType3Type1:
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                purpose_type_0 = check_purpose_f3b_enum(data)
+                purpose_type_1 = check_workspace_list_purpose_type_1(data)
 
-                return purpose_type_0
+                return purpose_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(None | PurposeF3BEnum, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                purpose_type_2_type_1 = check_workspace_list_purpose_type_2_type_1(data)
+
+                return purpose_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                purpose_type_3_type_1 = check_workspace_list_purpose_type_3_type_1(data)
+
+                return purpose_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | WorkspaceListPurposeType1 | WorkspaceListPurposeType2Type1 | WorkspaceListPurposeType3Type1, data
+            )
 
         purpose = _parse_purpose(d.pop("purpose"))
 

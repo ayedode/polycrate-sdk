@@ -8,9 +8,9 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.downtime_kind_enum import DowntimeKindEnum, check_downtime_kind_enum
-from ..models.downtime_severity_enum import DowntimeSeverityEnum, check_downtime_severity_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.downtime_kind import DowntimeKind, check_downtime_kind
+from ..models.downtime_severity import DowntimeSeverity, check_downtime_severity
+from ..models.downtime_state import DowntimeState, check_downtime_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -41,7 +41,7 @@ class Downtime:
         affected_workspaces (list[DowntimeAffectedWorkspacesItem]):
         conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
             conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-        state (LastStateEnum): * `OK` - Ok
+        state (DowntimeState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -59,14 +59,18 @@ class Downtime:
         annotations (Any | Unset):
         tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
             the condition will not be applied.
-        kind (DowntimeKindEnum | Unset): * `generic` - Generic
+        kind (DowntimeKind | Unset): Type of downtime. Determines if it counts towards SLA.
+
+            * `generic` - Generic
             * `planned-maintenance` - Planned Maintenance
             * `emergency-maintenance` - Emergency Maintenance
             * `customer-caused` - Customer Caused
             * `upstream-provider` - Upstream Provider Issue
             * `force-majeure` - Force Majeure
             * `false-positive` - False Positive
-        severity (DowntimeSeverityEnum | Unset): * `minor` - Minor
+        severity (DowntimeSeverity | Unset): Severity of the downtime
+
+            * `minor` - Minor
             * `major` - Major
             * `critical` - Critical
         is_active (bool | Unset): Whether the downtime is active and should be reconciled
@@ -88,7 +92,7 @@ class Downtime:
     affected_objects_count: int
     affected_workspaces: list[DowntimeAffectedWorkspacesItem]
     conditions: Any
-    state: LastStateEnum
+    state: DowntimeState
     created_at: datetime.datetime
     updated_at: datetime.datetime
     url: str
@@ -98,8 +102,8 @@ class Downtime:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     tolerations: Any | Unset = UNSET
-    kind: DowntimeKindEnum | Unset = UNSET
-    severity: DowntimeSeverityEnum | Unset = UNSET
+    kind: DowntimeKind | Unset = UNSET
+    severity: DowntimeSeverity | Unset = UNSET
     is_active: bool | Unset = UNSET
     counts_towards_sla: bool | Unset = UNSET
     excluded_reason: None | str | Unset = UNSET
@@ -282,7 +286,7 @@ class Downtime:
 
         conditions = d.pop("conditions")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_downtime_state(d.pop("state"))
 
         created_at = datetime.datetime.fromisoformat(d.pop("created_at"))
 
@@ -310,18 +314,18 @@ class Downtime:
         tolerations = d.pop("tolerations", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: DowntimeKindEnum | Unset
+        kind: DowntimeKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_downtime_kind_enum(_kind)
+            kind = check_downtime_kind(_kind)
 
         _severity = d.pop("severity", UNSET)
-        severity: DowntimeSeverityEnum | Unset
+        severity: DowntimeSeverity | Unset
         if isinstance(_severity, Unset):
             severity = UNSET
         else:
-            severity = check_downtime_severity_enum(_severity)
+            severity = check_downtime_severity(_severity)
 
         is_active = d.pop("is_active", UNSET)
 

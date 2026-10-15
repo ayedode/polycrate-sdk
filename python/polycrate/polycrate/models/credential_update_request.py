@@ -45,9 +45,7 @@ class CredentialUpdateRequest:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.credential_update_request_secrets_type_0 import (
-            CredentialUpdateRequestSecretsType0,  # noqa: PLC0415
-        )
+        from ..models.credential_update_request_secrets_type_0 import CredentialUpdateRequestSecretsType0  # noqa: PLC0415
 
         api_endpoint: None | str | Unset
         if isinstance(self.api_endpoint, Unset):
@@ -118,9 +116,7 @@ class CredentialUpdateRequest:
         return field_dict
 
     def to_multipart(self) -> types.RequestFiles:
-        from ..models.credential_update_request_secrets_type_0 import (
-            CredentialUpdateRequestSecretsType0,  # noqa: PLC0415
-        )
+        from ..models.credential_update_request_secrets_type_0 import CredentialUpdateRequestSecretsType0  # noqa: PLC0415
 
         files: types.RequestFiles = []
 
@@ -176,9 +172,7 @@ class CredentialUpdateRequest:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential_update_request_secrets_type_0 import (
-            CredentialUpdateRequestSecretsType0,  # noqa: PLC0415
-        )
+        from ..models.credential_update_request_secrets_type_0 import CredentialUpdateRequestSecretsType0  # noqa: PLC0415
 
         d = dict(src_dict)
 

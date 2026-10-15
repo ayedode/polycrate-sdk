@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.endpoint_kind_enum import EndpointKindEnum, check_endpoint_kind_enum
+from ..models.endpoint_simple_kind import EndpointSimpleKind, check_endpoint_simple_kind
 
 if TYPE_CHECKING:
     from ..models.organization_simple import OrganizationSimple
@@ -24,7 +24,7 @@ class EndpointSimple:
         id (UUID):
         name (str):
         reconciliation_running (bool):
-        kind (EndpointKindEnum): * `icmp` - ICMP Endpoint
+        kind (EndpointSimpleKind): * `icmp` - ICMP Endpoint
             * `http` - HTTP Endpoint
             * `tcp` - TCP Endpoint
             * `dns` - DNS Endpoint
@@ -41,7 +41,7 @@ class EndpointSimple:
     id: UUID
     name: str
     reconciliation_running: bool
-    kind: EndpointKindEnum
+    kind: EndpointSimpleKind
     remote_address: str
     remote_port: int | None
     workspace: WorkspaceSimple
@@ -105,7 +105,7 @@ class EndpointSimple:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        kind = check_endpoint_kind_enum(d.pop("kind"))
+        kind = check_endpoint_simple_kind(d.pop("kind"))
 
         remote_address = d.pop("remote_address")
 

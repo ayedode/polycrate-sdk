@@ -6,7 +6,7 @@ from typing import Any, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.label_keys_enum import LabelKeysEnum, check_label_keys_enum
+from ..models.label_key_list_label_keys_item import LabelKeyListLabelKeysItem, check_label_key_list_label_keys_item
 
 T = TypeVar("T", bound="LabelKeyList")
 
@@ -15,10 +15,10 @@ T = TypeVar("T", bound="LabelKeyList")
 class LabelKeyList:
     """
     Attributes:
-        label_keys (list[LabelKeysEnum]):
+        label_keys (list[LabelKeyListLabelKeysItem]):
     """
 
-    label_keys: list[LabelKeysEnum]
+    label_keys: list[LabelKeyListLabelKeysItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -43,7 +43,7 @@ class LabelKeyList:
         label_keys = []
         _label_keys = d.pop("label_keys")
         for label_keys_item_data in _label_keys:
-            label_keys_item = check_label_keys_enum(label_keys_item_data)
+            label_keys_item = check_label_key_list_label_keys_item(label_keys_item_data)
 
             label_keys.append(label_keys_item)
 

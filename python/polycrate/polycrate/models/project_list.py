@@ -8,9 +8,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.project_kind_enum import ProjectKindEnum, check_project_kind_enum
+from ..models.project_list_effective_criticality_type_1 import (
+    ProjectListEffectiveCriticalityType1,
+    check_project_list_effective_criticality_type_1,
+)
+from ..models.project_list_effective_criticality_type_2_type_1 import (
+    ProjectListEffectiveCriticalityType2Type1,
+    check_project_list_effective_criticality_type_2_type_1,
+)
+from ..models.project_list_effective_criticality_type_3_type_1 import (
+    ProjectListEffectiveCriticalityType3Type1,
+    check_project_list_effective_criticality_type_3_type_1,
+)
+from ..models.project_list_kind import ProjectListKind, check_project_list_kind
+from ..models.project_list_state import ProjectListState, check_project_list_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -29,7 +40,7 @@ class ProjectList:
     Attributes:
         id (UUID):
         name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-        state (LastStateEnum): * `OK` - Ok
+        state (ProjectListState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -45,11 +56,14 @@ class ProjectList:
         organization_priority (bool): True when the object's organization has priority=True.
         created (ProjectListCreated):
         archived (bool): Archived objects are not shown in the UI and are not managed by the API.
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (None | ProjectListEffectiveCriticalityType1 | ProjectListEffectiveCriticalityType2Type1 |
+            ProjectListEffectiveCriticalityType3Type1):
         url (str): Gibt die absolute URL zum Object zurück.
         kind_display (str):
         computed_cost (None | str):
-        kind (ProjectKindEnum | Unset): * `onboarding` - Onboarding
+        kind (ProjectListKind | Unset): Project lifecycle phase
+
+            * `onboarding` - Onboarding
             * `offboarding` - Offboarding
             * `ongoing` - Ongoing
         active (bool | Unset): Whether this project is currently active
@@ -59,7 +73,7 @@ class ProjectList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: ProjectListState
     labels: Any
     condition_instance_count: int
     active_condition_instances: list[ProjectListActiveConditionInstancesItem]
@@ -67,11 +81,16 @@ class ProjectList:
     organization_priority: bool
     created: ProjectListCreated
     archived: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | ProjectListEffectiveCriticalityType1
+        | ProjectListEffectiveCriticalityType2Type1
+        | ProjectListEffectiveCriticalityType3Type1
+    )
     url: str
     kind_display: str
     computed_cost: None | str
-    kind: ProjectKindEnum | Unset = UNSET
+    kind: ProjectListKind | Unset = UNSET
     active: bool | Unset = UNSET
     start_date: datetime.date | None | Unset = UNSET
     end_date: datetime.date | None | Unset = UNSET
@@ -103,6 +122,10 @@ class ProjectList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -170,9 +193,7 @@ class ProjectList:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
-        from ..models.project_list_active_condition_instances_item import (
-            ProjectListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.project_list_active_condition_instances_item import ProjectListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.project_list_created import ProjectListCreated  # noqa: PLC0415
 
         d = dict(src_dict)
@@ -180,7 +201,7 @@ class ProjectList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_project_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -203,18 +224,47 @@ class ProjectList:
 
         archived = d.pop("archived")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | ProjectListEffectiveCriticalityType1
+            | ProjectListEffectiveCriticalityType2Type1
+            | ProjectListEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_project_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_project_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_project_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | ProjectListEffectiveCriticalityType1
+                | ProjectListEffectiveCriticalityType2Type1
+                | ProjectListEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -230,11 +280,11 @@ class ProjectList:
         computed_cost = _parse_computed_cost(d.pop("computed_cost"))
 
         _kind = d.pop("kind", UNSET)
-        kind: ProjectKindEnum | Unset
+        kind: ProjectListKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_project_kind_enum(_kind)
+            kind = check_project_list_kind(_kind)
 
         active = d.pop("active", UNSET)
 

@@ -6,8 +6,15 @@ from typing import Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.user_role_enum import UserRoleEnum, check_user_role_enum
+from ..models.user_admin_write_role_type_1 import UserAdminWriteRoleType1, check_user_admin_write_role_type_1
+from ..models.user_admin_write_role_type_2_type_1 import (
+    UserAdminWriteRoleType2Type1,
+    check_user_admin_write_role_type_2_type_1,
+)
+from ..models.user_admin_write_role_type_3_type_1 import (
+    UserAdminWriteRoleType3Type1,
+    check_user_admin_write_role_type_3_type_1,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="UserAdminWrite")
@@ -28,8 +35,9 @@ class UserAdminWrite:
             is_active (bool | Unset): Active flag. Synced to Keycloak enabled on change (blocking). Spec 561.
             is_staff (bool | Unset):
             is_superuser (bool | Unset): Designates that this user has all permissions without explicitly assigning them.
-            role (BlankEnum | None | Unset | UserRoleEnum): Legacy system-wide role (developer, admin, billing, viewer,
-                owner). Prefer OrganizationMembership.role for org-scoped portal roles (Spec 525).
+            role (None | Unset | UserAdminWriteRoleType1 | UserAdminWriteRoleType2Type1 | UserAdminWriteRoleType3Type1):
+                Legacy system-wide role (developer, admin, billing, viewer, owner). Prefer OrganizationMembership.role for org-
+                scoped portal roles (Spec 525).
 
                 * `developer` - Developer
                 * `admin` - Admin
@@ -48,7 +56,7 @@ class UserAdminWrite:
     is_active: bool | Unset = UNSET
     is_staff: bool | Unset = UNSET
     is_superuser: bool | Unset = UNSET
-    role: BlankEnum | None | Unset | UserRoleEnum = UNSET
+    role: None | Unset | UserAdminWriteRoleType1 | UserAdminWriteRoleType2Type1 | UserAdminWriteRoleType3Type1 = UNSET
     is_maintenance_contact: bool | Unset = UNSET
     is_billing_contact: bool | Unset = UNSET
     email_verified: bool | Unset = UNSET
@@ -72,6 +80,8 @@ class UserAdminWrite:
         role: None | str | Unset
         if isinstance(self.role, Unset):
             role = UNSET
+        elif isinstance(self.role, str):
+            role = self.role
         elif isinstance(self.role, str):
             role = self.role
         elif isinstance(self.role, str):
@@ -131,7 +141,9 @@ class UserAdminWrite:
 
         is_superuser = d.pop("is_superuser", UNSET)
 
-        def _parse_role(data: object) -> BlankEnum | None | Unset | UserRoleEnum:
+        def _parse_role(
+            data: object,
+        ) -> None | Unset | UserAdminWriteRoleType1 | UserAdminWriteRoleType2Type1 | UserAdminWriteRoleType3Type1:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -139,20 +151,31 @@ class UserAdminWrite:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                role_type_0 = check_user_role_enum(data)
+                role_type_1 = check_user_admin_write_role_type_1(data)
 
-                return role_type_0
+                return role_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                role_type_1 = check_blank_enum(data)
+                role_type_2_type_1 = check_user_admin_write_role_type_2_type_1(data)
 
-                return role_type_1
+                return role_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | None | Unset | UserRoleEnum, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                role_type_3_type_1 = check_user_admin_write_role_type_3_type_1(data)
+
+                return role_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | Unset | UserAdminWriteRoleType1 | UserAdminWriteRoleType2Type1 | UserAdminWriteRoleType3Type1,
+                data,
+            )
 
         role = _parse_role(d.pop("role", UNSET))
 

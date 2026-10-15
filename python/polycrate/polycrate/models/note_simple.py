@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.note_kind_enum import NoteKindEnum, check_note_kind_enum
+from ..models.note_simple_kind import NoteSimpleKind, check_note_simple_kind
 
 if TYPE_CHECKING:
     from ..models.note_simple_created_by_user_type_0 import NoteSimpleCreatedByUserType0
@@ -25,7 +25,9 @@ class NoteSimple:
         id (UUID):
         display_name (str): Human-readable name for the note
         name (str):
-        kind (NoteKindEnum): * `info` - Information
+        kind (NoteSimpleKind): Kind of note
+
+            * `info` - Information
             * `warning` - Warning
             * `todo` - Todo
             * `reminder` - Reminder
@@ -47,7 +49,7 @@ class NoteSimple:
     id: UUID
     display_name: str
     name: str
-    kind: NoteKindEnum
+    kind: NoteSimpleKind
     reconciliation_running: bool
     url: str
     total_time_tracked_hours: None | str
@@ -116,7 +118,7 @@ class NoteSimple:
 
         name = d.pop("name")
 
-        kind = check_note_kind_enum(d.pop("kind"))
+        kind = check_note_simple_kind(d.pop("kind"))
 
         reconciliation_running = d.pop("reconciliation_running")
 

@@ -8,13 +8,36 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.compliance_report_status_enum import ComplianceReportStatusEnum, check_compliance_report_status_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.compliance_report_criticality_type_1 import (
+    ComplianceReportCriticalityType1,
+    check_compliance_report_criticality_type_1,
+)
+from ..models.compliance_report_criticality_type_2_type_1 import (
+    ComplianceReportCriticalityType2Type1,
+    check_compliance_report_criticality_type_2_type_1,
+)
+from ..models.compliance_report_criticality_type_3_type_1 import (
+    ComplianceReportCriticalityType3Type1,
+    check_compliance_report_criticality_type_3_type_1,
+)
+from ..models.compliance_report_effective_criticality_type_1 import (
+    ComplianceReportEffectiveCriticalityType1,
+    check_compliance_report_effective_criticality_type_1,
+)
+from ..models.compliance_report_effective_criticality_type_2_type_1 import (
+    ComplianceReportEffectiveCriticalityType2Type1,
+    check_compliance_report_effective_criticality_type_2_type_1,
+)
+from ..models.compliance_report_effective_criticality_type_3_type_1 import (
+    ComplianceReportEffectiveCriticalityType3Type1,
+    check_compliance_report_effective_criticality_type_3_type_1,
+)
+from ..models.compliance_report_kind import ComplianceReportKind, check_compliance_report_kind
+from ..models.compliance_report_last_state import ComplianceReportLastState, check_compliance_report_last_state
+from ..models.compliance_report_provider import ComplianceReportProvider, check_compliance_report_provider
+from ..models.compliance_report_scope import ComplianceReportScope, check_compliance_report_scope
+from ..models.compliance_report_state import ComplianceReportState, check_compliance_report_state
+from ..models.compliance_report_status import ComplianceReportStatus, check_compliance_report_status
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -61,7 +84,7 @@ class ComplianceReport:
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (ComplianceReportDeletedByUserType0 | None):
             debug_mode (bool): Persists all Object Logs in the database
-            provider (ProviderEnum): * `loopback` - Loopback
+            provider (ComplianceReportProvider): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -76,14 +99,14 @@ class ComplianceReport:
                 * `system` - System
             provider_reference (None | str):
             provider_id (None | str):
-            state (LastStateEnum): * `OK` - Ok
+            state (ComplianceReportState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (ComplianceReportLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -106,9 +129,11 @@ class ComplianceReport:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (ComplianceReportScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
-            kind (GenericObjectKindEnum): * `generic` - Generic
+            kind (ComplianceReportKind): * `generic` - Generic
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
             tolerations (Any): Tolerations match conditions. If a toleration for a condition exists for an object, the
@@ -116,13 +141,15 @@ class ComplianceReport:
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None):
             archived_reason (None | str): The reason why the object was archived
-            criticality (CriticalityEnum | None): Criticality level. Null = inherit from workspace, then org. Explicit value
-                overrides inheritance.
+            criticality (ComplianceReportCriticalityType1 | ComplianceReportCriticalityType2Type1 |
+                ComplianceReportCriticalityType3Type1 | None): Criticality level. Null = inherit from workspace, then org.
+                Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
                 * `low` - Low
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (ComplianceReportEffectiveCriticalityType1 |
+                ComplianceReportEffectiveCriticalityType2Type1 | ComplianceReportEffectiveCriticalityType3Type1 | None):
             target_availability (None | str): Target availability in % (overrides SystemConfig default). Null = use
                 SystemConfig DEFAULT_TARGET_AVAILABILITY.
             actual_availability (str): Calculated actual availability as yearly average in %
@@ -140,7 +167,7 @@ class ComplianceReport:
             effective_slo_target (float | None):
             effective_sla_target (float | None):
             last_action_run (ComplianceReportLastActionRunType0 | None):
-            status (ComplianceReportStatusEnum): * `generating` - Generating
+            status (ComplianceReportStatus): * `generating` - Generating
                 * `ready` - Ready
                 * `failed` - Failed
                 * `archived` - Archived
@@ -167,12 +194,12 @@ class ComplianceReport:
     is_deleted: bool
     deleted_by_user: ComplianceReportDeletedByUserType0 | None
     debug_mode: bool
-    provider: ProviderEnum
+    provider: ComplianceReportProvider
     provider_reference: None | str
     provider_id: None | str
-    state: LastStateEnum
+    state: ComplianceReportState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: ComplianceReportLastState
     last_state_change: datetime.datetime | None
     reconciliation_enabled: bool
     reconciliation_running: bool
@@ -189,15 +216,25 @@ class ComplianceReport:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
-    kind: GenericObjectKindEnum
+    scope: ComplianceReportScope
+    kind: ComplianceReportKind
     conditions: Any
     tolerations: Any
     archived: bool
     archived_at: datetime.datetime | None
     archived_reason: None | str
-    criticality: CriticalityEnum | None
-    effective_criticality: EffectiveCriticalityEnum | None
+    criticality: (
+        ComplianceReportCriticalityType1
+        | ComplianceReportCriticalityType2Type1
+        | ComplianceReportCriticalityType3Type1
+        | None
+    )
+    effective_criticality: (
+        ComplianceReportEffectiveCriticalityType1
+        | ComplianceReportEffectiveCriticalityType2Type1
+        | ComplianceReportEffectiveCriticalityType3Type1
+        | None
+    )
     target_availability: None | str
     actual_availability: str
     slo_target: None | str
@@ -213,7 +250,7 @@ class ComplianceReport:
     effective_slo_target: float | None
     effective_sla_target: float | None
     last_action_run: ComplianceReportLastActionRunType0 | None
-    status: ComplianceReportStatusEnum
+    status: ComplianceReportStatus
     period_start: datetime.date
     period_end: datetime.date
     schema_version: str
@@ -228,12 +265,8 @@ class ComplianceReport:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.compliance_report_deleted_by_user_type_0 import (
-            ComplianceReportDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.compliance_report_last_action_run_type_0 import (
-            ComplianceReportLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.compliance_report_deleted_by_user_type_0 import ComplianceReportDeletedByUserType0  # noqa: PLC0415
+        from ..models.compliance_report_last_action_run_type_0 import ComplianceReportLastActionRunType0  # noqa: PLC0415
         from ..models.compliance_report_organization_type_0 import ComplianceReportOrganizationType0  # noqa: PLC0415
         from ..models.compliance_report_workspace_type_0 import ComplianceReportWorkspaceType0  # noqa: PLC0415
 
@@ -354,11 +387,19 @@ class ComplianceReport:
         criticality: None | str
         if isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -520,12 +561,8 @@ class ComplianceReport:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.compliance_report_created import ComplianceReportCreated  # noqa: PLC0415
-        from ..models.compliance_report_deleted_by_user_type_0 import (
-            ComplianceReportDeletedByUserType0,  # noqa: PLC0415
-        )
-        from ..models.compliance_report_last_action_run_type_0 import (
-            ComplianceReportLastActionRunType0,  # noqa: PLC0415
-        )
+        from ..models.compliance_report_deleted_by_user_type_0 import ComplianceReportDeletedByUserType0  # noqa: PLC0415
+        from ..models.compliance_report_last_action_run_type_0 import ComplianceReportLastActionRunType0  # noqa: PLC0415
         from ..models.compliance_report_organization_type_0 import ComplianceReportOrganizationType0  # noqa: PLC0415
         from ..models.compliance_report_workspace_type_0 import ComplianceReportWorkspaceType0  # noqa: PLC0415
 
@@ -581,7 +618,7 @@ class ComplianceReport:
 
         debug_mode = d.pop("debug_mode")
 
-        provider = check_provider_enum(d.pop("provider"))
+        provider = check_compliance_report_provider(d.pop("provider"))
 
         def _parse_provider_reference(data: object) -> None | str:
             if data is None:
@@ -597,7 +634,7 @@ class ComplianceReport:
 
         provider_id = _parse_provider_id(d.pop("provider_id"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_compliance_report_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -606,7 +643,7 @@ class ComplianceReport:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_compliance_report_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -707,9 +744,9 @@ class ComplianceReport:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_compliance_report_scope(d.pop("scope"))
 
-        kind = check_generic_object_kind_enum(d.pop("kind"))
+        kind = check_compliance_report_kind(d.pop("kind"))
 
         conditions = d.pop("conditions")
 
@@ -739,33 +776,91 @@ class ComplianceReport:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason"))
 
-        def _parse_criticality(data: object) -> CriticalityEnum | None:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            ComplianceReportCriticalityType1
+            | ComplianceReportCriticalityType2Type1
+            | ComplianceReportCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_compliance_report_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(CriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_2_type_1 = check_compliance_report_criticality_type_2_type_1(data)
+
+                return criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_compliance_report_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ComplianceReportCriticalityType1
+                | ComplianceReportCriticalityType2Type1
+                | ComplianceReportCriticalityType3Type1
+                | None,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality"))
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            ComplianceReportEffectiveCriticalityType1
+            | ComplianceReportEffectiveCriticalityType2Type1
+            | ComplianceReportEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_compliance_report_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_compliance_report_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_compliance_report_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ComplianceReportEffectiveCriticalityType1
+                | ComplianceReportEffectiveCriticalityType2Type1
+                | ComplianceReportEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -863,7 +958,7 @@ class ComplianceReport:
 
         last_action_run = _parse_last_action_run(d.pop("last_action_run"))
 
-        status = check_compliance_report_status_enum(d.pop("status"))
+        status = check_compliance_report_status(d.pop("status"))
 
         period_start = datetime.date.fromisoformat(d.pop("period_start"))
 

@@ -7,9 +7,31 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.delegation_source_enum import DelegationSourceEnum, check_delegation_source_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.s3_bucket_list_delegation_source_type_1 import (
+    S3BucketListDelegationSourceType1,
+    check_s3_bucket_list_delegation_source_type_1,
+)
+from ..models.s3_bucket_list_delegation_source_type_2_type_1 import (
+    S3BucketListDelegationSourceType2Type1,
+    check_s3_bucket_list_delegation_source_type_2_type_1,
+)
+from ..models.s3_bucket_list_delegation_source_type_3_type_1 import (
+    S3BucketListDelegationSourceType3Type1,
+    check_s3_bucket_list_delegation_source_type_3_type_1,
+)
+from ..models.s3_bucket_list_effective_criticality_type_1 import (
+    S3BucketListEffectiveCriticalityType1,
+    check_s3_bucket_list_effective_criticality_type_1,
+)
+from ..models.s3_bucket_list_effective_criticality_type_2_type_1 import (
+    S3BucketListEffectiveCriticalityType2Type1,
+    check_s3_bucket_list_effective_criticality_type_2_type_1,
+)
+from ..models.s3_bucket_list_effective_criticality_type_3_type_1 import (
+    S3BucketListEffectiveCriticalityType3Type1,
+    check_s3_bucket_list_effective_criticality_type_3_type_1,
+)
+from ..models.s3_bucket_list_state import S3BucketListState, check_s3_bucket_list_state
 
 if TYPE_CHECKING:
     from ..models.organization_simple import OrganizationSimple
@@ -33,7 +55,7 @@ class S3BucketList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (S3BucketListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -51,7 +73,8 @@ class S3BucketList:
             created (S3BucketListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | S3BucketListEffectiveCriticalityType1 | S3BucketListEffectiveCriticalityType2Type1
+                | S3BucketListEffectiveCriticalityType3Type1):
             url (str): Gibt die absolute URL zum Object zurück.
             region (RegionSimple):
             current_usage (int): Size in KB
@@ -62,7 +85,8 @@ class S3BucketList:
                 Includes `url` field for direct navigation.
             delegated_workspace (WorkspaceSimple):
             loopback_resource_id (None | str): Loopback API entity id (v3 object-store id).
-            delegation_source (DelegationSourceEnum | None): Source of the delegation mapping.
+            delegation_source (None | S3BucketListDelegationSourceType1 | S3BucketListDelegationSourceType2Type1 |
+                S3BucketListDelegationSourceType3Type1): Source of the delegation mapping.
 
                 * `loopback_lb` - Loopback Load Balancer
                 * `loopback_object_store` - Loopback Object Store
@@ -70,7 +94,7 @@ class S3BucketList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: S3BucketListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -81,7 +105,12 @@ class S3BucketList:
     created: S3BucketListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | S3BucketListEffectiveCriticalityType1
+        | S3BucketListEffectiveCriticalityType2Type1
+        | S3BucketListEffectiveCriticalityType3Type1
+    )
     url: str
     region: RegionSimple
     current_usage: int
@@ -90,7 +119,12 @@ class S3BucketList:
     delegated_organization: OrganizationSimple
     delegated_workspace: WorkspaceSimple
     loopback_resource_id: None | str
-    delegation_source: DelegationSourceEnum | None
+    delegation_source: (
+        None
+        | S3BucketListDelegationSourceType1
+        | S3BucketListDelegationSourceType2Type1
+        | S3BucketListDelegationSourceType3Type1
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -137,6 +171,10 @@ class S3BucketList:
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
 
@@ -160,6 +198,10 @@ class S3BucketList:
 
         delegation_source: None | str
         if isinstance(self.delegation_source, str):
+            delegation_source = self.delegation_source
+        elif isinstance(self.delegation_source, str):
+            delegation_source = self.delegation_source
+        elif isinstance(self.delegation_source, str):
             delegation_source = self.delegation_source
         else:
             delegation_source = self.delegation_source
@@ -200,9 +242,7 @@ class S3BucketList:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
         from ..models.region_simple import RegionSimple  # noqa: PLC0415
-        from ..models.s3_bucket_list_active_condition_instances_item import (
-            S3BucketListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.s3_bucket_list_active_condition_instances_item import S3BucketListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.s3_bucket_list_created import S3BucketListCreated  # noqa: PLC0415
         from ..models.s3_bucket_list_organization_type_0 import S3BucketListOrganizationType0  # noqa: PLC0415
         from ..models.s3_bucket_list_workspace_type_0 import S3BucketListWorkspaceType0  # noqa: PLC0415
@@ -213,7 +253,7 @@ class S3BucketList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_s3_bucket_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -268,18 +308,47 @@ class S3BucketList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | S3BucketListEffectiveCriticalityType1
+            | S3BucketListEffectiveCriticalityType2Type1
+            | S3BucketListEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_s3_bucket_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_s3_bucket_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_s3_bucket_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | S3BucketListEffectiveCriticalityType1
+                | S3BucketListEffectiveCriticalityType2Type1
+                | S3BucketListEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -309,18 +378,47 @@ class S3BucketList:
 
         loopback_resource_id = _parse_loopback_resource_id(d.pop("loopback_resource_id"))
 
-        def _parse_delegation_source(data: object) -> DelegationSourceEnum | None:
+        def _parse_delegation_source(
+            data: object,
+        ) -> (
+            None
+            | S3BucketListDelegationSourceType1
+            | S3BucketListDelegationSourceType2Type1
+            | S3BucketListDelegationSourceType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                delegation_source_type_0 = check_delegation_source_enum(data)
+                delegation_source_type_1 = check_s3_bucket_list_delegation_source_type_1(data)
 
-                return delegation_source_type_0
+                return delegation_source_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(DelegationSourceEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                delegation_source_type_2_type_1 = check_s3_bucket_list_delegation_source_type_2_type_1(data)
+
+                return delegation_source_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                delegation_source_type_3_type_1 = check_s3_bucket_list_delegation_source_type_3_type_1(data)
+
+                return delegation_source_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | S3BucketListDelegationSourceType1
+                | S3BucketListDelegationSourceType2Type1
+                | S3BucketListDelegationSourceType3Type1,
+                data,
+            )
 
         delegation_source = _parse_delegation_source(d.pop("delegation_source"))
 

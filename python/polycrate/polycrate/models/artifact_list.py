@@ -7,8 +7,19 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.artifact_list_effective_criticality_type_1 import (
+    ArtifactListEffectiveCriticalityType1,
+    check_artifact_list_effective_criticality_type_1,
+)
+from ..models.artifact_list_effective_criticality_type_2_type_1 import (
+    ArtifactListEffectiveCriticalityType2Type1,
+    check_artifact_list_effective_criticality_type_2_type_1,
+)
+from ..models.artifact_list_effective_criticality_type_3_type_1 import (
+    ArtifactListEffectiveCriticalityType3Type1,
+    check_artifact_list_effective_criticality_type_3_type_1,
+)
+from ..models.artifact_list_state import ArtifactListState, check_artifact_list_state
 
 if TYPE_CHECKING:
     from ..models.artifact_list_active_condition_instances_item import ArtifactListActiveConditionInstancesItem
@@ -28,7 +39,7 @@ class ArtifactList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (ArtifactListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -46,7 +57,8 @@ class ArtifactList:
             created (ArtifactListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (ArtifactListEffectiveCriticalityType1 | ArtifactListEffectiveCriticalityType2Type1 |
+                ArtifactListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             kind (str):
             version (str):
@@ -56,7 +68,7 @@ class ArtifactList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: ArtifactListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -67,7 +79,12 @@ class ArtifactList:
     created: ArtifactListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        ArtifactListEffectiveCriticalityType1
+        | ArtifactListEffectiveCriticalityType2Type1
+        | ArtifactListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     kind: str
     version: str
@@ -111,6 +128,10 @@ class ArtifactList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -159,9 +180,7 @@ class ArtifactList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.artifact_list_active_condition_instances_item import (
-            ArtifactListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.artifact_list_active_condition_instances_item import ArtifactListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.artifact_list_artifact_package_type_0 import ArtifactListArtifactPackageType0  # noqa: PLC0415
         from ..models.artifact_list_created import ArtifactListCreated  # noqa: PLC0415
 
@@ -170,7 +189,7 @@ class ArtifactList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_artifact_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -209,18 +228,47 @@ class ArtifactList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            ArtifactListEffectiveCriticalityType1
+            | ArtifactListEffectiveCriticalityType2Type1
+            | ArtifactListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_artifact_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_artifact_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_artifact_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ArtifactListEffectiveCriticalityType1
+                | ArtifactListEffectiveCriticalityType2Type1
+                | ArtifactListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

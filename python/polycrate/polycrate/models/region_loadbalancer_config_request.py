@@ -7,10 +7,13 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.external_traffic_policy_enum import ExternalTrafficPolicyEnum, check_external_traffic_policy_enum
-from ..models.region_loadbalancer_config_kind_enum import (
-    RegionLoadbalancerConfigKindEnum,
-    check_region_loadbalancer_config_kind_enum,
+from ..models.region_loadbalancer_config_request_external_traffic_policy import (
+    RegionLoadbalancerConfigRequestExternalTrafficPolicy,
+    check_region_loadbalancer_config_request_external_traffic_policy,
+)
+from ..models.region_loadbalancer_config_request_kind import (
+    RegionLoadbalancerConfigRequestKind,
+    check_region_loadbalancer_config_request_kind,
 )
 from ..types import UNSET, Unset
 
@@ -25,12 +28,12 @@ T = TypeVar("T", bound="RegionLoadbalancerConfigRequest")
 class RegionLoadbalancerConfigRequest:
     """
     Attributes:
-        kind (RegionLoadbalancerConfigKindEnum | Unset): * `cilium` - cilium
+        kind (RegionLoadbalancerConfigRequestKind | Unset): * `cilium` - cilium
             * `metallb` - metallb Default: 'cilium'.
         region_name (None | str | Unset): Geografischer Region-Bezeichner, z.B. 'fra1'
         credential (None | Unset | UUID):
         default_product (None | Unset | UUID):
-        external_traffic_policy (ExternalTrafficPolicyEnum | Unset): * `Local` - Local
+        external_traffic_policy (RegionLoadbalancerConfigRequestExternalTrafficPolicy | Unset): * `Local` - Local
             * `Cluster` - Cluster Default: 'Local'.
         bgp_peer_asn (int | None | Unset):
         bgp_peer_ip (None | str | Unset):
@@ -38,11 +41,11 @@ class RegionLoadbalancerConfigRequest:
         active (bool | Unset):  Default: True.
     """
 
-    kind: RegionLoadbalancerConfigKindEnum | Unset = "cilium"
+    kind: RegionLoadbalancerConfigRequestKind | Unset = "cilium"
     region_name: None | str | Unset = UNSET
     credential: None | Unset | UUID = UNSET
     default_product: None | Unset | UUID = UNSET
-    external_traffic_policy: ExternalTrafficPolicyEnum | Unset = "Local"
+    external_traffic_policy: RegionLoadbalancerConfigRequestExternalTrafficPolicy | Unset = "Local"
     bgp_peer_asn: int | None | Unset = UNSET
     bgp_peer_ip: None | str | Unset = UNSET
     region_config: RegionLoadbalancerConfigRequestRegionConfig | Unset = UNSET
@@ -130,11 +133,11 @@ class RegionLoadbalancerConfigRequest:
 
         d = dict(src_dict)
         _kind = d.pop("kind", UNSET)
-        kind: RegionLoadbalancerConfigKindEnum | Unset
+        kind: RegionLoadbalancerConfigRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_region_loadbalancer_config_kind_enum(_kind)
+            kind = check_region_loadbalancer_config_request_kind(_kind)
 
         def _parse_region_name(data: object) -> None | str | Unset:
             if data is None:
@@ -180,11 +183,13 @@ class RegionLoadbalancerConfigRequest:
         default_product = _parse_default_product(d.pop("default_product", UNSET))
 
         _external_traffic_policy = d.pop("external_traffic_policy", UNSET)
-        external_traffic_policy: ExternalTrafficPolicyEnum | Unset
+        external_traffic_policy: RegionLoadbalancerConfigRequestExternalTrafficPolicy | Unset
         if isinstance(_external_traffic_policy, Unset):
             external_traffic_policy = UNSET
         else:
-            external_traffic_policy = check_external_traffic_policy_enum(_external_traffic_policy)
+            external_traffic_policy = check_region_loadbalancer_config_request_external_traffic_policy(
+                _external_traffic_policy
+            )
 
         def _parse_bgp_peer_asn(data: object) -> int | None | Unset:
             if data is None:

@@ -8,7 +8,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.k8s_cluster_kind_enum import K8SClusterKindEnum, check_k8s_cluster_kind_enum
+from ..models.k8s_cluster_simple_kind import K8SClusterSimpleKind, check_k8s_cluster_simple_kind
 
 if TYPE_CHECKING:
     from ..models.organization_simple import OrganizationSimple
@@ -25,7 +25,7 @@ class K8SClusterSimple:
         id (UUID):
         name (str):
         reconciliation_running (bool):
-        kind (K8SClusterKindEnum): * `polycrate` - Polycrate
+        kind (K8SClusterSimpleKind): * `polycrate` - Polycrate
             * `generic` - Generic
             * `loopback` - Loopback
         installed (bool):
@@ -45,7 +45,7 @@ class K8SClusterSimple:
     id: UUID
     name: str
     reconciliation_running: bool
-    kind: K8SClusterKindEnum
+    kind: K8SClusterSimpleKind
     installed: bool
     is_host_cluster: bool
     is_infrastructure_cluster: bool
@@ -139,7 +139,7 @@ class K8SClusterSimple:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        kind = check_k8s_cluster_kind_enum(d.pop("kind"))
+        kind = check_k8s_cluster_simple_kind(d.pop("kind"))
 
         installed = d.pop("installed")
 

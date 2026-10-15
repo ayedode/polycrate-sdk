@@ -7,9 +7,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.policy_list_effective_criticality_type_1 import (
+    PolicyListEffectiveCriticalityType1,
+    check_policy_list_effective_criticality_type_1,
+)
+from ..models.policy_list_effective_criticality_type_2_type_1 import (
+    PolicyListEffectiveCriticalityType2Type1,
+    check_policy_list_effective_criticality_type_2_type_1,
+)
+from ..models.policy_list_effective_criticality_type_3_type_1 import (
+    PolicyListEffectiveCriticalityType3Type1,
+    check_policy_list_effective_criticality_type_3_type_1,
+)
+from ..models.policy_list_kind import PolicyListKind, check_policy_list_kind
+from ..models.policy_list_state import PolicyListState, check_policy_list_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -31,7 +42,7 @@ class PolicyList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (PolicyListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -49,17 +60,18 @@ class PolicyList:
             created (PolicyListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | PolicyListEffectiveCriticalityType1 | PolicyListEffectiveCriticalityType2Type1 |
+                PolicyListEffectiveCriticalityType3Type1):
             url (str): Gibt die absolute URL zum Object zurück.
             bindings_count (int):
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (PolicyListKind | Unset): * `generic` - Generic
             order (int | Unset): Higher = first
             description (str | Unset):
     """
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: PolicyListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -70,10 +82,15 @@ class PolicyList:
     created: PolicyListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | PolicyListEffectiveCriticalityType1
+        | PolicyListEffectiveCriticalityType2Type1
+        | PolicyListEffectiveCriticalityType3Type1
+    )
     url: str
     bindings_count: int
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: PolicyListKind | Unset = UNSET
     order: int | Unset = UNSET
     description: str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -121,6 +138,10 @@ class PolicyList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -170,9 +191,7 @@ class PolicyList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.policy_list_active_condition_instances_item import (
-            PolicyListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.policy_list_active_condition_instances_item import PolicyListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.policy_list_created import PolicyListCreated  # noqa: PLC0415
         from ..models.policy_list_organization_type_0 import PolicyListOrganizationType0  # noqa: PLC0415
         from ..models.policy_list_workspace_type_0 import PolicyListWorkspaceType0  # noqa: PLC0415
@@ -182,7 +201,7 @@ class PolicyList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_policy_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -237,18 +256,47 @@ class PolicyList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | PolicyListEffectiveCriticalityType1
+            | PolicyListEffectiveCriticalityType2Type1
+            | PolicyListEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_policy_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_policy_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_policy_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PolicyListEffectiveCriticalityType1
+                | PolicyListEffectiveCriticalityType2Type1
+                | PolicyListEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -257,11 +305,11 @@ class PolicyList:
         bindings_count = d.pop("bindings_count")
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: PolicyListKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_policy_list_kind(_kind)
 
         order = d.pop("order", UNSET)
 

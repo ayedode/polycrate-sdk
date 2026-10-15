@@ -6,18 +6,7 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.error_response_401 import ErrorResponse401
-from ...models.error_response_403 import ErrorResponse403
-from ...models.error_response_404 import ErrorResponse404
-from ...models.error_response_405 import ErrorResponse405
-from ...models.error_response_406 import ErrorResponse406
-from ...models.error_response_409 import ErrorResponse409
-from ...models.error_response_410 import ErrorResponse410
-from ...models.error_response_415 import ErrorResponse415
-from ...models.error_response_500 import ErrorResponse500
-from ...models.error_response_502 import ErrorResponse502
 from ...models.paginated_org_api_key_list import PaginatedOrgAPIKeyList
-from ...models.parse_error_response import ParseErrorResponse
 from ...types import UNSET, Response, Unset
 
 
@@ -53,82 +42,11 @@ def _get_kwargs(
     return _kwargs
 
 
-def _parse_response(
-    *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> (
-    ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedOrgAPIKeyList
-    | ParseErrorResponse
-    | None
-):
+def _parse_response(*, client: AuthenticatedClient | Client, response: httpx.Response) -> PaginatedOrgAPIKeyList | None:
     if response.status_code == 200:
         response_200 = PaginatedOrgAPIKeyList.from_dict(response.json())
 
         return response_200
-
-    if response.status_code == 400:
-        response_400 = ParseErrorResponse.from_dict(response.json())
-
-        return response_400
-
-    if response.status_code == 401:
-        response_401 = ErrorResponse401.from_dict(response.json())
-
-        return response_401
-
-    if response.status_code == 403:
-        response_403 = ErrorResponse403.from_dict(response.json())
-
-        return response_403
-
-    if response.status_code == 404:
-        response_404 = ErrorResponse404.from_dict(response.json())
-
-        return response_404
-
-    if response.status_code == 405:
-        response_405 = ErrorResponse405.from_dict(response.json())
-
-        return response_405
-
-    if response.status_code == 406:
-        response_406 = ErrorResponse406.from_dict(response.json())
-
-        return response_406
-
-    if response.status_code == 409:
-        response_409 = ErrorResponse409.from_dict(response.json())
-
-        return response_409
-
-    if response.status_code == 410:
-        response_410 = ErrorResponse410.from_dict(response.json())
-
-        return response_410
-
-    if response.status_code == 415:
-        response_415 = ErrorResponse415.from_dict(response.json())
-
-        return response_415
-
-    if response.status_code == 500:
-        response_500 = ErrorResponse500.from_dict(response.json())
-
-        return response_500
-
-    if response.status_code == 502:
-        response_502 = ErrorResponse502.from_dict(response.json())
-
-        return response_502
 
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
@@ -138,20 +56,7 @@ def _parse_response(
 
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> Response[
-    ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedOrgAPIKeyList
-    | ParseErrorResponse
-]:
+) -> Response[PaginatedOrgAPIKeyList]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -168,20 +73,7 @@ def sync_detailed(
     page: int | Unset = UNSET,
     page_size: int | Unset = UNSET,
     search: str | Unset = UNSET,
-) -> Response[
-    ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedOrgAPIKeyList
-    | ParseErrorResponse
-]:
+) -> Response[PaginatedOrgAPIKeyList]:
     """CRUD for Organization API Keys (kind='org_api_key') scoped to one org.
     Create/Delete: superuser only.  List: superuser OR OrgAPIUser of this org.
     The raw token is returned only on create and never again.
@@ -199,7 +91,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedOrgAPIKeyList | ParseErrorResponse]
+        Response[PaginatedOrgAPIKeyList]
     """
 
     kwargs = _get_kwargs(
@@ -225,21 +117,7 @@ def sync(
     page: int | Unset = UNSET,
     page_size: int | Unset = UNSET,
     search: str | Unset = UNSET,
-) -> (
-    ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedOrgAPIKeyList
-    | ParseErrorResponse
-    | None
-):
+) -> PaginatedOrgAPIKeyList | None:
     """CRUD for Organization API Keys (kind='org_api_key') scoped to one org.
     Create/Delete: superuser only.  List: superuser OR OrgAPIUser of this org.
     The raw token is returned only on create and never again.
@@ -257,7 +135,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedOrgAPIKeyList | ParseErrorResponse
+        PaginatedOrgAPIKeyList
     """
 
     return sync_detailed(
@@ -278,20 +156,7 @@ async def asyncio_detailed(
     page: int | Unset = UNSET,
     page_size: int | Unset = UNSET,
     search: str | Unset = UNSET,
-) -> Response[
-    ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedOrgAPIKeyList
-    | ParseErrorResponse
-]:
+) -> Response[PaginatedOrgAPIKeyList]:
     """CRUD for Organization API Keys (kind='org_api_key') scoped to one org.
     Create/Delete: superuser only.  List: superuser OR OrgAPIUser of this org.
     The raw token is returned only on create and never again.
@@ -309,7 +174,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedOrgAPIKeyList | ParseErrorResponse]
+        Response[PaginatedOrgAPIKeyList]
     """
 
     kwargs = _get_kwargs(
@@ -333,21 +198,7 @@ async def asyncio(
     page: int | Unset = UNSET,
     page_size: int | Unset = UNSET,
     search: str | Unset = UNSET,
-) -> (
-    ErrorResponse401
-    | ErrorResponse403
-    | ErrorResponse404
-    | ErrorResponse405
-    | ErrorResponse406
-    | ErrorResponse409
-    | ErrorResponse410
-    | ErrorResponse415
-    | ErrorResponse500
-    | ErrorResponse502
-    | PaginatedOrgAPIKeyList
-    | ParseErrorResponse
-    | None
-):
+) -> PaginatedOrgAPIKeyList | None:
     """CRUD for Organization API Keys (kind='org_api_key') scoped to one org.
     Create/Delete: superuser only.  List: superuser OR OrgAPIUser of this org.
     The raw token is returned only on create and never again.
@@ -365,7 +216,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ErrorResponse401 | ErrorResponse403 | ErrorResponse404 | ErrorResponse405 | ErrorResponse406 | ErrorResponse409 | ErrorResponse410 | ErrorResponse415 | ErrorResponse500 | ErrorResponse502 | PaginatedOrgAPIKeyList | ParseErrorResponse
+        PaginatedOrgAPIKeyList
     """
 
     return (

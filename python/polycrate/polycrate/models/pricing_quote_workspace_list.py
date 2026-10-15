@@ -7,8 +7,22 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.pricing_quote_workspace_list_effective_criticality_type_1 import (
+    PricingQuoteWorkspaceListEffectiveCriticalityType1,
+    check_pricing_quote_workspace_list_effective_criticality_type_1,
+)
+from ..models.pricing_quote_workspace_list_effective_criticality_type_2_type_1 import (
+    PricingQuoteWorkspaceListEffectiveCriticalityType2Type1,
+    check_pricing_quote_workspace_list_effective_criticality_type_2_type_1,
+)
+from ..models.pricing_quote_workspace_list_effective_criticality_type_3_type_1 import (
+    PricingQuoteWorkspaceListEffectiveCriticalityType3Type1,
+    check_pricing_quote_workspace_list_effective_criticality_type_3_type_1,
+)
+from ..models.pricing_quote_workspace_list_state import (
+    PricingQuoteWorkspaceListState,
+    check_pricing_quote_workspace_list_state,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -48,7 +62,7 @@ class PricingQuoteWorkspaceList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (PricingQuoteWorkspaceListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -66,7 +80,9 @@ class PricingQuoteWorkspaceList:
             created (PricingQuoteWorkspaceListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | PricingQuoteWorkspaceListEffectiveCriticalityType1 |
+                PricingQuoteWorkspaceListEffectiveCriticalityType2Type1 |
+                PricingQuoteWorkspaceListEffectiveCriticalityType3Type1):
             url (str): Gibt die absolute URL zum Object zurück.
             quote (UUID):
             label (str):
@@ -76,7 +92,7 @@ class PricingQuoteWorkspaceList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: PricingQuoteWorkspaceListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -87,7 +103,12 @@ class PricingQuoteWorkspaceList:
     created: PricingQuoteWorkspaceListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None
+        | PricingQuoteWorkspaceListEffectiveCriticalityType1
+        | PricingQuoteWorkspaceListEffectiveCriticalityType2Type1
+        | PricingQuoteWorkspaceListEffectiveCriticalityType3Type1
+    )
     url: str
     quote: UUID
     label: str
@@ -96,12 +117,8 @@ class PricingQuoteWorkspaceList:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.pricing_quote_workspace_list_organization_type_0 import (
-            PricingQuoteWorkspaceListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.pricing_quote_workspace_list_workspace_type_0 import (
-            PricingQuoteWorkspaceListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.pricing_quote_workspace_list_organization_type_0 import PricingQuoteWorkspaceListOrganizationType0  # noqa: PLC0415
+        from ..models.pricing_quote_workspace_list_workspace_type_0 import PricingQuoteWorkspaceListWorkspaceType0  # noqa: PLC0415
 
         id = str(self.id)
 
@@ -142,6 +159,10 @@ class PricingQuoteWorkspaceList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -196,19 +217,15 @@ class PricingQuoteWorkspaceList:
             PricingQuoteWorkspaceListActiveConditionInstancesItem,  # noqa: PLC0415
         )
         from ..models.pricing_quote_workspace_list_created import PricingQuoteWorkspaceListCreated  # noqa: PLC0415
-        from ..models.pricing_quote_workspace_list_organization_type_0 import (
-            PricingQuoteWorkspaceListOrganizationType0,  # noqa: PLC0415
-        )
-        from ..models.pricing_quote_workspace_list_workspace_type_0 import (
-            PricingQuoteWorkspaceListWorkspaceType0,  # noqa: PLC0415
-        )
+        from ..models.pricing_quote_workspace_list_organization_type_0 import PricingQuoteWorkspaceListOrganizationType0  # noqa: PLC0415
+        from ..models.pricing_quote_workspace_list_workspace_type_0 import PricingQuoteWorkspaceListWorkspaceType0  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_pricing_quote_workspace_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -263,18 +280,51 @@ class PricingQuoteWorkspaceList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None
+            | PricingQuoteWorkspaceListEffectiveCriticalityType1
+            | PricingQuoteWorkspaceListEffectiveCriticalityType2Type1
+            | PricingQuoteWorkspaceListEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_pricing_quote_workspace_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = (
+                    check_pricing_quote_workspace_list_effective_criticality_type_2_type_1(data)
+                )
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = (
+                    check_pricing_quote_workspace_list_effective_criticality_type_3_type_1(data)
+                )
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PricingQuoteWorkspaceListEffectiveCriticalityType1
+                | PricingQuoteWorkspaceListEffectiveCriticalityType2Type1
+                | PricingQuoteWorkspaceListEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

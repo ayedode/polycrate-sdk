@@ -9,7 +9,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.credential_kind_enum import CredentialKindEnum, check_credential_kind_enum
+from ..models.credential_create_request_kind import CredentialCreateRequestKind, check_credential_create_request_kind
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -26,7 +26,7 @@ class CredentialCreateRequest:
 
         Attributes:
             name (str):
-            kind (CredentialKindEnum | Unset): * `api-key` - API Key
+            kind (CredentialCreateRequestKind | Unset): * `api-key` - API Key
                 * `kubeconfig` - Kubeconfig
                 * `s3-credential` - S3 Credential
                 * `ssh-keys` - SSH Keys
@@ -62,7 +62,7 @@ class CredentialCreateRequest:
     """
 
     name: str
-    kind: CredentialKindEnum | Unset = "generic"
+    kind: CredentialCreateRequestKind | Unset = "generic"
     organization: None | Unset | UUID = UNSET
     workspace: None | Unset | UUID = UNSET
     api_endpoint: None | str | Unset = UNSET
@@ -77,9 +77,7 @@ class CredentialCreateRequest:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.credential_create_request_secrets_type_0 import (
-            CredentialCreateRequestSecretsType0,  # noqa: PLC0415
-        )
+        from ..models.credential_create_request_secrets_type_0 import CredentialCreateRequestSecretsType0  # noqa: PLC0415
 
         name = self.name
 
@@ -190,9 +188,7 @@ class CredentialCreateRequest:
         return field_dict
 
     def to_multipart(self) -> types.RequestFiles:
-        from ..models.credential_create_request_secrets_type_0 import (
-            CredentialCreateRequestSecretsType0,  # noqa: PLC0415
-        )
+        from ..models.credential_create_request_secrets_type_0 import CredentialCreateRequestSecretsType0  # noqa: PLC0415
 
         files: types.RequestFiles = []
 
@@ -271,19 +267,17 @@ class CredentialCreateRequest:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential_create_request_secrets_type_0 import (
-            CredentialCreateRequestSecretsType0,  # noqa: PLC0415
-        )
+        from ..models.credential_create_request_secrets_type_0 import CredentialCreateRequestSecretsType0  # noqa: PLC0415
 
         d = dict(src_dict)
         name = d.pop("name")
 
         _kind = d.pop("kind", UNSET)
-        kind: CredentialKindEnum | Unset
+        kind: CredentialCreateRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_credential_kind_enum(_kind)
+            kind = check_credential_create_request_kind(_kind)
 
         def _parse_organization(data: object) -> None | Unset | UUID:
             if data is None:

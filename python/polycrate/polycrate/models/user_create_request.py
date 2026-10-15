@@ -8,7 +8,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.user_role_enum import UserRoleEnum, check_user_role_enum
+from ..models.user_create_request_role import UserCreateRequestRole, check_user_create_request_role
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="UserCreateRequest")
@@ -25,7 +25,9 @@ class UserCreateRequest:
             first_name (str): Given name
             last_name (str): Family name
             organization_id (UUID): Polycrate organization UUID; organization must have keycloak_org_id
-            role (UserRoleEnum): * `admin` - Admin
+            role (UserCreateRequestRole): Organization-scoped role: admin, developer, billing, viewer, or owner
+
+                * `admin` - Admin
                 * `developer` - Developer
                 * `billing` - Billing
                 * `viewer` - Viewer
@@ -42,7 +44,7 @@ class UserCreateRequest:
     first_name: str
     last_name: str
     organization_id: UUID
-    role: UserRoleEnum
+    role: UserCreateRequestRole
     is_maintenance_contact: bool | Unset = False
     is_billing_contact: bool | Unset = False
     email_verified: bool | Unset = True
@@ -131,7 +133,7 @@ class UserCreateRequest:
 
         organization_id = UUID(d.pop("organization_id"))
 
-        role = check_user_role_enum(d.pop("role"))
+        role = check_user_create_request_role(d.pop("role"))
 
         is_maintenance_contact = d.pop("is_maintenance_contact", UNSET)
 

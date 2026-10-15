@@ -7,7 +7,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.credential_kind_enum import CredentialKindEnum, check_credential_kind_enum
+from ..models.credential_create_kind import CredentialCreateKind, check_credential_create_kind
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -25,7 +25,7 @@ class CredentialCreate:
         Attributes:
             id (UUID):
             name (str):
-            kind (CredentialKindEnum | Unset): * `api-key` - API Key
+            kind (CredentialCreateKind | Unset): * `api-key` - API Key
                 * `kubeconfig` - Kubeconfig
                 * `s3-credential` - S3 Credential
                 * `ssh-keys` - SSH Keys
@@ -61,7 +61,7 @@ class CredentialCreate:
 
     id: UUID
     name: str
-    kind: CredentialKindEnum | Unset = "generic"
+    kind: CredentialCreateKind | Unset = "generic"
     organization: None | Unset | UUID = UNSET
     workspace: None | Unset | UUID = UNSET
     api_endpoint: None | str | Unset = UNSET
@@ -199,11 +199,11 @@ class CredentialCreate:
         name = d.pop("name")
 
         _kind = d.pop("kind", UNSET)
-        kind: CredentialKindEnum | Unset
+        kind: CredentialCreateKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_credential_kind_enum(_kind)
+            kind = check_credential_create_kind(_kind)
 
         def _parse_organization(data: object) -> None | Unset | UUID:
             if data is None:

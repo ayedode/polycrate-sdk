@@ -8,13 +8,39 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.pop_kind_enum import PopKindEnum, check_pop_kind_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.pop_api_type import PopApiType, check_pop_api_type
+from ..models.pop_bgp_status import PopBgpStatus, check_pop_bgp_status
+from ..models.pop_byoip_status import PopByoipStatus, check_pop_byoip_status
+from ..models.pop_c5_status import PopC5Status, check_pop_c5_status
+from ..models.pop_colocation import PopColocation, check_pop_colocation
+from ..models.pop_criticality_type_1 import PopCriticalityType1, check_pop_criticality_type_1
+from ..models.pop_criticality_type_2_type_1 import PopCriticalityType2Type1, check_pop_criticality_type_2_type_1
+from ..models.pop_criticality_type_3_type_1 import PopCriticalityType3Type1, check_pop_criticality_type_3_type_1
+from ..models.pop_effective_criticality_type_1 import (
+    PopEffectiveCriticalityType1,
+    check_pop_effective_criticality_type_1,
+)
+from ..models.pop_effective_criticality_type_2_type_1 import (
+    PopEffectiveCriticalityType2Type1,
+    check_pop_effective_criticality_type_2_type_1,
+)
+from ..models.pop_effective_criticality_type_3_type_1 import (
+    PopEffectiveCriticalityType3Type1,
+    check_pop_effective_criticality_type_3_type_1,
+)
+from ..models.pop_en_50600_status import PopEn50600Status, check_pop_en_50600_status
+from ..models.pop_ipv_6_status import PopIpv6Status, check_pop_ipv_6_status
+from ..models.pop_iso_27001_status import PopIso27001Status, check_pop_iso_27001_status
+from ..models.pop_kind import PopKind, check_pop_kind
+from ..models.pop_last_state import PopLastState, check_pop_last_state
+from ..models.pop_own_rz import PopOwnRz, check_pop_own_rz
+from ..models.pop_provider import PopProvider, check_pop_provider
+from ..models.pop_public_ipv_4_status import PopPublicIpv4Status, check_pop_public_ipv_4_status
+from ..models.pop_scope import PopScope, check_pop_scope
+from ..models.pop_scs_iaas_status import PopScsIaasStatus, check_pop_scs_iaas_status
+from ..models.pop_scs_kaas_status import PopScsKaasStatus, check_pop_scs_kaas_status
+from ..models.pop_state import PopState, check_pop_state
+from ..models.pop_tier import PopTier, check_pop_tier
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -48,14 +74,14 @@ class Pop:
             is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
                 runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
             deleted_by_user (None | PopDeletedByUserType0):
-            state (LastStateEnum): * `OK` - Ok
+            state (PopState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
                 * `DEGRADED` - Degraded
                 * `DOWN` - Down
             state_reason (None | str):
-            last_state (LastStateEnum): * `OK` - Ok
+            last_state (PopLastState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -76,11 +102,14 @@ class Pop:
             repair_task_id (None | str):
             repair_task_meta (Any): Task metadata for repair progress tracking
             last_repair (datetime.datetime | None):
-            scope (ScopeEnum): * `system` - System
+            scope (PopScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+                * `system` - System
                 * `user` - User
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (None | PopEffectiveCriticalityType1 | PopEffectiveCriticalityType2Type1 |
+                PopEffectiveCriticalityType3Type1):
             actual_availability (str): Calculated actual availability as yearly average in %
             organization (None | PopOrganizationType0):
             workspace (None | PopWorkspaceType0):
@@ -101,7 +130,7 @@ class Pop:
             labels (Any | Unset):
             annotations (Any | Unset):
             debug_mode (bool | Unset): Persists all Object Logs in the database
-            provider (ProviderEnum | Unset): * `loopback` - Loopback
+            provider (PopProvider | Unset): * `loopback` - Loopback
                 * `hetzner_cloud` - HETZNER Cloud
                 * `hetzner_robot` - HETZNER Robot
                 * `bare_metal` - Bare-Metal
@@ -118,7 +147,7 @@ class Pop:
             provider_id (None | str | Unset):
             reconciliation_enabled (bool | Unset):
             platform_service (bool | Unset):
-            kind (PopKindEnum | Unset): * `datacenter` - Datacenter
+            kind (PopKind | Unset): * `datacenter` - Datacenter
                 * `datacenter-park` - Datacenter Park
                 * `region` - Region
             tolerations (Any | Unset): Tolerations match conditions. If a toleration for a condition exists for an object,
@@ -126,8 +155,8 @@ class Pop:
             archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
             archived_at (datetime.datetime | None | Unset):
             archived_reason (None | str | Unset): The reason why the object was archived
-            criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-                org. Explicit value overrides inheritance.
+            criticality (None | PopCriticalityType1 | PopCriticalityType2Type1 | PopCriticalityType3Type1 | Unset):
+                Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
                 * `high` - High
                 * `medium` - Medium
@@ -146,6 +175,84 @@ class Pop:
             longitude (None | str | Unset): Longitude coordinate
             pop_endpoint_remote_address (None | str | Unset): Router/gateway IP or hostname for PoP reachability ICMP
                 monitoring (Spec 526).
+            iso27001_status (PopIso27001Status | Unset): ISO 27001 status for this PoP.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            c5_status (PopC5Status | Unset): BSI C5 status for this PoP.
+
+                * `none` - None
+                * `planned` - Planned
+                * `typ1` - Type 1
+                * `typ2` - Type 2
+            tier (PopTier | Unset): Site tier. EN 50600 is a separate field.
+
+                * `tier1` - Tier 1
+                * `tier2` - Tier 2
+                * `tier3` - Tier 3
+                * `tier4` - Tier 4
+            en50600_status (PopEn50600Status | Unset): EN 50600 status for this PoP.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            scs_iaas_status (PopScsIaasStatus | Unset): SCS-compatible IaaS status for this PoP.
+
+                * `none` - None
+                * `compatible` - Compatible
+                * `listed_not_certified` - Listed, not certified
+            scs_kaas_status (PopScsKaasStatus | Unset): SCS-compatible KaaS status for this PoP.
+
+                * `none` - None
+                * `compatible` - Compatible
+                * `listed_not_certified` - Listed, not certified
+            technologies (Any | Unset): Hypervisors at this PoP: openstack, proxmox, custom, other.
+            api_type (PopApiType | Unset): Primary API at this PoP.
+
+                * `openstack` - OpenStack
+                * `proxmox` - Proxmox
+                * `custom_rest` - Custom REST
+                * `none` - None
+            public_ipv4_status (PopPublicIpv4Status | Unset): Public IPv4 at this PoP.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            ipv6_status (PopIpv6Status | Unset): IPv6 at this PoP.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            bgp_status (PopBgpStatus | Unset): BGP at this PoP.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            byoip_status (PopByoipStatus | Unset): BYOIP at this PoP.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            own_rz (PopOwnRz | Unset): Provider-owned data center at this PoP.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            colocation (PopColocation | Unset): Colocation at this PoP.
+
+                * `unknown` - Unknown
+                * `no` - No
+                * `planned` - Planned
+                * `yes` - Yes
+            certification_evidence (Any | Unset): HTTPS evidence URLs, e.g. [{"claim": "tier", "url": "https://..."}].
     """
 
     id: UUID
@@ -154,9 +261,9 @@ class Pop:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: None | PopDeletedByUserType0
-    state: LastStateEnum
+    state: PopState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: PopLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -171,9 +278,11 @@ class Pop:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: PopScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        None | PopEffectiveCriticalityType1 | PopEffectiveCriticalityType2Type1 | PopEffectiveCriticalityType3Type1
+    )
     actual_availability: str
     organization: None | PopOrganizationType0
     workspace: None | PopWorkspaceType0
@@ -191,17 +300,17 @@ class Pop:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: PopProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: PopKindEnum | Unset = UNSET
+    kind: PopKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: None | PopCriticalityType1 | PopCriticalityType2Type1 | PopCriticalityType3Type1 | Unset = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -214,6 +323,21 @@ class Pop:
     latitude: None | str | Unset = UNSET
     longitude: None | str | Unset = UNSET
     pop_endpoint_remote_address: None | str | Unset = UNSET
+    iso27001_status: PopIso27001Status | Unset = UNSET
+    c5_status: PopC5Status | Unset = UNSET
+    tier: PopTier | Unset = UNSET
+    en50600_status: PopEn50600Status | Unset = UNSET
+    scs_iaas_status: PopScsIaasStatus | Unset = UNSET
+    scs_kaas_status: PopScsKaasStatus | Unset = UNSET
+    technologies: Any | Unset = UNSET
+    api_type: PopApiType | Unset = UNSET
+    public_ipv4_status: PopPublicIpv4Status | Unset = UNSET
+    ipv6_status: PopIpv6Status | Unset = UNSET
+    bgp_status: PopBgpStatus | Unset = UNSET
+    byoip_status: PopByoipStatus | Unset = UNSET
+    own_rz: PopOwnRz | Unset = UNSET
+    colocation: PopColocation | Unset = UNSET
+    certification_evidence: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -302,6 +426,10 @@ class Pop:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -407,6 +535,8 @@ class Pop:
             criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         else:
             criticality = self.criticality
 
@@ -473,6 +603,62 @@ class Pop:
             pop_endpoint_remote_address = UNSET
         else:
             pop_endpoint_remote_address = self.pop_endpoint_remote_address
+
+        iso27001_status: str | Unset = UNSET
+        if not isinstance(self.iso27001_status, Unset):
+            iso27001_status = self.iso27001_status
+
+        c5_status: str | Unset = UNSET
+        if not isinstance(self.c5_status, Unset):
+            c5_status = self.c5_status
+
+        tier: str | Unset = UNSET
+        if not isinstance(self.tier, Unset):
+            tier = self.tier
+
+        en50600_status: str | Unset = UNSET
+        if not isinstance(self.en50600_status, Unset):
+            en50600_status = self.en50600_status
+
+        scs_iaas_status: str | Unset = UNSET
+        if not isinstance(self.scs_iaas_status, Unset):
+            scs_iaas_status = self.scs_iaas_status
+
+        scs_kaas_status: str | Unset = UNSET
+        if not isinstance(self.scs_kaas_status, Unset):
+            scs_kaas_status = self.scs_kaas_status
+
+        technologies = self.technologies
+
+        api_type: str | Unset = UNSET
+        if not isinstance(self.api_type, Unset):
+            api_type = self.api_type
+
+        public_ipv4_status: str | Unset = UNSET
+        if not isinstance(self.public_ipv4_status, Unset):
+            public_ipv4_status = self.public_ipv4_status
+
+        ipv6_status: str | Unset = UNSET
+        if not isinstance(self.ipv6_status, Unset):
+            ipv6_status = self.ipv6_status
+
+        bgp_status: str | Unset = UNSET
+        if not isinstance(self.bgp_status, Unset):
+            bgp_status = self.bgp_status
+
+        byoip_status: str | Unset = UNSET
+        if not isinstance(self.byoip_status, Unset):
+            byoip_status = self.byoip_status
+
+        own_rz: str | Unset = UNSET
+        if not isinstance(self.own_rz, Unset):
+            own_rz = self.own_rz
+
+        colocation: str | Unset = UNSET
+        if not isinstance(self.colocation, Unset):
+            colocation = self.colocation
+
+        certification_evidence = self.certification_evidence
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -574,6 +760,36 @@ class Pop:
             field_dict["longitude"] = longitude
         if pop_endpoint_remote_address is not UNSET:
             field_dict["pop_endpoint_remote_address"] = pop_endpoint_remote_address
+        if iso27001_status is not UNSET:
+            field_dict["iso27001_status"] = iso27001_status
+        if c5_status is not UNSET:
+            field_dict["c5_status"] = c5_status
+        if tier is not UNSET:
+            field_dict["tier"] = tier
+        if en50600_status is not UNSET:
+            field_dict["en50600_status"] = en50600_status
+        if scs_iaas_status is not UNSET:
+            field_dict["scs_iaas_status"] = scs_iaas_status
+        if scs_kaas_status is not UNSET:
+            field_dict["scs_kaas_status"] = scs_kaas_status
+        if technologies is not UNSET:
+            field_dict["technologies"] = technologies
+        if api_type is not UNSET:
+            field_dict["api_type"] = api_type
+        if public_ipv4_status is not UNSET:
+            field_dict["public_ipv4_status"] = public_ipv4_status
+        if ipv6_status is not UNSET:
+            field_dict["ipv6_status"] = ipv6_status
+        if bgp_status is not UNSET:
+            field_dict["bgp_status"] = bgp_status
+        if byoip_status is not UNSET:
+            field_dict["byoip_status"] = byoip_status
+        if own_rz is not UNSET:
+            field_dict["own_rz"] = own_rz
+        if colocation is not UNSET:
+            field_dict["colocation"] = colocation
+        if certification_evidence is not UNSET:
+            field_dict["certification_evidence"] = certification_evidence
 
         return field_dict
 
@@ -626,7 +842,7 @@ class Pop:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_pop_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -635,7 +851,7 @@ class Pop:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_pop_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -732,22 +948,48 @@ class Pop:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_pop_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            None | PopEffectiveCriticalityType1 | PopEffectiveCriticalityType2Type1 | PopEffectiveCriticalityType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_pop_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_pop_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_pop_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PopEffectiveCriticalityType1
+                | PopEffectiveCriticalityType2Type1
+                | PopEffectiveCriticalityType3Type1,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -842,11 +1084,11 @@ class Pop:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: PopProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_pop_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -871,11 +1113,11 @@ class Pop:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: PopKindEnum | Unset
+        kind: PopKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_pop_kind_enum(_kind)
+            kind = check_pop_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -907,7 +1149,9 @@ class Pop:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> None | PopCriticalityType1 | PopCriticalityType2Type1 | PopCriticalityType3Type1 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -915,20 +1159,28 @@ class Pop:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_pop_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_pop_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_pop_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PopCriticalityType1 | PopCriticalityType2Type1 | PopCriticalityType3Type1 | Unset, data)
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 
@@ -1026,6 +1278,101 @@ class Pop:
 
         pop_endpoint_remote_address = _parse_pop_endpoint_remote_address(d.pop("pop_endpoint_remote_address", UNSET))
 
+        _iso27001_status = d.pop("iso27001_status", UNSET)
+        iso27001_status: PopIso27001Status | Unset
+        if isinstance(_iso27001_status, Unset):
+            iso27001_status = UNSET
+        else:
+            iso27001_status = check_pop_iso_27001_status(_iso27001_status)
+
+        _c5_status = d.pop("c5_status", UNSET)
+        c5_status: PopC5Status | Unset
+        if isinstance(_c5_status, Unset):
+            c5_status = UNSET
+        else:
+            c5_status = check_pop_c5_status(_c5_status)
+
+        _tier = d.pop("tier", UNSET)
+        tier: PopTier | Unset
+        if isinstance(_tier, Unset):
+            tier = UNSET
+        else:
+            tier = check_pop_tier(_tier)
+
+        _en50600_status = d.pop("en50600_status", UNSET)
+        en50600_status: PopEn50600Status | Unset
+        if isinstance(_en50600_status, Unset):
+            en50600_status = UNSET
+        else:
+            en50600_status = check_pop_en_50600_status(_en50600_status)
+
+        _scs_iaas_status = d.pop("scs_iaas_status", UNSET)
+        scs_iaas_status: PopScsIaasStatus | Unset
+        if isinstance(_scs_iaas_status, Unset):
+            scs_iaas_status = UNSET
+        else:
+            scs_iaas_status = check_pop_scs_iaas_status(_scs_iaas_status)
+
+        _scs_kaas_status = d.pop("scs_kaas_status", UNSET)
+        scs_kaas_status: PopScsKaasStatus | Unset
+        if isinstance(_scs_kaas_status, Unset):
+            scs_kaas_status = UNSET
+        else:
+            scs_kaas_status = check_pop_scs_kaas_status(_scs_kaas_status)
+
+        technologies = d.pop("technologies", UNSET)
+
+        _api_type = d.pop("api_type", UNSET)
+        api_type: PopApiType | Unset
+        if isinstance(_api_type, Unset):
+            api_type = UNSET
+        else:
+            api_type = check_pop_api_type(_api_type)
+
+        _public_ipv4_status = d.pop("public_ipv4_status", UNSET)
+        public_ipv4_status: PopPublicIpv4Status | Unset
+        if isinstance(_public_ipv4_status, Unset):
+            public_ipv4_status = UNSET
+        else:
+            public_ipv4_status = check_pop_public_ipv_4_status(_public_ipv4_status)
+
+        _ipv6_status = d.pop("ipv6_status", UNSET)
+        ipv6_status: PopIpv6Status | Unset
+        if isinstance(_ipv6_status, Unset):
+            ipv6_status = UNSET
+        else:
+            ipv6_status = check_pop_ipv_6_status(_ipv6_status)
+
+        _bgp_status = d.pop("bgp_status", UNSET)
+        bgp_status: PopBgpStatus | Unset
+        if isinstance(_bgp_status, Unset):
+            bgp_status = UNSET
+        else:
+            bgp_status = check_pop_bgp_status(_bgp_status)
+
+        _byoip_status = d.pop("byoip_status", UNSET)
+        byoip_status: PopByoipStatus | Unset
+        if isinstance(_byoip_status, Unset):
+            byoip_status = UNSET
+        else:
+            byoip_status = check_pop_byoip_status(_byoip_status)
+
+        _own_rz = d.pop("own_rz", UNSET)
+        own_rz: PopOwnRz | Unset
+        if isinstance(_own_rz, Unset):
+            own_rz = UNSET
+        else:
+            own_rz = check_pop_own_rz(_own_rz)
+
+        _colocation = d.pop("colocation", UNSET)
+        colocation: PopColocation | Unset
+        if isinstance(_colocation, Unset):
+            colocation = UNSET
+        else:
+            colocation = check_pop_colocation(_colocation)
+
+        certification_evidence = d.pop("certification_evidence", UNSET)
+
         pop = cls(
             id=id,
             created_at=created_at,
@@ -1093,6 +1440,21 @@ class Pop:
             latitude=latitude,
             longitude=longitude,
             pop_endpoint_remote_address=pop_endpoint_remote_address,
+            iso27001_status=iso27001_status,
+            c5_status=c5_status,
+            tier=tier,
+            en50600_status=en50600_status,
+            scs_iaas_status=scs_iaas_status,
+            scs_kaas_status=scs_kaas_status,
+            technologies=technologies,
+            api_type=api_type,
+            public_ipv4_status=public_ipv4_status,
+            ipv6_status=ipv6_status,
+            bgp_status=bgp_status,
+            byoip_status=byoip_status,
+            own_rz=own_rz,
+            colocation=colocation,
+            certification_evidence=certification_evidence,
         )
 
         pop.additional_properties = d

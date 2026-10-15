@@ -8,8 +8,19 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.incident_list_effective_criticality_type_1 import (
+    IncidentListEffectiveCriticalityType1,
+    check_incident_list_effective_criticality_type_1,
+)
+from ..models.incident_list_effective_criticality_type_2_type_1 import (
+    IncidentListEffectiveCriticalityType2Type1,
+    check_incident_list_effective_criticality_type_2_type_1,
+)
+from ..models.incident_list_effective_criticality_type_3_type_1 import (
+    IncidentListEffectiveCriticalityType3Type1,
+    check_incident_list_effective_criticality_type_3_type_1,
+)
+from ..models.incident_list_state import IncidentListState, check_incident_list_state
 
 if TYPE_CHECKING:
     from ..models.incident_list_active_condition_instances_item import IncidentListActiveConditionInstancesItem
@@ -29,7 +40,7 @@ class IncidentList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (IncidentListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -47,7 +58,8 @@ class IncidentList:
             created (IncidentListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (IncidentListEffectiveCriticalityType1 | IncidentListEffectiveCriticalityType2Type1 |
+                IncidentListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             status (str):
             occurred_at (datetime.datetime):
@@ -60,7 +72,7 @@ class IncidentList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: IncidentListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -71,7 +83,12 @@ class IncidentList:
     created: IncidentListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        IncidentListEffectiveCriticalityType1
+        | IncidentListEffectiveCriticalityType2Type1
+        | IncidentListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     status: str
     occurred_at: datetime.datetime
@@ -120,6 +137,10 @@ class IncidentList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -178,9 +199,7 @@ class IncidentList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.incident_list_active_condition_instances_item import (
-            IncidentListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.incident_list_active_condition_instances_item import IncidentListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.incident_list_created import IncidentListCreated  # noqa: PLC0415
         from ..models.incident_list_workspace_type_0 import IncidentListWorkspaceType0  # noqa: PLC0415
 
@@ -189,7 +208,7 @@ class IncidentList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_incident_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -231,18 +250,47 @@ class IncidentList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            IncidentListEffectiveCriticalityType1
+            | IncidentListEffectiveCriticalityType2Type1
+            | IncidentListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_incident_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_incident_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_incident_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                IncidentListEffectiveCriticalityType1
+                | IncidentListEffectiveCriticalityType2Type1
+                | IncidentListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 

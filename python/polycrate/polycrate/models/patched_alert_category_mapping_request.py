@@ -8,7 +8,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.match_type_enum import MatchTypeEnum, check_match_type_enum
+from ..models.patched_alert_category_mapping_request_match_type import (
+    PatchedAlertCategoryMappingRequestMatchType,
+    check_patched_alert_category_mapping_request_match_type,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PatchedAlertCategoryMappingRequest")
@@ -19,7 +22,7 @@ class PatchedAlertCategoryMappingRequest:
     """
     Attributes:
         category_id (UUID | Unset):
-        match_type (MatchTypeEnum | Unset): * `exact` - Exact
+        match_type (PatchedAlertCategoryMappingRequestMatchType | Unset): * `exact` - Exact
             * `prefix` - Prefix
             * `contains` - Contains
             * `contains_all` - Contains all (AND) Default: 'exact'.
@@ -28,7 +31,7 @@ class PatchedAlertCategoryMappingRequest:
     """
 
     category_id: UUID | Unset = UNSET
-    match_type: MatchTypeEnum | Unset = "exact"
+    match_type: PatchedAlertCategoryMappingRequestMatchType | Unset = "exact"
     pattern: str | Unset = UNSET
     priority: int | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -91,11 +94,11 @@ class PatchedAlertCategoryMappingRequest:
             category_id = UUID(_category_id)
 
         _match_type = d.pop("match_type", UNSET)
-        match_type: MatchTypeEnum | Unset
+        match_type: PatchedAlertCategoryMappingRequestMatchType | Unset
         if isinstance(_match_type, Unset):
             match_type = UNSET
         else:
-            match_type = check_match_type_enum(_match_type)
+            match_type = check_patched_alert_category_mapping_request_match_type(_match_type)
 
         pattern = d.pop("pattern", UNSET)
 

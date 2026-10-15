@@ -8,8 +8,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.access_enum import AccessEnum, check_access_enum
-from ..models.outcome_enum import OutcomeEnum, check_outcome_enum
+from ..models.mcp_audit_event_access import McpAuditEventAccess, check_mcp_audit_event_access
+from ..models.mcp_audit_event_outcome import McpAuditEventOutcome, check_mcp_audit_event_outcome
 
 T = TypeVar("T", bound="McpAuditEvent")
 
@@ -21,9 +21,9 @@ class McpAuditEvent:
         id (UUID):
         session (UUID):
         tool (str):
-        access (AccessEnum): * `read` - Read
+        access (McpAuditEventAccess): * `read` - Read
             * `write` - Write
-        outcome (OutcomeEnum): * `ok` - OK
+        outcome (McpAuditEventOutcome): * `ok` - OK
             * `denied` - Denied
             * `error` - Error
         detail (str):
@@ -37,8 +37,8 @@ class McpAuditEvent:
     id: UUID
     session: UUID
     tool: str
-    access: AccessEnum
-    outcome: OutcomeEnum
+    access: McpAuditEventAccess
+    outcome: McpAuditEventOutcome
     detail: str
     target_type: str
     target_id: str
@@ -99,9 +99,9 @@ class McpAuditEvent:
 
         tool = d.pop("tool")
 
-        access = check_access_enum(d.pop("access"))
+        access = check_mcp_audit_event_access(d.pop("access"))
 
-        outcome = check_outcome_enum(d.pop("outcome"))
+        outcome = check_mcp_audit_event_outcome(d.pop("outcome"))
 
         detail = d.pop("detail")
 

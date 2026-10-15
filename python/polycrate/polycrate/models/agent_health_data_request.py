@@ -9,8 +9,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.agent_health_data_status_enum import AgentHealthDataStatusEnum, check_agent_health_data_status_enum
-from ..models.agent_kind_enum import AgentKindEnum, check_agent_kind_enum
+from ..models.agent_health_data_request_kind import AgentHealthDataRequestKind, check_agent_health_data_request_kind
+from ..models.agent_health_data_request_status import (
+    AgentHealthDataRequestStatus,
+    check_agent_health_data_request_status,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -33,9 +36,13 @@ class AgentHealthDataRequest:
         Attributes:
             reported_agent_id (str | Unset): Agent-reported unique identifier
             version (str | Unset): Agent software version
-            kind (AgentKindEnum | Unset): * `agent` - Agent
+            kind (AgentHealthDataRequestKind | Unset): Agent type: 'agent' (CLI agent) or 'operator' (Kubernetes operator)
+
+                * `agent` - Agent
                 * `operator` - Operator
-            status (AgentHealthDataStatusEnum | Unset): * `healthy` - healthy
+            status (AgentHealthDataRequestStatus | Unset): Agent health status
+
+                * `healthy` - healthy
                 * `degraded` - degraded
                 * `unhealthy` - unhealthy
                 * `critical` - critical Default: 'healthy'.
@@ -65,8 +72,8 @@ class AgentHealthDataRequest:
 
     reported_agent_id: str | Unset = UNSET
     version: str | Unset = UNSET
-    kind: AgentKindEnum | Unset = UNSET
-    status: AgentHealthDataStatusEnum | Unset = "healthy"
+    kind: AgentHealthDataRequestKind | Unset = UNSET
+    status: AgentHealthDataRequestStatus | Unset = "healthy"
     uptime_seconds: int | Unset = UNSET
     start_time: datetime.datetime | Unset = UNSET
     last_config_update: datetime.datetime | Unset = UNSET
@@ -298,18 +305,18 @@ class AgentHealthDataRequest:
         version = d.pop("version", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: AgentKindEnum | Unset
+        kind: AgentHealthDataRequestKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_agent_kind_enum(_kind)
+            kind = check_agent_health_data_request_kind(_kind)
 
         _status = d.pop("status", UNSET)
-        status: AgentHealthDataStatusEnum | Unset
+        status: AgentHealthDataRequestStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_agent_health_data_status_enum(_status)
+            status = check_agent_health_data_request_status(_status)
 
         uptime_seconds = d.pop("uptime_seconds", UNSET)
 

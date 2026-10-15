@@ -8,9 +8,9 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from .. import types
-from ..models.cli_action_run_finish_request_status_enum import (
-    CLIActionRunFinishRequestStatusEnum,
-    check_cli_action_run_finish_request_status_enum,
+from ..models.cli_action_run_finish_request_request_status import (
+    CLIActionRunFinishRequestRequestStatus,
+    check_cli_action_run_finish_request_request_status,
 )
 from ..types import UNSET, Unset
 
@@ -32,7 +32,9 @@ class CLIActionRunFinishRequestRequest:
         stdout (str | Unset): Standard output
         stderr (str | Unset): Standard error
         metadata (CLIActionRunFinishRequestRequestMetadataType0 | None | Unset): Additional metadata
-        status (CLIActionRunFinishRequestStatusEnum | Unset): * `cancelled` - cancelled
+        status (CLIActionRunFinishRequestRequestStatus | Unset): Explicit status override (only cancelled is accepted)
+
+            * `cancelled` - cancelled
     """
 
     exit_code: int
@@ -40,7 +42,7 @@ class CLIActionRunFinishRequestRequest:
     stdout: str | Unset = UNSET
     stderr: str | Unset = UNSET
     metadata: CLIActionRunFinishRequestRequestMetadataType0 | None | Unset = UNSET
-    status: CLIActionRunFinishRequestStatusEnum | Unset = UNSET
+    status: CLIActionRunFinishRequestRequestStatus | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -153,11 +155,11 @@ class CLIActionRunFinishRequestRequest:
         metadata = _parse_metadata(d.pop("metadata", UNSET))
 
         _status = d.pop("status", UNSET)
-        status: CLIActionRunFinishRequestStatusEnum | Unset
+        status: CLIActionRunFinishRequestRequestStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_cli_action_run_finish_request_status_enum(_status)
+            status = check_cli_action_run_finish_request_request_status(_status)
 
         cli_action_run_finish_request_request = cls(
             exit_code=exit_code,

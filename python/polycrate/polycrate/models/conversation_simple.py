@@ -7,8 +7,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.conversation_kind_enum import ConversationKindEnum, check_conversation_kind_enum
-from ..models.conversation_status_enum import ConversationStatusEnum, check_conversation_status_enum
+from ..models.conversation_simple_kind import ConversationSimpleKind, check_conversation_simple_kind
+from ..models.conversation_simple_status import ConversationSimpleStatus, check_conversation_simple_status
 
 if TYPE_CHECKING:
     from ..models.organization_simple import OrganizationSimple
@@ -23,14 +23,18 @@ class ConversationSimple:
     Attributes:
         id (UUID):
         name (str):
-        kind (ConversationKindEnum): * `generic` - Generic
+        kind (ConversationSimpleKind): Type of conversation
+
+            * `generic` - Generic
             * `zammad` - Zammad
             * `slack` - Slack
             * `discord` - Discord
             * `telegram` - Telegram
             * `msteams` - Microsoft Teams
             * `email` - Email
-        status (ConversationStatusEnum): * `closed` - Closed
+        status (ConversationSimpleStatus): Current status of the conversation
+
+            * `closed` - Closed
             * `waiting_for_operator` - Waiting for Operator
             * `waiting_for_user` - Waiting for User
             * `deleted` - Deleted
@@ -41,8 +45,8 @@ class ConversationSimple:
 
     id: UUID
     name: str
-    kind: ConversationKindEnum
-    status: ConversationStatusEnum
+    kind: ConversationSimpleKind
+    status: ConversationSimpleStatus
     organization: OrganizationSimple
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -80,9 +84,9 @@ class ConversationSimple:
 
         name = d.pop("name")
 
-        kind = check_conversation_kind_enum(d.pop("kind"))
+        kind = check_conversation_simple_kind(d.pop("kind"))
 
-        status = check_conversation_status_enum(d.pop("status"))
+        status = check_conversation_simple_status(d.pop("status"))
 
         organization = OrganizationSimple.from_dict(d.pop("organization"))
 

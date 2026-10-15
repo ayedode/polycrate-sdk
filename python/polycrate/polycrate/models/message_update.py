@@ -7,8 +7,8 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.content_kind_enum import ContentKindEnum, check_content_kind_enum
-from ..models.message_status_enum import MessageStatusEnum, check_message_status_enum
+from ..models.message_update_content_kind import MessageUpdateContentKind, check_message_update_content_kind
+from ..models.message_update_status import MessageUpdateStatus, check_message_update_status
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="MessageUpdate")
@@ -24,13 +24,17 @@ class MessageUpdate:
             name (str):
             organization (None | UUID): Organization that owns this message
             conversation (None | UUID): Conversation that this message belongs to
-            status (MessageStatusEnum | Unset): * `pending` - Pending
+            status (MessageUpdateStatus | Unset): Current status of the message
+
+                * `pending` - Pending
                 * `requested` - Requested
                 * `delivered` - Delivered
                 * `error` - Error
                 * `deleted` - Deleted
             content (str | Unset): The actual message content
-            content_kind (ContentKindEnum | Unset): * `text` - Text
+            content_kind (MessageUpdateContentKind | Unset): Type of content (text, markdown, html, json, yaml)
+
+                * `text` - Text
                 * `markdown` - Markdown
                 * `html` - HTML
                 * `json` - JSON
@@ -44,9 +48,9 @@ class MessageUpdate:
     name: str
     organization: None | UUID
     conversation: None | UUID
-    status: MessageStatusEnum | Unset = UNSET
+    status: MessageUpdateStatus | Unset = UNSET
     content: str | Unset = UNSET
-    content_kind: ContentKindEnum | Unset = UNSET
+    content_kind: MessageUpdateContentKind | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     meta: Any | Unset = UNSET
     config: Any | Unset = UNSET
@@ -152,20 +156,20 @@ class MessageUpdate:
         conversation = _parse_conversation(d.pop("conversation"))
 
         _status = d.pop("status", UNSET)
-        status: MessageStatusEnum | Unset
+        status: MessageUpdateStatus | Unset
         if isinstance(_status, Unset):
             status = UNSET
         else:
-            status = check_message_status_enum(_status)
+            status = check_message_update_status(_status)
 
         content = d.pop("content", UNSET)
 
         _content_kind = d.pop("content_kind", UNSET)
-        content_kind: ContentKindEnum | Unset
+        content_kind: MessageUpdateContentKind | Unset
         if isinstance(_content_kind, Unset):
             content_kind = UNSET
         else:
-            content_kind = check_content_kind_enum(_content_kind)
+            content_kind = check_message_update_content_kind(_content_kind)
 
         def _parse_provider_id(data: object) -> None | str | Unset:
             if data is None:

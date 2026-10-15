@@ -7,9 +7,20 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.contact_role_enum import ContactRoleEnum, check_contact_role_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.contact_list_contact_role import ContactListContactRole, check_contact_list_contact_role
+from ..models.contact_list_effective_criticality_type_1 import (
+    ContactListEffectiveCriticalityType1,
+    check_contact_list_effective_criticality_type_1,
+)
+from ..models.contact_list_effective_criticality_type_2_type_1 import (
+    ContactListEffectiveCriticalityType2Type1,
+    check_contact_list_effective_criticality_type_2_type_1,
+)
+from ..models.contact_list_effective_criticality_type_3_type_1 import (
+    ContactListEffectiveCriticalityType3Type1,
+    check_contact_list_effective_criticality_type_3_type_1,
+)
+from ..models.contact_list_state import ContactListState, check_contact_list_state
 
 if TYPE_CHECKING:
     from ..models.contact_list_active_condition_instances_item import ContactListActiveConditionInstancesItem
@@ -34,7 +45,7 @@ class ContactList:
         Attributes:
             id (UUID):
             name (str): Gibt die bevorzugte UI-Anzeige (display_name) zurück.
-            state (LastStateEnum): * `OK` - Ok
+            state (ContactListState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -52,12 +63,15 @@ class ContactList:
             created (ContactListCreated):
             archived (bool): Archived objects are not shown in the UI and are not managed by the API.
             reconciliation_running (bool):
-            effective_criticality (EffectiveCriticalityEnum | None):
+            effective_criticality (ContactListEffectiveCriticalityType1 | ContactListEffectiveCriticalityType2Type1 |
+                ContactListEffectiveCriticalityType3Type1 | None):
             url (str): Gibt die absolute URL zum Object zurück.
             full_name (str): Get formatted full name.
             email (str): Email address of the contact
             phone (None | str): Phone number of the contact
-            contact_role (ContactRoleEnum): * `developer` - Developer
+            contact_role (ContactListContactRole): Role of the contact (Developer, Admin, Billing, Viewer)
+
+                * `developer` - Developer
                 * `admin` - Admin
                 * `billing` - Billing
                 * `viewer` - Viewer
@@ -68,7 +82,7 @@ class ContactList:
 
     id: UUID
     name: str
-    state: LastStateEnum
+    state: ContactListState
     labels: Any
     conditions: Any
     condition_instance_count: int
@@ -79,12 +93,17 @@ class ContactList:
     created: ContactListCreated
     archived: bool
     reconciliation_running: bool
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        ContactListEffectiveCriticalityType1
+        | ContactListEffectiveCriticalityType2Type1
+        | ContactListEffectiveCriticalityType3Type1
+        | None
+    )
     url: str
     full_name: str
     email: str
     phone: None | str
-    contact_role: ContactRoleEnum
+    contact_role: ContactListContactRole
     is_maintenance_contact: bool
     is_billing_contact: bool
     keycloak_user_id: None | str
@@ -133,6 +152,10 @@ class ContactList:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -188,9 +211,7 @@ class ContactList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.contact_list_active_condition_instances_item import (
-            ContactListActiveConditionInstancesItem,  # noqa: PLC0415
-        )
+        from ..models.contact_list_active_condition_instances_item import ContactListActiveConditionInstancesItem  # noqa: PLC0415
         from ..models.contact_list_created import ContactListCreated  # noqa: PLC0415
         from ..models.contact_list_organization_type_0 import ContactListOrganizationType0  # noqa: PLC0415
         from ..models.contact_list_workspace_type_0 import ContactListWorkspaceType0  # noqa: PLC0415
@@ -200,7 +221,7 @@ class ContactList:
 
         name = d.pop("name")
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_contact_list_state(d.pop("state"))
 
         labels = d.pop("labels")
 
@@ -255,18 +276,47 @@ class ContactList:
 
         reconciliation_running = d.pop("reconciliation_running")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            ContactListEffectiveCriticalityType1
+            | ContactListEffectiveCriticalityType2Type1
+            | ContactListEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_contact_list_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_contact_list_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_contact_list_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                ContactListEffectiveCriticalityType1
+                | ContactListEffectiveCriticalityType2Type1
+                | ContactListEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -283,7 +333,7 @@ class ContactList:
 
         phone = _parse_phone(d.pop("phone"))
 
-        contact_role = check_contact_role_enum(d.pop("contact_role"))
+        contact_role = check_contact_list_contact_role(d.pop("contact_role"))
 
         is_maintenance_contact = d.pop("is_maintenance_contact")
 

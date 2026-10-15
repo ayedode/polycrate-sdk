@@ -8,13 +8,32 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.blank_enum import BlankEnum, check_blank_enum
-from ..models.criticality_enum import CriticalityEnum, check_criticality_enum
-from ..models.data_source_kind_enum import DataSourceKindEnum, check_data_source_kind_enum
-from ..models.effective_criticality_enum import EffectiveCriticalityEnum, check_effective_criticality_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
-from ..models.provider_enum import ProviderEnum, check_provider_enum
-from ..models.scope_enum import ScopeEnum, check_scope_enum
+from ..models.data_source_criticality_type_1 import DataSourceCriticalityType1, check_data_source_criticality_type_1
+from ..models.data_source_criticality_type_2_type_1 import (
+    DataSourceCriticalityType2Type1,
+    check_data_source_criticality_type_2_type_1,
+)
+from ..models.data_source_criticality_type_3_type_1 import (
+    DataSourceCriticalityType3Type1,
+    check_data_source_criticality_type_3_type_1,
+)
+from ..models.data_source_effective_criticality_type_1 import (
+    DataSourceEffectiveCriticalityType1,
+    check_data_source_effective_criticality_type_1,
+)
+from ..models.data_source_effective_criticality_type_2_type_1 import (
+    DataSourceEffectiveCriticalityType2Type1,
+    check_data_source_effective_criticality_type_2_type_1,
+)
+from ..models.data_source_effective_criticality_type_3_type_1 import (
+    DataSourceEffectiveCriticalityType3Type1,
+    check_data_source_effective_criticality_type_3_type_1,
+)
+from ..models.data_source_kind import DataSourceKind, check_data_source_kind
+from ..models.data_source_last_state import DataSourceLastState, check_data_source_last_state
+from ..models.data_source_provider import DataSourceProvider, check_data_source_provider
+from ..models.data_source_scope import DataSourceScope, check_data_source_scope
+from ..models.data_source_state import DataSourceState, check_data_source_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -44,14 +63,14 @@ class DataSource:
         is_deleted (bool): True when this object has been soft-deleted. The object remains in the database while cleanup
             runs. Poll this field after DELETE 202; the object disappears (404) once cleanup is complete.
         deleted_by_user (DataSourceDeletedByUserType0 | None):
-        state (LastStateEnum): * `OK` - Ok
+        state (DataSourceState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
             * `DEGRADED` - Degraded
             * `DOWN` - Down
         state_reason (None | str):
-        last_state (LastStateEnum): * `OK` - Ok
+        last_state (DataSourceLastState): * `OK` - Ok
             * `WARNING` - Warning
             * `CRITICAL` - Critical
             * `READY` - Ready
@@ -72,11 +91,14 @@ class DataSource:
         repair_task_id (None | str):
         repair_task_meta (Any): Task metadata for repair progress tracking
         last_repair (datetime.datetime | None):
-        scope (ScopeEnum): * `system` - System
+        scope (DataSourceScope): The scope is used to separate `system` owned objects from `user` owned objects.
+
+            * `system` - System
             * `user` - User
         conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
             conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-        effective_criticality (EffectiveCriticalityEnum | None):
+        effective_criticality (DataSourceEffectiveCriticalityType1 | DataSourceEffectiveCriticalityType2Type1 |
+            DataSourceEffectiveCriticalityType3Type1 | None):
         actual_availability (str): Calculated actual availability as yearly average in %
         organization (DataSourceOrganizationType0 | None):
         workspace (DataSourceWorkspaceType0 | None):
@@ -106,7 +128,7 @@ class DataSource:
         labels (Any | Unset):
         annotations (Any | Unset):
         debug_mode (bool | Unset): Persists all Object Logs in the database
-        provider (ProviderEnum | Unset): * `loopback` - Loopback
+        provider (DataSourceProvider | Unset): * `loopback` - Loopback
             * `hetzner_cloud` - HETZNER Cloud
             * `hetzner_robot` - HETZNER Robot
             * `bare_metal` - Bare-Metal
@@ -123,7 +145,9 @@ class DataSource:
         provider_id (None | str | Unset):
         reconciliation_enabled (bool | Unset):
         platform_service (bool | Unset):
-        kind (DataSourceKindEnum | Unset): * `rss` - RSS/Atom Feed
+        kind (DataSourceKind | Unset): Type of data source (RSS feed or REST API)
+
+            * `rss` - RSS/Atom Feed
             * `api` - REST API
             * `polycrate-hub` - Polycrate Hub
             * `otc-status` - Open Telekom Cloud Status
@@ -133,8 +157,8 @@ class DataSource:
         archived (bool | Unset): Archived objects are not shown in the UI and are not managed by the API.
         archived_at (datetime.datetime | None | Unset):
         archived_reason (None | str | Unset): The reason why the object was archived
-        criticality (BlankEnum | CriticalityEnum | None | Unset): Criticality level. Null = inherit from workspace, then
-            org. Explicit value overrides inheritance.
+        criticality (DataSourceCriticalityType1 | DataSourceCriticalityType2Type1 | DataSourceCriticalityType3Type1 |
+            None | Unset): Criticality level. Null = inherit from workspace, then org. Explicit value overrides inheritance.
 
             * `high` - High
             * `medium` - Medium
@@ -168,9 +192,9 @@ class DataSource:
     deleted_at: datetime.datetime | None
     is_deleted: bool
     deleted_by_user: DataSourceDeletedByUserType0 | None
-    state: LastStateEnum
+    state: DataSourceState
     state_reason: None | str
-    last_state: LastStateEnum
+    last_state: DataSourceLastState
     last_state_change: datetime.datetime | None
     reconciliation_running: bool
     reconciliation_task_id: None | str
@@ -185,9 +209,14 @@ class DataSource:
     repair_task_id: None | str
     repair_task_meta: Any
     last_repair: datetime.datetime | None
-    scope: ScopeEnum
+    scope: DataSourceScope
     conditions: Any
-    effective_criticality: EffectiveCriticalityEnum | None
+    effective_criticality: (
+        DataSourceEffectiveCriticalityType1
+        | DataSourceEffectiveCriticalityType2Type1
+        | DataSourceEffectiveCriticalityType3Type1
+        | None
+    )
     actual_availability: str
     organization: DataSourceOrganizationType0 | None
     workspace: DataSourceWorkspaceType0 | None
@@ -213,17 +242,19 @@ class DataSource:
     labels: Any | Unset = UNSET
     annotations: Any | Unset = UNSET
     debug_mode: bool | Unset = UNSET
-    provider: ProviderEnum | Unset = UNSET
+    provider: DataSourceProvider | Unset = UNSET
     provider_reference: None | str | Unset = UNSET
     provider_id: None | str | Unset = UNSET
     reconciliation_enabled: bool | Unset = UNSET
     platform_service: bool | Unset = UNSET
-    kind: DataSourceKindEnum | Unset = UNSET
+    kind: DataSourceKind | Unset = UNSET
     tolerations: Any | Unset = UNSET
     archived: bool | Unset = UNSET
     archived_at: datetime.datetime | None | Unset = UNSET
     archived_reason: None | str | Unset = UNSET
-    criticality: BlankEnum | CriticalityEnum | None | Unset = UNSET
+    criticality: (
+        DataSourceCriticalityType1 | DataSourceCriticalityType2Type1 | DataSourceCriticalityType3Type1 | None | Unset
+    ) = UNSET
     target_availability: None | str | Unset = UNSET
     slo_target: None | str | Unset = UNSET
     slo_availability: str | Unset = UNSET
@@ -328,6 +359,10 @@ class DataSource:
 
         effective_criticality: None | str
         if isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
+            effective_criticality = self.effective_criticality
+        elif isinstance(self.effective_criticality, str):
             effective_criticality = self.effective_criticality
         else:
             effective_criticality = self.effective_criticality
@@ -449,6 +484,8 @@ class DataSource:
         criticality: None | str | Unset
         if isinstance(self.criticality, Unset):
             criticality = UNSET
+        elif isinstance(self.criticality, str):
+            criticality = self.criticality
         elif isinstance(self.criticality, str):
             criticality = self.criticality
         elif isinstance(self.criticality, str):
@@ -680,7 +717,7 @@ class DataSource:
 
         deleted_by_user = _parse_deleted_by_user(d.pop("deleted_by_user"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_data_source_state(d.pop("state"))
 
         def _parse_state_reason(data: object) -> None | str:
             if data is None:
@@ -689,7 +726,7 @@ class DataSource:
 
         state_reason = _parse_state_reason(d.pop("state_reason"))
 
-        last_state = check_last_state_enum(d.pop("last_state"))
+        last_state = check_data_source_last_state(d.pop("last_state"))
 
         def _parse_last_state_change(data: object) -> datetime.datetime | None:
             if data is None:
@@ -786,22 +823,51 @@ class DataSource:
 
         last_repair = _parse_last_repair(d.pop("last_repair"))
 
-        scope = check_scope_enum(d.pop("scope"))
+        scope = check_data_source_scope(d.pop("scope"))
 
         conditions = d.pop("conditions")
 
-        def _parse_effective_criticality(data: object) -> EffectiveCriticalityEnum | None:
+        def _parse_effective_criticality(
+            data: object,
+        ) -> (
+            DataSourceEffectiveCriticalityType1
+            | DataSourceEffectiveCriticalityType2Type1
+            | DataSourceEffectiveCriticalityType3Type1
+            | None
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                effective_criticality_type_0 = check_effective_criticality_enum(data)
+                effective_criticality_type_1 = check_data_source_effective_criticality_type_1(data)
 
-                return effective_criticality_type_0
+                return effective_criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(EffectiveCriticalityEnum | None, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_2_type_1 = check_data_source_effective_criticality_type_2_type_1(data)
+
+                return effective_criticality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_criticality_type_3_type_1 = check_data_source_effective_criticality_type_3_type_1(data)
+
+                return effective_criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DataSourceEffectiveCriticalityType1
+                | DataSourceEffectiveCriticalityType2Type1
+                | DataSourceEffectiveCriticalityType3Type1
+                | None,
+                data,
+            )
 
         effective_criticality = _parse_effective_criticality(d.pop("effective_criticality"))
 
@@ -925,11 +991,11 @@ class DataSource:
         debug_mode = d.pop("debug_mode", UNSET)
 
         _provider = d.pop("provider", UNSET)
-        provider: ProviderEnum | Unset
+        provider: DataSourceProvider | Unset
         if isinstance(_provider, Unset):
             provider = UNSET
         else:
-            provider = check_provider_enum(_provider)
+            provider = check_data_source_provider(_provider)
 
         def _parse_provider_reference(data: object) -> None | str | Unset:
             if data is None:
@@ -954,11 +1020,11 @@ class DataSource:
         platform_service = d.pop("platform_service", UNSET)
 
         _kind = d.pop("kind", UNSET)
-        kind: DataSourceKindEnum | Unset
+        kind: DataSourceKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_data_source_kind_enum(_kind)
+            kind = check_data_source_kind(_kind)
 
         tolerations = d.pop("tolerations", UNSET)
 
@@ -990,7 +1056,15 @@ class DataSource:
 
         archived_reason = _parse_archived_reason(d.pop("archived_reason", UNSET))
 
-        def _parse_criticality(data: object) -> BlankEnum | CriticalityEnum | None | Unset:
+        def _parse_criticality(
+            data: object,
+        ) -> (
+            DataSourceCriticalityType1
+            | DataSourceCriticalityType2Type1
+            | DataSourceCriticalityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -998,20 +1072,35 @@ class DataSource:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_0 = check_criticality_enum(data)
+                criticality_type_1 = check_data_source_criticality_type_1(data)
 
-                return criticality_type_0
+                return criticality_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                criticality_type_1 = check_blank_enum(data)
+                criticality_type_2_type_1 = check_data_source_criticality_type_2_type_1(data)
 
-                return criticality_type_1
+                return criticality_type_2_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(BlankEnum | CriticalityEnum | None | Unset, data)
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                criticality_type_3_type_1 = check_data_source_criticality_type_3_type_1(data)
+
+                return criticality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                DataSourceCriticalityType1
+                | DataSourceCriticalityType2Type1
+                | DataSourceCriticalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         criticality = _parse_criticality(d.pop("criticality", UNSET))
 

@@ -8,14 +8,14 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.contact_role_enum import ContactRoleEnum, check_contact_role_enum
-from ..models.generic_object_kind_enum import GenericObjectKindEnum, check_generic_object_kind_enum
-from ..models.last_state_enum import LastStateEnum, check_last_state_enum
+from ..models.contact_contact_role import ContactContactRole, check_contact_contact_role
+from ..models.contact_kind import ContactKind, check_contact_kind
+from ..models.contact_state import ContactState, check_contact_state
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.credential import Credential
-    from ..models.organization import Organization
+    from ..models.credential_simple import CredentialSimple
+    from ..models.organization_simple import OrganizationSimple
 
 
 T = TypeVar("T", bound="Contact")
@@ -32,7 +32,7 @@ class Contact:
             name (str):
             created_at (datetime.datetime):
             updated_at (datetime.datetime):
-            state (LastStateEnum): * `OK` - Ok
+            state (ContactState): * `OK` - Ok
                 * `WARNING` - Warning
                 * `CRITICAL` - Critical
                 * `READY` - Ready
@@ -40,20 +40,26 @@ class Contact:
                 * `DOWN` - Down
             conditions (Any): Conditions are managed by the API and will be added during the reconcile phase. Some
                 conditions are `degrading`, meaning an object becomes DEGRADED if it has such a condition.
-            organization (Organization):
-            credential (Credential): Full serializer for Credential detail views.
+            organization (OrganizationSimple): Simple Organization serializer for nested representations.
+
+                Includes `url` field for direct navigation.
+            credential (CredentialSimple): Simple serializer for embedding Credential in other serializers.
             firstname (str): First name of the contact
             lastname (str): Last name of the contact
             full_name (str):
             email (str): Email address of the contact
-            kind (GenericObjectKindEnum | Unset): * `generic` - Generic
+            kind (ContactKind | Unset): Type of contact
+
+                * `generic` - Generic
             phone (None | str | Unset): Phone number of the contact
             address (None | str | Unset): Address of the contact
             city (None | str | Unset): City of the contact
             country (None | str | Unset): Country of the contact
             zipcode (None | str | Unset): Zipcode of the contact
             note (None | str | Unset): Note about the contact
-            contact_role (ContactRoleEnum | Unset): * `developer` - Developer
+            contact_role (ContactContactRole | Unset): Role of the contact (Developer, Admin, Billing, Viewer)
+
+                * `developer` - Developer
                 * `admin` - Admin
                 * `billing` - Billing
                 * `viewer` - Viewer
@@ -68,22 +74,22 @@ class Contact:
     name: str
     created_at: datetime.datetime
     updated_at: datetime.datetime
-    state: LastStateEnum
+    state: ContactState
     conditions: Any
-    organization: Organization
-    credential: Credential
+    organization: OrganizationSimple
+    credential: CredentialSimple
     firstname: str
     lastname: str
     full_name: str
     email: str
-    kind: GenericObjectKindEnum | Unset = UNSET
+    kind: ContactKind | Unset = UNSET
     phone: None | str | Unset = UNSET
     address: None | str | Unset = UNSET
     city: None | str | Unset = UNSET
     country: None | str | Unset = UNSET
     zipcode: None | str | Unset = UNSET
     note: None | str | Unset = UNSET
-    contact_role: ContactRoleEnum | Unset = UNSET
+    contact_role: ContactContactRole | Unset = UNSET
     is_maintenance_contact: bool | Unset = UNSET
     is_billing_contact: bool | Unset = UNSET
     keycloak_user_id: None | str | Unset = UNSET
@@ -233,8 +239,8 @@ class Contact:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.credential import Credential  # noqa: PLC0415
-        from ..models.organization import Organization  # noqa: PLC0415
+        from ..models.credential_simple import CredentialSimple  # noqa: PLC0415
+        from ..models.organization_simple import OrganizationSimple  # noqa: PLC0415
 
         d = dict(src_dict)
         id = UUID(d.pop("id"))
@@ -245,13 +251,13 @@ class Contact:
 
         updated_at = datetime.datetime.fromisoformat(d.pop("updated_at"))
 
-        state = check_last_state_enum(d.pop("state"))
+        state = check_contact_state(d.pop("state"))
 
         conditions = d.pop("conditions")
 
-        organization = Organization.from_dict(d.pop("organization"))
+        organization = OrganizationSimple.from_dict(d.pop("organization"))
 
-        credential = Credential.from_dict(d.pop("credential"))
+        credential = CredentialSimple.from_dict(d.pop("credential"))
 
         firstname = d.pop("firstname")
 
@@ -262,11 +268,11 @@ class Contact:
         email = d.pop("email")
 
         _kind = d.pop("kind", UNSET)
-        kind: GenericObjectKindEnum | Unset
+        kind: ContactKind | Unset
         if isinstance(_kind, Unset):
             kind = UNSET
         else:
-            kind = check_generic_object_kind_enum(_kind)
+            kind = check_contact_kind(_kind)
 
         def _parse_phone(data: object) -> None | str | Unset:
             if data is None:
@@ -323,11 +329,11 @@ class Contact:
         note = _parse_note(d.pop("note", UNSET))
 
         _contact_role = d.pop("contact_role", UNSET)
-        contact_role: ContactRoleEnum | Unset
+        contact_role: ContactContactRole | Unset
         if isinstance(_contact_role, Unset):
             contact_role = UNSET
         else:
-            contact_role = check_contact_role_enum(_contact_role)
+            contact_role = check_contact_contact_role(_contact_role)
 
         is_maintenance_contact = d.pop("is_maintenance_contact", UNSET)
 
